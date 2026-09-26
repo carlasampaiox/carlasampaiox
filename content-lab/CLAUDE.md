@@ -64,6 +64,11 @@ Para rodar sem parar, a tarefa precisa estar com "Aprovar automaticamente" ligad
 - A gravação é feita pela rotina (ver `../importador/ROTINA.md`): assets pelo `Artifact` e documentos pelo `ArtifactData` em lotes de 50.
 - "Salvar em Referências" leva a prévia junto e não duplica (compara o link).
 
+## Bússola de conteúdo (aba Referências)
+- Documento `brands/{marca}/insights/bussola` (funciona, evitar, agora, base, atualizadoEm). Mostrado no topo de Referências; o botão "Atualizar Bússola" usa o `sample` (Claude da página) sobre refs, conteúdos dos concorrentes e posts publicados. Não usa vidIQ.
+- Referências "viral no nicho": visualizações >= 2x a mediana do perfil (últimos 180 dias) e semelhança de tema com a marca (TEMAS_BASE + pilares). Muitas visualizações com menos de 0,5% de curtidas recebem "alcance possivelmente pago" e vão para o fim da lista.
+- Aba Explorar do Instagram não tem acesso automático permitido: o caminho é print em Nova referência + "Preencher com o Claude".
+
 ## Otimizações do app
 - As 8 coleções do banco chegam juntas: o desenho é agrupado em um quadro (`scheduleRender`) e o DOM só é trocado se o HTML mudou. Vídeos não reiniciam e a rolagem não pula a cada atualização.
 - Aba Marca: botão "Baixar backup" gera um JSON com a marca e todas as coleções.

@@ -238,6 +238,8 @@ class Post:
     arquivo_local: str = ""  # capa já baixada (conector vidIQ)
     duracao: int = 0         # segundos
     fixado: bool = False     # Reel fixado no topo do perfil
+    vezes: float = 0.0       # visualizações / mediana do perfil
+    semelhanca: int = 0      # proximidade do tema com a marca (palavras-chave)
     textos: dict = field(default_factory=dict)  # números como a fonte mostra ("6,2 mil")
 
     def pontuacao(self) -> float:
@@ -422,23 +424,67 @@ def ler_vidiq_reels(texto: str, base_arquivos: Path | None = None) -> list[Post]
         if code in exatos:  # número exato de plays tem prioridade sobre o abreviado
             vals["views"], textos["views"] = exatos[code], num_br(exatos[code])
         url = next((l.strip() for l in linhas[1:] if l.strip().startswith("http")), f"https://www.instagram.com/reel/{code}/")
-        legenda = "\n".join(l[2:] if l.startswith("> ") else l[1:] if l.startswith(">") else ""
-                            for l in linhas if l.startswith(">")).strip()
+        # legenda: da linha "> ..." até o fim do bloco (a citação continua sem o ">")
+        partes, dentro = [], False
+        for l in linhas[1:]:
+            if re.match(r"^(Reel\s+\S+\s+\S+\s+\d+\s+plays|\[Image: source:)", l.strip()):
+                break
+            if l.startswith(">"):
+                dentro = True
+                l = l[2:] if l.startswith("> ") else l[1:]
+            if dentro:
+                partes.append(l)
+        legenda = "\n".join(partes).strip()
         legenda = re.sub(r'^"|"$', "", legenda)
         legenda = re.sub(r'\.\.\."?$', "...", legenda)
         posts.append(Post(
             plataforma="instagram", perfil="@" + handle, url=url, data=data, formato="Reels",
             titulo=gancho(legenda) or f"Reels de @{handle}", legenda=legenda,
-            curtidas=vals.get("curtidas"), comentarios=vals.get("comentarios", 0 if "curtidas" in vals else None),
+            curtidas=vals.get("curtidas"), comentarios=vals.get("comentarios"),  # ausente = não informado
             views=vals.get("views"), arquivo_local=capas.get(code, ""), duracao=dur, fixado="pinned" in resto,
             textos={k: v for k, v in textos.items() if not re.fullmatch(r"[\d.]+", v)},
         ))
     return posts
 
 
+# Temas da proposta da Mycapital (IR, bolsa, carteira). Somados aos pilares e ao
+# nicho da marca, medem a "semelhança" de um Reel com o que a marca faz.
+TEMAS_BASE = {
+    "imposto": 3, "irpf": 3, "darf": 3, "declara": 3, "tribut": 3, "fisca": 2, "zera o imposto": 3, "receita federal": 2,
+    "malha fina": 2, "isen": 2, "retific": 2, "leão": 2, "renda variável": 3, "bolsa": 2, "ações": 2,
+    "carteira": 2, "dividend": 2, "provento": 2, "fii": 2, "exterior": 2, "dólar": 2, "day trade": 2,
+    "swing trade": 2, "trader": 2, "corretora": 2, "b3": 2, "open finance": 2, "consolid": 2,
+    "investi": 1, "rentabilidade": 1, "patrimônio": 1, "ganho de capital": 3, "preço médio": 3,
+}
+
+
+def temas_da_marca(marca: dict | None) -> dict[str, int]:
+    t = dict(TEMAS_BASE)
+    if marca:
+        textos = list(marca.get("pillars") or []) + [marca.get("niche", "")]
+        for palavra in re.findall(r"[a-zà-ú]{5,}", " ".join(textos).lower()):
+            t.setdefault(palavra[:-1] if len(palavra) > 6 else palavra, 1)
+    return t
+
+
+def semelhanca(p: Post, temas: dict[str, int]) -> int:
+    txt = f" {p.titulo} {p.legenda} ".lower()
+    s = sum(peso for chave, peso in temas.items() if chave in txt)
+    if re.search(r"\bir\b|i\.r\.", txt):
+        s += 3
+    return s
+
+
+def alcance_pago_provavel(p: Post) -> bool:
+    """Muitas visualizações e quase nenhuma curtida (< 0,5%): sinal de anúncio ou impulsionamento."""
+    return (p.views or 0) >= 10000 and p.curtidas is not None and p.curtidas / p.views < 0.005
+
+
 def destaques(posts: list[Post], dias: int, fator: float, ref: dt.date | None = None,
-              excluir: set[str] | None = None) -> list[Post]:
-    """Reels 'fora da curva': visualizações >= fator x a mediana do perfil, nos últimos `dias`."""
+              excluir: set[str] | None = None, temas: dict[str, int] | None = None,
+              min_semelhanca: int = 2) -> list[Post]:
+    """Reels que viralizaram no perfil (visualizações >= fator x a mediana, nos últimos
+    `dias`) e que se parecem com a proposta da marca. Ordena por viralização x semelhança."""
     ref = ref or hoje()
     vs = sorted(p.views or 0 for p in posts)
     if not vs:
@@ -446,9 +492,27 @@ def destaques(posts: list[Post], dias: int, fator: float, ref: dt.date | None = 
     mediana = vs[len(vs) // 2] if len(vs) % 2 else (vs[len(vs) // 2 - 1] + vs[len(vs) // 2]) / 2
     corte = (ref - dt.timedelta(days=dias)).isoformat()
     ex = excluir or set()
-    out = [p for p in posts if p.data >= corte and (p.views or 0) >= fator * max(mediana, 1)
-           and normalizar_link(p.url) not in ex]
-    return sorted(out, key=lambda p: p.views or 0, reverse=True)
+    temas = temas or TEMAS_BASE
+    out = []
+    for p in posts:
+        p.vezes = round((p.views or 0) / max(mediana, 1), 1)
+        p.semelhanca = semelhanca(p, temas)
+        if p.data >= corte and p.vezes >= fator and p.semelhanca >= min_semelhanca \
+                and normalizar_link(p.url) not in ex:
+            out.append(p)
+    return sorted(out, key=lambda p: p.vezes * (1 + min(p.semelhanca, 8) / 4), reverse=True)
+
+
+def doc_referencia(p: Post, quem: dict | None) -> dict:
+    extra = f" · {str(p.vezes).replace('.', ',')}x a mediana do perfil" if p.vezes else ""
+    tags = ["concorrente" if quem else "minha marca", "viral no nicho"]
+    if p.semelhanca >= 6:
+        tags.append("alta semelhança com a marca")
+    if alcance_pago_provavel(p):
+        tags.append("alcance possivelmente pago")
+    return {"platform": "instagram", "format": p.formato, "url": p.url, "creator": p.perfil,
+            "views": p.sinal() + extra + f" (publicado em {dt.date.fromisoformat(p.data).strftime('%d/%m/%Y')})",
+            "hook": p.titulo, "why": "", "tags": ", ".join(tags), "origem": "importador"}
 
 
 # ------------------------------------------------- plano de créditos (vidIQ)
@@ -661,7 +725,7 @@ class Config:
     refs_por_perfil: int = 1
     incluir_marca: bool = False
     graph_versao: str = GRAPH_VERSAO_PADRAO
-    dias_destaque: int = 90     # janela para Reels fora da curva (vidIQ)
+    dias_destaque: int = 180    # janela para Reels que viralizaram (vidIQ)
     fator_destaque: float = 2.0  # visualizações >= fator x mediana do perfil
 
 
@@ -684,6 +748,7 @@ def montar_pacote(estado: dict, buscar: Buscador, pasta: Path, cfg: Config,
         bid = marca["id"]
         existentes = {normalizar_link(u) for u in marca.get("existingLinks", [])}
         ig_id = id_instagram_da_marca(marca)
+        temas = temas_da_marca(marca)
 
         def registrar(posts: list[Post], quem: dict | None, refs_extra: list[Post] = ()) -> None:
             ordem_refs = 0
@@ -695,12 +760,7 @@ def montar_pacote(estado: dict, buscar: Buscador, pasta: Path, cfg: Config,
                 ordem_refs += 1
                 arquivo, tipo = copiar_midia(Path(p.arquivo_local), midia_dir) if p.arquivo_local else baixar_midia(buscar, p.imagem, midia_dir)
                 itens.append({"brandId": bid, "arquivo": arquivo, "mediaType": tipo, "plataforma": p.plataforma,
-                              "pontuacao": round(p.pontuacao(), 1), "colecao": "refs", "doc": {
-                                  "platform": "instagram", "format": p.formato, "url": p.url, "creator": p.perfil,
-                                  "views": p.sinal() + f" (publicado em {dt.date.fromisoformat(p.data).strftime('%d/%m/%Y')})",
-                                  "hook": p.titulo, "why": "",
-                                  "tags": "concorrente, fora da curva" if quem else "minha marca, fora da curva",
-                                  "origem": "importador"}})
+                              "pontuacao": round(p.pontuacao(), 1), "colecao": "refs", "doc": doc_referencia(p, quem)})
             for p in posts:
                 k = normalizar_link(p.url)
                 if k in existentes:
@@ -718,12 +778,10 @@ def montar_pacote(estado: dict, buscar: Buscador, pasta: Path, cfg: Config,
                         "channel": p.plataforma, "format": p.formato, "title": p.titulo, "url": p.url,
                         "date": p.data, "signal": p.sinal(), "summary": resumo(p),
                         "origem": "importador"}))
-                if p.plataforma == "instagram" and ordem_refs < (cfg.refs_por_perfil if quem else cfg.por_perfil):
+                # Referências: fora do modo vidIQ (API da Meta), o melhor recente ainda vira referência
+                if p.plataforma == "instagram" and not vidiq and ordem_refs < (cfg.refs_por_perfil if quem else cfg.por_perfil):
                     ordem_refs += 1
-                    itens.append(dict(base, colecao="refs", doc={
-                        "platform": "instagram", "format": p.formato, "url": p.url, "creator": p.perfil,
-                        "views": p.sinal(), "hook": p.titulo, "why": "",
-                        "tags": "concorrente" if quem else "minha marca", "origem": "importador"}))
+                    itens.append(dict(base, colecao="refs", doc=doc_referencia(p, quem)))
 
         # concorrentes
         for c in marca.get("competitors", []):
@@ -736,7 +794,7 @@ def montar_pacote(estado: dict, buscar: Buscador, pasta: Path, cfg: Config,
                     atualizar_controle(controle, ig, todos, ref or hoje())
                 recentes = escolher(todos, cfg.dias, cfg.por_perfil, ref, existentes)
                 # Referências: primeiro o Reel fora da curva do perfil (se houver), depois os recentes
-                extra = destaques(todos, cfg.dias_destaque, cfg.fator_destaque, ref, existentes)
+                extra = destaques(todos, cfg.dias_destaque, cfg.fator_destaque, ref, existentes, temas)
                 registrar(recentes, c, extra)
                 ultimo = max((p.data for p in todos), default="")
                 if not recentes:
@@ -773,7 +831,7 @@ def montar_pacote(estado: dict, buscar: Buscador, pasta: Path, cfg: Config,
             todos = ler_vidiq_reels(arq_proprio.read_text(encoding="utf-8"), arq_proprio.parent)
             if controle is not None:
                 atualizar_controle(controle, proprio, todos, ref or hoje())
-            extra = destaques(todos, cfg.dias_destaque, cfg.fator_destaque, ref, existentes)
+            extra = destaques(todos, cfg.dias_destaque, cfg.fator_destaque, ref, existentes, temas)
             registrar([], None, extra)
             itens.extend(itens_da_marca(bid, todos, existentes, ref or hoje(), cfg.dias_destaque))
             log(f"  IG próprio @{proprio} (vidIQ): {min(len(extra), cfg.por_perfil)} destaques")
@@ -1002,7 +1060,7 @@ def montar_estado(pasta: Path) -> dict:
         links = [d.get("url", "") or d.get("link", "") for c in ("compnews", "refs", "posts")
                  for d in ler_dump(pasta, f"{base}/{c}")]
         marcas.append({"id": b["id"], "name": b.get("name", ""),
-                       "channels": b.get("channels", {}),
+                       "channels": b.get("channels", {}), "pillars": b.get("pillars", []), "niche": b.get("niche", ""),
                        "competitors": [{k: c.get(k, "") for k in ("id", "name", "instagram", "youtube", "tiktok")}
                                        for c in ler_dump(pasta, f"{base}/competitors")],
                        "existingLinks": [u for u in links if u]})

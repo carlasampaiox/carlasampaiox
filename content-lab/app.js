@@ -13,7 +13,7 @@ const STM=Object.fromEntries(STATUS.map(s=>[s.id,s]));
 const ISTATUS=[['nova','Nova'],['em-uso','Em uso'],['usada','Usada'],['arquivada','Arquivada']];
 const ISTM=Object.fromEntries(ISTATUS);
 const FORMATS=['Reels','Carrossel','Post estático','Stories','Live','Artigo','Guia','Landing page','Post texto','Carrossel PDF','Vídeo longo','Shorts','Newsletter'];
-const COLS=['news','refs','posts','dates','ideas','metrics','competitors','compnews'];
+const COLS=['news','refs','posts','dates','ideas','metrics','competitors','compnews','insights'];
 const DTYPES=['Data comemorativa','Lançamento','Campanha','Evento','Prazo','Aniversário da marca','Sazonalidade'];
 const TABS=[
  {id:'noticias',label:'Notícias'},{id:'referencias',label:'Referências'},{id:'calendario',label:'Calendário'},{id:'datas',label:'Datas importantes'},
@@ -101,7 +101,7 @@ const now=new Date();
 const state={
   mode:'preview', loading:false, brands:[], brandId:null,
   tab:(TABS.find(t=>t.id===location.hash.slice(1))||TABS.find(t=>t.id===LS.get('cl.tab'))||TABS[0]).id,
-  data:{news:[],refs:[],posts:[],dates:[],ideas:[],metrics:[],competitors:[],compnews:[]},
+  data:{news:[],refs:[],posts:[],dates:[],ideas:[],metrics:[],competitors:[],compnews:[],insights:[]},
   cal:{y:now.getFullYear(),m:now.getMonth()},
   f:{newsTag:'',newsPeriod:String(LS.get('cl.newsPeriod','')),refPlat:'',calCh:'',ideaCh:'',ideaAll:false,metric:'followers',mPeriod:String(LS.get('cl.mPeriod','30')),mFrom:LS.get('cl.mFrom',''),mTo:LS.get('cl.mTo',''),compPeriod:String(LS.get('cl.compPeriod','30')),compFilter:'',compKind:String(LS.get('cl.compKind',''))},
   brandDirty:false, vidiq:null
@@ -288,11 +288,14 @@ async function fillRefWithClaude(btnEl){
 
 /* ---------- referências ---------- */
 function viewRefs(){
-  const all=state.data.refs.slice().sort((a,b)=>String(b.createdAt).localeCompare(String(a.createdAt)));
+  /* ordem da bússola: mais parecidas com a marca primeiro; alcance pago por último */
+  const peso=r=>{const t=String(r.tags||'');return (t.includes('alta semelhança')?0:t.includes('viral no nicho')?1:2)+(t.includes('possivelmente pago')?3:0)};
+  const all=state.data.refs.slice().sort((a,b)=>peso(a)-peso(b)||String(b.createdAt).localeCompare(String(a.createdAt)));
   const list=state.f.refPlat?all.filter(r=>r.platform===state.f.refPlat):all;
   let h=head('Referências virais','Posts do Instagram e do TikTok que performaram bem, com o gancho e o motivo anotados para inspirar a produção.',
     aiBtn('Padrões em comum','ai-refs-all')+igBtn()+btn('Nova referência','new','data-col="refs"','primary'));
   h+=igStatus();
+  h+=bussola();
   h+=`<div class="toolbar">${chips('refPlat',[['','Todas'],['instagram','Instagram'],['tiktok','TikTok']],state.f.refPlat)}</div>`;
   if(!all.length)return h+empty('Nenhuma referência ainda','Salve o link de um post que viralizou e anote o gancho e por que funcionou.',btn('Nova referência','new','data-col="refs"','primary'));
   if(!list.length)return h+empty('Nada nesta plataforma','Troque o filtro ou adicione uma nova referência.');
@@ -309,6 +312,36 @@ function viewRefs(){
     </article>`;
   }).join('')+'</div>';
   return h;
+}
+
+/* ---------- bússola de conteúdo (brands/{marca}/insights/bussola) ---------- */
+function bussola(){
+  const b=state.data.insights.find(x=>x.id==='bussola');
+  const up=aiBtn(b?'Atualizar Bússola':'Gerar Bússola','ai-bussola','','sm');
+  if(!b)return `<div class="bussola empty-b"><div><span class="eyebrow">Bússola de conteúdo</span><p class="muted">O Claude lê as referências e os números reais e diz o que está funcionando no nicho e o que produzir agora.</p></div>${up}</div>`;
+  const li=(arr,f)=>(Array.isArray(arr)?arr:[]).map(f).join('');
+  return `<details class="bussola" ${LS.get('cl.bussolaFechada',false)?'':'open'}><summary><span class="eyebrow">Bússola de conteúdo</span><b>O que está viralizando no nicho da marca e o que fazer agora</b><span class="muted small">${b.atualizadoEm?'atualizada em '+fmtDay(String(b.atualizadoEm).slice(0,10)):''}${b.base?' · '+esc(b.base):''}</span></summary>
+    <div class="b-grid">
+      <section><h4>Funciona</h4><ul>${li(b.funciona,x=>`<li><b>${esc(x.titulo)}</b>${x.prova?`<span class="prova">${esc(x.prova)}</span>`:''}${x.acao?`<span class="acao">→ ${esc(x.acao)}</span>`:''}</li>`)}</ul></section>
+      <section><h4>Evite</h4><ul>${li(b.evitar,x=>`<li><b>${esc(x.titulo)}</b>${x.prova?`<span class="prova">${esc(x.prova)}</span>`:''}</li>`)}</ul>
+        ${Array.isArray(b.agora)&&b.agora.length?`<h4>Faça agora</h4><ol>${li(b.agora,x=>`<li>${esc(x)}</li>`)}</ol>`:''}</section>
+    </div>
+    <div class="foot">${up}<span class="muted small">Viu algo viralizando na aba Explorar? Tire um print e cole em Nova referência: o Claude preenche e a Bússola passa a considerar.</span></div>
+  </details>`;
+}
+async function refreshBussola(btnEl){
+  if(!sample){toast('A Bússola é atualizada pelo Claude quando a central é aberta no Claude.');return}
+  const refs=state.data.refs, cn=state.data.compnews.filter(n=>kindOf(n)==='conteudo'), posts=state.data.posts.filter(p=>p.status==='publicado');
+  if(refs.length+cn.length<3){toast('Salve algumas referências primeiro.');return}
+  const old=btnEl.innerHTML;btnEl.disabled=true;btnEl.innerHTML=SPARK+'Analisando...';
+  try{
+    const r=await sample.json(`${RULES}\n\n${brandCtx()}\n\nREFERÊNCIAS (posts que funcionaram, com números reais)\n${lines(refs,x=>`- ${x.creator||''} [${x.format||''}] "${x.hook||''}" | ${x.views||''} | etiquetas: ${x.tags||''} | por que: ${x.why||''}`,40)}\n\nCONTEÚDOS RECENTES DOS CONCORRENTES\n${lines(cn,x=>`- ${x.competitorName||''} ${x.date||''} [${x.format||''}] "${x.title}" | ${x.signal||''}`,40)}\n\nPUBLICADOS PELA MARCA\n${lines(posts,x=>`- ${x.date} [${x.format||''}] "${x.title}" | ${x.notes||''}`,30)}\n\nTAREFA: você é estrategista de conteúdo da marca. Compare o que viralizou no nicho com o que a marca publica. Considere "alcance possivelmente pago" como formato de anúncio, não como viral orgânico. Responda só com JSON: {"base":"de onde vêm os dados, curto","funciona":[{"titulo":"padrão que funciona","prova":"exemplos e números reais das listas acima","acao":"como a marca aplica"}],"evitar":[{"titulo":"","prova":""}],"agora":["3 a 5 ações concretas para as próximas 2 semanas"]}. Use no máximo 5 itens em funciona e 3 em evitar. Nunca invente números.`,{cache:false});
+    if(!r||!Array.isArray(r.funciona))throw {code:'invalid_json'};
+    const doc={atualizadoEm:new Date().toISOString(),base:clean(r.base||''),funciona:r.funciona.slice(0,5).map(x=>({titulo:clean(x.titulo),prova:clean(x.prova),acao:clean(x.acao)})),
+      evitar:(r.evitar||[]).slice(0,3).map(x=>({titulo:clean(x.titulo),prova:clean(x.prova)})),agora:(r.agora||[]).slice(0,5).map(clean),origem:'claude'};
+    await Store.set(bpath('insights'),'bussola',doc);toast('Bússola atualizada');
+  }catch(e){toast(aiErrMsg(e),4500)}
+  finally{if(btnEl.isConnected){btnEl.disabled=false;btnEl.innerHTML=old}}
 }
 
 /* ---------- calendário ---------- */
@@ -1144,6 +1177,7 @@ document.addEventListener('click',async e=>{
       if(col==='refs'&&assets&&validAsset(item.media))assets.delete(item.media).catch(()=>{});closeModal()}catch(_){}}break;
     case 'media-remove':{$('#f-media').value='';$('#f-mediaType').value='';if(modalCtx)modalCtx.file=null;$('#mediaBox').innerHTML=MEDIA_EMPTY;break}
     case 'ai-ref-fill':fillRefWithClaude(el);break;
+    case 'ai-bussola':refreshBussola(el);break;
     case 'ai-caption':draftCaption();break;
     case 'new-brand':openEditor('__brand',null,{});break;
     case 'brand-save':{try{await Store.set('brands',state.brandId,readBrandForm());state.brandDirty=false;toast('Configurações salvas');renderTop()}catch(_){}break}
@@ -1191,6 +1225,7 @@ function defaults(col,ds){
 document.addEventListener('change',e=>{if(e.target&&e.target.id==='f-mediafile'){const f=e.target.files&&e.target.files[0];e.target.value='';attachMedia(f)}});
 document.addEventListener('paste',e=>{if(!modalCtx||modalCtx.col!=='refs')return;const it=[...(e.clipboardData&&e.clipboardData.items||[])].find(i=>i.kind==='file'&&/^image\//.test(i.type));if(it){e.preventDefault();attachMedia(it.getAsFile())}});
 document.addEventListener('error',e=>{const t=e.target;if(t&&t.hasAttribute&&t.hasAttribute('data-media')){const d=document.createElement('div');d.className='media-empty';d.textContent='Prévia indisponível.';t.replaceWith(d)}},true);
+document.addEventListener('toggle',e=>{if(e.target&&e.target.classList&&e.target.classList.contains('bussola'))LS.set('cl.bussolaFechada',!e.target.open)},true);
 document.addEventListener('keydown',e=>{
   if(e.key==='Escape'){if(!$('#sheet').hidden)closeSheet();else if(!$('#modal').hidden)closeModal()}
   if((e.key==='Enter'||e.key===' ')&&e.target.classList&&e.target.classList.contains('cell')){e.preventDefault();e.target.click()}

@@ -181,8 +181,10 @@ Reel BBB — 153 plays
         self.assertEqual((a.views, a.curtidas, a.comentarios, a.duracao, a.data), (6235, 1900, 12, 80, "2026-09-24"))
         self.assertEqual(a.sinal(), "6.235 visualizações, 1,9 mil curtidas, 12 comentários")
         self.assertEqual(a.titulo, "Primeira linha, do gancho")
+        self.assertIn("resto", a.legenda)  # legenda de várias linhas vem inteira
+        self.assertNotIn("Reel AAA", b.legenda)
         self.assertEqual(a.arquivo_local, "/base/capa-a.jpg")
-        self.assertEqual(b.comentarios, 0)  # sem comentários na resposta = zero
+        self.assertIsNone(b.comentarios)  # a resposta não trouxe comentários: não inventamos zero
         self.assertEqual(a.perfil, "@perfil")
 
     def test_marca_vira_calendario_e_metricas(self):
@@ -200,6 +202,23 @@ Reel BBB — 153 plays
         self.assertEqual((mets[0]["doc"]["reach"], mets[0]["doc"]["posts"], mets[0]["doc"]["end"]), (6235, 1, REF.isoformat()))
         lote = ip.montar_lote({"itens": mets}, {})
         self.assertEqual(lote[0]["doc_id"], "ig-reels-2026-09")
+
+    def test_destaque_exige_viral_e_semelhanca(self):
+        def post(code, views, likes, texto):
+            return ip.Post("instagram", "@x", f"https://www.instagram.com/reel/{code}/", "2026-09-10", "Reels", texto,
+                           legenda=texto, views=views, curtidas=likes)
+        ps = [post("a", 100, 5, "bom dia"), post("b", 120, 5, "café"), post("c", 110, 5, "rotina"),
+              post("d", 90, 5, "treino"), post("e", 130, 5, "viagem"), post("f", 105, 5, "almoço"),
+              post("viral_fora", 5000, 200, "meme de gato"),
+              post("viral_ir", 3000, 150, "Como declarar ações no imposto de renda"),
+              post("pago", 90000, 20, "Otimizador de IR e DARF automático")]
+        d = ip.destaques(ps, 180, 2.0, REF)
+        self.assertEqual([p.url.split("/")[-2] for p in d], ["pago", "viral_ir"])  # meme sem tema fica de fora
+        self.assertTrue(ip.alcance_pago_provavel(d[0]))
+        doc = ip.doc_referencia(d[1], {"id": "c"})
+        self.assertIn("viral no nicho", doc["tags"])
+        self.assertIn("x a mediana do perfil", doc["views"])
+        self.assertIn("alcance possivelmente pago", ip.doc_referencia(d[0], None)["tags"])
 
     def test_numero_abreviado(self):
         self.assertEqual(ip.numero_abreviado("175.4K"), (175400, "175,4 mil"))

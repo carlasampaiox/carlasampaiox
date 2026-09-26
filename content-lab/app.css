@@ -322,3 +322,17 @@ fieldset{border:0;padding:0;margin:0}
 @media (max-width:640px){.row .thumb{width:100%;flex-basis:auto;aspect-ratio:16/9}}
 .igstat{font-size:13px;color:var(--ink-2);background:var(--surface-2);border-radius:var(--r-sm);padding:8px 12px;margin:-6px 0 16px}
 .igstat b{color:var(--ink)}
+.bussola{background:var(--surface);border:1px solid color-mix(in srgb,var(--accent) 35%,var(--line));border-radius:var(--r);padding:14px 16px;margin-bottom:18px}
+.bussola summary{cursor:pointer;display:flex;flex-direction:column;gap:2px;list-style:none}
+.bussola summary::-webkit-details-marker{display:none}
+.bussola summary b{font-family:var(--f-display);font-size:17px}
+.bussola .small{font-size:12.5px}
+.b-grid{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:18px;margin-top:12px}
+.b-grid h4{margin:0 0 6px;font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--accent-text)}
+.b-grid ul,.b-grid ol{margin:0 0 12px;padding-left:18px;display:flex;flex-direction:column;gap:8px;font-size:14px}
+.b-grid li b{display:block}
+.b-grid .prova{display:block;color:var(--ink-2);font-size:13px}
+.b-grid .acao{display:block;color:var(--good);font-size:13px;font-weight:600}
+.bussola .foot{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.bussola.empty-b{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+@media (max-width:760px){.b-grid{grid-template-columns:minmax(0,1fr)}}
