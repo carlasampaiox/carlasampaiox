@@ -58,6 +58,7 @@ Para rodar sem parar, a tarefa precisa estar com "Aprovar automaticamente" ligad
 - Controle das consultas no banco: `importador/vidiq` (ultimaConsulta, ultimoPost, postsSemana por perfil).
 - Instagram da Mycapital: @mycapitaloficial (em `brands/mycapital`, `channels.instagram.handle`).
 - O botão "Importar posts agora" dispara essa rotina com PEDIDO AVULSO (1 perfil, 5 créditos).
+- Cada consulta do @mycapitaloficial também atualiza o Calendário (Reels publicados, id `ig-<código>`) e as Métricas (Reels por mês, id `ig-reels-AAAA-MM`, só meses inteiros).
 
 ## Importador de posts (`../importador/`)
 - `importar_posts.py`: Instagram (Business Discovery) e YouTube Data API, melhores posts de 14 dias, capas baixadas, sem repetir links.

@@ -237,6 +237,7 @@ class Post:
     seguidores: int | None = None
     arquivo_local: str = ""  # capa já baixada (conector vidIQ)
     duracao: int = 0         # segundos
+    fixado: bool = False     # Reel fixado no topo do perfil
     textos: dict = field(default_factory=dict)  # números como a fonte mostra ("6,2 mil")
 
     def pontuacao(self) -> float:
@@ -404,10 +405,10 @@ def ler_vidiq_reels(texto: str, base_arquivos: Path | None = None) -> list[Post]
     blocos = re.split(r"^###\s+", texto, flags=re.M)[1:]
     for b in blocos:
         linhas = b.splitlines()
-        cab = re.match(r"(\S+)\s+\S+\s+(.*?),\s*posted\s+(\d{4}-\d{2}-\d{2})", linhas[0])
+        cab = re.match(r"(\S+)\s+\S+\s+(.*?),\s*posted\s+(\d{4}-\d{2}-\d{2})(.*)", linhas[0])
         if not cab:
             continue
-        code, stats, data = cab.groups()
+        code, stats, data, resto = cab.groups()
         textos, vals, dur = {}, {}, 0
         for parte in stats.split(","):
             parte = parte.strip()
@@ -429,7 +430,7 @@ def ler_vidiq_reels(texto: str, base_arquivos: Path | None = None) -> list[Post]
             plataforma="instagram", perfil="@" + handle, url=url, data=data, formato="Reels",
             titulo=gancho(legenda) or f"Reels de @{handle}", legenda=legenda,
             curtidas=vals.get("curtidas"), comentarios=vals.get("comentarios", 0 if "curtidas" in vals else None),
-            views=vals.get("views"), arquivo_local=capas.get(code, ""), duracao=dur,
+            views=vals.get("views"), arquivo_local=capas.get(code, ""), duracao=dur, fixado="pinned" in resto,
             textos={k: v for k, v in textos.items() if not re.fullmatch(r"[\d.]+", v)},
         ))
     return posts
@@ -755,6 +756,7 @@ def montar_pacote(estado: dict, buscar: Buscador, pasta: Path, cfg: Config,
                 atualizar_controle(controle, proprio, todos, ref or hoje())
             extra = destaques(todos, cfg.dias_destaque, cfg.fator_destaque, ref, existentes)
             registrar([], None, extra)
+            itens.extend(itens_da_marca(bid, todos, existentes, ref or hoje(), cfg.dias_destaque))
             log(f"  IG próprio @{proprio} (vidIQ): {min(len(extra), cfg.por_perfil)} destaques")
         elif cfg.incluir_marca and token and ig_id:
             try:
@@ -770,6 +772,46 @@ def montar_pacote(estado: dict, buscar: Buscador, pasta: Path, cfg: Config,
     }
 
 
+def itens_da_marca(bid: str, posts: list[Post], existentes: set[str], hoje_: dt.date, dias: int) -> list[dict]:
+    """Reels da própria marca: viram posts publicados no Calendário e um registro
+    mensal na aba Métricas (visualizações e quantidade de Reels)."""
+    out = []
+    corte = (hoje_ - dt.timedelta(days=dias)).isoformat()
+    agora = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
+    for p in posts:
+        k = normalizar_link(p.url)
+        if p.data < corte or k in existentes:
+            continue
+        existentes.add(k)
+        code = p.url.rstrip("/").split("/")[-1]
+        out.append({"brandId": bid, "arquivo": "", "mediaType": "", "plataforma": "instagram", "colecao": "posts",
+                    "docId": "ig-" + code, "doc": {
+                        "title": p.titulo, "date": p.data, "time": "", "channel": "instagram", "format": p.formato,
+                        "status": "publicado", "pillar": "", "caption": p.legenda, "link": p.url,
+                        "notes": f"{p.sinal()} (vidIQ, {hoje_.strftime('%d/%m/%Y')}).", "origem": "importador"}})
+    # meses inteiros cobertos pela lista (os Reels não fixados vêm do mais novo ao mais antigo)
+    soltos = sorted(p.data for p in posts if not p.fixado)
+    if not soltos:
+        return out
+    mais_antigo = soltos[0]
+    meses = sorted({p.data[:7] for p in posts if p.data[:7] + "-01" > mais_antigo})
+    for m in meses:
+        ps = [p for p in posts if p.data.startswith(m)]
+        if not ps:
+            continue
+        ini = dt.date.fromisoformat(m + "-01")
+        fim = (ini.replace(day=28) + dt.timedelta(days=4)).replace(day=1) - dt.timedelta(days=1)
+        fim = min(fim, hoje_)
+        out.append({"brandId": bid, "arquivo": "", "mediaType": "", "plataforma": "instagram", "colecao": "metrics",
+                    "docId": "ig-reels-" + m, "doc": {
+                        "channel": "instagram", "start": ini.isoformat(), "end": fim.isoformat(),
+                        "reach": sum(p.views or 0 for p in ps), "posts": len(ps),
+                        "notes": f"Só Reels, dados públicos do vidIQ em {hoje_.strftime('%d/%m/%Y')}. Alcance = visualizações "
+                                 "acumuladas dos Reels publicados no mês. Posts de feed e carrosséis não entram.",
+                        "origem": "importador"}})
+    return out
+
+
 def montar_lote(pacote: dict, ids: dict[str, str]) -> list[dict]:
     """Converte o pacote em escritas para o ArtifactData (acao batch).
 
@@ -783,7 +825,7 @@ def montar_lote(pacote: dict, ids: dict[str, str]) -> list[dict]:
         aid = ids.get(it.get("arquivo") or "", "")
         if re.fullmatch(r"[0-9a-f]{32}", aid or ""):
             doc["media"], doc["mediaType"] = aid, it.get("mediaType") or "image"
-        doc_id = "imp-" + hashlib.sha1(normalizar_link(doc.get("url", "")).encode()).hexdigest()[:20]
+        doc_id = it.get("docId") or "imp-" + hashlib.sha1(normalizar_link(doc.get("url", "")).encode()).hexdigest()[:20]
         lote.append({"op": "set", "collection": f"brands/{it['brandId']}/{it['colecao']}",
                      "doc_id": doc_id, "data": doc})
     return lote
@@ -936,7 +978,8 @@ def montar_estado(pasta: Path) -> dict:
     marcas = []
     for b in ler_dump(pasta, "brands"):
         base = f"brands/{b['id']}"
-        links = [d.get("url", "") for c in ("compnews", "refs") for d in ler_dump(pasta, f"{base}/{c}")]
+        links = [d.get("url", "") or d.get("link", "") for c in ("compnews", "refs", "posts")
+                 for d in ler_dump(pasta, f"{base}/{c}")]
         marcas.append({"id": b["id"], "name": b.get("name", ""),
                        "channels": b.get("channels", {}),
                        "competitors": [{k: c.get(k, "") for k in ("id", "name", "instagram", "youtube", "tiktok")}

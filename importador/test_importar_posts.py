@@ -169,6 +169,22 @@ Reel BBB — 153 plays
         self.assertEqual(b.comentarios, 0)  # sem comentários na resposta = zero
         self.assertEqual(a.perfil, "@perfil")
 
+    def test_marca_vira_calendario_e_metricas(self):
+        ps = ip.ler_vidiq_reels(self.TXT)
+        self.assertTrue(ps[0].fixado and not ps[1].fixado)
+        its = ip.itens_da_marca("m", ps, {ip.normalizar_link("https://www.instagram.com/reel/BBB/")}, REF, 90)
+        posts = [i for i in its if i["colecao"] == "posts"]
+        mets = [i for i in its if i["colecao"] == "metrics"]
+        self.assertEqual([i["docId"] for i in posts], ["ig-AAA"])  # BBB já estava no calendário
+        self.assertEqual(posts[0]["doc"]["status"], "publicado")
+        self.assertEqual(mets, [])  # setembro não está inteiro na lista: não grava número parcial
+        txt = self.TXT.replace("posted 2026-09-23", "posted 2026-08-20")
+        mets = [i for i in ip.itens_da_marca("m", ip.ler_vidiq_reels(txt), set(), REF, 90) if i["colecao"] == "metrics"]
+        self.assertEqual([i["docId"] for i in mets], ["ig-reels-2026-09"])
+        self.assertEqual((mets[0]["doc"]["reach"], mets[0]["doc"]["posts"], mets[0]["doc"]["end"]), (6235, 1, REF.isoformat()))
+        lote = ip.montar_lote({"itens": mets}, {})
+        self.assertEqual(lote[0]["doc_id"], "ig-reels-2026-09")
+
     def test_numero_abreviado(self):
         self.assertEqual(ip.numero_abreviado("175.4K"), (175400, "175,4 mil"))
         self.assertEqual(ip.numero_abreviado("1.7M"), (1700000, "1,7 mi"))
