@@ -1,0 +1,7 @@
+.env
+.env.*
+!.env.exemplo
+__pycache__/
+*.pyc
+importador/saida/
+node_modules/
