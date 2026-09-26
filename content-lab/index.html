@@ -403,7 +403,7 @@ const btn=(label,act,attrs='',cls='')=>`<button class="btn ${cls}" data-act="${a
 function toast(msg,ms){const t=$('#toast');t.textContent=msg;t.hidden=false;clearTimeout(toast._t);toast._t=setTimeout(()=>t.hidden=true,ms||2600)}
 
 /* ================= store (db or in-memory preview) ================= */
-let db=null, sample=null, mcp=null, assets=null;
+let db=null, sample=null, mcp=null, assets=null, downloads=null;
 const DEMO=window.__DEMO__||{};
 const mem={}, memL={};
 function memCol(p){return mem[p]||(mem[p]=new Map())}
@@ -1483,11 +1483,14 @@ document.addEventListener('click',async e=>{
       try{const out={app:'content-lab',versao:1,exportadoEm:new Date().toISOString(),brand:b,data:{}};
         for(const c of COLS)out.data[c]=await Store.list(bpath(c));
         const blob=new Blob([JSON.stringify(out,null,2)],{type:'application/json'});
-        const a=document.createElement('a');a.href=URL.createObjectURL(blob);
-        a.download=`content-lab-${String(b.name||b.id).toLowerCase().normalize('NFD').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}-${TODAY()}.json`;
-        document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),4000);
-        toast(`Backup gerado com ${COLS.reduce((n,c)=>n+out.data[c].length,0)} itens`)}
-      catch(_){toast('Não consegui gerar o backup agora.')}
+        const fname=`content-lab-${String(b.name||b.id).toLowerCase().normalize('NFD').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}-${TODAY()}.json`;
+        const total=COLS.reduce((n,c)=>n+out.data[c].length,0);
+        if(downloads){await downloads.save({filename:fname,data:blob});toast(`Backup salvo com ${total} itens`)}
+        else if(state.mode==='live'){toast('O download não está liberado nesta visualização.',4000)}
+        else{const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=fname;
+          document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),4000);
+          toast(`Backup gerado com ${total} itens`)}}
+      catch(e){const c=e&&e.code;if(c!=='declined')toast(c==='rate_limited'?'Já há um download aguardando confirmação.':'Não consegui gerar o backup agora.')}
       el.disabled=false;break}
     case 'brand-examples':if(arm(el,'ex','Confirmar remoção')){el.disabled=true;let n=0;
       try{for(const c of COLS){for(const it of await Store.list(bpath(c))){if(it.exemplo){await Store.remove(bpath(c),it.id);n++}}}
@@ -1544,8 +1547,8 @@ subBrands();
 (async()=>{
   const c=window.claude;
   if(!c||typeof c.use!=='function')return;
-  const [d,s,m,a]=await Promise.all([c.use('db').catch(()=>null),c.use('sample').catch(()=>null),c.use('mcp').catch(()=>null),c.use('assets').catch(()=>null)]);
-  sample=s;mcp=m;assets=a;
+  const [d,s,m,a,dl]=await Promise.all([c.use('db').catch(()=>null),c.use('sample').catch(()=>null),c.use('mcp').catch(()=>null),c.use('assets').catch(()=>null),c.use('downloads').catch(()=>null)]);
+  sample=s;mcp=m;assets=a;downloads=dl;
   if(d){
     db=d;state.mode='live';state.loading=true;state.brands=[];state.brandId=null;
     unsubCols.forEach(u=>u());unsubCols=[];

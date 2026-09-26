@@ -23,7 +23,7 @@ https://claude.ai/artifact/JWoCf2AYGr2K39nSmCzm9R
 1. Editar `app.js`, `app.css` ou `shell.html`.
 2. Rodar `python3 build.py`, `node --check app.js` e `NODE_PATH=$(npm root -g) node tests/smoke.cjs`.
 3. Publicar `index.html` no artifact acima, passando a `url` acima para atualizar o mesmo link.
-4. Manter as capacidades: `db`, `sample`, `assets` e `mcp` com `Claude Code Remote` / `fire_trigger`.
+4. Manter as capacidades: `db`, `sample`, `assets`, `downloads` (backup) e `mcp` com `Claude Code Remote` / `fire_trigger`.
 
 ## Abas (nesta ordem)
 Notícias, Referências, Calendário, Datas importantes, Marca, Mapa de ideias, Métricas, Concorrentes.
