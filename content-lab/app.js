@@ -291,7 +291,8 @@ function viewRefs(){
   const all=state.data.refs.slice().sort((a,b)=>String(b.createdAt).localeCompare(String(a.createdAt)));
   const list=state.f.refPlat?all.filter(r=>r.platform===state.f.refPlat):all;
   let h=head('Referências virais','Posts do Instagram e do TikTok que performaram bem, com o gancho e o motivo anotados para inspirar a produção.',
-    aiBtn('Padrões em comum','ai-refs-all')+btn('Nova referência','new','data-col="refs"','primary'));
+    aiBtn('Padrões em comum','ai-refs-all')+igBtn()+btn('Nova referência','new','data-col="refs"','primary'));
+  h+=igStatus();
   h+=`<div class="toolbar">${chips('refPlat',[['','Todas'],['instagram','Instagram'],['tiktok','TikTok']],state.f.refPlat)}</div>`;
   if(!all.length)return h+empty('Nenhuma referência ainda','Salve o link de um post que viralizou e anote o gancho e por que funcionou.',btn('Nova referência','new','data-col="refs"','primary'));
   if(!list.length)return h+empty('Nada nesta plataforma','Troque o filtro ou adicione uma nova referência.');
@@ -649,7 +650,7 @@ const shortUrl=u=>u.replace(/^https?:\/\/(www\.)?/,'').replace(/\/$/,'');
 function viewComps(){
   const list=state.data.competitors.slice().sort((a,b)=>String(a.name).localeCompare(String(b.name),'pt-BR'));
   let h=head('Concorrentes','Cadastre um concorrente e o Claude revisa os canais dele e busca notícias relevantes na internet. A pesquisa, as notícias e as suas anotações ficam juntas aqui.',
-    aiBtn('Lacunas e oportunidades','ai-comps')+(list.length?btn('Atualizar Instagram','comp-import','title="Busca Reels novos dos concorrentes e da marca pelo vidIQ, gastando só os créditos liberados para manter o saldo até a renovação."'):'')+btn('Novo concorrente','new','data-col="competitors"','primary'));
+    aiBtn('Lacunas e oportunidades','ai-comps')+(list.length?igBtn():'')+btn('Novo concorrente','new','data-col="competitors"','primary'));
   if(list.length)h+=igStatus();
   if(!list.length)return h+empty('Nenhum concorrente cadastrado','Cadastre o nome e, se souber, o site e os perfis. O Claude completa o resto com a pesquisa.',btn('Novo concorrente','new','data-col="competitors"','primary'));
   const names=Object.fromEntries(list.map(c=>[c.id,c.name]));
@@ -725,6 +726,7 @@ async function requestResearch(c){
   }
 }
 
+const igBtn=()=>btn('Atualizar Instagram','comp-import','title="Busca Reels novos dos concorrentes e da marca pelo vidIQ, gastando só os créditos liberados para manter o saldo até a renovação."');
 /* situação da atualização do Instagram (documento importador/vidiq, gravado pela rotina) */
 function igStatus(){
   const v=state.vidiq, pl=v&&v.ultimoPlano, req=LS.get('cl.igReq',null);

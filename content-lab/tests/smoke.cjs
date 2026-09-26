@@ -26,6 +26,8 @@ const TABS = ['noticias', 'referencias', 'calendario', 'datas', 'marca', 'ideias
   // novidades
   await page.click('#tabs [data-tab="concorrentes"]');
   if (!(await page.$('[data-act="comp-import"]'))) erros.push('botão Atualizar Instagram ausente');
+  await page.click('#tabs [data-tab="referencias"]');
+  if (!(await page.$('[data-act="comp-import"]'))) erros.push('botão Atualizar Instagram ausente em Referências');
   await page.click('#tabs [data-tab="marca"]');
   const [dl] = await Promise.all([page.waitForEvent('download', { timeout: 5000 }), page.click('[data-act="brand-backup"]')]);
   const conteudo = JSON.parse(require('fs').readFileSync(await dl.path(), 'utf8'));

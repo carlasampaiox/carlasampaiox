@@ -53,7 +53,7 @@ O botão "Pesquisar agora" da aba Concorrentes dispara essa mesma tarefa com um 
 Para rodar sem parar, a tarefa precisa estar com "Aprovar automaticamente" ligado.
 
 ## Instagram pelo vidIQ (botão "Atualizar Instagram")
-- Rotina "Atualizar Instagram do Content Lab" (id `trig_013cy9D6MRXUtjTWdWLd4Abn`), sem horário: roda só quando o botão da aba Concorrentes é clicado (fire_trigger). Segue `../importador/ROTINA.md`.
+- Rotina "Atualizar Instagram do Content Lab" (id `trig_013cy9D6MRXUtjTWdWLd4Abn`), sem horário: roda só quando o botão "Atualizar Instagram" (abas Referências e Concorrentes) é clicado (fire_trigger). Segue `../importador/ROTINA.md`.
 - Conector vidIQ, plano grátis: 150 créditos por mês, 5 por consulta de Reels. O comando `planejar` reparte o saldo pelos dias até a renovação; o crédito diário acumula desde o último uso e cada clique gasta só o acumulado (até 3 consultas), apenas com perfis que venceram (intervalo = 7 ÷ Reels por semana, entre 3 e 14 dias; 30 se parado).
 - Controle no banco: `importador/vidiq` (perfis, ultimoUso, ultimoPlano). A página mostra a última atualização, o saldo e a próxima atualização útil.
 - Instagram da Mycapital: @mycapitaloficial (em `brands/mycapital`, `channels.instagram.handle`).
