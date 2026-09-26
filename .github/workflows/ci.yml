@@ -17,7 +17,7 @@ jobs:
       - name: Importador e coletor (testes)
         working-directory: importador
         run: |
-          pip install "feedparser>=6,<7"
+          pip install "feedparser>=6,<7"  # o resto das bibliotecas do coletor é opcional nos testes
           python -m unittest -v
       - name: Importador (simulação)
         working-directory: importador

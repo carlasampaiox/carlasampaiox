@@ -3,18 +3,77 @@
   "marca": {
     "id": "mycapital",
     "noticias": [
-      {"busca": "imposto de renda investimentos", "tema": "IR"},
-      {"busca": "tributação dividendos", "tema": "Dividendos"},
-      {"busca": "IRPF 2027 Receita Federal", "tema": "Declaração"},
-      {"busca": "B3 investidores pessoa física", "tema": "Mercado"},
-      {"busca": "\"Mycapital\"", "tema": "Marca citada"}
+      {
+        "busca": "imposto de renda investimentos",
+        "tema": "IR"
+      },
+      {
+        "busca": "tributação dividendos",
+        "tema": "Dividendos"
+      },
+      {
+        "busca": "IRPF 2027 Receita Federal",
+        "tema": "Declaração"
+      },
+      {
+        "busca": "B3 investidores pessoa física",
+        "tema": "Mercado"
+      },
+      {
+        "busca": "\"Mycapital\"",
+        "tema": "Marca citada"
+      }
     ]
   },
   "concorrentes": [
-    {"id": "4nez93j2qfthdrtwl4ri", "nome": "Myprofit", "youtube": "UC9dVD0WmrrzyB7cez_IQtNQ", "blogs": [], "busca": "\"myProfit\""},
-    {"id": "bs2fj7391bo4wovt5nrw", "nome": "Grana Capital", "youtube": "https://www.youtube.com/@grana.capital", "blogs": ["https://blog.grana.capital/feed/"], "busca": "\"Grana Capital\""},
-    {"id": "c1", "nome": "Kinvo", "youtube": "https://www.youtube.com/@kinvoapp", "blogs": [], "busca": "\"Kinvo\" investimentos"},
-    {"id": "c2", "nome": "Gorila", "youtube": "UCYJiIU0DqDLiPcq8tWecjdw", "blogs": ["https://gorila.com.br/blog/feed/"], "busca": "\"Gorila\" investimentos"},
-    {"id": "c3", "nome": "Investidor10", "youtube": "UCOcosY44MPuUsSMvAFrsAjQ", "blogs": [], "busca": "\"Investidor10\""}
-  ]
+    {
+      "id": "4nez93j2qfthdrtwl4ri",
+      "nome": "Myprofit",
+      "youtube": "UC9dVD0WmrrzyB7cez_IQtNQ",
+      "blogs": [],
+      "busca": "\"myProfit\""
+    },
+    {
+      "id": "bs2fj7391bo4wovt5nrw",
+      "nome": "Grana Capital",
+      "youtube": "https://www.youtube.com/@grana.capital",
+      "blogs": [
+        "https://blog.grana.capital/feed/"
+      ],
+      "busca": "\"Grana Capital\""
+    },
+    {
+      "id": "c1",
+      "nome": "Kinvo",
+      "youtube": "https://www.youtube.com/@kinvoapp",
+      "blogs": [],
+      "busca": "\"Kinvo\" investimentos"
+    },
+    {
+      "id": "c2",
+      "nome": "Gorila",
+      "youtube": "UCYJiIU0DqDLiPcq8tWecjdw",
+      "blogs": [
+        "https://gorila.com.br/blog/feed/"
+      ],
+      "busca": "\"Gorila\" investimentos"
+    },
+    {
+      "id": "c3",
+      "nome": "Investidor10",
+      "youtube": "UCOcosY44MPuUsSMvAFrsAjQ",
+      "blogs": [],
+      "busca": "\"Investidor10\""
+    }
+  ],
+  "tendencias": {
+    "geo": "BR",
+    "periodo": "today 1-m",
+    "termos": [
+      "imposto de renda",
+      "darf",
+      "dividendos",
+      "ir ações"
+    ]
+  }
 }

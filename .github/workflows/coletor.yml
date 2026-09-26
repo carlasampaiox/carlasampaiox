@@ -1,5 +1,6 @@
 name: Coletor gratuito do Content Lab
-# Todo dia às 6h10 (Brasília): YouTube (RSS oficial), Google Notícias e blogs.
+# Todo dia às 6h10 (Brasília): YouTube (RSS oficial), Google Notícias (link real e
+# trecho da matéria), blogs e Google Trends (buscas em alta no Brasil).
 # Sem chaves e sem créditos. O resultado fica em dados/ e a rotina do Claude
 # "Coleta gratuita do Content Lab" importa o que for novo às 7h13.
 on:
@@ -14,12 +15,14 @@ concurrency:
 jobs:
   coletar:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - run: pip install "feedparser>=6,<7"
+      - name: Bibliotecas open source (GitHub)
+        run: pip install -r importador/requirements-coletor.txt
       - name: Coletar
         working-directory: importador
         run: python coletor.py --saida ../dados

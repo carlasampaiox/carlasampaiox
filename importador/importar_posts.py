@@ -1028,10 +1028,10 @@ def filtrar_coleta(coleta: dict, estado: dict) -> dict:
     itens = []
     for it in coleta.get("itens", []):
         ex = existentes.setdefault(it["brandId"], set())
-        k = normalizar_link(it["doc"].get("url", ""))
-        if not k or k in ex:
+        chaves = {normalizar_link(u) for u in [it["doc"].get("url", "")] + it.get("aliases", []) if u}
+        if not chaves or chaves & ex:
             continue
-        ex.add(k)
+        ex |= chaves
         itens.append(it)
     return {"geradoEm": coleta.get("geradoEm"), "fonte": coleta.get("fonte", "coletor"), "itens": itens,
             "avisos": coleta.get("avisos", []), "arquivos": sorted({i["arquivo"] for i in itens if i.get("arquivo")})}

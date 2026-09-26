@@ -6,7 +6,12 @@ Fontes oficiais e públicas, sem login, sem chave e sem créditos:
   - Google Notícias: RSS de busca (nicho da marca e menções aos concorrentes)
   - Blogs: RSS/Atom dos blogs dos concorrentes, quando existir
 
-Usa a biblioteca open source feedparser (github.com/kurtmckee/feedparser).
+Bibliotecas open source do GitHub usadas (instaladas no GitHub Actions):
+  - feedparser (kurtmckee/feedparser): lê RSS e Atom
+  - googlenewsdecoder (SSujitX/google-news-url-decoder): link real da notícia
+  - trafilatura (adbar/trafilatura): texto principal da matéria, para o resumo
+  - trendspyg (flack0x/trendspyg): Google Trends, buscas em alta no Brasil
+Cada etapa é opcional: se a biblioteca ou a fonte falhar, o resto segue.
 Grava `dados/coleta.json` no formato de pacote do importador e as capas em
 `dados/midia/`. A rotina do Claude (botão "Atualizar agora") só importa o que
 ainda não está no Content Lab (compara pelo link).
@@ -135,6 +140,96 @@ def menciona(nome: str, titulo: str) -> bool:
     return n and n in re.sub(r"[^a-z0-9]", "", titulo.lower())
 
 
+def primeiras_frases(texto: str, n: int = 2, limite: int = 360) -> str:
+    frases = re.split(r"(?<=[.!?])\s+", re.sub(r"\s+", " ", str(texto or "")).strip())
+    t = " ".join(f for f in frases[:n] if len(f) > 25)
+    return ip.limpar(t[:limite].rsplit(" ", 1)[0] + "..." if len(t) > limite else t)
+
+
+def enriquecer_noticias(itens: list[dict], log=print, decodificar=None, baixar_texto=None) -> int:
+    """Troca o link do Google Notícias pelo link real (googlenewsdecoder) e guarda
+    as primeiras frases da matéria (trafilatura) em `contexto`, para o resumo."""
+    alvo = [i for i in itens if "news.google.com" in i["doc"].get("url", "")]
+    if not alvo:
+        return 0
+    if decodificar is None:
+        try:
+            from googlenewsdecoder import gnewsdecoder
+        except ImportError:
+            log("  googlenewsdecoder ausente: links do Google Notícias mantidos")
+            return 0
+        decodificar = lambda urls: gnewsdecoder(urls, interval=1)  # noqa: E731
+    if baixar_texto is None:
+        try:
+            import trafilatura
+
+            def baixar_texto(url):
+                html = trafilatura.fetch_url(url)
+                return trafilatura.extract(html, include_comments=False, include_tables=False) if html else ""
+        except ImportError:
+            baixar_texto = lambda url: ""  # noqa: E731
+    ok = 0
+    for bloco in range(0, len(alvo), 10):
+        grupo = alvo[bloco:bloco + 10]
+        try:
+            res = decodificar([i["doc"]["url"] for i in grupo])
+        except Exception as e:  # noqa: BLE001
+            log(f"  decoder falhou: {e}")
+            continue
+        for it, r in zip(grupo, res if isinstance(res, list) else [res]):
+            if not (isinstance(r, dict) and r.get("success") and r.get("decoded_url")):
+                continue
+            it.setdefault("aliases", []).append(it["doc"]["url"])
+            it["doc"]["url"] = r["decoded_url"]
+            ok += 1
+            try:
+                it["contexto"] = primeiras_frases(baixar_texto(r["decoded_url"]) or "")
+            except Exception:  # noqa: BLE001
+                pass
+    return ok
+
+
+def tendencias(fontes: dict, log=print, explorar=None, em_alta=None) -> dict:
+    """Google Trends no Brasil (trendspyg): buscas relacionadas em alta para os
+    termos da marca e assuntos do momento que tenham a ver com o nicho."""
+    cfg = fontes.get("tendencias") or {}
+    termos = cfg.get("termos", [])
+    geo = cfg.get("geo", "BR")
+    periodo = cfg.get("periodo", "today 1-m")
+    out = {"geo": geo, "periodo": periodo, "termos": [], "emAlta": [], "avisos": []}
+    if explorar is None or em_alta is None:
+        try:
+            import trendspyg
+        except ImportError:
+            out["avisos"].append("trendspyg ausente")
+            return out
+        explorar = explorar or (lambda termo: trendspyg.download_google_trends_explore(
+            termo, geo=geo, timeframe=periodo, include_geo=False, max_retries=4, retry_wait=6.0))
+        em_alta = em_alta or (lambda: trendspyg.download_google_trends_rss(geo=geo, output_format="dict", cache=False))
+    for termo in termos:
+        try:
+            env = explorar(termo)
+            rel = env.get("related_queries") or {}
+            pts = env.get("interest_over_time") or []
+            out["termos"].append({
+                "termo": termo,
+                "subindo": [{"busca": q["query"], "valor": q.get("formatted_value") or q.get("value")} for q in rel.get("rising", [])[:8]],
+                "top": [{"busca": q["query"], "valor": q.get("value")} for q in rel.get("top", [])[:8]],
+                "interesse": [{"data": x["date"], "valor": x["value"]} for x in pts[-8:]]})
+            log(f"  Google Trends: {termo}")
+        except Exception as e:  # noqa: BLE001
+            out["avisos"].append(f"Google Trends ({termo}): {e}")
+    try:
+        temas = dict(TEMAS_NOTICIA, **{t.lower(): 3 for t in termos})
+        for t in em_alta() or []:
+            nome = t.get("trend", "")
+            if relevancia(nome, temas) >= 2:
+                out["emAlta"].append({"assunto": nome, "trafego": t.get("traffic", ""), "publicado": t.get("published", "")})
+    except Exception as e:  # noqa: BLE001
+        out["avisos"].append(f"Google Trends em alta: {e}")
+    return out
+
+
 def coletar(fontes: dict, buscar: ip.Buscador, pasta: Path, hoje_: dt.date, log=print) -> dict:
     itens, avisos, vistos, titulos = [], [], set(), []
     por_tema = int(fontes.get("noticiasPorTema", 6))
@@ -228,6 +323,11 @@ def coletar(fontes: dict, buscar: ip.Buscador, pasta: Path, hoje_: dt.date, log=
         except Exception as e:  # uma fonte com problema não derruba as outras
             avisos.append(f"Google Notícias ({q['busca']}): {e}")
 
+    try:
+        n = enriquecer_noticias(itens, log)
+        log(f"  links reais e trechos: {n} notícias")
+    except Exception as e:  # noqa: BLE001
+        avisos.append(f"enriquecer notícias: {e}")
     return {"geradoEm": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
             "fonte": "coletor (GitHub Actions)", "itens": itens, "avisos": avisos,
             "arquivos": sorted({i["arquivo"] for i in itens if i["arquivo"]})}
@@ -237,6 +337,7 @@ def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description="Coleta gratuita de YouTube, Google Notícias e blogs.")
     ap.add_argument("--fontes", default=str(AQUI / "fontes.json"))
     ap.add_argument("--saida", default=str(AQUI.parent / "dados"))
+    ap.add_argument("--sem-tendencias", action="store_true")
     a = ap.parse_args(argv)
     fontes = json.loads(Path(a.fontes).read_text(encoding="utf-8"))
     pasta = Path(a.saida)
@@ -249,6 +350,11 @@ def main(argv=None) -> int:
         if f.name not in usadas:
             f.unlink()
     (pasta / "coleta.json").write_text(json.dumps(r, ensure_ascii=False, indent=2), encoding="utf-8")
+    if fontes.get("tendencias") and not a.sem_tendencias:
+        t = tendencias(fontes)
+        t["geradoEm"] = r["geradoEm"]
+        (pasta / "tendencias.json").write_text(json.dumps(t, ensure_ascii=False, indent=2), encoding="utf-8")
+        print(f"Tendências: {len(t['termos'])} termos, {len(t['emAlta'])} assuntos em alta, avisos: {t['avisos']}")
     por = {}
     for i in r["itens"]:
         por[i["colecao"]] = por.get(i["colecao"], 0) + 1

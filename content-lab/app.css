@@ -343,3 +343,8 @@ fieldset{border:0;padding:0;margin:0}
 .nv-body b{font-family:var(--f-display);font-size:16px}
 .nv-body p{font-size:14px;color:var(--ink-2)}
 .nv-act{display:flex;gap:6px}
+.trends{border-top:1px solid var(--line);padding-top:12px;margin:4px 0 12px}
+.trends h4{margin:0 0 8px;font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--accent-text)}
+.trends .trow{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;margin-bottom:6px}
+.trends .trow .eyebrow{min-width:120px}
+.trends .tagpill b{color:var(--good)}

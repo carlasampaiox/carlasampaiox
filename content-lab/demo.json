@@ -809,5 +809,38 @@
    "data": "2026-09-26T23:00:00Z",
    "exemplo": true
   }
+ },
+ "brands/mycapital/insights": {
+  "tendencias": {
+   "periodo": "today 1-m",
+   "geradoEm": "2026-09-26T23:00:00Z",
+   "termos": [
+    {
+     "termo": "imposto de renda",
+     "subindo": [
+      {
+       "busca": "exemplo de busca em alta",
+       "valor": "+250%"
+      }
+     ]
+    }
+   ],
+   "emAlta": [],
+   "exemplo": true
+  },
+  "bussola": {
+   "atualizadoEm": "2026-09-26T23:00:00Z",
+   "base": "exemplo",
+   "funciona": [
+    {
+     "titulo": "Exemplo",
+     "prova": "exemplo",
+     "acao": "exemplo"
+    }
+   ],
+   "evitar": [],
+   "agora": [],
+   "exemplo": true
+  }
  }
 }

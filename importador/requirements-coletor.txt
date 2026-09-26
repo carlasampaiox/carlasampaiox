@@ -1,0 +1,5 @@
+# Bibliotecas open source do GitHub usadas pelo coletor gratuito
+feedparser>=6,<7          # github.com/kurtmckee/feedparser
+googlenewsdecoder>=0.2    # github.com/SSujitX/google-news-url-decoder
+trafilatura>=2            # github.com/adbar/trafilatura
+trendspyg>=1.8            # github.com/flack0x/trendspyg (usa o Chrome do GitHub Actions)

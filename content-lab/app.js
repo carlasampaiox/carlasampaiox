@@ -326,6 +326,17 @@ function novidadeCard(){
 }
 
 /* ---------- bússola de conteúdo (brands/{marca}/insights/bussola) ---------- */
+function emAltaGoogle(){
+  const t=state.data.insights.find(x=>x.id==='tendencias');if(!t)return '';
+  const termos=(Array.isArray(t.termos)?t.termos:[]).filter(x=>(x.subindo||[]).length);
+  const alta=Array.isArray(t.emAlta)?t.emAlta:[];
+  if(!termos.length&&!alta.length)return '';
+  const chip=q=>`<span class="tagpill" title="Crescimento no Google Trends">${esc(q.busca)}${q.valor?` <b>${esc(String(q.valor))}</b>`:''}</span>`;
+  return `<section class="trends"><h4>Em alta no Google <span class="muted small">Brasil, ${t.periodo==='today 1-m'?'últimos 30 dias':esc(t.periodo||'')}${t.geradoEm?' · '+fmtDay(String(t.geradoEm).slice(0,10)):''}</span></h4>
+    ${termos.map(x=>`<div class="trow"><span class="eyebrow">${esc(x.termo)}</span><div class="chips">${x.subindo.slice(0,6).map(chip).join('')}</div></div>`).join('')}
+    ${alta.length?`<div class="trow"><span class="eyebrow">Assuntos do dia</span><div class="chips">${alta.slice(0,6).map(a=>`<span class="tagpill">${esc(a.assunto)}${a.trafego?` <b>${esc(a.trafego)}</b>`:''}</span>`).join('')}</div></div>`:''}
+    <p class="muted small">Buscas que mais cresceram ligadas aos temas da marca. Bom ponto de partida para ganchos e títulos.</p></section>`;
+}
 function bussola(){
   const b=state.data.insights.find(x=>x.id==='bussola');
   const up=aiBtn(b?'Atualizar Bússola':'Gerar Bússola','ai-bussola','','sm');
@@ -337,6 +348,7 @@ function bussola(){
       <section><h4>Evite</h4><ul>${li(b.evitar,x=>`<li><b>${esc(x.titulo)}</b>${x.prova?`<span class="prova">${esc(x.prova)}</span>`:''}</li>`)}</ul>
         ${Array.isArray(b.agora)&&b.agora.length?`<h4>Faça agora</h4><ol>${li(b.agora,x=>`<li>${esc(x)}</li>`)}</ol>`:''}</section>
     </div>
+    ${emAltaGoogle()}
     <div class="foot">${up}<span class="muted small">Viu algo viralizando na aba Explorar? Tire um print e cole em Nova referência: o Claude preenche e a Bússola passa a considerar.</span></div>
   </details>`;
 }
@@ -346,7 +358,7 @@ async function refreshBussola(btnEl){
   if(refs.length+cn.length<3){toast('Salve algumas referências primeiro.');return}
   const old=btnEl.innerHTML;btnEl.disabled=true;btnEl.innerHTML=SPARK+'Analisando...';
   try{
-    const r=await sample.json(`${RULES}\n\n${brandCtx()}\n\nREFERÊNCIAS (posts que funcionaram, com números reais)\n${lines(refs,x=>`- ${x.creator||''} [${x.format||''}] "${x.hook||''}" | ${x.views||''} | etiquetas: ${x.tags||''} | por que: ${x.why||''}`,40)}\n\nCONTEÚDOS RECENTES DOS CONCORRENTES\n${lines(cn,x=>`- ${x.competitorName||''} ${x.date||''} [${x.format||''}] "${x.title}" | ${x.signal||''}`,40)}\n\nPUBLICADOS PELA MARCA\n${lines(posts,x=>`- ${x.date} [${x.format||''}] "${x.title}" | ${x.notes||''}`,30)}\n\nTAREFA: você é estrategista de conteúdo da marca. Compare o que viralizou no nicho com o que a marca publica. Considere "alcance possivelmente pago" como formato de anúncio, não como viral orgânico. Responda só com JSON: {"base":"de onde vêm os dados, curto","funciona":[{"titulo":"padrão que funciona","prova":"exemplos e números reais das listas acima","acao":"como a marca aplica"}],"evitar":[{"titulo":"","prova":""}],"agora":["3 a 5 ações concretas para as próximas 2 semanas"]}. Use no máximo 5 itens em funciona e 3 em evitar. Nunca invente números.`,{cache:false});
+    const r=await sample.json(`${RULES}\n\n${brandCtx()}\n\nREFERÊNCIAS (posts que funcionaram, com números reais)\n${lines(refs,x=>`- ${x.creator||''} [${x.format||''}] "${x.hook||''}" | ${x.views||''} | etiquetas: ${x.tags||''} | por que: ${x.why||''}`,40)}\n\nCONTEÚDOS RECENTES DOS CONCORRENTES\n${lines(cn,x=>`- ${x.competitorName||''} ${x.date||''} [${x.format||''}] "${x.title}" | ${x.signal||''}`,40)}\n\nPUBLICADOS PELA MARCA\n${lines(posts,x=>`- ${x.date} [${x.format||''}] "${x.title}" | ${x.notes||''}`,30)}\n\nBUSCAS EM ALTA NO GOOGLE (Brasil)\n${(()=>{const t=state.data.insights.find(x=>x.id==='tendencias');return t&&Array.isArray(t.termos)?t.termos.map(x=>`- ${x.termo}: ${(x.subindo||[]).map(q=>q.busca+' ('+q.valor+')').join('; ')}`).join('\n'):'sem dados'})()}\n\nTAREFA: você é estrategista de conteúdo da marca. Compare o que viralizou no nicho com o que a marca publica. Considere "alcance possivelmente pago" como formato de anúncio, não como viral orgânico. Responda só com JSON: {"base":"de onde vêm os dados, curto","funciona":[{"titulo":"padrão que funciona","prova":"exemplos e números reais das listas acima","acao":"como a marca aplica"}],"evitar":[{"titulo":"","prova":""}],"agora":["3 a 5 ações concretas para as próximas 2 semanas"]}. Use no máximo 5 itens em funciona e 3 em evitar. Nunca invente números.`,{cache:false});
     if(!r||!Array.isArray(r.funciona))throw {code:'invalid_json'};
     const doc={atualizadoEm:new Date().toISOString(),base:clean(r.base||''),funciona:r.funciona.slice(0,5).map(x=>({titulo:clean(x.titulo),prova:clean(x.prova),acao:clean(x.acao)})),
       evitar:(r.evitar||[]).slice(0,3).map(x=>({titulo:clean(x.titulo),prova:clean(x.prova)})),agora:(r.agora||[]).slice(0,5).map(clean),origem:'claude'};

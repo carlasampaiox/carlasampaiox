@@ -104,5 +104,35 @@ class Coletor(unittest.TestCase):
         self.assertEqual(coletor.resolver_canal("@canal", lambda u: html), "UC" + "c" * 22)
 
 
+class Enriquecer(unittest.TestCase):
+    def test_link_real_e_trecho(self):
+        itens = [{"brandId": "m", "colecao": "news", "doc": {"url": "https://news.google.com/rss/articles/A"}},
+                 {"brandId": "m", "colecao": "news", "doc": {"url": "https://news.google.com/rss/articles/B"}},
+                 {"brandId": "m", "colecao": "news", "doc": {"url": "https://site.com/c"}}]
+        dec = lambda urls: [{"success": True, "decoded_url": "https://valor.com/a"}, {"success": False, "message": "x"}]
+        txt = lambda u: "Metade dos investidores atrasa o imposto de renda da bolsa, diz a pesquisa. Segunda frase com detalhes do estudo. Terceira."
+        n = coletor.enriquecer_noticias(itens, lambda _: None, dec, txt)
+        self.assertEqual(n, 1)
+        self.assertEqual(itens[0]["doc"]["url"], "https://valor.com/a")
+        self.assertEqual(itens[0]["aliases"], ["https://news.google.com/rss/articles/A"])
+        self.assertTrue(itens[0]["contexto"].startswith("Metade dos investidores"))
+        self.assertNotIn("Terceira", itens[0]["contexto"])
+        self.assertEqual(itens[1]["doc"]["url"], "https://news.google.com/rss/articles/B")  # falhou: mantém
+
+    def test_tendencias(self):
+        env = {"related_queries": {"rising": [{"query": "isenção 60 mil ações", "formatted_value": "+450%"}],
+                                   "top": [{"query": "ir ações", "value": 100}]},
+               "interest_over_time": [{"date": "2026-09-20", "value": 70}]}
+        def explorar(termo):
+            if termo == "quebrado":
+                raise RuntimeError("429")
+            return env
+        em_alta = lambda: [{"trend": "restituição imposto de renda", "traffic": "20 mil+"}, {"trend": "futebol hoje", "traffic": "1 mi+"}]
+        t = coletor.tendencias({"tendencias": {"termos": ["imposto de renda", "quebrado"]}}, lambda _: None, explorar, em_alta)
+        self.assertEqual(t["termos"][0]["subindo"][0], {"busca": "isenção 60 mil ações", "valor": "+450%"})
+        self.assertEqual([x["assunto"] for x in t["emAlta"]], ["restituição imposto de renda"])
+        self.assertTrue(any("quebrado" in a for a in t["avisos"]))
+
+
 if __name__ == "__main__":
     unittest.main()
