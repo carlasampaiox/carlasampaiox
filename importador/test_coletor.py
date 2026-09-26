@@ -30,6 +30,14 @@ YT = """<?xml version="1.0" encoding="UTF-8"?>
 NEWS = """<?xml version="1.0"?><rss version="2.0"><channel><title>Google</title>
 <item><title>Receita libera lote de restituição - InfoMoney</title><link>https://news.google.com/rss/articles/X1</link>
 <pubDate>Thu, 24 Sep 2026 12:00:00 GMT</pubDate><source url="https://www.infomoney.com.br">InfoMoney</source></item>
+<item><title>Receita libera novo lote de restituição hoje - Valor</title><link>https://news.google.com/rss/articles/X3</link>
+<pubDate>Thu, 24 Sep 2026 13:00:00 GMT</pubDate><source url="https://valor.globo.com">Valor</source></item>
+<item><title>Quanto rendem R$ 45 milhões da Mega-Sena - G1</title><link>https://news.google.com/rss/articles/X4</link>
+<pubDate>Thu, 24 Sep 2026 13:00:00 GMT</pubDate><source url="https://g1.globo.com">G1</source></item>
+<item><title>Conc lança recurso de imposto de renda - Exame</title><link>https://news.google.com/rss/articles/X5</link>
+<pubDate>Thu, 24 Sep 2026 13:00:00 GMT</pubDate><source url="https://exame.com">Exame</source></item>
+<item><title>Ibovespa cai com petróleo - Conc</title><link>https://news.google.com/rss/articles/X6</link>
+<pubDate>Thu, 24 Sep 2026 13:00:00 GMT</pubDate><source url="https://conc.com">Conc</source></item>
 <item><title>Notícia velha - Valor</title><link>https://news.google.com/rss/articles/X2</link>
 <pubDate>Thu, 01 Jan 2026 12:00:00 GMT</pubDate><source url="https://valor.globo.com">Valor</source></item>
 </channel></rss>"""
@@ -66,8 +74,14 @@ class Coletor(unittest.TestCase):
             cols = [i["colecao"] for i in r["itens"]]
             # notícia recente do nicho entra, a velha não; a mesma notícia não se repete no concorrente
             news = [i["doc"] for i in r["itens"] if i["colecao"] == "news"]
-            self.assertEqual([n["title"] for n in news], ["Receita libera lote de restituição"])
-            self.assertEqual(news[0]["source"], "InfoMoney")
+            # só relevantes e sem repetir o mesmo fato: a restituição entra 1 vez, Mega-Sena e velha ficam fora
+            titulos = [n["title"] for n in news]
+            self.assertEqual(sum("restituição" in t for t in titulos), 1)
+            self.assertFalse(any("Mega-Sena" in t or "velha" in t for t in titulos))
+            self.assertIn(news[0]["source"], ("InfoMoney", "Valor"))
+            # notícia do concorrente: menciona o nome e não foi publicada por ele
+            sobre = [i["doc"]["title"] for i in r["itens"] if i["doc"].get("kind") == "noticia"]
+            self.assertEqual(sobre, ["Conc lança recurso de imposto de renda"])
             self.assertEqual(news[0]["tag"], "IR")
             # YouTube: só vídeos de 30 dias, com números do RSS e capa baixada
             yt = [i for i in r["itens"] if i["doc"].get("channel") == "youtube"]

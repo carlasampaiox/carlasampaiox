@@ -52,6 +52,11 @@ Busca notícias das marcas, conteúdos e notícias dos concorrentes, e revisa os
 O botão "Pesquisar agora" da aba Concorrentes dispara essa mesma tarefa com um "PEDIDO AVULSO".
 Para rodar sem parar, a tarefa precisa estar com "Aprovar automaticamente" ligado.
 
+## Coleta gratuita automática (sem créditos)
+- GitHub Actions `.github/workflows/coletor.yml`, todo dia às 6h10 (Brasília): `importador/coletor.py` (feedparser) lê o RSS oficial do YouTube dos concorrentes, o Google Notícias (nicho, marca e concorrentes) e blogs. Fontes em `importador/fontes.json`. Resultado em `dados/coleta.json` e capas em `dados/midia/`.
+- Rotina "Coleta gratuita do Content Lab" (id `trig_01SQYNYi97FkMhVJfZHKu2v9`), todo dia às 7h13, segue `importador/ROTINA-COLETA.md`: importa só o que é novo (comando `coleta`). Não usa vidIQ.
+- Itens da coleta têm `origem: "coletor"`.
+
 ## Instagram pelo vidIQ (botão "Atualizar Instagram")
 - Rotina "Atualizar Instagram do Content Lab" (id `trig_013cy9D6MRXUtjTWdWLd4Abn`), sem horário: roda só quando o botão "Atualizar Instagram" (abas Referências e Concorrentes) é clicado (fire_trigger). Segue `../importador/ROTINA.md`.
 - Conector vidIQ, plano grátis: 150 créditos por mês, 5 por consulta de Reels. O comando `planejar` reparte o saldo pelos dias até a renovação; o crédito diário acumula desde o último uso e cada clique gasta só o acumulado (até 3 consultas), apenas com perfis que venceram (intervalo = 7 ÷ Reels por semana, entre 3 e 14 dias; 30 se parado).

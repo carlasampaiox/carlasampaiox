@@ -112,8 +112,33 @@ def blog(url_feed: str, buscar: ip.Buscador) -> list[dict]:
              "summary": texto_de_html(e.get("summary", ""))} for e in f.entries]
 
 
+TEMAS_NOTICIA = dict(ip.TEMAS_BASE, **{"renda fixa": 1, "selic": 1, "tesouro": 1, "etf": 1, "lci": 1, "lca": 1,
+                                        "cdb": 1, "come-cotas": 3, "restitui": 3, "stj": 1, "carf": 2})
+
+
+def relevancia(titulo: str, temas: dict[str, int]) -> int:
+    return ip.semelhanca(ip.Post("", "", "", "", "", titulo), temas)
+
+
+def palavras(t: str) -> set[str]:
+    return {w for w in re.findall(r"[a-zà-ú0-9]{4,}", t.lower())}
+
+
+def repetida(titulo: str, ja: list[set[str]], limite: float = 0.5) -> bool:
+    """Mesmo fato com outro título (Jaccard das palavras)."""
+    p = palavras(titulo)
+    return bool(p) and any(len(p & q) / len(p | q) >= limite for q in ja if q)
+
+
+def menciona(nome: str, titulo: str) -> bool:
+    n = re.sub(r"[^a-z0-9]", "", nome.lower())
+    return n and n in re.sub(r"[^a-z0-9]", "", titulo.lower())
+
+
 def coletar(fontes: dict, buscar: ip.Buscador, pasta: Path, hoje_: dt.date, log=print) -> dict:
-    itens, avisos, vistos = [], [], set()
+    itens, avisos, vistos, titulos = [], [], set(), []
+    por_tema = int(fontes.get("noticiasPorTema", 6))
+    minimo = int(fontes.get("relevanciaMinima", 3))
     midia = pasta / "midia"
     marca = fontes["marca"]
     bid = marca["id"]
@@ -126,17 +151,6 @@ def coletar(fontes: dict, buscar: ip.Buscador, pasta: Path, hoje_: dt.date, log=
             return False
         vistos.add(k)
         return True
-
-    # notícias do nicho e menções à marca
-    for q in marca.get("noticias", []):
-        try:
-            for n in noticias(q["busca"], buscar):
-                if n["date"] >= corte7 and novo(n["url"]):
-                    itens.append({"brandId": bid, "colecao": "news", "arquivo": "", "mediaType": "", "doc": dict(
-                        n, tag=q.get("tema", ""), summary="", origem="coletor")})
-            log(f"  notícias: {q['busca']}")
-        except Exception as e:  # uma fonte com problema não derruba as outras
-            avisos.append(f"Google Notícias ({q['busca']}): {e}")
 
     for c in fontes.get("concorrentes", []):
         nome = c["nome"]
@@ -154,7 +168,8 @@ def coletar(fontes: dict, buscar: ip.Buscador, pasta: Path, hoje_: dt.date, log=
                         continue
                     v.vezes = round((v.views or 0) / max(med, 1), 1)
                     arq, tipo = ip.baixar_midia(buscar, v.imagem, midia)
-                    sinal = v.sinal() + (f" · {str(v.vezes).replace('.', ',')}x a mediana do canal" if v.vezes >= 2 else "")
+                    sinal = v.sinal() + (f" · {str(v.vezes).replace('.', ',')}x a mediana do canal" if v.vezes >= 2 else "") \
+                        + (" · alcance possivelmente pago" if ip.alcance_pago_provavel(v) else "")
                     itens.append({"brandId": bid, "colecao": "compnews", "arquivo": arq, "mediaType": tipo, "doc": {
                         "kind": "conteudo", "competitorId": c["id"], "competitorName": nome, "channel": "youtube",
                         "format": v.formato, "title": v.titulo, "url": v.url, "date": v.data, "signal": sinal,
@@ -178,13 +193,40 @@ def coletar(fontes: dict, buscar: ip.Buscador, pasta: Path, hoje_: dt.date, log=
         if c.get("busca"):
             try:
                 for n in noticias(c["busca"], buscar):
-                    if n["date"] >= corte7 and novo(n["url"]):
+                    # só notícia SOBRE o concorrente: nome no título e não publicada por ele
+                    if n["date"] < corte7 or not menciona(nome, n["title"]) or menciona(nome, n["source"]):
+                        continue
+                    if repetida(n["title"], titulos) or not novo(n["url"]):
+                        continue
+                    titulos.append(palavras(n["title"]))
+                    if True:
                         itens.append({"brandId": bid, "colecao": "compnews", "arquivo": "", "mediaType": "", "doc": {
                             "kind": "noticia", "competitorId": c["id"], "competitorName": nome, "title": n["title"],
                             "url": n["url"], "source": n["source"], "date": n["date"], "summary": "",
                             "origem": "coletor"}})
             except Exception as e:
                 avisos.append(f"{nome} (notícias): {e}")
+
+    # notícias do nicho e menções à marca (depois dos concorrentes: o que cita concorrente fica lá)
+    for q in marca.get("noticias", []):
+        try:
+            marca_citada = q.get("tema") == "Marca citada"
+            cands = [n for n in noticias(q["busca"], buscar) if n["date"] >= corte7]
+            for n in cands:
+                n["_rel"] = 99 if marca_citada else relevancia(n["title"], TEMAS_NOTICIA)
+            cands.sort(key=lambda n: (n["_rel"], n["date"]), reverse=True)
+            n_tema = 0
+            for n in cands:
+                if n_tema >= por_tema or n["_rel"] < minimo or repetida(n["title"], titulos) or not novo(n["url"]):
+                    continue
+                titulos.append(palavras(n["title"]))
+                n_tema += 1
+                n.pop("_rel")
+                itens.append({"brandId": bid, "colecao": "news", "arquivo": "", "mediaType": "", "doc": dict(
+                    n, tag=q.get("tema", ""), summary="", origem="coletor")})
+            log(f"  notícias: {q['busca']}")
+        except Exception as e:  # uma fonte com problema não derruba as outras
+            avisos.append(f"Google Notícias ({q['busca']}): {e}")
 
     return {"geradoEm": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
             "fonte": "coletor (GitHub Actions)", "itens": itens, "avisos": avisos,
