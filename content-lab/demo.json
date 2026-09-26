@@ -800,5 +800,14 @@
    },
    "exemplo": true
   }
+ },
+ "app": {
+  "novidade": {
+   "titulo": "Exemplo de novidade",
+   "texto": "Aqui aparece o recurso novo da semana.",
+   "aba": "referencias",
+   "data": "2026-09-26T23:00:00Z",
+   "exemplo": true
+  }
  }
 }

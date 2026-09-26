@@ -104,7 +104,7 @@ const state={
   data:{news:[],refs:[],posts:[],dates:[],ideas:[],metrics:[],competitors:[],compnews:[],insights:[]},
   cal:{y:now.getFullYear(),m:now.getMonth()},
   f:{newsTag:'',newsPeriod:String(LS.get('cl.newsPeriod','')),refPlat:'',calCh:'',ideaCh:'',ideaAll:false,metric:'followers',mPeriod:String(LS.get('cl.mPeriod','30')),mFrom:LS.get('cl.mFrom',''),mTo:LS.get('cl.mTo',''),compPeriod:String(LS.get('cl.compPeriod','30')),compFilter:'',compKind:String(LS.get('cl.compKind',''))},
-  brandDirty:false, vidiq:null
+  brandDirty:false, vidiq:null, novidade:null
 };
 const bpath=c=>`brands/${state.brandId}/${c}`;
 const curBrand=()=>state.brands.find(b=>b.id===state.brandId)||null;
@@ -115,7 +115,8 @@ let unsubBrands=null, unsubCols=[], unsubVidiq=null;
 function subBrands(){
   if(unsubBrands)unsubBrands();
   if(unsubVidiq)unsubVidiq();
-  unsubVidiq=Store.sub('importador',list=>{state.vidiq=list.find(d=>d.id==='vidiq')||null;if(state.tab==='concorrentes')scheduleRender()});
+  unsubVidiq=Store.sub('importador',list=>{state.vidiq=list.find(d=>d.id==='vidiq')||null;if(state.tab==='concorrentes'||state.tab==='referencias')scheduleRender()});
+  if(!subBrands._nov){subBrands._nov=true;Store.sub('app',list=>{state.novidade=list.find(d=>d.id==='novidade')||null;scheduleRender()})}
   unsubBrands=Store.sub('brands',list=>{
     state.brands=list.sort((a,b)=>String(a.name).localeCompare(String(b.name),'pt-BR'));
     state.loading=false;
@@ -166,7 +167,7 @@ function renderMain(force){
   if(state.loading){main.innerHTML='<div class="loading"><div class="thinking"><span class="pulse"></span>Carregando sua central...</div></div>';return}
   if(!curBrand()){main.innerHTML=viewOnboard();return}
   const v={noticias:viewNews,referencias:viewRefs,calendario:viewCal,datas:viewDates,marca:viewBrand,ideias:viewIdeas,metricas:viewMetrics,concorrentes:viewComps}[state.tab];
-  const html=v();
+  const html=novidadeCard()+v();
   /* só troca o DOM quando algo mudou: preserva vídeos tocando, foco e rolagem */
   if(main._html!==html){main.innerHTML=html;main._html=html}
   if(state.tab==='marca')state.brandDirty=false;
@@ -312,6 +313,16 @@ function viewRefs(){
     </article>`;
   }).join('')+'</div>';
   return h;
+}
+
+/* ---------- novidade da semana (documento app/novidade, gravado pela rotina de evolução) ---------- */
+function novidadeCard(){
+  const n=state.novidade;if(!n||!n.titulo)return '';
+  if(LS.get('cl.novidadeVista','')===(n.chave||n.data))return '';
+  const idade=(Date.now()-new Date(n.data||0).getTime())/864e5;if(idade>10)return '';
+  const aba=TABS.find(t=>t.id===n.aba);
+  return `<div class="novidade" role="status"><span class="nv-tag">${SPARK}Novidade da semana</span><div class="nv-body"><b>${esc(n.titulo)}</b><p>${esc(n.texto||'')}</p></div>
+    <div class="nv-act">${aba&&aba.id!==state.tab?`<button class="btn sm" data-act="tab" data-tab="${aba.id}">Ver em ${esc(aba.label)}</button>`:''}${btn('Entendi','nov-ok','','sm ghost')}</div></div>`;
 }
 
 /* ---------- bússola de conteúdo (brands/{marca}/insights/bussola) ---------- */
@@ -1178,6 +1189,7 @@ document.addEventListener('click',async e=>{
     case 'media-remove':{$('#f-media').value='';$('#f-mediaType').value='';if(modalCtx)modalCtx.file=null;$('#mediaBox').innerHTML=MEDIA_EMPTY;break}
     case 'ai-ref-fill':fillRefWithClaude(el);break;
     case 'ai-bussola':refreshBussola(el);break;
+    case 'nov-ok':if(state.novidade)LS.set('cl.novidadeVista',state.novidade.chave||state.novidade.data);renderMain(true);break;
     case 'ai-caption':draftCaption();break;
     case 'new-brand':openEditor('__brand',null,{});break;
     case 'brand-save':{try{await Store.set('brands',state.brandId,readBrandForm());state.brandDirty=false;toast('Configurações salvas');renderTop()}catch(_){}break}

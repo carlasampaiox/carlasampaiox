@@ -124,7 +124,7 @@ def palavras(t: str) -> set[str]:
     return {w for w in re.findall(r"[a-zà-ú0-9]{4,}", t.lower())}
 
 
-def repetida(titulo: str, ja: list[set[str]], limite: float = 0.5) -> bool:
+def repetida(titulo: str, ja: list[set[str]], limite: float = 0.45) -> bool:
     """Mesmo fato com outro título (Jaccard das palavras)."""
     p = palavras(titulo)
     return bool(p) and any(len(p & q) / len(p | q) >= limite for q in ja if q)

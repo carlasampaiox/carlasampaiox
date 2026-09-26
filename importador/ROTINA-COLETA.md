@@ -13,8 +13,8 @@ Content Lab: `https://claude.ai/artifact/JWoCf2AYGr2K39nSmCzm9R`
 3. **Estado.** Com `ArtifactData`, `out_dir` = `saida/dump`: `list brands` e, para cada marca, `list` de `competitors`, `compnews`, `refs`, `posts` e `news` (limit 1000). Depois `python3 importar_posts.py montar-estado --dump saida/dump --saida saida/estado.json`.
 4. **Filtrar.** `python3 importar_posts.py coleta --estado saida/estado.json`. Se não houver itens novos, encerre dizendo isso.
 5. **Capas.** Envie os arquivos de `arquivos` (pasta `midia/` do pacote) com `Artifact` (`action: "publish"`, `url` do Content Lab, `asset: true`, `file_paths`, até 25 por chamada) e monte `ids.json` (`{"arquivo.jpg": "id"}`).
-6. **Resumo das notícias.** Para cada item de `news` sem `summary`, escreva 1 frase sobre por que importa para o público da marca, sem inventar fatos além do título e da fonte. Pode deixar vazio se o título não permitir.
-7. **Gravar.** `python3 importar_posts.py montar-lote --pacote <pasta>/pacote.json --ids <pasta>/ids.json` e grave cada `lote-NN.json` com `ArtifactData` `action: "batch"`.
+6. **Curadoria.** Tire do pacote notícias que repetem o mesmo fato de outra (fique com a fonte mais conhecida) e as que não interessam ao público da marca (investidor pessoa física de alta renda, IR e carteira). **Resumo das notícias:** Para cada item de `news` sem `summary`, escreva 1 frase sobre por que importa para o público da marca, sem inventar fatos além do título e da fonte. Pode deixar vazio se o título não permitir.
+7. **Gravar.** `python3 importar_posts.py montar-lote --pacote <pasta>/pacote.json --ids <pasta>/ids.json` e grave cada `lote-NN.json` com `ArtifactData` `action: "batch"`. Dica para economizar: salve o `data` de cada escrita num arquivo e passe `file_path` na entrada do batch, em vez de repetir o conteúdo.
 8. **Resumo.** Quantos itens por aba e os avisos do coletor.
 
 Regras: português do Brasil, sem travessão, números só os das fontes, nunca gravar chaves no Content Lab. Nunca chame ferramentas do vidIQ nesta rotina.
