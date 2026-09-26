@@ -15,7 +15,7 @@ concurrency:
 jobs:
   coletar:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -25,7 +25,11 @@ jobs:
         run: pip install -r importador/requirements-coletor.txt
       - name: Coletar
         working-directory: importador
-        run: python coletor.py --saida ../dados
+        run: python -u coletor.py --saida ../dados --sem-tendencias
+      - name: Google Trends (com prazo; se estourar, segue sem)
+        working-directory: importador
+        continue-on-error: true
+        run: timeout 420 python -u coletor.py --saida ../dados --so-tendencias
       - name: Guardar no repositório
         run: |
           git config user.name "coletor-content-lab"

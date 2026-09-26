@@ -603,6 +603,9 @@ function mSeries(rows,k,R){
 }
 function viewMetrics(){
   const all=metricRows();
+  /* abre na métrica que tem dados (ex.: só Alcance e Posts vêm do vidIQ) */
+  const temK=k=>all.some(r=>has(r,k));
+  if(!temK(state.f.metric)){const m=METRICS.find(x=>temK(x.k));if(m)state.f.metric=m.k}
   const M=METRICS.find(x=>x.k===state.f.metric)||METRICS[0];
   const R=mRange();
   let h=head('Métricas','Acompanhe cada canal no período que quiser. Registre os números de um dia, de uma semana ou de um mês; o Content Lab soma e compara sozinho.',
@@ -612,7 +615,9 @@ function viewMetrics(){
   h+=`<div class="toolbar"><span class="eyebrow">Período</span>${chips('mPeriod',M_PERIODS,p)}
     ${p==='custom'?`<div class="crange"><label for="mFrom">De</label><input type="date" id="mFrom" value="${iso(R.a)}"><label for="mTo">até</label><input type="date" id="mTo" value="${iso(R.b)}">${btn('Aplicar','m-apply','','sm primary')}</div>`:''}</div>
   <p class="rlabel"><b>${fmtD(R.a)} a ${fmtD(R.b)}</b> <span class="muted">· ${R.len} ${R.len>1?'dias':'dia'} · comparado com ${fmtD(R.pa)} a ${fmtD(R.pb)}</span></p>
-  <div class="toolbar">${chips('metric',METRICS.map(x=>[x.k,x.l]),M.k)}</div>`;
+  <div class="toolbar">${chips('metric',METRICS.map(x=>[x.k,temK(x.k)?x.l:`${x.l} <span class="cnt">sem dados</span>`]),M.k)}</div>`;
+  const notas=[...new Set(all.map(r=>r.notes).filter(Boolean))];
+  if(notas.length)h+=`<p class="muted" style="font-size:12.5px;margin:-6px 0 14px">Fonte: ${esc(notas[0])}${notas.length>1?` (+${notas.length-1} observações nos registros)`:''}</p>`;
   const label={stock:'no fim do período',rate:'média no período',flow:'total no período'};
   const cards=CH.map(c=>{
     const rows=all.filter(r=>r.channel===c.id);if(!rows.length)return '';

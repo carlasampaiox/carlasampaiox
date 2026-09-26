@@ -22,6 +22,7 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
+import time
 import hashlib
 import json
 import re
@@ -146,7 +147,8 @@ def primeiras_frases(texto: str, n: int = 2, limite: int = 360) -> str:
     return ip.limpar(t[:limite].rsplit(" ", 1)[0] + "..." if len(t) > limite else t)
 
 
-def enriquecer_noticias(itens: list[dict], log=print, decodificar=None, baixar_texto=None) -> int:
+def enriquecer_noticias(itens: list[dict], log=print, decodificar=None, baixar_texto=None,
+                        limite_s: int = 240) -> int:
     """Troca o link do Google Notícias pelo link real (googlenewsdecoder) e guarda
     as primeiras frases da matéria (trafilatura) em `contexto`, para o resumo."""
     alvo = [i for i in itens if "news.google.com" in i["doc"].get("url", "")]
@@ -164,12 +166,17 @@ def enriquecer_noticias(itens: list[dict], log=print, decodificar=None, baixar_t
             import trafilatura
 
             def baixar_texto(url):
-                html = trafilatura.fetch_url(url)
-                return trafilatura.extract(html, include_comments=False, include_tables=False) if html else ""
+                # download próprio com prazo curto (o fetch padrão espera até 30 s por site)
+                html = ip.http_get(url, tentativas=1, timeout=8).decode("utf-8", "replace")
+                return trafilatura.extract(html, include_comments=False, include_tables=False) or ""
         except ImportError:
             baixar_texto = lambda url: ""  # noqa: E731
     ok = 0
+    inicio = time.monotonic()
     for bloco in range(0, len(alvo), 10):
+        if time.monotonic() - inicio > limite_s:
+            log(f"  tempo de enriquecimento esgotado ({limite_s}s); resto fica com o link do Google")
+            break
         grupo = alvo[bloco:bloco + 10]
         try:
             res = decodificar([i["doc"]["url"] for i in grupo])
@@ -182,10 +189,11 @@ def enriquecer_noticias(itens: list[dict], log=print, decodificar=None, baixar_t
             it.setdefault("aliases", []).append(it["doc"]["url"])
             it["doc"]["url"] = r["decoded_url"]
             ok += 1
-            try:
-                it["contexto"] = primeiras_frases(baixar_texto(r["decoded_url"]) or "")
-            except Exception:  # noqa: BLE001
-                pass
+            if time.monotonic() - inicio < limite_s:
+                try:
+                    it["contexto"] = primeiras_frases(baixar_texto(r["decoded_url"]) or "")
+                except Exception:  # noqa: BLE001
+                    pass
     return ok
 
 
@@ -204,9 +212,13 @@ def tendencias(fontes: dict, log=print, explorar=None, em_alta=None) -> dict:
             out["avisos"].append("trendspyg ausente")
             return out
         explorar = explorar or (lambda termo: trendspyg.download_google_trends_explore(
-            termo, geo=geo, timeframe=periodo, include_geo=False, max_retries=4, retry_wait=6.0))
+            termo, geo=geo, timeframe=periodo, include_geo=False, max_retries=2, retry_wait=4.0))
         em_alta = em_alta or (lambda: trendspyg.download_google_trends_rss(geo=geo, output_format="dict", cache=False))
+    inicio = time.monotonic()
     for termo in termos:
+        if time.monotonic() - inicio > cfg.get("limiteSegundos", 300):
+            out["avisos"].append("tempo do Google Trends esgotado; termos restantes ficam para amanhã")
+            break
         try:
             env = explorar(termo)
             rel = env.get("related_queries") or {}
@@ -338,10 +350,17 @@ def main(argv=None) -> int:
     ap.add_argument("--fontes", default=str(AQUI / "fontes.json"))
     ap.add_argument("--saida", default=str(AQUI.parent / "dados"))
     ap.add_argument("--sem-tendencias", action="store_true")
+    ap.add_argument("--so-tendencias", action="store_true", help="só o Google Trends (passo separado, com prazo)")
     a = ap.parse_args(argv)
     fontes = json.loads(Path(a.fontes).read_text(encoding="utf-8"))
     pasta = Path(a.saida)
     pasta.mkdir(parents=True, exist_ok=True)
+    if a.so_tendencias:
+        t = tendencias(fontes)
+        t["geradoEm"] = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
+        (pasta / "tendencias.json").write_text(json.dumps(t, ensure_ascii=False, indent=2), encoding="utf-8")
+        print(f"Tendências: {len(t['termos'])} termos, {len(t['emAlta'])} assuntos em alta, avisos: {t['avisos']}")
+        return 0
     velhas = set((pasta / "midia").glob("*")) if (pasta / "midia").exists() else set()
     r = coletar(fontes, ip.http_get, pasta, ip.hoje())
     # guarda só as capas usadas na coleta atual
