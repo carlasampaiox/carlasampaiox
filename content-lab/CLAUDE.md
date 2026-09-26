@@ -57,6 +57,10 @@ Para rodar sem parar, a tarefa precisa estar com "Aprovar automaticamente" ligad
 - Rotina "Coleta gratuita do Content Lab" (id `trig_01SQYNYi97FkMhVJfZHKu2v9`), todo dia às 7h13, segue `importador/ROTINA-COLETA.md`: importa só o que é novo (comando `coleta`). Não usa vidIQ.
 - Itens da coleta têm `origem: "coletor"`.
 
+## Evolução automática
+- Rotina "Evolução do Content Lab" (id `trig_019XVoUc4SdnZPJwiXEMwHad`), 4x ao dia (9h47, 13h47, 17h47, 21h47). Segue `../EVOLUCAO.md`; registro em `../EVOLUCAO-LOG.md`.
+- Refinamentos silenciosos sempre; no máximo 1 recurso novo por semana, anunciado em `app/novidade` (titulo, texto, aba, data, semana, chave). A página mostra o cartão "Novidade da semana" até a Carla clicar em "Entendi" (guardado por `chave`).
+
 ## Instagram pelo vidIQ (botão "Atualizar Instagram")
 - Rotina "Atualizar Instagram do Content Lab" (id `trig_013cy9D6MRXUtjTWdWLd4Abn`), sem horário: roda só quando o botão "Atualizar Instagram" (abas Referências e Concorrentes) é clicado (fire_trigger). Segue `../importador/ROTINA.md`.
 - Conector vidIQ, plano grátis: 150 créditos por mês, 5 por consulta de Reels. O comando `planejar` reparte o saldo pelos dias até a renovação; o crédito diário acumula desde o último uso e cada clique gasta só o acumulado (até 3 consultas), apenas com perfis que venceram (intervalo = 7 ÷ Reels por semana, entre 3 e 14 dias; 30 se parado).
