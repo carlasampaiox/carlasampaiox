@@ -1020,6 +1020,37 @@ def gravar(pacote: dict, pasta: Path) -> int:
     return 0
 
 
+def filtrar_coleta(coleta: dict, estado: dict) -> dict:
+    """Do que o coletor (GitHub Actions) trouxe, fica só o que ainda não está no Content Lab."""
+    existentes: dict[str, set[str]] = {}
+    for m in estado.get("brands", []):
+        existentes[m["id"]] = {normalizar_link(u) for u in m.get("existingLinks", [])}
+    itens = []
+    for it in coleta.get("itens", []):
+        ex = existentes.setdefault(it["brandId"], set())
+        k = normalizar_link(it["doc"].get("url", ""))
+        if not k or k in ex:
+            continue
+        ex.add(k)
+        itens.append(it)
+    return {"geradoEm": coleta.get("geradoEm"), "fonte": coleta.get("fonte", "coletor"), "itens": itens,
+            "avisos": coleta.get("avisos", []), "arquivos": sorted({i["arquivo"] for i in itens if i.get("arquivo")})}
+
+
+def cmd_coleta(a: argparse.Namespace) -> int:
+    coleta = json.loads(Path(a.coleta).read_text(encoding="utf-8"))
+    estado = json.loads(Path(a.estado).read_text(encoding="utf-8"))
+    pacote = filtrar_coleta(coleta, estado)
+    pasta = Path(a.saida) / ("coleta-" + hoje().isoformat())
+    origem = Path(a.coleta).parent / "midia"
+    (pasta / "midia").mkdir(parents=True, exist_ok=True)
+    for arq in pacote["arquivos"]:
+        f = origem / arq
+        if f.is_file():
+            (pasta / "midia" / arq).write_bytes(f.read_bytes())
+    return gravar(pacote, pasta)
+
+
 def cmd_montar_lote(a: argparse.Namespace) -> int:
     pacote = json.loads(Path(a.pacote).read_text(encoding="utf-8"))
     ids = json.loads(Path(a.ids).read_text(encoding="utf-8")) if a.ids else {}
@@ -1057,7 +1088,7 @@ def montar_estado(pasta: Path) -> dict:
     marcas = []
     for b in ler_dump(pasta, "brands"):
         base = f"brands/{b['id']}"
-        links = [d.get("url", "") or d.get("link", "") for c in ("compnews", "refs", "posts")
+        links = [d.get("url", "") or d.get("link", "") for c in ("compnews", "refs", "posts", "news")
                  for d in ler_dump(pasta, f"{base}/{c}")]
         marcas.append({"id": b["id"], "name": b.get("name", ""),
                        "channels": b.get("channels", {}), "pillars": b.get("pillars", []), "niche": b.get("niche", ""),
@@ -1101,6 +1132,11 @@ def main(argv: list[str] | None = None) -> int:
     e.add_argument("--dump", required=True, help="pasta usada como out_dir nas leituras do ArtifactData")
     e.add_argument("--saida", default="estado.json")
     e.set_defaults(f=cmd_montar_estado)
+    co = sub.add_parser("coleta", help="filtra dados/coleta.json (coletor gratuito) contra o que já está no Content Lab")
+    co.add_argument("--coleta", default=str(AQUI.parent / "dados" / "coleta.json"))
+    co.add_argument("--estado", required=True)
+    co.add_argument("--saida", default=str(AQUI / "saida"))
+    co.set_defaults(f=cmd_coleta)
     m = sub.add_parser("montar-lote", help="gera lote.json para o ArtifactData")
     m.add_argument("--pacote", required=True)
     m.add_argument("--ids", help="JSON {arquivo: id_do_asset}")

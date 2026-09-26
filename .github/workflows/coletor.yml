@@ -1,0 +1,34 @@
+name: Coletor gratuito do Content Lab
+# Todo dia às 6h10 (Brasília): YouTube (RSS oficial), Google Notícias e blogs.
+# Sem chaves e sem créditos. O resultado fica em dados/ e a rotina do Claude
+# "Coleta gratuita do Content Lab" importa o que for novo às 7h13.
+on:
+  schedule:
+    - cron: "10 9 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: coletor
+  cancel-in-progress: false
+jobs:
+  coletar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install "feedparser>=6,<7"
+      - name: Coletar
+        working-directory: importador
+        run: python coletor.py --saida ../dados
+      - name: Guardar no repositório
+        run: |
+          git config user.name "coletor-content-lab"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dados
+          if git diff --cached --quiet; then echo "Nada novo"; exit 0; fi
+          git commit -m "Coleta gratuita $(date -u +%Y-%m-%d)"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

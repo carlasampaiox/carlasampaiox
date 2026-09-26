@@ -1,6 +1,7 @@
 name: CI
 on:
   push:
+    paths-ignore: ["dados/**"]
   pull_request:
 jobs:
   testes:
@@ -13,9 +14,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
-      - name: Importador (testes)
+      - name: Importador e coletor (testes)
         working-directory: importador
-        run: python -m unittest -v
+        run: |
+          pip install "feedparser>=6,<7"
+          python -m unittest -v
       - name: Importador (simulação)
         working-directory: importador
         run: python importar_posts.py simular --saida /tmp/saida

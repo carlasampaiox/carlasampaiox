@@ -294,6 +294,16 @@ class Fluxo(unittest.TestCase):
         self.assertEqual(e["brands"][0]["competitors"][0]["instagram"], "@a")
         self.assertEqual(e["brands"][0]["existingLinks"], ["https://instagram.com/p/x"])
 
+    def test_filtrar_coleta(self):
+        coleta = {"itens": [
+            {"brandId": "m", "colecao": "news", "arquivo": "", "doc": {"url": "https://a.com/1"}},
+            {"brandId": "m", "colecao": "news", "arquivo": "", "doc": {"url": "https://www.a.com/1/"}},
+            {"brandId": "m", "colecao": "compnews", "arquivo": "x.jpg", "doc": {"url": "https://a.com/2"}}]}
+        estado = {"brands": [{"id": "m", "existingLinks": ["https://a.com/2"]}]}
+        p = ip.filtrar_coleta(coleta, estado)
+        self.assertEqual([i["doc"]["url"] for i in p["itens"]], ["https://a.com/1"])
+        self.assertEqual(p["arquivos"], [])
+
     def test_explicar_erro_da_meta(self):
         corpo = json.dumps({"error": {"message": "Invalid token", "code": 190}})
         self.assertIn("token da Meta", ip.explicar_erro(corpo, 400))
