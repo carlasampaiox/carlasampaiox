@@ -85,6 +85,8 @@ class Selecao(unittest.TestCase):
         self.assertEqual(p.sinal(), "12 comentários")
         y = ip.Post("youtube", "Canal", "u", "2026-09-20", "Shorts", "t", views=12345)
         self.assertEqual(y.sinal(), "12.345 visualizações")
+        um = ip.Post("instagram", "@x", "u", "2026-09-20", "Reels", "t", curtidas=1, comentarios=1, views=1)
+        self.assertEqual(um.sinal(), "1 visualização, 1 curtida, 1 comentário")
 
 
 class Plano(unittest.TestCase):

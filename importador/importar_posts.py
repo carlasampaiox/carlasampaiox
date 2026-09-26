@@ -249,12 +249,13 @@ class Post:
     def sinal(self) -> str:
         partes = []
         t = self.textos
+        pl = lambda n, txt, um, varios: f"{txt or num_br(n)} {um if n == 1 and not txt else varios}"  # noqa: E731
         if self.views:
-            partes.append(f"{t.get('views') or num_br(self.views)} visualizações")
+            partes.append(pl(self.views, t.get("views"), "visualização", "visualizações"))
         if self.curtidas is not None:
-            partes.append(f"{t.get('curtidas') or num_br(self.curtidas)} curtidas")
+            partes.append(pl(self.curtidas, t.get("curtidas"), "curtida", "curtidas"))
         if self.comentarios is not None:
-            partes.append(f"{t.get('comentarios') or num_br(self.comentarios)} comentários")
+            partes.append(pl(self.comentarios, t.get("comentarios"), "comentário", "comentários"))
         if self.seguidores and self.plataforma == "instagram" and (self.curtidas or self.comentarios):
             taxa = 100 * ((self.curtidas or 0) + (self.comentarios or 0)) / self.seguidores
             partes.append(f"{taxa:.1f}% de engajamento sobre {num_br(self.seguidores)} seguidores".replace(".", ",", 1))
@@ -714,8 +715,8 @@ def montar_pacote(estado: dict, buscar: Buscador, pasta: Path, cfg: Config,
                 if controle is not None:
                     atualizar_controle(controle, ig, todos, ref or hoje())
                 recentes = escolher(todos, cfg.dias, cfg.por_perfil, ref, existentes)
-                extra = [] if any(p.plataforma == "instagram" for p in recentes) else \
-                    destaques(todos, cfg.dias_destaque, cfg.fator_destaque, ref, existentes)
+                # Referências: primeiro o Reel fora da curva do perfil (se houver), depois os recentes
+                extra = destaques(todos, cfg.dias_destaque, cfg.fator_destaque, ref, existentes)
                 registrar(recentes, c, extra)
                 ultimo = max((p.data for p in todos), default="")
                 if not recentes:
