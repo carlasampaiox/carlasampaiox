@@ -22,16 +22,26 @@ Assim nenhuma chave de API passa pelo Content Lab.
 
 ### Instagram (Meta)
 
-1. **Conta comercial.** No app do Instagram da marca: Configurações, Tipo de conta e ferramentas, Mudar para conta profissional, escolha **Empresa**.
-2. **Página do Facebook ligada.** No Instagram: Editar perfil, Página, conecte uma página do Facebook da marca (crie uma se não existir). Business Discovery só funciona com essa ligação.
-3. **App na Meta.** Em developers.facebook.com, Meus apps, Criar app, tipo **Empresa**. Adicione o produto **Instagram Graph API** (ou "Instagram" com login do Facebook).
-4. **Permissões.** No Explorador da Graph API, selecione o seu app e peça: `instagram_basic`, `pages_show_list`, `pages_read_engagement` e `business_management`. Clique em Gerar token e autorize com a conta que administra a página.
-5. **Token de longa duração (60 dias).** Troque o token curto por um longo:
-   `GET https://graph.facebook.com/v21.0/oauth/access_token?grant_type=fb_exchange_token&client_id=APP_ID&client_secret=APP_SECRET&fb_exchange_token=TOKEN_CURTO`
-   Melhor ainda: crie um **usuário do sistema** no Gerenciador de Negócios e gere um token que não vence.
-6. **ID da conta do Instagram.** No Explorador: `me/accounts?fields=name,instagram_business_account`. O número em `instagram_business_account.id` é o `IG_USER_ID`.
+**Caminho escolhido:** Graph API oficial da Meta com **login do Facebook**. É gratuita e é o único caminho oficial que lê posts de outros perfis (Business Discovery). O login só pelo Instagram, mais novo, não tem Business Discovery.
 
-Os concorrentes precisam ser contas profissionais (empresa ou criador). Contas pessoais não aparecem no Business Discovery; o script avisa e segue.
+**Sem revisão da Meta:** como o app só vai ler contas que você administra, o acesso padrão (Standard Access) basta. Não precisa de App Review, verificação da empresa nem vídeo de demonstração. Deixe o app em modo de desenvolvimento, com você como administradora.
+
+1. **Conta profissional.** No app do Instagram da marca: Configurações, Tipo de conta e ferramentas, Mudar para conta profissional (Empresa ou Criador).
+2. **Página do Facebook ligada.** No Instagram: Editar perfil, Página, conecte uma página do Facebook da marca (crie uma se não existir). Sem essa ligação o Business Discovery não funciona.
+3. **Portfólio empresarial.** Em business.facebook.com, confira se a página e a conta do Instagram estão no portfólio da marca.
+4. **App na Meta.** Em developers.facebook.com, Meus apps, Criar app, caso de uso de **Instagram com login do Facebook** (tipo Empresa). Vincule o app ao portfólio.
+5. **Token que não vence (recomendado).** No Gerenciador de Negócios: Configurações, Usuários do sistema, Adicionar (função Administrador). Atribua a ele a página, a conta do Instagram e o app. Clique em Gerar token, escolha o app e marque: `instagram_basic`, `instagram_manage_insights`, `pages_show_list`, `pages_read_engagement` e `business_management`. Esse token não expira.
+   Alternativa rápida: no Explorador da Graph API, gere um token com as mesmas permissões e troque por um de 60 dias:
+   `GET https://graph.facebook.com/v25.0/oauth/access_token?grant_type=fb_exchange_token&client_id=APP_ID&client_secret=APP_SECRET&fb_exchange_token=TOKEN_CURTO`
+6. **ID da conta do Instagram.** No Explorador: `me/accounts?fields=name,instagram_business_account`. O número em `instagram_business_account.id` é o `IG_USER_ID`.
+7. **Teste.** No Explorador, com o token: `IG_USER_ID?fields=business_discovery.username(nomedoconcorrente){followers_count,media_count}`. Se voltar número de seguidores, está pronto.
+
+**Limites que valem saber**
+- Os concorrentes precisam ser contas profissionais (Empresa ou Criador). Contas pessoais não aparecem; o script avisa e segue.
+- Se o concorrente esconde as curtidas, o número não vem. O script mostra só o que a API entregou.
+- Visualizações só vêm em Reels. Em Reels a prévia é o próprio vídeo (até 20 MB), porque o Business Discovery não entrega a capa.
+- Cerca de 200 chamadas por hora por token. A importação usa 1 chamada por concorrente.
+- Stories, seguidores de terceiros e busca por hashtag de outros perfis não estão disponíveis na API oficial.
 
 ### YouTube
 
@@ -57,7 +67,7 @@ Variáveis aceitas:
 | `IG_USER_ID` | id da conta comercial usada para o Business Discovery |
 | `IG_USER_ID_<MARCA>` | id próprio por marca (ex.: `IG_USER_ID_MYCAPITAL`), tem prioridade |
 | `YOUTUBE_API_KEY` | chave da YouTube Data API |
-| `META_GRAPH_VERSION` | opcional, padrão `v21.0` |
+| `META_GRAPH_VERSION` | opcional, padrão `v25.0` |
 
 ## Passo 3. Como rodar
 

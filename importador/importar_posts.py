@@ -38,7 +38,7 @@ from pathlib import Path
 from typing import Any, Callable, Iterable
 
 AQUI = Path(__file__).resolve().parent
-GRAPH_VERSAO_PADRAO = "v21.0"
+GRAPH_VERSAO_PADRAO = "v25.0"
 LOTE_MAX = 50  # escritas por chamada batch do ArtifactData
 MAX_BYTES = 20 * 1024 * 1024  # limite de assets do artifact
 TIPOS_ACEITOS = {"image/png": "png", "image/jpeg": "jpg", "image/webp": "webp", "image/gif": "gif"}
@@ -259,7 +259,11 @@ class Post:
 
 # --------------------------------------------------------------- Instagram
 
-IG_CAMPOS_MIDIA = "id,caption,media_type,media_product_type,timestamp,like_count,comments_count,permalink,media_url,thumbnail_url"
+# Business Discovery (perfis de terceiros) não entrega thumbnail_url; em Reels o
+# media_url é o próprio vídeo, que vira prévia em vídeo. view_count só vem em Reels.
+IG_CAMPOS_BD = "id,caption,media_type,media_product_type,timestamp,like_count,comments_count,view_count,permalink,media_url"
+# Na própria conta, a capa do vídeo existe (thumbnail_url).
+IG_CAMPOS_PROPRIO = "id,caption,media_type,media_product_type,timestamp,like_count,comments_count,permalink,media_url,thumbnail_url"
 
 
 def formato_instagram(m: dict) -> str:
@@ -279,7 +283,7 @@ def post_instagram(m: dict, perfil: str, seguidores: int | None) -> Post:
         plataforma="instagram", perfil="@" + perfil, url=m.get("permalink") or "",
         data=data_iso(m.get("timestamp")), formato=formato_instagram(m),
         titulo=gancho(legenda) or f"{formato_instagram(m)} de @{perfil}", legenda=legenda,
-        curtidas=m.get("like_count"), comentarios=m.get("comments_count"),
+        curtidas=m.get("like_count"), comentarios=m.get("comments_count"), views=m.get("view_count"),
         imagem=m.get("thumbnail_url") or m.get("media_url") or "", seguidores=seguidores,
     )
 
@@ -287,7 +291,7 @@ def post_instagram(m: dict, perfil: str, seguidores: int | None) -> Post:
 def buscar_instagram(buscar: Buscador, ig_user_id: str, token: str, usuario: str,
                      versao: str = GRAPH_VERSAO_PADRAO, limite: int = 30) -> list[Post]:
     campos = (f"business_discovery.username({usuario}){{username,followers_count,media_count,"
-              f"media.limit({limite}){{{IG_CAMPOS_MIDIA}}}}}")
+              f"media.limit({limite}){{{IG_CAMPOS_BD}}}}}")
     url = (f"https://graph.facebook.com/{versao}/{ig_user_id}?"
            + urllib.parse.urlencode({"fields": campos, "access_token": token}))
     bd = get_json(buscar, url).get("business_discovery") or {}
@@ -302,7 +306,7 @@ def buscar_instagram_proprio(buscar: Buscador, ig_user_id: str, token: str,
     perfil = get_json(buscar, base + "?" + urllib.parse.urlencode(
         {"fields": "username,followers_count", "access_token": token}))
     midia = get_json(buscar, base + "/media?" + urllib.parse.urlencode(
-        {"fields": IG_CAMPOS_MIDIA, "limit": limite, "access_token": token}))
+        {"fields": IG_CAMPOS_PROPRIO, "limit": limite, "access_token": token}))
     return [post_instagram(m, perfil.get("username", ""), perfil.get("followers_count")) for m in midia.get("data", [])]
 
 
@@ -387,23 +391,31 @@ def resumo(p: Post) -> str:
 # ------------------------------------------------------------- mídia
 
 
-def baixar_midia(buscar: Buscador, url: str, pasta: Path) -> str:
-    """Baixa a imagem e devolve o nome do arquivo, ou '' se não for possível."""
+def baixar_midia(buscar: Buscador, url: str, pasta: Path) -> tuple[str, str]:
+    """Baixa a imagem ou o vídeo. Devolve (arquivo, "image"|"video") ou ("", "")."""
     if not url:
-        return ""
+        return "", ""
     try:
         dados = buscar(url)
     except ErroAPI:
-        return ""
-    if not dados or len(dados) > MAX_BYTES:
-        return ""
-    ext = tipo_imagem(dados)
+        return "", ""
+    if not dados or len(dados) > MAX_BYTES:  # acima de 20 MB fica sem prévia
+        return "", ""
+    ext = tipo_imagem(dados) or tipo_video(dados)
     if not ext:
-        return ""
+        return "", ""
     nome = hashlib.sha1(url.split("?")[0].encode()).hexdigest()[:16] + "." + ext
     pasta.mkdir(parents=True, exist_ok=True)
     (pasta / nome).write_bytes(dados)
-    return nome
+    return nome, ("video" if ext in ("mp4", "webm") else "image")
+
+
+def tipo_video(b: bytes) -> str:
+    if b[4:8] == b"ftyp":
+        return "mp4"
+    if b[:4] == b"\x1aE\xdf\xa3":
+        return "webm"
+    return ""
 
 
 def tipo_imagem(b: bytes) -> str:
@@ -456,8 +468,8 @@ def montar_pacote(estado: dict, buscar: Buscador, pasta: Path, cfg: Config,
                 if k in existentes:
                     continue
                 existentes.add(k)
-                arquivo = baixar_midia(buscar, p.imagem, midia_dir)
-                base = {"brandId": bid, "arquivo": arquivo, "mediaType": "image" if arquivo else "",
+                arquivo, tipo = baixar_midia(buscar, p.imagem, midia_dir)
+                base = {"brandId": bid, "arquivo": arquivo, "mediaType": tipo,
                         "plataforma": p.plataforma, "pontuacao": round(p.pontuacao(), 1)}
                 if quem is not None:
                     itens.append(dict(base, colecao="compnews", doc={
@@ -538,16 +550,20 @@ def buscador_simulado(ref: dt.date) -> Buscador:
     """Respostas fictícias no formato real das APIs, para testar sem internet."""
     d = lambda n: (ref - dt.timedelta(days=n)).isoformat() + "T12:00:00+0000"  # noqa: E731
     jpg = b"\xff\xd8\xff\xe0" + b"0" * 64
+    mp4 = b"\x00\x00\x00\x18ftypmp42" + b"0" * 64
 
     def buscar(url: str) -> bytes:
         if "graph.facebook.com" in url and "business_discovery" in url:
+            if "thumbnail_url" in urllib.parse.unquote(url):
+                raise ErroAPI("(#100) thumbnail_url não existe no Business Discovery", 400)
             u = re.search(r"username\(([^)]+)\)", urllib.parse.unquote(url)).group(1)
             if u == "naoexiste":
                 raise ErroAPI("perfil não encontrado", 400)
             media = [{"id": str(i), "caption": f"Gancho {i} do @{u}\nmais texto #tag", "media_type": t,
                       "media_product_type": "REELS" if t == "VIDEO" else "FEED", "timestamp": d(dias),
                       "like_count": likes, "comments_count": com, "permalink": f"https://www.instagram.com/p/{u}{i}/",
-                      "media_url": f"https://cdn.exemplo/{u}{i}.jpg", "thumbnail_url": f"https://cdn.exemplo/{u}{i}t.jpg"}
+                      "media_url": f"https://cdn.exemplo/{u}{i}.{'mp4' if t == 'VIDEO' else 'jpg'}",
+                      **({"view_count": likes * 12} if t == "VIDEO" else {})}
                      for i, (t, dias, likes, com) in enumerate([
                          ("VIDEO", 2, 900, 40), ("CAROUSEL_ALBUM", 5, 1500, 120), ("IMAGE", 9, 300, 5),
                          ("VIDEO", 20, 99999, 999), ("IMAGE", 1, 50, 2)])]
@@ -564,6 +580,8 @@ def buscador_simulado(ref: dt.date) -> Buscador:
                                                                "thumbnails": {"high": {"url": f"https://i.ytimg.com/{v}.jpg"}}},
                                           "statistics": {"viewCount": str(views), "likeCount": "100", "commentCount": "10"},
                                           "contentDetails": {"duration": dur}} for v, dias, views, dur in vids]}).encode()
+        if url.startswith("https://cdn.exemplo/") and url.endswith(".mp4"):
+            return mp4
         if url.startswith("https://cdn.exemplo/") or url.startswith("https://i.ytimg.com/"):
             return jpg
         raise ErroAPI(f"URL não simulada: {url}")

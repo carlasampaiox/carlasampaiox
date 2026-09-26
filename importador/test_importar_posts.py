@@ -53,6 +53,10 @@ class Utilidades(unittest.TestCase):
         self.assertNotIn("—", ip.limpar("a — b – c"))
         self.assertNotIn("–", ip.limpar("a — b – c"))
 
+    def test_tipo_video(self):
+        self.assertEqual(ip.tipo_video(b"\x00\x00\x00\x18ftypmp42...."), "mp4")
+        self.assertEqual(ip.tipo_video(b"\xff\xd8\xff"), "")
+
     def test_tipo_imagem(self):
         self.assertEqual(ip.tipo_imagem(b"\xff\xd8\xff\xe0abc"), "jpg")
         self.assertEqual(ip.tipo_imagem(b"\x89PNG\r\n\x1a\n...."), "png")
@@ -111,6 +115,10 @@ class Fluxo(unittest.TestCase):
         texto = json.dumps([i["doc"] for i in pac["itens"]], ensure_ascii=False)
         self.assertNotIn("—", texto)
         self.assertNotIn(" – ", texto)
+        # Reels chega como vídeo (Business Discovery não tem capa) e traz visualizações
+        reels = [i for i in pac["itens"] if i["doc"].get("format") == "Reels"]
+        self.assertTrue(reels and all(i["mediaType"] == "video" and i["arquivo"].endswith(".mp4") for i in reels))
+        self.assertIn("visualizações", reels[0]["doc"]["signal"])
         # imagens baixadas
         for a in pac["arquivos"]:
             self.assertTrue((self.pasta / "midia" / a).is_file())
