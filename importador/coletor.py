@@ -141,8 +141,12 @@ def menciona(nome: str, titulo: str) -> bool:
     return n and n in re.sub(r"[^a-z0-9]", "", titulo.lower())
 
 
+RUIDO_TEXTO = re.compile(r"(seu navegador não (suporta|é compatível)[^.]*\.|publicidade|continua (depois|após) da publicidade)", re.I)
+
+
 def primeiras_frases(texto: str, n: int = 2, limite: int = 360) -> str:
-    frases = re.split(r"(?<=[.!?])\s+", re.sub(r"\s+", " ", str(texto or "")).strip())
+    texto = RUIDO_TEXTO.sub(" ", str(texto or ""))
+    frases = re.split(r"(?<=[.!?])\s+", re.sub(r"\s+", " ", texto).strip())
     t = " ".join(f for f in frases[:n] if len(f) > 25)
     return ip.limpar(t[:limite].rsplit(" ", 1)[0] + "..." if len(t) > limite else t)
 
@@ -225,8 +229,8 @@ def tendencias(fontes: dict, log=print, explorar=None, em_alta=None) -> dict:
             pts = env.get("interest_over_time") or []
             out["termos"].append({
                 "termo": termo,
-                "subindo": [{"busca": q["query"], "valor": q.get("formatted_value") or q.get("value")} for q in rel.get("rising", [])[:8]],
-                "top": [{"busca": q["query"], "valor": q.get("value")} for q in rel.get("top", [])[:8]],
+                "subindo": [{"busca": ip.limpar(q["query"]), "valor": q.get("formatted_value") or q.get("value")} for q in rel.get("rising", [])[:8]],
+                "top": [{"busca": ip.limpar(q["query"]), "valor": q.get("value")} for q in rel.get("top", [])[:8]],
                 "interesse": [{"data": x["date"], "valor": x["value"]} for x in pts[-8:]]})
             log(f"  Google Trends: {termo}")
         except Exception as e:  # noqa: BLE001
@@ -236,7 +240,7 @@ def tendencias(fontes: dict, log=print, explorar=None, em_alta=None) -> dict:
         for t in em_alta() or []:
             nome = t.get("trend", "")
             if relevancia(nome, temas) >= 2:
-                out["emAlta"].append({"assunto": nome, "trafego": t.get("traffic", ""), "publicado": t.get("published", "")})
+                out["emAlta"].append({"assunto": ip.limpar(nome), "trafego": t.get("traffic", ""), "publicado": t.get("published", "")})
     except Exception as e:  # noqa: BLE001
         out["avisos"].append(f"Google Trends em alta: {e}")
     return out

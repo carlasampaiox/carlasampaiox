@@ -110,7 +110,7 @@ class Enriquecer(unittest.TestCase):
                  {"brandId": "m", "colecao": "news", "doc": {"url": "https://news.google.com/rss/articles/B"}},
                  {"brandId": "m", "colecao": "news", "doc": {"url": "https://site.com/c"}}]
         dec = lambda urls: [{"success": True, "decoded_url": "https://valor.com/a"}, {"success": False, "message": "x"}]
-        txt = lambda u: "Metade dos investidores atrasa o imposto de renda da bolsa, diz a pesquisa. Segunda frase com detalhes do estudo. Terceira."
+        txt = lambda u: "Seu navegador não suporta esse video. Metade dos investidores atrasa o imposto de renda da bolsa, diz a pesquisa. Segunda frase com detalhes do estudo. Terceira."
         n = coletor.enriquecer_noticias(itens, lambda _: None, dec, txt)
         self.assertEqual(n, 1)
         self.assertEqual(itens[0]["doc"]["url"], "https://valor.com/a")
@@ -120,7 +120,8 @@ class Enriquecer(unittest.TestCase):
         self.assertEqual(itens[1]["doc"]["url"], "https://news.google.com/rss/articles/B")  # falhou: mantém
 
     def test_tendencias(self):
-        env = {"related_queries": {"rising": [{"query": "isenção 60 mil ações", "formatted_value": "+450%"}],
+        env = {"related_queries": {"rising": [{"query": "isenção 60 mil ações", "formatted_value": "+450%"},
+                                              {"query": "meu ir — receita", "formatted_value": "+70%"}],
                                    "top": [{"query": "ir ações", "value": 100}]},
                "interest_over_time": [{"date": "2026-09-20", "value": 70}]}
         def explorar(termo):
@@ -131,6 +132,7 @@ class Enriquecer(unittest.TestCase):
         t = coletor.tendencias({"tendencias": {"termos": ["imposto de renda", "quebrado"]}}, lambda _: None, explorar, em_alta)
         self.assertEqual(t["termos"][0]["subindo"][0], {"busca": "isenção 60 mil ações", "valor": "+450%"})
         self.assertEqual([x["assunto"] for x in t["emAlta"]], ["restituição imposto de renda"])
+        self.assertNotIn("—", t["termos"][0]["subindo"][1]["busca"])
         self.assertTrue(any("quebrado" in a for a in t["avisos"]))
 
 
