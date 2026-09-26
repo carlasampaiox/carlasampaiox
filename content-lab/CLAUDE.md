@@ -52,6 +52,13 @@ Busca notícias das marcas, conteúdos e notícias dos concorrentes, e revisa os
 O botão "Pesquisar agora" da aba Concorrentes dispara essa mesma tarefa com um "PEDIDO AVULSO".
 Para rodar sem parar, a tarefa precisa estar com "Aprovar automaticamente" ligado.
 
+## Instagram pelo vidIQ (rotina diária)
+- Rotina "Instagram do Content Lab" (id `trig_013cy9D6MRXUtjTWdWLd4Abn`), todo dia às 7h37 (Brasília). Segue `../importador/ROTINA.md`.
+- Conector vidIQ, plano grátis: 150 créditos por mês, 5 por consulta de Reels. O comando `planejar` escolhe no máximo 1 perfil por dia, conforme o ritmo de postagem, e reparte o saldo até a renovação (reserva de 15).
+- Controle das consultas no banco: `importador/vidiq` (ultimaConsulta, ultimoPost, postsSemana por perfil).
+- Instagram da Mycapital: @mycapitaloficial (em `brands/mycapital`, `channels.instagram.handle`).
+- O botão "Importar posts agora" dispara essa rotina com PEDIDO AVULSO (1 perfil, 5 créditos).
+
 ## Importador de posts (`../importador/`)
 - `importar_posts.py`: Instagram (Business Discovery) e YouTube Data API, melhores posts de 14 dias, capas baixadas, sem repetir links.
 - A gravação é feita pela rotina (ver `../importador/ROTINA.md`): assets pelo `Artifact` e documentos pelo `ArtifactData` em lotes de 50.

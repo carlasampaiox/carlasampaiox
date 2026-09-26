@@ -87,6 +87,92 @@ class Selecao(unittest.TestCase):
         self.assertEqual(y.sinal(), "12.345 visualizações")
 
 
+class Plano(unittest.TestCase):
+    ESTADO = {"brands": [{"id": "m", "channels": {"instagram": {"handle": "@minha"}},
+                          "competitors": [{"id": "a", "instagram": "@ativo"}, {"id": "p", "instagram": "@parado"},
+                                          {"id": "n", "instagram": "@novo"}, {"id": "x", "instagram": ""}]}]}
+    CONTROLE = {"perfis": {
+        "minha": {"ultimaConsulta": "2026-09-20", "ultimoPost": "2026-09-18", "postsSemana": 1},
+        "ativo": {"ultimaConsulta": "2026-09-24", "ultimoPost": "2026-09-24", "postsSemana": 4},
+        "parado": {"ultimaConsulta": "2026-09-01", "ultimoPost": "2024-01-01", "postsSemana": 0}}}
+
+    def test_nunca_consultado_vem_primeiro_e_respeita_limite_diario(self):
+        r = ip.planejar(self.ESTADO, self.CONTROLE, 150, dt.date(2026, 10, 26), REF)
+        self.assertEqual([c["handle"] for c in r["consultar"]], ["novo"])
+        self.assertEqual(r["custoHoje"], 5)
+
+    def test_reserva_bloqueia_consultas(self):
+        r = ip.planejar(self.ESTADO, self.CONTROLE, 15, dt.date(2026, 10, 26), REF)
+        self.assertEqual(r["consultar"], [])
+        self.assertIn("reserva", r["motivo"])
+
+    def test_pouco_credito_estica_intervalos(self):
+        c = dict(self.CONTROLE, perfis=dict(self.CONTROLE["perfis"], novo={"ultimaConsulta": "2026-09-22", "postsSemana": 4, "ultimoPost": "2026-09-22"}))
+        muito = ip.planejar(self.ESTADO, c, 150, dt.date(2026, 10, 26), REF)
+        pouco = ip.planejar(self.ESTADO, c, 30, dt.date(2026, 10, 26), REF)
+        self.assertGreater(pouco["fatorEconomia"], muito["fatorEconomia"])
+        self.assertLessEqual(len(pouco["fila"]), len(muito["fila"]))
+
+    def test_gasto_do_mes_cabe_no_plano_gratis(self):
+        """Simula 30 dias: nunca passa de 150 créditos nem fica abaixo da reserva."""
+        controle, saldo, gasto = {"perfis": {}}, 150, 0
+        for d in range(30):
+            dia = REF + dt.timedelta(days=d)
+            r = ip.planejar(self.ESTADO, controle, saldo, REF + dt.timedelta(days=30), dia)
+            for c in r["consultar"]:
+                saldo -= 5
+                gasto += 5
+                ritmo = {"ativo": 4, "minha": 1, "novo": 2, "parado": 0}[c["handle"]]
+                ult = "2024-01-01" if c["handle"] == "parado" else dia.isoformat()
+                controle["perfis"][c["handle"]] = {"ultimaConsulta": dia.isoformat(), "ultimoPost": ult, "postsSemana": ritmo}
+        self.assertLessEqual(gasto, 135)
+        self.assertGreaterEqual(saldo, 15)
+        self.assertEqual(len(controle["perfis"]), 4)
+
+    def test_atualizar_controle(self):
+        c = {}
+        posts = [ip.Post("instagram", "@a", f"u{i}", (REF - dt.timedelta(days=i * 3)).isoformat(), "Reels", "t") for i in range(12)]
+        ip.atualizar_controle(c, "A", posts, REF)
+        self.assertEqual(c["perfis"]["a"]["ultimoPost"], REF.isoformat())
+        self.assertEqual(c["perfis"]["a"]["postsSemana"], 2.5)  # 10 posts em 28 dias
+
+
+class Vidiq(unittest.TestCase):
+    TXT = """## @perfil — 2 reels
+
+### AAA — 6.2K plays, 1.9K likes, 12 comments, 80s, posted 2026-09-24, pinned
+https://www.instagram.com/reel/AAA/
+> "Primeira linha — do gancho
+
+resto..."
+
+### BBB — 153 plays, 7 likes, 26s, posted 2026-09-23
+https://www.instagram.com/reel/BBB/
+> "Outro"
+
+Reel AAA — 6235 plays — pinned
+[Image: source: capa-a.jpg]
+Reel BBB — 153 plays
+[Image: source: capa-b.jpg]
+"""
+
+    def test_leitura(self):
+        ps = ip.ler_vidiq_reels(self.TXT, Path("/base"))
+        self.assertEqual(len(ps), 2)
+        a, b = ps
+        self.assertEqual((a.views, a.curtidas, a.comentarios, a.duracao, a.data), (6235, 1900, 12, 80, "2026-09-24"))
+        self.assertEqual(a.sinal(), "6.235 visualizações, 1,9 mil curtidas, 12 comentários")
+        self.assertEqual(a.titulo, "Primeira linha, do gancho")
+        self.assertEqual(a.arquivo_local, "/base/capa-a.jpg")
+        self.assertEqual(b.comentarios, 0)  # sem comentários na resposta = zero
+        self.assertEqual(a.perfil, "@perfil")
+
+    def test_numero_abreviado(self):
+        self.assertEqual(ip.numero_abreviado("175.4K"), (175400, "175,4 mil"))
+        self.assertEqual(ip.numero_abreviado("1.7M"), (1700000, "1,7 mi"))
+        self.assertEqual(ip.numero_abreviado("42"), (42, "42"))
+
+
 class Fluxo(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()

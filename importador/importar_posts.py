@@ -235,6 +235,9 @@ class Post:
     views: int | None = None
     imagem: str = ""         # URL da imagem ou capa
     seguidores: int | None = None
+    arquivo_local: str = ""  # capa já baixada (conector vidIQ)
+    duracao: int = 0         # segundos
+    textos: dict = field(default_factory=dict)  # números como a fonte mostra ("6,2 mil")
 
     def pontuacao(self) -> float:
         """Desempenho comparável dentro do mesmo perfil."""
@@ -245,12 +248,13 @@ class Post:
 
     def sinal(self) -> str:
         partes = []
+        t = self.textos
         if self.views:
-            partes.append(f"{num_br(self.views)} visualizações")
+            partes.append(f"{t.get('views') or num_br(self.views)} visualizações")
         if self.curtidas is not None:
-            partes.append(f"{num_br(self.curtidas)} curtidas")
+            partes.append(f"{t.get('curtidas') or num_br(self.curtidas)} curtidas")
         if self.comentarios is not None:
-            partes.append(f"{num_br(self.comentarios)} comentários")
+            partes.append(f"{t.get('comentarios') or num_br(self.comentarios)} comentários")
         if self.seguidores and self.plataforma == "instagram" and (self.curtidas or self.comentarios):
             taxa = 100 * ((self.curtidas or 0) + (self.comentarios or 0)) / self.seguidores
             partes.append(f"{taxa:.1f}% de engajamento sobre {num_br(self.seguidores)} seguidores".replace(".", ",", 1))
@@ -355,6 +359,183 @@ def buscar_youtube(buscar: Buscador, chave: str, canal: dict[str, str], limite: 
     return posts
 
 
+# ------------------------------------------------------------ vidIQ
+
+# O conector vidIQ (vidiq_ig_profile_reels) devolve markdown. A rotina salva a
+# resposta inteira em saida/vidiq/ig-<perfil>.md, incluindo as linhas
+# "Reel <código> — <plays> plays" e "[Image: source: <arquivo>]" de cada capa.
+
+def numero_abreviado(txt: str) -> tuple[int, str]:
+    """'6.2K' -> (6200, '6,2 mil'); '117' -> (117, '117'). O texto é o exibido."""
+    m = re.fullmatch(r"([\d.,]+)\s*([KkMm]?)", txt.strip())
+    if not m:
+        return 0, txt
+    base, suf = m.group(1).replace(",", ""), m.group(2).upper()
+    valor = float(base)
+    if suf == "K":
+        return int(valor * 1000), f"{base.replace('.', ',')} mil"
+    if suf == "M":
+        return int(valor * 1_000_000), f"{base.replace('.', ',')} mi"
+    return int(valor), num_br(int(valor))
+
+
+def ler_vidiq_reels(texto: str, base_arquivos: Path | None = None) -> list[Post]:
+    handle = ""
+    m = re.search(r"^##\s*@([A-Za-z0-9._]+)", texto, re.M)
+    if m:
+        handle = m.group(1)
+    exatos, capas = {}, {}
+    atual = None
+    for linha in texto.splitlines():
+        r = re.match(r"^Reel\s+(\S+)\s+\S+\s+(\d+)\s+plays", linha.strip())
+        if r:
+            atual = r.group(1)
+            exatos[atual] = int(r.group(2))
+            continue
+        im = re.match(r"^\[Image: source: (.+?)\]\s*$", linha.strip())
+        if im and atual:
+            caminho = Path(im.group(1))
+            if base_arquivos and not caminho.is_absolute():
+                caminho = base_arquivos / caminho
+            capas[atual] = str(caminho)
+            atual = None
+    posts = []
+    blocos = re.split(r"^###\s+", texto, flags=re.M)[1:]
+    for b in blocos:
+        linhas = b.splitlines()
+        cab = re.match(r"(\S+)\s+\S+\s+(.*?),\s*posted\s+(\d{4}-\d{2}-\d{2})", linhas[0])
+        if not cab:
+            continue
+        code, stats, data = cab.groups()
+        textos, vals, dur = {}, {}, 0
+        for parte in stats.split(","):
+            parte = parte.strip()
+            sm = re.fullmatch(r"([\d.,]+[KkMm]?)\s+(plays|likes|comments)", parte)
+            if sm:
+                v, t = numero_abreviado(sm.group(1))
+                chave = {"plays": "views", "likes": "curtidas", "comments": "comentarios"}[sm.group(2)]
+                vals[chave], textos[chave] = v, t
+            elif re.fullmatch(r"\d+s", parte):
+                dur = int(parte[:-1])
+        if code in exatos:  # número exato de plays tem prioridade sobre o abreviado
+            vals["views"], textos["views"] = exatos[code], num_br(exatos[code])
+        url = next((l.strip() for l in linhas[1:] if l.strip().startswith("http")), f"https://www.instagram.com/reel/{code}/")
+        legenda = "\n".join(l[2:] if l.startswith("> ") else l[1:] if l.startswith(">") else ""
+                            for l in linhas if l.startswith(">")).strip()
+        legenda = re.sub(r'^"|"$', "", legenda)
+        legenda = re.sub(r'\.\.\."?$', "...", legenda)
+        posts.append(Post(
+            plataforma="instagram", perfil="@" + handle, url=url, data=data, formato="Reels",
+            titulo=gancho(legenda) or f"Reels de @{handle}", legenda=legenda,
+            curtidas=vals.get("curtidas"), comentarios=vals.get("comentarios", 0 if "curtidas" in vals else None),
+            views=vals.get("views"), arquivo_local=capas.get(code, ""), duracao=dur,
+            textos={k: v for k, v in textos.items() if not re.fullmatch(r"[\d.]+", v)},
+        ))
+    return posts
+
+
+def destaques(posts: list[Post], dias: int, fator: float, ref: dt.date | None = None,
+              excluir: set[str] | None = None) -> list[Post]:
+    """Reels 'fora da curva': visualizações >= fator x a mediana do perfil, nos últimos `dias`."""
+    ref = ref or hoje()
+    vs = sorted(p.views or 0 for p in posts)
+    if not vs:
+        return []
+    mediana = vs[len(vs) // 2] if len(vs) % 2 else (vs[len(vs) // 2 - 1] + vs[len(vs) // 2]) / 2
+    corte = (ref - dt.timedelta(days=dias)).isoformat()
+    ex = excluir or set()
+    out = [p for p in posts if p.data >= corte and (p.views or 0) >= fator * max(mediana, 1)
+           and normalizar_link(p.url) not in ex]
+    return sorted(out, key=lambda p: p.views or 0, reverse=True)
+
+
+# ------------------------------------------------- plano de créditos (vidIQ)
+
+# O plano grátis do vidIQ tem 150 créditos por mês e cada consulta de Reels
+# custa 5. O plano decide, a cada dia, QUAIS perfis consultar (no máximo
+# `max_por_dia`), conforme o ritmo de postagem de cada um, e estica os
+# intervalos quando os créditos não dariam para todos até a renovação.
+
+CUSTO_REELS = 5
+
+
+def perfis_do_estado(estado: dict) -> list[dict]:
+    out, vistos = [], set()
+    for m in estado.get("brands", []):
+        proprio = usuario_instagram(((m.get("channels") or {}).get("instagram") or {}).get("handle", ""))
+        cands = ([{"handle": proprio, "tipo": "marca", "nome": m.get("name", "")}] if proprio else []) + [
+            {"handle": usuario_instagram(c.get("instagram", "")), "tipo": "concorrente", "nome": c.get("name", "")}
+            for c in m.get("competitors", [])]
+        for c in cands:
+            h = c["handle"].lower()
+            if h and h not in vistos:
+                vistos.add(h)
+                out.append(dict(c, handle=h, brandId=m.get("id")))
+    return out
+
+
+def intervalo_ideal(info: dict, hoje_: dt.date) -> float:
+    """Dias entre consultas: quem posta muito é visto mais vezes."""
+    if not info.get("ultimaConsulta"):
+        return 0.0
+    ult = info.get("ultimoPost")
+    if ult and (hoje_ - dt.date.fromisoformat(ult)).days > 90:
+        return 30.0  # perfil parado
+    ps = float(info.get("postsSemana") or 0)
+    if ps >= 3:
+        return 3.0
+    if ps >= 1:
+        return 7.0
+    return 14.0
+
+
+def planejar(estado: dict, controle: dict, saldo: int, renova: dt.date, hoje_: dt.date,
+             reserva: int = 15, max_por_dia: int = 1) -> dict:
+    perfis = perfis_do_estado(estado)
+    info = controle.get("perfis", {})
+    dias_rest = max(1, (renova - hoje_).days)
+    ints = {p["handle"]: intervalo_ideal(info.get(p["handle"], {}), hoje_) for p in perfis}
+    # demanda até a renovação, em créditos
+    demanda = sum((dias_rest / i if i else 1 + dias_rest / 7) for i in ints.values()) * CUSTO_REELS
+    livre = max(0, saldo - reserva)
+    # fator > 1 estica os intervalos (falta crédito); < 1 encurta (sobra), no mínimo metade
+    fator = max(0.5, demanda / livre) if livre else float("inf")
+    fila = []
+    for p in perfis:
+        i = ints[p["handle"]]
+        ult = info.get(p["handle"], {}).get("ultimaConsulta")
+        if not ult:
+            atraso = 99.0  # nunca consultado
+        else:
+            passados = (hoje_ - dt.date.fromisoformat(ult)).days
+            atraso = passados / (i * fator) if fator != float("inf") else 0
+        if atraso >= 1:
+            fila.append(dict(p, atraso=round(atraso, 2), intervalo=round(i * fator, 1)))
+    fila.sort(key=lambda x: (-x["atraso"], x["tipo"] != "concorrente"))
+    cabe = max(0, (saldo - reserva) // CUSTO_REELS)
+    escolhidos = fila[:min(max_por_dia, cabe)]
+    if not livre:
+        motivo = f"pular: saldo {saldo} está na reserva de {reserva} créditos"
+    elif not escolhidos:
+        motivo = "pular: nenhum perfil vence hoje"
+    else:
+        motivo = f"consultar {len(escolhidos)} perfil(is); fator de economia {fator:.2f}"
+    return {"hoje": hoje_.isoformat(), "saldo": saldo, "renova": renova.isoformat(),
+            "consultar": escolhidos, "custoHoje": len(escolhidos) * CUSTO_REELS,
+            "demandaPrevista": round(demanda), "fatorEconomia": round(fator, 2), "motivo": motivo,
+            "fila": [{"handle": f["handle"], "atraso": f["atraso"]} for f in fila]}
+
+
+def atualizar_controle(controle: dict, handle: str, posts: list[Post], hoje_: dt.date) -> None:
+    datas = sorted((p.data for p in posts if p.data), reverse=True)
+    corte = (hoje_ - dt.timedelta(days=28)).isoformat()
+    recentes = sum(1 for d in datas if d >= corte)
+    controle.setdefault("perfis", {})[handle.lower()] = {
+        "ultimaConsulta": hoje_.isoformat(), "ultimoPost": datas[0] if datas else "",
+        "postsSemana": round(recentes / 4, 2)}
+    controle["atualizadoEm"] = hoje_.isoformat()
+
+
 # ------------------------------------------------------------- seleção
 
 
@@ -378,6 +559,8 @@ def resumo(p: Post) -> str:
     """Resumo factual, sem opinião nem número estimado."""
     quando = dt.date.fromisoformat(p.data).strftime("%d/%m") if p.data else ""
     base = f"{p.formato} publicado em {quando}" if quando else p.formato
+    if p.duracao:
+        base += f" ({p.duracao // 60}min{p.duracao % 60:02d}s)" if p.duracao >= 60 else f" ({p.duracao}s)"
     if p.sinal():
         base += f", com {p.sinal()}"
     base += "."
@@ -405,6 +588,23 @@ def baixar_midia(buscar: Buscador, url: str, pasta: Path) -> tuple[str, str]:
     if not ext:
         return "", ""
     nome = hashlib.sha1(url.split("?")[0].encode()).hexdigest()[:16] + "." + ext
+    pasta.mkdir(parents=True, exist_ok=True)
+    (pasta / nome).write_bytes(dados)
+    return nome, ("video" if ext in ("mp4", "webm") else "image")
+
+
+def copiar_midia(origem: Path, pasta: Path) -> tuple[str, str]:
+    """Copia uma capa já salva em disco (conector vidIQ) para a pasta do pacote."""
+    try:
+        dados = origem.read_bytes()
+    except OSError:
+        return "", ""
+    if not dados or len(dados) > MAX_BYTES:
+        return "", ""
+    ext = tipo_imagem(dados) or tipo_video(dados)
+    if not ext:
+        return "", ""
+    nome = hashlib.sha1(dados).hexdigest()[:16] + "." + ext
     pasta.mkdir(parents=True, exist_ok=True)
     (pasta / nome).write_bytes(dados)
     return nome, ("video" if ext in ("mp4", "webm") else "image")
@@ -440,6 +640,8 @@ class Config:
     refs_por_perfil: int = 1
     incluir_marca: bool = False
     graph_versao: str = GRAPH_VERSAO_PADRAO
+    dias_destaque: int = 90     # janela para Reels fora da curva (vidIQ)
+    fator_destaque: float = 2.0  # visualizações >= fator x mediana do perfil
 
 
 def id_instagram_da_marca(marca: dict) -> str:
@@ -449,7 +651,8 @@ def id_instagram_da_marca(marca: dict) -> str:
 
 
 def montar_pacote(estado: dict, buscar: Buscador, pasta: Path, cfg: Config,
-                  ref: dt.date | None = None, log: Callable[[str], None] = print) -> dict:
+                  ref: dt.date | None = None, log: Callable[[str], None] = print,
+                  vidiq: Path | None = None, controle: dict | None = None) -> dict:
     token = os.environ.get("META_ACCESS_TOKEN", "")
     yt_chave = os.environ.get("YOUTUBE_API_KEY", "")
     midia_dir = pasta / "midia"
@@ -461,14 +664,31 @@ def montar_pacote(estado: dict, buscar: Buscador, pasta: Path, cfg: Config,
         existentes = {normalizar_link(u) for u in marca.get("existingLinks", [])}
         ig_id = id_instagram_da_marca(marca)
 
-        def registrar(posts: list[Post], quem: dict | None) -> None:
+        def registrar(posts: list[Post], quem: dict | None, refs_extra: list[Post] = ()) -> None:
             ordem_refs = 0
+            for p in refs_extra:  # destaques fora da curva viram referência mesmo fora da janela
+                k = normalizar_link(p.url)
+                if k in existentes or ordem_refs >= (cfg.refs_por_perfil if quem else cfg.por_perfil):
+                    continue
+                existentes.add(k)
+                ordem_refs += 1
+                arquivo, tipo = copiar_midia(Path(p.arquivo_local), midia_dir) if p.arquivo_local else baixar_midia(buscar, p.imagem, midia_dir)
+                itens.append({"brandId": bid, "arquivo": arquivo, "mediaType": tipo, "plataforma": p.plataforma,
+                              "pontuacao": round(p.pontuacao(), 1), "colecao": "refs", "doc": {
+                                  "platform": "instagram", "format": p.formato, "url": p.url, "creator": p.perfil,
+                                  "views": p.sinal() + f" (publicado em {dt.date.fromisoformat(p.data).strftime('%d/%m/%Y')})",
+                                  "hook": p.titulo, "why": "",
+                                  "tags": "concorrente, fora da curva" if quem else "minha marca, fora da curva",
+                                  "origem": "importador"}})
             for p in posts:
                 k = normalizar_link(p.url)
                 if k in existentes:
                     continue
                 existentes.add(k)
-                arquivo, tipo = baixar_midia(buscar, p.imagem, midia_dir)
+                if p.arquivo_local:
+                    arquivo, tipo = copiar_midia(Path(p.arquivo_local), midia_dir)
+                else:
+                    arquivo, tipo = baixar_midia(buscar, p.imagem, midia_dir)
                 base = {"brandId": bid, "arquivo": arquivo, "mediaType": tipo,
                         "plataforma": p.plataforma, "pontuacao": round(p.pontuacao(), 1)}
                 if quem is not None:
@@ -488,7 +708,23 @@ def montar_pacote(estado: dict, buscar: Buscador, pasta: Path, cfg: Config,
         for c in marca.get("competitors", []):
             nome = c.get("name") or c.get("id")
             ig = usuario_instagram(c.get("instagram", ""))
-            if ig:
+            arq_vidiq = vidiq / f"ig-{ig.lower()}.md" if (vidiq and ig) else None
+            if arq_vidiq and arq_vidiq.is_file():
+                todos = ler_vidiq_reels(arq_vidiq.read_text(encoding="utf-8"), arq_vidiq.parent)
+                if controle is not None:
+                    atualizar_controle(controle, ig, todos, ref or hoje())
+                recentes = escolher(todos, cfg.dias, cfg.por_perfil, ref, existentes)
+                extra = [] if any(p.plataforma == "instagram" for p in recentes) else \
+                    destaques(todos, cfg.dias_destaque, cfg.fator_destaque, ref, existentes)
+                registrar(recentes, c, extra)
+                ultimo = max((p.data for p in todos), default="")
+                if not recentes:
+                    avisos.append(f"{nome} (Instagram @{ig}): nenhum Reel nos últimos {cfg.dias} dias"
+                                  + (f"; o último é de {dt.date.fromisoformat(ultimo).strftime('%d/%m/%Y')}." if ultimo else "."))
+                log(f"  IG @{ig} (vidIQ): {len(recentes)} recentes, {len(extra)} destaques")
+            elif ig and vidiq:
+                pass  # perfil não consultado hoje (plano de créditos)
+            elif ig:
                 if not (token and ig_id):
                     avisos.append(f"{marca.get('name', bid)}: sem META_ACCESS_TOKEN ou IG_USER_ID, Instagram de {nome} ignorado.")
                 else:
@@ -499,7 +735,7 @@ def montar_pacote(estado: dict, buscar: Buscador, pasta: Path, cfg: Config,
                     except ErroAPI as e:
                         avisos.append(f"{nome} (Instagram @{ig}): {e}")
             yt = canal_youtube(c.get("youtube", ""))
-            if yt:
+            if yt and not (vidiq and not yt_chave):
                 if not yt_chave:
                     avisos.append(f"{marca.get('name', bid)}: sem YOUTUBE_API_KEY, YouTube de {nome} ignorado.")
                 else:
@@ -510,7 +746,16 @@ def montar_pacote(estado: dict, buscar: Buscador, pasta: Path, cfg: Config,
                         avisos.append(f"{nome} (YouTube): {e}")
 
         # a própria marca, só para Referências
-        if cfg.incluir_marca and token and ig_id:
+        proprio = usuario_instagram(((marca.get("channels") or {}).get("instagram") or {}).get("handle", ""))
+        arq_proprio = vidiq / f"ig-{proprio.lower()}.md" if (vidiq and proprio) else None
+        if arq_proprio and arq_proprio.is_file():
+            todos = ler_vidiq_reels(arq_proprio.read_text(encoding="utf-8"), arq_proprio.parent)
+            if controle is not None:
+                atualizar_controle(controle, proprio, todos, ref or hoje())
+            extra = destaques(todos, cfg.dias_destaque, cfg.fator_destaque, ref, existentes)
+            registrar([], None, extra)
+            log(f"  IG próprio @{proprio} (vidIQ): {min(len(extra), cfg.por_perfil)} destaques")
+        elif cfg.incluir_marca and token and ig_id:
             try:
                 registrar(escolher(buscar_instagram_proprio(buscar, ig_id, token, cfg.graph_versao),
                                    cfg.dias, cfg.por_perfil, ref, existentes), None)
@@ -610,7 +855,27 @@ def cmd_buscar(a: argparse.Namespace) -> int:
     pasta = Path(a.saida) / hoje().isoformat()
     cfg = Config(dias=a.dias, por_perfil=a.por_perfil, refs_por_perfil=a.refs_por_perfil,
                  incluir_marca=a.incluir_marca, graph_versao=os.environ.get("META_GRAPH_VERSION", GRAPH_VERSAO_PADRAO))
-    return gravar(montar_pacote(estado, http_get, pasta, cfg), pasta)
+    vidiq = Path(a.vidiq) if a.vidiq else None
+    controle = None
+    if a.controle:
+        cp = Path(a.controle)
+        controle = json.loads(cp.read_text(encoding="utf-8")) if cp.is_file() else {}
+    r = gravar(montar_pacote(estado, http_get, pasta, cfg, vidiq=vidiq, controle=controle), pasta)
+    if controle is not None:
+        Path(a.controle).write_text(json.dumps(controle, ensure_ascii=False, indent=2), encoding="utf-8")
+        print(f"Controle atualizado: {a.controle}")
+    return r
+
+
+def cmd_planejar(a: argparse.Namespace) -> int:
+    estado = json.loads(Path(a.estado).read_text(encoding="utf-8"))
+    cp = Path(a.controle)
+    controle = json.loads(cp.read_text(encoding="utf-8")) if cp.is_file() else {}
+    renova = dt.date.fromisoformat(a.renova[:10])
+    h = dt.date.fromisoformat(a.hoje) if a.hoje else hoje()
+    plano = planejar(estado, controle, a.saldo, renova, h, a.reserva, a.max_por_dia)
+    print(json.dumps(plano, ensure_ascii=False, indent=2))
+    return 0
 
 
 def cmd_simular(a: argparse.Namespace) -> int:
@@ -698,6 +963,17 @@ def main(argv: list[str] | None = None) -> int:
     b.add_argument("--por-perfil", type=int, default=3)
     b.add_argument("--refs-por-perfil", type=int, default=1)
     b.add_argument("--incluir-marca", action="store_true", help="também importa os melhores posts da própria conta")
+    b.add_argument("--vidiq", help="pasta com as respostas do conector vidIQ (ig-<perfil>.md); usada no lugar da API da Meta")
+    b.add_argument("--controle", help="JSON de controle do plano de créditos (atualizado com as consultas lidas)")
+    pl = sub.add_parser("planejar", help="decide quais perfis consultar hoje no vidIQ, economizando créditos")
+    pl.add_argument("--estado", required=True)
+    pl.add_argument("--controle", required=True)
+    pl.add_argument("--saldo", type=int, required=True, help="totalCredits do vidiq_balance")
+    pl.add_argument("--renova", required=True, help="renewableResetsAt do vidiq_balance")
+    pl.add_argument("--hoje")
+    pl.add_argument("--reserva", type=int, default=15, help="créditos guardados para o botão Importar agora")
+    pl.add_argument("--max-por-dia", type=int, default=1)
+    pl.set_defaults(f=cmd_planejar)
     b.set_defaults(f=cmd_buscar)
     e = sub.add_parser("montar-estado", help="gera estado.json a partir do dump do banco (ArtifactData out_dir)")
     e.add_argument("--dump", required=True, help="pasta usada como out_dir nas leituras do ArtifactData")

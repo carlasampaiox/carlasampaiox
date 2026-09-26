@@ -610,6 +610,7 @@ function spark(pts,ch,pct,label){
 
 /* ---------- concorrentes ---------- */
 const TRIGGER_ID='trig_01AM7vMvx9QEQ2wfVjsVCMuz';
+const IMPORT_TRIGGER_ID='trig_013cy9D6MRXUtjTWdWLd4Abn'; // rotina "Instagram do Content Lab" (vidIQ)
 const CC_KINDS=[['','Tudo'],['conteudo','Conteúdo publicado'],['noticia','Notícias sobre a empresa']];
 const kindOf=n=>n.kind==='conteudo'?'conteudo':'noticia';
 const CC_PERIODS=[['7','7 dias'],['15','15 dias'],['30','30 dias'],['','Todas']];
@@ -646,7 +647,7 @@ const shortUrl=u=>u.replace(/^https?:\/\/(www\.)?/,'').replace(/\/$/,'');
 function viewComps(){
   const list=state.data.competitors.slice().sort((a,b)=>String(a.name).localeCompare(String(b.name),'pt-BR'));
   let h=head('Concorrentes','Cadastre um concorrente e o Claude revisa os canais dele e busca notícias relevantes na internet. A pesquisa, as notícias e as suas anotações ficam juntas aqui.',
-    aiBtn('Lacunas e oportunidades','ai-comps')+(list.length?btn('Importar posts agora','comp-import','title="Busca no Instagram e no YouTube os posts de melhor desempenho dos últimos 14 dias, com prévia."'):'')+btn('Novo concorrente','new','data-col="competitors"','primary'));
+    aiBtn('Lacunas e oportunidades','ai-comps')+(list.length?btn('Importar posts agora','comp-import','title="Consulta agora 1 perfil do Instagram pelo vidIQ (5 créditos). A rotina diária já faz isso sozinha, economizando créditos."'):'')+btn('Novo concorrente','new','data-col="competitors"','primary'));
   if(!list.length)return h+empty('Nenhum concorrente cadastrado','Cadastre o nome e, se souber, o site e os perfis. O Claude completa o resto com a pesquisa.',btn('Novo concorrente','new','data-col="competitors"','primary'));
   const names=Object.fromEntries(list.map(c=>[c.id,c.name]));
   if(state.f.compFilter&&!names[state.f.compFilter])state.f.compFilter='';
@@ -723,12 +724,12 @@ async function requestResearch(c){
 
 async function requestImport(){
   const b=curBrand();if(!b)return;
-  const later='A importação de posts roda na rotina da manhã (segunda a sexta).';
+  const later='A importação de posts roda sozinha todo dia de manhã.';
   if(!mcp){toast(later,5000);return}
   try{
-    await mcp.callTool('Claude Code Remote','fire_trigger',{trigger_id:TRIGGER_ID,
-      text:`PEDIDO AVULSO: faça apenas a etapa de importação de posts com prévia (importador/ROTINA.md, etapa 3) para a marca "${b.name}" (id ${b.id}). Não pesquise notícias nesta execução.`},{cache:false});
-    toast('Importação iniciada. Os posts aparecem em Conteúdos dos concorrentes em alguns minutos.',5000);
+    await mcp.callTool('Claude Code Remote','fire_trigger',{trigger_id:IMPORT_TRIGGER_ID,
+      text:`PEDIDO AVULSO: importe agora 1 perfil do Instagram (o mais atrasado) para a marca "${b.name}" (id ${b.id}), seguindo o plano de créditos.`},{cache:false});
+    toast('Importação iniciada: 1 perfil do Instagram (5 créditos do vidIQ). Os posts aparecem aqui em alguns minutos.',5000);
   }catch(e){toast(e&&e.code==='needs_reauth'?'A conexão com as tarefas agendadas do Claude precisa ser refeita em Configurações, Conectores. '+later:'Não consegui iniciar agora. '+later,6000)}
 }
 
