@@ -14,13 +14,14 @@ https://claude.ai/artifact/JWoCf2AYGr2K39nSmCzm9R
 - `app.css`: estilos. Cor de destaque magenta (`--accent`), tema claro e escuro por tokens.
 - `app.js`: toda a lógica (abas, banco, editor, botões do Claude, prévias).
 - `demo.json`: dados usados só na pré-visualização, quando o banco não está disponível.
-- `build.py`: junta tudo em `index.html`. Rode `python3 build.py` depois de editar.
+- `build.py`: junta tudo em `index.html`. Rode `python3 build.py` depois de editar (`--check` só confere, usado no CI).
+- `tests/smoke.cjs`: teste de fumaça com Playwright (todas as abas, backup, criação de post).
 - `index.html`: arquivo final que é publicado no artifact.
-- `PEDIDO-CLAUDE-CODE.md`: o primeiro pedido para o Claude Code (importar posts com prévia).
+- `PEDIDO-CLAUDE-CODE.md`: o primeiro pedido para o Claude Code (importar posts com prévia). Atendido em `../importador/`.
 
 ## Como publicar uma alteração
 1. Editar `app.js`, `app.css` ou `shell.html`.
-2. Rodar `python3 build.py`.
+2. Rodar `python3 build.py`, `node --check app.js` e `NODE_PATH=$(npm root -g) node tests/smoke.cjs`.
 3. Publicar `index.html` no artifact acima, passando a `url` acima para atualizar o mesmo link.
 4. Manter as capacidades: `db`, `sample`, `assets` e `mcp` com `Claude Code Remote` / `fire_trigger`.
 
@@ -36,7 +37,8 @@ Notícias, Referências, Calendário, Datas importantes, Marca, Mapa de ideias, 
 - `brands/{marca}/ideas`: mapa de ideias (title, pillar, channels, format, status, source, notes).
 - `brands/{marca}/metrics`: registros por período (channel, start, end, followers, reach, engagement, clicks, posts). Registros antigos podem ter só `month`.
 - `brands/{marca}/competitors`: campos da usuária (name, site, blog, instagram, linkedin, youtube, tiktok, positioning, strengths, weaknesses, frequency, notes) e campos automáticos (autoSummary, autoChannels, autoContent, autoCheckedAt, research).
-- `brands/{marca}/compnews`: conteúdos (`kind: "conteudo"`, com channel, format, signal) e notícias (`kind: "noticia"`, com source) dos concorrentes.
+- `brands/{marca}/compnews`: conteúdos (`kind: "conteudo"`, com channel, format, signal) e notícias (`kind: "noticia"`, com source) dos concorrentes. Conteúdos importados também têm `media`, `mediaType`, `competitorName` e `origem: "importador"`.
+- Itens com `origem: "importador"` mostram o selo "importado". Ids gravados pelo importador começam com `imp-` e são estáveis (derivados do link).
 
 ## Prévias (capability `assets`)
 - Imagens e vídeos ficam no armazenamento de assets do artifact. O documento guarda só o id em `media`.
@@ -50,8 +52,17 @@ Busca notícias das marcas, conteúdos e notícias dos concorrentes, e revisa os
 O botão "Pesquisar agora" da aba Concorrentes dispara essa mesma tarefa com um "PEDIDO AVULSO".
 Para rodar sem parar, a tarefa precisa estar com "Aprovar automaticamente" ligado.
 
+## Importador de posts (`../importador/`)
+- `importar_posts.py`: Instagram (Business Discovery) e YouTube Data API, melhores posts de 14 dias, capas baixadas, sem repetir links.
+- A gravação é feita pela rotina (ver `../importador/ROTINA.md`): assets pelo `Artifact` e documentos pelo `ArtifactData` em lotes de 50.
+- Botão "Importar posts agora" (aba Concorrentes) dispara a rotina com "PEDIDO AVULSO" só dessa etapa.
+- "Salvar em Referências" leva a prévia junto e não duplica (compara o link).
+
+## Otimizações do app
+- As 8 coleções do banco chegam juntas: o desenho é agrupado em um quadro (`scheduleRender`) e o DOM só é trocado se o HTML mudou. Vídeos não reiniciam e a rolagem não pula a cada atualização.
+- Aba Marca: botão "Baixar backup" gera um JSON com a marca e todas as coleções.
+
 ## Próximos passos combinados
-- Importar posts com prévia para Referências e Concorrentes (ver `PEDIDO-CLAUDE-CODE.md`).
 - Concluir a conexão do Supermetrics e ligar a aba Métricas aos dados reais.
 - Se o Metricool for conectado, adicionar o botão "Agendar" no calendário.
 - Se o vidIQ for conectado, usar os números reais de YouTube, Instagram e TikTok.

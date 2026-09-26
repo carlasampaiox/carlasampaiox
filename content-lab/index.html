@@ -317,6 +317,15 @@ fieldset{border:0;padding:0;margin:0}
 .rmedia img,.rmedia video{width:100%;height:100%;object-fit:cover;display:block}
 .rmedia .media-empty{height:100%;display:grid;place-items:center;background:var(--surface-2)}
 
+/* importador: prévia nos conteúdos dos concorrentes e selo "importado" */
+.imp{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--good);border:1px solid color-mix(in srgb,var(--good) 45%,transparent);padding:0 5px;border-radius:4px}
+.row .thumb{flex:0 0 96px;width:96px;aspect-ratio:4/5;border-radius:var(--r-sm);overflow:hidden;background:var(--surface-2)}
+.row .thumb a{display:block;height:100%}
+.row .thumb img,.row .thumb video{width:100%;height:100%;object-fit:cover;display:block}
+.row .thumb .media-empty{height:100%;display:grid;place-items:center;padding:6px;font-size:11px}
+.btn[aria-disabled="true"]{opacity:.6;cursor:default}
+@media (max-width:640px){.row .thumb{width:100%;flex-basis:auto;aspect-ratio:16/9}}
+
 </style>
 <header class="top">
   <div class="top-row">
@@ -387,7 +396,7 @@ const fmtN=(v,pct)=>v==null||v===''||isNaN(v)?'–':pct?(Number(v).toLocaleStrin
 const fmtNC=(v,pct)=>v==null||isNaN(v)?'–':pct?(Number(v).toLocaleString('pt-BR',{maximumFractionDigits:1})+'%'):NFC.format(v);
 const clean=t=>String(t||'').replace(/\s*—\s*/g,', ').replace(/\s–\s/g,', ');
 const code=id=>{const c=CHM[id];return c?`<span class="code ${c.id}" title="${c.label}">${c.code}</span>`:''};
-const exTag=it=>it&&it.exemplo?'<span class="ex" title="Dado de exemplo. Remova em Marca.">exemplo</span>':'';
+const exTag=it=>it&&it.exemplo?'<span class="ex" title="Dado de exemplo. Remova em Marca.">exemplo</span>':it&&it.origem==='importador'?'<span class="imp" title="Trazido pelo importador de posts, com números reais da plataforma.">importado</span>':'';
 const stTag=s=>{const x=STM[s]||STM.ideia;return `<span class="status st-${x.id}"><i></i>${x.label}</span>`};
 const aiBtn=(label,act,attrs='',cls='')=>`<button class="btn ai ${cls}" data-act="${act}" ${attrs}>${SPARK}${esc(label)}</button>`;
 const btn=(label,act,attrs='',cls='')=>`<button class="btn ${cls}" data-act="${act}" ${attrs}>${label}</button>`;
@@ -472,7 +481,7 @@ function subCols(){
   unsubCols.forEach(u=>u());unsubCols=[];
   COLS.forEach(c=>state.data[c]=[]);
   if(!state.brandId)return;
-  COLS.forEach(c=>unsubCols.push(Store.sub(bpath(c),list=>{state.data[c]=list;if(c==='dates')renderTabs();renderMain()})));
+  COLS.forEach(c=>unsubCols.push(Store.sub(bpath(c),list=>{state.data[c]=list;scheduleRender(c==='dates')})));
 }
 function setBrand(id){
   if(id===state.brandId)return;
@@ -481,6 +490,12 @@ function setBrand(id){
 
 /* ================= render ================= */
 function render(){renderTop();renderTabs();renderMain(true)}
+/* junta várias atualizações do banco (8 coleções) num único desenho por quadro */
+let rafId=0, rafTabs=false;
+function scheduleRender(tabs){
+  rafTabs=rafTabs||!!tabs;if(rafId)return;
+  rafId=requestAnimationFrame(()=>{rafId=0;if(rafTabs)renderTabs();rafTabs=false;renderMain()});
+}
 function renderTop(){
   const sel=$('#brandSel'), b=curBrand();
   sel.innerHTML=state.brands.map(x=>`<option value="${esc(x.id)}"${x.id===state.brandId?' selected':''}>${esc(x.name||'Sem nome')}</option>`).join('')+
@@ -496,10 +511,13 @@ function renderTabs(){
 function renderMain(force){
   const main=$('#main');
   if(state.tab==='marca'&&state.brandDirty&&!force)return;
+  if(state.loading||!curBrand())main._html='';
   if(state.loading){main.innerHTML='<div class="loading"><div class="thinking"><span class="pulse"></span>Carregando sua central...</div></div>';return}
   if(!curBrand()){main.innerHTML=viewOnboard();return}
   const v={noticias:viewNews,referencias:viewRefs,calendario:viewCal,datas:viewDates,marca:viewBrand,ideias:viewIdeas,metricas:viewMetrics,concorrentes:viewComps}[state.tab];
-  main.innerHTML=v();
+  const html=v();
+  /* só troca o DOM quando algo mudou: preserva vídeos tocando, foco e rolagem */
+  if(main._html!==html){main.innerHTML=html;main._html=html}
   if(state.tab==='marca')state.brandDirty=false;
 }
 function head(title,desc,actions){
@@ -766,6 +784,10 @@ function viewBrand(){
     ${f('sources','Sites que você acompanha','textarea',{full:1,rows:4,ph:'Nome | https://site.com',hint:'Uma por linha, no formato Nome | link. Aparecem no topo da aba Notícias.'})}
     <div class="field full" style="flex-direction:row;justify-content:flex-end">${btn('Salvar alterações','brand-save','','primary')}</div>
   </form>
+  <div class="danger-zone backup-zone">
+    <p><b>Backup.</b> Baixa um arquivo JSON com a marca e tudo o que está nela (notícias, referências, calendário, datas, ideias, métricas e concorrentes). As prévias ficam como id de arquivo.</p>
+    ${btn('Baixar backup','brand-backup')}
+  </div>
   <div class="danger-zone">
     <p><b>Dados de exemplo.</b> Remove os itens marcados como exemplo em todas as abas desta marca.</p>
     ${btn('Remover exemplos','brand-examples','','danger')}
@@ -965,11 +987,17 @@ function chLink(k,v,autoUrl){
   if(k==='youtube')return 'https://www.youtube.com/@'+encodeURIComponent(h);
   return '';
 }
+/* chave para comparar links (sem www, query e barra final; reel = p) */
+const linkKey=u=>{const x=safeUrl(u);if(!x)return '';const p=new URL(x);let path=p.pathname.replace(/\/+$/,'');
+  const h=p.hostname.replace(/^(www|m)\./,'');
+  if(h==='youtube.com'&&path==='/watch')return h+'/watch?v='+(p.searchParams.get('v')||'');
+  if(h==='instagram.com')path=path.replace(/^\/(reels?|tv)\//,'/p/');
+  return h+path};
 const shortUrl=u=>u.replace(/^https?:\/\/(www\.)?/,'').replace(/\/$/,'');
 function viewComps(){
   const list=state.data.competitors.slice().sort((a,b)=>String(a.name).localeCompare(String(b.name),'pt-BR'));
   let h=head('Concorrentes','Cadastre um concorrente e o Claude revisa os canais dele e busca notícias relevantes na internet. A pesquisa, as notícias e as suas anotações ficam juntas aqui.',
-    aiBtn('Lacunas e oportunidades','ai-comps')+btn('Novo concorrente','new','data-col="competitors"','primary'));
+    aiBtn('Lacunas e oportunidades','ai-comps')+(list.length?btn('Importar posts agora','comp-import','title="Busca no Instagram e no YouTube os posts de melhor desempenho dos últimos 14 dias, com prévia."'):'')+btn('Novo concorrente','new','data-col="competitors"','primary'));
   if(!list.length)return h+empty('Nenhum concorrente cadastrado','Cadastre o nome e, se souber, o site e os perfis. O Claude completa o resto com a pesquisa.',btn('Novo concorrente','new','data-col="competitors"','primary'));
   const names=Object.fromEntries(list.map(c=>[c.id,c.name]));
   if(state.f.compFilter&&!names[state.f.compFilter])state.f.compFilter='';
@@ -1007,19 +1035,20 @@ function viewComps(){
   const byComp=allNews.filter(n=>(!state.f.compFilter||n.competitorId===state.f.compFilter));
   const byKind=byComp.filter(n=>!state.f.compKind||kindOf(n)===state.f.compKind);
   const news=byKind.filter(n=>inPeriod(n,state.f.compPeriod));
+  const refLinks=new Set(state.data.refs.map(r=>linkKey(r.url)).filter(Boolean));
   h+=`<div class="sec-row" id="compNews"><h3 class="dsec">Conteúdos e notícias dos concorrentes <span>${news.length}</span></h3>${btn('+ Adicionar','new','data-col="compnews"','sm ghost')}</div>
   <div class="toolbar">${chips('compKind',CC_KINDS.map(([v,l])=>[v,`${l} <span class="cnt">${byComp.filter(n=>inPeriod(n,state.f.compPeriod)&&(!v||kindOf(n)===v)).length}</span>`]),state.f.compKind)}</div>
   <div class="toolbar"><span class="eyebrow">Período</span>${chips('compPeriod',CC_PERIODS.map(([v,l])=>[v,`${l} <span class="cnt">${byKind.filter(n=>inPeriod(n,v)).length}</span>`]),state.f.compPeriod)}</div>
   <div class="toolbar">${chips('compFilter',[['','Todos'],...list.map(c=>[c.id,esc(c.name)])],state.f.compFilter)}</div>`;
   if(!news.length)h+=`<p class="muted">Nada nesse filtro. De segunda a sexta, a rotina da manhã acompanha o que cada concorrente publica e o que sai sobre ele.</p>`;
   else h+='<div class="stack">'+news.map(n=>{const u=safeUrl(n.url), isC=kindOf(n)==='conteudo';
-    const toRefs=isC&&['instagram','tiktok'].includes(n.channel);
-    return `<article class="row${isC?' crow':''}"><div class="row-main">
-      <div class="meta"><span class="cname">${esc(names[n.competitorId]||n.competitorName||'Concorrente')}</span>${isC?`<span class="kind">Conteúdo</span>${n.channel?chCode(n.channel):''}${n.format?`<span>${esc(n.format)}</span>`:''}`:`<span class="kind news">Notícia</span>${n.source?`<span class="src">${esc(n.source)}</span>`:''}`}${n.date?`<span>${fmtDay(n.date)}</span>`:''}${n.tag?`<span class="tagpill">${esc(n.tag)}</span>`:''}</div>
+    const toRefs=isC&&['instagram','tiktok'].includes(n.channel), inRefs=toRefs&&refLinks.has(linkKey(n.url));
+    return `<article class="row${isC?' crow':''}">${validAsset(n.media)?`<div class="thumb">${u?`<a href="${esc(u)}" target="_blank" rel="noopener" tabindex="-1">`:''}${mediaTag(n.media,n.mediaType)}${u?'</a>':''}</div>`:''}<div class="row-main">
+      <div class="meta"><span class="cname">${esc(names[n.competitorId]||n.competitorName||'Concorrente')}</span>${isC?`<span class="kind">Conteúdo</span>${n.channel?chCode(n.channel):''}${n.format?`<span>${esc(n.format)}</span>`:''}`:`<span class="kind news">Notícia</span>${n.source?`<span class="src">${esc(n.source)}</span>`:''}`}${n.date?`<span>${fmtDay(n.date)}</span>`:''}${n.tag?`<span class="tagpill">${esc(n.tag)}</span>`:''}${exTag(n)}</div>
       <h3>${u?`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(n.title)}</a>`:esc(n.title)}</h3>
       ${n.signal?`<div class="signal">▲ ${esc(n.signal)}</div>`:''}
       ${n.summary?`<p>${esc(n.summary)}</p>`:''}
-    </div><div class="row-actions">${isC?aiBtn('Adaptar para a marca','ai-compcontent-adapt',`data-id="${esc(n.id)}"`,'sm'):aiBtn('Como responder','ai-compnews-one',`data-id="${esc(n.id)}"`,'sm')}${toRefs?btn('Salvar em Referências','comp-to-refs',`data-id="${esc(n.id)}"`,'sm'):''}${btn('Editar','edit',`data-col="compnews" data-id="${esc(n.id)}"`,'sm ghost')}</div></article>`}).join('')+'</div>';
+    </div><div class="row-actions">${isC?aiBtn('Adaptar para a marca','ai-compcontent-adapt',`data-id="${esc(n.id)}"`,'sm'):aiBtn('Como responder','ai-compnews-one',`data-id="${esc(n.id)}"`,'sm')}${toRefs?(inRefs?'<span class="btn sm" aria-disabled="true">Já em Referências ✓</span>':btn('Salvar em Referências','comp-to-refs',`data-id="${esc(n.id)}"`,'sm')):''}${btn('Editar','edit',`data-col="compnews" data-id="${esc(n.id)}"`,'sm ghost')}</div></article>`}).join('')+'</div>';
   return h;
 }
 async function requestResearch(c){
@@ -1041,6 +1070,17 @@ async function requestResearch(c){
     }[e&&e.code];
     toast(msg||later,6000);
   }
+}
+
+async function requestImport(){
+  const b=curBrand();if(!b)return;
+  const later='A importação de posts roda na rotina da manhã (segunda a sexta).';
+  if(!mcp){toast(later,5000);return}
+  try{
+    await mcp.callTool('Claude Code Remote','fire_trigger',{trigger_id:TRIGGER_ID,
+      text:`PEDIDO AVULSO: faça apenas a etapa de importação de posts com prévia (importador/ROTINA.md, etapa 3) para a marca "${b.name}" (id ${b.id}). Não pesquise notícias nesta execução.`},{cache:false});
+    toast('Importação iniciada. Os posts aparecem em Conteúdos dos concorrentes em alguns minutos.',5000);
+  }catch(e){toast(e&&e.code==='needs_reauth'?'A conexão com as tarefas agendadas do Claude precisa ser refeita em Configurações, Conectores. '+later:'Não consegui iniciar agora. '+later,6000)}
 }
 
 /* ================= editor modal ================= */
@@ -1408,7 +1448,13 @@ document.addEventListener('click',async e=>{
       state.f[fk]=el.dataset.v;if(fk==='newsPeriod'||fk==='mPeriod'||fk==='compPeriod'||fk==='compKind')LS.set('cl.'+fk,el.dataset.v);renderMain(true);break}
     case 'comp-news':{state.f.compFilter=el.dataset.v;renderMain(true);const t=document.getElementById('compNews');if(t)t.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});break}
     case 'comp-to-refs':{const n=state.data.compnews.find(x=>x.id===id);if(!n||el.disabled)break;el.disabled=true;
-      try{await Store.add(bpath('refs'),{platform:n.channel==='tiktok'?'tiktok':'instagram',format:n.format||'',url:n.url||'',creator:n.competitorName||'',views:n.signal||'',hook:n.title||'',why:n.summary||'',tags:'concorrente'});el.textContent='Salvo em Referências ✓'}catch(_){el.disabled=false}break}
+      if(n.url&&state.data.refs.some(r=>linkKey(r.url)===linkKey(n.url))){toast('Esse post já está em Referências.');break}
+      const comp=state.data.competitors.find(c=>c.id===n.competitorId)||{};
+      const handle=n.channel==='instagram'&&comp.instagram&&!/\//.test(comp.instagram)?'@'+String(comp.instagram).replace(/^@/,''):'';
+      const ref={platform:n.channel==='tiktok'?'tiktok':'instagram',format:n.format||'',url:n.url||'',creator:handle||n.competitorName||comp.name||'',views:n.signal||'',hook:n.title||'',why:n.summary||'',tags:'concorrente'};
+      if(validAsset(n.media)){ref.media=n.media;ref.mediaType=n.mediaType||'image'}
+      try{await Store.add(bpath('refs'),ref);el.textContent='Salvo em Referências ✓'}catch(_){el.disabled=false}break}
+    case 'comp-import':{if(el.disabled)break;el.disabled=true;await requestImport();break}
     case 'comp-research':{const c=state.data.competitors.find(x=>x.id===id);if(!c||el.disabled)break;el.disabled=true;await requestResearch(c);break}
     case 'm-apply':{const a=$('#mFrom').value,b=$('#mTo').value;if(!a||!b){toast('Escolha as duas datas.');break}
       state.f.mFrom=a;state.f.mTo=b;LS.set('cl.mFrom',a);LS.set('cl.mTo',b);renderMain(true);break}
@@ -1433,6 +1479,16 @@ document.addEventListener('click',async e=>{
     case 'ai-caption':draftCaption();break;
     case 'new-brand':openEditor('__brand',null,{});break;
     case 'brand-save':{try{await Store.set('brands',state.brandId,readBrandForm());state.brandDirty=false;toast('Configurações salvas');renderTop()}catch(_){}break}
+    case 'brand-backup':{const b=curBrand();if(!b)break;el.disabled=true;
+      try{const out={app:'content-lab',versao:1,exportadoEm:new Date().toISOString(),brand:b,data:{}};
+        for(const c of COLS)out.data[c]=await Store.list(bpath(c));
+        const blob=new Blob([JSON.stringify(out,null,2)],{type:'application/json'});
+        const a=document.createElement('a');a.href=URL.createObjectURL(blob);
+        a.download=`content-lab-${String(b.name||b.id).toLowerCase().normalize('NFD').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}-${TODAY()}.json`;
+        document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),4000);
+        toast(`Backup gerado com ${COLS.reduce((n,c)=>n+out.data[c].length,0)} itens`)}
+      catch(_){toast('Não consegui gerar o backup agora.')}
+      el.disabled=false;break}
     case 'brand-examples':if(arm(el,'ex','Confirmar remoção')){el.disabled=true;let n=0;
       try{for(const c of COLS){for(const it of await Store.list(bpath(c))){if(it.exemplo){await Store.remove(bpath(c),it.id);n++}}}
         const b=curBrand();if(b&&b.exemplo)await Store.set('brands',b.id,Object.assign(strip(b),{exemplo:false}));

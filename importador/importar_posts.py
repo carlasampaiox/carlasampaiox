@@ -1,0 +1,700 @@
+#!/usr/bin/env python3
+"""Importador de posts com prévia para o Content Lab.
+
+Busca os posts recentes dos concorrentes (e, se pedido, das próprias marcas)
+no Instagram (Graph API da Meta, Business Discovery) e no YouTube (Data API v3),
+escolhe os de melhor desempenho, baixa a imagem ou a capa de cada um e monta
+um pacote pronto para ser gravado no banco do Content Lab.
+
+O script não grava no banco sozinho: quem grava é a rotina do Claude, que
+envia as imagens para os assets do artifact e escreve os documentos com a
+ferramenta ArtifactData. Assim nenhuma chave de API chega ao Content Lab.
+
+Fluxo (veja README.md):
+  0. montar-estado  junta o dump do banco (ArtifactData com out_dir) em estado.json
+  1. buscar      lê estado.json (marcas, concorrentes, links já salvos),
+                 consulta as APIs e grava saida/<data>/pacote.json + midia/
+  2. montar-lote recebe o mapa arquivo -> id de asset e gera lote-NN.json
+                 (até 50 escritas cada), no formato `writes` do ArtifactData batch
+  3. simular     roda o fluxo inteiro com dados fictícios, sem internet
+
+Só usa a biblioteca padrão do Python 3.9+.
+"""
+from __future__ import annotations
+
+import argparse
+import datetime as dt
+import hashlib
+import json
+import os
+import re
+import sys
+import time
+import urllib.error
+import urllib.parse
+import urllib.request
+from dataclasses import dataclass, field, asdict
+from pathlib import Path
+from typing import Any, Callable, Iterable
+
+AQUI = Path(__file__).resolve().parent
+GRAPH_VERSAO_PADRAO = "v21.0"
+LOTE_MAX = 50  # escritas por chamada batch do ArtifactData
+MAX_BYTES = 20 * 1024 * 1024  # limite de assets do artifact
+TIPOS_ACEITOS = {"image/png": "png", "image/jpeg": "jpg", "image/webp": "webp", "image/gif": "gif"}
+
+# ---------------------------------------------------------------- utilidades
+
+
+def carregar_env(caminho: Path) -> None:
+    """Lê um .env simples (CHAVE=valor) sem sobrescrever o ambiente."""
+    if not caminho.is_file():
+        return
+    for linha in caminho.read_text(encoding="utf-8").splitlines():
+        linha = linha.strip()
+        if not linha or linha.startswith("#") or "=" not in linha:
+            continue
+        k, v = linha.split("=", 1)
+        k, v = k.strip().removeprefix("export ").strip(), v.strip().strip('"').strip("'")
+        os.environ.setdefault(k, v)
+
+
+def limpar(texto: Any) -> str:
+    """Aplica a regra da casa: sem travessão nem meia-risca como pontuação."""
+    s = str(texto or "")
+    s = re.sub(r"\s*—\s*", ", ", s)
+    s = re.sub(r"\s–\s", ", ", s)
+    return s.replace("—", ",").strip()
+
+
+def gancho(legenda: str, limite: int = 140) -> str:
+    """Primeira frase ou linha útil da legenda, cortada sem quebrar palavra."""
+    for linha in str(legenda or "").splitlines():
+        linha = linha.strip()
+        if linha[:1] not in ("#", "@") and re.search(r"\w", linha):
+            linha = limpar(linha)
+            if len(linha) <= limite:
+                return linha
+            corte = linha[:limite].rsplit(" ", 1)[0].rstrip(",.;:")
+            return corte + "..."
+    return ""
+
+
+def num_br(n: int | float | None) -> str:
+    if n is None:
+        return ""
+    return f"{int(n):,}".replace(",", ".")
+
+
+def normalizar_link(url: str) -> str:
+    """Chave para comparar links: sem esquema, www, query, âncora e barra final."""
+    u = str(url or "").strip()
+    if not u:
+        return ""
+    try:
+        p = urllib.parse.urlsplit(u if "://" in u else "https://" + u)
+    except ValueError:
+        return u.lower()
+    host = p.netloc.lower().removeprefix("www.").removeprefix("m.")
+    caminho = p.path.rstrip("/")
+    if host in ("youtube.com", "youtu.be"):
+        vid = ""
+        if host == "youtu.be":
+            vid = caminho.strip("/")
+        elif caminho == "/watch":
+            vid = urllib.parse.parse_qs(p.query).get("v", [""])[0]
+        elif caminho.startswith("/shorts/"):
+            vid = caminho.split("/")[2]
+        if vid:
+            return "youtube.com/watch?v=" + vid
+    if host == "instagram.com":
+        caminho = re.sub(r"^/(reels?|tv)/", "/p/", caminho)
+    return host + caminho
+
+
+def usuario_instagram(valor: str) -> str:
+    s = str(valor or "").strip()
+    if not s:
+        return ""
+    m = re.search(r"instagram\.com/([A-Za-z0-9._]+)", s)
+    if m:
+        s = m.group(1)
+    s = s.lstrip("@").strip("/ ")
+    return s if re.fullmatch(r"[A-Za-z0-9._]{1,30}", s) and s not in ("p", "reel", "reels", "explore") else ""
+
+
+def canal_youtube(valor: str) -> dict[str, str]:
+    """Aceita @handle, link de canal, /channel/UC..., /c/nome ou /user/nome."""
+    s = str(valor or "").strip()
+    if not s:
+        return {}
+    m = re.search(r"(UC[A-Za-z0-9_-]{22})", s)
+    if m:
+        return {"id": m.group(1)}
+    m = re.search(r"youtube\.com/@([^/?#]+)", s) or re.fullmatch(r"@([^/?#\s]+)", s)
+    if m:
+        return {"handle": "@" + urllib.parse.unquote(m.group(1))}
+    m = re.search(r"youtube\.com/user/([^/?#]+)", s)
+    if m:
+        return {"user": m.group(1)}
+    m = re.search(r"youtube\.com/c/([^/?#]+)", s)
+    if m:
+        return {"handle": "@" + m.group(1)}
+    if re.fullmatch(r"[A-Za-z0-9._-]{3,}", s):
+        return {"handle": "@" + s}
+    return {}
+
+
+def duracao_segundos(iso8601: str) -> int:
+    m = re.fullmatch(r"P(?:(\d+)D)?T?(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?", str(iso8601 or ""))
+    if not m:
+        return 0
+    d, h, mi, s = (int(x or 0) for x in m.groups())
+    return ((d * 24 + h) * 60 + mi) * 60 + s
+
+
+def data_iso(ts: str) -> str:
+    return str(ts or "")[:10]
+
+
+def hoje() -> dt.date:
+    return dt.datetime.now(dt.timezone(dt.timedelta(hours=-3))).date()  # Brasília
+
+
+# ------------------------------------------------------------------- HTTP
+
+
+class ErroAPI(Exception):
+    def __init__(self, msg: str, status: int = 0, codigo: str = ""):
+        super().__init__(msg)
+        self.status, self.codigo = status, codigo
+
+
+Buscador = Callable[[str], bytes]
+
+
+def http_get(url: str, tentativas: int = 3, timeout: int = 30) -> bytes:
+    """GET com nova tentativa em erros temporários (429, 5xx, rede)."""
+    ultimo: Exception | None = None
+    for i in range(tentativas):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "ContentLab-Importador/1.0"})
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                return r.read(MAX_BYTES + 1)
+        except urllib.error.HTTPError as e:
+            corpo = e.read().decode("utf-8", "replace")
+            if e.code in (429, 500, 502, 503, 504) and i < tentativas - 1:
+                time.sleep(2 ** (i + 1))
+                ultimo = e
+                continue
+            raise ErroAPI(explicar_erro(corpo, e.code), e.code) from None
+        except (urllib.error.URLError, TimeoutError) as e:
+            ultimo = e
+            if i < tentativas - 1:
+                time.sleep(2 ** (i + 1))
+    raise ErroAPI(f"sem conexão ({ultimo})")
+
+
+def explicar_erro(corpo: str, status: int) -> str:
+    try:
+        err = json.loads(corpo).get("error", {})
+    except (ValueError, AttributeError):
+        return f"HTTP {status}"
+    msg = err.get("message") or err.get("errors", [{}])[0].get("message") or f"HTTP {status}"
+    code = err.get("code")
+    dicas = {
+        190: "token da Meta vencido ou inválido. Gere um token de longa duração novo.",
+        10: "o app da Meta não tem a permissão instagram_basic ou instagram_manage_insights.",
+        110: "perfil não encontrado ou não é conta profissional (Business Discovery só lê contas comerciais e de criador).",
+        4: "limite de chamadas da Meta atingido. Tente mais tarde.",
+        403: "chave do YouTube sem a YouTube Data API ativada ou cota diária esgotada.",
+    }
+    sub = err.get("error_subcode")
+    dica = dicas.get(code) or (dicas[110] if sub == 2207013 else "")
+    return f"{msg}{' Dica: ' + dica if dica else ''}"
+
+
+def get_json(buscar: Buscador, url: str) -> dict:
+    return json.loads(buscar(url).decode("utf-8"))
+
+
+# ------------------------------------------------------------------ modelo
+
+
+@dataclass
+class Post:
+    plataforma: str          # instagram | youtube
+    perfil: str              # @usuario ou nome do canal
+    url: str
+    data: str                # AAAA-MM-DD
+    formato: str
+    titulo: str
+    legenda: str = ""
+    curtidas: int | None = None
+    comentarios: int | None = None
+    views: int | None = None
+    imagem: str = ""         # URL da imagem ou capa
+    seguidores: int | None = None
+
+    def pontuacao(self) -> float:
+        """Desempenho comparável dentro do mesmo perfil."""
+        if self.plataforma == "youtube":
+            return float(self.views or 0) + 20 * (self.curtidas or 0) + 50 * (self.comentarios or 0)
+        # Instagram: comentário vale mais que curtida; views de Reels entram quando existirem.
+        return float(self.curtidas or 0) + 3 * (self.comentarios or 0) + 0.05 * (self.views or 0)
+
+    def sinal(self) -> str:
+        partes = []
+        if self.views:
+            partes.append(f"{num_br(self.views)} visualizações")
+        if self.curtidas is not None:
+            partes.append(f"{num_br(self.curtidas)} curtidas")
+        if self.comentarios is not None:
+            partes.append(f"{num_br(self.comentarios)} comentários")
+        if self.seguidores and self.plataforma == "instagram" and (self.curtidas or self.comentarios):
+            taxa = 100 * ((self.curtidas or 0) + (self.comentarios or 0)) / self.seguidores
+            partes.append(f"{taxa:.1f}% de engajamento sobre {num_br(self.seguidores)} seguidores".replace(".", ",", 1))
+        return ", ".join(partes)
+
+
+# --------------------------------------------------------------- Instagram
+
+IG_CAMPOS_MIDIA = "id,caption,media_type,media_product_type,timestamp,like_count,comments_count,permalink,media_url,thumbnail_url"
+
+
+def formato_instagram(m: dict) -> str:
+    prod, tipo = m.get("media_product_type"), m.get("media_type")
+    if prod == "REELS":
+        return "Reels"
+    if tipo == "CAROUSEL_ALBUM":
+        return "Carrossel"
+    if tipo == "VIDEO":
+        return "Vídeo"
+    return "Post estático"
+
+
+def post_instagram(m: dict, perfil: str, seguidores: int | None) -> Post:
+    legenda = m.get("caption") or ""
+    return Post(
+        plataforma="instagram", perfil="@" + perfil, url=m.get("permalink") or "",
+        data=data_iso(m.get("timestamp")), formato=formato_instagram(m),
+        titulo=gancho(legenda) or f"{formato_instagram(m)} de @{perfil}", legenda=legenda,
+        curtidas=m.get("like_count"), comentarios=m.get("comments_count"),
+        imagem=m.get("thumbnail_url") or m.get("media_url") or "", seguidores=seguidores,
+    )
+
+
+def buscar_instagram(buscar: Buscador, ig_user_id: str, token: str, usuario: str,
+                     versao: str = GRAPH_VERSAO_PADRAO, limite: int = 30) -> list[Post]:
+    campos = (f"business_discovery.username({usuario}){{username,followers_count,media_count,"
+              f"media.limit({limite}){{{IG_CAMPOS_MIDIA}}}}}")
+    url = (f"https://graph.facebook.com/{versao}/{ig_user_id}?"
+           + urllib.parse.urlencode({"fields": campos, "access_token": token}))
+    bd = get_json(buscar, url).get("business_discovery") or {}
+    seg = bd.get("followers_count")
+    return [post_instagram(m, bd.get("username") or usuario, seg) for m in (bd.get("media") or {}).get("data", [])]
+
+
+def buscar_instagram_proprio(buscar: Buscador, ig_user_id: str, token: str,
+                             versao: str = GRAPH_VERSAO_PADRAO, limite: int = 30) -> list[Post]:
+    """Posts da própria conta comercial (para Referências da marca)."""
+    base = f"https://graph.facebook.com/{versao}/{ig_user_id}"
+    perfil = get_json(buscar, base + "?" + urllib.parse.urlencode(
+        {"fields": "username,followers_count", "access_token": token}))
+    midia = get_json(buscar, base + "/media?" + urllib.parse.urlencode(
+        {"fields": IG_CAMPOS_MIDIA, "limit": limite, "access_token": token}))
+    return [post_instagram(m, perfil.get("username", ""), perfil.get("followers_count")) for m in midia.get("data", [])]
+
+
+# ----------------------------------------------------------------- YouTube
+
+YT = "https://www.googleapis.com/youtube/v3/"
+
+
+def buscar_youtube(buscar: Buscador, chave: str, canal: dict[str, str], limite: int = 30) -> list[Post]:
+    q: dict[str, str] = {"part": "contentDetails,snippet,statistics", "key": chave}
+    if "id" in canal:
+        q["id"] = canal["id"]
+    elif "handle" in canal:
+        q["forHandle"] = canal["handle"]
+    elif "user" in canal:
+        q["forUsername"] = canal["user"]
+    else:
+        return []
+    itens = get_json(buscar, YT + "channels?" + urllib.parse.urlencode(q)).get("items") or []
+    if not itens:
+        raise ErroAPI(f"canal do YouTube não encontrado ({next(iter(canal.values()))})")
+    ch = itens[0]
+    nome = ch["snippet"]["title"]
+    uploads = ch["contentDetails"]["relatedPlaylists"]["uploads"]
+    pl = get_json(buscar, YT + "playlistItems?" + urllib.parse.urlencode(
+        {"part": "contentDetails", "playlistId": uploads, "maxResults": min(limite, 50), "key": chave}))
+    ids = [i["contentDetails"]["videoId"] for i in pl.get("items", [])]
+    if not ids:
+        return []
+    vs = get_json(buscar, YT + "videos?" + urllib.parse.urlencode(
+        {"part": "snippet,statistics,contentDetails", "id": ",".join(ids), "key": chave}))
+    posts = []
+    for v in vs.get("items", []):
+        sn, st = v["snippet"], v.get("statistics", {})
+        seg = duracao_segundos(v.get("contentDetails", {}).get("duration"))
+        th = sn.get("thumbnails", {})
+        img = next((th[k]["url"] for k in ("maxres", "standard", "high", "medium", "default") if k in th), "")
+        to_int = lambda k: int(st[k]) if k in st else None  # noqa: E731
+        formato = "Shorts" if 0 < seg <= 180 else "Vídeo longo"
+        posts.append(Post(
+            plataforma="youtube", perfil=nome, url=f"https://www.youtube.com/watch?v={v['id']}",
+            data=data_iso(sn.get("publishedAt")), formato=formato, titulo=limpar(sn.get("title")),
+            legenda=sn.get("description", ""), views=to_int("viewCount"), curtidas=to_int("likeCount"),
+            comentarios=to_int("commentCount"), imagem=img,
+        ))
+    return posts
+
+
+# ------------------------------------------------------------- seleção
+
+
+def escolher(posts: Iterable[Post], dias: int, quantos: int, ref: dt.date | None = None,
+             excluir: set[str] | None = None) -> list[Post]:
+    """Os `quantos` melhores dos últimos `dias` dias, fora os links em `excluir`."""
+    ref = ref or hoje()
+    corte = (ref - dt.timedelta(days=dias)).isoformat()
+    vistos, recentes = set(excluir or ()), []
+    for p in posts:
+        k = normalizar_link(p.url)
+        if not k or k in vistos or p.data < corte:
+            continue
+        vistos.add(k)
+        recentes.append(p)
+    recentes.sort(key=lambda p: (p.pontuacao(), p.data), reverse=True)
+    return recentes[:quantos]
+
+
+def resumo(p: Post) -> str:
+    """Resumo factual, sem opinião nem número estimado."""
+    quando = dt.date.fromisoformat(p.data).strftime("%d/%m") if p.data else ""
+    base = f"{p.formato} publicado em {quando}" if quando else p.formato
+    if p.sinal():
+        base += f", com {p.sinal()}"
+    base += "."
+    texto = limpar(p.legenda if p.plataforma == "instagram" else "")
+    if texto and texto != p.titulo:
+        texto = re.sub(r"\s+", " ", texto)
+        base += " Legenda: " + (texto[:280].rsplit(" ", 1)[0] + "..." if len(texto) > 280 else texto)
+    return base
+
+
+# ------------------------------------------------------------- mídia
+
+
+def baixar_midia(buscar: Buscador, url: str, pasta: Path) -> str:
+    """Baixa a imagem e devolve o nome do arquivo, ou '' se não for possível."""
+    if not url:
+        return ""
+    try:
+        dados = buscar(url)
+    except ErroAPI:
+        return ""
+    if not dados or len(dados) > MAX_BYTES:
+        return ""
+    ext = tipo_imagem(dados)
+    if not ext:
+        return ""
+    nome = hashlib.sha1(url.split("?")[0].encode()).hexdigest()[:16] + "." + ext
+    pasta.mkdir(parents=True, exist_ok=True)
+    (pasta / nome).write_bytes(dados)
+    return nome
+
+
+def tipo_imagem(b: bytes) -> str:
+    if b[:3] == b"\xff\xd8\xff":
+        return "jpg"
+    if b[:8] == b"\x89PNG\r\n\x1a\n":
+        return "png"
+    if b[:4] == b"RIFF" and b[8:12] == b"WEBP":
+        return "webp"
+    if b[:6] in (b"GIF87a", b"GIF89a"):
+        return "gif"
+    return ""
+
+
+# ------------------------------------------------------------- pacote
+
+
+@dataclass
+class Config:
+    dias: int = 14
+    por_perfil: int = 3
+    refs_por_perfil: int = 1
+    incluir_marca: bool = False
+    graph_versao: str = GRAPH_VERSAO_PADRAO
+
+
+def id_instagram_da_marca(marca: dict) -> str:
+    """IG_USER_ID_<MARCA> tem prioridade; senão, IG_USER_ID (conta única)."""
+    chave = "IG_USER_ID_" + re.sub(r"[^A-Z0-9]", "_", str(marca.get("id", "")).upper())
+    return os.environ.get(chave) or os.environ.get("IG_USER_ID", "")
+
+
+def montar_pacote(estado: dict, buscar: Buscador, pasta: Path, cfg: Config,
+                  ref: dt.date | None = None, log: Callable[[str], None] = print) -> dict:
+    token = os.environ.get("META_ACCESS_TOKEN", "")
+    yt_chave = os.environ.get("YOUTUBE_API_KEY", "")
+    midia_dir = pasta / "midia"
+    itens: list[dict] = []
+    avisos: list[str] = []
+
+    for marca in estado.get("brands", []):
+        bid = marca["id"]
+        existentes = {normalizar_link(u) for u in marca.get("existingLinks", [])}
+        ig_id = id_instagram_da_marca(marca)
+
+        def registrar(posts: list[Post], quem: dict | None) -> None:
+            ordem_refs = 0
+            for p in posts:
+                k = normalizar_link(p.url)
+                if k in existentes:
+                    continue
+                existentes.add(k)
+                arquivo = baixar_midia(buscar, p.imagem, midia_dir)
+                base = {"brandId": bid, "arquivo": arquivo, "mediaType": "image" if arquivo else "",
+                        "plataforma": p.plataforma, "pontuacao": round(p.pontuacao(), 1)}
+                if quem is not None:
+                    itens.append(dict(base, colecao="compnews", doc={
+                        "kind": "conteudo", "competitorId": quem["id"], "competitorName": quem.get("name", ""),
+                        "channel": p.plataforma, "format": p.formato, "title": p.titulo, "url": p.url,
+                        "date": p.data, "signal": p.sinal(), "summary": resumo(p),
+                        "origem": "importador"}))
+                if p.plataforma == "instagram" and ordem_refs < (cfg.refs_por_perfil if quem else cfg.por_perfil):
+                    ordem_refs += 1
+                    itens.append(dict(base, colecao="refs", doc={
+                        "platform": "instagram", "format": p.formato, "url": p.url, "creator": p.perfil,
+                        "views": p.sinal(), "hook": p.titulo, "why": "",
+                        "tags": "concorrente" if quem else "minha marca", "origem": "importador"}))
+
+        # concorrentes
+        for c in marca.get("competitors", []):
+            nome = c.get("name") or c.get("id")
+            ig = usuario_instagram(c.get("instagram", ""))
+            if ig:
+                if not (token and ig_id):
+                    avisos.append(f"{marca.get('name', bid)}: sem META_ACCESS_TOKEN ou IG_USER_ID, Instagram de {nome} ignorado.")
+                else:
+                    try:
+                        registrar(escolher(buscar_instagram(buscar, ig_id, token, ig, cfg.graph_versao),
+                                           cfg.dias, cfg.por_perfil, ref, existentes), c)
+                        log(f"  IG @{ig}: ok")
+                    except ErroAPI as e:
+                        avisos.append(f"{nome} (Instagram @{ig}): {e}")
+            yt = canal_youtube(c.get("youtube", ""))
+            if yt:
+                if not yt_chave:
+                    avisos.append(f"{marca.get('name', bid)}: sem YOUTUBE_API_KEY, YouTube de {nome} ignorado.")
+                else:
+                    try:
+                        registrar(escolher(buscar_youtube(buscar, yt_chave, yt), cfg.dias, cfg.por_perfil, ref, existentes), c)
+                        log(f"  YT {next(iter(yt.values()))}: ok")
+                    except ErroAPI as e:
+                        avisos.append(f"{nome} (YouTube): {e}")
+
+        # a própria marca, só para Referências
+        if cfg.incluir_marca and token and ig_id:
+            try:
+                registrar(escolher(buscar_instagram_proprio(buscar, ig_id, token, cfg.graph_versao),
+                                   cfg.dias, cfg.por_perfil, ref, existentes), None)
+            except ErroAPI as e:
+                avisos.append(f"{marca.get('name', bid)} (Instagram próprio): {e}")
+
+    return {
+        "geradoEm": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
+        "config": asdict(cfg), "itens": itens, "avisos": avisos,
+        "arquivos": sorted({i["arquivo"] for i in itens if i["arquivo"]}),
+    }
+
+
+def montar_lote(pacote: dict, ids: dict[str, str]) -> list[dict]:
+    """Converte o pacote em escritas para o ArtifactData (acao batch).
+
+    `ids` mapeia nome do arquivo em midia/ -> id do asset (32 hex) devolvido
+    pelo upload. Itens cuja imagem não subiu são gravados sem prévia.
+    """
+    lote = []
+    agora = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
+    for it in pacote["itens"]:
+        doc = dict(it["doc"], createdAt=agora)
+        aid = ids.get(it.get("arquivo") or "", "")
+        if re.fullmatch(r"[0-9a-f]{32}", aid or ""):
+            doc["media"], doc["mediaType"] = aid, it.get("mediaType") or "image"
+        doc_id = "imp-" + hashlib.sha1(normalizar_link(doc.get("url", "")).encode()).hexdigest()[:20]
+        lote.append({"op": "set", "collection": f"brands/{it['brandId']}/{it['colecao']}",
+                     "doc_id": doc_id, "data": doc})
+    return lote
+
+
+# ------------------------------------------------------------- simulação
+
+
+def buscador_simulado(ref: dt.date) -> Buscador:
+    """Respostas fictícias no formato real das APIs, para testar sem internet."""
+    d = lambda n: (ref - dt.timedelta(days=n)).isoformat() + "T12:00:00+0000"  # noqa: E731
+    jpg = b"\xff\xd8\xff\xe0" + b"0" * 64
+
+    def buscar(url: str) -> bytes:
+        if "graph.facebook.com" in url and "business_discovery" in url:
+            u = re.search(r"username\(([^)]+)\)", urllib.parse.unquote(url)).group(1)
+            if u == "naoexiste":
+                raise ErroAPI("perfil não encontrado", 400)
+            media = [{"id": str(i), "caption": f"Gancho {i} do @{u}\nmais texto #tag", "media_type": t,
+                      "media_product_type": "REELS" if t == "VIDEO" else "FEED", "timestamp": d(dias),
+                      "like_count": likes, "comments_count": com, "permalink": f"https://www.instagram.com/p/{u}{i}/",
+                      "media_url": f"https://cdn.exemplo/{u}{i}.jpg", "thumbnail_url": f"https://cdn.exemplo/{u}{i}t.jpg"}
+                     for i, (t, dias, likes, com) in enumerate([
+                         ("VIDEO", 2, 900, 40), ("CAROUSEL_ALBUM", 5, 1500, 120), ("IMAGE", 9, 300, 5),
+                         ("VIDEO", 20, 99999, 999), ("IMAGE", 1, 50, 2)])]
+            return json.dumps({"business_discovery": {"username": u, "followers_count": 25000,
+                                                      "media": {"data": media}}}).encode()
+        if "googleapis.com/youtube/v3/channels" in url:
+            return json.dumps({"items": [{"id": "UC" + "x" * 22, "snippet": {"title": "Canal Exemplo"},
+                                          "contentDetails": {"relatedPlaylists": {"uploads": "UUx"}}}]}).encode()
+        if "playlistItems" in url:
+            return json.dumps({"items": [{"contentDetails": {"videoId": f"v{i}"}} for i in range(4)]}).encode()
+        if "youtube/v3/videos" in url:
+            vids = [("v0", 3, 12000, "PT8M3S"), ("v1", 6, 50000, "PT45S"), ("v2", 30, 900000, "PT10M"), ("v3", 10, 800, "PT1H2M")]
+            return json.dumps({"items": [{"id": v, "snippet": {"title": f"Vídeo {v} — teste", "publishedAt": d(dias),
+                                                               "thumbnails": {"high": {"url": f"https://i.ytimg.com/{v}.jpg"}}},
+                                          "statistics": {"viewCount": str(views), "likeCount": "100", "commentCount": "10"},
+                                          "contentDetails": {"duration": dur}} for v, dias, views, dur in vids]}).encode()
+        if url.startswith("https://cdn.exemplo/") or url.startswith("https://i.ytimg.com/"):
+            return jpg
+        raise ErroAPI(f"URL não simulada: {url}")
+
+    return buscar
+
+
+ESTADO_EXEMPLO = {
+    "brands": [{
+        "id": "mycapital", "name": "Mycapital",
+        "existingLinks": ["https://instagram.com/p/concorrentea1"],
+        "competitors": [
+            {"id": "c1", "name": "Concorrente A", "instagram": "@concorrentea", "youtube": "https://www.youtube.com/@canalexemplo"},
+            {"id": "c2", "name": "Concorrente B", "instagram": "https://www.instagram.com/naoexiste/"},
+        ],
+    }]
+}
+
+
+# ------------------------------------------------------------------ CLI
+
+
+def cmd_buscar(a: argparse.Namespace) -> int:
+    carregar_env(Path(a.env))
+    estado = json.loads(Path(a.estado).read_text(encoding="utf-8"))
+    pasta = Path(a.saida) / hoje().isoformat()
+    cfg = Config(dias=a.dias, por_perfil=a.por_perfil, refs_por_perfil=a.refs_por_perfil,
+                 incluir_marca=a.incluir_marca, graph_versao=os.environ.get("META_GRAPH_VERSION", GRAPH_VERSAO_PADRAO))
+    return gravar(montar_pacote(estado, http_get, pasta, cfg), pasta)
+
+
+def cmd_simular(a: argparse.Namespace) -> int:
+    ref = hoje()
+    os.environ.update({"META_ACCESS_TOKEN": "simulado", "IG_USER_ID": "17840000000000000", "YOUTUBE_API_KEY": "simulada"})
+    pasta = Path(a.saida) / ("simulacao-" + ref.isoformat())
+    return gravar(montar_pacote(ESTADO_EXEMPLO, buscador_simulado(ref), pasta, Config(), ref), pasta)
+
+
+def gravar(pacote: dict, pasta: Path) -> int:
+    pasta.mkdir(parents=True, exist_ok=True)
+    (pasta / "pacote.json").write_text(json.dumps(pacote, ensure_ascii=False, indent=2), encoding="utf-8")
+    por_col: dict[str, int] = {}
+    for it in pacote["itens"]:
+        por_col[it["colecao"]] = por_col.get(it["colecao"], 0) + 1
+    print(f"\nPacote: {pasta / 'pacote.json'}")
+    print(f"Itens novos: {len(pacote['itens'])} {por_col or ''}  |  imagens: {len(pacote['arquivos'])}")
+    for av in pacote["avisos"]:
+        print("  aviso:", av)
+    return 0
+
+
+def cmd_montar_lote(a: argparse.Namespace) -> int:
+    pacote = json.loads(Path(a.pacote).read_text(encoding="utf-8"))
+    ids = json.loads(Path(a.ids).read_text(encoding="utf-8")) if a.ids else {}
+    lote = montar_lote(pacote, ids)
+    pasta = Path(a.pacote).parent
+    for velho in pasta.glob("lote-*.json"):
+        velho.unlink()
+    partes = [lote[i:i + LOTE_MAX] for i in range(0, len(lote), LOTE_MAX)]
+    for n, parte in enumerate(partes, 1):
+        (pasta / f"lote-{n:02d}.json").write_text(json.dumps(parte, ensure_ascii=False, indent=2), encoding="utf-8")
+    com = sum(1 for x in lote if "media" in x["data"])
+    print(f"Lote: {len(lote)} escritas ({com} com prévia) em {len(partes)} arquivo(s) lote-NN.json em {pasta}")
+    print("Cada arquivo vira uma chamada ArtifactData action=batch, com writes = conteúdo do arquivo.")
+    return 0
+
+
+def ler_dump(pasta: Path, colecao: str) -> list[dict]:
+    """Lê os JSON salvos por ArtifactData (out_dir) de uma coleção."""
+    docs = []
+    for f in sorted((pasta / colecao).glob("*.json")):
+        try:
+            d = json.loads(f.read_text(encoding="utf-8"))
+        except ValueError:
+            continue
+        if isinstance(d, dict) and isinstance(d.get("data"), dict) and ("version" in d or "id" in d):
+            d = dict(d["data"], id=d.get("id") or f.stem)
+        if isinstance(d, dict):
+            d.setdefault("id", f.stem)
+            docs.append(d)
+    return docs
+
+
+def montar_estado(pasta: Path) -> dict:
+    """Monta estado.json a partir do dump do banco (brands, competitors, compnews, refs)."""
+    marcas = []
+    for b in ler_dump(pasta, "brands"):
+        base = f"brands/{b['id']}"
+        links = [d.get("url", "") for c in ("compnews", "refs") for d in ler_dump(pasta, f"{base}/{c}")]
+        marcas.append({"id": b["id"], "name": b.get("name", ""),
+                       "channels": b.get("channels", {}),
+                       "competitors": [{k: c.get(k, "") for k in ("id", "name", "instagram", "youtube", "tiktok")}
+                                       for c in ler_dump(pasta, f"{base}/competitors")],
+                       "existingLinks": [u for u in links if u]})
+    return {"brands": marcas}
+
+
+def cmd_montar_estado(a: argparse.Namespace) -> int:
+    estado = montar_estado(Path(a.dump))
+    Path(a.saida).write_text(json.dumps(estado, ensure_ascii=False, indent=2), encoding="utf-8")
+    n = sum(len(b["competitors"]) for b in estado["brands"])
+    print(f"Estado: {a.saida} ({len(estado['brands'])} marcas, {n} concorrentes)")
+    return 0
+
+
+def main(argv: list[str] | None = None) -> int:
+    ap = argparse.ArgumentParser(description="Importa posts com prévia para o Content Lab.")
+    sub = ap.add_subparsers(dest="cmd", required=True)
+    b = sub.add_parser("buscar", help="consulta Instagram e YouTube e monta o pacote")
+    b.add_argument("--estado", required=True, help="JSON com marcas, concorrentes e links já salvos")
+    b.add_argument("--saida", default=str(AQUI / "saida"))
+    b.add_argument("--env", default=str(AQUI / ".env"))
+    b.add_argument("--dias", type=int, default=14)
+    b.add_argument("--por-perfil", type=int, default=3)
+    b.add_argument("--refs-por-perfil", type=int, default=1)
+    b.add_argument("--incluir-marca", action="store_true", help="também importa os melhores posts da própria conta")
+    b.set_defaults(f=cmd_buscar)
+    e = sub.add_parser("montar-estado", help="gera estado.json a partir do dump do banco (ArtifactData out_dir)")
+    e.add_argument("--dump", required=True, help="pasta usada como out_dir nas leituras do ArtifactData")
+    e.add_argument("--saida", default="estado.json")
+    e.set_defaults(f=cmd_montar_estado)
+    m = sub.add_parser("montar-lote", help="gera lote.json para o ArtifactData")
+    m.add_argument("--pacote", required=True)
+    m.add_argument("--ids", help="JSON {arquivo: id_do_asset}")
+    m.set_defaults(f=cmd_montar_lote)
+    s = sub.add_parser("simular", help="roda com dados fictícios, sem internet")
+    s.add_argument("--saida", default=str(AQUI / "saida"))
+    s.set_defaults(f=cmd_simular)
+    a = ap.parse_args(argv)
+    return a.f(a)
+
+
+if __name__ == "__main__":
+    sys.exit(main())
