@@ -52,18 +52,16 @@ Busca notícias das marcas, conteúdos e notícias dos concorrentes, e revisa os
 O botão "Pesquisar agora" da aba Concorrentes dispara essa mesma tarefa com um "PEDIDO AVULSO".
 Para rodar sem parar, a tarefa precisa estar com "Aprovar automaticamente" ligado.
 
-## Instagram pelo vidIQ (rotina diária)
-- Rotina "Instagram do Content Lab" (id `trig_013cy9D6MRXUtjTWdWLd4Abn`), todo dia às 7h37 (Brasília). Segue `../importador/ROTINA.md`.
-- Conector vidIQ, plano grátis: 150 créditos por mês, 5 por consulta de Reels. O comando `planejar` escolhe no máximo 1 perfil por dia, conforme o ritmo de postagem, e reparte o saldo até a renovação (reserva de 15).
-- Controle das consultas no banco: `importador/vidiq` (ultimaConsulta, ultimoPost, postsSemana por perfil).
+## Instagram pelo vidIQ (botão "Atualizar Instagram")
+- Rotina "Atualizar Instagram do Content Lab" (id `trig_013cy9D6MRXUtjTWdWLd4Abn`), sem horário: roda só quando o botão da aba Concorrentes é clicado (fire_trigger). Segue `../importador/ROTINA.md`.
+- Conector vidIQ, plano grátis: 150 créditos por mês, 5 por consulta de Reels. O comando `planejar` reparte o saldo pelos dias até a renovação; o crédito diário acumula desde o último uso e cada clique gasta só o acumulado (até 3 consultas), apenas com perfis que venceram (intervalo = 7 ÷ Reels por semana, entre 3 e 14 dias; 30 se parado).
+- Controle no banco: `importador/vidiq` (perfis, ultimoUso, ultimoPlano). A página mostra a última atualização, o saldo e a próxima atualização útil.
 - Instagram da Mycapital: @mycapitaloficial (em `brands/mycapital`, `channels.instagram.handle`).
-- O botão "Importar posts agora" dispara essa rotina com PEDIDO AVULSO (1 perfil, 5 créditos).
 - Cada consulta do @mycapitaloficial também atualiza o Calendário (Reels publicados, id `ig-<código>`) e as Métricas (Reels por mês, id `ig-reels-AAAA-MM`, só meses inteiros).
 
 ## Importador de posts (`../importador/`)
 - `importar_posts.py`: Instagram (Business Discovery) e YouTube Data API, melhores posts de 14 dias, capas baixadas, sem repetir links.
 - A gravação é feita pela rotina (ver `../importador/ROTINA.md`): assets pelo `Artifact` e documentos pelo `ArtifactData` em lotes de 50.
-- Botão "Importar posts agora" (aba Concorrentes) dispara a rotina com "PEDIDO AVULSO" só dessa etapa.
 - "Salvar em Referências" leva a prévia junto e não duplica (compara o link).
 
 ## Otimizações do app
@@ -73,4 +71,4 @@ Para rodar sem parar, a tarefa precisa estar com "Aprovar automaticamente" ligad
 ## Próximos passos combinados
 - Concluir a conexão do Supermetrics e ligar a aba Métricas aos dados reais.
 - Se o Metricool for conectado, adicionar o botão "Agendar" no calendário.
-- Se o vidIQ for conectado, usar os números reais de YouTube, Instagram e TikTok.
+- vidIQ conectado (Instagram). YouTube pelo vidIQ custa créditos; preferir a YouTube Data API gratuita.

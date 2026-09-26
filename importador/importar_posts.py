@@ -454,9 +454,9 @@ def destaques(posts: list[Post], dias: int, fator: float, ref: dt.date | None = 
 # ------------------------------------------------- plano de créditos (vidIQ)
 
 # O plano grátis do vidIQ tem 150 créditos por mês e cada consulta de Reels
-# custa 5. O plano decide, a cada dia, QUAIS perfis consultar (no máximo
-# `max_por_dia`), conforme o ritmo de postagem de cada um, e estica os
-# intervalos quando os créditos não dariam para todos até a renovação.
+# custa 5. A atualização só acontece quando alguém clica em "Atualizar
+# Instagram"; o plano reparte o saldo pelos dias até a renovação e escolhe
+# os perfis que venceram pelo ritmo de postagem.
 
 CUSTO_REELS = 5
 
@@ -484,48 +484,67 @@ def intervalo_ideal(info: dict, hoje_: dt.date) -> float:
     if ult and (hoje_ - dt.date.fromisoformat(ult)).days > 90:
         return 30.0  # perfil parado
     ps = float(info.get("postsSemana") or 0)
-    if ps >= 3:
-        return 3.0
-    if ps >= 1:
-        return 7.0
-    return 14.0
+    if ps <= 0:
+        return 14.0
+    return round(min(14.0, max(3.0, 7 / ps)), 1)  # cerca de 1 Reel novo entre consultas
 
 
 def planejar(estado: dict, controle: dict, saldo: int, renova: dt.date, hoje_: dt.date,
-             reserva: int = 15, max_por_dia: int = 1) -> dict:
+             max_por_clique: int = 3) -> dict:
+    """Plano de um clique em "Atualizar Instagram".
+
+    O saldo é repartido pelos dias até a renovação (saldo / dias restantes) e esse
+    valor diário acumula desde o último uso. Cada clique gasta só o acumulado, e só
+    com perfis que "venceram" pelo ritmo de postagem. Assim o crédito dura até o fim
+    do ciclo, não importa quantas vezes o botão for clicado.
+    """
     perfis = perfis_do_estado(estado)
     info = controle.get("perfis", {})
     dias_rest = max(1, (renova - hoje_).days)
-    ints = {p["handle"]: intervalo_ideal(info.get(p["handle"], {}), hoje_) for p in perfis}
-    # demanda até a renovação, em créditos
-    demanda = sum((dias_rest / i if i else 1 + dias_rest / 7) for i in ints.values()) * CUSTO_REELS
-    livre = max(0, saldo - reserva)
-    # fator > 1 estica os intervalos (falta crédito); < 1 encurta (sobra), no mínimo metade
-    fator = max(0.5, demanda / livre) if livre else float("inf")
-    fila = []
+    diario = saldo / dias_rest
+    ult_uso = controle.get("ultimoUso")
+    dias_desde = (hoje_ - dt.date.fromisoformat(ult_uso)).days if ult_uso else 1
+    liberado = min(saldo, diario * max(0, min(dias_desde, dias_rest)))
+    cabe = int(liberado // CUSTO_REELS)
+    fila, vencimentos = [], []
     for p in perfis:
-        i = ints[p["handle"]]
+        i = intervalo_ideal(info.get(p["handle"], {}), hoje_)
         ult = info.get(p["handle"], {}).get("ultimaConsulta")
         if not ult:
-            atraso = 99.0  # nunca consultado
-        else:
-            passados = (hoje_ - dt.date.fromisoformat(ult)).days
-            atraso = passados / (i * fator) if fator != float("inf") else 0
-        if atraso >= 1:
-            fila.append(dict(p, atraso=round(atraso, 2), intervalo=round(i * fator, 1)))
+            fila.append(dict(p, atraso=99.0, intervalo=0))
+            continue
+        passados = (hoje_ - dt.date.fromisoformat(ult)).days
+        vencimentos.append(dt.date.fromisoformat(ult) + dt.timedelta(days=round(i)))
+        if passados >= i:
+            fila.append(dict(p, atraso=round(passados / i, 2), intervalo=i))
     fila.sort(key=lambda x: (-x["atraso"], x["tipo"] != "concorrente"))
-    cabe = max(0, (saldo - reserva) // CUSTO_REELS)
-    escolhidos = fila[:min(max_por_dia, cabe)]
-    if not livre:
-        motivo = f"pular: saldo {saldo} está na reserva de {reserva} créditos"
-    elif not escolhidos:
-        motivo = "pular: nenhum perfil vence hoje"
+    escolhidos = fila[:min(max_por_clique, cabe)]
+    proxima = None
+    if escolhidos:
+        motivo = f"consultar {len(escolhidos)} perfil(is): {', '.join('@' + e['handle'] for e in escolhidos)}"
+    elif fila:
+        faltam = max(1, -(-(CUSTO_REELS - liberado) // diario)) if diario else None
+        proxima = (hoje_ + dt.timedelta(days=int(faltam))).isoformat() if faltam else None
+        motivo = ("sem créditos liberados hoje para manter o saldo até " + renova.strftime("%d/%m")
+                  + (f"; próxima atualização possível em {dt.date.fromisoformat(proxima).strftime('%d/%m')}" if proxima else ""))
     else:
-        motivo = f"consultar {len(escolhidos)} perfil(is); fator de economia {fator:.2f}"
+        prox = min(vencimentos) if vencimentos else None
+        proxima = max(prox, hoje_ + dt.timedelta(days=1)).isoformat() if prox else None
+        motivo = "tudo em dia: nenhum perfil tem Reels novos esperados ainda" + (
+            f"; próxima atualização útil em {dt.date.fromisoformat(proxima).strftime('%d/%m')}" if proxima else "")
     return {"hoje": hoje_.isoformat(), "saldo": saldo, "renova": renova.isoformat(),
-            "consultar": escolhidos, "custoHoje": len(escolhidos) * CUSTO_REELS,
-            "demandaPrevista": round(demanda), "fatorEconomia": round(fator, 2), "motivo": motivo,
-            "fila": [{"handle": f["handle"], "atraso": f["atraso"]} for f in fila]}
+            "creditosPorDia": round(diario, 1), "creditosLiberados": round(liberado, 1),
+            "consultar": escolhidos, "custo": len(escolhidos) * CUSTO_REELS, "motivo": motivo,
+            "proximaEm": proxima, "fila": [{"handle": f["handle"], "atraso": f["atraso"]} for f in fila]}
+
+
+def registrar_plano(controle: dict, plano: dict) -> None:
+    """Guarda o resultado no controle (a página mostra e o próximo clique usa)."""
+    if plano["consultar"]:
+        controle["ultimoUso"] = plano["hoje"]
+    controle["ultimoPlano"] = {k: plano[k] for k in ("hoje", "saldo", "renova", "motivo", "proximaEm", "custo")}
+    controle["ultimoPlano"]["saldoDepois"] = plano["saldo"] - plano["custo"]
+    controle["ultimoPlano"]["em"] = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
 
 
 def atualizar_controle(controle: dict, handle: str, posts: list[Post], hoje_: dt.date) -> None:
@@ -916,7 +935,9 @@ def cmd_planejar(a: argparse.Namespace) -> int:
     controle = json.loads(cp.read_text(encoding="utf-8")) if cp.is_file() else {}
     renova = dt.date.fromisoformat(a.renova[:10])
     h = dt.date.fromisoformat(a.hoje) if a.hoje else hoje()
-    plano = planejar(estado, controle, a.saldo, renova, h, a.reserva, a.max_por_dia)
+    plano = planejar(estado, controle, a.saldo, renova, h, a.max_por_clique)
+    registrar_plano(controle, plano)
+    cp.write_text(json.dumps(controle, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps(plano, ensure_ascii=False, indent=2))
     return 0
 
@@ -1009,14 +1030,13 @@ def main(argv: list[str] | None = None) -> int:
     b.add_argument("--incluir-marca", action="store_true", help="também importa os melhores posts da própria conta")
     b.add_argument("--vidiq", help="pasta com as respostas do conector vidIQ (ig-<perfil>.md); usada no lugar da API da Meta")
     b.add_argument("--controle", help="JSON de controle do plano de créditos (atualizado com as consultas lidas)")
-    pl = sub.add_parser("planejar", help="decide quais perfis consultar hoje no vidIQ, economizando créditos")
+    pl = sub.add_parser("planejar", help="decide quais perfis consultar neste clique, repartindo o saldo até a renovação")
     pl.add_argument("--estado", required=True)
     pl.add_argument("--controle", required=True)
     pl.add_argument("--saldo", type=int, required=True, help="totalCredits do vidiq_balance")
     pl.add_argument("--renova", required=True, help="renewableResetsAt do vidiq_balance")
     pl.add_argument("--hoje")
-    pl.add_argument("--reserva", type=int, default=15, help="créditos guardados para o botão Importar agora")
-    pl.add_argument("--max-por-dia", type=int, default=1)
+    pl.add_argument("--max-por-clique", type=int, default=3)
     pl.set_defaults(f=cmd_planejar)
     b.set_defaults(f=cmd_buscar)
     e = sub.add_parser("montar-estado", help="gera estado.json a partir do dump do banco (ArtifactData out_dir)")

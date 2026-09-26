@@ -320,3 +320,5 @@ fieldset{border:0;padding:0;margin:0}
 .row .thumb .media-empty{height:100%;display:grid;place-items:center;padding:6px;font-size:11px}
 .btn[aria-disabled="true"]{opacity:.6;cursor:default}
 @media (max-width:640px){.row .thumb{width:100%;flex-basis:auto;aspect-ratio:16/9}}
+.igstat{font-size:13px;color:var(--ink-2);background:var(--surface-2);border-radius:var(--r-sm);padding:8px 12px;margin:-6px 0 16px}
+.igstat b{color:var(--ink)}

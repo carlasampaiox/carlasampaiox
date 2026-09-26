@@ -104,16 +104,18 @@ const state={
   data:{news:[],refs:[],posts:[],dates:[],ideas:[],metrics:[],competitors:[],compnews:[]},
   cal:{y:now.getFullYear(),m:now.getMonth()},
   f:{newsTag:'',newsPeriod:String(LS.get('cl.newsPeriod','')),refPlat:'',calCh:'',ideaCh:'',ideaAll:false,metric:'followers',mPeriod:String(LS.get('cl.mPeriod','30')),mFrom:LS.get('cl.mFrom',''),mTo:LS.get('cl.mTo',''),compPeriod:String(LS.get('cl.compPeriod','30')),compFilter:'',compKind:String(LS.get('cl.compKind',''))},
-  brandDirty:false
+  brandDirty:false, vidiq:null
 };
 const bpath=c=>`brands/${state.brandId}/${c}`;
 const curBrand=()=>state.brands.find(b=>b.id===state.brandId)||null;
 const activeCh=()=>{const b=curBrand();const on=CH.filter(c=>!b||!b.channels||!b.channels[c.id]||b.channels[c.id].on!==false);return on.length?on:CH};
 const pillars=()=>{const b=curBrand();return (b&&Array.isArray(b.pillars)?b.pillars:[]).filter(Boolean)};
 
-let unsubBrands=null, unsubCols=[];
+let unsubBrands=null, unsubCols=[], unsubVidiq=null;
 function subBrands(){
   if(unsubBrands)unsubBrands();
+  if(unsubVidiq)unsubVidiq();
+  unsubVidiq=Store.sub('importador',list=>{state.vidiq=list.find(d=>d.id==='vidiq')||null;if(state.tab==='concorrentes')scheduleRender()});
   unsubBrands=Store.sub('brands',list=>{
     state.brands=list.sort((a,b)=>String(a.name).localeCompare(String(b.name),'pt-BR'));
     state.loading=false;
@@ -647,7 +649,8 @@ const shortUrl=u=>u.replace(/^https?:\/\/(www\.)?/,'').replace(/\/$/,'');
 function viewComps(){
   const list=state.data.competitors.slice().sort((a,b)=>String(a.name).localeCompare(String(b.name),'pt-BR'));
   let h=head('Concorrentes','Cadastre um concorrente e o Claude revisa os canais dele e busca notícias relevantes na internet. A pesquisa, as notícias e as suas anotações ficam juntas aqui.',
-    aiBtn('Lacunas e oportunidades','ai-comps')+(list.length?btn('Importar posts agora','comp-import','title="Consulta agora 1 perfil do Instagram pelo vidIQ (5 créditos). A rotina diária já faz isso sozinha, economizando créditos."'):'')+btn('Novo concorrente','new','data-col="competitors"','primary'));
+    aiBtn('Lacunas e oportunidades','ai-comps')+(list.length?btn('Atualizar Instagram','comp-import','title="Busca Reels novos dos concorrentes e da marca pelo vidIQ, gastando só os créditos liberados para manter o saldo até a renovação."'):'')+btn('Novo concorrente','new','data-col="competitors"','primary'));
+  if(list.length)h+=igStatus();
   if(!list.length)return h+empty('Nenhum concorrente cadastrado','Cadastre o nome e, se souber, o site e os perfis. O Claude completa o resto com a pesquisa.',btn('Novo concorrente','new','data-col="competitors"','primary'));
   const names=Object.fromEntries(list.map(c=>[c.id,c.name]));
   if(state.f.compFilter&&!names[state.f.compFilter])state.f.compFilter='';
@@ -722,15 +725,28 @@ async function requestResearch(c){
   }
 }
 
+/* situação da atualização do Instagram (documento importador/vidiq, gravado pela rotina) */
+function igStatus(){
+  const v=state.vidiq, pl=v&&v.ultimoPlano, req=LS.get('cl.igReq',null);
+  const dd=s=>{const d=parseISO(String(s||'').slice(0,10));return d?pad(d.getDate())+'/'+pad(d.getMonth()+1):''};
+  if(req&&(!pl||!pl.em||String(pl.em)<req)&&(Date.now()-new Date(req).getTime())<30*6e4)
+    return `<div class="igstat"><span class="rstat pending"><span class="pulse"></span>Atualização pedida. O Claude confere os créditos e busca só o que vale a pena; o resultado aparece aqui em alguns minutos.</span></div>`;
+  if(!pl)return `<div class="igstat muted">Instagram ainda não atualizado por aqui. Toque em "Atualizar Instagram".</div>`;
+  const parts=[`<b>Instagram atualizado em ${dd(v.atualizadoEm||pl.hoje)}</b>`];
+  if(pl.saldoDepois!=null)parts.push(`${NF.format(pl.saldoDepois)} créditos do vidIQ até ${dd(pl.renova)}`);
+  if(pl.proximaEm)parts.push(`próxima atualização útil em ${dd(pl.proximaEm)}`);
+  return `<div class="igstat">${parts.join(' · ')}${pl.motivo&&pl.custo===0&&pl.hoje!==v.atualizadoEm?`<span class="muted"> · Último clique (${dd(pl.hoje)}): ${esc(pl.motivo)}</span>`:''}</div>`;
+}
 async function requestImport(){
   const b=curBrand();if(!b)return;
-  const later='A importação de posts roda sozinha todo dia de manhã.';
+  const later='Tente de novo em instantes.';
   if(!mcp){toast(later,5000);return}
   try{
     await mcp.callTool('Claude Code Remote','fire_trigger',{trigger_id:IMPORT_TRIGGER_ID,
-      text:`PEDIDO AVULSO: importe agora 1 perfil do Instagram (o mais atrasado) para a marca "${b.name}" (id ${b.id}), seguindo o plano de créditos.`},{cache:false});
-    toast('Importação iniciada: 1 perfil do Instagram (5 créditos do vidIQ). Os posts aparecem aqui em alguns minutos.',5000);
-  }catch(e){toast(e&&e.code==='needs_reauth'?'A conexão com as tarefas agendadas do Claude precisa ser refeita em Configurações, Conectores. '+later:'Não consegui iniciar agora. '+later,6000)}
+      text:`PEDIDO: a Carla clicou em "Atualizar Instagram" na marca "${b.name}" (id ${b.id}). Siga o ROTINA.md; o comando planejar decide quanto pode gastar.`},{cache:false});
+    LS.set('cl.igReq',new Date().toISOString());renderMain(true);
+    toast('Atualização pedida. Os posts novos aparecem aqui em alguns minutos.',5000);
+  }catch(e){toast(e&&e.code==='needs_reauth'?'A conexão com as rotinas do Claude precisa ser refeita em Configurações, Conectores.':'Não consegui pedir a atualização agora. '+later,6000)}
 }
 
 /* ================= editor modal ================= */

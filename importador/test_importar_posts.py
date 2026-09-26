@@ -92,44 +92,60 @@ class Selecao(unittest.TestCase):
 class Plano(unittest.TestCase):
     ESTADO = {"brands": [{"id": "m", "channels": {"instagram": {"handle": "@minha"}},
                           "competitors": [{"id": "a", "instagram": "@ativo"}, {"id": "p", "instagram": "@parado"},
-                                          {"id": "n", "instagram": "@novo"}, {"id": "x", "instagram": ""}]}]}
-    CONTROLE = {"perfis": {
+                                          {"id": "x", "instagram": ""}]}]}
+    PERFIS = {
         "minha": {"ultimaConsulta": "2026-09-20", "ultimoPost": "2026-09-18", "postsSemana": 1},
-        "ativo": {"ultimaConsulta": "2026-09-24", "ultimoPost": "2026-09-24", "postsSemana": 4},
-        "parado": {"ultimaConsulta": "2026-09-01", "ultimoPost": "2024-01-01", "postsSemana": 0}}}
+        "ativo": {"ultimaConsulta": "2026-09-20", "ultimoPost": "2026-09-24", "postsSemana": 4},
+        "parado": {"ultimaConsulta": "2026-09-20", "ultimoPost": "2024-01-01", "postsSemana": 0}}
+    RENOVA = dt.date(2026, 10, 26)
 
-    def test_nunca_consultado_vem_primeiro_e_respeita_limite_diario(self):
-        r = ip.planejar(self.ESTADO, self.CONTROLE, 150, dt.date(2026, 10, 26), REF)
-        self.assertEqual([c["handle"] for c in r["consultar"]], ["novo"])
-        self.assertEqual(r["custoHoje"], 5)
+    def ctl(self, uso):
+        return {"perfis": {k: dict(v) for k, v in self.PERFIS.items()}, "ultimoUso": uso}
 
-    def test_reserva_bloqueia_consultas(self):
-        r = ip.planejar(self.ESTADO, self.CONTROLE, 15, dt.date(2026, 10, 26), REF)
+    def test_clique_no_mesmo_dia_nao_gasta(self):
+        r = ip.planejar(self.ESTADO, self.ctl(REF.isoformat()), 150, self.RENOVA, REF)
         self.assertEqual(r["consultar"], [])
-        self.assertIn("reserva", r["motivo"])
+        self.assertTrue(r["proximaEm"])
 
-    def test_pouco_credito_estica_intervalos(self):
-        c = dict(self.CONTROLE, perfis=dict(self.CONTROLE["perfis"], novo={"ultimaConsulta": "2026-09-22", "postsSemana": 4, "ultimoPost": "2026-09-22"}))
-        muito = ip.planejar(self.ESTADO, c, 150, dt.date(2026, 10, 26), REF)
-        pouco = ip.planejar(self.ESTADO, c, 30, dt.date(2026, 10, 26), REF)
-        self.assertGreater(pouco["fatorEconomia"], muito["fatorEconomia"])
-        self.assertLessEqual(len(pouco["fila"]), len(muito["fila"]))
+    def test_credito_acumula_entre_cliques(self):
+        # 150 / 30 dias = 5 por dia; 6 dias sem usar = 30 liberados, mas só vencidos entram (limite 3)
+        r = ip.planejar(self.ESTADO, self.ctl("2026-09-20"), 150, self.RENOVA, REF)
+        self.assertEqual([c["handle"] for c in r["consultar"]], ["ativo"])  # 4/semana vence a cada 3 dias
+        self.assertEqual(r["custo"], 5)
 
-    def test_gasto_do_mes_cabe_no_plano_gratis(self):
-        """Simula 30 dias: nunca passa de 150 créditos nem fica abaixo da reserva."""
-        controle, saldo, gasto = {"perfis": {}}, 150, 0
+    def test_tudo_em_dia(self):
+        c = self.ctl("2026-09-20")
+        c["perfis"]["ativo"]["ultimaConsulta"] = "2026-09-25"
+        r = ip.planejar(self.ESTADO, c, 150, self.RENOVA, REF)
+        self.assertEqual(r["consultar"], [])
+        self.assertIn("tudo em dia", r["motivo"])
+        self.assertEqual(r["proximaEm"], "2026-09-27")
+
+    def test_pouco_saldo_espera(self):
+        r = ip.planejar(self.ESTADO, self.ctl("2026-09-25"), 20, self.RENOVA, REF)  # 0,67 por dia
+        self.assertEqual(r["consultar"], [])
+        self.assertIn("próxima atualização possível", r["motivo"])
+
+    def test_cliques_todo_dia_nunca_esgotam_o_mes(self):
+        """Clicando todo dia, várias vezes, o saldo dura até a renovação."""
+        c, saldo, estado = {"perfis": {}}, 150, dict(self.ESTADO)
+        inicio = REF
+        renova = inicio + dt.timedelta(days=30)
         for d in range(30):
-            dia = REF + dt.timedelta(days=d)
-            r = ip.planejar(self.ESTADO, controle, saldo, REF + dt.timedelta(days=30), dia)
-            for c in r["consultar"]:
-                saldo -= 5
-                gasto += 5
-                ritmo = {"ativo": 4, "minha": 1, "novo": 2, "parado": 0}[c["handle"]]
-                ult = "2024-01-01" if c["handle"] == "parado" else dia.isoformat()
-                controle["perfis"][c["handle"]] = {"ultimaConsulta": dia.isoformat(), "ultimoPost": ult, "postsSemana": ritmo}
-        self.assertLessEqual(gasto, 135)
-        self.assertGreaterEqual(saldo, 15)
-        self.assertEqual(len(controle["perfis"]), 4)
+            dia = inicio + dt.timedelta(days=d)
+            for _ in range(3):  # 3 cliques por dia
+                r = ip.planejar(estado, c, saldo, renova, dia)
+                ip.registrar_plano(c, r)
+                for x in r["consultar"]:
+                    saldo -= 5
+                    ritmo = {"ativo": 4, "minha": 1, "parado": 0}[x["handle"]]
+                    ult = "2024-01-01" if x["handle"] == "parado" else dia.isoformat()
+                    c["perfis"][x["handle"]] = {"ultimaConsulta": dia.isoformat(), "ultimoPost": ult, "postsSemana": ritmo}
+            restantes = (renova - dia).days
+            self.assertGreaterEqual(saldo, 0)
+            self.assertGreaterEqual(saldo + 5, 150 * restantes / 30 - 20)  # nunca adianta o gasto do mês
+        self.assertEqual(set(c["perfis"]), {"ativo", "minha", "parado"})
+        self.assertIn("saldoDepois", c["ultimoPlano"])
 
     def test_atualizar_controle(self):
         c = {}
