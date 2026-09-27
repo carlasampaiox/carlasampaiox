@@ -1,0 +1,37 @@
+name: Capas dos Reels do Content Lab
+# Baixa a capa pública dos Reels listados em importador/capas-pendentes.txt
+# (página de incorporação do Instagram, sem login e sem créditos) para dados/midia.
+# Roda quando a lista muda, todo dia às 6h40 (nova tentativa das falhas) e sob demanda.
+on:
+  push:
+    paths:
+      - importador/capas-pendentes.txt
+  schedule:
+    - cron: "40 9 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: capas
+  cancel-in-progress: false
+jobs:
+  capas:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Baixar capas
+        working-directory: importador
+        run: python -u capas.py --pendentes capas-pendentes.txt --saida ../dados
+      - name: Guardar no repositório
+        run: |
+          git config user.name "coletor-content-lab"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dados
+          if git diff --cached --quiet; then echo "Nada novo"; exit 0; fi
+          git commit -m "Capas de Reels $(date -u +%Y-%m-%d)"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
