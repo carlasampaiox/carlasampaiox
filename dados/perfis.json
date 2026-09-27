@@ -1,6 +1,6 @@
 {
   "falhas": {},
-  "geradoEm": "2026-09-27T14:41:16+00:00",
+  "geradoEm": "2026-09-27T15:19:34+00:00",
   "perfis": {
     "4nez93j2qfthdrtwl4ri": {
       "instagram": {
@@ -28,6 +28,12 @@
         "em": "2026-09-27",
         "n": 61483,
         "url": "https://www.instagram.com/grana.capital/"
+      },
+      "linkedin": {
+        "aprox": false,
+        "em": "2026-09-27",
+        "n": 47496,
+        "url": "https://www.linkedin.com/company/grana-capital"
       },
       "youtube": {
         "aprox": true,
@@ -66,7 +72,7 @@
       "linkedin": {
         "aprox": false,
         "em": "2026-09-27",
-        "n": 22708,
+        "n": 22707,
         "url": "https://www.linkedin.com/company/gorila"
       },
       "youtube": {
@@ -83,10 +89,16 @@
         "n": 155717,
         "url": "https://www.instagram.com/investidor10br/"
       },
+      "linkedin": {
+        "aprox": false,
+        "em": "2026-09-27",
+        "n": 23794,
+        "url": "https://www.linkedin.com/company/investidor10"
+      },
       "youtube": {
         "aprox": true,
         "em": "2026-09-27",
-        "n": 7520,
+        "n": 7530,
         "url": "https://www.youtube.com/channel/UCOcosY44MPuUsSMvAFrsAjQ"
       }
     }
