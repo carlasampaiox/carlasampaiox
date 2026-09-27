@@ -52,9 +52,18 @@ const TABS = ['noticias', 'referencias', 'calendario', 'datas', 'marca', 'ideias
   // métricas: KPIs semanais, visão geral, canal, tabela e lançamento de semana
   await page.click('#tabs [data-tab="metricas"]');
   if ((await page.$$('.kcard')).length !== 7) erros.push('visão geral de KPIs não mostra os 7 canais');
+  await page.click('[data-f="kPer"][data-v="4s"]');
   await page.click('[data-f="kGrupo"][data-v="youtube"]');
-  const yt = await page.$eval('#main', e => e.textContent);
-  if (!yt.includes('Tempo de exibição') || !yt.includes('6,5 h')) erros.push('canal YouTube sem as métricas');
+  const horas = async () => page.$$eval('.mcard', cs => (cs.find(c => c.textContent.includes('Tempo de exibição')) || {}).textContent || '');
+  if (!(await horas()).includes('16,5 h')) erros.push('último mês não soma o tempo de exibição das semanas');
+  // período personalizado muda os números, não só o gráfico
+  await page.click('[data-f="kPer"][data-v="custom"]');
+  await page.fill('#kFrom', '2026-09-14');
+  await page.fill('#kTo', '2026-09-20');
+  await page.click('[data-act="k-apply"]');
+  const h1 = await horas();
+  if (!h1.includes('6,5 h') || !h1.includes('+18%')) erros.push('período personalizado não recalculou os números: ' + h1.slice(0, 120));
+  await page.click('[data-f="kPer"][data-v="4s"]');
   await page.click('[data-act="kpi-new"]');
   await page.fill('#k-data', '2026-09-28');
   await page.fill('#k-instagram-seguidores', '5.020');
