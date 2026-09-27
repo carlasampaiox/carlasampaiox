@@ -321,294 +321,108 @@
   }
  },
  "brands/mycapital/metrics": {
-  "instagram-2026-04": {
-   "channel": "instagram",
-   "month": "2026-04",
-   "reach": 41000,
-   "clicks": 380,
-   "posts": 14,
-   "followers": 8200,
-   "engagement": 4.1,
+  "kpi-2026-09-07": {
+   "tipo": "kpi",
+   "data": "2026-09-07",
+   "start": "2026-08-31",
+   "end": "2026-09-06",
+   "valores": {
+    "instagram": {
+     "seguidores": 5000,
+     "novosSeguidores": 10,
+     "posts": 3,
+     "stories": 4,
+     "alcance": 20000
+    },
+    "youtube": {
+     "inscritos": 1000,
+     "novosInscritos": 2,
+     "visualizacoes": 300,
+     "horas": 4.5
+    },
+    "blog": {
+     "artigos": 1,
+     "usuarios": 80,
+     "usuariosNovos": 70,
+     "tempoEngajamento": 45
+    }
+   },
+   "aprox": {
+    "instagram": [
+     "alcance"
+    ]
+   },
+   "origem": "manual",
    "exemplo": true,
    "createdAt": "2026-09-26T12:00:00.000Z"
   },
-  "instagram-2026-05": {
-   "channel": "instagram",
-   "month": "2026-05",
-   "reach": 45500,
-   "clicks": 410,
-   "posts": 15,
-   "followers": 8650,
-   "engagement": 4.4,
+  "kpi-2026-09-14": {
+   "tipo": "kpi",
+   "data": "2026-09-14",
+   "start": "2026-09-07",
+   "end": "2026-09-13",
+   "valores": {
+    "instagram": {
+     "seguidores": 5005,
+     "novosSeguidores": 15,
+     "posts": 8,
+     "stories": 9,
+     "alcance": 20005
+    },
+    "youtube": {
+     "inscritos": 1005,
+     "novosInscritos": 7,
+     "visualizacoes": 305,
+     "horas": 5.5
+    },
+    "blog": {
+     "artigos": 6,
+     "usuarios": 85,
+     "usuariosNovos": 75,
+     "tempoEngajamento": 50
+    }
+   },
+   "aprox": {
+    "instagram": [
+     "alcance"
+    ]
+   },
+   "origem": "manual",
    "exemplo": true,
    "createdAt": "2026-09-26T12:00:00.000Z"
   },
-  "instagram-2026-06": {
-   "channel": "instagram",
-   "month": "2026-06",
-   "reach": 52000,
-   "clicks": 455,
-   "posts": 16,
-   "followers": 9100,
-   "engagement": 4.0,
-   "exemplo": true,
-   "createdAt": "2026-09-26T12:00:00.000Z"
-  },
-  "instagram-2026-07": {
-   "channel": "instagram",
-   "month": "2026-07",
-   "reach": 49800,
-   "clicks": 430,
-   "posts": 14,
-   "followers": 9480,
-   "engagement": 3.8,
-   "exemplo": true,
-   "createdAt": "2026-09-26T12:00:00.000Z"
-  },
-  "instagram-2026-08": {
-   "channel": "instagram",
-   "month": "2026-08",
-   "reach": 61200,
-   "clicks": 520,
-   "posts": 17,
-   "followers": 10050,
-   "engagement": 4.6,
-   "exemplo": true,
-   "createdAt": "2026-09-26T12:00:00.000Z"
-  },
-  "linkedin-2026-04": {
-   "channel": "linkedin",
-   "month": "2026-04",
-   "reach": 12800,
-   "clicks": 210,
-   "posts": 8,
-   "followers": 3100,
-   "engagement": 3.2,
-   "exemplo": true,
-   "createdAt": "2026-09-26T12:00:00.000Z"
-  },
-  "linkedin-2026-05": {
-   "channel": "linkedin",
-   "month": "2026-05",
-   "reach": 13900,
-   "clicks": 240,
-   "posts": 9,
-   "followers": 3260,
-   "engagement": 3.5,
-   "exemplo": true,
-   "createdAt": "2026-09-26T12:00:00.000Z"
-  },
-  "linkedin-2026-06": {
-   "channel": "linkedin",
-   "month": "2026-06",
-   "reach": 15100,
-   "clicks": 255,
-   "posts": 9,
-   "followers": 3420,
-   "engagement": 3.3,
-   "exemplo": true,
-   "createdAt": "2026-09-26T12:00:00.000Z"
-  },
-  "linkedin-2026-07": {
-   "channel": "linkedin",
-   "month": "2026-07",
-   "reach": 14200,
-   "clicks": 230,
-   "posts": 8,
-   "followers": 3510,
-   "engagement": 3.0,
-   "exemplo": true,
-   "createdAt": "2026-09-26T12:00:00.000Z"
-  },
-  "linkedin-2026-08": {
-   "channel": "linkedin",
-   "month": "2026-08",
-   "reach": 17600,
-   "clicks": 300,
-   "posts": 10,
-   "followers": 3700,
-   "engagement": 3.9,
-   "exemplo": true,
-   "createdAt": "2026-09-26T12:00:00.000Z"
-  },
-  "blog-2026-04": {
-   "channel": "blog",
-   "month": "2026-04",
-   "reach": 5400,
-   "clicks": 1850,
-   "posts": 4,
-   "exemplo": true,
-   "createdAt": "2026-09-26T12:00:00.000Z"
-  },
-  "blog-2026-05": {
-   "channel": "blog",
-   "month": "2026-05",
-   "reach": 6100,
-   "clicks": 2020,
-   "posts": 4,
-   "exemplo": true,
-   "createdAt": "2026-09-26T12:00:00.000Z"
-  },
-  "blog-2026-06": {
-   "channel": "blog",
-   "month": "2026-06",
-   "reach": 6800,
-   "clicks": 2260,
-   "posts": 5,
-   "exemplo": true,
-   "createdAt": "2026-09-26T12:00:00.000Z"
-  },
-  "blog-2026-07": {
-   "channel": "blog",
-   "month": "2026-07",
-   "reach": 7300,
-   "clicks": 2400,
-   "posts": 5,
-   "exemplo": true,
-   "createdAt": "2026-09-26T12:00:00.000Z"
-  },
-  "blog-2026-08": {
-   "channel": "blog",
-   "month": "2026-08",
-   "reach": 8900,
-   "clicks": 2980,
-   "posts": 6,
-   "exemplo": true,
-   "createdAt": "2026-09-26T12:00:00.000Z"
-  },
-  "instagram-2026-09-01": {
-   "channel": "instagram",
-   "start": "2026-09-01",
-   "end": "2026-09-07",
-   "reach": 15200,
-   "clicks": 130,
-   "posts": 4,
-   "exemplo": true,
-   "createdAt": "2026-09-26T12:00:00.000Z",
-   "followers": 10210,
-   "engagement": 4.7
-  },
-  "instagram-2026-09-08": {
-   "channel": "instagram",
-   "start": "2026-09-08",
-   "end": "2026-09-14",
-   "reach": 16900,
-   "clicks": 142,
-   "posts": 5,
-   "exemplo": true,
-   "createdAt": "2026-09-26T12:00:00.000Z",
-   "followers": 10370,
-   "engagement": 5.0
-  },
-  "instagram-2026-09-15": {
-   "channel": "instagram",
-   "start": "2026-09-15",
-   "end": "2026-09-21",
-   "reach": 17400,
-   "clicks": 150,
-   "posts": 5,
-   "exemplo": true,
-   "createdAt": "2026-09-26T12:00:00.000Z",
-   "followers": 10540,
-   "engagement": 4.9
-  },
-  "instagram-2026-09-22": {
-   "channel": "instagram",
-   "start": "2026-09-22",
-   "end": "2026-09-26",
-   "reach": 12100,
-   "clicks": 104,
-   "posts": 3,
-   "exemplo": true,
-   "createdAt": "2026-09-26T12:00:00.000Z",
-   "followers": 10690,
-   "engagement": 5.1
-  },
-  "linkedin-2026-09-01": {
-   "channel": "linkedin",
-   "start": "2026-09-01",
-   "end": "2026-09-07",
-   "reach": 4300,
-   "clicks": 72,
-   "posts": 2,
-   "exemplo": true,
-   "createdAt": "2026-09-26T12:00:00.000Z",
-   "followers": 3745,
-   "engagement": 4.0
-  },
-  "linkedin-2026-09-08": {
-   "channel": "linkedin",
-   "start": "2026-09-08",
-   "end": "2026-09-14",
-   "reach": 4800,
-   "clicks": 84,
-   "posts": 3,
-   "exemplo": true,
-   "createdAt": "2026-09-26T12:00:00.000Z",
-   "followers": 3790,
-   "engagement": 4.3
-  },
-  "linkedin-2026-09-15": {
-   "channel": "linkedin",
-   "start": "2026-09-15",
-   "end": "2026-09-21",
-   "reach": 5100,
-   "clicks": 88,
-   "posts": 3,
-   "exemplo": true,
-   "createdAt": "2026-09-26T12:00:00.000Z",
-   "followers": 3835,
-   "engagement": 4.1
-  },
-  "linkedin-2026-09-22": {
-   "channel": "linkedin",
-   "start": "2026-09-22",
-   "end": "2026-09-26",
-   "reach": 3600,
-   "clicks": 62,
-   "posts": 2,
-   "exemplo": true,
-   "createdAt": "2026-09-26T12:00:00.000Z",
-   "followers": 3872,
-   "engagement": 4.5
-  },
-  "blog-2026-09-01": {
-   "channel": "blog",
-   "start": "2026-09-01",
-   "end": "2026-09-07",
-   "reach": 2100,
-   "clicks": 710,
-   "posts": 1,
-   "exemplo": true,
-   "createdAt": "2026-09-26T12:00:00.000Z"
-  },
-  "blog-2026-09-08": {
-   "channel": "blog",
-   "start": "2026-09-08",
-   "end": "2026-09-14",
-   "reach": 2250,
-   "clicks": 760,
-   "posts": 2,
-   "exemplo": true,
-   "createdAt": "2026-09-26T12:00:00.000Z"
-  },
-  "blog-2026-09-15": {
-   "channel": "blog",
-   "start": "2026-09-15",
-   "end": "2026-09-21",
-   "reach": 2400,
-   "clicks": 800,
-   "posts": 1,
-   "exemplo": true,
-   "createdAt": "2026-09-26T12:00:00.000Z"
-  },
-  "blog-2026-09-22": {
-   "channel": "blog",
-   "start": "2026-09-22",
-   "end": "2026-09-26",
-   "reach": 1750,
-   "clicks": 590,
-   "posts": 1,
+  "kpi-2026-09-21": {
+   "tipo": "kpi",
+   "data": "2026-09-21",
+   "start": "2026-09-14",
+   "end": "2026-09-20",
+   "valores": {
+    "instagram": {
+     "seguidores": 5010,
+     "novosSeguidores": 20,
+     "posts": 13,
+     "stories": 14,
+     "alcance": 20010
+    },
+    "youtube": {
+     "inscritos": 1010,
+     "novosInscritos": 12,
+     "visualizacoes": 310,
+     "horas": 6.5
+    },
+    "blog": {
+     "artigos": 11,
+     "usuarios": 90,
+     "usuariosNovos": 80,
+     "tempoEngajamento": 55
+    }
+   },
+   "aprox": {
+    "instagram": [
+     "alcance"
+    ]
+   },
+   "origem": "manual",
    "exemplo": true,
    "createdAt": "2026-09-26T12:00:00.000Z"
   }
@@ -853,6 +667,253 @@
    ],
    "evitar": [],
    "agora": [],
+   "exemplo": true
+  },
+  "kpis": {
+   "tipo": "kpis",
+   "frequencia": "semanal",
+   "nota": "A data da semana é o dia do preenchimento; os números são dos 7 dias anteriores.",
+   "grupos": [
+    {
+     "id": "instagram",
+     "nome": "Instagram",
+     "cor": "instagram",
+     "metricas": [
+      {
+       "k": "seguidores",
+       "l": "Número atual de seguidores",
+       "tipo": "estoque"
+      },
+      {
+       "k": "novosSeguidores",
+       "l": "Novos seguidores",
+       "tipo": "soma"
+      },
+      {
+       "k": "posts",
+       "l": "Posts na semana",
+       "tipo": "soma"
+      },
+      {
+       "k": "stories",
+       "l": "Stories na semana",
+       "tipo": "soma"
+      },
+      {
+       "k": "cliquesLink",
+       "l": "Cliques no link",
+       "tipo": "soma"
+      },
+      {
+       "k": "interacoes",
+       "l": "Interações na semana",
+       "tipo": "soma"
+      },
+      {
+       "k": "visitasPerfil",
+       "l": "Visitas ao perfil",
+       "tipo": "soma"
+      },
+      {
+       "k": "alcance",
+       "l": "Alcance semanal",
+       "tipo": "media"
+      }
+     ]
+    },
+    {
+     "id": "facebook",
+     "nome": "Facebook",
+     "cor": "facebook",
+     "metricas": [
+      {
+       "k": "seguidores",
+       "l": "Seguidores",
+       "tipo": "estoque"
+      },
+      {
+       "k": "novasCurtidas",
+       "l": "Novas curtidas",
+       "tipo": "soma"
+      },
+      {
+       "k": "posts",
+       "l": "Posts na semana",
+       "tipo": "soma"
+      },
+      {
+       "k": "stories",
+       "l": "Stories na semana",
+       "tipo": "soma"
+      },
+      {
+       "k": "interacoes",
+       "l": "Interações na semana",
+       "tipo": "soma"
+      },
+      {
+       "k": "cliquesLink",
+       "l": "Cliques no link",
+       "tipo": "soma"
+      },
+      {
+       "k": "visitasPagina",
+       "l": "Visitas à página",
+       "tipo": "soma"
+      },
+      {
+       "k": "alcance",
+       "l": "Alcance semanal",
+       "tipo": "media"
+      }
+     ]
+    },
+    {
+     "id": "youtube",
+     "nome": "YouTube Mycapital",
+     "cor": "youtube",
+     "metricas": [
+      {
+       "k": "inscritos",
+       "l": "Inscritos totais",
+       "tipo": "estoque"
+      },
+      {
+       "k": "novosInscritos",
+       "l": "Novos inscritos",
+       "tipo": "soma"
+      },
+      {
+       "k": "visualizacoes",
+       "l": "Visualizações na semana",
+       "tipo": "soma"
+      },
+      {
+       "k": "horas",
+       "l": "Tempo de exibição (horas)",
+       "tipo": "horas"
+      }
+     ]
+    },
+    {
+     "id": "mycapitalks",
+     "nome": "YouTube Mycapitalks",
+     "cor": "podcast",
+     "metricas": [
+      {
+       "k": "inscritos",
+       "l": "Inscritos totais",
+       "tipo": "estoque"
+      },
+      {
+       "k": "novosInscritos",
+       "l": "Novos inscritos",
+       "tipo": "soma"
+      },
+      {
+       "k": "visualizacoes",
+       "l": "Visualizações na semana",
+       "tipo": "soma"
+      },
+      {
+       "k": "horas",
+       "l": "Tempo de exibição (horas)",
+       "tipo": "horas"
+      }
+     ]
+    },
+    {
+     "id": "linkedin",
+     "nome": "LinkedIn",
+     "cor": "linkedin",
+     "metricas": [
+      {
+       "k": "seguidores",
+       "l": "Seguidores",
+       "tipo": "estoque"
+      },
+      {
+       "k": "posts",
+       "l": "Posts na semana",
+       "tipo": "soma"
+      },
+      {
+       "k": "impressoes",
+       "l": "Impressões",
+       "tipo": "soma"
+      },
+      {
+       "k": "viewsComputador",
+       "l": "Visualizações da página Computador",
+       "tipo": "soma"
+      },
+      {
+       "k": "viewsCelular",
+       "l": "Visualizações da página Celular",
+       "tipo": "soma"
+      },
+      {
+       "k": "visitantesComputador",
+       "l": "Visitantes únicos Computador",
+       "tipo": "soma"
+      },
+      {
+       "k": "visitantesCelular",
+       "l": "Visitantes únicos Celular",
+       "tipo": "soma"
+      }
+     ]
+    },
+    {
+     "id": "blog",
+     "nome": "Blog",
+     "cor": "blog",
+     "metricas": [
+      {
+       "k": "artigos",
+       "l": "Artigos na semana",
+       "tipo": "soma"
+      },
+      {
+       "k": "usuarios",
+       "l": "Usuários",
+       "tipo": "media"
+      },
+      {
+       "k": "usuariosNovos",
+       "l": "Usuários novos",
+       "tipo": "soma"
+      },
+      {
+       "k": "tempoEngajamento",
+       "l": "Tempo de engaj.",
+       "tipo": "tempo"
+      }
+     ]
+    },
+    {
+     "id": "site",
+     "nome": "Site",
+     "cor": "site",
+     "metricas": [
+      {
+       "k": "usuarios",
+       "l": "Usuários",
+       "tipo": "media"
+      },
+      {
+       "k": "usuariosNovos",
+       "l": "Usuários novos",
+       "tipo": "soma"
+      },
+      {
+       "k": "tempoEngajamento",
+       "l": "Tempo de engaj.",
+       "tipo": "tempo"
+      }
+     ]
+    }
+   ],
    "exemplo": true
   }
  }

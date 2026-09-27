@@ -878,8 +878,7 @@ def montar_pacote(estado: dict, buscar: Buscador, pasta: Path, cfg: Config,
 
 
 def itens_da_marca(bid: str, posts: list[Post], existentes: set[str], hoje_: dt.date, dias: int) -> list[dict]:
-    """Reels da própria marca: viram posts publicados no Calendário e um registro
-    mensal na aba Métricas (visualizações e quantidade de Reels)."""
+    """Reels da própria marca: viram posts publicados no Calendário (nada vai para Métricas)."""
     out = []
     corte = (hoje_ - dt.timedelta(days=dias)).isoformat()
     agora = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
@@ -894,10 +893,8 @@ def itens_da_marca(bid: str, posts: list[Post], existentes: set[str], hoje_: dt.
                         "title": p.titulo, "date": p.data, "time": "", "channel": "instagram", "format": p.formato,
                         "status": "publicado", "pillar": "", "caption": p.legenda, "link": p.url,
                         "notes": f"{p.sinal()} (vidIQ, {hoje_.strftime('%d/%m/%Y')}).", "origem": "importador"}})
-    # meses inteiros cobertos pela lista (os Reels não fixados vêm do mais novo ao mais antigo)
-    soltos = sorted(p.data for p in posts if not p.fixado)
-    if not soltos:
-        return out
+    # Métricas não vêm daqui: a aba Métricas é lançada pela equipe (planilha de KPIs semanais)
+    return out
     mais_antigo = soltos[0]
     meses = sorted({p.data[:7] for p in posts if p.data[:7] + "-01" > mais_antigo})
     for m in meses:

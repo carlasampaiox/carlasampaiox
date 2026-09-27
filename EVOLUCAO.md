@@ -31,6 +31,7 @@ Leia antes: `CLAUDE.md`, `content-lab/CLAUDE.md` e `EVOLUCAO-LOG.md` (o que já 
 
 ## Nunca
 - Chamar ferramentas do vidIQ (créditos são só do botão "Atualizar Instagram").
+- Gravar ou alterar a aba Métricas (`metrics` e `insights/kpis`): os números são lançados pela equipe.
 - Mudar capacidades da página, rotinas agendadas, conectores ou o plano de créditos para gastar mais.
 - Guardar chaves ou tokens no repositório ou no Content Lab.
 - Apagar dados criados pela Carla, publicar a página sem os testes passando ou fazer mais de 1 recurso novo por semana.

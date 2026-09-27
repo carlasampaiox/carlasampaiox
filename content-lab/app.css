@@ -3,7 +3,7 @@
   --line:#EADDE4; --line-2:#DCCAD4;
   --accent:#D0106E; --accent-ink:#FFFFFF; --accent-soft:#FCE3EF; --accent-text:#AE0B5B;
   --good:#1E7F4F; --good-soft:#DDF2E6; --warn:#A5660B; --warn-soft:#FBEBD2; --bad:#B42323; --bad-soft:#FBE0E0;
-  --c-site:#1F7A8C; --c-blog:#A8680E; --c-instagram:#8A3FC4; --c-linkedin:#2F5FC4; --c-youtube:#C4312A; --c-tiktok:#1E131B;
+  --c-site:#1F7A8C; --c-blog:#A8680E; --c-instagram:#8A3FC4; --c-linkedin:#2F5FC4; --c-youtube:#C4312A; --c-tiktok:#1E131B; --c-facebook:#1877F2; --c-podcast:#7A1F14;
   --st-ideia:#9A8A94; --st-producao:#C27C12; --st-revisao:#8A3FC4; --st-agendado:#2F5FC4; --st-publicado:#1E7F4F;
   --shadow:0 1px 2px rgba(60,10,40,.06),0 8px 24px -12px rgba(60,10,40,.18);
   --r:10px; --r-sm:7px;
@@ -18,7 +18,7 @@
     --line:#35262F; --line-2:#48343F;
     --accent:#FF3D9A; --accent-ink:#1A0610; --accent-soft:#3D1229; --accent-text:#FF74B5;
     --good:#5CCB8F; --good-soft:#15301F; --warn:#E6A94A; --warn-soft:#33240D; --bad:#F07A7A; --bad-soft:#3A1616;
-    --c-site:#5BB8C9; --c-blog:#E0A94A; --c-instagram:#BD8BEB; --c-linkedin:#7FA2F0; --c-youtube:#F07068; --c-tiktok:#F6EEF3;
+    --c-site:#5BB8C9; --c-blog:#E0A94A; --c-instagram:#BD8BEB; --c-linkedin:#7FA2F0; --c-youtube:#F07068; --c-tiktok:#F6EEF3; --c-facebook:#6AA6F8; --c-podcast:#E8A092;
     --st-ideia:#9C8995; --st-producao:#E6A94A; --st-revisao:#BD8BEB; --st-agendado:#7FA2F0; --st-publicado:#5CCB8F;
     --shadow:0 1px 2px rgba(0,0,0,.3),0 12px 28px -12px rgba(0,0,0,.6);
   }
@@ -29,7 +29,7 @@
   --line:#35262F; --line-2:#48343F;
   --accent:#FF3D9A; --accent-ink:#1A0610; --accent-soft:#3D1229; --accent-text:#FF74B5;
   --good:#5CCB8F; --good-soft:#15301F; --warn:#E6A94A; --warn-soft:#33240D; --bad:#F07A7A; --bad-soft:#3A1616;
-  --c-site:#5BB8C9; --c-blog:#E0A94A; --c-instagram:#BD8BEB; --c-linkedin:#7FA2F0; --c-youtube:#F07068; --c-tiktok:#F6EEF3;
+  --c-site:#5BB8C9; --c-blog:#E0A94A; --c-instagram:#BD8BEB; --c-linkedin:#7FA2F0; --c-youtube:#F07068; --c-tiktok:#F6EEF3; --c-facebook:#6AA6F8; --c-podcast:#E8A092;
   --st-ideia:#9C8995; --st-producao:#E6A94A; --st-revisao:#BD8BEB; --st-agendado:#7FA2F0; --st-publicado:#5CCB8F;
   --shadow:0 1px 2px rgba(0,0,0,.3),0 12px 28px -12px rgba(0,0,0,.6);
 }
@@ -348,3 +348,16 @@ fieldset{border:0;padding:0;margin:0}
 .trends .trow{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;margin-bottom:6px}
 .trends .trow .eyebrow{min-width:120px}
 .trends .tagpill b{color:var(--good)}
+
+/* KPIs semanais */
+.kcard .small{font-size:12.5px;margin-top:4px}
+.ktbl{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+.ktbl td{padding:5px 0;border-bottom:1px solid var(--line);white-space:normal}
+.ktbl td.n{text-align:right;font-family:var(--f-mono);font-variant-numeric:tabular-nums;padding-left:8px;white-space:nowrap}
+.ktbl tr:last-child td{border-bottom:0}
+.ksheet th{vertical-align:bottom}
+.ksheet th .btn{margin-top:4px;font-size:11.5px;padding:2px 6px}
+.ksheet td:first-child,.ksheet th:first-child{position:sticky;left:0;background:var(--surface);z-index:1;white-space:normal;min-width:170px}
+.ksheet th:first-child{background:var(--surface-2)}
+.ksheet tr.kgrp td{background:var(--surface-2);font-weight:700;color:var(--ink);font-size:12.5px;text-transform:uppercase;letter-spacing:.05em}
+.dlg-body .bsec{display:flex;align-items:center;gap:8px;font-size:15px}

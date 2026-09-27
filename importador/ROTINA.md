@@ -8,7 +8,7 @@ Pasta de trabalho: `importador/` do repositório `carlasampaiox/carlasampaiox`, 
 ## O que cada consulta alimenta
 - **Concorrentes:** Reels dos últimos 14 dias, com capa e números reais, e o Reel fora da curva de cada perfil (2 vezes a mediana, com tema da marca) com a etiqueta "fora da curva". Concorrentes e a própria marca **nunca** vão para Referências.
 - **Referências, radar de oportunidades (1 vez por semana, 5 créditos):** o que está em alta no Instagram em geral, de qualquer perfil (contadores, trends do mercado, memes), filtrado pelo fit com a aba Marca.
-- **Calendário e Métricas:** só quando o perfil é o da própria marca (@mycapitaloficial).
+- **Calendário:** só quando o perfil é o da própria marca (@mycapitaloficial). **Métricas nunca:** a aba Métricas é lançada pela equipe (KPIs semanais).
 
 ## Como economiza
 - **Radar semanal:** entra no plano no máximo 1 vez a cada 7 dias e ocupa 1 das 3 consultas do clique, sempre dentro do crédito liberado.
@@ -36,7 +36,7 @@ Pasta de trabalho: `importador/` do repositório `carlasampaiox/carlasampaiox`, 
 6. **Pacote.** `python3 importar_posts.py buscar --estado saida/estado.json --vidiq saida/vidiq --controle saida/controle.json`
 7. **Capas.** Envie os arquivos de `arquivos` do `pacote.json` (pasta `midia/`) com `Artifact` (`action: "publish"`, `url` do Content Lab, `asset: true`, `file_paths`). Monte `ids.json` com `{"arquivo.jpg": "id"}`.
 8. **Resumos.** Para cada conteúdo com etiqueta "fora da curva" no pacote, escreva em `summary` 1 a 2 frases: por que o post funcionou, olhando capa, gancho, duração e números reais. Não invente números.
-9. **Gravar.** O pacote também traz, quando o perfil consultado é o da própria marca, os Reels novos para o **Calendário** (`posts`, status publicado, id `ig-<código>`) e o total de Reels e visualizações por mês para as **Métricas** (`metrics`, id `ig-reels-AAAA-MM`, só meses inteiros cobertos pela consulta). Esses itens não têm imagem.
+9. **Gravar.** O pacote também traz, quando o perfil consultado é o da própria marca, os Reels novos para o **Calendário** (`posts`, status publicado, id `ig-<código>`). Esses itens não têm imagem. Nunca grave nada em `metrics`.
     `python3 importar_posts.py montar-lote --pacote <pasta>/pacote.json --ids <pasta>/ids.json`, confira os resumos em cada `lote-NN.json` e grave cada arquivo com `ArtifactData` `action: "batch"`. Depois grave `saida/controle.json` em `importador/vidiq` (`action: "set"`, `file_path`).
 10. **Resumo.** Uma linha por perfil consultado: posts novos, destaques e avisos (ex.: perfil parado). Se o radar rodou: quantas oportunidades entraram e as 2 melhores. Informe o saldo restante.
 

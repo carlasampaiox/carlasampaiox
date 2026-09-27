@@ -49,6 +49,28 @@ const TABS = ['noticias', 'referencias', 'calendario', 'datas', 'marca', 'ideias
   const conteudo = JSON.parse(require('fs').readFileSync(await dl.path(), 'utf8'));
   if (!conteudo.data || !Array.isArray(conteudo.data.posts) || !conteudo.data.posts.length) erros.push('backup sem posts');
 
+  // métricas: KPIs semanais, visão geral, canal, tabela e lançamento de semana
+  await page.click('#tabs [data-tab="metricas"]');
+  if ((await page.$$('.kcard')).length !== 7) erros.push('visão geral de KPIs não mostra os 7 canais');
+  await page.click('[data-f="kGrupo"][data-v="youtube"]');
+  const yt = await page.$eval('#main', e => e.textContent);
+  if (!yt.includes('Tempo de exibição') || !yt.includes('6,5 h')) erros.push('canal YouTube sem as métricas');
+  await page.click('[data-act="kpi-new"]');
+  await page.fill('#k-data', '2026-09-28');
+  await page.fill('#k-instagram-seguidores', '5.020');
+  await page.fill('#k-instagram-alcance', '21,4 mil');
+  await page.fill('#k-blog-tempoEngajamento', "1'05''");
+  await page.click('[data-act="kpi-save"]');
+  await page.click('[data-f="kGrupo"][data-v=""]');
+  const geral = await page.$eval('#main', e => e.textContent);
+  if (!geral.includes('~21.400') || !geral.includes("1'05''") || !geral.includes('5.020')) erros.push('semana lançada não aparece com os valores convertidos');
+  await page.click('[data-act="kpi-new"]');
+  await page.fill('#k-data', '2026-10-05');
+  await page.fill('#k-instagram-posts', 'abc');
+  await page.click('[data-act="kpi-save"]');
+  if (!(await page.$eval('#formErr', e => !e.hidden && e.textContent.includes('Posts na semana')))) erros.push('valor inválido não foi recusado');
+  await page.click('[data-act="modal-close"]');
+
   // criar e editar um post no calendário (modo memória)
   await page.click('#tabs [data-tab="calendario"]');
   await page.click('[data-act="new"][data-col="posts"], [data-act="new-on"]');

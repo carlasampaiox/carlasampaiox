@@ -103,7 +103,7 @@ const state={
   tab:(TABS.find(t=>t.id===location.hash.slice(1))||TABS.find(t=>t.id===LS.get('cl.tab'))||TABS[0]).id,
   data:{news:[],refs:[],posts:[],dates:[],ideas:[],metrics:[],competitors:[],compnews:[],insights:[]},
   cal:{y:now.getFullYear(),m:now.getMonth()},
-  f:{newsTag:'',newsPeriod:String(LS.get('cl.newsPeriod','')),refTipo:'',calCh:'',ideaCh:'',ideaAll:false,metric:'followers',mPeriod:String(LS.get('cl.mPeriod','30')),mFrom:LS.get('cl.mFrom',''),mTo:LS.get('cl.mTo',''),compPeriod:String(LS.get('cl.compPeriod','30')),compFilter:'',compKind:String(LS.get('cl.compKind',''))},
+  f:{newsTag:'',newsPeriod:String(LS.get('cl.newsPeriod','')),refTipo:'',calCh:'',ideaCh:'',ideaAll:false,metric:'followers',mPeriod:String(LS.get('cl.mPeriod','30')),mFrom:LS.get('cl.mFrom',''),mTo:LS.get('cl.mTo',''),compPeriod:String(LS.get('cl.compPeriod','30')),compFilter:'',compKind:String(LS.get('cl.compKind','')),kGrupo:String(LS.get('cl.kGrupo','')),kPer:String(LS.get('cl.kPer','12s'))},
   brandDirty:false, vidiq:null, novidade:null
 };
 const bpath=c=>`brands/${state.brandId}/${c}`;
@@ -627,6 +627,7 @@ function mSeries(rows,k,R){
   return pts;
 }
 function viewMetrics(){
+  const cfg=kpiCfg();if(cfg)return viewKpis(cfg);
   const all=metricRows();
   /* abre na métrica que tem dados (ex.: só Alcance e Posts vêm do vidIQ) */
   const temK=k=>all.some(r=>has(r,k));
@@ -695,6 +696,148 @@ function spark(pts,ch,pct,label){
   pts.forEach((p,i)=>{const x0=pts.length===1?0:Math.max(0,X(i)-cw/2);const w=pts.length===1?W:Math.min(cw,W-x0);
     s+=`<rect x="${x0}" y="0" width="${w}" height="${H}" fill="transparent" data-tip="${esc(p.x)} · ${esc(fmtN(p.y,pct))}"/>`});
   return s+'</svg>';
+}
+
+/* ---------- KPIs semanais (planilha "KPIs do Marketing"): insights/kpis + metrics/kpi-AAAA-MM-DD ---------- */
+const K_PER=[['12s','12 semanas'],['6m','6 meses'],['12m','12 meses'],['tudo','Tudo']];
+const kpiCfg=()=>{const c=state.data.insights.find(x=>x.id==='kpis');return c&&Array.isArray(c.grupos)&&c.grupos.length?c:null};
+const kpiWeeks=()=>state.data.metrics.filter(r=>r.tipo==='kpi'&&/^\d{4}-\d{2}-\d{2}$/.test(r.data||'')).sort((a,b)=>a.data<b.data?-1:1);
+const kv=(w,g,k)=>{const v=w&&w.valores&&w.valores[g]&&w.valores[g][k];return v==null||v===''||isNaN(v)?null:Number(v)};
+const kAprox=(w,g,k)=>!!(w&&w.aprox&&Array.isArray(w.aprox[g])&&w.aprox[g].includes(k));
+function fmtTempo(s){s=Math.round(s);const m=Math.floor(s/60),r=s%60;return m?`${m}'${pad(r)}''`:`${r}''`}
+function fmtK(v,tipo,aprox){
+  if(v==null)return '–';
+  const t=tipo==='tempo'?fmtTempo(v):tipo==='horas'?Number(v).toLocaleString('pt-BR',{maximumFractionDigits:1})+' h':NF.format(Math.round(v*10)/10);
+  return (aprox?'~':'')+t;
+}
+/* aceita 7351, 7.351, 37,6 mil, 3,5 e, para tempo, 1'20'', 1:20 ou segundos */
+function parseKpi(raw,tipo){
+  let s=String(raw||'').trim().replace(/[`´]/g,'');
+  if(!s)return {v:null};
+  if(tipo==='tempo'){
+    const m=/^(?:(\d+)\s*['’:]\s*)?(\d+)\s*(?:''|"|”|’’|s)?$/.exec(s);
+    return m?{v:(+(m[1]||0))*60+(+m[2])}:{err:1};
+  }
+  const mil=/^(\d+(?:[.,]\d+)?)\s*mil$/i.exec(s);
+  if(mil)return {v:Math.round(parseFloat(mil[1].replace(',','.'))*1000),aprox:true};
+  if(/^\d{1,3}(\.\d{3})+(,\d+)?$/.test(s))s=s.replace(/\./g,'');
+  s=s.replace(',','.');
+  return /^\d+(\.\d+)?$/.test(s)?{v:+s}:{err:1};
+}
+function kpiRange(ws){
+  if(!ws.length)return ws;
+  const last=parseISO(ws[ws.length-1].data), p=state.f.kPer;
+  if(p==='tudo')return ws;
+  const a=p==='12m'?addDays(last,-364):p==='6m'?addDays(last,-182):addDays(last,-7*11);
+  return ws.filter(w=>parseISO(w.data)>=a);
+}
+const wLabel=w=>fmtD(parseISO(w.data));
+const wPer=w=>`${fmtD(parseISO(w.start))} a ${fmtD(parseISO(w.end))}`;
+function prevWith(ws,i,g,k){for(let j=i-1;j>=0;j--){const v=kv(ws[j],g,k);if(v!=null)return {w:ws[j],v}}return null}
+function kDelta(m,cur,prev){
+  if(cur==null||!prev)return '';
+  const d=cur-prev.v, cls=Math.abs(d)<1e-9?'flat':d>0?'up':'down', arrow=cls==='up'?'▲':cls==='down'?'▼':'■';
+  const sg=d>0?'+':d<0?'−':'';
+  const txt=m.tipo==='estoque'?`${sg}${NF.format(Math.abs(Math.round(d*10)/10))}`:
+    prev.v?`${sg}${Math.abs(d/prev.v*100).toLocaleString('pt-BR',{maximumFractionDigits:0})}%`:(m.tipo==='tempo'?sg+fmtTempo(Math.abs(d)):`${sg}${NF.format(Math.abs(d))}`);
+  return `<span class="delta ${cls}" title="vs. ${esc(wLabel(prev.w))}">${arrow} ${txt}</span>`;
+}
+/* resumo do período: estoque = variação; soma e horas = total; media e tempo = média semanal */
+function kPeriodo(ws,g,m){
+  const vals=ws.map(w=>kv(w,g,m.k)).filter(v=>v!=null);if(!vals.length)return '';
+  if(m.tipo==='estoque')return vals.length>1?`variação no período: ${vals[vals.length-1]-vals[0]>=0?'+':'−'}${NF.format(Math.abs(vals[vals.length-1]-vals[0]))}`:'';
+  if(m.tipo==='tempo')return `média no período: ${fmtTempo(vals.reduce((a,b)=>a+b,0)/vals.length)}`;
+  if(m.tipo==='media')return `média semanal no período: ${fmtK(Math.round(vals.reduce((a,b)=>a+b,0)/vals.length),'soma',ws.some(w=>kAprox(w,g,m.k)))}`;
+  const t=vals.reduce((a,b)=>a+b,0);
+  return `total no período: ${fmtK(t,m.tipo,ws.some(w=>kAprox(w,g,m.k)))} em ${vals.length} ${vals.length>1?'semanas':'semana'}`;
+}
+function kSpark(ws,g,m,cor){
+  const pts=ws.map(w=>{const v=kv(w,g,m.k);return v==null?null:{x:wLabel(w),y:m.tipo==='horas'?v:Math.round(v)}}).filter(Boolean);
+  if(pts.length<2)return '<p class="muted" style="font-size:12.5px;margin:10px 0 6px">Poucas semanas para o gráfico.</p>';
+  return spark(pts,cor,false,m.l).replace(/data-tip="([^"]*) · ([^"]*)"/g,(all,x,y)=>{const p=pts.find(q=>esc(q.x)===x);return p?`data-tip="${x} · ${esc(fmtK(p.y,m.tipo))}"`:all});
+}
+function viewKpis(cfg){
+  const all=kpiWeeks();
+  let h=head('Métricas','Acompanhamento semanal dos canais, no formato da planilha de KPIs. A data de cada semana é o dia do preenchimento; os números são dos 7 dias anteriores.',
+    aiBtn('Analisar desempenho','ai-metrics')+btn('Lançar semana','kpi-new','','primary'));
+  if(!all.length)return h+empty('Nenhuma semana lançada','Lance os números da semana para começar o acompanhamento.',btn('Lançar semana','kpi-new','','primary'));
+  const last=all[all.length-1], dias=diffDays(parseISO(last.data),parseISO(TODAY()));
+  h+=`<p class="igstat">Última semana lançada: <b>${esc(wLabel(last))}</b> (${esc(wPer(last))}).${dias>=7?` <b>Faltam ${Math.floor(dias/7)} ${Math.floor(dias/7)>1?'semanas':'semana'}</b> para chegar a hoje.`:''}</p>`;
+  const gs=cfg.grupos, gid=gs.some(g=>g.id===state.f.kGrupo)?state.f.kGrupo:'';
+  h+=`<div class="toolbar">${chips('kGrupo',[['','Visão geral'],...gs.map(g=>[g.id,esc(g.nome)])],gid)}</div>
+    <div class="toolbar"><span class="eyebrow">Período</span>${chips('kPer',K_PER,state.f.kPer)}</div>`;
+  const ws=kpiRange(all), n=ws.length;
+  h+=`<p class="rlabel"><b>${esc(wLabel(ws[0]))} a ${esc(wLabel(ws[n-1]))}</b> <span class="muted">· ${n} ${n>1?'semanas lançadas':'semana lançada'} · variação comparada com a semana anterior</span></p>`;
+  const i=all.indexOf(last);
+  if(!gid){
+    h+='<div class="mgrid">'+gs.map(g=>{
+      const ms=g.metricas||[], main=ms[0];
+      const rows=ms.map(m=>{const v=kv(last,g.id,m.k);return `<tr><td>${esc(m.l)}</td><td class="n">${fmtK(v,m.tipo,kAprox(last,g.id,m.k))}</td><td class="n">${kDelta(m,v,prevWith(all,i,g.id,m.k))}</td></tr>`}).join('');
+      return `<div class="mcard kcard"><div class="mcard-head"><span class="sw" style="background:var(--c-${esc(g.cor||g.id)})"></span>${esc(g.nome)}<span class="spacer"></span>${btn('Ver canal','filter',`data-f="kGrupo" data-v="${esc(g.id)}"`,'sm ghost')}</div>
+        ${main?`<div class="muted small">${esc(main.l)} nas semanas do período</div>${kSpark(ws,g.id,main,g.cor||g.id)}`:''}
+        <table class="ktbl"><tbody>${rows}</tbody></table></div>`;
+    }).join('')+'</div>';
+  }else{
+    const g=gs.find(x=>x.id===gid), ms=g.metricas||[];
+    h+='<div class="mgrid">'+ms.map(m=>{
+      const v=kv(last,g.id,m.k);
+      return `<div class="mcard"><div class="mcard-head">${esc(m.l)}<span class="spacer"></span>${m.fonte?`<span class="muted" style="font-weight:500;font-size:12px">${esc(m.fonte)}</span>`:''}</div>
+        <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap"><div class="mbig">${fmtK(v,m.tipo,kAprox(last,g.id,m.k))}</div>${kDelta(m,v,prevWith(all,i,g.id,m.k))}<span class="muted" style="font-size:12px">${esc(wLabel(last))}</span></div>
+        ${kSpark(ws,g.id,m,g.cor||g.id)}<p class="muted" style="font-size:12.5px">${kPeriodo(ws,g.id,m)}</p></div>`;
+    }).join('')+'</div>';
+  }
+  /* tabela no formato da planilha: métricas nas linhas, semanas nas colunas (mais recente primeiro) */
+  const cols=ws.slice().reverse().slice(0,gid?26:10), grupos=gid?gs.filter(g=>g.id===gid):gs;
+  h+=`<h3 class="dsec">Semanas <span>${cols.length} de ${n}</span></h3><div class="tbl-wrap"><table class="ksheet"><thead><tr><th>Dado</th>${cols.map(w=>`<th class="n"><span title="${esc(wPer(w))}">${esc(wLabel(w))}</span><br>${btn('Editar','kpi-edit',`data-id="${esc(w.id)}"`,'sm ghost')}</th>`).join('')}</tr></thead><tbody>`+
+    grupos.map(g=>`<tr class="kgrp"><td colspan="${cols.length+1}"><span class="sw" style="background:var(--c-${esc(g.cor||g.id)})"></span> ${esc(g.nome)}</td></tr>`+
+      (g.metricas||[]).map(m=>`<tr><td>${esc(m.l)}</td>${cols.map(w=>`<td class="n">${fmtK(kv(w,g.id,m.k),m.tipo,kAprox(w,g.id,m.k))}</td>`).join('')}</tr>`).join('')).join('')+
+    `</tbody></table></div><p class="muted" style="font-size:12px;margin-top:8px">~ = número arredondado na origem (ex.: 37,6 mil). Traço = não lançado.${cfg.nota?' '+esc(cfg.nota):''}</p>`;
+  return h;
+}
+function openKpiEditor(week){
+  const cfg=kpiCfg();if(!cfg)return;
+  const all=kpiWeeks(), ref=week||all[all.length-1];
+  const data=week?week.data:TODAY();
+  modalCtx={col:'kpi',item:week||null};
+  const dlg=$('#modal .dialog');
+  const campo=(g,m)=>{
+    const v=week?kv(week,g.id,m.k):null, ph=ref&&!week?kv(ref,g.id,m.k):null;
+    const show=v==null?'':m.tipo==='tempo'?fmtTempo(v):(kAprox(week,g.id,m.k)?(v/1000).toLocaleString('pt-BR',{maximumFractionDigits:1})+' mil':String(v).replace('.',','));
+    return `<div class="field"><label for="k-${g.id}-${m.k}">${esc(m.l)}</label><input type="text" inputmode="decimal" id="k-${g.id}-${m.k}" data-g="${esc(g.id)}" data-k="${esc(m.k)}" data-t="${esc(m.tipo)}" value="${esc(show)}" placeholder="${ph!=null?'semana anterior: '+esc(fmtK(ph,m.tipo)):''}">${m.fonte?`<span class="hint">${esc(m.fonte)}</span>`:''}</div>`;
+  };
+  dlg.innerHTML=`<div class="dlg-head"><h2 id="dlgTitle">${week?'Editar semana':'Lançar semana'}</h2><button class="iconbtn" data-act="modal-close" aria-label="Fechar">×</button></div>
+    <form class="dlg-body" id="editForm" autocomplete="off">
+      <div class="field full"><label for="k-data">Data do preenchimento</label><input type="date" id="k-data" value="${esc(data)}"><span class="hint">Os números são dos 7 dias anteriores a essa data. Deixe em branco o que não tiver.</span></div>
+      ${cfg.grupos.map(g=>`<h3 class="bsec" style="grid-column:1/-1"><span class="sw" style="background:var(--c-${esc(g.cor||g.id)})"></span> ${esc(g.nome)}</h3>${(g.metricas||[]).map(m=>campo(g,m)).join('')}`).join('')}
+      <p class="field full hint">Aceita 7351, 7.351, 37,6 mil e, para tempo, 1'20'' ou 1:20.</p>
+      <p class="err full" id="formErr" hidden style="grid-column:1/-1"></p></form>
+    <div class="dlg-foot">${week?btn('Excluir','kpi-del','','danger'):''}<span class="spacer"></span>${btn('Cancelar','modal-close','','ghost')}${btn(week?'Salvar':'Lançar','kpi-save','','primary')}</div>`;
+  dlg.setAttribute('aria-labelledby','dlgTitle');
+  $('#modal').hidden=false;
+}
+async function saveKpi(){
+  const week=modalCtx&&modalCtx.item, err=$('#formErr'), data=$('#k-data').value;
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(data)){err.textContent='Escolha a data do preenchimento.';err.hidden=false;return}
+  const id='kpi-'+data, other=kpiWeeks().find(w=>w.data===data&&(!week||w.id!==week.id));
+  if(other){err.textContent=`Já existe uma semana lançada em ${fmtD(parseISO(data))}. Feche e use Editar nela.`;err.hidden=false;return}
+  const valores={}, aprox={}, ruins=[];
+  document.querySelectorAll('#editForm input[data-g]').forEach(inp=>{
+    const r=parseKpi(inp.value,inp.dataset.t);
+    if(r.err){ruins.push(inp.closest('.field').querySelector('label').textContent);return}
+    if(r.v==null)return;
+    (valores[inp.dataset.g]||(valores[inp.dataset.g]={}))[inp.dataset.k]=r.v;
+    if(r.aprox)(aprox[inp.dataset.g]||(aprox[inp.dataset.g]=[])).push(inp.dataset.k);
+  });
+  if(ruins.length){err.textContent='Não entendi o número em: '+ruins.join(', ')+'.';err.hidden=false;return}
+  if(!Object.keys(valores).length){err.textContent='Preencha pelo menos um número.';err.hidden=false;return}
+  const d=parseISO(data), doc={tipo:'kpi',data,start:iso(addDays(d,-7)),end:iso(addDays(d,-1)),valores,
+    origem:week?(week.origem||'manual'):'manual',createdAt:week&&week.createdAt||new Date().toISOString(),updatedAt:new Date().toISOString()};
+  if(Object.keys(aprox).length)doc.aprox=aprox;
+  try{
+    await Store.set(bpath('metrics'),id,doc);
+    if(week&&week.id!==id)await Store.remove(bpath('metrics'),week.id);
+    toast(week?'Semana atualizada':'Semana lançada');modalCtx.saved=true;closeModal();
+  }catch(_){}
 }
 
 /* ---------- concorrentes ---------- */
@@ -1111,6 +1254,15 @@ const AI={
     ask({title:'Desenvolver ideia',sub:i.title,kind:'text',prompt:`IDEIA\nTítulo: ${i.title}\nPilar: ${i.pillar||''}\nCanais: ${(i.channels||[]).join(', ')}\nFormato: ${i.format||''}\nNotas: ${i.notes||''}\n\nTAREFA: desenvolva esta ideia para produção: 3 opções de gancho, estrutura em tópicos (telas, cenas ou seções, conforme o formato), CTA alinhado à marca, sugestão de visual e, se houver mais de um canal, como adaptar para cada um.`});
   },
   'ai-metrics'(){
+    const cfg=kpiCfg();
+    if(cfg){
+      const all=kpiWeeks();if(!all.length)return toast('Lance algumas semanas primeiro.');
+      const ws=kpiRange(all).slice(-12);
+      const tab=cfg.grupos.map(g=>`${g.nome}\n`+(g.metricas||[]).map(m=>`- ${m.l}: `+ws.map(w=>`${w.data} ${fmtK(kv(w,g.id,m.k),m.tipo,kAprox(w,g.id,m.k))}`).join(' | ')).join('\n')).join('\n\n');
+      const pub=state.data.posts.filter(p=>p.status==='publicado'&&p.date>=ws[0].start&&p.date<=ws[ws.length-1].end);
+      return ask({title:'Leitura das métricas',sub:`${ws.length} semanas, de ${wLabel(ws[0])} a ${wLabel(ws[ws.length-1])}`,kind:'text',
+        prompt:`KPIs SEMANAIS DA MARCA (a data é o dia do preenchimento; os números são dos 7 dias anteriores; ~ = arredondado na origem; – = não lançado)\n${tab}\n\nPOSTS PUBLICADOS NO PERÍODO\n${lines(pub,p=>`- ${p.date} ${p.channel} ${p.format||''}: ${p.title}`,30)||'nenhum marcado como publicado'}\n\nTAREFA: faça uma leitura objetiva: 3 destaques, 3 pontos de atenção e 3 ações práticas de conteúdo para as próximas semanas, citando canal, métrica e semanas. Compare a última semana com as anteriores e aponte tendências. Use apenas os números fornecidos; não crie dados novos. Quando faltar dado, diga isso.`});
+    }
     const all=metricRows();
     if(!all.length)return toast('Registre algumas métricas primeiro.');
     const R=mRange();
@@ -1198,7 +1350,7 @@ document.addEventListener('click',async e=>{
       renderTabs();renderMain(true);window.scrollTo({top:0});break;
     case 'filter':{const fk=el.dataset.f;
       if(fk==='mPeriod'&&el.dataset.v==='custom'&&state.f.mPeriod!=='custom'){const R=mRange();state.f.mFrom=iso(R.a);state.f.mTo=iso(R.b);LS.set('cl.mFrom',state.f.mFrom);LS.set('cl.mTo',state.f.mTo)}
-      state.f[fk]=el.dataset.v;if(fk==='newsPeriod'||fk==='mPeriod'||fk==='compPeriod'||fk==='compKind')LS.set('cl.'+fk,el.dataset.v);renderMain(true);break}
+      state.f[fk]=el.dataset.v;if(['newsPeriod','mPeriod','compPeriod','compKind','kGrupo','kPer'].includes(fk))LS.set('cl.'+fk,el.dataset.v);renderMain(true);break}
     case 'comp-news':{state.f.compFilter=el.dataset.v;renderMain(true);const t=document.getElementById('compNews');if(t)t.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});break}
     case 'comp-import':{if(el.disabled)break;el.disabled=true;await requestImport();break}
     case 'comp-research':{const c=state.data.competitors.find(x=>x.id===id);if(!c||el.disabled)break;el.disabled=true;await requestResearch(c);break}
@@ -1220,6 +1372,10 @@ document.addEventListener('click',async e=>{
     case 'save-item':el.disabled=true;await saveItem();el.disabled=false;break;
     case 'del-item':if(arm(el,'del','Confirmar exclusão')){const {col,item}=modalCtx;try{await Store.remove(bpath(col),item.id);toast('Item excluído');
       if(col==='refs'&&assets&&validAsset(item.media))assets.delete(item.media).catch(()=>{});closeModal()}catch(_){}}break;
+    case 'kpi-new':openKpiEditor(null);break;
+    case 'kpi-edit':{const w=kpiWeeks().find(x=>x.id===id);if(w)openKpiEditor(w);break}
+    case 'kpi-save':el.disabled=true;await saveKpi();el.disabled=false;break;
+    case 'kpi-del':if(arm(el,'kdel','Confirmar exclusão')){const w=modalCtx&&modalCtx.item;if(w){try{await Store.remove(bpath('metrics'),w.id);toast('Semana excluída');closeModal()}catch(_){}}}break;
     case 'media-remove':{$('#f-media').value='';$('#f-mediaType').value='';if(modalCtx)modalCtx.file=null;$('#mediaBox').innerHTML=MEDIA_EMPTY;break}
     case 'ai-ref-fill':fillRefWithClaude(el);break;
     case 'ai-bussola':refreshBussola(el);break;
