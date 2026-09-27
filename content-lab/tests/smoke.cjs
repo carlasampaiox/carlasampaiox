@@ -32,8 +32,8 @@ const TABS = ['noticias', 'referencias', 'calendario', 'datas', 'marca', 'ideias
   if (!(await page.$('[data-act="comp-import"]'))) erros.push('botão Atualizar Instagram ausente');
   // card do concorrente: prévia enxuta, resto no Ver mais
   const kinvo = await page.$('.card.comp:has(h3:text-is("Kinvo"))');
-  const prev = (await kinvo.evaluate(e => e.textContent)).replace(/\u00a0/g, ' ');
-  if (!prev.includes('12,3 mil') || !prev.includes('inscritos')) erros.push('seguidores e inscritos ausentes na prévia');
+  const prev = (await kinvo.evaluate(e => e.innerText)).replace(/\u00a0/g, ' ');
+  if (!prev.includes('12,3 mil') || !prev.includes('LinkedIn') || prev.includes('Pontos fortes')) erros.push('prévia do concorrente fora do padrão (números, LinkedIn ou conteúdo demais)');
   if (await kinvo.$eval('.cmore', d => d.open)) erros.push('Ver mais já aberto');
   if (!(await kinvo.$eval('.chlist', e => !!e.closest('details.cmore')))) erros.push('canais aparecem fora do Ver mais');
   await kinvo.$eval('.cmore summary', s => s.click());

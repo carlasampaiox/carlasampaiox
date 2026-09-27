@@ -382,6 +382,19 @@ fieldset{border:0;padding:0;margin:0}
 .cmore[open] .vl{display:inline}
 .cmore-body{display:flex;flex-direction:column;gap:12px;margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}
 
+/* card de concorrente minimalista */
+.card.comp.min{gap:10px}
+.kst-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:2px 0 4px}
+.kst{display:flex;flex-direction:column;min-width:0}
+.kst b{font-family:var(--f-display);font-size:22px;font-weight:700;letter-spacing:-.02em;line-height:1.1;font-variant-numeric:tabular-nums}
+.kst span{font-size:11.5px;color:var(--muted)}
+.cpos{font-size:14px;color:var(--ink)}
+.cres{font-size:13.5px;color:var(--ink-2)}
+.clamp2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.card.comp:has(details.cmore[open]) .clamp2{-webkit-line-clamp:unset;display:block}
+.card.comp.min .cmore-body section p{font-size:13.5px;color:var(--ink-2)}
+.card.comp.min .foot{gap:4px}
+
 </style>
 <header class="top">
   <div class="top-row">
@@ -1318,26 +1331,27 @@ function viewComps(){
     const au=c.audiencia&&typeof c.audiencia==='object'?c.audiencia:{};
     const auRows=[['instagram','seguidores'],['youtube','inscritos'],['linkedin','seguidores']].filter(([k])=>au[k]&&au[k].n>0);
     const auDate=auRows.map(([k])=>String(au[k].em||'')).sort().pop();
-    const audiencia=auRows.length?`<div class="aud">${auRows.map(([k,l])=>`<span class="audv">${chCode(k)}<b>${esc(fmtNC(au[k].n))}</b> ${l}</span>`).join('')}${auDate?`<span class="muted small">em ${fmtDay(auDate.slice(0,10))}</span>`:''}</div>`
+    const NOME={instagram:'Instagram',youtube:'YouTube',linkedin:'LinkedIn'};
+    const audiencia=auRows.length?`<div class="kst-row">${auRows.map(([k,l])=>`<div class="kst" title="${esc(NF.format(au[k].n))} ${l} no ${NOME[k]}${au[k].em?', lido em '+fmtDay(String(au[k].em).slice(0,10)):''}"><b>${esc(fmtNC(au[k].n))}</b><span>${NOME[k]}</span></div>`).join('')}</div>`
       :`<p class="muted small">Seguidores e inscritos chegam com a próxima coleta diária.</p>`;
     const x=c.autoContent&&typeof c.autoContent==='object'?c.autoContent:null;
-    const conteudo=x&&(x.topics||x.formats||x.whatWorks)?`<section class="auto content"><span class="eyebrow">Conteúdo${x.updatedAt?' · '+fmtDay(String(x.updatedAt).slice(0,10)):''}</span>${x.topics?`<p class="clamp3"><b>Sobre o que falam:</b> ${esc(x.topics)}</p>`:''}${x.formats?`<p class="clamp3"><b>Formatos e frequência:</b> ${esc(x.formats)}</p>`:''}${x.whatWorks?`<p class="clamp3"><b>O que tem funcionado:</b> ${esc(x.whatWorks)}</p>`:''}</section>`:'';
+    const conteudo=x&&(x.topics||x.formats||x.whatWorks)?`<section><span class="eyebrow">Conteúdo${x.updatedAt?' · '+fmtDay(String(x.updatedAt).slice(0,10)):''}</span>${x.topics?`<p><b>Sobre o que falam:</b> ${esc(x.topics)}</p>`:''}${x.formats?`<p><b>Formatos e frequência:</b> ${esc(x.formats)}</p>`:''}${x.whatWorks?`<p><b>O que tem funcionado:</b> ${esc(x.whatWorks)}</p>`:''}</section>`:'';
     const aberto=!!(state.compOpen&&state.compOpen[c.id]);
-    return `<article class="card comp">
+    return `<article class="card comp min">
       <div class="comp-head"><h3>${esc(c.name)}</h3>${exTag(c)}</div>
       ${audiencia}
-      <section><span class="eyebrow">Posicionamento</span><p class="clamp3">${c.positioning?esc(c.positioning):'<span class="muted">a preencher</span>'}</p></section>
-      <section class="auto"><span class="eyebrow">Empresa e solução</span><p class="clamp3">${c.autoSummary?esc(c.autoSummary):`<span class="muted">${pending?'Pesquisa em andamento. O resumo aparece aqui.':'Ainda sem pesquisa.'}</span>`}</p></section>
-      ${conteudo}
+      ${c.positioning?`<p class="cpos clamp2">${esc(c.positioning)}</p>`:''}
+      <p class="cres clamp2">${c.autoSummary?esc(c.autoSummary):(pending?'Pesquisa em andamento.':'Ainda sem pesquisa.')}</p>
       <details class="cmore" data-id="${esc(c.id)}"${aberto?' open':''}><summary><span class="vm">Ver mais</span><span class="vl">Ver menos</span></summary>
         <div class="cmore-body">
-          <div class="meta">${compStatus(c)}</div>
+          ${conteudo}
           <section><span class="eyebrow">Canais</span>${rows.length?`<ul class="chlist">${rows.join('')}</ul>`:`<p class="muted small">Nenhum canal ainda. ${pending?'A pesquisa vai encontrar os perfis oficiais.':'Toque em "Pesquisar agora" ou adicione em Editar.'}</p>`}</section>
           <section class="two"><div><span class="eyebrow">Pontos fortes</span><p>${c.strengths?esc(c.strengths):'<span class="muted">a preencher</span>'}</p></div><div><span class="eyebrow">Brechas</span><p>${c.weaknesses?esc(c.weaknesses):'<span class="muted">a preencher</span>'}</p></div></section>
           ${c.frequency||c.notes?`<section>${c.frequency?`<p><b>Frequência:</b> ${esc(c.frequency)}</p>`:''}${c.notes?`<p>${esc(c.notes)}</p>`:''}</section>`:''}
+          <div class="meta">${compStatus(c)}${auDate?`<span class="muted small">Seguidores lidos em ${fmtDay(auDate.slice(0,10))}</span>`:''}</div>
         </div>
       </details>
-      <div class="foot">${btn(pending?'Pesquisar de novo':'Pesquisar agora','comp-research',`data-id="${esc(c.id)}"`,'sm')}${aiBtn('Comparar com a marca','ai-comp-one',`data-id="${esc(c.id)}"`,'sm')}${nCount?`<button class="btn sm ghost" data-act="comp-news" data-v="${esc(c.id)}">${nCount} ${nCount>1?'conteúdos e notícias':'item'} ↓</button>`:''}${btn('Editar','edit',`data-col="competitors" data-id="${esc(c.id)}"`,'sm ghost')}</div>
+      <div class="foot">${aiBtn('Comparar','ai-comp-one',`data-id="${esc(c.id)}" title="Comparar com a marca"`,'sm')}${btn(pending?'Pesquisar de novo':'Pesquisar','comp-research',`data-id="${esc(c.id)}"`,'sm ghost')}${nCount?`<button class="btn sm ghost" data-act="comp-news" data-v="${esc(c.id)}">${nCount} ${nCount>1?'conteúdos e notícias':'item'} ↓</button>`:''}${btn('Editar','edit',`data-col="competitors" data-id="${esc(c.id)}"`,'sm ghost')}</div>
     </article>`;
   }).join('')+'</div>';
 
