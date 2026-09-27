@@ -43,6 +43,26 @@ class Capas(unittest.TestCase):
             self.assertEqual((Path(d) / "midia" / "ig-AAAAAAAAAA.jpg").read_bytes(), JPG)
             self.assertEqual(json.loads((Path(d) / "capas.json").read_text())["capas"], reg["capas"])
 
+    def test_ligar(self):
+        with tempfile.TemporaryDirectory() as d:
+            d = Path(d)
+            refs = d / "dump/brands/m/refs"
+            refs.mkdir(parents=True)
+            (d / "midia").mkdir()
+            (d / "midia/ig-AAAAAAAAAA.jpg").write_bytes(JPG)
+            (d / "capas.json").write_text(json.dumps({"capas": {"AAAAAAAAAA": "ig-AAAAAAAAAA.jpg"}, "falhas": {}}))
+            docs = {"r1": {"url": "https://www.instagram.com/reel/AAAAAAAAAA/"},
+                    "r2": {"url": "https://www.instagram.com/reel/BBBBBBBBBB/"},
+                    "r3": {"url": "https://www.instagram.com/reel/CCCCCCCCCC/", "media": "x" * 32},
+                    "r4": {"url": "https://www.tiktok.com/@x/video/1"}}
+            for k, v in docs.items():
+                (refs / f"{k}.json").write_text(json.dumps({"id": k, "data": v, "version": 3}))
+            pend = d / "pend.txt"
+            r = capas.ligar(d / "dump", d, pend)
+            self.assertEqual([(x["docId"], x["versao"], x["colecao"]) for x in r["prontas"]], [("r1", 3, "brands/m/refs")])
+            self.assertEqual(r["pedidas"], ["https://www.instagram.com/reel/BBBBBBBBBB/"])
+            self.assertEqual(capas.ligar(d / "dump", d, pend)["pedidas"], [])  # não pede duas vezes
+
 
 if __name__ == "__main__":
     unittest.main()

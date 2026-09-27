@@ -25,6 +25,8 @@ jobs:
           python-version: "3.11"
       - name: Baixar capas
         working-directory: importador
+        env:
+          CAPAS_DIAGNOSTICO: "1"
         run: python -u capas.py --pendentes capas-pendentes.txt --saida ../dados
       - name: Guardar no repositório
         run: |
