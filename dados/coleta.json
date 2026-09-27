@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-27T02:15:56+00:00",
+  "geradoEm": "2026-09-27T14:40:48+00:00",
   "fonte": "coletor (GitHub Actions)",
   "itens": [
     {
@@ -16,8 +16,8 @@
         "title": "Como resolver Imposto de Renda de investimentos da bolsa atrasado | Fácil e rápido | Grana Capital",
         "url": "https://www.youtube.com/watch?v=zlh1H4K3ndU",
         "date": "2026-09-03",
-        "signal": "15.530 visualizações, 7 curtidas · 54,5x a mediana do canal · alcance possivelmente pago",
-        "summary": "Vídeo publicado em 03/09, com 15.530 visualizações, 7 curtidas.",
+        "signal": "15.842 visualizações, 8 curtidas · 55,6x a mediana do canal · alcance possivelmente pago",
+        "summary": "Vídeo publicado em 03/09, com 15.842 visualizações, 8 curtidas.",
         "origem": "coletor"
       }
     },
@@ -35,8 +35,8 @@
         "title": "Como resolver o Imposto de Renda dos investimentos bolsa | Automático e sem emitir DARF",
         "url": "https://www.youtube.com/watch?v=mbZ3_iP6QN4",
         "date": "2026-09-03",
-        "signal": "7.465 visualizações, 6 curtidas · 26,2x a mediana do canal",
-        "summary": "Vídeo publicado em 03/09, com 7.465 visualizações, 6 curtidas.",
+        "signal": "7.788 visualizações, 7 curtidas · 27,3x a mediana do canal",
+        "summary": "Vídeo publicado em 03/09, com 7.788 visualizações, 7 curtidas.",
         "origem": "coletor"
       }
     },
@@ -54,8 +54,65 @@
         "title": "Resolva o Imposto de Renda dos investimentos na bolsa em segundos |  Grana Capital",
         "url": "https://www.youtube.com/watch?v=92RRoH6bZPc",
         "date": "2026-09-09",
-        "signal": "214 visualizações, 8 curtidas",
-        "summary": "Shorts publicado em 09/09, com 214 visualizações, 8 curtidas.",
+        "signal": "217 visualizações, 8 curtidas",
+        "summary": "Shorts publicado em 09/09, com 217 visualizações, 8 curtidas.",
+        "origem": "coletor"
+      }
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "compnews",
+      "arquivo": "d0d1bc40b09922b2.jpg",
+      "mediaType": "image",
+      "doc": {
+        "kind": "conteudo",
+        "competitorId": "c2",
+        "competitorName": "Gorila",
+        "channel": "youtube",
+        "format": "Vídeo",
+        "title": "Open Investment faz 3 anos: uso cresce, mas mercado ainda busca caso de sucesso",
+        "url": "https://www.youtube.com/watch?v=X4cACTHWoF4",
+        "date": "2026-09-14",
+        "signal": "144 visualizações, 1 curtida · 2,6x a mediana do canal",
+        "summary": "Vídeo publicado em 14/09, com 144 visualizações, 1 curtida.",
+        "origem": "coletor"
+      }
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "compnews",
+      "arquivo": "e7364f7795e698cc.jpg",
+      "mediaType": "image",
+      "doc": {
+        "kind": "conteudo",
+        "competitorId": "c2",
+        "competitorName": "Gorila",
+        "channel": "youtube",
+        "format": "Vídeo",
+        "title": "XP Consultoria completa 1 ano, quando o fee-based vale a pena e investimentos PF crescem 6,4%",
+        "url": "https://www.youtube.com/watch?v=OFzOF7PV0yU",
+        "date": "2026-09-08",
+        "signal": "112 visualizações, 3 curtidas · 2,0x a mediana do canal",
+        "summary": "Vídeo publicado em 08/09, com 112 visualizações, 3 curtidas.",
+        "origem": "coletor"
+      }
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "compnews",
+      "arquivo": "4df8da0ccb10580e.jpg",
+      "mediaType": "image",
+      "doc": {
+        "kind": "conteudo",
+        "competitorId": "c2",
+        "competitorName": "Gorila",
+        "channel": "youtube",
+        "format": "Vídeo",
+        "title": "WT Podcast - FEBRABAN TECH: da IA ao Open finance, a estrutura está pronta. E agora?",
+        "url": "https://www.youtube.com/watch?v=0fc4nwbiplY",
+        "date": "2026-08-31",
+        "signal": "43 visualizações, 1 curtida",
+        "summary": "Vídeo publicado em 31/08, com 43 visualizações, 1 curtida.",
         "origem": "coletor"
       }
     },
@@ -200,7 +257,7 @@
       "doc": {
         "title": "Governo minimiza frustração com dividendos e diz que isenção do IR é neutra",
         "url": "https://www.cnnbrasil.com.br/economia/money/macroeconomia/governo-minimiza-frustracao-com-dividendos-e-diz-que-isencao-do-ir-e-neutra/",
-        "source": "cnnbrasil.com.br",
+        "source": "CNN Brasil",
         "date": "2026-09-24",
         "tag": "Dividendos",
         "summary": "",
@@ -219,7 +276,7 @@
       "doc": {
         "title": "Compensação da isenção do IR frustra e afeta neutralidade fiscal",
         "url": "https://www.cnnbrasil.com.br/economia/money/macroeconomia/compensacao-da-isencao-do-ir-frustra-e-afeta-neutralidade-fiscal/",
-        "source": "cnnbrasil.com.br",
+        "source": "CNN Brasil",
         "date": "2026-09-24",
         "tag": "Dividendos",
         "summary": "",
@@ -333,7 +390,7 @@
       "doc": {
         "title": "Restituição do Imposto de Renda 2026: 27 mil paranaenses são contemplados em lote residual",
         "url": "https://ric.com.br/economia/restituicao-do-imposto-de-renda-2026-lote-residual-consulta/",
-        "source": "Ric.com.br",
+        "source": "ric.com.br",
         "date": "2026-09-23",
         "tag": "Declaração",
         "summary": "",
@@ -408,7 +465,7 @@
       "doc": {
         "title": "Paraibanos somam R$ 2,74 bilhões em investimentos na bolsa, alta de 18%, aponta B3",
         "url": "https://paraibaja.com.br/stories/paraibanos-somam-r-274-bilhoes-em-investimentos-na-bolsa-alta-de-18-aponta-b3/",
-        "source": "paraibaja.com.br",
+        "source": "Paraíba Já",
         "date": "2026-09-23",
         "tag": "Mercado",
         "summary": "",
@@ -437,18 +494,36 @@
         "https://news.google.com/rss/articles/CBMi6wFBVV95cUxObWV1bmZmei1xbzRmX0k2NF95Z2dfRGFndmxFQThIRGlHQ0k4VkRlMy1hYnBIU0xYRjZJaFdmZ3pLaTByTWtwc2FENUVmRENRS1QxY2plV0F0SzJmVWVKX3NqVFJ1akg4eG1DY042Qlc4eUR3ODI1cTRGMVNfSVBuQTJVbGFjU3EtQXZ1SDVpQUl2cm45VkxPVnBVdm40My04YkhWcVUwbktMQ1RIZ3VpMUtFWllHNDRJc1RyT2dZWXVEcnBKRUFtUG5UN28zNERSZ3oxTlhYQnhody1Yb2xWUnJ0UDVPNmRNZTlB?oc=5"
       ],
       "contexto": "JBS (JBSS32) fecha capital e J&F quer ser aberta no Brasil: o que muda para o investidor em ações e debêntures na B3 JBS fecha capital no Brasil e J&F busca registro na CVM; veja o impacto para debêntures, BDRs JBSS32 e o acesso do investidor à renda fixa A J&F e sua subsidiária, a JBS, anunciaram duas mudanças ontem (22) envolvendo seus registros na CVM, a..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Da Bolsa ao trading: como evolui a jornada da mulher investidora",
+        "url": "https://www.infomoney.com.br/mercados/mulheres-bolsa-trading/",
+        "source": "InfoMoney",
+        "date": "2026-09-27",
+        "tag": "Mercado",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMibkFVX3lxTE1fUWtBLTY1UWxjSDhnWHdTVnN2WU53ZDBndmpvRWszTk92ZVFRemVEN3FyOUc2TVRUVHB5N0VSMC1URkdNR2h0dHFXVi1tVnhaUnRpZk5scVZjNVU4WWd1TDZKWlJrZno0ZER2M1RB?oc=5"
+      ],
+      "contexto": "Da Bolsa ao trading: como evolui a jornada da mulher investidora Presença feminina cresceu na renda variável, mas ainda é menor em segmentos ligados ao trading A presença das mulheres na Bolsa cresceu nos últimos anos, mas esse avanço ainda não ocorre da mesma maneira em todas as áreas do mercado. Da entrada na renda variável às operações de trading, os..."
     }
   ],
   "avisos": [
-    "Myprofit (YouTube): HTTP 404",
-    "Grana Capital (blog https://blog.grana.capital/feed/): HTTP 404",
-    "Kinvo (YouTube): HTTP 404",
-    "Gorila (YouTube): HTTP 404",
-    "Investidor10 (YouTube): HTTP 404"
+    "Grana Capital (blog https://blog.grana.capital/feed/): HTTP 404"
   ],
   "arquivos": [
     "4ab4dc8152ad137c.jpg",
+    "4df8da0ccb10580e.jpg",
     "6359b9a722b2ab11.jpg",
+    "d0d1bc40b09922b2.jpg",
+    "e7364f7795e698cc.jpg",
     "e9870bf8e484b2e8.jpg"
   ]
 }
