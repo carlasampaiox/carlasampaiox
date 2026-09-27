@@ -1,14 +1,14 @@
 {
-  "falhas": {
-    "4nez93j2qfthdrtwl4ri:instagram": "https://www.instagram.com/myprofitweb/embed/ facebookexternalhi: número não encontrado; https://www.instagram.com/myprofitweb/embed/ Mozilla/5.0 (compa: número não encontrado; https://www.instagram.com/myprofitweb/embed/ Mozilla/5.0 (Windo: número não encontrado; https://www.instagram.com/myprofitwe",
-    "bs2fj7391bo4wovt5nrw:instagram": "https://www.instagram.com/grana.capital/embed/ facebookexternalhi: número não encontrado; https://www.instagram.com/grana.capital/embed/ Mozilla/5.0 (compa: número não encontrado; https://www.instagram.com/grana.capital/embed/ Mozilla/5.0 (Windo: número não encontrado; https://www.instagram.com/gran",
-    "c1:instagram": "https://www.instagram.com/kinvoapp/embed/ facebookexternalhi: número não encontrado; https://www.instagram.com/kinvoapp/embed/ Mozilla/5.0 (compa: número não encontrado; https://www.instagram.com/kinvoapp/embed/ Mozilla/5.0 (Windo: número não encontrado; https://www.instagram.com/kinvoapp/ facebooke",
-    "c2:instagram": "https://www.instagram.com/gorilainvest/embed/ facebookexternalhi: número não encontrado; https://www.instagram.com/gorilainvest/embed/ Mozilla/5.0 (compa: número não encontrado; https://www.instagram.com/gorilainvest/embed/ Mozilla/5.0 (Windo: número não encontrado; https://www.instagram.com/gorilai",
-    "c3:instagram": "https://www.instagram.com/investidor10br/embed/ facebookexternalhi: número não encontrado; https://www.instagram.com/investidor10br/embed/ Mozilla/5.0 (compa: número não encontrado; https://www.instagram.com/investidor10br/embed/ Mozilla/5.0 (Windo: número não encontrado; https://www.instagram.com/i"
-  },
-  "geradoEm": "2026-09-27T02:13:28+00:00",
+  "falhas": {},
+  "geradoEm": "2026-09-27T02:16:24+00:00",
   "perfis": {
     "4nez93j2qfthdrtwl4ri": {
+      "instagram": {
+        "aprox": false,
+        "em": "2026-09-27",
+        "n": 28272,
+        "url": "https://www.instagram.com/myprofitweb/"
+      },
       "linkedin": {
         "aprox": false,
         "em": "2026-09-27",
@@ -23,6 +23,12 @@
       }
     },
     "bs2fj7391bo4wovt5nrw": {
+      "instagram": {
+        "aprox": false,
+        "em": "2026-09-27",
+        "n": 61483,
+        "url": "https://www.instagram.com/grana.capital/"
+      },
       "youtube": {
         "aprox": true,
         "em": "2026-09-27",
@@ -31,6 +37,12 @@
       }
     },
     "c1": {
+      "instagram": {
+        "aprox": false,
+        "em": "2026-09-27",
+        "n": 50223,
+        "url": "https://www.instagram.com/kinvoapp/"
+      },
       "linkedin": {
         "aprox": false,
         "em": "2026-09-27",
@@ -45,6 +57,12 @@
       }
     },
     "c2": {
+      "instagram": {
+        "aprox": false,
+        "em": "2026-09-27",
+        "n": 23758,
+        "url": "https://www.instagram.com/gorilainvest/"
+      },
       "linkedin": {
         "aprox": false,
         "em": "2026-09-27",
@@ -59,6 +77,12 @@
       }
     },
     "c3": {
+      "instagram": {
+        "aprox": false,
+        "em": "2026-09-27",
+        "n": 155717,
+        "url": "https://www.instagram.com/investidor10br/"
+      },
       "youtube": {
         "aprox": true,
         "em": "2026-09-27",

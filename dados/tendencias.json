@@ -7,14 +7,18 @@
       "subindo": [
         {
           "busca": "a partir de quanto precisa declarar imposto de renda",
-          "valor": "+130%"
-        },
-        {
-          "busca": "meu imposto de renda — receita federal",
-          "valor": "+70%"
+          "valor": "+300%"
         },
         {
           "busca": "ultimo lote de restituição imposto de renda 2026",
+          "valor": "+90%"
+        },
+        {
+          "busca": "meu imposto de renda, receita federal",
+          "valor": "+60%"
+        },
+        {
+          "busca": "lotes restituição imposto de renda 2026",
           "valor": "+40%"
         }
       ],
@@ -25,7 +29,7 @@
         },
         {
           "busca": "restituição de imposto de renda",
-          "valor": 82
+          "valor": 80
         },
         {
           "busca": "restituição imposto de renda",
@@ -33,57 +37,57 @@
         },
         {
           "busca": "declaração de imposto de renda",
-          "valor": 52
+          "valor": 54
         },
         {
           "busca": "declaração imposto de renda",
-          "valor": 51
+          "valor": 54
         },
         {
           "busca": "meu imposto de renda",
-          "valor": 49
+          "valor": 50
         },
         {
           "busca": "declarar imposto de renda",
-          "valor": 35
+          "valor": 37
         },
         {
           "busca": "restituição imposto de renda 2026",
-          "valor": 28
+          "valor": 29
         }
       ],
       "interesse": [
         {
-          "data": "2026-09-19T00:00:00+00:00",
-          "valor": 25
-        },
-        {
           "data": "2026-09-20T00:00:00+00:00",
-          "valor": 24
+          "valor": 23
         },
         {
           "data": "2026-09-21T00:00:00+00:00",
-          "valor": 48
+          "valor": 46
         },
         {
           "data": "2026-09-22T00:00:00+00:00",
-          "valor": 47
+          "valor": 45
         },
         {
           "data": "2026-09-23T00:00:00+00:00",
-          "valor": 49
+          "valor": 46
         },
         {
           "data": "2026-09-24T00:00:00+00:00",
-          "valor": 49
+          "valor": 45
         },
         {
           "data": "2026-09-25T00:00:00+00:00",
-          "valor": 42
+          "valor": 40
         },
         {
           "data": "2026-09-26T00:00:00+00:00",
-          "valor": 24
+          "valor": 22
+        },
+        {
+          "data": "2026-09-27T00:00:00+00:00",
+          "valor": 15
         }
       ]
     },
@@ -91,35 +95,35 @@
       "termo": "darf",
       "subindo": [
         {
-          "busca": "darf 1162",
+          "busca": "darf 8109",
+          "valor": "Breakout"
+        },
+        {
+          "busca": "codigo darf 8045",
           "valor": "Breakout"
         },
         {
           "busca": "qual o dia para pagamento do darf previdenciário das empresas?",
-          "valor": "+3,750%"
+          "valor": "Breakout"
         },
         {
-          "busca": "emissao de darf",
-          "valor": "+1,200%"
+          "busca": "emitir darf para pagamento de tributos federais",
+          "valor": "+250%"
         },
         {
-          "busca": "darf previdenciario",
-          "valor": "+550%"
+          "busca": "darf 5856",
+          "valor": "+160%"
         },
         {
-          "busca": "codigo darf 1082",
-          "valor": "+180%"
+          "busca": "darf 2172",
+          "valor": "+110%"
         },
         {
-          "busca": "darf 6912",
-          "valor": "+90%"
+          "busca": "oq é darf",
+          "valor": "+100%"
         },
         {
-          "busca": "como emitir darf para pagamento de imposto de renda",
-          "valor": "+80%"
-        },
-        {
-          "busca": "darf 1099",
+          "busca": "darf 1162",
           "valor": "+70%"
         }
       ],
@@ -130,38 +134,34 @@
         },
         {
           "busca": "emitir darf",
-          "valor": 99
+          "valor": 91
         },
         {
-          "busca": "imposto de renda darf",
-          "valor": 88
+          "busca": "darf imposto de renda",
+          "valor": 85
         },
         {
           "busca": "codigo darf",
-          "valor": 80
+          "valor": 76
         },
         {
           "busca": "pagamento darf",
-          "valor": 74
+          "valor": 70
         },
         {
           "busca": "darf receita federal",
-          "valor": 66
+          "valor": 60
         },
         {
           "busca": "darf mei",
-          "valor": 53
+          "valor": 48
         },
         {
           "busca": "darf o que é",
-          "valor": 49
+          "valor": 46
         }
       ],
       "interesse": [
-        {
-          "data": "2026-09-19T00:00:00+00:00",
-          "valor": 19
-        },
         {
           "data": "2026-09-20T00:00:00+00:00",
           "valor": 21
@@ -172,7 +172,7 @@
         },
         {
           "data": "2026-09-22T00:00:00+00:00",
-          "valor": 55
+          "valor": 56
         },
         {
           "data": "2026-09-23T00:00:00+00:00",
@@ -184,11 +184,15 @@
         },
         {
           "data": "2026-09-25T00:00:00+00:00",
-          "valor": 50
+          "valor": 54
         },
         {
           "data": "2026-09-26T00:00:00+00:00",
           "valor": 13
+        },
+        {
+          "data": "2026-09-27T00:00:00+00:00",
+          "valor": 7
         }
       ]
     },
@@ -196,49 +200,49 @@
       "termo": "dividendos",
       "subindo": [
         {
-          "busca": "bova11 paga dividendos",
+          "busca": "flor do diabo planta",
           "valor": "Breakout"
         },
         {
+          "busca": "quais acoes pagam dividendos todo mes",
+          "valor": "Breakout"
+        },
+        {
+          "busca": "ibov",
+          "valor": "+300%"
+        },
+        {
+          "busca": "xpml11 dividendos mensais",
+          "valor": "+100%"
+        },
+        {
+          "busca": "divo11 paga dividendos",
+          "valor": "+80%"
+        },
+        {
           "busca": "btlg11 dividendos mensais",
-          "valor": "+200%"
+          "valor": "+80%"
         },
         {
-          "busca": "kncr11 dividendos mensais",
-          "valor": "+180%"
-        },
-        {
-          "busca": "btlg11 cotação",
-          "valor": "+140%"
-        },
-        {
-          "busca": "fundos imobiliários que pagam dividendos mensais",
-          "valor": "+110%"
-        },
-        {
-          "busca": "meus dividendos login",
+          "busca": "calculadora de dividendos",
           "valor": "+70%"
         },
         {
-          "busca": "brap4 dividendos",
-          "valor": "+60%"
-        },
-        {
           "busca": "btci11 dividendos",
-          "valor": "+50%"
+          "valor": "+70%"
         }
       ],
       "top": [
         {
-          "busca": "bbas3 dividendos",
+          "busca": "bbas3",
           "valor": 100
         },
         {
-          "busca": "bbas3",
+          "busca": "bbas3 dividendos",
           "valor": 99
         },
         {
-          "busca": "mxrf11",
+          "busca": "o que é dividendos",
           "valor": 75
         },
         {
@@ -246,54 +250,54 @@
           "valor": 74
         },
         {
-          "busca": "o que é dividendos",
-          "valor": 73
+          "busca": "mxrf11",
+          "valor": 72
         },
         {
           "busca": "dividendos petrobras",
-          "valor": 69
+          "valor": 68
         },
         {
           "busca": "petr4",
-          "valor": 66
+          "valor": 63
         },
         {
-          "busca": "petr4 dividendos",
-          "valor": 59
+          "busca": "dividendos petr4",
+          "valor": 60
         }
       ],
       "interesse": [
         {
-          "data": "2026-09-19T00:00:00+00:00",
-          "valor": 42
-        },
-        {
           "data": "2026-09-20T00:00:00+00:00",
-          "valor": 42
+          "valor": 40
         },
         {
           "data": "2026-09-21T00:00:00+00:00",
-          "valor": 74
+          "valor": 72
         },
         {
           "data": "2026-09-22T00:00:00+00:00",
-          "valor": 60
+          "valor": 58
         },
         {
           "data": "2026-09-23T00:00:00+00:00",
-          "valor": 61
+          "valor": 57
         },
         {
           "data": "2026-09-24T00:00:00+00:00",
-          "valor": 56
+          "valor": 54
         },
         {
           "data": "2026-09-25T00:00:00+00:00",
-          "valor": 55
+          "valor": 56
         },
         {
           "data": "2026-09-26T00:00:00+00:00",
-          "valor": 32
+          "valor": 31
+        },
+        {
+          "data": "2026-09-27T00:00:00+00:00",
+          "valor": 27
         }
       ]
     },
@@ -303,41 +307,52 @@
       "top": [],
       "interesse": [
         {
-          "data": "2026-09-19T00:00:00+00:00",
-          "valor": 62
-        },
-        {
           "data": "2026-09-20T00:00:00+00:00",
           "valor": 0
         },
         {
           "data": "2026-09-21T00:00:00+00:00",
-          "valor": 48
+          "valor": 0
         },
         {
           "data": "2026-09-22T00:00:00+00:00",
-          "valor": 55
+          "valor": 37
         },
         {
           "data": "2026-09-23T00:00:00+00:00",
-          "valor": 64
+          "valor": 44
         },
         {
           "data": "2026-09-24T00:00:00+00:00",
-          "valor": 57
+          "valor": 39
         },
         {
           "data": "2026-09-25T00:00:00+00:00",
-          "valor": 54
+          "valor": 36
         },
         {
           "data": "2026-09-26T00:00:00+00:00",
-          "valor": 33
+          "valor": 20
+        },
+        {
+          "data": "2026-09-27T00:00:00+00:00",
+          "valor": 0
         }
       ]
     }
   ],
-  "emAlta": [],
+  "emAlta": [
+    {
+      "assunto": "classificações de inter de limeira x paysandu",
+      "trafego": "20000+",
+      "publicado": "2026-09-26 18:40:00-07:00"
+    },
+    {
+      "assunto": "classificações de cruz azul x toluca",
+      "trafego": "1000+",
+      "publicado": "2026-09-26 18:20:00-07:00"
+    }
+  ],
   "avisos": [],
-  "geradoEm": "2026-09-26T23:28:40+00:00"
+  "geradoEm": "2026-09-27T02:17:01+00:00"
 }
