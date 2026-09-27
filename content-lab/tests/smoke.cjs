@@ -33,6 +33,12 @@ const TABS = ['noticias', 'referencias', 'calendario', 'datas', 'marca', 'ideias
   await page.click('#tabs [data-tab="referencias"]');
   if (!(await page.$('.bussola .trends'))) erros.push('Em alta no Google ausente na Bússola');
   if (!(await page.$('[data-act="comp-import"]'))) erros.push('botão Atualizar Instagram ausente em Referências');
+  if (await page.$('[data-f="refTipo"][data-v="tiktok"], [data-v="tiktok"]')) erros.push('filtro TikTok ainda aparece em Referências');
+  await page.click('[data-f="refTipo"][data-v="radar"]');
+  const radar = await page.$$eval('#main .card.ref', els => els.map(e => e.textContent));
+  if (radar.length !== 1 || !radar[0].includes('@exemplo.corre')) erros.push('filtro Oportunidades não mostra só o radar');
+  if (!radar.some(t => t.includes('Como a marca entra'))) erros.push('fit da marca ausente no radar');
+  await page.click('[data-f="refTipo"][data-v=""]');
   await page.click('#tabs [data-tab="marca"]');
   const [dl] = await Promise.all([page.waitForEvent('download', { timeout: 5000 }), page.click('[data-act="brand-backup"]')]);
   const conteudo = JSON.parse(require('fs').readFileSync(await dl.path(), 'utf8'));

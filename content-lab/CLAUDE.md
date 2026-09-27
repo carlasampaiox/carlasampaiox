@@ -31,7 +31,7 @@ Notícias, Referências, Calendário, Datas importantes, Marca, Mapa de ideias, 
 ## Banco (capability `db` do artifact)
 - `brands/{marca}`: configurações da marca (nome, nicho, público, tom, pilares, canais, fontes, briefing).
 - `brands/{marca}/news`: notícias do nicho (title, url, source, date, tag, summary).
-- `brands/{marca}/refs`: referências virais. Campos: platform (instagram, tiktok), format, url, creator, views, hook, why, tags, media (id de asset de 32 caracteres), mediaType (image ou video).
+- `brands/{marca}/refs`: referências virais. Campos: platform (instagram; TikTok está fora por enquanto), format, url, creator, views, hook, why, tags, media (id de asset de 32 caracteres), mediaType (image ou video), fit (como a marca entra), origem (`radar` para oportunidades do Instagram em geral, `importador` para Reels de concorrentes). A aba filtra por Oportunidades, Concorrentes e Salvas por você.
 - `brands/{marca}/posts`: calendário (title, date, time, channel, format, status, pillar, caption, link, notes).
 - `brands/{marca}/dates`: datas importantes (title, date, recurring, type, lead = dias de antecedência, notes).
 - `brands/{marca}/ideas`: mapa de ideias (title, pillar, channels, format, status, source, notes).

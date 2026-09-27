@@ -115,8 +115,10 @@
    "createdAt": "2026-09-26T12:00:00.000Z"
   },
   "r3": {
-   "platform": "tiktok",
-   "format": "Vídeo",
+   "platform": "instagram",
+   "format": "Reels",
+   "origem": "radar",
+   "fit": "Exemplo: a Mycapital entra com o mesmo gancho de rotina, trocando o treino pela organização do IR da bolsa.",
    "creator": "@exemplo.corre",
    "views": "1,1 mi",
    "hook": "Eu treino para maratona e organizo meus investimentos igual",

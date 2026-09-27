@@ -553,6 +553,32 @@ def intervalo_ideal(info: dict, hoje_: dt.date) -> float:
     return round(min(14.0, max(3.0, 7 / ps)), 1)  # cerca de 1 Reel novo entre consultas
 
 
+RADAR_DIAS = 7  # radar de oportunidades (busca de Reels fora da curva em qualquer perfil): 1 por semana
+
+
+def radar_consulta(estado: dict, hoje_: dt.date) -> dict | None:
+    """Parâmetros do vidiq_instagram_tiktok_outlier_search montados a partir da aba Marca.
+
+    Busca o que está em alta no Instagram em geral (não só concorrentes) nos temas da
+    marca, mais trends e memes do mercado financeiro. O Claude filtra o fit depois.
+    """
+    marca = next((b for b in estado.get("brands", []) if b.get("pillars") or b.get("niche")), None)
+    if not marca:
+        return None
+    temas = [t for t in marca.get("pillars", []) if "produto" not in t.lower()]
+    partes = ([marca["niche"]] if marca.get("niche") else []) + temas + [
+        "trends e memes do mercado financeiro que estão viralizando"]
+    publico = marca.get("audience", "").split(".")[0].strip() or "investidores pessoa física"
+    return {"query": ", ".join(partes), "audienceQuery": f"Culture/Region: Brasil; Global: false; Demographics: {publico};",
+            "descriptionLanguage": ["pt"], "datePostedAfter": (hoje_ - dt.timedelta(days=30)).isoformat(),
+            "viewsMin": 10000, "resultsPerPlatform": 15}
+
+
+def radar_vencido(controle: dict, hoje_: dt.date) -> bool:
+    ult = controle.get("radarUltimo")
+    return not ult or (hoje_ - dt.date.fromisoformat(ult)).days >= RADAR_DIAS
+
+
 def planejar(estado: dict, controle: dict, saldo: int, renova: dt.date, hoje_: dt.date,
              max_por_clique: int = 3) -> dict:
     """Plano de um clique em "Atualizar Instagram".
@@ -582,11 +608,13 @@ def planejar(estado: dict, controle: dict, saldo: int, renova: dt.date, hoje_: d
         if passados >= i:
             fila.append(dict(p, atraso=round(passados / i, 2), intervalo=i))
     fila.sort(key=lambda x: (-x["atraso"], x["tipo"] != "concorrente"))
-    escolhidos = fila[:min(max_por_clique, cabe)]
+    radar = radar_consulta(estado, hoje_) if radar_vencido(controle, hoje_) and cabe >= 1 else None
+    escolhidos = fila[:min(max_por_clique - bool(radar), cabe - bool(radar))]
     proxima = None
-    if escolhidos:
-        motivo = f"consultar {len(escolhidos)} perfil(is): {', '.join('@' + e['handle'] for e in escolhidos)}"
-    elif fila:
+    if escolhidos or radar:
+        partes = [f"consultar {len(escolhidos)} perfil(is): {', '.join('@' + e['handle'] for e in escolhidos)}"] if escolhidos else []
+        motivo = "; ".join(partes + (["radar de oportunidades da semana"] if radar else []))
+    elif fila or (radar_vencido(controle, hoje_) and radar_consulta(estado, hoje_)):
         faltam = max(1, -(-(CUSTO_REELS - liberado) // diario)) if diario else None
         proxima = (hoje_ + dt.timedelta(days=int(faltam))).isoformat() if faltam else None
         motivo = ("sem créditos liberados hoje para manter o saldo até " + renova.strftime("%d/%m")
@@ -598,14 +626,16 @@ def planejar(estado: dict, controle: dict, saldo: int, renova: dt.date, hoje_: d
             f"; próxima atualização útil em {dt.date.fromisoformat(proxima).strftime('%d/%m')}" if proxima else "")
     return {"hoje": hoje_.isoformat(), "saldo": saldo, "renova": renova.isoformat(),
             "creditosPorDia": round(diario, 1), "creditosLiberados": round(liberado, 1),
-            "consultar": escolhidos, "custo": len(escolhidos) * CUSTO_REELS, "motivo": motivo,
+            "consultar": escolhidos, "radar": radar, "custo": (len(escolhidos) + bool(radar)) * CUSTO_REELS, "motivo": motivo,
             "proximaEm": proxima, "fila": [{"handle": f["handle"], "atraso": f["atraso"]} for f in fila]}
 
 
 def registrar_plano(controle: dict, plano: dict) -> None:
     """Guarda o resultado no controle (a página mostra e o próximo clique usa)."""
-    if plano["consultar"]:
+    if plano["consultar"] or plano.get("radar"):
         controle["ultimoUso"] = plano["hoje"]
+    if plano.get("radar"):
+        controle["radarUltimo"] = plano["hoje"]
     controle["ultimoPlano"] = {k: plano[k] for k in ("hoje", "saldo", "renova", "motivo", "proximaEm", "custo")}
     controle["ultimoPlano"]["saldoDepois"] = plano["saldo"] - plano["custo"]
     controle["ultimoPlano"]["em"] = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
@@ -1092,6 +1122,7 @@ def montar_estado(pasta: Path) -> dict:
                  for d in ler_dump(pasta, f"{base}/{c}")]
         marcas.append({"id": b["id"], "name": b.get("name", ""),
                        "channels": b.get("channels", {}), "pillars": b.get("pillars", []), "niche": b.get("niche", ""),
+                       "audience": b.get("audience", ""), "avoid": b.get("avoid", ""), "tone": b.get("tone", ""),
                        "competitors": [{k: c.get(k, "") for k in ("id", "name", "instagram", "youtube", "tiktok")}
                                        for c in ler_dump(pasta, f"{base}/competitors")],
                        "existingLinks": [u for u in links if u]})

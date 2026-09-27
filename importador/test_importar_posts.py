@@ -128,7 +128,7 @@ class Plano(unittest.TestCase):
 
     def test_cliques_todo_dia_nunca_esgotam_o_mes(self):
         """Clicando todo dia, várias vezes, o saldo dura até a renovação."""
-        c, saldo, estado = {"perfis": {}}, 150, dict(self.ESTADO)
+        c, saldo, estado = {"perfis": {}}, 150, {"brands": [dict(self.ESTADO["brands"][0], pillars=["IR"])]}
         inicio = REF
         renova = inicio + dt.timedelta(days=30)
         for d in range(30):
@@ -136,6 +136,7 @@ class Plano(unittest.TestCase):
             for _ in range(3):  # 3 cliques por dia
                 r = ip.planejar(estado, c, saldo, renova, dia)
                 ip.registrar_plano(c, r)
+                saldo -= 5 if r["radar"] else 0
                 for x in r["consultar"]:
                     saldo -= 5
                     ritmo = {"ativo": 4, "minha": 1, "parado": 0}[x["handle"]]
@@ -145,7 +146,29 @@ class Plano(unittest.TestCase):
             self.assertGreaterEqual(saldo, 0)
             self.assertGreaterEqual(saldo + 5, 150 * restantes / 30 - 20)  # nunca adianta o gasto do mês
         self.assertEqual(set(c["perfis"]), {"ativo", "minha", "parado"})
+        self.assertIn("radarUltimo", c)
         self.assertIn("saldoDepois", c["ultimoPlano"])
+
+    def test_radar_semanal(self):
+        estado = {"brands": [dict(self.ESTADO["brands"][0], niche="Investimentos e IR",
+                                  pillars=["Tributação e IR", "Produto Mycapital"],
+                                  audience="Investidores de alta renda. Parte corre maratona.")]}
+        c = self.ctl("2026-09-20")
+        r = ip.planejar(estado, c, 150, self.RENOVA, REF)
+        self.assertIn("Tributação e IR", r["radar"]["query"])
+        self.assertNotIn("Produto", r["radar"]["query"])
+        self.assertIn("Demographics: Investidores de alta renda;", r["radar"]["audienceQuery"])
+        self.assertEqual(r["custo"], 10)  # radar + @ativo
+        self.assertIn("radar de oportunidades", r["motivo"])
+        ip.registrar_plano(c, r)
+        self.assertEqual(c["radarUltimo"], REF.isoformat())
+        # na mesma semana o radar não repete
+        r2 = ip.planejar(estado, c, 145, self.RENOVA, REF + dt.timedelta(days=3))
+        self.assertIsNone(r2["radar"])
+        r3 = ip.planejar(estado, c, 145, self.RENOVA, REF + dt.timedelta(days=7))
+        self.assertIsNotNone(r3["radar"])
+        # sem crédito liberado, o radar espera
+        self.assertIsNone(ip.planejar(estado, {"ultimoUso": REF.isoformat()}, 150, self.RENOVA, REF)["radar"])
 
     def test_atualizar_controle(self):
         c = {}

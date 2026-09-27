@@ -45,7 +45,7 @@ const fmtN=(v,pct)=>v==null||v===''||isNaN(v)?'–':pct?(Number(v).toLocaleStrin
 const fmtNC=(v,pct)=>v==null||isNaN(v)?'–':pct?(Number(v).toLocaleString('pt-BR',{maximumFractionDigits:1})+'%'):NFC.format(v);
 const clean=t=>String(t||'').replace(/\s*—\s*/g,', ').replace(/\s–\s/g,', ');
 const code=id=>{const c=CHM[id];return c?`<span class="code ${c.id}" title="${c.label}">${c.code}</span>`:''};
-const exTag=it=>it&&it.exemplo?'<span class="ex" title="Dado de exemplo. Remova em Marca.">exemplo</span>':it&&it.origem==='importador'?'<span class="imp" title="Trazido pelo importador de posts, com números reais da plataforma.">importado</span>':'';
+const exTag=it=>it&&it.exemplo?'<span class="ex" title="Dado de exemplo. Remova em Marca.">exemplo</span>':it&&it.origem==='importador'?'<span class="imp" title="Trazido pelo importador de posts, com números reais da plataforma.">importado</span>':it&&it.origem==='radar'?'<span class="imp" title="Achado no radar de oportunidades do Instagram, com números reais do vidIQ e fit avaliado pelo Claude.">radar</span>':'';
 const stTag=s=>{const x=STM[s]||STM.ideia;return `<span class="status st-${x.id}"><i></i>${x.label}</span>`};
 const aiBtn=(label,act,attrs='',cls='')=>`<button class="btn ai ${cls}" data-act="${act}" ${attrs}>${SPARK}${esc(label)}</button>`;
 const btn=(label,act,attrs='',cls='')=>`<button class="btn ${cls}" data-act="${act}" ${attrs}>${label}</button>`;
@@ -103,7 +103,7 @@ const state={
   tab:(TABS.find(t=>t.id===location.hash.slice(1))||TABS.find(t=>t.id===LS.get('cl.tab'))||TABS[0]).id,
   data:{news:[],refs:[],posts:[],dates:[],ideas:[],metrics:[],competitors:[],compnews:[],insights:[]},
   cal:{y:now.getFullYear(),m:now.getMonth()},
-  f:{newsTag:'',newsPeriod:String(LS.get('cl.newsPeriod','')),refPlat:'',calCh:'',ideaCh:'',ideaAll:false,metric:'followers',mPeriod:String(LS.get('cl.mPeriod','30')),mFrom:LS.get('cl.mFrom',''),mTo:LS.get('cl.mTo',''),compPeriod:String(LS.get('cl.compPeriod','30')),compFilter:'',compKind:String(LS.get('cl.compKind',''))},
+  f:{newsTag:'',newsPeriod:String(LS.get('cl.newsPeriod','')),refTipo:'',calCh:'',ideaCh:'',ideaAll:false,metric:'followers',mPeriod:String(LS.get('cl.mPeriod','30')),mFrom:LS.get('cl.mFrom',''),mTo:LS.get('cl.mTo',''),compPeriod:String(LS.get('cl.compPeriod','30')),compFilter:'',compKind:String(LS.get('cl.compKind',''))},
   brandDirty:false, vidiq:null, novidade:null
 };
 const bpath=c=>`brands/${state.brandId}/${c}`;
@@ -288,25 +288,27 @@ async function fillRefWithClaude(btnEl){
 }
 
 /* ---------- referências ---------- */
+const refTipo=r=>r.origem==='radar'?'radar':r.origem==='importador'||/concorrente/.test(String(r.tags||''))?'concorrente':'manual';
 function viewRefs(){
   /* ordem da bússola: mais parecidas com a marca primeiro; alcance pago por último */
-  const peso=r=>{const t=String(r.tags||'');return (t.includes('alta semelhança')?0:t.includes('viral no nicho')?1:2)+(t.includes('possivelmente pago')?3:0)};
+  const peso=r=>{const t=String(r.tags||'');return (t.includes('fit alto')||t.includes('alta semelhança')?0:t.includes('viral no nicho')?1:2)+(t.includes('possivelmente pago')?3:0)};
   const all=state.data.refs.slice().sort((a,b)=>peso(a)-peso(b)||String(b.createdAt).localeCompare(String(a.createdAt)));
-  const list=state.f.refPlat?all.filter(r=>r.platform===state.f.refPlat):all;
-  let h=head('Referências virais','Posts do Instagram e do TikTok que performaram bem, com o gancho e o motivo anotados para inspirar a produção.',
+  const list=state.f.refTipo?all.filter(r=>refTipo(r)===state.f.refTipo):all;
+  let h=head('Referências virais','O que está em alta no Instagram e cabe na marca: oportunidades do radar (qualquer perfil, com fit avaliado pelo Claude), Reels dos concorrentes e as que você salvou.',
     aiBtn('Padrões em comum','ai-refs-all')+igBtn()+btn('Nova referência','new','data-col="refs"','primary'));
   h+=igStatus();
   h+=bussola();
-  h+=`<div class="toolbar">${chips('refPlat',[['','Todas'],['instagram','Instagram'],['tiktok','TikTok']],state.f.refPlat)}</div>`;
+  h+=`<div class="toolbar">${chips('refTipo',[['','Todas'],['radar','Oportunidades'],['concorrente','Concorrentes'],['manual','Salvas por você']],state.f.refTipo)}</div>`;
   if(!all.length)return h+empty('Nenhuma referência ainda','Salve o link de um post que viralizou e anote o gancho e por que funcionou.',btn('Nova referência','new','data-col="refs"','primary'));
-  if(!list.length)return h+empty('Nada nesta plataforma','Troque o filtro ou adicione uma nova referência.');
+  if(!list.length)return h+empty('Nada neste filtro',state.f.refTipo==='radar'?'O radar roda junto com o botão "Atualizar Instagram", no máximo 1 vez por semana.':'Troque o filtro ou adicione uma nova referência.');
   h+='<div class="grid">'+list.map(r=>{
     const u=safeUrl(r.url);
     return `<article class="card ref">
       ${validAsset(r.media)?`<div class="rmedia">${mediaTag(r.media,r.mediaType)}</div>`:''}
-      <div class="meta"><span class="code ${r.platform==='tiktok'?'tiktok':'instagram'}">${r.platform==='tiktok'?'TT':'IG'}</span><span class="src">${esc(r.creator||'Perfil')}</span>${r.format?`<span>· ${esc(r.format)}</span>`:''}${exTag(r)}</div>
+      <div class="meta"><span class="code instagram">IG</span><span class="src">${esc(r.creator||'Perfil')}</span>${r.format?`<span>· ${esc(r.format)}</span>`:''}${exTag(r)}</div>
       ${r.hook?`<div class="hook">${esc(r.hook)}</div>`:''}
       ${r.why?`<div class="kv"><b>Por que funcionou:</b> ${esc(r.why)}</div>`:''}
+      ${r.fit?`<div class="kv fit"><b>Como a marca entra:</b> ${esc(r.fit)}</div>`:''}
       ${r.views?`<div class="kv"><b>Resultado:</b> ${esc(r.views)}</div>`:''}
       ${r.tags?`<div class="chips">${String(r.tags).split(',').map(t=>t.trim()).filter(Boolean).map(t=>`<span class="tagpill">${esc(t)}</span>`).join('')}</div>`:''}
       <div class="foot">${aiBtn('Adaptar para a marca','ai-ref-one',`data-id="${esc(r.id)}"`,'sm')}${u?`<a class="btn sm" href="${esc(u)}" target="_blank" rel="noopener">Abrir ↗</a>`:''}${btn('Editar','edit',`data-col="refs" data-id="${esc(r.id)}"`,'sm ghost')}</div>
@@ -820,12 +822,12 @@ const SCHEMA={
   {k:'tag',l:'Tema',t:'text',ph:'Ex.: Dividendos'},{k:'summary',l:'Resumo e por que importa',t:'textarea',full:1,rows:3}]},
  refs:{name:'referência',fields:[
   {k:'media',l:'Prévia do post',t:'media',full:1},{k:'mediaType',t:'hidden'},
-  {k:'platform',l:'Plataforma',t:'select',o:[['instagram','Instagram'],['tiktok','TikTok']]},
+  {k:'platform',l:'Plataforma',t:'select',o:[['instagram','Instagram']]},
   {k:'format',l:'Formato',t:'list',o:['Reels','Carrossel','Post estático','Stories','Vídeo','Live']},
   {k:'url',l:'Link do post',t:'url',full:1,ph:'https://'},{k:'creator',l:'Perfil',t:'text',ph:'@perfil'},
   {k:'views',l:'Resultado',t:'text',ph:'Ex.: 1,2 mi de views'},
   {k:'hook',l:'Gancho (primeira frase ou tela)',t:'textarea',full:1,rows:2},
-  {k:'why',l:'Por que funcionou',t:'textarea',full:1,rows:3},{k:'tags',l:'Etiquetas',t:'text',full:1,ph:'Separe por vírgula'}]},
+  {k:'why',l:'Por que funcionou',t:'textarea',full:1,rows:3},{k:'fit',l:'Como a marca entra',t:'textarea',full:1,rows:3,ph:'Fit com a marca e como adaptar'},{k:'tags',l:'Etiquetas',t:'text',full:1,ph:'Separe por vírgula'}]},
  posts:{name:'post',fields:[
   {k:'title',l:'Título ou tema',t:'text',req:1,full:1},{k:'date',l:'Data',t:'date',req:1},{k:'time',l:'Horário',t:'time'},
   {k:'channel',l:'Canal',t:'channel'},{k:'format',l:'Formato',t:'list',o:FORMATS},
@@ -1048,7 +1050,7 @@ const AI={
   'ai-ref-one'(id){
     const r=state.data.refs.find(x=>x.id===id);if(!r)return;
     ask({title:'Adaptar referência',sub:r.hook||r.creator,kind:'json',addLabel:'Salvar no mapa de ideias',card:ideaCard,onAdd:addIdea,norm:normIdea('Referência: '+(r.creator||r.platform)),
-      prompt:`REFERÊNCIA\nPlataforma: ${r.platform}\nFormato: ${r.format||''}\nGancho: ${r.hook||''}\nPor que funcionou: ${r.why||''}\n\nTAREFA: crie 3 adaptações desta referência para a marca, mantendo a mecânica que fez o post funcionar mas com tema e linguagem próprios. Nas notas, escreva o gancho de abertura.\n${IDEA_SHAPE}`});
+      prompt:`REFERÊNCIA\nPlataforma: ${r.platform}\nFormato: ${r.format||''}\nGancho: ${r.hook||''}\nPor que funcionou: ${r.why||''}${r.fit?'\nComo a marca entra: '+r.fit:''}\n\nTAREFA: crie 3 adaptações desta referência para a marca, mantendo a mecânica que fez o post funcionar mas com tema e linguagem próprios. Nas notas, escreva o gancho de abertura.\n${IDEA_SHAPE}`});
   },
   'ai-week'(){
     const {y,m}=state.cal, t=new Date();
@@ -1245,7 +1247,7 @@ document.addEventListener('click',async e=>{
 function defaults(col,ds){
   if(col==='posts')return {date:ds.date||TODAY(),channel:state.f.calCh||activeCh()[0].id,status:'ideia'};
   if(col==='ideas')return {pillar:ds.pillar||'',status:'nova',channels:state.f.ideaCh?[state.f.ideaCh]:[]};
-  if(col==='refs')return {platform:state.f.refPlat||'instagram'};
+  if(col==='refs')return {platform:'instagram'};
   if(col==='compnews')return {kind:state.f.compKind||'conteudo',competitorId:state.f.compFilter||(state.data.competitors[0]||{}).id||''};
   if(col==='dates')return {type:'Data comemorativa',recurring:true,lead:14};
   if(col==='metrics'){const t=parseISO(TODAY());return {start:iso(addDays(t,-7)),end:iso(addDays(t,-1)),channel:activeCh()[0].id}}
