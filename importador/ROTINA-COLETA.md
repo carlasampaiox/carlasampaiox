@@ -11,6 +11,7 @@ Content Lab: `https://claude.ai/artifact/JWoCf2AYGr2K39nSmCzm9R`
 1. **Preparar.** Repositório público `carlasampaiox/carlasampaiox`, branch `claude/wonderful-faraday-h9fhtc`, atualizado (`git pull`). Trabalhe em `importador/`.
 2. **Coleta nova?** Leia `../dados/coleta.json`. Se `geradoEm` não for de hoje, avise no resumo que o GitHub Actions não rodou e siga com o que houver.
 3. **Estado.** Com `ArtifactData`, `out_dir` = `saida/dump`: `list brands` e, para cada marca, `list` de `competitors`, `compnews`, `refs`, `posts` e `news` (limit 1000). Depois `python3 importar_posts.py montar-estado --dump saida/dump --saida saida/estado.json`.
+3a. **Perfis dos concorrentes em dia.** Compare Instagram, YouTube e LinkedIn de cada concorrente no dump com `fontes.json` (`concorrentes`, mesmo `id`). Se a Carla mudou ou incluiu algum, atualize `fontes.json` e faça commit e push, para a leitura de seguidores do dia seguinte já usar.
 3b. **Prévias das referências (toda referência precisa de capa).** `python3 capas.py --ligar saida/dump --saida ../dados --pendentes capas-pendentes.txt`.
    - `prontas`: suba os `arquivo` com `Artifact` (`action: "publish"`, `url` do Content Lab, `asset: true`, `file_paths`) e grave em cada referência `{"media": "<id>", "mediaType": "image"}` (`ArtifactData` `batch`, `op: "update"`, com `if_version` = `versao` quando vier preenchido).
    - `pedidas`: o comando já acrescentou esses Reels em `capas-pendentes.txt`. Faça commit e push desse arquivo: o GitHub Actions "Capas dos Reels" baixa as capas e a próxima execução liga.
