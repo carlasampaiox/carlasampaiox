@@ -29,6 +29,8 @@ jobs:
       - name: Seguidores e inscritos públicos (se falhar, fica o último número)
         working-directory: importador
         continue-on-error: true
+        env:
+          PERFIS_DIAGNOSTICO: "1"
         run: timeout 240 python -u perfis.py --fontes fontes.json --saida ../dados
       - name: Google Trends (com prazo; se estourar, segue sem)
         working-directory: importador
