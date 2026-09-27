@@ -28,6 +28,7 @@ Leia antes: `CLAUDE.md`, `content-lab/CLAUDE.md` e `EVOLUCAO-LOG.md` (o que já 
 4. Antes de cada commit: `python3 -m unittest` (importador), `python3 build.py --check` e `node --check app.js` (content-lab) e o teste de fumaça (`NODE_PATH=$(npm root -g) node tests/smoke.cjs`).
 5. Anote em `EVOLUCAO-LOG.md` (data, o que mudou, por quê, resultado) e faça commit e push na branch acima.
 6. Se nada precisar de ajuste, não mude nada: registre "sem mudanças" só no resumo final, não no log.
+7. **Recibo (sempre, mesmo sem mudanças).** Por último, grave no Content Lab `app/evolucao` (`ArtifactData` `set`): `{"em": "<agora ISO>", "resultado": "mudou" | "sem mudanças" | "erro", "resumo": "1 a 3 frases: o que olhou e o que mudou", "commit": "<hash curto ou vazio>", "push": "ok" | "bloqueado: <mensagem do git>" | "não precisou", "testes": "ok" | "falharam: <qual>"}`. Se o `git push` falhar, não insista: registre a mensagem exata no recibo.
 
 ## Nunca
 - Chamar ferramentas do vidIQ (créditos são só do botão "Atualizar Instagram").
