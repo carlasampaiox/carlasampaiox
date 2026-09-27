@@ -1,121 +1,7 @@
 {
-  "geradoEm": "2026-09-26T23:27:56+00:00",
+  "geradoEm": "2026-09-27T02:06:46+00:00",
   "fonte": "coletor (GitHub Actions)",
   "itens": [
-    {
-      "brandId": "mycapital",
-      "colecao": "compnews",
-      "arquivo": "4ab4dc8152ad137c.jpg",
-      "mediaType": "image",
-      "doc": {
-        "kind": "conteudo",
-        "competitorId": "bs2fj7391bo4wovt5nrw",
-        "competitorName": "Grana Capital",
-        "channel": "youtube",
-        "format": "Vídeo",
-        "title": "Como resolver Imposto de Renda de investimentos da bolsa atrasado | Fácil e rápido | Grana Capital",
-        "url": "https://www.youtube.com/watch?v=zlh1H4K3ndU",
-        "date": "2026-09-03",
-        "signal": "15.485 visualizações, 7 curtidas · 54,3x a mediana do canal · alcance possivelmente pago",
-        "summary": "Vídeo publicado em 03/09, com 15.485 visualizações, 7 curtidas.",
-        "origem": "coletor"
-      }
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "compnews",
-      "arquivo": "6359b9a722b2ab11.jpg",
-      "mediaType": "image",
-      "doc": {
-        "kind": "conteudo",
-        "competitorId": "bs2fj7391bo4wovt5nrw",
-        "competitorName": "Grana Capital",
-        "channel": "youtube",
-        "format": "Vídeo",
-        "title": "Como resolver o Imposto de Renda dos investimentos bolsa | Automático e sem emitir DARF",
-        "url": "https://www.youtube.com/watch?v=mbZ3_iP6QN4",
-        "date": "2026-09-03",
-        "signal": "7.253 visualizações, 6 curtidas · 25,4x a mediana do canal",
-        "summary": "Vídeo publicado em 03/09, com 7.253 visualizações, 6 curtidas.",
-        "origem": "coletor"
-      }
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "compnews",
-      "arquivo": "e9870bf8e484b2e8.jpg",
-      "mediaType": "image",
-      "doc": {
-        "kind": "conteudo",
-        "competitorId": "bs2fj7391bo4wovt5nrw",
-        "competitorName": "Grana Capital",
-        "channel": "youtube",
-        "format": "Shorts",
-        "title": "Resolva o Imposto de Renda dos investimentos na bolsa em segundos |  Grana Capital",
-        "url": "https://www.youtube.com/watch?v=92RRoH6bZPc",
-        "date": "2026-09-09",
-        "signal": "214 visualizações, 8 curtidas",
-        "summary": "Shorts publicado em 09/09, com 214 visualizações, 8 curtidas.",
-        "origem": "coletor"
-      }
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "compnews",
-      "arquivo": "d0d1bc40b09922b2.jpg",
-      "mediaType": "image",
-      "doc": {
-        "kind": "conteudo",
-        "competitorId": "c2",
-        "competitorName": "Gorila",
-        "channel": "youtube",
-        "format": "Vídeo",
-        "title": "Open Investment faz 3 anos: uso cresce, mas mercado ainda busca caso de sucesso",
-        "url": "https://www.youtube.com/watch?v=X4cACTHWoF4",
-        "date": "2026-09-14",
-        "signal": "144 visualizações, 1 curtida · 2,6x a mediana do canal",
-        "summary": "Vídeo publicado em 14/09, com 144 visualizações, 1 curtida.",
-        "origem": "coletor"
-      }
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "compnews",
-      "arquivo": "e7364f7795e698cc.jpg",
-      "mediaType": "image",
-      "doc": {
-        "kind": "conteudo",
-        "competitorId": "c2",
-        "competitorName": "Gorila",
-        "channel": "youtube",
-        "format": "Vídeo",
-        "title": "XP Consultoria completa 1 ano, quando o fee-based vale a pena e investimentos PF crescem 6,4%",
-        "url": "https://www.youtube.com/watch?v=OFzOF7PV0yU",
-        "date": "2026-09-08",
-        "signal": "112 visualizações, 3 curtidas · 2,0x a mediana do canal",
-        "summary": "Vídeo publicado em 08/09, com 112 visualizações, 3 curtidas.",
-        "origem": "coletor"
-      }
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "compnews",
-      "arquivo": "4df8da0ccb10580e.jpg",
-      "mediaType": "image",
-      "doc": {
-        "kind": "conteudo",
-        "competitorId": "c2",
-        "competitorName": "Gorila",
-        "channel": "youtube",
-        "format": "Vídeo",
-        "title": "WT Podcast - FEBRABAN TECH: da IA ao Open finance, a estrutura está pronta. E agora?",
-        "url": "https://www.youtube.com/watch?v=0fc4nwbiplY",
-        "date": "2026-08-31",
-        "signal": "43 visualizações, 1 curtida",
-        "summary": "Vídeo publicado em 31/08, com 43 visualizações, 1 curtida.",
-        "origem": "coletor"
-      }
-    },
     {
       "brandId": "mycapital",
       "colecao": "news",
@@ -133,7 +19,7 @@
       "aliases": [
         "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOUm9ZR09JdFhnX01jU01ESjVKU1Nkd1l1SFVMMFNBQS1CYTNocWd1OHA3aC1ZMC0yVGJaWmR5WXBTNHhDYU55aXRsUnpueVlMSGRjS0IwVTVMb0RsSGJkNFZoRTllUjhRRTVhWnZ2ZGQxam1uQ2h0TUpDOHljQV9UOVJJRzJadzJvU0tUVS1pWWdZNDJOQnVoN2xkcXR5dzExZnRRY0toQUFlRTlyUHVNWTlxQTV5NmxRb3I1cnhVMzNQNHoxZDAtTlB4SERuMU5qRXh4dzFWRlNHZjFwckZiV0lPa0tJZWJrTFVhStIB7AFBVV95cUxOUm9ZR09JdFhnX01jU01ESjVKU1Nkd1l1SFVMMFNBQS1CYTNocWd1OHA3aC1ZMC0yVGJaWmR5WXBTNHhDYU55aXRsUnpueVlMSGRjS0IwVTVMb0RsSGJkNFZoRTllUjhRRTVhWnZ2ZGQxam1uQ2h0TUpDOHljQV9UOVJJRzJadzJvU0tUVS1pWWdZNDJOQnVoN2xkcXR5dzExZnRRY0toQUFlRTlyUHVNWTlxQTV5NmxRb3I1cnhVMzNQNHoxZDAtTlB4SERuMU5qRXh4dzFWRlNHZjFwckZiV0lPa0tJZWJrTFVhSg?oc=5"
       ],
-      "contexto": "Seu navegador não suporta esse video. A Receita Federal afirmou, em uma solução de consulta publicada recentemente, que a isenção de Imposto de Renda (IR) para operações de até R$ 35 mil por mês com aplicações financeiras no exterior não se aplica desde janeiro de 2024."
+      "contexto": "A Receita Federal afirmou, em uma solução de consulta publicada recentemente, que a isenção de Imposto de Renda (IR) para operações de até R$ 35 mil por mês com aplicações financeiras no exterior não se aplica desde janeiro de 2024. Advogados tributaristas questionam esse entendimento: segundo eles, a lei que mudou a tributação desses investimentos não..."
     },
     {
       "brandId": "mycapital",
@@ -497,14 +383,12 @@
     }
   ],
   "avisos": [
-    "Grana Capital (blog https://blog.grana.capital/feed/): HTTP 404"
+    "Myprofit (YouTube): HTTP 404",
+    "Grana Capital (YouTube): HTTP 404",
+    "Grana Capital (blog https://blog.grana.capital/feed/): HTTP 404",
+    "Kinvo (YouTube): HTTP 404",
+    "Gorila (YouTube): HTTP 404",
+    "Investidor10 (YouTube): HTTP 404"
   ],
-  "arquivos": [
-    "4ab4dc8152ad137c.jpg",
-    "4df8da0ccb10580e.jpg",
-    "6359b9a722b2ab11.jpg",
-    "d0d1bc40b09922b2.jpg",
-    "e7364f7795e698cc.jpg",
-    "e9870bf8e484b2e8.jpg"
-  ]
+  "arquivos": []
 }

@@ -1,0 +1,70 @@
+{
+  "falhas": {
+    "4nez93j2qfthdrtwl4ri:instagram": "facebookexternalhi: HTTP Error 429: Too Many Requests; Mozilla/5.0 (compa: HTTP Error 429: Too Many Requests; Mozilla/5.0 (Windo: HTTP Error 429: Too Many Requests",
+    "bs2fj7391bo4wovt5nrw:instagram": "facebookexternalhi: HTTP Error 429: Too Many Requests; Mozilla/5.0 (compa: HTTP Error 429: Too Many Requests; Mozilla/5.0 (Windo: HTTP Error 429: Too Many Requests",
+    "c1:instagram": "facebookexternalhi: HTTP Error 429: Too Many Requests; Mozilla/5.0 (compa: HTTP Error 429: Too Many Requests; Mozilla/5.0 (Windo: HTTP Error 429: Too Many Requests",
+    "c2:instagram": "facebookexternalhi: HTTP Error 429: Too Many Requests; Mozilla/5.0 (compa: HTTP Error 429: Too Many Requests; Mozilla/5.0 (Windo: HTTP Error 429: Too Many Requests",
+    "c3:instagram": "facebookexternalhi: HTTP Error 429: Too Many Requests; Mozilla/5.0 (compa: HTTP Error 429: Too Many Requests; Mozilla/5.0 (Windo: HTTP Error 429: Too Many Requests"
+  },
+  "geradoEm": "2026-09-27T02:07:12+00:00",
+  "perfis": {
+    "4nez93j2qfthdrtwl4ri": {
+      "linkedin": {
+        "aprox": false,
+        "em": "2026-09-27",
+        "n": 5427,
+        "url": "https://www.linkedin.com/company/myprofitweb"
+      },
+      "youtube": {
+        "aprox": true,
+        "em": "2026-09-27",
+        "n": 9550,
+        "url": "https://www.youtube.com/channel/UC9dVD0WmrrzyB7cez_IQtNQ"
+      }
+    },
+    "bs2fj7391bo4wovt5nrw": {
+      "youtube": {
+        "aprox": true,
+        "em": "2026-09-27",
+        "n": 4220,
+        "url": "https://www.youtube.com/@grana.capital"
+      }
+    },
+    "c1": {
+      "linkedin": {
+        "aprox": false,
+        "em": "2026-09-27",
+        "n": 4827,
+        "url": "https://www.linkedin.com/company/kinvoapp"
+      },
+      "youtube": {
+        "aprox": true,
+        "em": "2026-09-27",
+        "n": 5820,
+        "url": "https://www.youtube.com/@kinvoapp"
+      }
+    },
+    "c2": {
+      "linkedin": {
+        "aprox": false,
+        "em": "2026-09-27",
+        "n": 22705,
+        "url": "https://www.linkedin.com/company/gorila"
+      },
+      "youtube": {
+        "aprox": true,
+        "em": "2026-09-27",
+        "n": 2900,
+        "url": "https://www.youtube.com/channel/UCYJiIU0DqDLiPcq8tWecjdw"
+      }
+    },
+    "c3": {
+      "youtube": {
+        "aprox": true,
+        "em": "2026-09-27",
+        "n": 7520,
+        "url": "https://www.youtube.com/channel/UCOcosY44MPuUsSMvAFrsAjQ"
+      }
+    }
+  }
+}
