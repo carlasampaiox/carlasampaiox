@@ -362,3 +362,17 @@ fieldset{border:0;padding:0;margin:0}
 .ksheet tr.kgrp td{background:var(--surface-2);font-weight:700;color:var(--ink);font-size:12.5px;text-transform:uppercase;letter-spacing:.05em}
 .dlg-body .bsec{display:flex;align-items:center;gap:8px;font-size:15px}
 .ktbl .krot{display:block;font-size:11px;color:var(--muted)}
+
+/* concorrentes: prévia enxuta e Ver mais */
+.aud{display:flex;gap:6px 12px;flex-wrap:wrap;align-items:center;font-size:13px;color:var(--ink-2)}
+.audv{display:inline-flex;align-items:center;gap:5px}
+.audv b{font-family:var(--f-mono);font-variant-numeric:tabular-nums;color:var(--ink)}
+.clamp3{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.card.comp:has(details.cmore[open]) .clamp3{-webkit-line-clamp:unset;display:block}
+.cmore summary{cursor:pointer;list-style:none;font-weight:700;font-size:13px;color:var(--accent-text);display:inline-flex;align-items:center;gap:4px}
+.cmore summary::-webkit-details-marker{display:none}
+.cmore summary::after{content:"▾";font-size:11px}
+.cmore[open] summary::after{content:"▴"}
+.cmore .vl,.cmore[open] .vm{display:none}
+.cmore[open] .vl{display:inline}
+.cmore-body{display:flex;flex-direction:column;gap:12px;margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}

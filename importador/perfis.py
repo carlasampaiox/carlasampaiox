@@ -27,7 +27,7 @@ UAS = ["facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php
 
 NUM = r"(\d[\d.,]*\s*(?:mil|mi|K|M|k|m)?)"
 PADROES = {
-    "instagram": [NUM + r"\s*(?:Followers|seguidores)"],
+    "instagram": [NUM + r"\s*(?:Followers|followers|seguidores)"],
     "youtube": [NUM + r"\s*(?:subscribers|inscritos)"],
     "linkedin": [NUM + r"\s*(?:followers|seguidores)"],
 }
@@ -85,16 +85,23 @@ def url_da_rede(rede: str, valor: str) -> str | None:
     return None
 
 
+def paginas(rede: str, url: str) -> list[str]:
+    """O Instagram costuma bloquear a página do perfil para servidores; a de incorporação é mais aberta."""
+    if rede == "instagram":
+        return [url + "embed/", url]
+    return [url]
+
+
 def ler_perfil(rede: str, url: str, get: Callable[[str, str], str]) -> tuple[int, bool]:
     erros = []
-    for ua in UAS:
+    for pagina, ua in ((p, u) for p in paginas(rede, url) for u in UAS):
         try:
-            r = ler_numero(rede, get(url, ua))
+            r = ler_numero(rede, get(pagina, ua))
             if r:
                 return r
-            erros.append(f"{ua[:18]}: número não encontrado")
+            erros.append(f"{pagina} {ua[:18]}: número não encontrado")
         except Exception as e:  # noqa: BLE001  (bloqueio, 4xx, rede: tenta outro agente)
-            erros.append(f"{ua[:18]}: {e}")
+            erros.append(f"{pagina} {ua[:18]}: {e}")
     raise RuntimeError("; ".join(erros))
 
 

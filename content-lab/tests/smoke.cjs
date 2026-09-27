@@ -30,6 +30,14 @@ const TABS = ['noticias', 'referencias', 'calendario', 'datas', 'marca', 'ideias
   // novidades
   await page.click('#tabs [data-tab="concorrentes"]');
   if (!(await page.$('[data-act="comp-import"]'))) erros.push('botão Atualizar Instagram ausente');
+  // card do concorrente: prévia enxuta, resto no Ver mais
+  const kinvo = await page.$('.card.comp:has(h3:text-is("Kinvo"))');
+  const prev = (await kinvo.evaluate(e => e.textContent)).replace(/\u00a0/g, ' ');
+  if (!prev.includes('12,3 mil') || !prev.includes('inscritos')) erros.push('seguidores e inscritos ausentes na prévia');
+  if (await kinvo.$eval('.cmore', d => d.open)) erros.push('Ver mais já aberto');
+  if (!(await kinvo.$eval('.chlist', e => !!e.closest('details.cmore')))) erros.push('canais aparecem fora do Ver mais');
+  await kinvo.$eval('.cmore summary', s => s.click());
+  if (!(await kinvo.$eval('.cmore', d => d.open))) erros.push('Ver mais não abre');
   await page.click('#tabs [data-tab="referencias"]');
   if (!(await page.$('.bussola .trends'))) erros.push('Em alta no Google ausente na Bússola');
   if (!(await page.$('[data-act="comp-import"]'))) erros.push('botão Atualizar Instagram ausente em Referências');

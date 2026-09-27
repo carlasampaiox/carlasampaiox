@@ -908,18 +908,29 @@ function viewComps(){
     extra.forEach(k=>{const u=safeUrl(ac[k].url);rows.push(`<li>${chCode(k)}<div><span class="chname">${esc(k)}</span>${u?`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(shortUrl(u))} ↗</a>`:''}${ac[k].notes?`<p>${esc(ac[k].notes)}</p>`:''}</div></li>`)});
     const nCount=allNews.filter(n=>n.competitorId===c.id).length;
     const pending=(c.research||{}).status==='pedido'&&(!c.autoCheckedAt||String((c.research||{}).requestedAt)>String(c.autoCheckedAt));
+    const au=c.audiencia&&typeof c.audiencia==='object'?c.audiencia:{};
+    const auRows=[['instagram','seguidores'],['youtube','inscritos'],['linkedin','seguidores']].filter(([k])=>au[k]&&au[k].n>0);
+    const auDate=auRows.map(([k])=>String(au[k].em||'')).sort().pop();
+    const audiencia=auRows.length?`<div class="aud">${auRows.map(([k,l])=>`<span class="audv">${chCode(k)}<b>${esc(fmtNC(au[k].n))}</b> ${l}</span>`).join('')}${auDate?`<span class="muted small">em ${fmtDay(auDate.slice(0,10))}</span>`:''}</div>`
+      :`<p class="muted small">Seguidores e inscritos chegam com a próxima coleta diária.</p>`;
+    const x=c.autoContent&&typeof c.autoContent==='object'?c.autoContent:null;
+    const conteudo=x&&(x.topics||x.formats||x.whatWorks)?`<section class="auto content"><span class="eyebrow">Conteúdo${x.updatedAt?' · '+fmtDay(String(x.updatedAt).slice(0,10)):''}</span>${x.topics?`<p class="clamp3"><b>Sobre o que falam:</b> ${esc(x.topics)}</p>`:''}${x.formats?`<p class="clamp3"><b>Formatos e frequência:</b> ${esc(x.formats)}</p>`:''}${x.whatWorks?`<p class="clamp3"><b>O que tem funcionado:</b> ${esc(x.whatWorks)}</p>`:''}</section>`:'';
+    const aberto=!!(state.compOpen&&state.compOpen[c.id]);
     return `<article class="card comp">
       <div class="comp-head"><h3>${esc(c.name)}</h3>${exTag(c)}</div>
-      <div class="meta">${compStatus(c)}</div>
-      <section><span class="eyebrow">Canais</span>${rows.length?`<ul class="chlist">${rows.join('')}</ul>`:`<p class="muted small">Nenhum canal ainda. ${pending?'A pesquisa vai encontrar os perfis oficiais.':'Toque em "Pesquisar agora" ou adicione em Editar.'}</p>`}</section>
-      <section><span class="eyebrow">Posicionamento</span><p>${c.positioning?esc(c.positioning):'<span class="muted">a preencher</span>'}</p></section>
-      <section class="auto"><span class="eyebrow">Resumo da pesquisa</span><p>${c.autoSummary?esc(c.autoSummary):`<span class="muted">${pending?'Pesquisa em andamento. O resumo aparece aqui.':'Ainda sem pesquisa.'}</span>`}</p></section>
-      ${(()=>{const x=c.autoContent&&typeof c.autoContent==='object'?c.autoContent:null;if(!x||!(x.topics||x.formats||x.whatWorks))return '';
-        return `<section class="auto content"><span class="eyebrow">Conteúdo${x.updatedAt?' · '+fmtDay(String(x.updatedAt).slice(0,10)):''}</span>${x.topics?`<p><b>Sobre o que falam:</b> ${esc(x.topics)}</p>`:''}${x.formats?`<p><b>Formatos e frequência:</b> ${esc(x.formats)}</p>`:''}${x.whatWorks?`<p><b>O que tem funcionado:</b> ${esc(x.whatWorks)}</p>`:''}</section>`})()}
-      <section class="two"><div><span class="eyebrow">Pontos fortes</span><p>${c.strengths?esc(c.strengths):'<span class="muted">a preencher</span>'}</p></div><div><span class="eyebrow">Brechas</span><p>${c.weaknesses?esc(c.weaknesses):'<span class="muted">a preencher</span>'}</p></div></section>
-      ${c.frequency||c.notes?`<section>${c.frequency?`<p><b>Frequência:</b> ${esc(c.frequency)}</p>`:''}${c.notes?`<p>${esc(c.notes)}</p>`:''}</section>`:''}
-      ${nCount?`<button class="chip" data-act="comp-news" data-v="${esc(c.id)}" style="align-self:flex-start">Ver ${nCount} ${nCount>1?'conteúdos e notícias':'item'} ↓</button>`:''}
-      <div class="foot">${btn(pending?'Pesquisar de novo':'Pesquisar agora','comp-research',`data-id="${esc(c.id)}"`,'sm')}${aiBtn('Comparar com a marca','ai-comp-one',`data-id="${esc(c.id)}"`,'sm')}${btn('Editar','edit',`data-col="competitors" data-id="${esc(c.id)}"`,'sm ghost')}</div>
+      ${audiencia}
+      <section><span class="eyebrow">Posicionamento</span><p class="clamp3">${c.positioning?esc(c.positioning):'<span class="muted">a preencher</span>'}</p></section>
+      <section class="auto"><span class="eyebrow">Empresa e solução</span><p class="clamp3">${c.autoSummary?esc(c.autoSummary):`<span class="muted">${pending?'Pesquisa em andamento. O resumo aparece aqui.':'Ainda sem pesquisa.'}</span>`}</p></section>
+      ${conteudo}
+      <details class="cmore" data-id="${esc(c.id)}"${aberto?' open':''}><summary><span class="vm">Ver mais</span><span class="vl">Ver menos</span></summary>
+        <div class="cmore-body">
+          <div class="meta">${compStatus(c)}</div>
+          <section><span class="eyebrow">Canais</span>${rows.length?`<ul class="chlist">${rows.join('')}</ul>`:`<p class="muted small">Nenhum canal ainda. ${pending?'A pesquisa vai encontrar os perfis oficiais.':'Toque em "Pesquisar agora" ou adicione em Editar.'}</p>`}</section>
+          <section class="two"><div><span class="eyebrow">Pontos fortes</span><p>${c.strengths?esc(c.strengths):'<span class="muted">a preencher</span>'}</p></div><div><span class="eyebrow">Brechas</span><p>${c.weaknesses?esc(c.weaknesses):'<span class="muted">a preencher</span>'}</p></div></section>
+          ${c.frequency||c.notes?`<section>${c.frequency?`<p><b>Frequência:</b> ${esc(c.frequency)}</p>`:''}${c.notes?`<p>${esc(c.notes)}</p>`:''}</section>`:''}
+        </div>
+      </details>
+      <div class="foot">${btn(pending?'Pesquisar de novo':'Pesquisar agora','comp-research',`data-id="${esc(c.id)}"`,'sm')}${aiBtn('Comparar com a marca','ai-comp-one',`data-id="${esc(c.id)}"`,'sm')}${nCount?`<button class="btn sm ghost" data-act="comp-news" data-v="${esc(c.id)}">${nCount} ${nCount>1?'conteúdos e notícias':'item'} ↓</button>`:''}${btn('Editar','edit',`data-col="competitors" data-id="${esc(c.id)}"`,'sm ghost')}</div>
     </article>`;
   }).join('')+'</div>';
 
@@ -1439,6 +1450,7 @@ function defaults(col,ds){
 document.addEventListener('change',e=>{if(e.target&&e.target.id==='f-mediafile'){const f=e.target.files&&e.target.files[0];e.target.value='';attachMedia(f)}});
 document.addEventListener('paste',e=>{if(!modalCtx||modalCtx.col!=='refs')return;const it=[...(e.clipboardData&&e.clipboardData.items||[])].find(i=>i.kind==='file'&&/^image\//.test(i.type));if(it){e.preventDefault();attachMedia(it.getAsFile())}});
 document.addEventListener('error',e=>{const t=e.target;if(t&&t.hasAttribute&&t.hasAttribute('data-media')){const d=document.createElement('div');d.className='media-empty';d.textContent='Prévia indisponível.';t.replaceWith(d)}},true);
+document.addEventListener('toggle',e=>{const t=e.target;if(t&&t.classList&&t.classList.contains('cmore')){(state.compOpen||(state.compOpen={}))[t.dataset.id]=t.open}},true);
 document.addEventListener('toggle',e=>{if(e.target&&e.target.classList&&e.target.classList.contains('bussola'))LS.set('cl.bussolaFechada',!e.target.open)},true);
 document.addEventListener('keydown',e=>{
   if(e.key==='Escape'){if(!$('#sheet').hidden)closeSheet();else if(!$('#modal').hidden)closeModal()}
