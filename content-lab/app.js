@@ -288,17 +288,26 @@ async function fillRefWithClaude(btnEl){
 }
 
 /* ---------- referências ---------- */
-const refTipo=r=>r.origem==='radar'?'radar':r.origem==='importador'||/concorrente/.test(String(r.tags||''))?'concorrente':'manual';
+const refTipo=r=>r.origem==='radar'?'radar':'manual';
+/* Referências são do mercado: a própria marca e os concorrentes (que têm aba própria) ficam fora */
+const perfilKey=h=>String(h||'').trim().toLowerCase().replace(/^https?:\/\/(www\.)?instagram\.com\//,'').replace(/^@/,'').replace(/[\/?#].*$/,'');
+function perfisFora(){
+  const b=curBrand()||{}, s=new Set([perfilKey(b.channels&&b.channels.instagram&&b.channels.instagram.handle),perfilKey(b.name)]);
+  for(const c of state.data.competitors){s.add(perfilKey(c.instagram));s.add(perfilKey(c.name))}
+  s.delete('');return s;
+}
+function refsMercado(){const fora=perfisFora();return state.data.refs.filter(r=>r.origem!=='importador'&&!/concorrente|minha marca/.test(String(r.tags||''))&&!fora.has(perfilKey(r.creator)))}
 function viewRefs(){
   /* ordem da bússola: mais parecidas com a marca primeiro; alcance pago por último */
   const peso=r=>{const t=String(r.tags||'');return (t.includes('fit alto')||t.includes('alta semelhança')?0:t.includes('viral no nicho')?1:2)+(t.includes('possivelmente pago')?3:0)};
-  const all=state.data.refs.slice().sort((a,b)=>peso(a)-peso(b)||String(b.createdAt).localeCompare(String(a.createdAt)));
+  const all=refsMercado().sort((a,b)=>peso(a)-peso(b)||String(b.createdAt).localeCompare(String(a.createdAt)));
   const list=state.f.refTipo?all.filter(r=>refTipo(r)===state.f.refTipo):all;
-  let h=head('Referências virais','O que está em alta no Instagram e cabe na marca: oportunidades do radar (qualquer perfil, com fit avaliado pelo Claude), Reels dos concorrentes e as que você salvou.',
+  let h=head('Referências virais','O que está em alta no mercado e cabe nos canais da marca: oportunidades do radar (perfis de todo o Instagram, com fit avaliado pelo Claude) e as que você salvou. Concorrentes ficam na aba Concorrentes.',
     aiBtn('Padrões em comum','ai-refs-all')+igBtn()+btn('Nova referência','new','data-col="refs"','primary'));
   h+=igStatus();
   h+=bussola();
-  h+=`<div class="toolbar">${chips('refTipo',[['','Todas'],['radar','Oportunidades'],['concorrente','Concorrentes'],['manual','Salvas por você']],state.f.refTipo)}</div>`;
+  autoBussola(all);
+  h+=`<div class="toolbar">${chips('refTipo',[['','Todas'],['radar','Oportunidades do radar'],['manual','Salvas por você']],state.f.refTipo)}</div>`;
   if(!all.length)return h+empty('Nenhuma referência ainda','Salve o link de um post que viralizou e anote o gancho e por que funcionou.',btn('Nova referência','new','data-col="refs"','primary'));
   if(!list.length)return h+empty('Nada neste filtro',state.f.refTipo==='radar'?'O radar roda junto com o botão "Atualizar Instagram", no máximo 1 vez por semana.':'Troque o filtro ou adicione uma nova referência.');
   h+='<div class="grid">'+list.map(r=>{
@@ -341,10 +350,10 @@ function emAltaGoogle(){
 }
 function bussola(){
   const b=state.data.insights.find(x=>x.id==='bussola');
-  const up=aiBtn(b?'Atualizar Bússola':'Gerar Bússola','ai-bussola','','sm');
-  if(!b)return `<div class="bussola empty-b"><div><span class="eyebrow">Bússola de conteúdo</span><p class="muted">O Claude lê as referências e os números reais e diz o que está funcionando no nicho e o que produzir agora.</p></div>${up}</div>`;
+  const up=state.bussolaRodando?`<span class="rstat pending"><span class="pulse"></span>Atualizando com as referências novas...</span>`:aiBtn(b?'Atualizar Bússola':'Gerar Bússola','ai-bussola','','sm');
+  if(!b)return `<div class="bussola empty-b"><div><span class="eyebrow">Bússola de conteúdo</span><p class="muted">O Claude lê as referências e os números reais e diz o que está funcionando no mercado e o que produzir agora. Ela se atualiza sozinha quando as referências mudam.</p></div>${up}</div>`;
   const li=(arr,f)=>(Array.isArray(arr)?arr:[]).map(f).join('');
-  return `<details class="bussola" ${LS.get('cl.bussolaFechada',false)?'':'open'}><summary><span class="eyebrow">Bússola de conteúdo</span><b>O que está viralizando no nicho da marca e o que fazer agora</b><span class="muted small">${b.atualizadoEm?'atualizada em '+fmtDay(String(b.atualizadoEm).slice(0,10)):''}${b.base?' · '+esc(b.base):''}</span></summary>
+  return `<details class="bussola" ${LS.get('cl.bussolaFechada',false)?'':'open'}><summary><span class="eyebrow">Bússola de conteúdo</span><b>O que está viralizando no mercado e o que fazer agora</b><span class="muted small">${b.atualizadoEm?'atualizada em '+fmtDay(String(b.atualizadoEm).slice(0,10)):''}${b.base?' · '+esc(b.base):''}</span></summary>
     <div class="b-grid">
       <section><h4>Funciona</h4><ul>${li(b.funciona,x=>`<li><b>${esc(x.titulo)}</b>${x.prova?`<span class="prova">${esc(x.prova)}</span>`:''}${x.acao?`<span class="acao">→ ${esc(x.acao)}</span>`:''}</li>`)}</ul></section>
       <section><h4>Evite</h4><ul>${li(b.evitar,x=>`<li><b>${esc(x.titulo)}</b>${x.prova?`<span class="prova">${esc(x.prova)}</span>`:''}</li>`)}</ul>
@@ -354,19 +363,33 @@ function bussola(){
     <div class="foot">${up}<span class="muted small">Viu algo viralizando na aba Explorar? Tire um print e cole em Nova referência: o Claude preenche e a Bússola passa a considerar.</span></div>
   </details>`;
 }
+/* a Bússola acompanha as Referências: quando elas mudam (nova, editada ou apagada), o Claude refaz a leitura */
+let bussolaAuto='';
+function bussolaDesatualizada(refs){
+  const b=state.data.insights.find(x=>x.id==='bussola');if(!b)return refs.length>=3;
+  const ult=refs.reduce((m,r)=>{const t=String(r.updatedAt||r.createdAt||'');return t>m?t:m},'');
+  return ult>String(b.atualizadoEm||'')||(typeof b.nRefs==='number'&&b.nRefs!==refs.length);
+}
+function autoBussola(refs){
+  if(!sample||state.bussolaRodando||refs.length<3||!bussolaDesatualizada(refs))return;
+  const assin=refs.length+'|'+refs.map(r=>r.updatedAt||r.createdAt||'').sort().pop();
+  if(assin===bussolaAuto)return;bussolaAuto=assin;
+  setTimeout(()=>refreshBussola(null),0);
+}
 async function refreshBussola(btnEl){
   if(!sample){toast('A Bússola é atualizada pelo Claude quando a central é aberta no Claude.');return}
-  const refs=state.data.refs, cn=state.data.compnews.filter(n=>kindOf(n)==='conteudo'), posts=state.data.posts.filter(p=>p.status==='publicado');
-  if(refs.length+cn.length<3){toast('Salve algumas referências primeiro.');return}
-  const old=btnEl.innerHTML;btnEl.disabled=true;btnEl.innerHTML=SPARK+'Analisando...';
+  const refs=refsMercado(), posts=state.data.posts.filter(p=>p.status==='publicado');
+  if(refs.length<3){if(btnEl)toast('Salve algumas referências primeiro.');return}
+  const old=btnEl?btnEl.innerHTML:'';if(btnEl){btnEl.disabled=true;btnEl.innerHTML=SPARK+'Analisando...'}
+  state.bussolaRodando=true;if(!btnEl)renderMain(true);
   try{
-    const r=await sample.json(`${RULES}\n\n${brandCtx()}\n\nREFERÊNCIAS (posts que funcionaram, com números reais)\n${lines(refs,x=>`- ${x.creator||''} [${x.format||''}] "${x.hook||''}" | ${x.views||''} | etiquetas: ${x.tags||''} | por que: ${x.why||''}`,40)}\n\nCONTEÚDOS RECENTES DOS CONCORRENTES\n${lines(cn,x=>`- ${x.competitorName||''} ${x.date||''} [${x.format||''}] "${x.title}" | ${x.signal||''}`,40)}\n\nPUBLICADOS PELA MARCA\n${lines(posts,x=>`- ${x.date} [${x.format||''}] "${x.title}" | ${x.notes||''}`,30)}\n\nBUSCAS EM ALTA NO GOOGLE (Brasil)\n${(()=>{const t=state.data.insights.find(x=>x.id==='tendencias');return t&&Array.isArray(t.termos)?t.termos.map(x=>`- ${x.termo}: ${(x.subindo||[]).map(q=>q.busca+' ('+q.valor+')').join('; ')}`).join('\n'):'sem dados'})()}\n\nTAREFA: você é estrategista de conteúdo da marca. Compare o que viralizou no nicho com o que a marca publica. Considere "alcance possivelmente pago" como formato de anúncio, não como viral orgânico. Responda só com JSON: {"base":"de onde vêm os dados, curto","funciona":[{"titulo":"padrão que funciona","prova":"exemplos e números reais das listas acima","acao":"como a marca aplica"}],"evitar":[{"titulo":"","prova":""}],"agora":["3 a 5 ações concretas para as próximas 2 semanas"]}. Use no máximo 5 itens em funciona e 3 em evitar. Nunca invente números.`,{cache:false});
+    const r=await sample.json(`${RULES}\n\n${brandCtx()}\n\nREFERÊNCIAS DO MERCADO (posts de outros perfis que funcionaram, com números reais)\n${lines(refs,x=>`- ${x.creator||''} [${x.format||''}] "${x.hook||''}" | ${x.views||''} | etiquetas: ${x.tags||''} | por que: ${x.why||''}${x.fit?' | como a marca entra: '+x.fit:''}`,40)}\n\nPUBLICADOS PELA MARCA\n${lines(posts,x=>`- ${x.date} [${x.format||''}] "${x.title}" | ${x.notes||''}`,30)}\n\nBUSCAS EM ALTA NO GOOGLE (Brasil)\n${(()=>{const t=state.data.insights.find(x=>x.id==='tendencias');return t&&Array.isArray(t.termos)?t.termos.map(x=>`- ${x.termo}: ${(x.subindo||[]).map(q=>q.busca+' ('+q.valor+')').join('; ')}`).join('\n'):'sem dados'})()}\n\nTAREFA: você é estrategista de conteúdo da marca. Compare o que está viralizando no mercado com o que a marca publica. Considere "alcance possivelmente pago" como formato de anúncio, não como viral orgânico. Responda só com JSON: {"base":"de onde vêm os dados, curto","funciona":[{"titulo":"padrão que funciona","prova":"exemplos e números reais das listas acima","acao":"como a marca aplica"}],"evitar":[{"titulo":"","prova":""}],"agora":["3 a 5 ações concretas para as próximas 2 semanas"]}. Use no máximo 5 itens em funciona e 3 em evitar. Nunca invente números.`,{cache:false});
     if(!r||!Array.isArray(r.funciona))throw {code:'invalid_json'};
     const doc={atualizadoEm:new Date().toISOString(),base:clean(r.base||''),funciona:r.funciona.slice(0,5).map(x=>({titulo:clean(x.titulo),prova:clean(x.prova),acao:clean(x.acao)})),
-      evitar:(r.evitar||[]).slice(0,3).map(x=>({titulo:clean(x.titulo),prova:clean(x.prova)})),agora:(r.agora||[]).slice(0,5).map(clean),origem:'claude'};
-    await Store.set(bpath('insights'),'bussola',doc);toast('Bússola atualizada');
-  }catch(e){toast(aiErrMsg(e),4500)}
-  finally{if(btnEl.isConnected){btnEl.disabled=false;btnEl.innerHTML=old}}
+      evitar:(r.evitar||[]).slice(0,3).map(x=>({titulo:clean(x.titulo),prova:clean(x.prova)})),agora:(r.agora||[]).slice(0,5).map(clean),origem:'claude',nRefs:refs.length};
+    await Store.set(bpath('insights'),'bussola',doc);toast(btnEl?'Bússola atualizada':'Bússola atualizada com as referências novas');
+  }catch(e){if(btnEl)toast(aiErrMsg(e),4500)}
+  finally{state.bussolaRodando=false;if(btnEl&&btnEl.isConnected){btnEl.disabled=false;btnEl.innerHTML=old}else if(!btnEl)renderMain(true)}
 }
 
 /* ---------- calendário ---------- */
@@ -752,20 +775,18 @@ function viewComps(){
   const byComp=allNews.filter(n=>(!state.f.compFilter||n.competitorId===state.f.compFilter));
   const byKind=byComp.filter(n=>!state.f.compKind||kindOf(n)===state.f.compKind);
   const news=byKind.filter(n=>inPeriod(n,state.f.compPeriod));
-  const refLinks=new Set(state.data.refs.map(r=>linkKey(r.url)).filter(Boolean));
   h+=`<div class="sec-row" id="compNews"><h3 class="dsec">Conteúdos e notícias dos concorrentes <span>${news.length}</span></h3>${btn('+ Adicionar','new','data-col="compnews"','sm ghost')}</div>
   <div class="toolbar">${chips('compKind',CC_KINDS.map(([v,l])=>[v,`${l} <span class="cnt">${byComp.filter(n=>inPeriod(n,state.f.compPeriod)&&(!v||kindOf(n)===v)).length}</span>`]),state.f.compKind)}</div>
   <div class="toolbar"><span class="eyebrow">Período</span>${chips('compPeriod',CC_PERIODS.map(([v,l])=>[v,`${l} <span class="cnt">${byKind.filter(n=>inPeriod(n,v)).length}</span>`]),state.f.compPeriod)}</div>
   <div class="toolbar">${chips('compFilter',[['','Todos'],...list.map(c=>[c.id,esc(c.name)])],state.f.compFilter)}</div>`;
   if(!news.length)h+=`<p class="muted">Nada nesse filtro. De segunda a sexta, a rotina da manhã acompanha o que cada concorrente publica e o que sai sobre ele.</p>`;
   else h+='<div class="stack">'+news.map(n=>{const u=safeUrl(n.url), isC=kindOf(n)==='conteudo';
-    const toRefs=isC&&['instagram','tiktok'].includes(n.channel), inRefs=toRefs&&refLinks.has(linkKey(n.url));
     return `<article class="row${isC?' crow':''}">${validAsset(n.media)?`<div class="thumb">${u?`<a href="${esc(u)}" target="_blank" rel="noopener" tabindex="-1">`:''}${mediaTag(n.media,n.mediaType)}${u?'</a>':''}</div>`:''}<div class="row-main">
       <div class="meta"><span class="cname">${esc(names[n.competitorId]||n.competitorName||'Concorrente')}</span>${isC?`<span class="kind">Conteúdo</span>${n.channel?chCode(n.channel):''}${n.format?`<span>${esc(n.format)}</span>`:''}`:`<span class="kind news">Notícia</span>${n.source?`<span class="src">${esc(n.source)}</span>`:''}`}${n.date?`<span>${fmtDay(n.date)}</span>`:''}${n.tag?`<span class="tagpill">${esc(n.tag)}</span>`:''}${exTag(n)}</div>
       <h3>${u?`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(n.title)}</a>`:esc(n.title)}</h3>
       ${n.signal?`<div class="signal">▲ ${esc(n.signal)}</div>`:''}
       ${n.summary?`<p>${esc(n.summary)}</p>`:''}
-    </div><div class="row-actions">${isC?aiBtn('Adaptar para a marca','ai-compcontent-adapt',`data-id="${esc(n.id)}"`,'sm'):aiBtn('Como responder','ai-compnews-one',`data-id="${esc(n.id)}"`,'sm')}${toRefs?(inRefs?'<span class="btn sm" aria-disabled="true">Já em Referências ✓</span>':btn('Salvar em Referências','comp-to-refs',`data-id="${esc(n.id)}"`,'sm')):''}${btn('Editar','edit',`data-col="compnews" data-id="${esc(n.id)}"`,'sm ghost')}</div></article>`}).join('')+'</div>';
+    </div><div class="row-actions">${isC?aiBtn('Adaptar para a marca','ai-compcontent-adapt',`data-id="${esc(n.id)}"`,'sm'):aiBtn('Como responder','ai-compnews-one',`data-id="${esc(n.id)}"`,'sm')}${btn('Editar','edit',`data-col="compnews" data-id="${esc(n.id)}"`,'sm ghost')}</div></article>`}).join('')+'</div>';
   return h;
 }
 async function requestResearch(c){
@@ -936,6 +957,7 @@ async function saveItem(){
   try{
     if(col==='__brand'){await createBrand(vals);closeModal();return}
     if(col==='compnews'){const c=state.data.competitors.find(x=>x.id===vals.competitorId);vals.competitorName=c?c.name:''}
+    if(col==='refs'&&vals.creator&&perfisFora().has(perfilKey(vals.creator))){err.textContent='Esse perfil é da própria marca ou de um concorrente. Referências são de outros perfis do mercado; o concorrente é acompanhado na aba Concorrentes.';err.hidden=false;return}
     if(col==='refs'){if(!validAsset(vals.media)){vals.media='';vals.mediaType=''}modalCtx.keep=vals.media}
     if(item){await Store.set(bpath(col),item.id,Object.assign(strip(item),vals,{updatedAt:new Date().toISOString()}));toast('Alterações salvas');
       if(col==='refs'&&assets&&validAsset(item.media)&&item.media!==vals.media)assets.delete(item.media).catch(()=>{})}
@@ -1178,13 +1200,6 @@ document.addEventListener('click',async e=>{
       if(fk==='mPeriod'&&el.dataset.v==='custom'&&state.f.mPeriod!=='custom'){const R=mRange();state.f.mFrom=iso(R.a);state.f.mTo=iso(R.b);LS.set('cl.mFrom',state.f.mFrom);LS.set('cl.mTo',state.f.mTo)}
       state.f[fk]=el.dataset.v;if(fk==='newsPeriod'||fk==='mPeriod'||fk==='compPeriod'||fk==='compKind')LS.set('cl.'+fk,el.dataset.v);renderMain(true);break}
     case 'comp-news':{state.f.compFilter=el.dataset.v;renderMain(true);const t=document.getElementById('compNews');if(t)t.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});break}
-    case 'comp-to-refs':{const n=state.data.compnews.find(x=>x.id===id);if(!n||el.disabled)break;el.disabled=true;
-      if(n.url&&state.data.refs.some(r=>linkKey(r.url)===linkKey(n.url))){toast('Esse post já está em Referências.');break}
-      const comp=state.data.competitors.find(c=>c.id===n.competitorId)||{};
-      const handle=n.channel==='instagram'&&comp.instagram&&!/\//.test(comp.instagram)?'@'+String(comp.instagram).replace(/^@/,''):'';
-      const ref={platform:n.channel==='tiktok'?'tiktok':'instagram',format:n.format||'',url:n.url||'',creator:handle||n.competitorName||comp.name||'',views:n.signal||'',hook:n.title||'',why:n.summary||'',tags:'concorrente'};
-      if(validAsset(n.media)){ref.media=n.media;ref.mediaType=n.mediaType||'image'}
-      try{await Store.add(bpath('refs'),ref);el.textContent='Salvo em Referências ✓'}catch(_){el.disabled=false}break}
     case 'comp-import':{if(el.disabled)break;el.disabled=true;await requestImport();break}
     case 'comp-research':{const c=state.data.competitors.find(x=>x.id===id);if(!c||el.disabled)break;el.disabled=true;await requestResearch(c);break}
     case 'm-apply':{const a=$('#mFrom').value,b=$('#mTo').value;if(!a||!b){toast('Escolha as duas datas.');break}

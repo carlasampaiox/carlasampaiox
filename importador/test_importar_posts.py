@@ -159,6 +159,7 @@ class Plano(unittest.TestCase):
         self.assertNotIn("Produto", r["radar"]["query"])
         self.assertIn("Demographics: Investidores de alta renda;", r["radar"]["audienceQuery"])
         self.assertEqual(r["custo"], 10)  # radar + @ativo
+        self.assertEqual(r["radar"]["excluir"], ["ativo", "minha", "parado"])  # marca e concorrentes fora
         self.assertIn("radar de oportunidades", r["motivo"])
         ip.registrar_plano(c, r)
         self.assertEqual(c["radarUltimo"], REF.isoformat())
@@ -243,6 +244,30 @@ Reel BBB — 153 plays
         self.assertIn("x a mediana do perfil", doc["views"])
         self.assertIn("alcance possivelmente pago", ip.doc_referencia(d[0], None)["tags"])
 
+    def test_concorrente_e_marca_nunca_viram_referencia(self):
+        def reel(code, plays, likes, dia, texto):
+            return (f"### {code} — {plays} plays, {likes} likes, 30s, posted 2026-09-{dia:02d}\n"
+                    f"https://www.instagram.com/reel/{code}/\n> \"{texto}\"\n\n")
+        txt = ("## @conc — 5 reels\n\n" + reel("C1", 100, 5, 20, "bom dia") + reel("C2", 120, 5, 21, "café")
+               + reel("C3", 110, 5, 22, "rotina") + reel("C4", 90, 5, 23, "treino")
+               + reel("CV", 5000, 300, 24, "Como declarar ações no imposto de renda e pagar DARF"))
+        with tempfile.TemporaryDirectory() as d:
+            d = Path(d)
+            (d / "vidiq").mkdir()
+            (d / "vidiq/ig-conc.md").write_text(txt, encoding="utf-8")
+            (d / "vidiq/ig-minha.md").write_text(txt.replace("@conc", "@minha"), encoding="utf-8")
+            estado = {"brands": [{"id": "m", "channels": {"instagram": {"handle": "@minha"}}, "pillars": ["Tributação e IR"],
+                                  "competitors": [{"id": "c", "name": "Conc", "instagram": "@conc"}], "existingLinks": []}]}
+            with mock.patch.dict(os.environ, {"META_ACCESS_TOKEN": "", "YOUTUBE_API_KEY": ""}):
+                pac = ip.montar_pacote(estado, ip.buscador_simulado(REF), d / "out", ip.Config(), REF,
+                                       log=lambda _: None, vidiq=d / "vidiq", controle={})
+        cols = [i["colecao"] for i in pac["itens"]]
+        self.assertNotIn("refs", cols)
+        viral = [i["doc"] for i in pac["itens"] if i["colecao"] == "compnews" and i["doc"]["url"].endswith("/CV/")]
+        self.assertEqual(len(viral), 1)
+        self.assertEqual(viral[0]["tag"], "fora da curva")
+        self.assertIn("x a mediana do perfil", viral[0]["signal"])
+
     def test_numero_abreviado(self):
         self.assertEqual(ip.numero_abreviado("175.4K"), (175400, "175,4 mil"))
         self.assertEqual(ip.numero_abreviado("1.7M"), (1700000, "1,7 mi"))
@@ -267,10 +292,10 @@ class Fluxo(unittest.TestCase):
         self.assertNotIn("https://www.instagram.com/p/concorrentea1/", urls)
         # post de 20 dias atrás fica fora da janela de 14
         self.assertNotIn("https://www.instagram.com/p/concorrentea3/", urls)
-        # 3 do Instagram + 3 do YouTube em compnews, 1 ref do Instagram
+        # 3 do Instagram + 3 do YouTube em compnews; concorrente e a própria marca nunca viram referência
         cols = [i["colecao"] for i in pac["itens"]]
         self.assertEqual(cols.count("compnews"), 6)
-        self.assertEqual(cols.count("refs"), 1)
+        self.assertEqual(cols.count("refs"), 0)
         # perfil inexistente vira aviso, não quebra a execução
         self.assertTrue(any("naoexiste" in a for a in pac["avisos"]))
         # nada de travessão nos textos gerados

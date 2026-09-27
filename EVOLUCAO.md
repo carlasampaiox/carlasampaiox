@@ -23,7 +23,7 @@ Leia antes: `CLAUDE.md`, `content-lab/CLAUDE.md` e `EVOLUCAO-LOG.md` (o que já 
 
 ## Passos de cada execução
 1. `git pull`. Rode os testes (`cd importador && pip install "feedparser>=6,<7" && python3 -m unittest`). Se falharem, a prioridade é consertar.
-2. Saúde: `dados/coleta.json` é de hoje? Houve avisos? O banco tem duplicados ou campos vazios nas abas? A Bússola tem mais de 7 dias (se sim, atualize com os dados atuais, escrevendo `brands/{marca}/insights/bussola` com provas numéricas reais)?
+2. Saúde: `dados/coleta.json` é de hoje? Houve avisos? O banco tem duplicados ou campos vazios nas abas? A Bússola é mais antiga que a referência mais recente ou tem `nRefs` diferente do total, ou tem mais de 7 dias (se sim, atualize com os dados atuais, escrevendo `brands/{marca}/insights/bussola` com provas numéricas reais e `nRefs`)? Referências nunca podem ter perfis da própria marca ou de concorrentes: se aparecer algum, mova para `compnews`.
 3. Faça no máximo 3 refinamentos e, se for permitido nesta semana, 1 recurso novo.
 4. Antes de cada commit: `python3 -m unittest` (importador), `python3 build.py --check` e `node --check app.js` (content-lab) e o teste de fumaça (`NODE_PATH=$(npm root -g) node tests/smoke.cjs`).
 5. Anote em `EVOLUCAO-LOG.md` (data, o que mudou, por quê, resultado) e faça commit e push na branch acima.

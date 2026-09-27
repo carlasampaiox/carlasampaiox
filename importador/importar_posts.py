@@ -569,9 +569,12 @@ def radar_consulta(estado: dict, hoje_: dt.date) -> dict | None:
     partes = ([marca["niche"]] if marca.get("niche") else []) + temas + [
         "trends e memes do mercado financeiro que estão viralizando"]
     publico = marca.get("audience", "").split(".")[0].strip() or "investidores pessoa física"
+    # a aba Referências é do mercado: a própria marca e os concorrentes (que têm aba própria) ficam fora
+    excluir = sorted({h.lower() for h in [usuario_instagram(((marca.get("channels") or {}).get("instagram") or {}).get("handle", ""))]
+                      + [usuario_instagram(c.get("instagram", "")) for c in marca.get("competitors", [])] if h})
     return {"query": ", ".join(partes), "audienceQuery": f"Culture/Region: Brasil; Global: false; Demographics: {publico};",
             "descriptionLanguage": ["pt"], "datePostedAfter": (hoje_ - dt.timedelta(days=30)).isoformat(),
-            "viewsMin": 10000, "resultsPerPlatform": 15}
+            "viewsMin": 10000, "resultsPerPlatform": 15, "excluir": excluir}
 
 
 def radar_vencido(controle: dict, hoje_: dt.date) -> bool:
@@ -781,37 +784,32 @@ def montar_pacote(estado: dict, buscar: Buscador, pasta: Path, cfg: Config,
         temas = temas_da_marca(marca)
 
         def registrar(posts: list[Post], quem: dict | None, refs_extra: list[Post] = ()) -> None:
-            ordem_refs = 0
-            for p in refs_extra:  # destaques fora da curva viram referência mesmo fora da janela
+            """Concorrentes vão só para a aba Concorrentes; a própria marca, para Calendário e Métricas.
+
+            A aba Referências é do mercado em geral (radar), então nada daqui vira referência.
+            O Reel fora da curva do concorrente entra como conteúdo dele com a etiqueta "fora da curva".
+            """
+            destaque = {normalizar_link(p.url) for p in refs_extra}
+            vistos: set[str] = set()
+            for p in [*refs_extra, *posts]:
                 k = normalizar_link(p.url)
-                if k in existentes or ordem_refs >= (cfg.refs_por_perfil if quem else cfg.por_perfil):
+                if k in existentes or k in vistos or quem is None:
                     continue
-                existentes.add(k)
-                ordem_refs += 1
-                arquivo, tipo = copiar_midia(Path(p.arquivo_local), midia_dir) if p.arquivo_local else baixar_midia(buscar, p.imagem, midia_dir)
-                itens.append({"brandId": bid, "arquivo": arquivo, "mediaType": tipo, "plataforma": p.plataforma,
-                              "pontuacao": round(p.pontuacao(), 1), "colecao": "refs", "doc": doc_referencia(p, quem)})
-            for p in posts:
-                k = normalizar_link(p.url)
-                if k in existentes:
-                    continue
+                vistos.add(k)
                 existentes.add(k)
                 if p.arquivo_local:
                     arquivo, tipo = copiar_midia(Path(p.arquivo_local), midia_dir)
                 else:
                     arquivo, tipo = baixar_midia(buscar, p.imagem, midia_dir)
-                base = {"brandId": bid, "arquivo": arquivo, "mediaType": tipo,
-                        "plataforma": p.plataforma, "pontuacao": round(p.pontuacao(), 1)}
-                if quem is not None:
-                    itens.append(dict(base, colecao="compnews", doc={
-                        "kind": "conteudo", "competitorId": quem["id"], "competitorName": quem.get("name", ""),
-                        "channel": p.plataforma, "format": p.formato, "title": p.titulo, "url": p.url,
-                        "date": p.data, "signal": p.sinal(), "summary": resumo(p),
-                        "origem": "importador"}))
-                # Referências: fora do modo vidIQ (API da Meta), o melhor recente ainda vira referência
-                if p.plataforma == "instagram" and not vidiq and ordem_refs < (cfg.refs_por_perfil if quem else cfg.por_perfil):
-                    ordem_refs += 1
-                    itens.append(dict(base, colecao="refs", doc=doc_referencia(p, quem)))
+                doc = {"kind": "conteudo", "competitorId": quem["id"], "competitorName": quem.get("name", ""),
+                       "channel": p.plataforma, "format": p.formato, "title": p.titulo, "url": p.url,
+                       "date": p.data, "signal": p.sinal(), "summary": resumo(p), "origem": "importador"}
+                if k in destaque:
+                    doc["tag"] = "fora da curva"
+                    if p.vezes:
+                        doc["signal"] += f" · {str(p.vezes).replace('.', ',')}x a mediana do perfil"
+                itens.append({"brandId": bid, "arquivo": arquivo, "mediaType": tipo, "plataforma": p.plataforma,
+                              "pontuacao": round(p.pontuacao(), 1), "colecao": "compnews", "doc": doc})
 
         # concorrentes
         for c in marca.get("competitors", []):

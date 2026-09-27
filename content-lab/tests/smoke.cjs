@@ -39,6 +39,11 @@ const TABS = ['noticias', 'referencias', 'calendario', 'datas', 'marca', 'ideias
   if (radar.length !== 1 || !radar[0].includes('@exemplo.corre')) erros.push('filtro Oportunidades não mostra só o radar');
   if (!radar.some(t => t.includes('Como a marca entra'))) erros.push('fit da marca ausente no radar');
   await page.click('[data-f="refTipo"][data-v=""]');
+  const refsTexto = await page.$eval('#main', e => e.textContent);
+  if (refsTexto.includes('não deve aparecer')) erros.push('referência de concorrente aparece em Referências');
+  await page.click('#tabs [data-tab="concorrentes"]');
+  if (await page.$('[data-act="comp-to-refs"]')) erros.push('botão Salvar em Referências ainda aparece em Concorrentes');
+  await page.click('#tabs [data-tab="referencias"]');
   await page.click('#tabs [data-tab="marca"]');
   const [dl] = await Promise.all([page.waitForEvent('download', { timeout: 5000 }), page.click('[data-act="brand-backup"]')]);
   const conteudo = JSON.parse(require('fs').readFileSync(await dl.path(), 'utf8'));

@@ -31,7 +31,7 @@ Notícias, Referências, Calendário, Datas importantes, Marca, Mapa de ideias, 
 ## Banco (capability `db` do artifact)
 - `brands/{marca}`: configurações da marca (nome, nicho, público, tom, pilares, canais, fontes, briefing).
 - `brands/{marca}/news`: notícias do nicho (title, url, source, date, tag, summary).
-- `brands/{marca}/refs`: referências virais. Campos: platform (instagram; TikTok está fora por enquanto), format, url, creator, views, hook, why, tags, media (id de asset de 32 caracteres), mediaType (image ou video), fit (como a marca entra), origem (`radar` para oportunidades do Instagram em geral, `importador` para Reels de concorrentes). A aba filtra por Oportunidades, Concorrentes e Salvas por você.
+- `brands/{marca}/refs`: referências virais. Campos: platform (instagram; TikTok está fora por enquanto), format, url, creator, views, hook, why, tags, media (id de asset de 32 caracteres), mediaType (image ou video), fit (como a marca entra), origem (`radar` para oportunidades do Instagram em geral). **Referências são só do mercado:** a própria marca e os concorrentes nunca entram (a página esconde e bloqueia perfis da marca e dos concorrentes, e o importador manda os Reels deles para `compnews`). A aba filtra por Oportunidades do radar e Salvas por você.
 - `brands/{marca}/posts`: calendário (title, date, time, channel, format, status, pillar, caption, link, notes).
 - `brands/{marca}/dates`: datas importantes (title, date, recurring, type, lead = dias de antecedência, notes).
 - `brands/{marca}/ideas`: mapa de ideias (title, pillar, channels, format, status, source, notes).
@@ -71,10 +71,9 @@ Para rodar sem parar, a tarefa precisa estar com "Aprovar automaticamente" ligad
 ## Importador de posts (`../importador/`)
 - `importar_posts.py`: Instagram (Business Discovery) e YouTube Data API, melhores posts de 14 dias, capas baixadas, sem repetir links.
 - A gravação é feita pela rotina (ver `../importador/ROTINA.md`): assets pelo `Artifact` e documentos pelo `ArtifactData` em lotes de 50.
-- "Salvar em Referências" leva a prévia junto e não duplica (compara o link).
 
 ## Bússola de conteúdo (aba Referências)
-- Documento `brands/{marca}/insights/bussola` (funciona, evitar, agora, base, atualizadoEm). Mostrado no topo de Referências; o botão "Atualizar Bússola" usa o `sample` (Claude da página) sobre refs, conteúdos dos concorrentes e posts publicados. Não usa vidIQ.
+- Documento `brands/{marca}/insights/bussola` (funciona, evitar, agora, base, atualizadoEm). Mostrado no topo de Referências; o botão "Atualizar Bússola" usa o `sample` (Claude da página) sobre as referências do mercado, os posts publicados e o Google Trends. Não usa vidIQ nem conteúdo de concorrentes. **A Bússola acompanha as Referências:** o documento guarda `nRefs`; se uma referência for criada, editada ou apagada depois de `atualizadoEm` (ou o total mudar), a página refaz a Bússola sozinha ao abrir a aba. Rotinas que gravam referências (radar) reescrevem a Bússola no mesmo passo, com `nRefs`.
 - Referências "viral no nicho": visualizações >= 2x a mediana do perfil (últimos 180 dias) e semelhança de tema com a marca (TEMAS_BASE + pilares). Muitas visualizações com menos de 0,5% de curtidas recebem "alcance possivelmente pago" e vão para o fim da lista.
 - Aba Explorar do Instagram não tem acesso automático permitido: o caminho é print em Nova referência + "Preencher com o Claude".
 
