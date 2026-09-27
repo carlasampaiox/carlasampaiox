@@ -27,6 +27,9 @@ class Perfis(unittest.TestCase):
         self.assertEqual(perfis.ler_numero("youtube", YT), (3120, True))
         self.assertEqual(perfis.ler_numero("linkedin", IN), (7743, False))
         self.assertIsNone(perfis.ler_numero("instagram", "<html>Login</html>"))
+        emb = r'oe=6ABE\\",\\"followers_count\\":28272,\\"posts_count\\":635'
+        self.assertEqual(perfis.ler_numero("instagram", emb), (28272, False))
+        self.assertEqual(perfis.ler_numero("instagram", r'\"edge_followed_by\":{\"count\":61483}'), (61483, False))
 
     def test_urls(self):
         self.assertEqual(perfis.url_da_rede("instagram", "Myprofitweb"), "https://www.instagram.com/Myprofitweb/")

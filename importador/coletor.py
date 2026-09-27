@@ -362,7 +362,7 @@ def main(argv=None) -> int:
     if a.so_tendencias:
         t = tendencias(fontes)
         t["geradoEm"] = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
-        (pasta / "tendencias.json").write_text(json.dumps(t, ensure_ascii=False, indent=2), encoding="utf-8")
+        (pasta / "tendencias.json").write_text(json.dumps(t, ensure_ascii=False, indent=2, default=str), encoding="utf-8")
         print(f"Tendências: {len(t['termos'])} termos, {len(t['emAlta'])} assuntos em alta, avisos: {t['avisos']}")
         return 0
     velhas = set((pasta / "midia").glob("*")) if (pasta / "midia").exists() else set()
@@ -376,7 +376,7 @@ def main(argv=None) -> int:
     if fontes.get("tendencias") and not a.sem_tendencias:
         t = tendencias(fontes)
         t["geradoEm"] = r["geradoEm"]
-        (pasta / "tendencias.json").write_text(json.dumps(t, ensure_ascii=False, indent=2), encoding="utf-8")
+        (pasta / "tendencias.json").write_text(json.dumps(t, ensure_ascii=False, indent=2, default=str), encoding="utf-8")
         print(f"Tendências: {len(t['termos'])} termos, {len(t['emAlta'])} assuntos em alta, avisos: {t['avisos']}")
     por = {}
     for i in r["itens"]:

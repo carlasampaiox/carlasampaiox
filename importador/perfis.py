@@ -14,7 +14,6 @@ import argparse
 import datetime as dt
 import html
 import json
-import os
 import re
 import sys
 import time
@@ -28,7 +27,9 @@ UAS = ["facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php
 
 NUM = r"(\d[\d.,]*\s*(?:mil|mi|K|M|k|m)?)"
 PADROES = {
-    "instagram": [r'"edge_followed_by"\s*:\s*\{\s*"count"\s*:\s*(\d+)', r'"follower_count"\s*:\s*(\d+)', NUM + r"\s*(?:Followers|followers|seguidores)"],
+    # a página de incorporação traz o JSON do perfil com aspas escapadas: \\"followers_count\\":28272
+    "instagram": [r'followers_count\\*"\s*:\s*(\d+)', r'edge_followed_by\\*"\s*:\s*\{\\*"count\\*"\s*:\s*(\d+)',
+                  NUM + r"\s*(?:Followers|followers|seguidores)"],
     "youtube": [NUM + r"\s*(?:subscribers|inscritos)"],
     "linkedin": [NUM + r"\s*(?:followers|seguidores)"],
 }
@@ -100,9 +101,6 @@ def ler_perfil(rede: str, url: str, get: Callable[[str, str], str]) -> tuple[int
             r = ler_numero(rede, get(pagina, ua))
             if r:
                 return r
-            if os.environ.get("PERFIS_DIAGNOSTICO"):
-                txt = get(pagina, ua)
-                print(f"[diag] {pagina} {ua[:18]} {len(txt)} bytes:", [m.group(0) for m in re.finditer(r".{0,80}(?:follow|seguidor).{0,80}", txt, re.I)][:6])
             erros.append(f"{pagina} {ua[:18]}: número não encontrado")
         except Exception as e:  # noqa: BLE001  (bloqueio, 4xx, rede: tenta outro agente)
             erros.append(f"{pagina} {ua[:18]}: {e}")
