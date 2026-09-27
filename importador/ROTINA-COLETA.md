@@ -12,7 +12,7 @@ Content Lab: `https://claude.ai/artifact/JWoCf2AYGr2K39nSmCzm9R`
 2. **Coleta nova?** Leia `../dados/coleta.json`. Se `geradoEm` não for de hoje, avise no resumo que o GitHub Actions não rodou e siga com o que houver.
 3. **Estado.** Com `ArtifactData`, `out_dir` = `saida/dump`: `list brands` e, para cada marca, `list` de `competitors`, `compnews`, `refs`, `posts` e `news` (limit 1000). Depois `python3 importar_posts.py montar-estado --dump saida/dump --saida saida/estado.json`.
 3b. **Prévias das referências (toda referência precisa de capa).** `python3 capas.py --ligar saida/dump --saida ../dados --pendentes capas-pendentes.txt`.
-   - `prontas`: suba os `arquivo` com `Artifact` (`action: "publish"`, `url` do Content Lab, `asset: true`, `file_paths`) e grave em cada referência `{"media": "<id>", "mediaType": "image"}` (`ArtifactData` `batch`, `op: "update"`, `if_version` = `versao`).
+   - `prontas`: suba os `arquivo` com `Artifact` (`action: "publish"`, `url` do Content Lab, `asset: true`, `file_paths`) e grave em cada referência `{"media": "<id>", "mediaType": "image"}` (`ArtifactData` `batch`, `op: "update"`, com `if_version` = `versao` quando vier preenchido).
    - `pedidas`: o comando já acrescentou esses Reels em `capas-pendentes.txt`. Faça commit e push desse arquivo: o GitHub Actions "Capas dos Reels" baixa as capas e a próxima execução liga.
    - `falhas`: cite no resumo as que continuam sem capa.
 4. **Filtrar.** `python3 importar_posts.py coleta --estado saida/estado.json`. Se não houver itens novos, pule para o passo 8.
