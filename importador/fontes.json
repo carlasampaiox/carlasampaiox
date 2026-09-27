@@ -31,7 +31,9 @@
       "nome": "Myprofit",
       "youtube": "UC9dVD0WmrrzyB7cez_IQtNQ",
       "blogs": [],
-      "busca": "\"myProfit\""
+      "busca": "\"myProfit\"",
+      "instagram": "myprofitweb",
+      "linkedin": "linkedin.com/company/myprofitweb"
     },
     {
       "id": "bs2fj7391bo4wovt5nrw",
@@ -40,14 +42,17 @@
       "blogs": [
         "https://blog.grana.capital/feed/"
       ],
-      "busca": "\"Grana Capital\""
+      "busca": "\"Grana Capital\"",
+      "instagram": "grana.capital"
     },
     {
       "id": "c1",
       "nome": "Kinvo",
       "youtube": "https://www.youtube.com/@kinvoapp",
       "blogs": [],
-      "busca": "\"Kinvo\" investimentos"
+      "busca": "\"Kinvo\" investimentos",
+      "instagram": "kinvoapp",
+      "linkedin": "linkedin.com/company/kinvoapp"
     },
     {
       "id": "c2",
@@ -56,14 +61,17 @@
       "blogs": [
         "https://gorila.com.br/blog/feed/"
       ],
-      "busca": "\"Gorila\" investimentos"
+      "busca": "\"Gorila\" investimentos",
+      "instagram": "gorilainvest",
+      "linkedin": "linkedin.com/company/gorila"
     },
     {
       "id": "c3",
       "nome": "Investidor10",
       "youtube": "UCOcosY44MPuUsSMvAFrsAjQ",
       "blogs": [],
-      "busca": "\"Investidor10\""
+      "busca": "\"Investidor10\"",
+      "instagram": "investidor10br"
     }
   ],
   "tendencias": {

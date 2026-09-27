@@ -1,6 +1,6 @@
 name: Coletor gratuito do Content Lab
 # Todo dia às 6h10 (Brasília): YouTube (RSS oficial), Google Notícias (link real e
-# trecho da matéria), blogs e Google Trends (buscas em alta no Brasil).
+# trecho da matéria), blogs, seguidores públicos dos concorrentes e Google Trends.
 # Sem chaves e sem créditos. O resultado fica em dados/ e a rotina do Claude
 # "Coleta gratuita do Content Lab" importa o que for novo às 7h13.
 on:
@@ -26,6 +26,10 @@ jobs:
       - name: Coletar
         working-directory: importador
         run: python -u coletor.py --saida ../dados --sem-tendencias
+      - name: Seguidores e inscritos públicos (se falhar, fica o último número)
+        working-directory: importador
+        continue-on-error: true
+        run: timeout 240 python -u perfis.py --fontes fontes.json --saida ../dados
       - name: Google Trends (com prazo; se estourar, segue sem)
         working-directory: importador
         continue-on-error: true
