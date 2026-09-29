@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-28T17:37:24+00:00",
+  "geradoEm": "2026-09-29T15:43:07+00:00",
   "fonte": "coletor (GitHub Actions)",
   "itens": [
     {
@@ -16,8 +16,8 @@
         "title": "Como resolver Imposto de Renda de investimentos da bolsa atrasado | Fácil e rápido | Grana Capital",
         "url": "https://www.youtube.com/watch?v=zlh1H4K3ndU",
         "date": "2026-09-03",
-        "signal": "16.822 visualizações, 8 curtidas · 59,0x a mediana do canal · alcance possivelmente pago",
-        "summary": "Vídeo publicado em 03/09, com 16.822 visualizações, 8 curtidas.",
+        "signal": "17.632 visualizações, 8 curtidas · 61,9x a mediana do canal · alcance possivelmente pago",
+        "summary": "Vídeo publicado em 03/09, com 17.632 visualizações, 8 curtidas.",
         "origem": "coletor"
       }
     },
@@ -35,8 +35,8 @@
         "title": "Como resolver o Imposto de Renda dos investimentos bolsa | Automático e sem emitir DARF",
         "url": "https://www.youtube.com/watch?v=mbZ3_iP6QN4",
         "date": "2026-09-03",
-        "signal": "8.636 visualizações, 7 curtidas · 30,3x a mediana do canal",
-        "summary": "Vídeo publicado em 03/09, com 8.636 visualizações, 7 curtidas.",
+        "signal": "8.955 visualizações, 7 curtidas · 31,4x a mediana do canal",
+        "summary": "Vídeo publicado em 03/09, com 8.955 visualizações, 7 curtidas.",
         "origem": "coletor"
       }
     },
@@ -54,8 +54,8 @@
         "title": "Resolva o Imposto de Renda dos investimentos na bolsa em segundos |  Grana Capital",
         "url": "https://www.youtube.com/watch?v=92RRoH6bZPc",
         "date": "2026-09-09",
-        "signal": "220 visualizações, 9 curtidas",
-        "summary": "Shorts publicado em 09/09, com 220 visualizações, 9 curtidas.",
+        "signal": "222 visualizações, 9 curtidas",
+        "summary": "Shorts publicado em 09/09, com 222 visualizações, 9 curtidas.",
         "origem": "coletor"
       }
     },
@@ -92,8 +92,8 @@
         "title": "XP Consultoria completa 1 ano, quando o fee-based vale a pena e investimentos PF crescem 6,4%",
         "url": "https://www.youtube.com/watch?v=OFzOF7PV0yU",
         "date": "2026-09-08",
-        "signal": "112 visualizações, 3 curtidas · 2,0x a mediana do canal",
-        "summary": "Vídeo publicado em 08/09, com 112 visualizações, 3 curtidas.",
+        "signal": "113 visualizações, 3 curtidas · 2,0x a mediana do canal",
+        "summary": "Vídeo publicado em 08/09, com 113 visualizações, 3 curtidas.",
         "origem": "coletor"
       }
     },
@@ -141,25 +141,6 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "CDB no Imposto de Renda: quando o investimento precisa ser declarado",
-        "url": "https://arevista.com.br/imposto-de-renda/cdb-no-imposto-de-renda-quando-o-investimento-precisa-ser-declarado/",
-        "source": "A Revista",
-        "date": "2026-09-24",
-        "tag": "IR",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMirgFBVV95cUxPUFUtZ2xfT1JpcXBvQ29VRXZ5TEhXbGNPVm5CcTh1WWR4MGlPeHViY2JxODgwWXVaOENnQnlLN0thdUFTRTY2VHVETFkwWmtRN1FXT1BEY0NGWmc3Y3A4STJjVFBKNjZweU04Vll2MUZRNHVPckVtZzNUZzM5dy04TjQ2UXVodk9qM3hza3h1ejNTaG5mVUpaSFNjcFFEalRJQWRpUHNJNWR3TzRkZmc?oc=5"
-      ],
-      "contexto": "Investir em um Certificado de Depósito Bancário (CDB) não torna automaticamente o investidor obrigado a entregar a declaração do Imposto de Renda. A obrigação depende do conjunto da situação financeira do contribuinte, como renda recebida, patrimônio, rendimentos tributados exclusivamente na fonte e outras condições estabelecidas pela Receita Federal."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
         "title": "IR na bolsa: projeto amplia isenção para vendas de até R$ 60 mil",
         "url": "https://www.contabeis.com.br/noticias/79627/ir-na-bolsa-projeto-amplia-isencao-para-vendas-de-ate-r-60-mil/",
         "source": "Portal Contabeis",
@@ -181,7 +162,7 @@
       "doc": {
         "title": "Saudade do Tesouro IPCA+ 8%? Este investimento ainda oferece até IPCA+ 14%, com isenção de imposto de renda",
         "url": "https://www.seudinheiro.com/2026/colunistas/saudade-do-tesouro-ipca-8-este-investimento-ainda-oferece-ate-ipca-14-com-isencao-de-imposto-de-renda-julw/",
-        "source": "seudinheiro.com",
+        "source": "Seu Dinheiro",
         "date": "2026-09-23",
         "tag": "IR",
         "summary": "",
@@ -198,17 +179,37 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "STJ mantém cobrança de 20% de IR sobre ganho de capital em mais de 400 fundos imobiliários",
-        "url": "https://n1mais.com.br/investimentos/26590/fiis-decisao-stj-imposto-renda-fundos-imobiliarios/",
-        "source": "n1mais.com.br",
-        "date": "2026-09-21",
+        "title": "3 títulos de renda fixa isentos de imposto de renda para comprar com a Selic em queda, segundo a Empiricus",
+        "url": "https://www.seudinheiro.com/2026/renda-fixa/3-titulos-de-renda-fixa-isentos-de-imposto-de-renda-para-comprar-com-a-selic-em-queda-segundo-a-empiricus-mlim/",
+        "source": "Seu Dinheiro",
+        "date": "2026-09-22",
         "tag": "IR",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMimAFBVV95cUxObUMyYS1JWG43Zm9XZ3lZV0VCVDdTY2hVTDFrNWFMZWlRX0habTBiWjhRM1NXRVg1Rk5wSlY4eE5QVnVFWkx0dThzZ1B1RFlCOThaa3kwdDFHMzdLMW41Mi1oQzZ5bnFzRXg2SFZwY1Zia1d0ZThkZmFBQVFXeEpZU0g0VmVWd0trS2JTbWFKeHV1UmRBRmc4UA?oc=5"
-      ]
+        "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQZEU2ZEVPRkllSE9BSFlBcDJFdnk1RWZDS2dTT1N3N2JlYmR3VEZvQ2hNNDhWT0NTSkVkUEthZ1hGb1Y5Q2F0MkkzZ05wWlFfRkNWWndVb0NsVnhWRm5HYTNhLXA5THdBbndEX1E1c0ZILXN5b2lKRlRpUUUwU3FRQUtvVlZValhVdHcxeUNpQUlxRFdIR2xrUEJ0N3F4Q1ZzbmFXaFlOclBnMnExbXVnWmk2R1N0b0tXeEZob0p0WDRudktMWjdRdDhGVENsVjZES1FWaGpjMm1STFFna3RhNzFoZWFzNm9IN3RB?oc=5"
+      ],
+      "contexto": "3 títulos de renda fixa isentos de imposto de renda para comprar com a Selic em queda, segundo a Empiricus A nova fase dos juros favorece títulos de renda fixa indexados à inflação e reacende a perspectiva das debêntures incentivadas A renda fixa está entrando em uma nova fase. Depois de anos em que bastava esperar o próximo aumento dos juros para encontrar..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Como investir em dólar: ETFs, BDRs e conta no exterior",
+        "url": "https://www.nordinvestimentos.com.br/blog/videos/como-investir-em-dolar-etfs-bdrs-e-exterior/",
+        "source": "Nord Investimentos",
+        "date": "2026-09-28",
+        "tag": "IR",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMimAFBVV95cUxOUVZ3YnZQSHRMSFFLdENKLUNlMGszc3RDeUVrNjVfUlRULWJpNGNWNlcyTDJCUTZaX1g4Y1NkTnJTUFV4THdVVEJ5VFpKVTFqTXBEZEpOeVJqcHJzckxUZEV6ZEdBaUFYaFhmd3FxUTd1aEVLdERxcDFrT2RYUzNveXg5Y196TldXUUZ5R0R3UEpMM2hwaG9yMtIBngFBVV95cUxQS2FFR2twSnlJd0h6XzVRemZLaUlkVFdmU01MWndsdUNaQnBuQnd0eTFkUHZQNF9PSFVtYnlxTFNoWHFLTFZlRklmYXJIa1Rkb2ZEcW80SXRZdTRnWTZJbXJqZzlGSlpMZld1UmJzOUtGR25zRzIyN3NnUzZ4LUR6amYyMVFHN3cxNkNrNS1wbmJXd3NuZnFCaEtqUnhtdw?oc=5"
+      ],
+      "contexto": "Como investir em dólar: ETFs, BDRs e conta no exterior A alta da dívida pública, as incertezas do cenário macroeconômico e a proximidade das eleições têm levado muitos brasileiros a buscar formas de proteger o patrimônio. Uma das estratégias mais procuradas é investir em dólar, seja pela própria Bolsa brasileira, seja com o envio de recursos para uma conta..."
     },
     {
       "brandId": "mycapital",
@@ -217,7 +218,7 @@
       "mediaType": "",
       "doc": {
         "title": "Por que um investimento tributado pode valer mais que um isento? A Duquesa de Tax explica",
-        "url": "https://www.estadao.com.br/amp/economia/duquesa-de-tax/por-que-um-investimento-tributado-pode-valer-mais-que-um-isento-a-duquesa-de-tax-explica/",
+        "url": "https://www.estadao.com.br/economia/duquesa-de-tax/por-que-um-investimento-tributado-pode-valer-mais-que-um-isento-a-duquesa-de-tax-explica/",
         "source": "Estadão",
         "date": "2026-09-28",
         "tag": "IR",
@@ -225,9 +226,9 @@
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQb25jYlIyci1RT1RVeGZxemJfUnV3dG9yeDNCaURUVFpUeXdBenRHN2NEVGw1Rkswd0RsSnM5QkNhbEhOcExtRmVuWHZSbHU5eTc0MHl3aTJGVXhYeTEwZ1dUOElJMkdOUlU4M0NTTWh6QWF5Wkk5M2xvVFJSLURKRDl2bDBMN1RyT0FWR0FUWkRiUUYyT3RfTUEzZ09SaGlrUHhNN1k1NGRwT0JXX1R6Rks4aEdLdHd4cXVuSm9UQV9CRTNqVHJHaGo5eUdWcWpHODk0X1NINDJERmR20gHcAUFVX3lxTFBvbmNiUjJyLVFPVFV4ZnF6Yl9SdXd0b3J4M0JpRFRUWlR5d0F6dEc3Y0RUbDVGSzB3RGxKczlCQ2FsSE5wTG1GZW5YdlJsdTl5NzQweXdpMkZVeFh5MTBnV1Q4SUkyR05SVTgzQ1NNaHpBYXlaSTkzbG9UUlItREpEOXZsMEw3VHJPQVZHQVRaRGJRRjJPdF9NQTNnT1JoaWtQeE03WTU0ZHBPQldfVHpGSzhoR0t0d3hxdW5Kb1RBX0JFM2pUckdoajl5R1Zxakc4OTRfU0g0MkRGZHY?oc=5"
+        "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPOVlOU1M4UEZlcDBhR0dFaUlhQXpoNTlYdnptQnhWeHhLUG94RFZMbkZ1OHYyYUlTcUJHdWZ3Q2JtNllaTmctOS1pai1hMHJaZXliZjBTRUpmSGxram9oRjJLM3hDME9NaUJLNFlnVjdiVUJLRHZpQUJmVG5uM3pJVGpxSVZual9lY3Jmd2FDbl9sX1RGRnZLcG9VVllKb2FZTjBGVThkLVA0MV9EVkFmSW9DYVJXN05FOFlSTUM0NW1fZVB5R1NSUlRXa2wtWkdJS3lRN1RMd9IB3AFBVV95cUxQb25jYlIyci1RT1RVeGZxemJfUnV3dG9yeDNCaURUVFpUeXdBenRHN2NEVGw1Rkswd0RsSnM5QkNhbEhOcExtRmVuWHZSbHU5eTc0MHl3aTJGVXhYeTEwZ1dUOElJMkdOUlU4M0NTTWh6QWF5Wkk5M2xvVFJSLURKRDl2bDBMN1RyT0FWR0FUWkRiUUYyT3RfTUEzZ09SaGlrUHhNN1k1NGRwT0JXX1R6Rks4aEdLdHd4cXVuSm9UQV9CRTNqVHJHaGo5eUdWcWpHODk0X1NINDJERmR2?oc=5"
       ],
-      "contexto": "Com a nova regra para alta renda, rendimentos acima de R$ 600 mil anuais terão alíquotas progressivas, exigindo análise detalhada dos investimentos A nova tributação da alta renda tornou mais complexa uma escolha que parecia simples para o investidor: optar entre uma aplicação tributada, como o CDB, e outra isenta, como a LCI. A partir de 2026, o imposto já..."
+      "contexto": "A nova tributação da alta renda tornou mais complexa uma escolha que parecia simples para o investidor: optar entre uma aplicação tributada, como o CDB, e outra isenta, como a LCI. A partir de 2026, o imposto já pago sobre determinados rendimentos pode entrar na conta da tributação mínima, fazendo com que, em alguns casos, pagar imposto no investimento..."
     },
     {
       "brandId": "mycapital",
@@ -275,7 +276,7 @@
       "doc": {
         "title": "Compensação da isenção do IR frustra e afeta neutralidade fiscal",
         "url": "https://www.cnnbrasil.com.br/economia/money/macroeconomia/compensacao-da-isencao-do-ir-frustra-e-afeta-neutralidade-fiscal/",
-        "source": "cnnbrasil.com.br",
+        "source": "CNN Brasil",
         "date": "2026-09-24",
         "tag": "Dividendos",
         "summary": "",
@@ -294,7 +295,7 @@
       "doc": {
         "title": "Governo minimiza frustração com dividendos e diz que isenção do IR é neutra",
         "url": "https://www.cnnbrasil.com.br/economia/money/macroeconomia/governo-minimiza-frustracao-com-dividendos-e-diz-que-isencao-do-ir-e-neutra/",
-        "source": "cnnbrasil.com.br",
+        "source": "CNN Brasil",
         "date": "2026-09-24",
         "tag": "Dividendos",
         "summary": "",
@@ -311,56 +312,18 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Governo garante que isenção no Imposto de Renda segue compensada apesar da queda na arrecadação com dividendos",
-        "url": "https://www.bra1.com.br/economia/id-697148/governo_garante_que_isencao_no_imposto_de_renda_segue_compensada_apesar_da_queda_na_arrecadacao_com_dividendos",
-        "source": "bra1.com.br",
+        "title": "Repsol Sinopec vê risco a investimentos com imposto sobre dividendos",
+        "url": "https://www.poder360.com.br/poder-economia/repsol-sinopec-ve-risco-a-investimentos-com-imposto-sobre-dividendos/",
+        "source": "Poder360",
         "date": "2026-09-24",
         "tag": "Dividendos",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQN2tJdkgzR3Y5RDE3Tm5TLTdMZWdRTDJYYUFKR2FuRGtMYWlOYWtkenNEVlBudVR5VGt6OFItOXNVX1MyU09VTDctWDhtb3daTFVMMXRIVEoxU1RSR1c3S1VYZGZZMFNycnYyT05FQnlfUkpndVI3UDF6M09IcWJDRE1Oc1VoZXVWb0xiWUsyYy12NWJJY2FJVExwMnV6RGVORjdjdXU3YVRLbFd3VHNZNkk5ZDd6X2xjbHdYTXhZVmNKV1E1R2xQNGhzRnNrd0NpVVU3OXZoem9KTmlOTVpPbXZON3MzMUVY?oc=5"
+        "https://news.google.com/rss/articles/CBMisgFBVV95cUxPR0FRdFJnY2NFRXRmOE1xZERPZ3lLTzlpNEFwQTRiSkNLYXFnYlcyX0JId2hucnl6TnhEWnd2ZVlFZ1BuZG9sZXc0dVBYa3A3d01Qcm9XTVBRZkVwTFNCdmZkd1dPTVpCSlljdlBLbnp3Nll6cVNOTTJpaGVfYUt5QWlaNDdmZUg0dVZFQ1RCcEF5bjlVOW9NVjNreHNlTGFQSVlzdHJKVkxUSmFHSlBBamRB?oc=5"
       ],
-      "contexto": "O governo federal negou que a redu��o na arrecada��o com o novo imposto sobre lucros e dividendos esteja atrapalhando o custeio da isen��o do Imposto de Renda. O ministro do Planejamento, Bruno Moretti, afirmou que a neutralidade fiscal � mantida por outras fontes de receita."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Receita Federal revisa arrecadação com tributação de dividendos para R$ 10,5 bilhões",
-        "url": "https://boca.com.br/economia/receita-federal-revisa-arrecadacao-tributacao-dividendos",
-        "source": "boca.com.br",
-        "date": "2026-09-22",
-        "tag": "Dividendos",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMijgFBVV95cUxNaE9sTkJ5THBuMWp1NkZfY1Z1WG9HYmlUMnRSQk9CSEt3ajFNMm83NmtKWFB5dU5DaV9NZW5na3A0ajc1aVhyMFRJMFZVUGJLSmhkdGEwczJuZUxjWURWMDZNUmp1N2V3LVZaVjFtWGN0cHd5RG1IUlYwS3RNdkVxSF9FLWtOdldTTFdlTXhB?oc=5"
-      ],
-      "contexto": "Projeção diminui em relação às estimativas iniciais de R$ 29 bilhões e R$ 17,2 bilhões. A Receita Federal revisou a projeção de arrecadação com a tributação dos dividendos, prevendo agora um total de R$ 10,5 bilhões até o final de dezembro."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Receita Federal abre consulta a lote de restituição do Imposto de Renda para quem caiu na malha fina",
-        "url": "https://www.seudinheiro.com/2026/economia/imposto-de-renda-irpf-malha-fina-consulta-lote-restituicao-rsgp/",
-        "source": "seudinheiro.com",
-        "date": "2026-09-23",
-        "tag": "Declaração",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOWVBfUFpQVUIzUS1aUEFOamlLTDBYdjE2d1dKaDlNMkkyWWV2dml3b3VmM25ZZzNCUDdnalV4cW1qeXRVSWp1dzNQdE1BXzh2MWlZYUxUSC1xT0pqUUN5U0dkNDhJYWZYWUJ3V09nVThPWmhWd2dMLTEyTUt1bndlR0thS3pQaGEyZ2R0N2lEQkNBQzFxVkVlNW9yRDk0VzdsbC05cTBIVHBlQQ?oc=5"
-      ],
-      "contexto": "Receita Federal abre consulta a lote de restituição do Imposto de Renda para quem caiu na malha fina Cerca de 412 mil contribuintes receberão em setembro um total de R$ 1,26 bilhão no lote de restituição do imposto de renda aos contribuintes que caíram na malha fina Pouco mais de 412 mil contribuintes que caíram na malha fina do imposto de renda em 2026 e..."
+      "contexto": "Repsol Sinopec vê risco a investimentos com imposto sobre dividendos Deputy CFO da companhia afirma que carga tributária do Brasil já é alta e que acionistas podem direcionar capital a outros mercados A tributação de dividendos no Brasil pode comprometer novos investimentos da Repsol Sinopec no país, segundo a deputy CFO (vice-diretora financeira) da..."
     },
     {
       "brandId": "mycapital",
@@ -370,9 +333,9 @@
       "doc": {
         "title": "IRPFM: veja como funciona o imposto de alta renda",
         "url": "https://seucreditodigital.com.br/irpfm-alta-renda-como-funciona-em-2026/",
-        "source": "seucreditodigital.com.br",
+        "source": "Seu Crédito Digital",
         "date": "2026-09-24",
-        "tag": "Declaração",
+        "tag": "Dividendos",
         "summary": "",
         "origem": "coletor"
       },
@@ -380,6 +343,25 @@
         "https://news.google.com/rss/articles/CBMifEFVX3lxTE1BbkhTOXJ3cmlKMTZRSWtTM0s3akxNWEdUN1J1aUpCVWYyN2NOaW52MkpNNVZleEw2OW9MSUdBZ0h1aHZlMzhDaGRiZjJ6SnE4U0s2bjREM2pGbmJsdnZ1bnNIWUxQYXg2UkFOSzEyTzFBUEhxYmQ1Z3M4MGE?oc=5"
       ],
       "contexto": "Quem tem renda elevada precisa olhar com atenção para os meses finais de 2026. Isso porque o Imposto sobre a Renda das Pessoas Físicas Mínimo (IRPFM) já produz efeitos sobre os rendimentos deste ano e será apurado na declaração do Imposto de Renda de 2027."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Receita Federal abre consulta a lote de restituição do Imposto de Renda para quem caiu na malha fina",
+        "url": "https://www.seudinheiro.com/2026/economia/imposto-de-renda-irpf-malha-fina-consulta-lote-restituicao-rsgp/",
+        "source": "Seu Dinheiro",
+        "date": "2026-09-23",
+        "tag": "Declaração",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOWVBfUFpQVUIzUS1aUEFOamlLTDBYdjE2d1dKaDlNMkkyWWV2dml3b3VmM25ZZzNCUDdnalV4cW1qeXRVSWp1dzNQdE1BXzh2MWlZYUxUSC1xT0pqUUN5U0dkNDhJYWZYWUJ3V09nVThPWmhWd2dMLTEyTUt1bndlR0thS3pQaGEyZ2R0N2lEQkNBQzFxVkVlNW9yRDk0VzdsbC05cTBIVHBlQQ?oc=5"
+      ],
+      "contexto": "Receita Federal abre consulta a lote de restituição do Imposto de Renda para quem caiu na malha fina Cerca de 412 mil contribuintes receberão em setembro um total de R$ 1,26 bilhão no lote de restituição do imposto de renda aos contribuintes que caíram na malha fina Pouco mais de 412 mil contribuintes que caíram na malha fina do imposto de renda em 2026 e..."
     },
     {
       "brandId": "mycapital",
@@ -425,7 +407,7 @@
       "mediaType": "",
       "doc": {
         "title": "Receita esclarece isenção de IRPF na venda de imóvel e denúncia espontânea",
-        "url": "https://www.contabeis.com.br/noticias/79685/receita-esclarece-isencao-de-irpf-na-venda-de-imovel-e-denuncia-espontanea/",
+        "url": "https://www.contabeis.com.br/noticias/79685/receita-esclarece-isencao-de-irpf-na-venda-de-imovel-e-denuncia-espontanea",
         "source": "Portal Contabeis",
         "date": "2026-09-28",
         "tag": "Declaração",
@@ -433,7 +415,7 @@
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPME8xelZqTE90MjJKVzRYbHBUelcyWHdYZVJuQzF2dlNRaE1qZkhOZUdjMkZJaE1XZVJJaUR3WE9DTUQ3WklfRC1aV0k1Q3M1S0Q2clgweDZNejRCbFB0d3A5cDF5REs0VkpJandBOVJ3VE9OYjY2d0RqOVpiUS05ODdfcUp5UDRzZF84SVNOb0h1OTJnMjlwX29NYlZOeEY2NUxfVXloV2pwVzBERGQzTGFWV2tLd2dLSXpj?oc=5"
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxOaE00UXlkaGFkSHVGQXBaZU9mdHl1R1FqZEZKaWx3RTFQWmhqdmFtRHZjaHVjazhLTUlPSkVFdmVUdXM2LWZ2bm5KTjRSeUZqZmtsVUZ0RTVITkpFa0F6UG5NT015emdVQ3FVbm10QzFDeHAzdU5pOEsyaUI0WXhYc0t0OEZTSXhrTFBJNVhfOEpqSUI5ZXExYk1UUW9LQzdIcnVBaEhtMXBfdGVxUUNnS2h3T08wVWZoQnc?oc=5"
       ],
       "contexto": "A Receita Federal publicou a Solução de Consulta Cosit nº 149, de 14 de agosto de 2026, no Diário Oficial da União (DOU) de 20 de agosto, com orientações sobre dois temas tributários: a isenção do Imposto sobre a Renda da Pessoa Física (IRPF) sobre ganho de capital na venda de imóveis residenciais e a caracterização da denúncia espontânea. O entendimento..."
     },
@@ -453,6 +435,44 @@
       },
       "aliases": [
         "https://news.google.com/rss/articles/CBMiogFBVV95cUxNekY1SjcxQnlaWWJUcTlGOFVETnlkcDNzQko2bmE4UXN2ckdnYTdQUkJHbGlCTm5jZVN6TkJpcWNSRGw5dXRMM0pQcDBQNkFYNTB4NFVOOFFZLVBFMnk0V1p4eXlUWnAwcHhWRmlxa3ZRek5rYlM3dzhOZjVmdWcwUXV6aVdCdUd1V0JtaEhmdV82MDdJdnRXZXR5ZFVBNjV6WWfSAaIBQVVfeXFMTXpGNUo3MUJ5WlliVHE5RjhVRE55ZHAzc0JKNm5hOFFzdnJHZ2E3UFJCR2xpQk5uY2VTek5CaXFjUkRsOXV0TDNKUHAwUDZBWDUweDRVTjhRWS1QRTJ5NFdaeHl5VFpwMHB4VkZpcWt2UXpOa2JTN3c4TmY1ZnVnMFF1emlXQnVHdVdCbWhIZnVfNjA3SXZ0V2V0eWRVQTY1elln?oc=5"
+      ],
+      "contexto": "Receita Federal paga lote residual do IRPF nesta quarta-feira A Receita Federal realiza nesta quarta-feira (30) o pagamento bancário do lote residual de restituição do Imposto de Renda Pessoa Física de setembro de 2026. Ao todo, 412.186 contribuintes recebem um montante acumulado de R$ 1.265.846.221,42 em valores corrigidos."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Imposto sobre lucros e dividendos deve render menos; Receita corta projeção em R$ 6,5 bilhões",
+        "url": "https://www.estadao.com.br/einvestidor/cenarios-e-mercado/imposto-sobre-lucros-e-dividendos-deve-render-menos-receita-corta-projecao-em-r-65-bilhoes/",
+        "source": "Estadão",
+        "date": "2026-09-22",
+        "tag": "Declaração",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPNHFFdENmMy1RUy1GRUc0Yk45dDRZTmtZeldCamt1bjdmc01BcUoweVd3Y19ZbHpVdldzVUp5ZmxsVWR6a056bklsZUdTaHNUTFg5TEpQWmFnUDhXZlNZZjFhWkdIMnFqZDJLdElEVG5kZVdtM3M3RUNpRXZpcW1RVGp2VFE1ZXY2QXY3UUZETjJxVXpJVkk5QnZTdnhlWF9FVDlaSGdTYXJqcmQ4UmZaY04xVzBxRWxaSGZlcHJJRmRqNzJmd3l3bG5BMk16RGgxNmNoOXRya0I3OFUzYUVIV3VPZ9IB6AFBVV95cUxPdmV3NFppNnQyTzRjeWVOOTFTeXlpSTBWT0dsaEdXSTRTRHRqSl9VQ1I0a3VuV1Fqa2Z2aDhpTHVRbHozYXNvNmduejN2c3BSTXNCcXg0cTBBcW5fa3ZJRUtaaHNITHJhMmxEU1pWcXlSV1B2Mzg5akV5a2VZZWZiQlhzZ3U4dmliT0xFVXh4TWREYlNpaUw0bHB2Qk5WbnREaUhvUU9pU2RGYmxCOEktZDJYQ0l6ZEZsVjAxelNfTTBxQU5jaUlsaFNVUjl2Z2NLZWY2Ui0yNXNjV2ZTNkY2dUEwY2trRDcw?oc=5"
+      ],
+      "contexto": "Quem paga a conta das isenções de Imposto de Renda sobre títulos privados? Entenda Duquesa de Tax explica que para uma reforma verdadeira é necessário discutir critérios e prazos das isenções, mas governo segue com soluções paliativas."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Os queridinhos da B3: veja as ações, FIIs e ETFs mais negociados em agosto",
+        "url": "https://investalk.bb.com.br/noticias/mercado/os-queridinhos-da-b3-veja-as-acoes-fiis-e-etfs-mais-negociados-em-agosto",
+        "source": "InvesTalk",
+        "date": "2026-09-29",
+        "tag": "Mercado",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQeVFpellYb2syakVKOXFFbk9CTTExak4wZTNmTDhJVmdWandOTXZoclN3YWFDc1daWnpQRWJXTzBDazU1QXVtaFJrTUZQR3BSX3ZPR3RPdkhPdkVHTDVkTFF2b0s3dnhHRldrdkswRjFkVExvcFZvM2NoLWtxVUhZeEpUMGVvck11RVRzRnQzNHFYSWZRWTUtTjlNanZyR29PV2tKS0MxZS05RGtFZUEtU3lvdmJvTjhx?oc=5"
       ]
     },
     {
@@ -461,18 +481,18 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Paraibanos somam R$ 2,74 bilhões em investimentos na bolsa, alta de 18%, aponta B3",
-        "url": "https://paraibaja.com.br/stories/paraibanos-somam-r-274-bilhoes-em-investimentos-na-bolsa-alta-de-18-aponta-b3/",
-        "source": "Paraíba Já",
-        "date": "2026-09-23",
+        "title": "B3 passa a aceitar FIIs como garantia em operações a partir desta segunda-feira, 11",
+        "url": "https://www.nordinvestimentos.com.br/blog/fiis-como-garantia/",
+        "source": "Nord Investimentos",
+        "date": "2026-09-29",
         "tag": "Mercado",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMisAFBVV95cUxOcGk5ZGxOcU0wemdDbHNiYUxtLWlQZHJBQ3IyNkRkdDRZZmFhaHExZ0pmOWJFcmQyWFpmV3FpejhHYTFFYWVvbW5rY1phMmdfeERHdEs3cGRuNFY0aHV0VVpSMVZwb0RYX2ZhWFVqRGY4NlRXOVhzNXJOdEh4amZrb2JQbW02SzNwREVzbUlubkJaM2djUkdudnJNYVB3bkZlUVFXZlZxR2tSWmp4aVV1LdIBsAFBVV95cUxOcGk5ZGxOcU0wemdDbHNiYUxtLWlQZHJBQ3IyNkRkdDRZZmFhaHExZ0pmOWJFcmQyWFpmV3FpejhHYTFFYWVvbW5rY1phMmdfeERHdEs3cGRuNFY0aHV0VVpSMVZwb0RYX2ZhWFVqRGY4NlRXOVhzNXJOdEh4amZrb2JQbW02SzNwREVzbUlubkJaM2djUkdudnJNYVB3bkZlUVFXZlZxR2tSWmp4aVV1LQ?oc=5"
+        "https://news.google.com/rss/articles/CBMibkFVX3lxTE5ZRWhtTFl2WmVXWWgtWVMtQjJZQnRiU0ZTd2dXNHNJNkhHNG9ZVmNoVDN3MDk0UDM4UFpUajBudlB1WUx2SlNxSHc0UXoyWkJ2dFVmcjFfYnQycWtBLWVlUl81UGFObGswR0JJSnhB0gFzQVVfeXFMT1BpQzE0dHdNRFdlSjlVamJaZG9wRkFteE9MTUxJcmN1Y055aE5zclc2V010LVpDWDVzQkVreTVBZ3RSNEl0TFpTaEZPeGVrZU82VVczTWxqTHJEa3hydTBJWjhvV0ZOelR2eDV4MXBfbUN4Yw?oc=5"
       ],
-      "contexto": "Os investidores paraibanos encerraram o primeiro semestre de 2026 com R$ 2,74 bilhões aplicados em renda variável na bolsa de valores, volume 18,1% superior ao registrado no mesmo período do ano anterior, segundo dados da B3. O número de contas de investidores no estado também avançou, chegando a 67.325: crescimento de 9,9%."
+      "contexto": "B3 passa a aceitar FIIs como garantia em operações a partir desta segunda-feira, 11 FIIs como garantia passam a ser aceitos pela B3 em operações que exigem margem, mudando a dinâmica do mercado de fundos imobiliários e trazendo novos riscos, e também oportunidades, para investidores. A medida entra em vigor nesta segunda-feira, 11 de maio de 2026."
     },
     {
       "brandId": "mycapital",
@@ -480,18 +500,18 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "JBS (JBSS32) fecha capital e J&F quer ser aberta no Brasil: o que muda para o investidor em ações e debêntures na B3",
-        "url": "https://www.seudinheiro.com/2026/empresas/jbs-jbss32-fecha-e-jf-quer-abrir-capital-no-brasil-o-que-muda-para-o-investidor-em-acoes-e-debentures-na-b3-kaes/",
-        "source": "seudinheiro.com",
-        "date": "2026-09-22",
+        "title": "Duas ações ganham espaço entre as mais negociadas da B3; veja quem avançou no ranking",
+        "url": "https://www.estadao.com.br/einvestidor/cenarios-e-mercado/duas-acoes-ganham-espaco-entre-as-mais-negociadas-da-b3-veja-quem-avancou-no-ranking/",
+        "source": "Estadão",
+        "date": "2026-09-28",
         "tag": "Mercado",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMi6wFBVV95cUxObWV1bmZmei1xbzRmX0k2NF95Z2dfRGFndmxFQThIRGlHQ0k4VkRlMy1hYnBIU0xYRjZJaFdmZ3pLaTByTWtwc2FENUVmRENRS1QxY2plV0F0SzJmVWVKX3NqVFJ1akg4eG1DY042Qlc4eUR3ODI1cTRGMVNfSVBuQTJVbGFjU3EtQXZ1SDVpQUl2cm45VkxPVnBVdm40My04YkhWcVUwbktMQ1RIZ3VpMUtFWllHNDRJc1RyT2dZWXVEcnBKRUFtUG5UN28zNERSZ3oxTlhYQnhody1Yb2xWUnJ0UDVPNmRNZTlB?oc=5"
+        "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOa3pzQm1SYXJmZ3NEb01MT054UVo5eU9MN3F1TXFlUF8zQ0lpTC1kVS1uSXZtSnF2NXhGNGpnRXBId3Jja0ZteThtRkZteWhQV044MHVkY0JacUFtSmJlUUFSNHJUYzdzNjR3allRV2ZWRXZHelBJTFNNY1RZaHpZaXo2VDNTUmt4T1l2WmZEVzBYWTUzc3EzNXJEZlpoZm1BMWJuSmxXLXg0anRKOUZmUTY4REdNTHhkc2Z3VkVLQ0o0MDBwMVdjUVg5eWNGaEM1LTVJcXJ2bkFkd2fSAeABQVVfeXFMTVcxNi13UEc0ZWt5M1dNLWdza2lMZ3IxeDI3TGNBcEluenFObWVaakotTXZJVHJ1RHh4V3gxVldvcE1MQmFDQkxKMVM2YkZlMi1VSEFEOVhmNmZ6QTZpT1A2cWxKZ2NvT2ZOb3Q0SXhOX20xdnZmY1FLQm5HNFZkeFBaN0Y3MXp4b25qT0tVTl9UTnV3eGQ5MTluTk10QnJfMjA0TE84QnhTZUtfbWxRM1hITVVIcExOVGNpU3N6YUp3XzIwVjJma0lJOTNNaTREOGZzVHBKVVg2RlgwQXoxdGo?oc=5"
       ],
-      "contexto": "JBS (JBSS32) fecha capital e J&F quer ser aberta no Brasil: o que muda para o investidor em ações e debêntures na B3 JBS fecha capital no Brasil e J&F busca registro na CVM; veja o impacto para debêntures, BDRs JBSS32 e o acesso do investidor à renda fixa A J&F e sua subsidiária, a JBS, anunciaram duas mudanças ontem (22) envolvendo seus registros na CVM, a..."
+      "contexto": "Bolsa pode valorizar com ajuste fiscal em 2027, mas eleição deve trazer volatilidade, diz Ágora Para o economista-chefe da corretora, Dalton Gardimam, setembro deve trazer mudanças de posicionamento e oscilações. Em agosto de 2026, o BTG Pactual (BPAC11) alcançou a quarta posição no ranking das ações mais negociadas na B3, segundo o DataWise+."
     },
     {
       "brandId": "mycapital",
@@ -511,6 +531,25 @@
         "https://news.google.com/rss/articles/CBMiiwJBVV95cUxQUWVwazRwWVBEREwtWUlERENNNHM2ZlFWU2I0TWd1Q05pdFJtQUluRjE1alo4ZnB4UF9feUg3bXJBVjZGYWFGajd5a3JFUTBDTVlTbHFoejhDVjdvODhsY2tQMmFlUk8wM2hYYU1UYVg0Q3d6ZkZlcFkxamlWUk56M1RUZGlDUzh5OUxCelZwc0hGUG9zLXFnVHhZRGlkNnBMZE5uMlZpRFAwTEdMbGUyaDI4TU1tQjNUYjNIdk5fSW5obkdxZ3ZBTXZ5WnNJZTVzdDVDdWpGOVNhclNYQ1Y5Rm5yQWpQZXFTV2FEN1NNMnlxZm9mT1NLMDVQTEhqNjZMaU5zZDRtOGpuakk?oc=5"
       ],
       "contexto": "BTG Pactual alcança melhor posição do ano, e Embraer estreia no top 10 das ações mais negociadas em 2026 Petrobras, Vale e Itaú permanecem nas três primeiras posições em agosto; levantamento também mostra os destaques entre FIIs, ETFs e BDRs O BTG Pactual (BPAC11) alcançou em agosto sua melhor colocação de 2026 no ranking mensal das ações mais negociadas na..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Descubra agora 3 ETFs que pagam dividendos mensais",
+        "url": "https://www.nordinvestimentos.com.br/blog/etf-dividendos/",
+        "source": "Nord Investimentos",
+        "date": "2026-09-28",
+        "tag": "Mercado",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9ZSHB2Y0xtbE4zU19qVEthb3c4ckdHTGktT1l4VnphSEN3VHBDZEgxQlRFcWI1UVlMdjVoTHhLb1ZrdmJOX3hkbU1ScVhNbkFnY2RjWXhteGt6dkwxM0FmeVNkaGdEUWRs0gFuQVVfeXFMUDJ5dEZIOE1qdWRYd1RfcGhLemk0dVM2Y25ERjZIX3RsS1d5TUpHU2hxYUdUY1dmNlRWcjVjdkNoY3Zfdy1pMS16a0JLdkNoOHZ0VmxfUFZJTUFQMGdEX3Z3ZTRLTTNRb3VHN0U5QUE?oc=5"
+      ],
+      "contexto": "Descubra agora 3 ETFs que pagam dividendos mensais Os ETFs que pagam dividendos mensais vêm ganhando espaço entre investidores que buscam renda recorrente na Bolsa sem precisar montar uma carteira de ações por conta própria. A proposta é simples: investir em um único ativo negociado em Bolsa e receber proventos de forma periódica."
     },
     {
       "brandId": "mycapital",
