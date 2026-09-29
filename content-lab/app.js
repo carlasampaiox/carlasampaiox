@@ -103,7 +103,7 @@ const state={
   tab:(TABS.find(t=>t.id===location.hash.slice(1))||TABS.find(t=>t.id===LS.get('cl.tab'))||TABS[0]).id,
   data:{news:[],refs:[],posts:[],dates:[],ideas:[],metrics:[],competitors:[],compnews:[],insights:[]},
   cal:{y:now.getFullYear(),m:now.getMonth()},
-  f:{newsTag:'',newsPeriod:String(LS.get('cl.newsPeriod','')),refTipo:'',calCh:'',ideaCh:'',ideaAll:false,metric:'followers',mPeriod:String(LS.get('cl.mPeriod','30')),mFrom:LS.get('cl.mFrom',''),mTo:LS.get('cl.mTo',''),compPeriod:String(LS.get('cl.compPeriod','30')),compFilter:'',compKind:String(LS.get('cl.compKind','')),kGrupo:String(LS.get('cl.kGrupo','')),kPer:String(LS.get('cl.kPer','4s')),kFrom:LS.get('cl.kFrom',''),kTo:LS.get('cl.kTo','')},
+  f:{newsTag:'',newsPeriod:String(LS.get('cl.newsPeriod','')),refTipo:'',refTema:'',calCh:'',ideaCh:'',ideaAll:false,metric:'followers',mPeriod:String(LS.get('cl.mPeriod','30')),mFrom:LS.get('cl.mFrom',''),mTo:LS.get('cl.mTo',''),compPeriod:String(LS.get('cl.compPeriod','30')),compFilter:'',compKind:String(LS.get('cl.compKind','')),kGrupo:String(LS.get('cl.kGrupo','')),kPer:String(LS.get('cl.kPer','4s')),kFrom:LS.get('cl.kFrom',''),kTo:LS.get('cl.kTo','')},
   brandDirty:false, vidiq:null, novidade:null
 };
 const bpath=c=>`brands/${state.brandId}/${c}`;
@@ -297,19 +297,30 @@ function perfisFora(){
   s.delete('');return s;
 }
 function refsMercado(){const fora=perfisFora();return state.data.refs.filter(r=>r.origem!=='importador'&&!/concorrente|minha marca/.test(String(r.tags||''))&&!fora.has(perfilKey(r.creator)))}
+/* temas das referências: tags livres, sem o marcador estrutural "oportunidade" (já coberto pelo filtro Radar/Salvas) */
+function refTags(r){return String(r.tags||'').split(',').map(t=>t.trim()).filter(Boolean)}
+function refTemas(list){
+  const mapa=new Map();
+  for(const r of list)for(const t of refTags(r)){const k=t.toLowerCase();if(k==='oportunidade'||mapa.has(k))continue;mapa.set(k,t)}
+  return [...mapa.values()].sort((a,b)=>a.localeCompare(b,'pt-BR'));
+}
 function viewRefs(){
   /* ordem da bússola: mais parecidas com a marca primeiro; alcance pago por último */
   const peso=r=>{const t=String(r.tags||'');return (t.includes('fit alto')||t.includes('alta semelhança')?0:t.includes('viral no nicho')?1:2)+(t.includes('possivelmente pago')?3:0)};
   const all=refsMercado().sort((a,b)=>peso(a)-peso(b)||String(b.createdAt).localeCompare(String(a.createdAt)));
-  const list=state.f.refTipo?all.filter(r=>refTipo(r)===state.f.refTipo):all;
+  const porTipo=state.f.refTipo?all.filter(r=>refTipo(r)===state.f.refTipo):all;
+  const temas=refTemas(porTipo);
+  if(state.f.refTema&&!temas.some(t=>t.toLowerCase()===state.f.refTema.toLowerCase()))state.f.refTema='';
+  const list=state.f.refTema?porTipo.filter(r=>refTags(r).some(t=>t.toLowerCase()===state.f.refTema.toLowerCase())):porTipo;
   let h=head('Referências virais','O que está em alta no mercado e cabe nos canais da marca: oportunidades do radar (perfis de todo o Instagram, com fit avaliado pelo Claude) e as que você salvou. Concorrentes ficam na aba Concorrentes.',
     aiBtn('Padrões em comum','ai-refs-all')+igBtn()+btn('Nova referência','new','data-col="refs"','primary'));
   h+=igStatus();
   h+=bussola();
   autoBussola(all);
   h+=`<div class="toolbar">${chips('refTipo',[['','Todas'],['radar','Oportunidades do radar'],['manual','Salvas por você']],state.f.refTipo)}</div>`;
+  if(temas.length>1)h+=`<div class="toolbar">${chips('refTema',[['','Todos os temas'],...temas.map(t=>[t,esc(t)])],state.f.refTema)}</div>`;
   if(!all.length)return h+empty('Nenhuma referência ainda','Salve o link de um post que viralizou e anote o gancho e por que funcionou.',btn('Nova referência','new','data-col="refs"','primary'));
-  if(!list.length)return h+empty('Nada neste filtro',state.f.refTipo==='radar'?'O radar roda junto com o botão "Atualizar Instagram", no máximo 1 vez por semana.':'Troque o filtro ou adicione uma nova referência.');
+  if(!list.length)return h+empty('Nada neste filtro',state.f.refTipo==='radar'&&!state.f.refTema?'O radar roda junto com o botão "Atualizar Instagram", no máximo 1 vez por semana.':'Troque o filtro ou adicione uma nova referência.');
   h+='<div class="grid">'+list.map(r=>{
     const u=safeUrl(r.url);
     return `<article class="card ref">

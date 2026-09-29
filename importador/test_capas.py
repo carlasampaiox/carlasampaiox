@@ -62,6 +62,10 @@ class Capas(unittest.TestCase):
             self.assertEqual([(x["docId"], x["versao"], x["colecao"]) for x in r["prontas"]], [("r1", 3, "brands/m/refs")])
             self.assertEqual(r["pedidas"], ["https://www.instagram.com/reel/BBBBBBBBBB/"])
             self.assertEqual(capas.ligar(d / "dump", d, pend)["pedidas"], [])  # não pede duas vezes
+            # Reel com capa já baixada sai da lista de pendentes
+            pend.write_text("# cabeçalho\nhttps://www.instagram.com/reel/AAAAAAAAAA/\nhttps://www.instagram.com/reel/BBBBBBBBBB/\n")
+            capas.ligar(d / "dump", d, pend)
+            self.assertEqual(pend.read_text().splitlines(), ["# cabeçalho", "https://www.instagram.com/reel/BBBBBBBBBB/"])
 
 
 if __name__ == "__main__":

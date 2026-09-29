@@ -131,9 +131,11 @@ def ligar(dump: Path, dados: Path, pendentes: Path) -> dict:
                             "arquivo": str((dados / "midia" / arq).resolve()), "versao": doc.get("version")})
         elif cod not in ja:
             novas.append(url)
-    if novas:
-        with pendentes.open("a", encoding="utf-8") as fp:
-            fp.write("".join(u + "\n" for u in novas))
+    # a lista só guarda o que ainda falta: Reels com capa já baixada saem dela
+    linhas = pendentes.read_text(encoding="utf-8").splitlines() if pendentes.is_file() else []
+    manter = [l for l in linhas if not codigo(l) or codigo(l) not in reg["capas"]] + novas
+    if manter != linhas:
+        pendentes.write_text("".join(l + "\n" for l in manter), encoding="utf-8")
     return {"prontas": prontas, "pedidas": novas, "falhas": reg.get("falhas", {})}
 
 
