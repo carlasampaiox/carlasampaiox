@@ -5,12 +5,13 @@
 const LAB=window.__LAB__||{};
 const APP=LAB.nome||'Content Lab';
 const ENX=!!LAB.enxuto; /* versão enxuta: Notícias pelos pilares, Referências da internet e do Claude, sem vidIQ */
-const CH=[
+const CH=Array.isArray(LAB.canais)&&LAB.canais.length?LAB.canais:[
  {id:'site',label:'Site',code:'SITE'},
  {id:'blog',label:'Blog',code:'BLOG'},
  {id:'instagram',label:'Instagram',code:'IG'},
  {id:'linkedin',label:'LinkedIn',code:'IN'},
  {id:'youtube',label:'YouTube',code:'YT'}];
+/* LAB.canais (versão de uma marca só) troca a lista de canais: {id, label, code, desc}. desc explica o papel do canal ao Claude */
 const CHM=Object.fromEntries(CH.map(c=>[c.id,c]));
 const STATUS=[{id:'ideia',label:'Ideia'},{id:'producao',label:'Em produção'},{id:'revisao',label:'Revisão'},{id:'agendado',label:'Agendado'},{id:'publicado',label:'Publicado'}];
 const STM=Object.fromEntries(STATUS.map(s=>[s.id,s]));
@@ -1245,12 +1246,12 @@ O que faz: ${b.description||''}
 Público: ${b.audience||''}
 Tom de voz: ${b.tone||''}
 Pilares: ${pillars().join('; ')||'não definidos'}
-Canais ativos: ${activeCh().map(c=>c.label).join(', ')}
+Canais ativos: ${activeCh().map(c=>c.label+(c.desc?' ('+c.desc+')':'')).join(', ')}
 Evitar: ${b.avoid||''}
 Hashtags: ${b.hashtags||''}
 Instruções da equipe: ${b.briefing||''}`;
 }
-const IDEA_SHAPE='Responda apenas com um array JSON no formato [{"title":"título da ideia","pillar":"um dos pilares, escrito exatamente como na lista","channels":["instagram"],"format":"Carrossel","notes":"ângulo e gancho em 1 ou 2 frases"}]. Valores válidos em channels: site, blog, instagram, linkedin, youtube.';
+const IDEA_SHAPE='Responda apenas com um array JSON no formato [{"title":"título da ideia","pillar":"um dos pilares, escrito exatamente como na lista","channels":["instagram"],"format":"Carrossel","notes":"ângulo e gancho em 1 ou 2 frases"}]. Valores válidos em channels: '+CH.map(c=>c.id).join(', ')+'.';
 function normIdea(src){return x=>{
   if(!x||!x.title)return null;
   const ch=(Array.isArray(x.channels)?x.channels:[x.channels]).map(s=>String(s||'').toLowerCase()).filter(s=>CHM[s]);
@@ -1435,6 +1436,7 @@ async function draftCaption(){
     linkedin:'Post de 150 a 250 palavras, primeira linha forte, parágrafos curtos, pergunta no final.',
     blog:'Título otimizado para SEO, meta description (até 155 caracteres), intertítulos H2 com tópicos, CTA final e sugestão de imagem de capa.',
     youtube:'Título, roteiro com gancho nos primeiros 15 segundos, blocos com tempo aproximado, CTA e descrição do vídeo.',
+    mycapitalks:'Episódio ou corte do podcast: título, gancho dos primeiros segundos do corte, pauta do episódio em blocos com tempo aproximado, convidado (se houver), CTA para o episódio completo e descrição do vídeo.',
     site:'Texto de página com título, subtítulo, seções curtas e CTA.'}[v.channel]||'';
   const prev=ta.value, ctl=capCtl=new AbortController();
   b.innerHTML=SPARK+'Parar';
