@@ -1,0 +1,29 @@
+/* ===== Mycapital Lab: tema da marca (sobrepõe os tokens do Content Lab) ===== */
+/* Laranja e grafite tirados da logo do Estúdio Mycapital (#FF6B08 e #121614). */
+:root{
+  --bg:#F6F7F6; --surface:#FFFFFF; --surface-2:#EEF0EE; --ink:#121614; --ink-2:#4A524D; --muted:#7A827D;
+  --line:#E2E6E3; --line-2:#D0D6D2;
+  --accent:#FF6B08; --accent-ink:#121614; --accent-soft:#FFE9D9; --accent-text:#B84A00;
+  --shadow:0 1px 2px rgba(18,22,20,.06),0 8px 24px -12px rgba(18,22,20,.2);
+  --f-display:"Poppins","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --f-body:"Inter","Segoe UI",system-ui,-apple-system,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#121614; --surface:#1A1F1C; --surface-2:#232925; --ink:#E8ECE9; --ink-2:#BEC5C0; --muted:#8C948F;
+    --line:#2C332F; --line-2:#3B443F;
+    --accent:#FF6B08; --accent-ink:#121614; --accent-soft:#3A2212; --accent-text:#FF8A3D;
+    --c-tiktok:#E8ECE9;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 12px 28px -12px rgba(0,0,0,.6);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#121614; --surface:#1A1F1C; --surface-2:#232925; --ink:#E8ECE9; --ink-2:#BEC5C0; --muted:#8C948F;
+  --line:#2C332F; --line-2:#3B443F;
+  --accent:#FF6B08; --accent-ink:#121614; --accent-soft:#3A2212; --accent-text:#FF8A3D;
+  --c-tiktok:#E8ECE9;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 12px 28px -12px rgba(0,0,0,.6);
+}
+.wordmark{align-items:center;gap:7px;font-weight:700;letter-spacing:-.01em}
+.wordmark .mark{width:30px;height:23px;fill:var(--accent);flex:none}
+.wordmark b{font-weight:700;padding:1px 7px 2px;margin-left:1px;line-height:1.15}

@@ -1,0 +1,34 @@
+<title>Mycapital Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap">
+<style>
+/*CSS*/
+</style>
+<header class="top">
+  <div class="top-row">
+    <div class="wordmark" aria-label="Mycapital Lab">
+      <svg class="mark" viewBox="3 4 31 23" aria-hidden="true"><path d="M16 5v10L5 26H4v-9zM27 5v10L16 26h-1v-9zM28 16l5 5.5-5 5.5z"/></svg>
+      <span>Mycapital</span><b>Lab</b>
+    </div>
+    <span id="modeBadge" class="badge" hidden title="Os dados desta visualização não são salvos.">Pré-visualização</span>
+    <div class="brand-switch" hidden><span class="dot" id="brandDot"></span><label for="brandSel">Marca</label><select id="brandSel"></select></div>
+  </div>
+  <nav class="tabs" id="tabs" role="tablist" aria-label="Seções"></nav>
+</header>
+<main id="main"></main>
+<div id="modal" class="overlay" hidden><div class="dialog" role="dialog" aria-modal="true"></div></div>
+<div id="sheet" class="overlay sheet-ov" hidden>
+  <aside class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+    <div class="dlg-head"><h2 id="sheetTitle">Sugestões do Claude</h2><button class="iconbtn" data-act="sheet-close" aria-label="Fechar">×</button></div>
+    <p class="sheet-sub" id="sheetSub" hidden></p>
+    <div class="sheet-body" id="sheetBody"></div>
+    <div class="dlg-foot" id="sheetFoot"></div>
+  </aside>
+</div>
+<div id="toast" class="toast" role="status" hidden></div>
+<div id="tip" hidden></div>
+<script>window.__LAB__={nome:'Mycapital Lab',marca:'mycapital',slug:'mycapital-lab'};window.__DEMO__=/*DEMO*/;</script>
+<script>
+/*JS*/
+</script>

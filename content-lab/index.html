@@ -444,6 +444,9 @@ const DOW=['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'];
 const DOWF=['domingo','segunda','terça','quarta','quinta','sexta','sábado'];
 const METRICS=[
  {k:'followers',l:'Seguidores'},{k:'reach',l:'Alcance'},{k:'engagement',l:'Engajamento',pct:1},{k:'clicks',l:'Cliques e visitas'}];
+/* versões de uma marca só (ex.: Mycapital Lab) definem window.__LAB__ = {nome, marca, slug} */
+const LAB=window.__LAB__||{};
+const APP=LAB.nome||'Content Lab';
 const STAR='<svg class="star" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.2l2 4.3 4.7.5-3.5 3.2 1 4.6L8 11.4l-4.2 2.4 1-4.6L1.3 6l4.7-.5z"/></svg>';
 const SPARK='<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 .8l1.7 4.6 4.6 1.7-4.6 1.7L8 13.4 6.3 8.8 1.7 7.1l4.6-1.7z"/><path d="M13.3 10.6l.6 1.6 1.6.6-1.6.6-.6 1.6-.6-1.6-1.6-.6 1.6-.6z"/></svg>';
 
@@ -538,7 +541,7 @@ function subBrands(){
   unsubVidiq=Store.sub('importador',list=>{state.vidiq=list.find(d=>d.id==='vidiq')||null;if(state.tab==='concorrentes'||state.tab==='referencias')scheduleRender()});
   if(!subBrands._nov){subBrands._nov=true;Store.sub('app',list=>{state.novidade=list.find(d=>d.id==='novidade')||null;scheduleRender()})}
   unsubBrands=Store.sub('brands',list=>{
-    state.brands=list.sort((a,b)=>String(a.name).localeCompare(String(b.name),'pt-BR'));
+    state.brands=(LAB.marca?list.filter(b=>b.id===LAB.marca):list).sort((a,b)=>String(a.name).localeCompare(String(b.name),'pt-BR'));
     state.loading=false;
     if(!state.brands.find(b=>b.id===state.brandId)){
       const saved=LS.get('cl.brand',null);
@@ -575,6 +578,7 @@ function renderTop(){
   if(!state.brands.length)sel.value='__new';
   $('#brandDot').style.background=(b&&/^#[0-9a-f]{6}$/i.test(b.color||''))?b.color:'var(--accent)';
   $('#modeBadge').hidden=state.mode!=='preview';
+  if(LAB.marca)$('.brand-switch').hidden=true;
 }
 function renderTabs(){
   const due=dueSoon().length;
@@ -667,7 +671,7 @@ async function attachMedia(file){
   if(!file||!modalCtx||modalCtx.col!=='refs')return;
   if(!/^(image\/(png|jpeg|webp|gif)|video\/(mp4|webm))$/.test(file.type)){toast('Use imagem (PNG, JPG, WebP, GIF) ou vídeo (MP4, WebM).',4000);return}
   if(file.size>20*1024*1024){toast('Arquivo acima de 20 MB. Envie um print ou um trecho menor do vídeo.',4000);return}
-  if(!assets){toast('O envio de prévias funciona quando o Content Lab é aberto no Claude, por quem pode editar.',4500);return}
+  if(!assets){toast(`O envio de prévias funciona quando o ${APP} é aberto no Claude, por quem pode editar.`,4500);return}
   const box=$('#mediaBox'), ctx=modalCtx;
   box.innerHTML='<div class="thinking"><span class="pulse"></span>Enviando...</div>';
   try{
@@ -679,7 +683,7 @@ async function attachMedia(file){
     box.innerHTML=mediaTag(r.id,type);
   }catch(e){
     box.innerHTML=validAsset($('#f-media').value)?mediaTag($('#f-media').value,$('#f-mediaType').value):MEDIA_EMPTY;
-    toast({too_large:'Arquivo grande demais.',unsupported_type:'Formato não aceito.',quota_or_state:'O espaço de arquivos do Content Lab acabou. Exclua referências antigas com prévia.',rate_limited:'Muitos envios seguidos. Tente de novo em instantes.',not_granted:'Você não tem permissão para enviar arquivos aqui.'}[e&&e.code]||'Não consegui enviar o arquivo. Tente de novo.',4500);
+    toast({too_large:'Arquivo grande demais.',unsupported_type:'Formato não aceito.',quota_or_state:`O espaço de arquivos do ${APP} acabou. Exclua referências antigas com prévia.`,rate_limited:'Muitos envios seguidos. Tente de novo em instantes.',not_granted:'Você não tem permissão para enviar arquivos aqui.'}[e&&e.code]||'Não consegui enviar o arquivo. Tente de novo.',4500);
   }
 }
 async function currentMediaImage(){
@@ -692,7 +696,7 @@ async function currentMediaImage(){
   return blob;
 }
 async function fillRefWithClaude(btnEl){
-  if(!sample){toast('As sugestões do Claude funcionam quando o Content Lab é aberto no Claude.');return}
+  if(!sample){toast(`As sugestões do Claude funcionam quando o ${APP} é aberto no Claude.`);return}
   const v=collect(SCHEMA.refs);
   let img=null;try{img=await currentMediaImage()}catch(_){img=null}
   if(!img&&!v.url&&!v.hook){toast('Adicione um print, um vídeo ou o link do post primeiro.',4000);return}
@@ -932,7 +936,7 @@ function viewBrand(){
   h+=`<form class="bform" id="brandForm" autocomplete="off">
     <div class="bsec">Identidade</div>
     ${f('name','Nome da marca','text')}
-    <div class="field"><label for="b-color">Cor de identificação</label><div style="display:flex;gap:10px;align-items:center"><input type="color" id="b-color" value="${/^#[0-9a-f]{6}$/i.test(b.color||'')?b.color:'#D0106E'}"><span class="hint">Aparece no seletor de marcas.</span></div></div>
+    ${LAB.marca?`<input type="hidden" id="b-color" value="${esc(b.color||'')}">`:`<div class="field"><label for="b-color">Cor de identificação</label><div style="display:flex;gap:10px;align-items:center"><input type="color" id="b-color" value="${/^#[0-9a-f]{6}$/i.test(b.color||'')?b.color:'#D0106E'}"><span class="hint">Aparece no seletor de marcas.</span></div></div>`}
     ${f('niche','Nicho','text',{full:1})}
     ${f('description','O que a marca faz','textarea',{full:1,rows:2})}
     ${f('audience','Público','textarea',{rows:3})}
@@ -956,10 +960,10 @@ function viewBrand(){
     <p><b>Dados de exemplo.</b> Remove os itens marcados como exemplo em todas as abas desta marca.</p>
     ${btn('Remover exemplos','brand-examples','','danger')}
   </div>
-  <div class="danger-zone">
+  ${LAB.marca?'':`<div class="danger-zone">
     <p><b>Excluir marca.</b> Apaga a marca e tudo o que está nela. Não dá para desfazer.</p>
     ${btn('Excluir marca','brand-delete','','danger')}
-  </div>`;
+  </div>`}`;
   return h;
 }
 function readBrandForm(){
@@ -1065,7 +1069,7 @@ function viewMetrics(){
   if(!temK(state.f.metric)){const m=METRICS.find(x=>temK(x.k));if(m)state.f.metric=m.k}
   const M=METRICS.find(x=>x.k===state.f.metric)||METRICS[0];
   const R=mRange();
-  let h=head('Métricas','Acompanhe cada canal no período que quiser. Registre os números de um dia, de uma semana ou de um mês; o Content Lab soma e compara sozinho.',
+  let h=head('Métricas',`Acompanhe cada canal no período que quiser. Registre os números de um dia, de uma semana ou de um mês; o ${APP} soma e compara sozinho.`,
     aiBtn('Analisar desempenho','ai-metrics')+btn('Registrar números','new','data-col="metrics"','primary'));
   if(!all.length)return h+empty('Nenhuma métrica registrada','Registre os números de cada canal para ver a evolução aqui.',btn('Registrar números','new','data-col="metrics"','primary'));
   const p=state.f.mPeriod;
@@ -1839,10 +1843,10 @@ document.addEventListener('click',async e=>{
     case 'new-brand':openEditor('__brand',null,{});break;
     case 'brand-save':{try{await Store.set('brands',state.brandId,readBrandForm());state.brandDirty=false;toast('Configurações salvas');renderTop()}catch(_){}break}
     case 'brand-backup':{const b=curBrand();if(!b)break;el.disabled=true;
-      try{const out={app:'content-lab',versao:1,exportadoEm:new Date().toISOString(),brand:b,data:{}};
+      try{const out={app:LAB.slug||'content-lab',versao:1,exportadoEm:new Date().toISOString(),brand:b,data:{}};
         for(const c of COLS)out.data[c]=await Store.list(bpath(c));
         const blob=new Blob([JSON.stringify(out,null,2)],{type:'application/json'});
-        const fname=`content-lab-${String(b.name||b.id).toLowerCase().normalize('NFD').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}-${TODAY()}.json`;
+        const fname=`${LAB.slug||'content-lab'}-${String(b.name||b.id).toLowerCase().normalize('NFD').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}-${TODAY()}.json`;
         const total=COLS.reduce((n,c)=>n+out.data[c].length,0);
         if(downloads){await downloads.save({filename:fname,data:blob});toast(`Backup salvo com ${total} itens`)}
         else if(state.mode==='live'){toast('O download não está liberado nesta visualização.',4000)}
@@ -1856,7 +1860,7 @@ document.addEventListener('click',async e=>{
         const b=curBrand();if(b&&b.exemplo)await Store.set('brands',b.id,Object.assign(strip(b),{exemplo:false}));
         toast(n?`${n} itens de exemplo removidos`:'Não há itens de exemplo nesta marca');}catch(_){}
       el.disabled=false}break;
-    case 'brand-delete':if(arm(el,'bd','Confirmar: excluir tudo')){el.disabled=true;const bid=state.brandId;
+    case 'brand-delete':if(!LAB.marca&&arm(el,'bd','Confirmar: excluir tudo')){el.disabled=true;const bid=state.brandId;
       try{for(const c of COLS){for(const it of await Store.list(`brands/${bid}/${c}`))await Store.remove(`brands/${bid}/${c}`,it.id)}
         await Store.remove('brands',bid);toast('Marca excluída')}catch(_){el.disabled=false}}break;
     case 'sheet-close':closeSheet();break;

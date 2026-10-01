@@ -1,6 +1,7 @@
 // Teste de fumaça: abre o index.html em modo pré-visualização (dados do demo.json),
 // passa por todas as abas e confere que nada quebrou.
 // Rode: NODE_PATH=$(npm root -g) node tests/smoke.cjs
+// Para o Mycapital Lab: PAGINA=../mycapital-lab/index.html node tests/smoke.cjs
 const path = require('path');
 const { chromium } = require('playwright');
 
@@ -13,7 +14,7 @@ const TABS = ['noticias', 'referencias', 'calendario', 'datas', 'marca', 'ideias
   const erros = [];
   page.on('pageerror', e => erros.push('pageerror: ' + e.message));
   page.on('console', m => { if (m.type() === 'error' && !/_blob|ERR_FILE_NOT_FOUND|ERR_CERT|fonts\.g/.test(m.text())) erros.push('console: ' + m.text()); });
-  await page.goto('file://' + path.resolve(__dirname, '..', 'index.html'));
+  await page.goto('file://' + path.resolve(__dirname, '..', process.env.PAGINA || 'index.html'));
   await page.waitForSelector('#tabs .tab');
 
   for (const t of TABS) {

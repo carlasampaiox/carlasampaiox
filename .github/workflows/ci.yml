@@ -27,9 +27,13 @@ jobs:
         run: |
           node --check app.js
           python build.py --check
+      - name: Mycapital Lab (build)
+        working-directory: mycapital-lab
+        run: python build.py --check
       - name: Content Lab (teste de fumaça)
         working-directory: content-lab
         run: |
           npm install --no-save playwright@1.56.1
           npx playwright install --with-deps chromium
           node tests/smoke.cjs
+          PAGINA=../mycapital-lab/index.html node tests/smoke.cjs
