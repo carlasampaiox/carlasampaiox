@@ -813,6 +813,7 @@ function viewRefs(){
 
 /* ---------- novidade da semana (documento app/novidade, gravado pela rotina de evolução) ---------- */
 function novidadeCard(){
+  if(ENX)return ''; /* a versão enxuta não mostra o cartão de novidade */
   const n=state.novidade;if(!n||!n.titulo)return '';
   if(LS.get('cl.novidadeVista','')===(n.chave||n.data))return '';
   const idade=(Date.now()-new Date(n.data||0).getTime())/864e5;if(idade>10)return '';

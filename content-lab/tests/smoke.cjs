@@ -46,9 +46,13 @@ const TABS = ['noticias', 'referencias', 'calendario', 'datas', 'marca', 'ideias
   }
 
   // cartão de novidade some ao clicar em Entendi
+  if (ENX) {
+    if (await page.$('.novidade')) erros.push('cartão de novidade aparece no modo enxuto');
+  } else {
   if (!(await page.$('.novidade'))) erros.push('cartão de novidade ausente');
   await page.click('[data-act="nov-ok"]');
   if (await page.$('.novidade')) erros.push('cartão de novidade não sumiu');
+  }
   // novidades
   await page.click('#tabs [data-tab="concorrentes"]');
   if (!(await page.$('[data-act="comp-import"]'))) erros.push('botão Atualizar Instagram ausente');

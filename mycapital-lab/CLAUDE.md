@@ -12,6 +12,7 @@ https://claude.ai/artifact/AgjAy6vCSEercWnABxGipJ
 
 ## Versão enxuta (`enxuto: true` em `window.__LAB__`)
 - Abas nesta ordem: Marca, Calendário (antiga Datas importantes), Notícias, Referências, Mapa de ideias, Agendamentos (antigo Calendário), Métricas, Concorrentes. Os ids internos continuam `datas` e `calendario`; só os nomes e a ordem mudam (`abas` e `ordem` em `window.__LAB__`).
+- Sem o cartão "Novidade da semana".
 - Notícias: sem a faixa de fontes e sem o filtro por temas. Só aparecem notícias ligadas aos pilares da marca. O Claude da página classifica cada notícia e grava `pilar` (nome exato do pilar, ou vazio quando não se liga a nenhum) e `pilarBase` (os pilares da época, separados por `|`). Se os pilares mudarem, ele classifica de novo. Enquanto não classifica, vale uma leitura por palavras-chave.
 - Referências: sem vidIQ e sem "Atualizar Instagram". Botões: Padrões em comum, Nova referência, Bússola e, em cada card, Adaptar para a marca. Filtros: Da internet (`origem: "web"`, e também os antigos `radar`), Variações do Claude (`origem: "claude"`) e Salvas por você. Sem filtro por temas.
 - Referência da internet: `platform` (instagram, tiktok, youtube, linkedin, x, web), `url`, `creator`, `hook`, `views` (só números citados por uma fonte, dizendo qual), `why`, `fit`, `tags`.
