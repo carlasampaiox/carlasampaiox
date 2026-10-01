@@ -27,3 +27,4 @@
 .wordmark{align-items:center;gap:7px;font-weight:700;letter-spacing:-.01em}
 .wordmark .mark{width:30px;height:23px;fill:var(--accent);flex:none}
 .wordmark b{font-weight:700;padding:1px 7px 2px;margin-left:1px;line-height:1.15}
+.b-grid.so-funciona{grid-template-columns:minmax(0,1fr)}

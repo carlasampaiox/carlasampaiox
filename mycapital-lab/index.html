@@ -424,6 +424,7 @@ fieldset{border:0;padding:0;margin:0}
 .wordmark{align-items:center;gap:7px;font-weight:700;letter-spacing:-.01em}
 .wordmark .mark{width:30px;height:23px;fill:var(--accent);flex:none}
 .wordmark b{font-weight:700;padding:1px 7px 2px;margin-left:1px;line-height:1.15}
+.b-grid.so-funciona{grid-template-columns:minmax(0,1fr)}
 
 </style>
 <header class="top">
@@ -872,11 +873,11 @@ function bussola(){
   const up=state.bussolaRodando?`<span class="rstat pending"><span class="pulse"></span>Atualizando com as referências novas...</span>`:aiBtn(b?'Atualizar Bússola':'Gerar Bússola','ai-bussola','','sm');
   if(!b)return `<div class="bussola empty-b"><div><span class="eyebrow">Bússola de conteúdo</span><p class="muted">O Claude lê as referências e os números reais e diz o que está funcionando no mercado e o que produzir agora. Ela se atualiza sozinha quando as referências mudam.</p></div>${up}</div>`;
   const li=(arr,f)=>(Array.isArray(arr)?arr:[]).map(f).join('');
-  return `<details class="bussola" ${LS.get('cl.bussolaFechada',false)?'':'open'}><summary><span class="eyebrow">Bússola de conteúdo</span><b>O que está viralizando no mercado e o que fazer agora</b><span class="muted small">${b.atualizadoEm?'atualizada em '+fmtDay(String(b.atualizadoEm).slice(0,10)):''}${b.base?' · '+esc(b.base):''}</span></summary>
-    <div class="b-grid">
+  return `<details class="bussola" ${LS.get('cl.bussolaFechada',false)?'':'open'}><summary><span class="eyebrow">Bússola de conteúdo</span><b>O que está viralizando no mercado${ENX?'':' e o que fazer agora'}</b><span class="muted small">${b.atualizadoEm?'atualizada em '+fmtDay(String(b.atualizadoEm).slice(0,10)):''}${b.base?' · '+esc(b.base):''}</span></summary>
+    <div class="b-grid${ENX?' so-funciona':''}">
       <section><h4>Funciona</h4><ul>${li(b.funciona,x=>`<li><b>${esc(x.titulo)}</b>${x.prova?`<span class="prova">${esc(x.prova)}</span>`:''}${x.acao?`<span class="acao">→ ${esc(x.acao)}</span>`:''}</li>`)}</ul></section>
-      <section><h4>Evite</h4><ul>${li(b.evitar,x=>`<li><b>${esc(x.titulo)}</b>${x.prova?`<span class="prova">${esc(x.prova)}</span>`:''}</li>`)}</ul>
-        ${Array.isArray(b.agora)&&b.agora.length?`<h4>Faça agora</h4><ol>${li(b.agora,x=>`<li>${esc(x)}</li>`)}</ol>`:''}</section>
+${ENX?'':`      <section><h4>Evite</h4><ul>${li(b.evitar,x=>`<li><b>${esc(x.titulo)}</b>${x.prova?`<span class="prova">${esc(x.prova)}</span>`:''}</li>`)}</ul>
+        ${Array.isArray(b.agora)&&b.agora.length?`<h4>Faça agora</h4><ol>${li(b.agora,x=>`<li>${esc(x)}</li>`)}</ol>`:''}</section>`}
     </div>
     ${emAltaGoogle()}
     <div class="foot">${up}<span class="muted small">Viu algo viralizando na aba Explorar? Tire um print e cole em Nova referência: o Claude preenche e a Bússola passa a considerar.</span></div>
