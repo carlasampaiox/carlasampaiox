@@ -30,5 +30,5 @@ https://claude.ai/artifact/AgjAy6vCSEercWnABxGipJ
 4. Capacidades: `db`, `sample`, `assets`, `downloads` e `mcp` com `Claude Code Remote` / `fire_trigger`.
 
 ## Pendente
-- Pesquisa contínua de virais na internet: precisa de uma rotina com acesso à web (este ambiente bloqueia YouTube, Instagram e a maioria dos sites). A carga inicial de 2026-10-01 tem 3 referências da internet (números só quando a fonte cita) e 6 variações do Claude.
+- Pesquisa contínua de virais na internet: precisa de uma rotina com acesso à web (este ambiente bloqueia YouTube, Instagram e a maioria dos sites). Em 2026-10-01 as Referências foram refeitas sem vidIQ: saíram as 7 do radar do vidIQ, o documento `importador/vidiq` e a Bússola antiga (a página gera outra). Ficaram 5 referências da internet (números só quando a fonte cita) e 6 variações do Claude baseadas nelas. As 7 prévias do radar continuam nos assets, sem uso.
 - As rotinas automáticas (Notícias, Coleta gratuita, Instagram pelo vidIQ, Evolução) ainda gravam só no Content Lab. Os botões "Pesquisar agora" e "Atualizar Instagram" daqui disparam essas mesmas rotinas, então o resultado aparece no Content Lab até elas passarem a gravar aqui.
