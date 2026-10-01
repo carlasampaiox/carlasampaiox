@@ -142,7 +142,25 @@ function subCols(){
   unsubCols.forEach(u=>u());unsubCols=[];
   COLS.forEach(c=>state.data[c]=[]);
   if(!state.brandId)return;
-  COLS.forEach(c=>unsubCols.push(Store.sub(bpath(c),list=>{state.data[c]=list;scheduleRender(c==='dates')})));
+  COLS.forEach(c=>unsubCols.push(Store.sub(bpath(c),list=>{state.data[c]=list;scheduleRender(c==='dates');if(c==='news')agendarLimpeza()})));
+}
+/* versão de uma marca só: notícias com mais de LAB.noticiasDias dias de publicadas são apagadas ao abrir a página
+   (uma vez por sessão, só com o banco real e para quem pode editar). Notícias que viraram pauta ficam. */
+let limpezaFeita=false, limpezaTimer=0;
+function agendarLimpeza(){
+  if(!LAB.noticiasDias||!db||limpezaFeita)return;
+  clearTimeout(limpezaTimer);limpezaTimer=setTimeout(limparNoticias,4000); /* espera ideias e posts chegarem */
+}
+async function limparNoticias(){
+  if(limpezaFeita||!db)return;limpezaFeita=true;
+  const hoje=parseISO(TODAY()), dias=Number(LAB.noticiasDias);
+  const usadas=[...state.data.ideas.map(i=>i.source||''),...state.data.posts.map(p=>p.notes||'')].join('\n');
+  const velhas=state.data.news.filter(n=>{
+    if(n.usada||(n.title&&usadas.includes(n.title)))return false;
+    const d=parseISO(n.date)||(n.createdAt?new Date(n.createdAt):null);
+    return d&&!isNaN(d)&&(hoje-d)/864e5>dias;
+  });
+  for(const n of velhas){try{await db.collection(bpath('news')).doc(n.id).delete()}catch(e){return}} /* sem permissão: para em silêncio */
 }
 function setBrand(id){
   if(id===state.brandId)return;
@@ -1324,7 +1342,7 @@ const AI={
   },
   'ai-news-one'(id){
     const n=state.data.news.find(x=>x.id===id);if(!n)return;
-    ask({title:'Virar pauta',sub:n.title,kind:'json',addLabel:'Salvar no mapa de ideias',card:ideaCard,onAdd:addIdea,norm:normIdea('Notícia: '+n.title),
+    ask({title:'Virar pauta',sub:n.title,kind:'json',addLabel:'Salvar no mapa de ideias',card:ideaCard,onAdd:async x=>{const r=await addIdea(x);if(!n.usada)Store.update(bpath('news'),n.id,{usada:true}).catch(()=>{});return r},norm:normIdea('Notícia: '+n.title),
       prompt:`NOTÍCIA\nTítulo: ${n.title}\nFonte: ${n.source||''}\nResumo: ${n.summary||''}\n\nTAREFA: proponha 3 pautas diferentes a partir desta notícia (por exemplo: explicativa, prática e opinativa), cada uma no canal em que funciona melhor.\n${IDEA_SHAPE}`});
   },
   'ai-refs-all'(){
