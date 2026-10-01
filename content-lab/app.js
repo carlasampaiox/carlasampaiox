@@ -1,6 +1,10 @@
 (function(){
 "use strict";
 /* ================= constants ================= */
+/* versões de uma marca só (ex.: Mycapital Lab) definem window.__LAB__ = {nome, marca, slug} */
+const LAB=window.__LAB__||{};
+const APP=LAB.nome||'Content Lab';
+const ENX=!!LAB.enxuto; /* versão enxuta: Notícias pelos pilares, Referências da internet e do Claude, sem vidIQ */
 const CH=[
  {id:'site',label:'Site',code:'SITE'},
  {id:'blog',label:'Blog',code:'BLOG'},
@@ -18,15 +22,16 @@ const DTYPES=['Data comemorativa','Lançamento','Campanha','Evento','Prazo','Ani
 const TABS=[
  {id:'noticias',label:'Notícias'},{id:'referencias',label:'Referências'},{id:'calendario',label:'Calendário'},{id:'datas',label:'Datas importantes'},
  {id:'marca',label:'Marca'},{id:'ideias',label:'Mapa de ideias'},{id:'metricas',label:'Métricas'},{id:'concorrentes',label:'Concorrentes'}];
+/* a versão de uma marca só pode renomear e reordenar as abas */
+TABS.forEach(t=>{if(LAB.abas&&LAB.abas[t.id])t.label=LAB.abas[t.id]});
+if(Array.isArray(LAB.ordem))TABS.sort((a,b)=>{const i=x=>{const k=LAB.ordem.indexOf(x.id);return k<0?99:k};return i(a)-i(b)});
+const tabLabel=id=>(TABS.find(t=>t.id===id)||{}).label||id;
 const MES=['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
 const MESF=['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
 const DOW=['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'];
 const DOWF=['domingo','segunda','terça','quarta','quinta','sexta','sábado'];
 const METRICS=[
  {k:'followers',l:'Seguidores'},{k:'reach',l:'Alcance'},{k:'engagement',l:'Engajamento',pct:1},{k:'clicks',l:'Cliques e visitas'}];
-/* versões de uma marca só (ex.: Mycapital Lab) definem window.__LAB__ = {nome, marca, slug} */
-const LAB=window.__LAB__||{};
-const APP=LAB.nome||'Content Lab';
 const STAR='<svg class="star" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.2l2 4.3 4.7.5-3.5 3.2 1 4.6L8 11.4l-4.2 2.4 1-4.6L1.3 6l4.7-.5z"/></svg>';
 const SPARK='<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 .8l1.7 4.6 4.6 1.7-4.6 1.7L8 13.4 6.3 8.8 1.7 7.1l4.6-1.7z"/><path d="M13.3 10.6l.6 1.6 1.6.6-1.6.6-.6 1.6-.6-1.6-1.6-.6 1.6-.6z"/></svg>';
 
@@ -48,7 +53,7 @@ const fmtN=(v,pct)=>v==null||v===''||isNaN(v)?'–':pct?(Number(v).toLocaleStrin
 const fmtNC=(v,pct)=>v==null||isNaN(v)?'–':pct?(Number(v).toLocaleString('pt-BR',{maximumFractionDigits:1})+'%'):NFC.format(v);
 const clean=t=>String(t||'').replace(/\s*—\s*/g,', ').replace(/\s–\s/g,', ');
 const code=id=>{const c=CHM[id];return c?`<span class="code ${c.id}" title="${c.label}">${c.code}</span>`:''};
-const exTag=it=>it&&it.exemplo?'<span class="ex" title="Dado de exemplo. Remova em Marca.">exemplo</span>':it&&it.origem==='importador'?'<span class="imp" title="Trazido pelo importador de posts, com números reais da plataforma.">importado</span>':it&&it.origem==='radar'?'<span class="imp" title="Achado no radar de oportunidades do Instagram, com números reais do vidIQ e fit avaliado pelo Claude.">radar</span>':'';
+const exTag=it=>it&&it.exemplo?'<span class="ex" title="Dado de exemplo. Remova em Marca.">exemplo</span>':it&&it.origem==='importador'?'<span class="imp" title="Trazido pelo importador de posts, com números reais da plataforma.">importado</span>':it&&it.origem==='radar'?'<span class="imp" title="Achado no radar de oportunidades do Instagram, com números reais do vidIQ e fit avaliado pelo Claude.">radar</span>':it&&it.origem==='web'?'<span class="imp" title="Encontrado pelo Claude em pesquisa na internet.">internet</span>':it&&it.origem==='claude'?'<span class="imp" title="Ideia criada pelo Claude a partir das referências. Não tem números próprios.">Claude</span>':'';
 const stTag=s=>{const x=STM[s]||STM.ideia;return `<span class="status st-${x.id}"><i></i>${x.label}</span>`};
 const aiBtn=(label,act,attrs='',cls='')=>`<button class="btn ai ${cls}" data-act="${act}" ${attrs}>${SPARK}${esc(label)}</button>`;
 const btn=(label,act,attrs='',cls='')=>`<button class="btn ${cls}" data-act="${act}" ${attrs}>${label}</button>`;
@@ -206,26 +211,65 @@ function newsAge(n){
 }
 const inPeriod=(n,p)=>!p||newsAge(n)<=Number(p);
 function newsFiltered(){
+  if(ENX)return newsDosPilares().filter(n=>inPeriod(n,state.f.newsPeriod));
   return state.data.news.filter(n=>inPeriod(n,state.f.newsPeriod)&&(!state.f.newsTag||n.tag===state.f.newsTag));
 }
+/* versão enxuta: só entram notícias ligadas aos pilares da marca. O Claude classifica cada notícia
+   (campos pilar e pilarBase = pilares da época); enquanto isso, vale uma leitura por palavras-chave. */
+const semAcento=t=>String(t||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+const pilaresAssin=()=>pillars().join('|');
+const PILAR_PISTAS=[[/tribut|\bir\b|impost/,/impost|\bir\b|irpf|darf|declara|isen|receita federal|tribut|restitui/],
+  [/carteira/,/carteira|investiment|acoes|\bfii|tesouro|renda fixa|dividend|\betf|\bcdb|ibovespa|bolsa/],
+  [/educa/,/entenda|saiba|como |o que |guia|erro/],
+  [/rotina|performance/,/aposentadoria|rotina|habito|corrida|endurance/]];
+function pilarHeur(n){
+  const txt=semAcento(n.title+' '+(n.tag||'')+' '+(n.summary||''));
+  for(const p of pillars()){
+    const pn=semAcento(p);
+    if(pn.split(/\s+/).filter(w=>w.length>3&&!['para','como'].includes(w)).some(w=>txt.includes(w)))return p;
+    for(const [re,pistas] of PILAR_PISTAS)if(re.test(pn)&&pistas.test(txt))return p;
+  }
+  return '';
+}
+function pilarDa(n){
+  if(n.pilarBase===pilaresAssin())return pillars().includes(n.pilar)?n.pilar:'';
+  return pilarHeur(n);
+}
+const newsDosPilares=()=>state.data.news.filter(n=>pilarDa(n));
+let pilaresRodando='';
+async function classificarNoticias(){
+  const sig=pilaresAssin();
+  if(!sample||!sig||pilaresRodando)return;
+  const fila=state.data.news.filter(n=>n.pilarBase!==sig).slice(0,40);
+  if(!fila.length)return;
+  pilaresRodando=sig;let ok=false;
+  try{
+    const r=await sample.json(`${RULES}\n\n${brandCtx()}\n\nPILARES DE CONTEÚDO\n${pillars().map(p=>'- '+p).join('\n')}\n\nNOTÍCIAS\n${fila.map((n,i)=>`${i}. ${n.title}${n.summary?' | '+n.summary:''}`).join('\n')}\n\nTAREFA: para cada notícia, diga a qual pilar ela se liga de verdade, pensando no público da marca. Se não tiver ligação clara com nenhum pilar, use "". Responda só com JSON: [{"i":0,"pilar":"nome exato do pilar ou vazio"}].`,{cache:false});
+    const lista=Array.isArray(r)?r:(r&&r.items)||[];
+    for(const x of lista){const n=fila[Number(x&&x.i)];if(!n)continue;
+      await Store.update(bpath('news'),n.id,{pilar:pillars().includes(x.pilar)?x.pilar:'',pilarBase:sig});ok=true}
+  }catch(e){console.warn(e)}
+  finally{pilaresRodando='';if(ok&&state.data.news.some(n=>n.pilarBase!==sig))setTimeout(classificarNoticias,1500)}
+}
 function viewNews(){
-  const all=state.data.news.slice().sort((a,b)=>String(b.date||b.createdAt).localeCompare(String(a.date||a.createdAt)));
+  if(ENX)classificarNoticias();
+  const all=(ENX?newsDosPilares():state.data.news).slice().sort((a,b)=>String(b.date||b.createdAt).localeCompare(String(a.date||a.createdAt)));
   const inP=all.filter(n=>inPeriod(n,state.f.newsPeriod));
-  const tags=[...new Set(inP.map(n=>n.tag).filter(Boolean))].sort();
+  const tags=ENX?[]:[...new Set(inP.map(n=>n.tag).filter(Boolean))].sort();
   if(state.f.newsTag&&!tags.includes(state.f.newsTag))state.f.newsTag='';
   const list=state.f.newsTag?inP.filter(n=>n.tag===state.f.newsTag):inP;
-  const src=parseSources((curBrand()||{}).sources);
-  let h=head('Notícias do nicho','Matérias salvas para acompanhar o mercado e virar pauta. Cadastre as fontes que você mais consulta na aba Marca.',
+  const src=ENX?[]:parseSources((curBrand()||{}).sources);
+  let h=head('Notícias do nicho',ENX?'Só as matérias ligadas aos pilares de conteúdo da marca, para acompanhar o mercado e virar pauta. Os pilares ficam na aba Marca.':'Matérias salvas para acompanhar o mercado e virar pauta. Cadastre as fontes que você mais consulta na aba Marca.',
     aiBtn('Sugerir pautas','ai-news-all')+btn('Salvar notícia','new','data-col="news"','primary'));
   if(src.length)h+=`<div class="sources"><span class="eyebrow">Fontes</span>${src.map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)} ↗</a>`).join('')}</div>`;
-  if(!all.length)return h+empty('Nenhuma notícia salva','Cole o link de uma matéria do seu nicho para começar.',btn('Salvar notícia','new','data-col="news"','primary'));
+  if(!all.length)return h+empty(ENX?'Nenhuma notícia ligada aos pilares':'Nenhuma notícia salva',ENX&&!pillars().length?'Cadastre os pilares de conteúdo na aba Marca.':'Cole o link de uma matéria do seu nicho para começar.',btn('Salvar notícia','new','data-col="news"','primary'));
   h+=`<div class="toolbar"><span class="eyebrow">Período</span>${chips('newsPeriod',PERIODS.map(([v,l])=>[v,`${l} <span class="cnt">${all.filter(n=>inPeriod(n,v)).length}</span>`]),state.f.newsPeriod)}<span class="hint muted" style="font-size:12px">Conta a data de publicação; sem ela, o dia em que a notícia foi salva.</span></div>`;
   if(tags.length>1)h+=`<div class="toolbar">${chips('newsTag',[['','Todos os temas'],...tags.map(t=>[t,esc(t)])],state.f.newsTag)}</div>`;
   if(!list.length)return h+empty('Nenhuma notícia nesse período','Escolha um período maior ou aguarde a próxima atualização da rotina diária.',btn('Ver todas','filter','data-f="newsPeriod" data-v=""'));
   h+='<div class="stack">'+list.map(n=>{
     const u=safeUrl(n.url);
     return `<article class="row"><div class="row-main">
-      <div class="meta">${n.source?`<span class="src">${esc(n.source)}</span>`:''}${n.date?`<span>${fmtDay(n.date)}</span>`:''}${n.tag?`<span class="tagpill">${esc(n.tag)}</span>`:''}${exTag(n)}</div>
+      <div class="meta">${n.source?`<span class="src">${esc(n.source)}</span>`:''}${n.date?`<span>${fmtDay(n.date)}</span>`:''}${ENX?`<span class="tagpill">${esc(pilarDa(n))}</span>`:n.tag?`<span class="tagpill">${esc(n.tag)}</span>`:''}${exTag(n)}</div>
       <h3>${u?`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(n.title)}</a>`:esc(n.title)}</h3>
       ${n.summary?`<p>${esc(n.summary)}</p>`:''}
     </div><div class="row-actions">${aiBtn('Virar pauta','ai-news-one',`data-id="${esc(n.id)}"`,'sm')}${btn('Editar','edit',`data-col="news" data-id="${esc(n.id)}"`,'sm')}</div></article>`;
@@ -292,7 +336,11 @@ async function fillRefWithClaude(btnEl){
 }
 
 /* ---------- referências ---------- */
-const refTipo=r=>r.origem==='radar'?'radar':'manual';
+const refTipo=r=>ENX?(r.origem==='claude'?'claude':r.origem==='radar'||r.origem==='web'?'web':'manual'):r.origem==='radar'?'radar':'manual';
+/* referências com números reais (a Bússola não usa as variações criadas pelo Claude) */
+const refsReais=()=>refsMercado().filter(r=>r.origem!=='claude');
+const PLAT={instagram:['IG','Instagram'],tiktok:['TT','TikTok'],youtube:['YT','YouTube'],linkedin:['IN','LinkedIn'],x:['X','X'],web:['WEB','Site']};
+const platTag=r=>{const k=PLAT[r.platform]?r.platform:'instagram';return `<span class="code ${k}" title="${PLAT[k][1]}">${PLAT[k][0]}</span>`};
 /* Referências são do mercado: a própria marca e os concorrentes (que têm aba própria) ficam fora */
 const perfilKey=h=>String(h||'').trim().toLowerCase().replace(/^https?:\/\/(www\.)?instagram\.com\//,'').replace(/^@/,'').replace(/[\/?#].*$/,'');
 function perfisFora(){
@@ -313,25 +361,27 @@ function viewRefs(){
   const peso=r=>{const t=String(r.tags||'');return (t.includes('fit alto')||t.includes('alta semelhança')?0:t.includes('viral no nicho')?1:2)+(t.includes('possivelmente pago')?3:0)};
   const all=refsMercado().sort((a,b)=>peso(a)-peso(b)||String(b.createdAt).localeCompare(String(a.createdAt)));
   const porTipo=state.f.refTipo?all.filter(r=>refTipo(r)===state.f.refTipo):all;
-  const temas=refTemas(porTipo);
+  const temas=ENX?[]:refTemas(porTipo);
   if(state.f.refTema&&!temas.some(t=>t.toLowerCase()===state.f.refTema.toLowerCase()))state.f.refTema='';
   const list=state.f.refTema?porTipo.filter(r=>refTags(r).some(t=>t.toLowerCase()===state.f.refTema.toLowerCase())):porTipo;
-  let h=head('Referências virais','O que está em alta no mercado e cabe nos canais da marca: oportunidades do radar (perfis de todo o Instagram, com fit avaliado pelo Claude) e as que você salvou. Concorrentes ficam na aba Concorrentes.',
+  let h=ENX?head('Referências virais','Conteúdos que viralizaram na internet e cabem nos pilares da marca, variações criadas pelo Claude a partir deles e as referências que você salvou. Concorrentes ficam na aba Concorrentes.',
+    aiBtn('Padrões em comum','ai-refs-all')+btn('Nova referência','new','data-col="refs"','primary')):head('Referências virais','O que está em alta no mercado e cabe nos canais da marca: oportunidades do radar (perfis de todo o Instagram, com fit avaliado pelo Claude) e as que você salvou. Concorrentes ficam na aba Concorrentes.',
     aiBtn('Padrões em comum','ai-refs-all')+igBtn()+btn('Nova referência','new','data-col="refs"','primary'));
-  h+=igStatus();
+  if(!ENX)h+=igStatus();
   h+=bussola();
-  autoBussola(all);
-  h+=`<div class="toolbar">${chips('refTipo',[['','Todas'],['radar','Oportunidades do radar'],['manual','Salvas por você']],state.f.refTipo)}</div>`;
+  autoBussola(ENX?all.filter(r=>r.origem!=='claude'):all);
+  h+=`<div class="toolbar">${chips('refTipo',ENX?[['','Todas'],['web','Da internet'],['claude','Variações do Claude'],['manual','Salvas por você']]:[['','Todas'],['radar','Oportunidades do radar'],['manual','Salvas por você']],state.f.refTipo)}</div>`;
   if(temas.length>1)h+=`<div class="toolbar">${chips('refTema',[['','Todos os temas'],...temas.map(t=>[t,esc(t)])],state.f.refTema)}</div>`;
   if(!all.length)return h+empty('Nenhuma referência ainda','Salve o link de um post que viralizou e anote o gancho e por que funcionou.',btn('Nova referência','new','data-col="refs"','primary'));
-  if(!list.length)return h+empty('Nada neste filtro',state.f.refTipo==='radar'&&!state.f.refTema?'O radar roda junto com o botão "Atualizar Instagram", no máximo 1 vez por semana.':'Troque o filtro ou adicione uma nova referência.');
+  if(!list.length)return h+empty('Nada neste filtro',ENX?'Troque o filtro ou adicione uma nova referência.':state.f.refTipo==='radar'&&!state.f.refTema?'O radar roda junto com o botão "Atualizar Instagram", no máximo 1 vez por semana.':'Troque o filtro ou adicione uma nova referência.');
   h+='<div class="grid">'+list.map(r=>{
     const u=safeUrl(r.url);
     return `<article class="card ref">
       ${validAsset(r.media)?`<div class="rmedia">${mediaTag(r.media,r.mediaType)}</div>`:''}
-      <div class="meta"><span class="code instagram">IG</span><span class="src">${esc(r.creator||'Perfil')}</span>${r.format?`<span>· ${esc(r.format)}</span>`:''}${exTag(r)}</div>
+      <div class="meta">${ENX?platTag(r):'<span class="code instagram">IG</span>'}<span class="src">${esc(r.origem==='claude'?'Variação do Claude':r.creator||'Perfil')}</span>${r.format?`<span>· ${esc(r.format)}</span>`:''}${exTag(r)}</div>
       ${r.hook?`<div class="hook">${esc(r.hook)}</div>`:''}
-      ${r.why?`<div class="kv"><b>Por que funcionou:</b> ${esc(r.why)}</div>`:''}
+      ${r.why?`<div class="kv"><b>${r.origem==='claude'?'Por que deve funcionar':'Por que funcionou'}:</b> ${esc(r.why)}</div>`:''}
+      ${r.base?`<div class="kv"><b>Inspirada em:</b> ${safeUrl(r.baseUrl)?`<a href="${esc(safeUrl(r.baseUrl))}" target="_blank" rel="noopener">${esc(r.base)} ↗</a>`:esc(r.base)}</div>`:''}
       ${r.fit?`<div class="kv fit"><b>Como a marca entra:</b> ${esc(r.fit)}</div>`:''}
       ${r.views?`<div class="kv"><b>Resultado:</b> ${esc(r.views)}</div>`:''}
       ${r.tags?`<div class="chips">${String(r.tags).split(',').map(t=>t.trim()).filter(Boolean).map(t=>`<span class="tagpill">${esc(t)}</span>`).join('')}</div>`:''}
@@ -393,7 +443,7 @@ function autoBussola(refs){
 }
 async function refreshBussola(btnEl){
   if(!sample){toast('A Bússola é atualizada pelo Claude quando a central é aberta no Claude.');return}
-  const refs=refsMercado(), posts=state.data.posts.filter(p=>p.status==='publicado');
+  const refs=refsReais(), posts=state.data.posts.filter(p=>p.status==='publicado');
   if(refs.length<3){if(btnEl)toast('Salve algumas referências primeiro.');return}
   const old=btnEl?btnEl.innerHTML:'';if(btnEl){btnEl.disabled=true;btnEl.innerHTML=SPARK+'Analisando...'}
   state.bussolaRodando=true;if(!btnEl)renderMain(true);
@@ -417,7 +467,7 @@ function viewCal(){
   const dmap=datesByDay(y);
   const monthPosts=posts.filter(p=>String(p.date).startsWith(mk));
   const counts=STATUS.map(s=>[s,monthPosts.filter(p=>(p.status||'ideia')===s.id).length]);
-  let h=head('Calendário de conteúdo','Planejamento por canal. Toque em um dia para criar um post nele.',
+  let h=head(ENX?tabLabel('calendario'):'Calendário de conteúdo','Planejamento por canal. Toque em um dia para criar um post nele.',
     aiBtn('Planejar a semana','ai-week')+btn('Novo post','new','data-col="posts"','primary'));
   h+=`<div class="toolbar">
     <div class="cal-nav"><button class="iconbtn" data-act="cal-prev" aria-label="Mês anterior">‹</button><div class="cal-title">${MESF[m]} ${y}</div><button class="iconbtn" data-act="cal-next" aria-label="Próximo mês">›</button><button class="btn sm ghost" data-act="cal-today">Hoje</button></div>
@@ -480,7 +530,7 @@ function datesByDay(y){
 const whenTxt=n=>n===0?'hoje':n===1?'amanhã':n<0?(n===-1?'ontem':`há ${-n} dias`):`em ${n} dias`;
 function viewDates(){
   const all=upcoming();
-  let h=head('Datas importantes','Datas comemorativas, lançamentos, campanhas e prazos da marca. Cada data avisa quando chega a hora de começar a preparar o conteúdo e aparece no calendário.',
+  let h=head(ENX?tabLabel('datas'):'Datas importantes',`Datas comemorativas, lançamentos, campanhas e prazos da marca. Cada data avisa quando chega a hora de começar a preparar o conteúdo e aparece ${ENX?'nos agendamentos':'no calendário'}.`,
     aiBtn('Sugerir datas do nicho','ai-dates')+btn('Nova data','new','data-col="dates"','primary'));
   if(!all.length)return h+empty('Nenhuma data cadastrada','Cadastre aniversário da marca, lançamentos e datas do nicho, ou peça sugestões ao Claude.',btn('Nova data','new','data-col="dates"','primary'));
   const row=o=>{const d=o.d;
@@ -564,7 +614,7 @@ function viewIdeas(){
   const ps=pillars(), groups=ps.map(p=>[p,[]]), other=[];
   ideas.forEach(i=>{const g=groups.find(([p])=>p===i.pillar);(g?g[1]:other).push(i)});
   if(other.length)groups.push(['Sem pilar',other]);
-  let h=head('Mapa de ideias','Banco de ideias organizado pelos pilares da marca. Consulte na hora de preencher o calendário.',
+  let h=head('Mapa de ideias',`Banco de ideias organizado pelos pilares da marca. Consulte na hora de preencher ${ENX?'os agendamentos':'o calendário'}.`,
     aiBtn('Gerar ideias','ai-ideas')+btn('Nova ideia','new','data-col="ideas"','primary'));
   h+=`<div class="toolbar">${chips('ideaCh',[['','Todos os canais'],...activeCh().map(c=>[c.id,c.label])],state.f.ideaCh)}<div class="spacer"></div>
     <button class="chip" data-act="idea-all" aria-pressed="${state.f.ideaAll}">Mostrar usadas e arquivadas</button></div>`;
@@ -1022,7 +1072,7 @@ const SCHEMA={
   {k:'tag',l:'Tema',t:'text',ph:'Ex.: Dividendos'},{k:'summary',l:'Resumo e por que importa',t:'textarea',full:1,rows:3}]},
  refs:{name:'referência',fields:[
   {k:'media',l:'Prévia do post',t:'media',full:1},{k:'mediaType',t:'hidden'},
-  {k:'platform',l:'Plataforma',t:'select',o:[['instagram','Instagram']]},
+  {k:'platform',l:'Plataforma',t:'select',o:ENX?Object.entries(PLAT).map(([k,v])=>[k,v[1]]):[['instagram','Instagram']]},
   {k:'format',l:'Formato',t:'list',o:['Reels','Carrossel','Post estático','Stories','Vídeo','Live']},
   {k:'url',l:'Link do post',t:'url',full:1,ph:'https://'},{k:'creator',l:'Perfil',t:'text',ph:'@perfil'},
   {k:'views',l:'Resultado',t:'text',ph:'Ex.: 1,2 mi de views'},

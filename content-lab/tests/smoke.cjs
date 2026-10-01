@@ -17,6 +17,27 @@ const TABS = ['noticias', 'referencias', 'calendario', 'datas', 'marca', 'ideias
   await page.goto('file://' + path.resolve(__dirname, '..', process.env.PAGINA || 'index.html'));
   await page.waitForSelector('#tabs .tab');
 
+  const ENX = await page.evaluate(() => !!(window.__LAB__ || {}).enxuto);
+  if (ENX) {
+    const ordem = await page.$$eval('#tabs .tab', els => els.map(e => e.textContent.replace(/\d+$/, '').trim()));
+    if (ordem.join('|') !== 'Marca|Calendário|Notícias|Referências|Mapa de ideias|Agendamentos|Métricas|Concorrentes') erros.push('ordem das abas errada: ' + ordem.join(', '));
+    await page.click('#tabs [data-tab="noticias"]');
+    if (await page.$('#main .sources')) erros.push('fontes ainda aparecem em Notícias');
+    if (await page.$('[data-f="newsTag"]')) erros.push('filtro de temas ainda aparece em Notícias');
+    const pilares = await page.$$eval('#main article.row .tagpill', els => els.map(e => e.textContent));
+    if (!pilares.length || pilares.some(p => !p)) erros.push('notícias sem pilar em Notícias');
+    await page.click('#tabs [data-tab="referencias"]');
+    if (await page.$('[data-act="comp-import"]')) erros.push('Atualizar Instagram ainda aparece em Referências');
+    if (await page.$('[data-f="refTema"]')) erros.push('filtro de temas ainda aparece em Referências');
+    for (const a of ['ai-refs-all', 'ai-bussola', 'ai-ref-one']) if (!(await page.$(`[data-act="${a}"]`))) erros.push(`botão ${a} ausente em Referências`);
+    await page.click('[data-f="refTipo"][data-v="claude"]');
+    const cl = await page.$$eval('#main .card.ref', els => els.map(e => e.textContent));
+    if (cl.length !== 1 || !cl[0].includes('Variação do Claude') || !cl[0].includes('Inspirada em')) erros.push('filtro Variações do Claude errado');
+    await page.click('[data-f="refTipo"][data-v="web"]');
+    if ((await page.$$('#main .card.ref')).length !== 1) erros.push('filtro Da internet errado');
+    await page.click('[data-f="refTipo"][data-v=""]');
+  }
+
   for (const t of TABS) {
     await page.click(`#tabs [data-tab="${t}"]`);
     const txt = (await page.textContent('#main')) || '';
@@ -41,6 +62,7 @@ const TABS = ['noticias', 'referencias', 'calendario', 'datas', 'marca', 'ideias
   if (!(await kinvo.$eval('.cmore', d => d.open))) erros.push('Ver mais não abre');
   await page.click('#tabs [data-tab="referencias"]');
   if (!(await page.$('.bussola .trends'))) erros.push('Em alta no Google ausente na Bússola');
+  if (!ENX) {
   if (!(await page.$('[data-act="comp-import"]'))) erros.push('botão Atualizar Instagram ausente em Referências');
   if (await page.$('[data-f="refTipo"][data-v="tiktok"], [data-v="tiktok"]')) erros.push('filtro TikTok ainda aparece em Referências');
   await page.click('[data-f="refTipo"][data-v="radar"]');
@@ -48,6 +70,7 @@ const TABS = ['noticias', 'referencias', 'calendario', 'datas', 'marca', 'ideias
   if (radar.length !== 1 || !radar[0].includes('@exemplo.corre')) erros.push('filtro Oportunidades não mostra só o radar');
   if (!radar.some(t => t.includes('Como a marca entra'))) erros.push('fit da marca ausente no radar');
   await page.click('[data-f="refTipo"][data-v=""]');
+  }
   const refsTexto = await page.$eval('#main', e => e.textContent);
   if (refsTexto.includes('não deve aparecer')) erros.push('referência de concorrente aparece em Referências');
   await page.click('#tabs [data-tab="concorrentes"]');

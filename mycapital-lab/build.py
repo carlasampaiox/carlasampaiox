@@ -15,6 +15,16 @@ def montar():
     demo = json.loads(ler(LAB / 'demo.json'))
     demo = {k: v for k, v in demo.items() if not k.startswith('brands') or k == 'brands' or k.startswith('brands/mycapital/')}
     demo['brands'] = {k: v for k, v in demo.get('brands', {}).items() if k == 'mycapital'}
+    # Referências da versão enxuta: o exemplo do radar vira "da internet" e entra uma variação do Claude
+    refs = demo.get('brands/mycapital/refs', {})
+    for r in refs.values():
+        if r.get('origem') == 'radar':
+            r['origem'] = 'web'
+    refs['ex-claude-1'] = {'exemplo': True, 'origem': 'claude', 'platform': 'instagram', 'format': 'Reels',
+                           'hook': 'Você sabe quanto de IR pagou na bolsa este ano? Eu também não sabia.',
+                           'why': 'Pergunta direta que gera identificação e abre espaço para mostrar o controle da carteira.',
+                           'fit': 'Tributação e IR. Mostrar a calculadora de IR da Mycapital no fim.',
+                           'base': '@exemplo.corre', 'tags': 'variação, IR', 'createdAt': '2026-09-28T12:00:00.000Z'}
     return (ler(AQUI / 'shell.html')
             .replace('/*CSS*/', ler(LAB / 'app.css') + '\n' + ler(AQUI / 'tema.css'))
             .replace('/*DEMO*/', json.dumps(demo, ensure_ascii=False).replace('</', '<\\/'))
