@@ -16,7 +16,7 @@ const STATUS=[{id:'ideia',label:'Ideia'},{id:'producao',label:'Em produção'},{
 const STM=Object.fromEntries(STATUS.map(s=>[s.id,s]));
 const ISTATUS=[['nova','Nova'],['em-uso','Em uso'],['usada','Usada'],['arquivada','Arquivada']];
 const ISTM=Object.fromEntries(ISTATUS);
-const FORMATS=['Reels','Carrossel','Post estático','Stories','Live','Artigo','Guia','Landing page','Post texto','Carrossel PDF','Vídeo longo','Shorts','Newsletter'];
+const FORMATS=Array.isArray(LAB.formatos)&&LAB.formatos.length?LAB.formatos:['Reels','Carrossel','Post estático','Stories','Live','Artigo','Guia','Landing page','Post texto','Carrossel PDF','Vídeo longo','Shorts','Newsletter'];
 const COLS=['news','refs','posts','dates','ideas','metrics','competitors','compnews','insights'];
 const DTYPES=['Data comemorativa','Lançamento','Campanha','Evento','Prazo','Aniversário da marca','Sazonalidade'];
 const TABS=[
@@ -329,7 +329,8 @@ async function fillRefWithClaude(btnEl){
   try{
     const opts={cache:false};if(canImg)opts.images=[img];
     const r=await sample.json(`${RULES}\n\n${brandCtx()}\n\nREFERÊNCIA VIRAL\nPlataforma: ${v.platform}\nLink: ${v.url||'-'}\nCampos já preenchidos: ${JSON.stringify({format:v.format,creator:v.creator,views:v.views,hook:v.hook,why:v.why,tags:v.tags})}\n\nTAREFA: ${canImg?'A imagem é um print ou um quadro do vídeo desse post. Leia o que aparece nela.':'Não há imagem; use só os dados acima e deixe vazio o que não dá para saber.'} Preencha: format (Reels, Carrossel, Post estático, Stories, Vídeo ou Live), creator (@perfil visível ou ""), views (números visíveis de curtidas, views ou comentários, ou ""), hook (texto da capa ou primeira frase, transcrito), why (por que esse post funcionou, 1 a 2 frases, pensando no público da marca), tags (3 a 5 temas separados por vírgula). Nunca invente números. Responda só com JSON: {"format":"","creator":"","views":"","hook":"","why":"","tags":""}`,opts);
-    let n=0;['format','creator','views','hook','why','tags'].forEach(k=>{const el=document.getElementById('f-'+k),val=r&&r[k]?clean(String(r[k])):'';if(el&&val&&!el.value.trim()){if(el.tagName==='SELECT'&&![...el.options].some(o=>o.value===val))el.add(new Option(val,val));el.value=val;n++}});
+    let n=0;['format','creator','views','hook','why','tags'].forEach(k=>{const el=document.getElementById('f-'+k),val=r&&r[k]?clean(String(r[k])):'';if(k==='format'&&LAB.formatos&&val){const want=fmtList(normFmt(val));const boxes=[...document.querySelectorAll('input[name="f-format"]')];if(want.length&&!boxes.some(b=>b.checked)){boxes.forEach(b=>{if(want.includes(b.value))b.checked=true});n++}return}
+    if(el&&val&&!el.value.trim()){if(el.tagName==='SELECT'&&![...el.options].some(o=>o.value===val))el.add(new Option(val,val));el.value=val;n++}});
     toast(n?`${n} campos preenchidos. Revise antes de salvar.`:'Nada novo para preencher. Os campos já estavam completos ou a imagem não trouxe informação.',4000);
   }catch(e){toast(aiErrMsg(e),4500)}
   finally{if(btnEl.isConnected){btnEl.disabled=false;btnEl.innerHTML=old}}
@@ -1086,7 +1087,7 @@ const SCHEMA={
  refs:{name:'referência',fields:[
   {k:'media',l:'Prévia do post',t:'media',full:1},{k:'mediaType',t:'hidden'},
   {k:'platform',l:'Plataforma',t:'select',o:ENX?Object.entries(PLAT).map(([k,v])=>[k,v[1]]):[['instagram','Instagram']]},
-  {k:'format',l:'Formato',t:'list',o:['Reels','Carrossel','Post estático','Stories','Vídeo','Live']},
+  {k:'format',l:'Formato',t:'list',o:LAB.formatos?FORMATS:['Reels','Carrossel','Post estático','Stories','Vídeo','Live']},
   {k:'url',l:'Link do post',t:'url',full:1,ph:'https://'},{k:'creator',l:'Perfil',t:'text',ph:'@perfil'},
   ...(ENX?[{k:'postedAt',l:'Data da postagem',t:'date',req:1}]:[]),
   {k:'views',l:'Resultado',t:'text',ph:'Ex.: 1,2 mi de views'},
@@ -1138,6 +1139,11 @@ function fieldHtml(f,v){
     const cur=Array.isArray(v)?v:[];
     return `<fieldset class="field${full}"><legend>${f.l}</legend><div class="checks">${CH.map(c=>`<label><input type="checkbox" name="${id}" value="${c.id}"${cur.includes(c.id)?' checked':''}> ${c.label}</label>`).join('')}</div></fieldset>`;
   }
+  /* formatos da marca: dá para marcar mais de um; o valor fica como texto separado por vírgula ("Reels, Carrossel") */
+  if(isFmts(f)){
+    const cur=fmtList(v), o=[...FORMATS,...cur.filter(x=>!FORMATS.includes(x))];
+    return `<fieldset class="field full" id="${id}-box"><legend>${f.l}</legend><div class="checks">${o.map(x=>`<label><input type="checkbox" name="${id}" value="${esc(x)}"${cur.includes(x)?' checked':''}> ${esc(x)}</label>`).join('')}</div></fieldset>`;
+  }
   if(f.t==='hidden')return `<input type="hidden" id="${id}" value="${esc(v==null?'':v)}">`;
   if(f.t==='media')return `<div class="field full"><span class="flabel">${f.l}</span>
     <div class="media-box" id="mediaBox">${validAsset(v)?mediaTag(v,(modalCtx&&modalCtx.item&&modalCtx.item.mediaType)||''):MEDIA_EMPTY}</div>
@@ -1184,6 +1190,7 @@ function collect(sc){
   sc.fields.forEach(f=>{
     const id='f-'+f.k;
     if(f.t==='multi'){out[f.k]=[...document.querySelectorAll(`input[name="${id}"]:checked`)].map(i=>i.value);return}
+    if(isFmts(f)){out[f.k]=[...document.querySelectorAll(`input[name="${id}"]:checked`)].map(i=>i.value).join(', ');return}
     const el=document.getElementById(id);if(!el)return;
     if(f.t==='check'){out[f.k]=el.checked;return}
     const raw=el.value.trim();
@@ -1220,7 +1227,12 @@ async function createBrand(vals){
 }
 
 /* ================= Claude ================= */
-const RULES='Escreva em português do Brasil. Nunca use travessão (—) nem meia-risca (–) como pontuação; use vírgula, dois-pontos, ponto ou parênteses. Seja específico para esta marca e evite ideias genéricas. Não invente números, estatísticas, leis ou recursos de produto; quando um fato precisar de checagem, marque com [confirmar].';
+const RULES='Escreva em português do Brasil. Nunca use travessão (—) nem meia-risca (–) como pontuação; use vírgula, dois-pontos, ponto ou parênteses. Seja específico para esta marca e evite ideias genéricas. Não invente números, estatísticas, leis ou recursos de produto; quando um fato precisar de checagem, marque com [confirmar].'+(LAB.formatos?` Quando indicar formato, use um ou mais destes (separados por vírgula), escritos igual: ${FORMATS.join(', ')}.`:'');
+/* formato fora da lista oficial vira o item equivalente da lista (ou fica vazio) */
+const isFmts=f=>!!LAB.formatos&&f.k==='format';
+const fmtList=v=>String(v||'').split(',').map(x=>x.trim()).filter(Boolean);
+const normFmt=x=>{if(!LAB.formatos)return String(x||'');
+  return [...new Set(fmtList(x).map(p=>{const t=semAcento(p.split('·')[0].trim());return FORMATS.find(f=>semAcento(f)===t)||''}).filter(Boolean))].join(', ')};
 function brandCtx(){
   const b=curBrand()||{};
   return `CONTEXTO DA MARCA
@@ -1239,7 +1251,7 @@ const IDEA_SHAPE='Responda apenas com um array JSON no formato [{"title":"títul
 function normIdea(src){return x=>{
   if(!x||!x.title)return null;
   const ch=(Array.isArray(x.channels)?x.channels:[x.channels]).map(s=>String(s||'').toLowerCase()).filter(s=>CHM[s]);
-  return {title:clean(x.title),pillar:String(x.pillar||''),channels:ch,format:String(x.format||''),notes:clean(x.notes||''),status:'nova',source:src||'Sugestão do Claude'};
+  return {title:clean(x.title),pillar:String(x.pillar||''),channels:ch,format:normFmt(x.format),notes:clean(x.notes||''),status:'nova',source:src||'Sugestão do Claude'};
 }}
 const ideaCard=i=>`<div class="meta">${i.channels.map(code).join('')}${i.format?`<span>${esc(i.format)}</span>`:''}${i.pillar?`<span class="tagpill">${esc(i.pillar)}</span>`:''}</div><h4>${esc(i.title)}</h4>${i.notes?`<p>${esc(i.notes)}</p>`:''}`;
 const addIdea=i=>Store.add(bpath('ideas'),i);
@@ -1329,7 +1341,7 @@ const AI={
       card:p=>`<div class="meta">${code(p.channel)}<span>${fmtDay(p.date)}${p.time?' · '+esc(p.time):''}</span>${p.format?`<span>${esc(p.format)}</span>`:''}${p.pillar?`<span class="tagpill">${esc(p.pillar)}</span>`:''}</div><h4>${esc(p.title)}</h4>${p.caption?`<p class="clamp">${esc(p.caption)}</p>`:''}${p.why?`<p class="muted">${esc(p.why)}</p>`:''}`,
       onAdd:p=>{const x=Object.assign({},p);delete x.why;return Store.add(bpath('posts'),x)},
       norm:x=>{if(!x||!x.title)return null;const d=/^\d{4}-\d{2}-\d{2}$/.test(x.date)&&x.date>=start&&x.date<=end?x.date:start;const ch=CHM[String(x.channel||'').toLowerCase()]?String(x.channel).toLowerCase():activeCh()[0].id;
-        return {title:clean(x.title),date:d,time:/^\d{2}:\d{2}$/.test(x.time||'')?x.time:'',channel:ch,format:String(x.format||''),pillar:String(x.pillar||''),caption:clean(x.caption||''),status:'ideia',why:clean(x.why||'')}},
+        return {title:clean(x.title),date:d,time:/^\d{2}:\d{2}$/.test(x.time||'')?x.time:'',channel:ch,format:normFmt(x.format),pillar:String(x.pillar||''),caption:clean(x.caption||''),status:'ideia',why:clean(x.why||'')}},
       prompt:`PERÍODO: de ${start} a ${end} (hoje é ${TODAY()}).\nPOSTS JÁ AGENDADOS NO PERÍODO\n${lines(booked,p=>`- ${p.date} ${p.channel}: ${p.title}`,30)||'nenhum'}\n\nIDEIAS DISPONÍVEIS NO MAPA\n${lines(ideas,i=>`- ${i.title} (${i.pillar||'sem pilar'})`,30)||'nenhuma'}\n\nDATAS IMPORTANTES PRÓXIMAS\n${lines(upcoming().filter(o=>!o.past&&o.days<=45),o=>`- ${o.key}: ${o.d.title}`,15)||'nenhuma'}\n\nNOTÍCIAS RECENTES\n${lines(state.data.news,n=>`- ${n.title}`,8)||'nenhuma'}\n\nTAREFA: monte um plano de 6 posts para completar a semana, equilibrando canais ativos e pilares, sem repetir o que já está agendado. Aproveite as ideias do mapa quando fizer sentido.\nResponda apenas com um array JSON: [{"date":"AAAA-MM-DD","time":"HH:MM","channel":"instagram","format":"Carrossel","title":"...","pillar":"pilar exato da lista","caption":"rascunho curto do texto ou roteiro (até 60 palavras)","why":"por que este post nesta data, 1 frase"}]. Valores válidos em channel: ${activeCh().map(c=>c.id).join(', ')}.`});
   },
   'ai-dates'(){
@@ -1472,7 +1484,7 @@ document.addEventListener('click',async e=>{
       const fmt=String(r.format||'').split('·')[0].trim();
       const pil=pillars().find(p=>String(r.fit||'').includes(p))||'';
       const notes=[r.why&&'Por que deve funcionar: '+r.why,r.fit&&'Como a marca entra: '+r.fit,r.base&&'Inspirada em: '+r.base+(safeUrl(r.baseUrl)?' ('+safeUrl(r.baseUrl)+')':'')].filter(Boolean).join('\n');
-      openEditor('posts',null,Object.assign(defaults('posts',{}),{title:r.hook||'Variação do Claude',channel:ch,format:FORMATS.includes(fmt)?fmt:'',pillar:pil,notes}),{refId:r.id});break}
+      openEditor('posts',null,Object.assign(defaults('posts',{}),{title:r.hook||'Variação do Claude',channel:ch,format:normFmt(fmt),pillar:pil,notes}),{refId:r.id});break}
     case 'date-post':{const d=state.data.dates.find(x=>x.id===id);if(!d)break;const o=nextOcc(d);
       openEditor('posts',null,Object.assign(defaults('posts',{}),{title:d.title,date:o?iso(o):d.date,notes:d.notes||''}));break}
     case 'cal-prev':{let {y,m}=state.cal;m--;if(m<0){m=11;y--}state.cal={y,m};renderMain(true);break}

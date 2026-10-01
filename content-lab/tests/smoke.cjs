@@ -36,8 +36,12 @@ const TABS = ['noticias', 'referencias', 'calendario', 'datas', 'marca', 'ideias
     await page.click('#main .card.ref [data-act="ref-plan"]');
     const tituloPost = await page.$eval('#f-title', e => e.value);
     if (!tituloPost.includes('IR pagou na bolsa')) erros.push('Adicionar ao planejamento não preenche o post');
-    const formatos = await page.$$eval('#f-format option', os => os.map(o => o.value).filter(Boolean));
-    if (formatos.length < 10 || (await page.$eval('#f-format', e => e.value)) !== 'Reels') erros.push('formato não mostra todas as opções');
+    const formatos = await page.$$eval('input[name="f-format"]', is => is.map(i => i.value));
+    const marcados = await page.$$eval('input[name="f-format"]:checked', is => is.map(i => i.value));
+    if (formatos.length !== 9 || marcados.join() !== 'Reels') erros.push('formatos da marca errados no formulário: ' + formatos.join(', ') + ' / ' + marcados.join(', '));
+    await page.check('input[name="f-format"][value="Carrossel"]');
+    await page.check('input[name="f-format"][value="Shorts"]');
+    if ((await page.$$('input[name="f-format"]:checked')).length !== 3) erros.push('não dá para marcar mais de um formato');
     await page.click('#modal [data-act="modal-close"], #modal .iconbtn');
     await page.click('[data-f="refTipo"][data-v="web"]');
     if ((await page.$$('#main .card.ref')).length !== 1) erros.push('filtro Da internet errado');
