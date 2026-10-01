@@ -772,7 +772,13 @@ function perfisFora(){
   for(const c of state.data.competitors){s.add(perfilKey(c.instagram));s.add(perfilKey(c.name))}
   s.delete('');return s;
 }
-function refsMercado(){const fora=perfisFora();return state.data.refs.filter(r=>r.origem!=='importador'&&!/concorrente|minha marca/.test(String(r.tags||''))&&!fora.has(perfilKey(r.creator)))}
+function refsTodas(){const fora=perfisFora();return state.data.refs.filter(r=>r.origem!=='importador'&&!/concorrente|minha marca/.test(String(r.tags||''))&&!fora.has(perfilKey(r.creator)))}
+/* versão enxuta: viral tem que ser atual. Só entram posts de no máximo 30 dias (postedAt);
+   variações do Claude seguem a data do post em que se inspiram (baseDate). Exemplos ficam sempre. */
+const REF_DIAS=30;
+const refData=r=>r.origem==='claude'?r.baseDate:r.postedAt;
+const refRecente=r=>{if(r.exemplo)return true;const d=parseISO(refData(r));return !!d&&(parseISO(TODAY())-d)/864e5<=REF_DIAS};
+function refsMercado(){const l=refsTodas();return ENX?l.filter(refRecente):l}
 /* temas das referências: tags livres, sem o marcador estrutural "oportunidade" (já coberto pelo filtro Radar/Salvas) */
 function refTags(r){return String(r.tags||'').split(',').map(t=>t.trim()).filter(Boolean)}
 function refTemas(list){
@@ -794,6 +800,8 @@ function viewRefs(){
   if(!ENX)h+=igStatus();
   h+=bussola();
   autoBussola(ENX?all.filter(r=>r.origem!=='claude'):all);
+  const velhas=ENX?refsTodas().length-refsMercado().length:0;
+  if(velhas)h+=`<p class="muted small">${velhas===1?'1 referência fica oculta por ter':velhas+' referências ficam ocultas por terem'} mais de ${REF_DIAS} dias de postagem.</p>`;
   h+=`<div class="toolbar">${chips('refTipo',ENX?[['','Todas'],['web','Da internet'],['claude','Variações do Claude'],['manual','Salvas por você']]:[['','Todas'],['radar','Oportunidades do radar'],['manual','Salvas por você']],state.f.refTipo)}</div>`;
   if(temas.length>1)h+=`<div class="toolbar">${chips('refTema',[['','Todos os temas'],...temas.map(t=>[t,esc(t)])],state.f.refTema)}</div>`;
   if(!all.length)return h+empty('Nenhuma referência ainda','Salve o link de um post que viralizou e anote o gancho e por que funcionou.',btn('Nova referência','new','data-col="refs"','primary'));
@@ -802,7 +810,7 @@ function viewRefs(){
     const u=safeUrl(r.url);
     return `<article class="card ref">
       ${validAsset(r.media)?`<div class="rmedia">${mediaTag(r.media,r.mediaType)}</div>`:''}
-      <div class="meta">${ENX?platTag(r):'<span class="code instagram">IG</span>'}<span class="src">${esc(r.origem==='claude'?'Variação do Claude':r.creator||'Perfil')}</span>${r.format?`<span>· ${esc(r.format)}</span>`:''}${exTag(r)}</div>
+      <div class="meta">${ENX?platTag(r):'<span class="code instagram">IG</span>'}<span class="src">${esc(r.origem==='claude'?'Variação do Claude':r.creator||'Perfil')}</span>${ENX&&refData(r)?`<span>· ${r.origem==='claude'?'base de ':'postado em '}${fmtDay(refData(r))}</span>`:''}${r.format?`<span>· ${esc(r.format)}</span>`:''}${exTag(r)}</div>
       ${r.hook?`<div class="hook">${esc(r.hook)}</div>`:''}
       ${r.why?`<div class="kv"><b>${r.origem==='claude'?'Por que deve funcionar':'Por que funcionou'}:</b> ${esc(r.why)}</div>`:''}
       ${r.base?`<div class="kv"><b>Inspirada em:</b> ${safeUrl(r.baseUrl)?`<a href="${esc(safeUrl(r.baseUrl))}" target="_blank" rel="noopener">${esc(r.base)} ↗</a>`:esc(r.base)}</div>`:''}
@@ -855,13 +863,14 @@ ${ENX?'':`      <section><h4>Evite</h4><ul>${li(b.evitar,x=>`<li><b>${esc(x.titu
 }
 /* a Bússola acompanha as Referências: quando elas mudam (nova, editada ou apagada), o Claude refaz a leitura */
 let bussolaAuto='';
+const BUSSOLA_MIN=ENX?2:3; /* na versão enxuta só entram virais dos últimos 30 dias, então há menos referências */
 function bussolaDesatualizada(refs){
-  const b=state.data.insights.find(x=>x.id==='bussola');if(!b)return refs.length>=3;
+  const b=state.data.insights.find(x=>x.id==='bussola');if(!b)return refs.length>=BUSSOLA_MIN;
   const ult=refs.reduce((m,r)=>{const t=String(r.updatedAt||r.createdAt||'');return t>m?t:m},'');
   return ult>String(b.atualizadoEm||'')||(typeof b.nRefs==='number'&&b.nRefs!==refs.length);
 }
 function autoBussola(refs){
-  if(!sample||state.bussolaRodando||refs.length<3||!bussolaDesatualizada(refs))return;
+  if(!sample||state.bussolaRodando||refs.length<BUSSOLA_MIN||!bussolaDesatualizada(refs))return;
   const assin=refs.length+'|'+refs.map(r=>r.updatedAt||r.createdAt||'').sort().pop();
   if(assin===bussolaAuto)return;bussolaAuto=assin;
   setTimeout(()=>refreshBussola(null),0);
@@ -869,7 +878,7 @@ function autoBussola(refs){
 async function refreshBussola(btnEl){
   if(!sample){toast('A Bússola é atualizada pelo Claude quando a central é aberta no Claude.');return}
   const refs=refsReais(), posts=state.data.posts.filter(p=>p.status==='publicado');
-  if(refs.length<3){if(btnEl)toast('Salve algumas referências primeiro.');return}
+  if(refs.length<BUSSOLA_MIN){if(btnEl)toast('Salve algumas referências primeiro.');return}
   const old=btnEl?btnEl.innerHTML:'';if(btnEl){btnEl.disabled=true;btnEl.innerHTML=SPARK+'Analisando...'}
   state.bussolaRodando=true;if(!btnEl)renderMain(true);
   try{
@@ -1503,6 +1512,7 @@ const SCHEMA={
   {k:'platform',l:'Plataforma',t:'select',o:ENX?Object.entries(PLAT).map(([k,v])=>[k,v[1]]):[['instagram','Instagram']]},
   {k:'format',l:'Formato',t:'list',o:['Reels','Carrossel','Post estático','Stories','Vídeo','Live']},
   {k:'url',l:'Link do post',t:'url',full:1,ph:'https://'},{k:'creator',l:'Perfil',t:'text',ph:'@perfil'},
+  ...(ENX?[{k:'postedAt',l:'Data da postagem',t:'date',req:1}]:[]),
   {k:'views',l:'Resultado',t:'text',ph:'Ex.: 1,2 mi de views'},
   {k:'hook',l:'Gancho (primeira frase ou tela)',t:'textarea',full:1,rows:2},
   {k:'why',l:'Por que funcionou',t:'textarea',full:1,rows:3},{k:'fit',l:'Como a marca entra',t:'textarea',full:1,rows:3,ph:'Fit com a marca e como adaptar'},{k:'tags',l:'Etiquetas',t:'text',full:1,ph:'Separe por vírgula'}]},
@@ -1606,7 +1616,7 @@ function collect(sc){
 }
 async function saveItem(){
   const {col,item,extra}=modalCtx, sc=SCHEMA[col], vals=collect(sc);
-  const miss=sc.fields.filter(f=>f.req&&!vals[f.k]).map(f=>f.l);
+  const miss=sc.fields.filter(f=>f.req&&!vals[f.k]&&!(col==='refs'&&f.k==='postedAt'&&item&&item.origem==='claude')).map(f=>f.l);
   const err=$('#formErr');
   if(miss.length){err.textContent='Preencha: '+miss.join(', ')+'.';err.hidden=false;return}
   if(col==='metrics'&&vals.start>vals.end){const t=vals.start;vals.start=vals.end;vals.end=t}
@@ -1723,7 +1733,7 @@ const AI={
       prompt:`NOTÍCIA\nTítulo: ${n.title}\nFonte: ${n.source||''}\nResumo: ${n.summary||''}\n\nTAREFA: proponha 3 pautas diferentes a partir desta notícia (por exemplo: explicativa, prática e opinativa), cada uma no canal em que funciona melhor.\n${IDEA_SHAPE}`});
   },
   'ai-refs-all'(){
-    const refs=state.data.refs;if(!refs.length)return toast('Salve algumas referências primeiro.');
+    const refs=ENX?refsMercado():state.data.refs;if(!refs.length)return toast(ENX?'Não há referências dos últimos 30 dias.':'Salve algumas referências primeiro.');
     ask({title:'Padrões das referências',kind:'text',prompt:`REFERÊNCIAS VIRAIS SALVAS\n${lines(refs,r=>`- [${r.platform}/${r.format||''}] ${r.creator||''} | gancho: "${r.hook||''}" | por que funcionou: ${r.why||''} | resultado: ${r.views||''}`,25)}\n\nTAREFA: identifique os padrões que se repetem (tipo de gancho, formato, ritmo, pedido de ação, tema) e explique como a marca pode aplicar cada padrão. Termine com 5 ganchos prontos para a marca. Use tópicos curtos.`});
   },
   'ai-ref-one'(id){
