@@ -1018,7 +1018,7 @@ function viewBrand(){
     <div class="bsec">Canais</div>
     ${CH.map(c=>{const o=ch[c.id]||{};return `<div class="chrow field full"><label class="chtoggle"><input type="checkbox" id="b-ch-${c.id}" ${o.on!==false?'checked':''}> ${code(c.id)} ${c.label}</label><input type="text" id="b-h-${c.id}" value="${esc(o.handle||'')}" placeholder="Perfil ou link" aria-label="Perfil ou link do ${c.label}"></div>`}).join('')}
     <div class="bsec">Fontes de notícias</div>
-    ${f('sources','Sites que você acompanha','textarea',{full:1,rows:4,ph:'Nome | https://site.com',hint:'Uma por linha, no formato Nome | link. Aparecem no topo da aba Notícias.'})}
+    ${f('sources','Sites que você acompanha','textarea',{full:1,rows:4,ph:'Nome | https://site.com',hint:ENX?'Uma por linha, no formato Nome | link. O Claude da página usa essa lista como fontes preferidas.':'Uma por linha, no formato Nome | link. Aparecem no topo da aba Notícias.'})}
     <div class="field full" style="flex-direction:row;justify-content:flex-end">${btn('Salvar alterações','brand-save','','primary')}</div>
   </form>
   <div class="danger-zone backup-zone">
@@ -1673,6 +1673,7 @@ Pilares: ${pillars().join('; ')||'não definidos'}
 Canais ativos: ${activeCh().map(c=>c.label+(c.desc?' ('+c.desc+')':'')).join(', ')}
 Evitar: ${b.avoid||''}
 Hashtags: ${b.hashtags||''}
+Fontes que a equipe acompanha: ${parseSources(b.sources).map(x=>x.name).join(', ')||'não informadas'}
 Instruções da equipe: ${b.briefing||''}`;
 }
 const IDEA_SHAPE='Responda apenas com um array JSON no formato [{"title":"título da ideia","pillar":"um dos pilares, escrito exatamente como na lista","channels":["instagram"],"format":"Carrossel","notes":"ângulo e gancho em 1 ou 2 frases"}]. Valores válidos em channels: '+CH.map(c=>c.id).join(', ')+'.';
