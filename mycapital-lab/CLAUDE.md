@@ -20,6 +20,11 @@ https://claude.ai/artifact/AgjAy6vCSEercWnABxGipJ
 - Referência da internet: `platform` (instagram, tiktok, youtube, linkedin, x, web), `url`, `creator`, `hook`, `views` (só números citados por uma fonte, dizendo qual), `why`, `fit`, `tags`.
 - Variação do Claude: `hook`, `format`, `why` (por que deve funcionar), `fit`, `base` (em qual referência real se inspira) e `baseUrl`. Nunca tem números próprios, e a Bússola não usa variações. O card tem o botão "Adicionar ao planejamento", que abre um post novo já preenchido (título = gancho, canal pela plataforma, formato e pilar quando reconhecidos, observações com o porquê, o encaixe e a inspiração).
 
+## Pilares e linha editorial (desde 2026-10-01)
+- Pilares das redes: Mercado e economia, Impostos e patrimônio, Empresário e investidor, Rotina e performance, Histórias do dinheiro, Carteira e Mycapital na prática. Tom neutro (sem opinião sobre o mercado e sem recomendar ativos).
+- Linha editorial: qualquer assunto pode virar conteúdo, desde que termine no que muda para o investidor (carteira, impostos ou patrimônio). IR de renda variável é o carro-chefe. Referência: cerca de 60% nos pilares que atraem e 40% em Impostos e patrimônio e Carteira e Mycapital na prática.
+- O blog segue o Mapa de Conteúdo GEO (5 pilares próprios); os pilares das redes usam o GEO como fonte de temas. Tudo isso está no briefing da marca (aba Marca), que o Claude da página usa.
+
 ## Banco e prévias
 - Banco próprio (capability `db`), com a mesma estrutura do Content Lab (`brands/mycapital/...`, `importador/vidiq`). Ver `../content-lab/CLAUDE.md`.
 - Cópia inicial em 2026-10-01: 382 documentos e 26 prévias vindos do Content Lab. As prévias ganharam ids novos neste artifact e o campo `media` foi trocado pelos ids novos.

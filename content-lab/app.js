@@ -221,7 +221,10 @@ const pilaresAssin=()=>pillars().join('|');
 const PILAR_PISTAS=[[/tribut|\bir\b|impost/,/impost|\bir\b|irpf|darf|declara|isen|receita federal|tribut|restitui/],
   [/carteira/,/carteira|investiment|acoes|\bfii|tesouro|renda fixa|dividend|\betf|\bcdb|ibovespa|bolsa/],
   [/educa/,/entenda|saiba|como |o que |guia|erro/],
-  [/rotina|performance/,/aposentadoria|rotina|habito|corrida|endurance/]];
+  [/rotina|performance/,/aposentadoria|rotina|habito|corrida|endurance/],
+  [/mercado|economia/,/selic|copom|juros|inflacao|ipca|ibovespa|dolar|cambio|\bpib\b|focus|eleic|governo/],
+  [/empresari/,/empresa|empresari|pro-labore|pro labore|socio|holding|sucessao|\bpj\b|mei\b/],
+  [/historia/,/bilionari|fortuna|crise|caso|historia/]];
 function pilarHeur(n){
   const txt=semAcento(n.title+' '+(n.tag||'')+' '+(n.summary||''));
   for(const p of pillars()){
