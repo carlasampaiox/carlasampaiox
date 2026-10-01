@@ -36,6 +36,8 @@ const TABS = ['noticias', 'referencias', 'calendario', 'datas', 'marca', 'ideias
     await page.click('#main .card.ref [data-act="ref-plan"]');
     const tituloPost = await page.$eval('#f-title', e => e.value);
     if (!tituloPost.includes('IR pagou na bolsa')) erros.push('Adicionar ao planejamento não preenche o post');
+    const formatos = await page.$$eval('#f-format option', os => os.map(o => o.value).filter(Boolean));
+    if (formatos.length < 10 || (await page.$eval('#f-format', e => e.value)) !== 'Reels') erros.push('formato não mostra todas as opções');
     await page.click('#modal [data-act="modal-close"], #modal .iconbtn');
     await page.click('[data-f="refTipo"][data-v="web"]');
     if ((await page.$$('#main .card.ref')).length !== 1) erros.push('filtro Da internet errado');

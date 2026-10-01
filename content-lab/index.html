@@ -753,7 +753,7 @@ async function fillRefWithClaude(btnEl){
   try{
     const opts={cache:false};if(canImg)opts.images=[img];
     const r=await sample.json(`${RULES}\n\n${brandCtx()}\n\nREFERÊNCIA VIRAL\nPlataforma: ${v.platform}\nLink: ${v.url||'-'}\nCampos já preenchidos: ${JSON.stringify({format:v.format,creator:v.creator,views:v.views,hook:v.hook,why:v.why,tags:v.tags})}\n\nTAREFA: ${canImg?'A imagem é um print ou um quadro do vídeo desse post. Leia o que aparece nela.':'Não há imagem; use só os dados acima e deixe vazio o que não dá para saber.'} Preencha: format (Reels, Carrossel, Post estático, Stories, Vídeo ou Live), creator (@perfil visível ou ""), views (números visíveis de curtidas, views ou comentários, ou ""), hook (texto da capa ou primeira frase, transcrito), why (por que esse post funcionou, 1 a 2 frases, pensando no público da marca), tags (3 a 5 temas separados por vírgula). Nunca invente números. Responda só com JSON: {"format":"","creator":"","views":"","hook":"","why":"","tags":""}`,opts);
-    let n=0;['format','creator','views','hook','why','tags'].forEach(k=>{const el=document.getElementById('f-'+k),val=r&&r[k]?clean(String(r[k])):'';if(el&&val&&!el.value.trim()){el.value=val;n++}});
+    let n=0;['format','creator','views','hook','why','tags'].forEach(k=>{const el=document.getElementById('f-'+k),val=r&&r[k]?clean(String(r[k])):'';if(el&&val&&!el.value.trim()){if(el.tagName==='SELECT'&&![...el.options].some(o=>o.value===val))el.add(new Option(val,val));el.value=val;n++}});
     toast(n?`${n} campos preenchidos. Revise antes de salvar.`:'Nada novo para preencher. Os campos já estavam completos ou a imagem não trouxe informação.',4000);
   }catch(e){toast(aiErrMsg(e),4500)}
   finally{if(btnEl.isConnected){btnEl.disabled=false;btnEl.innerHTML=old}}
@@ -1579,7 +1579,9 @@ function fieldHtml(f,v){
     if(val&&!o.some(x=>x[0]===val))o=o.concat([[val,val]]);
     inp=`<select class="in" id="${id}">${o.map(([a,b])=>`<option value="${esc(a)}"${a===val?' selected':''}>${esc(b)}</option>`).join('')}</select>`;
   }
-  else if(f.t==='list')inp=`<input type="text" id="${id}" list="${id}-l" value="${esc(val)}"><datalist id="${id}-l">${f.o.map(x=>`<option value="${esc(x)}">`).join('')}</datalist>`;
+  /* formato: lista suspensa com todas as opções (o datalist escondia as outras quando o campo já vinha preenchido) */
+  else if(f.t==='list'){const o=val&&!f.o.includes(val)?[val,...f.o]:f.o;
+    inp=`<select class="in" id="${id}"><option value="">Escolha</option>${o.map(x=>`<option value="${esc(x)}"${x===val?' selected':''}>${esc(x)}</option>`).join('')}</select>`}
   else inp=`<input type="${f.t}" id="${id}" value="${esc(val)}" placeholder="${esc(f.ph||'')}"${f.step?` step="${f.step}"`:''}${f.t==='number'?' inputmode="decimal"':''}>`;
   const ai=f.ai?`<div class="ai-row">${aiBtn('Rascunhar texto','ai-caption','id="aiCapBtn"','sm')}${aiBtn('Sugerir ganchos','ai-hooks','','sm')}</div>`:'';
   return `<div class="field${full}"><label for="${id}">${f.l}</label>${inp}${ai}</div>`;
