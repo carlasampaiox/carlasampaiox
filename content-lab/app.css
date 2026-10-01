@@ -389,3 +389,7 @@ fieldset{border:0;padding:0;margin:0}
 .card.comp:has(details.cmore[open]) .clamp2{-webkit-line-clamp:unset;display:block}
 .card.comp.min .cmore-body section p{font-size:13.5px;color:var(--ink-2)}
 .card.comp.min .foot{gap:4px}
+
+/* filtro em lista suspensa (ex.: pilar no Mapa de ideias) */
+.fsel{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line-2);border-radius:999px;padding:3px 6px 3px 12px;max-width:100%}
+.fsel select{border:0;background:transparent;font-weight:600;font-size:14px;padding:4px 4px;min-width:0;max-width:260px;cursor:pointer}

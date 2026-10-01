@@ -111,7 +111,7 @@ const state={
   tab:(TABS.find(t=>t.id===location.hash.slice(1))||TABS.find(t=>t.id===LS.get('cl.tab'))||TABS[0]).id,
   data:{news:[],refs:[],posts:[],dates:[],ideas:[],metrics:[],competitors:[],compnews:[],insights:[]},
   cal:{y:now.getFullYear(),m:now.getMonth()},
-  f:{newsTag:'',newsPeriod:String(LS.get('cl.newsPeriod','')),refTipo:'',refTema:'',calCh:'',ideaCh:'',ideaAll:false,metric:'followers',mPeriod:String(LS.get('cl.mPeriod','30')),mFrom:LS.get('cl.mFrom',''),mTo:LS.get('cl.mTo',''),compPeriod:String(LS.get('cl.compPeriod','30')),compFilter:'',compKind:String(LS.get('cl.compKind','')),kGrupo:String(LS.get('cl.kGrupo','')),kPer:String(LS.get('cl.kPer','4s')),kFrom:LS.get('cl.kFrom',''),kTo:LS.get('cl.kTo','')},
+  f:{newsTag:'',newsPeriod:String(LS.get('cl.newsPeriod','')),refTipo:'',refTema:'',calCh:'',ideaCh:'',ideaPilar:String(LS.get('cl.ideaPilar','')),ideaAll:false,metric:'followers',mPeriod:String(LS.get('cl.mPeriod','30')),mFrom:LS.get('cl.mFrom',''),mTo:LS.get('cl.mTo',''),compPeriod:String(LS.get('cl.compPeriod','30')),compFilter:'',compKind:String(LS.get('cl.compKind','')),kGrupo:String(LS.get('cl.kGrupo','')),kPer:String(LS.get('cl.kPer','4s')),kFrom:LS.get('cl.kFrom',''),kTo:LS.get('cl.kTo','')},
   brandDirty:false, vidiq:null, novidade:null
 };
 const bpath=c=>`brands/${state.brandId}/${c}`;
@@ -531,7 +531,7 @@ function datesByDay(y){
 const whenTxt=n=>n===0?'hoje':n===1?'amanhã':n<0?(n===-1?'ontem':`há ${-n} dias`):`em ${n} dias`;
 function viewDates(){
   const all=upcoming();
-  let h=head(ENX?tabLabel('datas'):'Datas importantes',`Datas comemorativas, lançamentos, campanhas e prazos da marca. Cada data avisa quando chega a hora de começar a preparar o conteúdo e aparece ${ENX?'nos agendamentos':'no calendário'}.`,
+  let h=head(ENX?tabLabel('datas'):'Datas importantes',`Datas comemorativas, lançamentos, campanhas e prazos da marca. Cada data avisa quando chega a hora de começar a preparar o conteúdo e aparece ${ENX?'no planejamento':'no calendário'}.`,
     aiBtn('Sugerir datas do nicho','ai-dates')+btn('Nova data','new','data-col="dates"','primary'));
   if(!all.length)return h+empty('Nenhuma data cadastrada','Cadastre aniversário da marca, lançamentos e datas do nicho, ou peça sugestões ao Claude.',btn('Nova data','new','data-col="dates"','primary'));
   const row=o=>{const d=o.d;
@@ -615,12 +615,15 @@ function viewIdeas(){
   const ps=pillars(), groups=ps.map(p=>[p,[]]), other=[];
   ideas.forEach(i=>{const g=groups.find(([p])=>p===i.pillar);(g?g[1]:other).push(i)});
   if(other.length)groups.push(['Sem pilar',other]);
-  let h=head('Mapa de ideias',`Banco de ideias organizado pelos pilares da marca. Consulte na hora de preencher ${ENX?'os agendamentos':'o calendário'}.`,
+  /* filtro por pilar: lista suspensa, porque a marca pode ter muitos pilares */
+  if(state.f.ideaPilar&&!groups.some(([p])=>p===state.f.ideaPilar))state.f.ideaPilar='';
+  const shown=state.f.ideaPilar?groups.filter(([p])=>p===state.f.ideaPilar):groups;
+  let h=head('Mapa de ideias',`Banco de ideias organizado pelos pilares da marca. Consulte na hora de preencher ${ENX?'o planejamento':'o calendário'}.`,
     aiBtn('Gerar ideias','ai-ideas')+btn('Nova ideia','new','data-col="ideas"','primary'));
-  h+=`<div class="toolbar">${chips('ideaCh',[['','Todos os canais'],...activeCh().map(c=>[c.id,c.label])],state.f.ideaCh)}<div class="spacer"></div>
+  h+=`<div class="toolbar"><label class="fsel"><span class="eyebrow">Pilar</span><select data-fsel="ideaPilar" aria-label="Filtrar por pilar"><option value="">Todos os pilares</option>${groups.map(([p,l])=>`<option value="${esc(p)}"${p===state.f.ideaPilar?' selected':''}>${esc(p)} (${l.length})</option>`).join('')}</select></label>${chips('ideaCh',[['','Todos os canais'],...activeCh().map(c=>[c.id,c.label])],state.f.ideaCh)}<div class="spacer"></div>
     <button class="chip" data-act="idea-all" aria-pressed="${state.f.ideaAll}">Mostrar usadas e arquivadas</button></div>`;
   if(!state.data.ideas.length&&!ps.length)return h+empty('Nenhuma ideia ainda','Cadastre os pilares na aba Marca e gere as primeiras ideias com o Claude.');
-  h+='<div class="map">'+groups.map(([p,list])=>`<section class="pillar"><div class="pillar-head"><h3>${esc(p)}</h3><span>${list.length}</span></div>`+
+  h+='<div class="map">'+shown.map(([p,list])=>`<section class="pillar"><div class="pillar-head"><h3>${esc(p)}</h3><span>${list.length}</span></div>`+
     (list.length?list.map(i=>`<article class="idea${['usada','arquivada'].includes(i.status)?' dim':''}">
       <div class="meta">${(i.channels||[]).map(code).join('')}${i.format?`<span>${esc(i.format)}</span>`:''}${i.status&&i.status!=='nova'?`<span class="tagpill">${esc(ISTM[i.status]||i.status)}</span>`:''}${exTag(i)}</div>
       <h4>${esc(i.title)}</h4>${i.notes?`<p class="clamp">${esc(i.notes)}</p>`:''}
@@ -1507,14 +1510,15 @@ document.addEventListener('click',async e=>{
 });
 function defaults(col,ds){
   if(col==='posts')return {date:ds.date||TODAY(),channel:state.f.calCh||activeCh()[0].id,status:'ideia'};
-  if(col==='ideas')return {pillar:ds.pillar||'',status:'nova',channels:state.f.ideaCh?[state.f.ideaCh]:[]};
+  if(col==='ideas')return {pillar:ds.pillar||(state.f.ideaPilar!=='Sem pilar'&&state.f.ideaPilar)||'',status:'nova',channels:state.f.ideaCh?[state.f.ideaCh]:[]};
   if(col==='refs')return {platform:'instagram'};
   if(col==='compnews')return {kind:state.f.compKind||'conteudo',competitorId:state.f.compFilter||(state.data.competitors[0]||{}).id||''};
   if(col==='dates')return {type:'Data comemorativa',recurring:true,lead:14};
   if(col==='metrics'){const t=parseISO(TODAY());return {start:iso(addDays(t,-7)),end:iso(addDays(t,-1)),channel:activeCh()[0].id}}
   return {};
 }
-document.addEventListener('change',e=>{if(e.target&&e.target.id==='f-mediafile'){const f=e.target.files&&e.target.files[0];e.target.value='';attachMedia(f)}});
+document.addEventListener('change',e=>{const fs=e.target&&e.target.dataset&&e.target.dataset.fsel;if(fs){state.f[fs]=e.target.value;LS.set('cl.'+fs,e.target.value);renderMain(true);return}
+  if(e.target&&e.target.id==='f-mediafile'){const f=e.target.files&&e.target.files[0];e.target.value='';attachMedia(f)}});
 document.addEventListener('paste',e=>{if(!modalCtx||modalCtx.col!=='refs')return;const it=[...(e.clipboardData&&e.clipboardData.items||[])].find(i=>i.kind==='file'&&/^image\//.test(i.type));if(it){e.preventDefault();attachMedia(it.getAsFile())}});
 document.addEventListener('error',e=>{const t=e.target;if(t&&t.hasAttribute&&t.hasAttribute('data-media')){const d=document.createElement('div');d.className='media-empty';d.textContent='Prévia indisponível.';t.replaceWith(d)}},true);
 document.addEventListener('toggle',e=>{const t=e.target;if(t&&t.classList&&t.classList.contains('cmore')){(state.compOpen||(state.compOpen={}))[t.dataset.id]=t.open}},true);

@@ -20,7 +20,7 @@ const TABS = ['noticias', 'referencias', 'calendario', 'datas', 'marca', 'ideias
   const ENX = await page.evaluate(() => !!(window.__LAB__ || {}).enxuto);
   if (ENX) {
     const ordem = await page.$$eval('#tabs .tab', els => els.map(e => e.textContent.replace(/\d+$/, '').trim()));
-    if (ordem.join('|') !== 'Marca|Calendário|Notícias|Referências|Mapa de ideias|Agendamentos|Métricas|Concorrentes') erros.push('ordem das abas errada: ' + ordem.join(', '));
+    if (ordem.join('|') !== 'Marca|Calendário|Notícias|Referências|Mapa de ideias|Planejamento|Métricas|Concorrentes') erros.push('ordem das abas errada: ' + ordem.join(', '));
     await page.click('#tabs [data-tab="noticias"]');
     if (await page.$('#main .sources')) erros.push('fontes ainda aparecem em Notícias');
     if (await page.$('[data-f="newsTag"]')) erros.push('filtro de temas ainda aparece em Notícias');
@@ -52,6 +52,16 @@ const TABS = ['noticias', 'referencias', 'calendario', 'datas', 'marca', 'ideias
   if (!(await page.$('.novidade'))) erros.push('cartão de novidade ausente');
   await page.click('[data-act="nov-ok"]');
   if (await page.$('.novidade')) erros.push('cartão de novidade não sumiu');
+  }
+  // Mapa de ideias: filtro de pilar em lista suspensa
+  await page.click('#tabs [data-tab="ideias"]');
+  const opcoes = await page.$$eval('select[data-fsel="ideaPilar"] option', os => os.map(o => o.value).filter(Boolean));
+  if (!opcoes.length) erros.push('filtro de pilar ausente no Mapa de ideias');
+  else {
+    await page.selectOption('select[data-fsel="ideaPilar"]', opcoes[0]);
+    const secs = await page.$$eval('#main section.pillar h3', hs => hs.map(h => h.textContent));
+    if (secs.length !== 1 || secs[0] !== opcoes[0]) erros.push('filtro de pilar não filtra');
+    await page.selectOption('select[data-fsel="ideaPilar"]', '');
   }
   // novidades
   await page.click('#tabs [data-tab="concorrentes"]');
