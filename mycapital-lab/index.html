@@ -851,7 +851,7 @@ function viewRefs(){
       ${r.fit?`<div class="kv fit"><b>Como a marca entra:</b> ${esc(r.fit)}</div>`:''}
       ${r.views?`<div class="kv"><b>Resultado:</b> ${esc(r.views)}</div>`:''}
       ${r.tags?`<div class="chips">${String(r.tags).split(',').map(t=>t.trim()).filter(Boolean).map(t=>`<span class="tagpill">${esc(t)}</span>`).join('')}</div>`:''}
-      <div class="foot">${aiBtn('Adaptar para a marca','ai-ref-one',`data-id="${esc(r.id)}"`,'sm')}${u?`<a class="btn sm" href="${esc(u)}" target="_blank" rel="noopener">Abrir ↗</a>`:''}${btn('Editar','edit',`data-col="refs" data-id="${esc(r.id)}"`,'sm ghost')}</div>
+      <div class="foot">${r.origem==='claude'?btn(`Adicionar ao ${ENX?tabLabel('calendario').toLowerCase():'calendário'}`,'ref-plan',`data-id="${esc(r.id)}"`,'sm primary'):''}${aiBtn('Adaptar para a marca','ai-ref-one',`data-id="${esc(r.id)}"`,'sm')}${u?`<a class="btn sm" href="${esc(u)}" target="_blank" rel="noopener">Abrir ↗</a>`:''}${btn('Editar','edit',`data-col="refs" data-id="${esc(r.id)}"`,'sm ghost')}</div>
     </article>`;
   }).join('')+'</div>';
   return h;
@@ -1922,6 +1922,13 @@ document.addEventListener('click',async e=>{
     case 'idea-schedule':{const i=state.data.ideas.find(x=>x.id===id);if(!i)break;
       const ch=(i.channels||[]).find(c=>activeCh().some(x=>x.id===c))||activeCh()[0].id;
       openEditor('posts',null,Object.assign(defaults('posts',{}),{title:i.title,pillar:i.pillar||'',channel:ch,format:i.format||'',notes:i.notes||''}),{ideaId:i.id});break}
+    case 'ref-plan':{const r=state.data.refs.find(x=>x.id===id);if(!r)break;
+      /* variação do Claude vira post no planejamento: canal pela plataforma, formato e pilar quando reconhecidos */
+      const ch=activeCh().some(x=>x.id===r.platform)?r.platform:activeCh()[0].id;
+      const fmt=String(r.format||'').split('·')[0].trim();
+      const pil=pillars().find(p=>String(r.fit||'').includes(p))||'';
+      const notes=[r.why&&'Por que deve funcionar: '+r.why,r.fit&&'Como a marca entra: '+r.fit,r.base&&'Inspirada em: '+r.base+(safeUrl(r.baseUrl)?' ('+safeUrl(r.baseUrl)+')':'')].filter(Boolean).join('\n');
+      openEditor('posts',null,Object.assign(defaults('posts',{}),{title:r.hook||'Variação do Claude',channel:ch,format:FORMATS.includes(fmt)?fmt:'',pillar:pil,notes}),{refId:r.id});break}
     case 'date-post':{const d=state.data.dates.find(x=>x.id===id);if(!d)break;const o=nextOcc(d);
       openEditor('posts',null,Object.assign(defaults('posts',{}),{title:d.title,date:o?iso(o):d.date,notes:d.notes||''}));break}
     case 'cal-prev':{let {y,m}=state.cal;m--;if(m<0){m=11;y--}state.cal={y,m};renderMain(true);break}

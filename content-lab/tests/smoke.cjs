@@ -33,6 +33,10 @@ const TABS = ['noticias', 'referencias', 'calendario', 'datas', 'marca', 'ideias
     await page.click('[data-f="refTipo"][data-v="claude"]');
     const cl = await page.$$eval('#main .card.ref', els => els.map(e => e.textContent));
     if (cl.length !== 1 || !cl[0].includes('Variação do Claude') || !cl[0].includes('Inspirada em')) erros.push('filtro Variações do Claude errado');
+    await page.click('#main .card.ref [data-act="ref-plan"]');
+    const tituloPost = await page.$eval('#f-title', e => e.value);
+    if (!tituloPost.includes('IR pagou na bolsa')) erros.push('Adicionar ao planejamento não preenche o post');
+    await page.click('#modal [data-act="modal-close"], #modal .iconbtn');
     await page.click('[data-f="refTipo"][data-v="web"]');
     if ((await page.$$('#main .card.ref')).length !== 1) erros.push('filtro Da internet errado');
     await page.click('[data-f="refTipo"][data-v=""]');
