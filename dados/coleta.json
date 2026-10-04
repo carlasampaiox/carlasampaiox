@@ -1,45 +1,7 @@
 {
-  "geradoEm": "2026-10-03T14:18:14+00:00",
+  "geradoEm": "2026-10-04T14:45:22+00:00",
   "fonte": "coletor (GitHub Actions)",
   "itens": [
-    {
-      "brandId": "mycapital",
-      "colecao": "compnews",
-      "arquivo": "4ab4dc8152ad137c.jpg",
-      "mediaType": "image",
-      "doc": {
-        "kind": "conteudo",
-        "competitorId": "bs2fj7391bo4wovt5nrw",
-        "competitorName": "Grana Capital",
-        "channel": "youtube",
-        "format": "Vídeo",
-        "title": "Como resolver Imposto de Renda de investimentos da bolsa atrasado | Fácil e rápido | Grana Capital",
-        "url": "https://www.youtube.com/watch?v=zlh1H4K3ndU",
-        "date": "2026-09-03",
-        "signal": "22.536 visualizações, 8 curtidas · 79,1x a mediana do canal · alcance possivelmente pago",
-        "summary": "Vídeo publicado em 03/09, com 22.536 visualizações, 8 curtidas.",
-        "origem": "coletor"
-      }
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "compnews",
-      "arquivo": "6359b9a722b2ab11.jpg",
-      "mediaType": "image",
-      "doc": {
-        "kind": "conteudo",
-        "competitorId": "bs2fj7391bo4wovt5nrw",
-        "competitorName": "Grana Capital",
-        "channel": "youtube",
-        "format": "Vídeo",
-        "title": "Como resolver o Imposto de Renda dos investimentos bolsa | Automático e sem emitir DARF",
-        "url": "https://www.youtube.com/watch?v=mbZ3_iP6QN4",
-        "date": "2026-09-03",
-        "signal": "11.540 visualizações, 8 curtidas · 40,5x a mediana do canal · alcance possivelmente pago",
-        "summary": "Vídeo publicado em 03/09, com 11.540 visualizações, 8 curtidas.",
-        "origem": "coletor"
-      }
-    },
     {
       "brandId": "mycapital",
       "colecao": "compnews",
@@ -54,8 +16,46 @@
         "title": "Resolva o Imposto de Renda dos investimentos na bolsa em segundos |  Grana Capital",
         "url": "https://www.youtube.com/watch?v=92RRoH6bZPc",
         "date": "2026-09-09",
-        "signal": "230 visualizações, 9 curtidas",
-        "summary": "Shorts publicado em 09/09, com 230 visualizações, 9 curtidas.",
+        "signal": "235 visualizações, 9 curtidas",
+        "summary": "Shorts publicado em 09/09, com 235 visualizações, 9 curtidas.",
+        "origem": "coletor"
+      }
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "compnews",
+      "arquivo": "1967862ac0d28f1e.jpg",
+      "mediaType": "image",
+      "doc": {
+        "kind": "conteudo",
+        "competitorId": "bs2fj7391bo4wovt5nrw",
+        "competitorName": "Grana Capital",
+        "channel": "youtube",
+        "format": "Shorts",
+        "title": "Será que tem DARF da bolsa atrasado? Descubra no Grana",
+        "url": "https://www.youtube.com/watch?v=tzD4P8UjTQ4",
+        "date": "2026-09-28",
+        "signal": "121 visualizações, 14 curtidas",
+        "summary": "Shorts publicado em 28/09, com 121 visualizações, 14 curtidas.",
+        "origem": "coletor"
+      }
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "compnews",
+      "arquivo": "7aad3ddf071282c9.jpg",
+      "mediaType": "image",
+      "doc": {
+        "kind": "conteudo",
+        "competitorId": "bs2fj7391bo4wovt5nrw",
+        "competitorName": "Grana Capital",
+        "channel": "youtube",
+        "format": "Shorts",
+        "title": "Será que tem Imposto de Renda da bolsa acumulando juros e multa?",
+        "url": "https://www.youtube.com/watch?v=LwfdYpSraks",
+        "date": "2026-09-10",
+        "signal": "101 visualizações, 3 curtidas",
+        "summary": "Shorts publicado em 10/09, com 101 visualizações, 3 curtidas.",
         "origem": "coletor"
       }
     },
@@ -103,18 +103,44 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "‘Queridinho’ da renda fixa, isento de IR, desbanca título público ao oferecer retorno de até IPCA+ 10,68% ao ano",
-        "url": "https://www.empiricus.com.br/artigos/investimentos/queridinho-da-renda-fixa-isento-de-ir-desbanca-titulo-publico-ao-oferecer-retorno-de-ate-ipca-1068-ao-ano-lbrdml130/",
-        "source": "Empiricus",
+        "title": "IR 2026: guia prático para declarar LCI, LCA e debêntures sem erros",
+        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPS3Q4UDdmMGhXRnBpaWxZdTVBbjFocDRvZjY5bmhwTGJDMTZxLUl1YnVNTjhLbDVScE95UXU0ZFNaYm1mTzRhc01qZHJ1YzZEMDQ2OThfZ0Y2WlhwM0Nod0dxdS13UmttRFZfSkhWdFRYMjZQd1ZrSDVCY1lGdXVsUE5YQXhjSi1nV21nTXhuQmE2dENwY242b2dBWlB2U1lULTI5V19n?oc=5",
+        "source": "Gazeta SP",
+        "date": "2026-10-04",
+        "tag": "IR",
+        "summary": "",
+        "origem": "coletor"
+      }
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Como declarar investimentos no Imposto de Renda",
+        "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQWlh2V1VqU2JLSUJvQ1RvT0Z2X0N5NU5xRTJ1SWd5by1QRlpsLXZZUHpVUzEzbEsyRWo0bjFyWUZMTHZrelNDZ092S2l3NzdOeHFyQjhwN0w4TzRsb3JxTW1kb1ZCTnVENVNGVzRTMWtBSEVVOEx3T3FJaUhDWlg4R3lvVmN4MWpHLVpycmlPODNqbG5zX3dpQzJFRQ?oc=5",
+        "source": "spacemoney.com.br",
+        "date": "2026-10-04",
+        "tag": "IR",
+        "summary": "",
+        "origem": "coletor"
+      }
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "IR 2026: veja quando começa a declaração, tabela e quais documentos juntar",
+        "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQdWJaTzJQNVZJUmNXUXZNWHd2eVFENk9iZGp0YWQ4ME45cnZSRHpEV2NNeHpBbGMtRVRHN1F3UzRiSXRzdHEwVS13UGJTNVhXTEVnM1R6VWNmUVNhSUl1M3hlVWYyR1NZb0M0UHBhOFF1aGgzWVBCX1RZbW9NaUI0OGlaSEdHYTVEeVFqN1R6LTFZb0k5Vl9IZUJVc25Mem81ZXJoT1liNkVVMnZBZHRRQWNkdjhsaUphUjFRamh2b21Za0tLU3hZc2tn?oc=5",
+        "source": "Bora Investir",
         "date": "2026-10-02",
         "tag": "IR",
         "summary": "",
         "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPaGxaNUNPMWxoYWRpRnJTblR2VDRySGZLb1VaenZHMkpkVzllVUx5bzZrUlo5N1J5MFBSMjloMU52aTEyWHFycmgxeFo2REZTeVZxeGUzbl9DODdkWVBIa080Q2tMMm1fZmJBNDM2alFweXRwSlZqTFJubGNOSnJmQXYtSXFlVHROZEJHX0s3Qnp0MnREdm1VZHZad0NOQUpfU1lQellISzBleUlRMl9wbTZKX3BkNmVpdHJDQmVmcGZzelNEM3pZR2o5emFuc2JCZkJDaFhmMlBRVTVIZE9TcGxMUktpMGtCV19GeWU2ZFFlWDdCMTRsMlNCcw?oc=5"
-      ],
-      "contexto": "Quem lamentou a queda recente das taxas do Tesouro IPCA+ pode ter outro motivo para olhar para a renda fixa. Isso porque um investimento “queridinho” da classe ainda oferece taxas que podem chegar a IPCA+ 10,68% ao ano, e, melhor, com isenção de Imposto de Renda."
+      }
     },
     {
       "brandId": "mycapital",
@@ -123,17 +149,13 @@
       "mediaType": "",
       "doc": {
         "title": "Por que um investimento tributado pode valer mais que um isento? A Duquesa de Tax explica",
-        "url": "https://www.estadao.com.br/economia/duquesa-de-tax/por-que-um-investimento-tributado-pode-valer-mais-que-um-isento-a-duquesa-de-tax-explica/",
+        "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPOVlOU1M4UEZlcDBhR0dFaUlhQXpoNTlYdnptQnhWeHhLUG94RFZMbkZ1OHYyYUlTcUJHdWZ3Q2JtNllaTmctOS1pai1hMHJaZXliZjBTRUpmSGxram9oRjJLM3hDME9NaUJLNFlnVjdiVUJLRHZpQUJmVG5uM3pJVGpxSVZual9lY3Jmd2FDbl9sX1RGRnZLcG9VVllKb2FZTjBGVThkLVA0MV9EVkFmSW9DYVJXN05FOFlSTUM0NW1fZVB5R1NSUlRXa2wtWkdJS3lRN1RMd9IB3AFBVV95cUxQb25jYlIyci1RT1RVeGZxemJfUnV3dG9yeDNCaURUVFpUeXdBenRHN2NEVGw1Rkswd0RsSnM5QkNhbEhOcExtRmVuWHZSbHU5eTc0MHl3aTJGVXhYeTEwZ1dUOElJMkdOUlU4M0NTTWh6QWF5Wkk5M2xvVFJSLURKRDl2bDBMN1RyT0FWR0FUWkRiUUYyT3RfTUEzZ09SaGlrUHhNN1k1NGRwT0JXX1R6Rks4aEdLdHd4cXVuSm9UQV9CRTNqVHJHaGo5eUdWcWpHODk0X1NINDJERmR2?oc=5",
         "source": "Estadão",
         "date": "2026-09-29",
         "tag": "IR",
         "summary": "",
         "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPOVlOU1M4UEZlcDBhR0dFaUlhQXpoNTlYdnptQnhWeHhLUG94RFZMbkZ1OHYyYUlTcUJHdWZ3Q2JtNllaTmctOS1pai1hMHJaZXliZjBTRUpmSGxram9oRjJLM3hDME9NaUJLNFlnVjdiVUJLRHZpQUJmVG5uM3pJVGpxSVZual9lY3Jmd2FDbl9sX1RGRnZLcG9VVllKb2FZTjBGVThkLVA0MV9EVkFmSW9DYVJXN05FOFlSTUM0NW1fZVB5R1NSUlRXa2wtWkdJS3lRN1RMd9IB3AFBVV95cUxQb25jYlIyci1RT1RVeGZxemJfUnV3dG9yeDNCaURUVFpUeXdBenRHN2NEVGw1Rkswd0RsSnM5QkNhbEhOcExtRmVuWHZSbHU5eTc0MHl3aTJGVXhYeTEwZ1dUOElJMkdOUlU4M0NTTWh6QWF5Wkk5M2xvVFJSLURKRDl2bDBMN1RyT0FWR0FUWkRiUUYyT3RfTUEzZ09SaGlrUHhNN1k1NGRwT0JXX1R6Rks4aEdLdHd4cXVuSm9UQV9CRTNqVHJHaGo5eUdWcWpHODk0X1NINDJERmR2?oc=5"
-      ],
-      "contexto": "A nova tributação da alta renda tornou mais complexa uma escolha que parecia simples para o investidor: optar entre uma aplicação tributada, como o CDB, e outra isenta, como a LCI. A partir de 2026, o imposto já pago sobre determinados rendimentos pode entrar na conta da tributação mínima, fazendo com que, em alguns casos, pagar imposto no investimento..."
+      }
     },
     {
       "brandId": "mycapital",
@@ -142,17 +164,13 @@
       "mediaType": "",
       "doc": {
         "title": "Como investir em dólar: ETFs, BDRs e conta no exterior",
-        "url": "https://www.nordinvestimentos.com.br/blog/videos/como-investir-em-dolar-etfs-bdrs-e-exterior/",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOUVZ3YnZQSHRMSFFLdENKLUNlMGszc3RDeUVrNjVfUlRULWJpNGNWNlcyTDJCUTZaX1g4Y1NkTnJTUFV4THdVVEJ5VFpKVTFqTXBEZEpOeVJqcHJzckxUZEV6ZEdBaUFYaFhmd3FxUTd1aEVLdERxcDFrT2RYUzNveXg5Y196TldXUUZ5R0R3UEpMM2hwaG9yMtIBngFBVV95cUxQS2FFR2twSnlJd0h6XzVRemZLaUlkVFdmU01MWndsdUNaQnBuQnd0eTFkUHZQNF9PSFVtYnlxTFNoWHFLTFZlRklmYXJIa1Rkb2ZEcW80SXRZdTRnWTZJbXJqZzlGSlpMZld1UmJzOUtGR25zRzIyN3NnUzZ4LUR6amYyMVFHN3cxNkNrNS1wbmJXd3NuZnFCaEtqUnhtdw?oc=5",
         "source": "Nord Investimentos",
         "date": "2026-09-28",
         "tag": "IR",
         "summary": "",
         "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMimAFBVV95cUxOUVZ3YnZQSHRMSFFLdENKLUNlMGszc3RDeUVrNjVfUlRULWJpNGNWNlcyTDJCUTZaX1g4Y1NkTnJTUFV4THdVVEJ5VFpKVTFqTXBEZEpOeVJqcHJzckxUZEV6ZEdBaUFYaFhmd3FxUTd1aEVLdERxcDFrT2RYUzNveXg5Y196TldXUUZ5R0R3UEpMM2hwaG9yMtIBngFBVV95cUxQS2FFR2twSnlJd0h6XzVRemZLaUlkVFdmU01MWndsdUNaQnBuQnd0eTFkUHZQNF9PSFVtYnlxTFNoWHFLTFZlRklmYXJIa1Rkb2ZEcW80SXRZdTRnWTZJbXJqZzlGSlpMZld1UmJzOUtGR25zRzIyN3NnUzZ4LUR6amYyMVFHN3cxNkNrNS1wbmJXd3NuZnFCaEtqUnhtdw?oc=5"
-      ],
-      "contexto": "Como investir em dólar: ETFs, BDRs e conta no exterior A alta da dívida pública, as incertezas do cenário macroeconômico e a proximidade das eleições têm levado muitos brasileiros a buscar formas de proteger o patrimônio. Uma das estratégias mais procuradas é investir em dólar, seja pela própria Bolsa brasileira, seja com o envio de recursos para uma conta..."
+      }
     },
     {
       "brandId": "mycapital",
@@ -160,55 +178,14 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Estratégia Quant: Carteira Viva de Renda com FIIs | Outubro 2026",
-        "url": "https://conteudos.xpi.com.br/fundos-imobiliarios/carteiras/estrategia-quant-carteira-viva-de-renda-com-fiis-outubro-2026/",
-        "source": "XP Investimentos",
-        "date": "2026-10-02",
+        "title": "XP suspende seis ETFs de renda fixa e risco de IR de 25% acende alerta",
+        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPdTU1bmg0bTZUcEVTWTFLSFBrMWlhMFp3Z2xWZXktLWlUaVdNYW9TWHZWMjZVTjdTaGdUY2JscnhwV19lU3hsTVc2cmtFMFVvSmV1R001ZExwWXFhcUFEMk1qYmQ5SzhPNWlMRlVJLWFHTG9GTkhCenIwbnlLN2E1V3JJVzB3eWszU2ZrSlMtWlF4OUxLNGVIbTE3cUdoZDkzSm9NNkNTckc?oc=5",
+        "source": "A Revista",
+        "date": "2026-09-30",
         "tag": "IR",
         "summary": "",
         "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMivgFBVV95cUxOY19yNUFwSVVRSFV4RkxNUjVHTXBuNTRnNnk2VV9fbmpoNTdVUTR6em9RTlQtQng1V0Zsc2pPMXNjXzlqR2daOERiNVZoMGdvMEdCbVJxVWFhRXpiRXAxbTZxak5DWnZpN1h2ZU9PekpjSlJFeXFnSERFOVZfaGIxN1RiSmZrVG9CQ1N5UGVscHA1bVVtVGVXclJyS2t5aGFvNVE3MGFNNHNEVWdLWEVwRk93R011TE8wNG1aeXlB?oc=5"
-      ]
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Renda fixa sem IR: BB seleciona seis títulos de crédito privado para lucrar acima da inflação em outubro",
-        "url": "https://www.moneytimes.com.br/renda-fixa-sem-ir-bb-seleciona-seis-titulos-de-credito-privado-para-lucrar-acima-da-inflacao-em-outubro/",
-        "source": "Money Times",
-        "date": "2026-10-02",
-        "tag": "IR",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMizwFBVV95cUxOekhMUTY1QzMyMHpMZzNUa2lUT3BtTk1SVUc4V3ZSMDNzTVNBbC1ob08xdEkzeHlFMUdadVZ0WHQzcU5uVTBhRV9ia0MzcFBGRVFlQl9nTUFZWk4xZ05uejNhV0NVQ0NtWGpkaGJCRHBVbUNIV2twS29PQXRUQWxTdVJwXzNZX3d4ajJBV3ZOcFFyazU3QmwxUHVNeEFKbS1RbWVJdUlCNnUtZDNhVkdzdl9HdFFvaUhjM243R3JFa0NJN285bXZyYl9teHpXTzA?oc=5"
-      ],
-      "contexto": "Renda fixa sem IR: BB seleciona seis títulos de crédito privado para lucrar acima da inflação em outubro O BB Investimentos selecionou seis títulos de crédito privado isentos de Imposto de Renda para pessoas físicas para outubro, com papéis de Neoenergia, Equatorial, Engie, MRS Logística e Vibra. Todos oferecem remuneração atrelada ao IPCA, com vencimentos..."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Agenda de dividendos de outubro: Itaú, Bradesco e Itaúsa pagam proventos",
-        "url": "https://investnews.com.br/investimentos/agenda-de-dividendos-de-outubro-itau-bradesco-e-itausa-pagam-proventos/amp/",
-        "source": "InvestNews",
-        "date": "2026-10-01",
-        "tag": "IR",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMitgFBVV95cUxPeF9CRUwzdVZxUnNhNFpqVDk1bUNYQ1ZiaGJLZlpVbExyUkpmM1RKTi1DWlZyRzZUUFR2QnVQMDM4Q3UzeU0yYlBXZkRTNmpBWTh5c2F6dFAwVVA0emJVS0V4eXZxb0pnMTJTUlQtQ0JrWUJMWmRHRGtDd2oyZmg3RFpna0Vra21JTzFsT3cxLTk0MG9nb0ZBZ1RrckFSczNlS2RCWEVQU3RVei1DWEZ1aFd2QWxGUdIBtgFBVV95cUxPeF9CRUwzdVZxUnNhNFpqVDk1bUNYQ1ZiaGJLZlpVbExyUkpmM1RKTi1DWlZyRzZUUFR2QnVQMDM4Q3UzeU0yYlBXZkRTNmpBWTh5c2F6dFAwVVA0emJVS0V4eXZxb0pnMTJTUlQtQ0JrWUJMWmRHRGtDd2oyZmg3RFpna0Vra21JTzFsT3cxLTk0MG9nb0ZBZ1RrckFSczNlS2RCWEVQU3RVei1DWEZ1aFd2QWxGUQ?oc=5"
-      ],
-      "contexto": "Agenda de dividendos de outubro: Itaú, Bradesco e Itaúsa pagam proventos Outubro chega sem dividendos 100% isentos pela primeira vez em 2026 Em outubro, a lista apresenta apenas 28 pagamentos de dividendos e juros sobre capital próprio (JCP). São 17 eventos a menos do que em setembro."
+      }
     },
     {
       "brandId": "mycapital",
@@ -217,17 +194,13 @@
       "mediaType": "",
       "doc": {
         "title": "Receita Federal corta previsão de impostos com dividendos e ameaça contas públicas, aponta especialista",
-        "url": "https://www.bra1.com.br/economia/id-698664/receita_federal_corta_previsao_de_impostos_com_dividendos_e_ameaca_contas_publicas__aponta_especialista",
+        "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNRTJEWF9qMWx5aFY0WkZxLVd2VVJERHZ6UzNid3hiQjNNR2dTT2dVUDduUDQyZUpoem1zRC0tNy1DcDRuUnY4cTRlVmpEMmNRTWtnX3VUSGZiMXJwTjdqZFVJNWxJTkdpRDBrRVVYVW82bDRUdzhiQkVKWF9pazFGZnBPaHZqbkQ4b01kay1RNHhJWnhzQ2gxbVpfRkVvZ0xqbGFkdUdpamdJV0xBWlcxOGFBUDk5dlBuUkMyVXpMMGxMVTltZHpCTXhrYmY0Q2VpUjRfTkRLSk94R1NRQUhF?oc=5",
         "source": "bra1.com.br",
         "date": "2026-09-27",
         "tag": "Dividendos",
         "summary": "",
         "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNRTJEWF9qMWx5aFY0WkZxLVd2VVJERHZ6UzNid3hiQjNNR2dTT2dVUDduUDQyZUpoem1zRC0tNy1DcDRuUnY4cTRlVmpEMmNRTWtnX3VUSGZiMXJwTjdqZFVJNWxJTkdpRDBrRVVYVW82bDRUdzhiQkVKWF9pazFGZnBPaHZqbkQ4b01kay1RNHhJWnhzQ2gxbVpfRkVvZ0xqbGFkdUdpamdJV0xBWlcxOGFBUDk5dlBuUkMyVXpMMGxMVTltZHpCTXhrYmY0Q2VpUjRfTkRLSk94R1NRQUhF?oc=5"
-      ],
-      "contexto": "O governo federal reduziu drasticamente a expectativa de arrecada��o com lucros e dividendos em 2026, passando de R$ 29 bilh�es para apenas R$ 10,5 bilh�es. O economista Hulisses Dias alerta que essa queda compromete o equil�brio fiscal, especialmente porque o pa�s precisa custear a isen��o do Imposto de Renda para quem ganha at� R$ 5 mil e financiar o..."
+      }
     },
     {
       "brandId": "mycapital",
@@ -236,17 +209,13 @@
       "mediaType": "",
       "doc": {
         "title": "Famílias de alto patrimônio ampliam diversificação no exterior em meio a mudanças tributárias",
-        "url": "https://paraibabusiness.com.br/familias-de-alto-patrimonio-ampliam-diversificacao-no-exterior-em-meio-a-mudancas-tributarias/",
+        "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQOTZQNjZPNHUyU0t3VzhfN3psRjM3eHNXbkFVU0R5aVJhMFBPaDBVV0ZBUjdfMGJrbEY2anFlU2s2X2hjZWNLdXhDRHctNEtDTURBc2VRWFlsNTc3OVJBOEVWUFlLNWFJMlcyMmlCbGg4b0FwekpvMUNQRUxaSldtb1lVVFNDT3FUV3luRTJqay1rNGhad3FyTjN6cEh6dHdOSmhHRm44N2FINTVHbW05WklVNW1xNGI4WVlEcVNoM1JNcVU?oc=5",
         "source": "Paraíba Business",
         "date": "2026-09-30",
         "tag": "Dividendos",
         "summary": "",
         "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQOTZQNjZPNHUyU0t3VzhfN3psRjM3eHNXbkFVU0R5aVJhMFBPaDBVV0ZBUjdfMGJrbEY2anFlU2s2X2hjZWNLdXhDRHctNEtDTURBc2VRWFlsNTc3OVJBOEVWUFlLNWFJMlcyMmlCbGg4b0FwekpvMUNQRUxaSldtb1lVVFNDT3FUV3luRTJqay1rNGhad3FyTjN6cEh6dHdOSmhHRm44N2FINTVHbW05WklVNW1xNGI4WVlEcVNoM1JNcVU?oc=5"
-      ],
-      "contexto": "Famílias brasileiras de alto patrimônio estão ampliando a diversificação internacional de seus investimentos em um ambiente marcado por mudanças tributárias, maior complexidade regulatória e incertezas econômicas. O movimento não significa necessariamente a transferência das operações para fora do país, mas uma distribuição mais ampla de patrimônio, moedas,..."
+      }
     },
     {
       "brandId": "mycapital",
@@ -255,16 +224,13 @@
       "mediaType": "",
       "doc": {
         "title": "IRB Brasil (IRBR3) pode retomar dividendos após mudança tributária",
-        "url": "https://acionista.com.br/irb-brasil-irbr3-pode-retomar-dividendos-apos-mudanca-tributaria/",
-        "source": "Acionista.com.br",
+        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNSEhYcms0LWx4MFc2VlJ0T3lvdUxMbVNXWWcxNlFMT1gzcWNiZkZRQXNWcUFzdmxKWW9rZW9VajdERTVveWVvVWVqNjdteVV6VmNJQzNPUEZxNG54ZkY4SklaWEVqXzJPeXpEa2JoOFVYdDJ5TjVjU3F5NmdDNnZEOVlZU0FvdVN2eVJLM0wxTkVLakxT?oc=5",
+        "source": "acionista.com.br",
         "date": "2026-10-03",
         "tag": "Dividendos",
         "summary": "",
         "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMilAFBVV95cUxNSEhYcms0LWx4MFc2VlJ0T3lvdUxMbVNXWWcxNlFMT1gzcWNiZkZRQXNWcUFzdmxKWW9rZW9VajdERTVveWVvVWVqNjdteVV6VmNJQzNPUEZxNG54ZkY4SklaWEVqXzJPeXpEa2JoOFVYdDJ5TjVjU3F5NmdDNnZEOVlZU0FvdVN2eVJLM0wxTkVLakxT?oc=5"
-      ]
+      }
     },
     {
       "brandId": "mycapital",
@@ -273,16 +239,13 @@
       "mediaType": "",
       "doc": {
         "title": "No Flow Podcast Lula defende tributação de dividendos e combate ao endividamento popular",
-        "url": "https://www.plantaobrasil.net/noticia/157275/no-flow-podcast-lula-defende-tributacao-de-dividendos-e-combate-ao",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxObkNhYjV6MklPdnJnUC1taFhoemF0R0dNMHhpd2VyLVUxak1SX2FiS3lnTlRDR1pjZmc2cXpLVnJQdTI1S1RvTXJQSE5xQWNtNmxyUENtQmRDa1hXb2FWMUFZNEppV0VzcU0yeDBuMkZ6SjRaVUdveHk3c1NIX2cyU2ZDODAxNmJOM0J4TURDSHdLektZcHFsQkNxWGtpTlhLODV4bDZmTGdyZjRNVzFVTA?oc=5",
         "source": "plantaobrasil.net",
         "date": "2026-10-02",
         "tag": "Dividendos",
         "summary": "",
         "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMisAFBVV95cUxObkNhYjV6MklPdnJnUC1taFhoemF0R0dNMHhpd2VyLVUxak1SX2FiS3lnTlRDR1pjZmc2cXpLVnJQdTI1S1RvTXJQSE5xQWNtNmxyUENtQmRDa1hXb2FWMUFZNEppV0VzcU0yeDBuMkZ6SjRaVUdveHk3c1NIX2cyU2ZDODAxNmJOM0J4TURDSHdLektZcHFsQkNxWGtpTlhLODV4bDZmTGdyZjRNVzFVTA?oc=5"
-      ]
+      }
     },
     {
       "brandId": "mycapital",
@@ -291,17 +254,13 @@
       "mediaType": "",
       "doc": {
         "title": "Dividendos: Justiça afasta IR de empresa do Simples",
-        "url": "https://www.contabeis.com.br/noticias/79749/dividendos-justica-afasta-ir-de-empresa-do-simples",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPNkdyd2lYaU41ckd1Qm16dUxhcVYtT0VHQ19lcm5vcldabkt3YVEyT0ROTVU0blpzRzUzRmowLUdDeTR5ek1SVnBleEZpN2RGQmdHRzdLSkFuRGNiY25pNlV3aGVsWmZKT0dmb0p3OV9WTlFLQkpZMW01Z2VsXzEtblk0SFFZSjE0X0JVdTJWbkx6Q0JUZnhmQlNn?oc=5",
         "source": "Portal Contabeis",
         "date": "2026-09-30",
         "tag": "Dividendos",
         "summary": "",
         "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMimgFBVV95cUxPNkdyd2lYaU41ckd1Qm16dUxhcVYtT0VHQ19lcm5vcldabkt3YVEyT0ROTVU0blpzRzUzRmowLUdDeTR5ek1SVnBleEZpN2RGQmdHRzdLSkFuRGNiY25pNlV3aGVsWmZKT0dmb0p3OV9WTlFLQkpZMW01Z2VsXzEtblk0SFFZSjE0X0JVdTJWbkx6Q0JUZnhmQlNn?oc=5"
-      ],
-      "contexto": "A Justiça Federal de São Paulo afastou a cobrança de Imposto de Renda sobre lucros e dividendos distribuídos por uma empresa optante pelo Simples Nacional. A decisão considerou que a nova regra de retenção de 10%, instituída pela Lei 15.270/2025, não pode afastar a isenção prevista na legislação do regime simplificado."
+      }
     },
     {
       "brandId": "mycapital",
@@ -310,35 +269,13 @@
       "mediaType": "",
       "doc": {
         "title": "IRB: nova lei reduz carga tributária e pode impulsionar lucro e dividendos",
-        "url": "https://br.advfn.com/noticias/PAPERBR/2026/artigo/99405574",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE04bTY3VFhTcTM0T01FZmxqZGVZRS1CenZBd0NVREcwNlpJQVpNMXR2dWlXRXp4UGZTM3FpREpZX1JxNEZKU3V0MXF1bGxSZFhrYU9waC1abkloSHJsZ3pqZTFpNjdDbjBodUE?oc=5",
         "source": "ADVFN",
         "date": "2026-09-30",
         "tag": "Dividendos",
         "summary": "",
         "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMiakFVX3lxTE04bTY3VFhTcTM0T01FZmxqZGVZRS1CenZBd0NVREcwNlpJQVpNMXR2dWlXRXp4UGZTM3FpREpZX1JxNEZKU3V0MXF1bGxSZFhrYU9waC1abkloSHJsZ3pqZTFpNjdDbjBodUE?oc=5"
-      ]
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "IRPF 2026: dinheiro de lote de restituição da malha fina do imposto de renda cai hoje na conta",
-        "url": "https://www.seudinheiro.com/2026/economia/receita-paga-hoje-lote-restituicao-malha-fina-imposto-de-renda-rsgp/",
-        "source": "Seu Dinheiro",
-        "date": "2026-09-30",
-        "tag": "Declaração",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMirwFBVV95cUxPcjdwZ3dIUXl5bWNYamU2RThxZ0phYVdXZWR1WXpscVlHaVN3bldTLWtZWkRXbUVmZDlxMnNHX1VBQ2o2ZmtudWlldExSMUN2WTE5Qm1RcHVubzdmR1ZUcU5HV2U3MDgwRExJb1UwLWRKbVJHNjdmemxmcGpLaUx2aU5KSmJSSW9qOXpSS2NRRTljYm5qR2tZTlFVcVZ6LWV3akxZTENjUUdKaVpoRWsw?oc=5"
-      ],
-      "contexto": "IRPF 2026: dinheiro de lote de restituição da malha fina do imposto de renda cai hoje na conta Cerca de 412 mil contribuintes que caíram na malha fina do imposto de renda em 2026 dividirão um total de R$ 1,26 bilhão em restituição nesta quarta-feira (30) Cerca de 412 mil contribuintes que regularizaram as pendências com o Fisco depois de caírem na malha..."
+      }
     },
     {
       "brandId": "mycapital",
@@ -347,17 +284,28 @@
       "mediaType": "",
       "doc": {
         "title": "Receita Federal esclarece regras para isenção de ganho de capital na venda de imóveis residenciais",
-        "url": "https://fenacon.org.br/noticias/receita-federal-esclarece-regras-para-isencao-de-ganho-de-capital-na-venda-de-imoveis-residenciais/",
+        "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxON1EyaG5MdVgzeFhsTUswU3JCOXp6ZDZpN0piV2xFWnRfblZFWGFxWmlVMjU3Vzd0ZTI4ZVZRMkw2WWs0V19kY3pzWlMwanNxeloyeGdpY1VfY3VvdEVzRFVFNlkzZUY5OVhjZEo1dnFYU1lEcHpUSERyenR4ckJJSXFxaVZnQVk1bUI2RUFBZ1IycmJfNWRNYTdjU0IxNG81U1VLNmRaVlFESUg1ZXNNNl9WclVhR1o3ZUdWNmhMTnB5aklpV1FDZFVEcw?oc=5",
         "source": "Sistema FENACON",
         "date": "2026-09-28",
         "tag": "Declaração",
         "summary": "",
         "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMiywFBVV95cUxON1EyaG5MdVgzeFhsTUswU3JCOXp6ZDZpN0piV2xFWnRfblZFWGFxWmlVMjU3Vzd0ZTI4ZVZRMkw2WWs0V19kY3pzWlMwanNxeloyeGdpY1VfY3VvdEVzRFVFNlkzZUY5OVhjZEo1dnFYU1lEcHpUSERyenR4ckJJSXFxaVZnQVk1bUI2RUFBZ1IycmJfNWRNYTdjU0IxNG81U1VLNmRaVlFESUg1ZXNNNl9WclVhR1o3ZUdWNmhMTnB5aklpV1FDZFVEcw?oc=5"
-      ],
-      "contexto": "Receita Federal esclarece regras para isenção de ganho de capital na venda de imóveis residenciais Solução de Consulta Cosit nº 149/2026 também detalha condições para aplicação da denúncia espontânea e efeitos sobre multas relacionadas a obrigações acessórias Por Comunicação Fenacon A Receita Federal publicou a Solução de Consulta Cosit nº 149, de 14 de..."
+      }
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Imposto de renda 2026: Quem deve declarar?",
+        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOcUN1bmJsXzl2Ujg4U2tNbXlCQWFSeGtHbllfam9Kb2k5OFJSVVFoLXNIa2Q0bWZzU0Y4ZjBlZkotMTdhNUl3TE8xRGZuczI0SkI2LXdGS0hoV0FNNDEtMEhCeHJyM05FM0l6NTRmZzhtbjU3Tnpya2ktbmpmSzBNY0h4b0ZDQU9tRk1ZeUd4VzdZXzdRNE5rYU5pcTYwNEtDUGFPMWVR?oc=5",
+        "source": "CNN Brasil",
+        "date": "2026-10-03",
+        "tag": "Declaração",
+        "summary": "",
+        "origem": "coletor"
+      }
     },
     {
       "brandId": "mycapital",
@@ -366,17 +314,13 @@
       "mediaType": "",
       "doc": {
         "title": "O que muda no imposto sobre aluguel com a reforma tributária e quem paga a conta",
-        "url": "https://investnews.com.br/financas/o-que-muda-no-imposto-sobre-aluguel/",
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBQWEdtaG1sdm1mUl85Mk1pU1JUb3ZMbU9JcmtJRzVkc2hGVi1JajM3NFJPS3RKMTRzNFY2RGxaNF9PZHhZRXpRV1kyOVRNbGtfM1Q1azNpWXd0ZlgyLWJIX1Rpbk1POV9xS2ZqRzJxSHMtRDM2YVdfM1hZUdIBgAFBVV95cUxNVXYzQTl2b1pRLThMZ1huWGNvZEZJVXQ1Vkk2cVhNOW11bXViM1pmUFNlalB2T1BLTmEyVzhNWnpNSUNFNk5CZGVwMHZjd0M5bElzX0Jpb3Bta1V5eTNzSFZZV2lwTlhyRnVIWUZyeHN0VTJlSGFvWDVQZmtuYUpLRw?oc=5",
         "source": "InvestNews",
         "date": "2026-09-28",
         "tag": "Declaração",
         "summary": "",
         "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMie0FVX3lxTFBQWEdtaG1sdm1mUl85Mk1pU1JUb3ZMbU9JcmtJRzVkc2hGVi1JajM3NFJPS3RKMTRzNFY2RGxaNF9PZHhZRXpRV1kyOVRNbGtfM1Q1azNpWXd0ZlgyLWJIX1Rpbk1POV9xS2ZqRzJxSHMtRDM2YVdfM1hZUdIBgAFBVV95cUxNVXYzQTl2b1pRLThMZ1huWGNvZEZJVXQ1Vkk2cVhNOW11bXViM1pmUFNlalB2T1BLTmEyVzhNWnpNSUNFNk5CZGVwMHZjd0M5bElzX0Jpb3Bta1V5eTNzSFZZV2lwTlhyRnVIWUZyeHN0VTJlSGFvWDVQZmtuYUpLRw?oc=5"
-      ],
-      "contexto": "A mudança passa, então, pela substituição de quatro tributos por dois formando o chamado IVA dual, um imposto sobre valor agregado cobrado em duas camadas. Ambos incidem sobre o valor do aluguel, mas cada um responde a um órgão diferente, a Receita Federal pela CBS e o Comitê Gestor pelo IBS."
+      }
     },
     {
       "brandId": "mycapital",
@@ -385,16 +329,13 @@
       "mediaType": "",
       "doc": {
         "title": "Receita Federal confirma incidência de IRPF sobre décimo terceiro do aviso prévio indenizado",
-        "url": "https://www.contadores.cnt.br/noticias/tecnicas/2026/09/30/receita-federal-confirma-incidencia-de-irpf-sobre-decimo-terceiro-do-aviso-previo-indenizado.html",
+        "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPYngwY2M1eHMtME9PQ2pLQVFNbTJmaWpoZG00bDd6cHN0dmhnNWkxcGItcmxVY0RFQlZPQThYNVlvSnRuTEcydjZwTWJvUXhNTl9maGtnRHVnOU9yVkpYaEQwVnpYMTdyM3liRDNZd01nd2FkR3NxNDFiMnE4QmdiQUZyWEp2Tjhnb0sxdU41RHF1aVc2RTgzSkJmMnpoeXBaSGRHb1AxSlVHdk5Mak42Tk5OU3RBOENIaUdMUGVoMVg4REpHYW9pQUhkdVpYVkhCUl85SU1zeW1hRy03aU9xeXlMVmFhRUxzZWR0bA?oc=5",
         "source": "Contadores.cnt.br",
         "date": "2026-09-30",
         "tag": "Declaração",
         "summary": "",
         "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPYngwY2M1eHMtME9PQ2pLQVFNbTJmaWpoZG00bDd6cHN0dmhnNWkxcGItcmxVY0RFQlZPQThYNVlvSnRuTEcydjZwTWJvUXhNTl9maGtnRHVnOU9yVkpYaEQwVnpYMTdyM3liRDNZd01nd2FkR3NxNDFiMnE4QmdiQUZyWEp2Tjhnb0sxdU41RHF1aVc2RTgzSkJmMnpoeXBaSGRHb1AxSlVHdk5Mak42Tk5OU3RBOENIaUdMUGVoMVg4REpHYW9pQUhkdVpYVkhCUl85SU1zeW1hRy03aU9xeXlMVmFhRUxzZWR0bA?oc=5"
-      ]
+      }
     },
     {
       "brandId": "mycapital",
@@ -403,16 +344,13 @@
       "mediaType": "",
       "doc": {
         "title": "Receita Federal libera lote residual do IRPF 2026 para 412.186 contribuintes",
-        "url": "https://www.mixvale.com.br/2026/09/30/receita-federal-libera-lote-residual-do-irpf-2026-para-412-186/",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQQndlRnFOZ1ZGQldFemJuQVFsMFdpdUFvSTItaXhfWC1fSDk4ckdLNHZXQ3RRem5nZ1dId19hMkFvS3MzVGxJeGQtTDd2N3pVQ1F3VU9FcldjaG01aHo3WXF0N1hLUTIwX25HZWZpWlowcXI4U2JRbXZ6SGREeWo4OHFhd0dwSnVKR2RNYXZtdUhmX0pmOXlXYldqcGVLekp2NUNj0gGjAUFVX3lxTFBCd2VGcU5nVkZCV0V6Ym5BUWwwV2l1QW9JMi1peF9YLV9IOThyR0s0dldDdFF6bmdnV0h3X2EyQW9LczNUbEl4ZC1MN3Y3elVDUXdVT0VyV2NobTVoejdZcXQ3WEtRMjBfbkdlZmlaWjBxcjhTYlFtdnpIZER5ajg4cWF3R3BKdUpHZE1hdm11SGZfSmY5eVdiV2pwZUt6SnY1Q2M?oc=5",
         "source": "Mix Vale",
         "date": "2026-09-30",
         "tag": "Declaração",
         "summary": "",
         "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMiowFBVV95cUxQQndlRnFOZ1ZGQldFemJuQVFsMFdpdUFvSTItaXhfWC1fSDk4ckdLNHZXQ3RRem5nZ1dId19hMkFvS3MzVGxJeGQtTDd2N3pVQ1F3VU9FcldjaG01aHo3WXF0N1hLUTIwX25HZWZpWlowcXI4U2JRbXZ6SGREeWo4OHFhd0dwSnVKR2RNYXZtdUhmX0pmOXlXYldqcGVLekp2NUNj0gGjAUFVX3lxTFBCd2VGcU5nVkZCV0V6Ym5BUWwwV2l1QW9JMi1peF9YLV9IOThyR0s0dldDdFF6bmdnV0h3X2EyQW9LczNUbEl4ZC1MN3Y3elVDUXdVT0VyV2NobTVoejdZcXQ3WEtRMjBfbkdlZmlaWjBxcjhTYlFtdnpIZER5ajg4cWF3R3BKdUpHZE1hdm11SGZfSmY5eVdiV2pwZUt6SnY1Q2M?oc=5"
-      ]
+      }
     },
     {
       "brandId": "mycapital",
@@ -421,17 +359,13 @@
       "mediaType": "",
       "doc": {
         "title": "Reforma Tributária: Receita Federal amplia prazo para empresas decidirem sobre IBS e CBS",
-        "url": "https://www.panrotas.com.br/agencias-de-viagens/mercado/2026/09/reforma-tributaria-receita-federal-amplia-prazo-para-empresas-decidirem-sobre-ibs-e-cbs_232405.html",
+        "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxOTWJ6bUhjN214Z0R6QVhvck9DOTFJY3pfY2hPY2lOV0FneFkyZ0hYQ19BM0FtSkRwSlRKcXZoX2JGcFlmYmdSUnZZcmVkWndFRXlVbFNTN1duQXV3U3B3YTV0Z1lHeWVMQS01WWJIUjE4VlNNTEJKWTloRGNtNVBEZWNiTnZwSXlfa01EQldjeDVjVDJHVHNDV1MzWkRxbWdzaUNkR1FDNG94VHJnVTlZMVlpOXpjVG8wYnRJQzhzWnAzWllKLXhTUEd2Y3NLOEpKQlFrZ2tiS3I3cGNNaDZTWjA4c0tKbmdwRFl0cUtoNzlhOW5zWlE?oc=5",
         "source": "Panrotas",
         "date": "2026-09-29",
         "tag": "Declaração",
         "summary": "",
         "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMi9gFBVV95cUxOTWJ6bUhjN214Z0R6QVhvck9DOTFJY3pfY2hPY2lOV0FneFkyZ0hYQ19BM0FtSkRwSlRKcXZoX2JGcFlmYmdSUnZZcmVkWndFRXlVbFNTN1duQXV3U3B3YTV0Z1lHeWVMQS01WWJIUjE4VlNNTEJKWTloRGNtNVBEZWNiTnZwSXlfa01EQldjeDVjVDJHVHNDV1MzWkRxbWdzaUNkR1FDNG94VHJnVTlZMVlpOXpjVG8wYnRJQzhzWnAzWllKLXhTUEd2Y3NLOEpKQlFrZ2tiS3I3cGNNaDZTWjA4c0tKbmdwRFl0cUtoNzlhOW5zWlE?oc=5"
-      ],
-      "contexto": "Reforma Tributária: Receita Federal amplia prazo para empresas decidirem sobre IBS e CBS Marcelo Oliveira, advogado da Abav, destaca prazo maior para agências analisarem a Reforma Tributária A Receita Federal decidiu ajustar os prazos para empresas que precisam definir suas situações no Simples Nacional e para aquelas que avaliam a possibilidade de recolher..."
+      }
     },
     {
       "brandId": "mycapital",
@@ -440,16 +374,13 @@
       "mediaType": "",
       "doc": {
         "title": "Os queridinhos da B3: veja as ações, FIIs e ETFs mais negociados em agosto",
-        "url": "https://investalk.bb.com.br/noticias/mercado/os-queridinhos-da-b3-veja-as-acoes-fiis-e-etfs-mais-negociados-em-agosto",
+        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQeVFpellYb2syakVKOXFFbk9CTTExak4wZTNmTDhJVmdWandOTXZoclN3YWFDc1daWnpQRWJXTzBDazU1QXVtaFJrTUZQR3BSX3ZPR3RPdkhPdkVHTDVkTFF2b0s3dnhHRldrdkswRjFkVExvcFZvM2NoLWtxVUhZeEpUMGVvck11RVRzRnQzNHFYSWZRWTUtTjlNanZyR29PV2tKS0MxZS05RGtFZUEtU3lvdmJvTjhx?oc=5",
         "source": "InvesTalk",
         "date": "2026-09-29",
         "tag": "Mercado",
         "summary": "",
         "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQeVFpellYb2syakVKOXFFbk9CTTExak4wZTNmTDhJVmdWandOTXZoclN3YWFDc1daWnpQRWJXTzBDazU1QXVtaFJrTUZQR3BSX3ZPR3RPdkhPdkVHTDVkTFF2b0s3dnhHRldrdkswRjFkVExvcFZvM2NoLWtxVUhZeEpUMGVvck11RVRzRnQzNHFYSWZRWTUtTjlNanZyR29PV2tKS0MxZS05RGtFZUEtU3lvdmJvTjhx?oc=5"
-      ]
+      }
     },
     {
       "brandId": "mycapital",
@@ -458,17 +389,13 @@
       "mediaType": "",
       "doc": {
         "title": "B3 passa a aceitar FIIs como garantia em operações a partir desta segunda-feira, 11",
-        "url": "https://www.nordinvestimentos.com.br/blog/fiis-como-garantia/",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5ZRWhtTFl2WmVXWWgtWVMtQjJZQnRiU0ZTd2dXNHNJNkhHNG9ZVmNoVDN3MDk0UDM4UFpUajBudlB1WUx2SlNxSHc0UXoyWkJ2dFVmcjFfYnQycWtBLWVlUl81UGFObGswR0JJSnhB0gFzQVVfeXFMT1BpQzE0dHdNRFdlSjlVamJaZG9wRkFteE9MTUxJcmN1Y055aE5zclc2V010LVpDWDVzQkVreTVBZ3RSNEl0TFpTaEZPeGVrZU82VVczTWxqTHJEa3hydTBJWjhvV0ZOelR2eDV4MXBfbUN4Yw?oc=5",
         "source": "Nord Investimentos",
         "date": "2026-09-29",
         "tag": "Mercado",
         "summary": "",
         "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMibkFVX3lxTE5ZRWhtTFl2WmVXWWgtWVMtQjJZQnRiU0ZTd2dXNHNJNkhHNG9ZVmNoVDN3MDk0UDM4UFpUajBudlB1WUx2SlNxSHc0UXoyWkJ2dFVmcjFfYnQycWtBLWVlUl81UGFObGswR0JJSnhB0gFzQVVfeXFMT1BpQzE0dHdNRFdlSjlVamJaZG9wRkFteE9MTUxJcmN1Y055aE5zclc2V010LVpDWDVzQkVreTVBZ3RSNEl0TFpTaEZPeGVrZU82VVczTWxqTHJEa3hydTBJWjhvV0ZOelR2eDV4MXBfbUN4Yw?oc=5"
-      ],
-      "contexto": "B3 passa a aceitar FIIs como garantia em operações a partir desta segunda-feira, 11 FIIs como garantia passam a ser aceitos pela B3 em operações que exigem margem, mudando a dinâmica do mercado de fundos imobiliários e trazendo novos riscos, e também oportunidades, para investidores. A medida entra em vigor nesta segunda-feira, 11 de maio de 2026."
+      }
     },
     {
       "brandId": "mycapital",
@@ -476,18 +403,14 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Investo lança ETF global com estrutura na Irlanda, para reduzir imposto",
-        "url": "https://valorinveste.globo.com/google/amp/produtos/fundos/acoes/noticia/2026/09/30/investo-lanca-etf-global-com-estrutura-na-irlanda-para-reduzir-imposto.ghtml",
-        "source": "Valor Investe",
-        "date": "2026-09-30",
+        "title": "Safra troca BTG por B3 e inclui Rede D'Or na carteira recomendada de outubro em meio à volatilidade",
+        "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5nV2NIOVRfcVRDejR5ajNrNlJ1dk1Yc19XOER2NHc0M2VHSmRFdDUxaFNnUHp6N191OHNRSE5wQVdOZTMzdmxHSXplV21QZG9nRWpzNzhRV2xWTy05ZWt0cnVNbTYwOWVKS3A2R3A4U3VaS1VnNFUxdERR?oc=5",
+        "source": "BlockTrends",
+        "date": "2026-10-03",
         "tag": "Mercado",
         "summary": "",
         "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQMjNRX0JaTEdWeXFJOGNuOXJ5bzF0NFRvZmQ1WlNpZnMweWNpbmhjMGp0TmZCZ3ltZ21NUDlkSnZEcFp2NkNaSURTbml2MTNhMHlLNVZyaE9rRkgzSGVlS29mZXZ0N2pSS0hTbFUyYkhvQVB6TTlXbFlYUFBoUXRnZ2dLLWxPTTV1QkRFUW5DOGdlS3ZQYTg3eGNCMVdiOGh5bjhZX00zX1ZlNDl6Y1lEaXFBNVBMRGtNdG11UVJlbS1iVV94eTZCQ2ZqeGt2VzlTa0xMc3FOaXdmbTMzc055VjlyZVh1RXp1VjAxcTZ1bXHSAfABQVVfeXFMUDIzUV9CWkxHVnlxSThjbjlyeW8xdDRUb2ZkNVpTaWZzMHljaW5oYzBqdE5mQmd5bWdtTVA5ZEp2RHBadjZDWklEU25pdjEzYTB5SzVWcmhPa0ZIM0hlZUtvZmV2dDdqUktIU2xVMmJIb0FQek05V2xZWFBQaFF0Z2dnSy1sT001dUJERVFuQzhnZUt2UGE4N3hjQjFXYjhoeW44WV9NM19WZTQ5emNZRGlxQTVQTERrTXRtdVFSZW0tYlVfeHk2QkNmanhrdlc5U2tMTHNxTml3Zm0zM3NOeVY5cmVYdUV6dVYwMXE2dW1x?oc=5"
-      ],
-      "contexto": "Investo lança ETF global com estrutura na Irlanda, para reduzir imposto Com o MUND11, gestora adota modelo europeu que corta pela metade a retenção de tributos sobre proventos nos EUA e conecta o investidor brasileiro a 49 países O mercado de fundos de índice (ETFs) da B3 ganhou uma nova alternativa para os investidores em busca de diversificação..."
+      }
     },
     {
       "brandId": "mycapital",
@@ -496,16 +419,13 @@
       "mediaType": "",
       "doc": {
         "title": "Ações: confira o calendário de dividendos de outubro de 2026",
-        "url": "https://conteudos.xpi.com.br/acoes/relatorios/acoes-confira-o-calendario-de-dividendos-de-outubro-de-2026/",
+        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOdTd3Z1E1TzZ4UjA4bXBZMF96Tk81SzJ4UEhoZ2JpYWVydmZlZ0ZSTTR4ck05M0NuZ1J4WnZwcmlSWjVNeThzZDQxUU9WWkJORV93QkY4STc2UXdlOUE3OWowOHJ5bGdyalpweGVWdnFUM3M3Z2ZWZ2hGSnQxeDgtM29GZ2U5dFRtZ2JnM0NFcmg1Z2JoUEZMeS11Vm9PdnZFWGlPRVhEUEV0Zw?oc=5",
         "source": "XP Investimentos",
         "date": "2026-09-30",
         "tag": "Mercado",
         "summary": "",
         "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOdTd3Z1E1TzZ4UjA4bXBZMF96Tk81SzJ4UEhoZ2JpYWVydmZlZ0ZSTTR4ck05M0NuZ1J4WnZwcmlSWjVNeThzZDQxUU9WWkJORV93QkY4STc2UXdlOUE3OWowOHJ5bGdyalpweGVWdnFUM3M3Z2ZWZ2hGSnQxeDgtM29GZ2U5dFRtZ2JnM0NFcmg1Z2JoUEZMeS11Vm9PdnZFWGlPRVhEUEV0Zw?oc=5"
-      ]
+      }
     },
     {
       "brandId": "mycapital",
@@ -514,17 +434,13 @@
       "mediaType": "",
       "doc": {
         "title": "Duas ações ganham espaço entre as mais negociadas da B3; veja quem avançou no ranking",
-        "url": "https://www.estadao.com.br/einvestidor/cenarios-e-mercado/duas-acoes-ganham-espaco-entre-as-mais-negociadas-da-b3-veja-quem-avancou-no-ranking/",
+        "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOa3pzQm1SYXJmZ3NEb01MT054UVo5eU9MN3F1TXFlUF8zQ0lpTC1kVS1uSXZtSnF2NXhGNGpnRXBId3Jja0ZteThtRkZteWhQV044MHVkY0JacUFtSmJlUUFSNHJUYzdzNjR3allRV2ZWRXZHelBJTFNNY1RZaHpZaXo2VDNTUmt4T1l2WmZEVzBYWTUzc3EzNXJEZlpoZm1BMWJuSmxXLXg0anRKOUZmUTY4REdNTHhkc2Z3VkVLQ0o0MDBwMVdjUVg5eWNGaEM1LTVJcXJ2bkFkd2fSAeABQVVfeXFMTVcxNi13UEc0ZWt5M1dNLWdza2lMZ3IxeDI3TGNBcEluenFObWVaakotTXZJVHJ1RHh4V3gxVldvcE1MQmFDQkxKMVM2YkZlMi1VSEFEOVhmNmZ6QTZpT1A2cWxKZ2NvT2ZOb3Q0SXhOX20xdnZmY1FLQm5HNFZkeFBaN0Y3MXp4b25qT0tVTl9UTnV3eGQ5MTluTk10QnJfMjA0TE84QnhTZUtfbWxRM1hITVVIcExOVGNpU3N6YUp3XzIwVjJma0lJOTNNaTREOGZzVHBKVVg2RlgwQXoxdGo?oc=5",
         "source": "Estadão",
         "date": "2026-09-28",
         "tag": "Mercado",
         "summary": "",
         "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOa3pzQm1SYXJmZ3NEb01MT054UVo5eU9MN3F1TXFlUF8zQ0lpTC1kVS1uSXZtSnF2NXhGNGpnRXBId3Jja0ZteThtRkZteWhQV044MHVkY0JacUFtSmJlUUFSNHJUYzdzNjR3allRV2ZWRXZHelBJTFNNY1RZaHpZaXo2VDNTUmt4T1l2WmZEVzBYWTUzc3EzNXJEZlpoZm1BMWJuSmxXLXg0anRKOUZmUTY4REdNTHhkc2Z3VkVLQ0o0MDBwMVdjUVg5eWNGaEM1LTVJcXJ2bkFkd2fSAeABQVVfeXFMTVcxNi13UEc0ZWt5M1dNLWdza2lMZ3IxeDI3TGNBcEluenFObWVaakotTXZJVHJ1RHh4V3gxVldvcE1MQmFDQkxKMVM2YkZlMi1VSEFEOVhmNmZ6QTZpT1A2cWxKZ2NvT2ZOb3Q0SXhOX20xdnZmY1FLQm5HNFZkeFBaN0Y3MXp4b25qT0tVTl9UTnV3eGQ5MTluTk10QnJfMjA0TE84QnhTZUtfbWxRM1hITVVIcExOVGNpU3N6YUp3XzIwVjJma0lJOTNNaTREOGZzVHBKVVg2RlgwQXoxdGo?oc=5"
-      ],
-      "contexto": "Bolsa pode valorizar com ajuste fiscal em 2027, mas eleição deve trazer volatilidade, diz Ágora Para o economista-chefe da corretora, Dalton Gardimam, setembro deve trazer mudanças de posicionamento e oscilações. Em agosto de 2026, o BTG Pactual (BPAC11) alcançou a quarta posição no ranking das ações mais negociadas na B3, segundo o DataWise+."
+      }
     },
     {
       "brandId": "mycapital",
@@ -532,26 +448,22 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Vale a pena investir em small caps em 2026? 3 ações promissoras",
-        "url": "https://www.nordinvestimentos.com.br/blog/small-caps-2026-o-que-esperar/",
-        "source": "Nord Investimentos",
-        "date": "2026-09-29",
+        "title": "Tudo sobre dividendos: como investir e calendário de pagamentos",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5JajQ1aGp6bHBvSUU2S2pKbEhLNVkyQWFLTDRyQ0l4OUx5cjZHZVNuQjdqTy1jYUJIb3MxYllNY1dKaG9EVHlOVS04M284NzJ6Q2pEY2FKcmpySmF3TGRKU0tGTm0tNG9fWGNUN040Zl8?oc=5",
+        "source": "oespecialista.safra.com.br",
+        "date": "2026-09-28",
         "tag": "Mercado",
         "summary": "",
         "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMifEFVX3lxTFB4VEI1QkxmU2lQRGRlQnkxcFZZR3B5OEVjTGs5ZXRJUk5KMTNhR3M2R29TeV9NUXNXOGxhb2Z2SVlLVmZibWVHTHpFand1S1FSSWZNM0tsSnlRR2VoMEpOV29NcFAxTk1JSERKUzJUSHdEQUl1RW9WNGhweE3SAYIBQVVfeXFMTXptQzVERDd1dDJxSGM3SWhnbmNTaHVGME50eVNWR1Q5VmI0cExjWjRabldRcmJNLVdPdzAtc3hSNXVQX05oTGwtTEVCR180alNPRloxRXNENXM2NDVqai12T1d6THhpWGJxdFUya21YM1JIeVRyNGRpRGJOV0w4S29qZw?oc=5"
-      ],
-      "contexto": "Vale a pena investir em small caps em 2026? 3 ações promissoras Mesmo com a alta recente da Bolsa brasileira, muitas small caps ainda negociam a preços atrativos, e podem oferecer um potencial de valorização maior que as grandes empresas."
+      }
     }
   ],
   "avisos": [
     "Grana Capital (blog https://blog.grana.capital/feed/): HTTP 404"
   ],
   "arquivos": [
-    "4ab4dc8152ad137c.jpg",
-    "6359b9a722b2ab11.jpg",
+    "1967862ac0d28f1e.jpg",
+    "7aad3ddf071282c9.jpg",
     "d0d1bc40b09922b2.jpg",
     "e7364f7795e698cc.jpg",
     "e9870bf8e484b2e8.jpg"
