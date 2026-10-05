@@ -1,13 +1,322 @@
 {
   "geo": "BR",
   "periodo": "today 1-m",
-  "termos": [],
+  "termos": [
+    {
+      "termo": "imposto de renda",
+      "subindo": [
+        {
+          "busca": "quem ganha ate 5 mil precisa declarar imposto de renda",
+          "valor": "+600%"
+        },
+        {
+          "busca": "consultar imposto de renda pelo cpf",
+          "valor": "+50%"
+        },
+        {
+          "busca": "lotes residuais imposto de renda 2026",
+          "valor": "+50%"
+        },
+        {
+          "busca": "pagar imposto de renda",
+          "valor": "+50%"
+        },
+        {
+          "busca": "seu imposto",
+          "valor": "+40%"
+        },
+        {
+          "busca": "quem paga imposto de renda",
+          "valor": "+40%"
+        },
+        {
+          "busca": "seu imposto de renda",
+          "valor": "+40%"
+        }
+      ],
+      "top": [
+        {
+          "busca": "imposto de renda 2026",
+          "valor": 100
+        },
+        {
+          "busca": "declaração imposto de renda",
+          "valor": 71
+        },
+        {
+          "busca": "declaração de imposto de renda",
+          "valor": 70
+        },
+        {
+          "busca": "restituição imposto de renda",
+          "valor": 66
+        },
+        {
+          "busca": "meu imposto de renda",
+          "valor": 65
+        },
+        {
+          "busca": "restituição de imposto de renda",
+          "valor": 65
+        },
+        {
+          "busca": "declarar imposto de renda",
+          "valor": 49
+        },
+        {
+          "busca": "isenção imposto de renda",
+          "valor": 36
+        }
+      ],
+      "interesse": [
+        {
+          "data": "2026-09-28T00:00:00+00:00",
+          "valor": 73
+        },
+        {
+          "data": "2026-09-29T00:00:00+00:00",
+          "valor": 77
+        },
+        {
+          "data": "2026-09-30T00:00:00+00:00",
+          "valor": 100
+        },
+        {
+          "data": "2026-10-01T00:00:00+00:00",
+          "valor": 81
+        },
+        {
+          "data": "2026-10-02T00:00:00+00:00",
+          "valor": 74
+        },
+        {
+          "data": "2026-10-03T00:00:00+00:00",
+          "valor": 38
+        },
+        {
+          "data": "2026-10-04T00:00:00+00:00",
+          "valor": 25
+        },
+        {
+          "data": "2026-10-05T00:00:00+00:00",
+          "valor": 56
+        }
+      ]
+    },
+    {
+      "termo": "darf",
+      "subindo": [
+        {
+          "busca": "darf 8109",
+          "valor": "Breakout"
+        },
+        {
+          "busca": "qual o dia para pagamento do darf previdenciário das empresas?",
+          "valor": "Breakout"
+        },
+        {
+          "busca": "emissão de darf pessoa física",
+          "valor": "Breakout"
+        },
+        {
+          "busca": "como gerar darf para pagar imposto de renda",
+          "valor": "+120%"
+        },
+        {
+          "busca": "darf procuradoria",
+          "valor": "+120%"
+        },
+        {
+          "busca": "darf itr",
+          "valor": "+100%"
+        },
+        {
+          "busca": "darf 2372",
+          "valor": "+100%"
+        },
+        {
+          "busca": "darf 1099",
+          "valor": "+70%"
+        }
+      ],
+      "top": [
+        {
+          "busca": "emitir darf",
+          "valor": 100
+        },
+        {
+          "busca": "pagar darf",
+          "valor": 95
+        },
+        {
+          "busca": "imposto de renda darf",
+          "valor": 88
+        },
+        {
+          "busca": "codigo darf",
+          "valor": 78
+        },
+        {
+          "busca": "pagamento darf",
+          "valor": 70
+        },
+        {
+          "busca": "darf receita federal",
+          "valor": 63
+        },
+        {
+          "busca": "ecac darf",
+          "valor": 59
+        },
+        {
+          "busca": "mei darf",
+          "valor": 48
+        }
+      ],
+      "interesse": [
+        {
+          "data": "2026-09-28T00:00:00+00:00",
+          "valor": 62
+        },
+        {
+          "data": "2026-09-29T00:00:00+00:00",
+          "valor": 61
+        },
+        {
+          "data": "2026-09-30T00:00:00+00:00",
+          "valor": 100
+        },
+        {
+          "data": "2026-10-01T00:00:00+00:00",
+          "valor": 68
+        },
+        {
+          "data": "2026-10-02T00:00:00+00:00",
+          "valor": 50
+        },
+        {
+          "data": "2026-10-03T00:00:00+00:00",
+          "valor": 15
+        },
+        {
+          "data": "2026-10-04T00:00:00+00:00",
+          "valor": 7
+        },
+        {
+          "data": "2026-10-05T00:00:00+00:00",
+          "valor": 38
+        }
+      ]
+    },
+    {
+      "termo": "dividendos",
+      "subindo": [
+        {
+          "busca": "kncr11 dividendos mensais",
+          "valor": "+250%"
+        },
+        {
+          "busca": "quais acoes pagam dividendos todo mes",
+          "valor": "+250%"
+        },
+        {
+          "busca": "fundamentus",
+          "valor": "+130%"
+        },
+        {
+          "busca": "btci11 dividendos",
+          "valor": "+120%"
+        },
+        {
+          "busca": "btlg11 dividendos mensais",
+          "valor": "+80%"
+        },
+        {
+          "busca": "ações que pagam dividendos mensais",
+          "valor": "+70%"
+        },
+        {
+          "busca": "simulador de dividendos",
+          "valor": "+70%"
+        },
+        {
+          "busca": "o rei dos dividendos",
+          "valor": "+60%"
+        }
+      ],
+      "top": [
+        {
+          "busca": "o que é dividendos",
+          "valor": 100
+        },
+        {
+          "busca": "mxrf11 dividendos",
+          "valor": 88
+        },
+        {
+          "busca": "mxrf11",
+          "valor": 87
+        },
+        {
+          "busca": "petrobras dividendos",
+          "valor": 84
+        },
+        {
+          "busca": "dividendos bbas3",
+          "valor": 80
+        },
+        {
+          "busca": "bbas3",
+          "valor": 79
+        },
+        {
+          "busca": "dividendos petr4",
+          "valor": 75
+        },
+        {
+          "busca": "petr4",
+          "valor": 75
+        }
+      ],
+      "interesse": [
+        {
+          "data": "2026-09-28T00:00:00+00:00",
+          "valor": 63
+        },
+        {
+          "data": "2026-09-29T00:00:00+00:00",
+          "valor": 63
+        },
+        {
+          "data": "2026-09-30T00:00:00+00:00",
+          "valor": 75
+        },
+        {
+          "data": "2026-10-01T00:00:00+00:00",
+          "valor": 77
+        },
+        {
+          "data": "2026-10-02T00:00:00+00:00",
+          "valor": 65
+        },
+        {
+          "data": "2026-10-03T00:00:00+00:00",
+          "valor": 41
+        },
+        {
+          "data": "2026-10-04T00:00:00+00:00",
+          "valor": 23
+        },
+        {
+          "data": "2026-10-05T00:00:00+00:00",
+          "valor": 54
+        }
+      ]
+    }
+  ],
   "emAlta": [],
   "avisos": [
-    "Google Trends (imposto de renda): Google rate-limited the Explore data request; stop and back off.",
-    "Google Trends (darf): Google rate-limited the Explore data request; stop and back off.",
-    "Google Trends (dividendos): Google rate-limited the Explore data request; stop and back off.",
     "Google Trends (ir ações): Google rate-limited the Explore data request; stop and back off."
   ],
-  "geradoEm": "2026-10-04T14:46:43+00:00"
+  "geradoEm": "2026-10-05T18:21:30+00:00"
 }
