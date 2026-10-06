@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-05T18:20:07+00:00",
+  "geradoEm": "2026-10-06T15:52:00+00:00",
   "fonte": "coletor (GitHub Actions)",
   "itens": [
     {
@@ -16,8 +16,8 @@
         "title": "Resolva o Imposto de Renda dos investimentos na bolsa em segundos |  Grana Capital",
         "url": "https://www.youtube.com/watch?v=92RRoH6bZPc",
         "date": "2026-09-09",
-        "signal": "238 visualizações, 9 curtidas",
-        "summary": "Shorts publicado em 09/09, com 238 visualizações, 9 curtidas.",
+        "signal": "248 visualizações, 9 curtidas",
+        "summary": "Shorts publicado em 09/09, com 248 visualizações, 9 curtidas.",
         "origem": "coletor"
       }
     },
@@ -54,8 +54,8 @@
         "title": "Será que tem Imposto de Renda da bolsa acumulando juros e multa?",
         "url": "https://www.youtube.com/watch?v=LwfdYpSraks",
         "date": "2026-09-10",
-        "signal": "104 visualizações, 3 curtidas",
-        "summary": "Shorts publicado em 10/09, com 104 visualizações, 3 curtidas.",
+        "signal": "107 visualizações, 3 curtidas",
+        "summary": "Shorts publicado em 10/09, com 107 visualizações, 3 curtidas.",
         "origem": "coletor"
       }
     },
@@ -111,23 +111,8 @@
         "title": "IA de um lado, influencers do outro: qual o futuro do analista CNPI?",
         "url": "https://www.youtube.com/watch?v=-l4624f25ok",
         "date": "2026-10-05",
-        "signal": "8 visualizações, 0 curtidas",
-        "summary": "Vídeo publicado em 05/10, com 8 visualizações, 0 curtidas.",
-        "origem": "coletor"
-      }
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "IR 2026: guia prático para declarar LCI, LCA e debêntures sem erros",
-        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPS3Q4UDdmMGhXRnBpaWxZdTVBbjFocDRvZjY5bmhwTGJDMTZxLUl1YnVNTjhLbDVScE95UXU0ZFNaYm1mTzRhc01qZHJ1YzZEMDQ2OThfZ0Y2WlhwM0Nod0dxdS13UmttRFZfSkhWdFRYMjZQd1ZrSDVCY1lGdXVsUE5YQXhjSi1nV21nTXhuQmE2dENwY242b2dBWlB2U1lULTI5V19n?oc=5",
-        "source": "Gazeta SP",
-        "date": "2026-10-04",
-        "tag": "IR",
-        "summary": "",
+        "signal": "39 visualizações, 0 curtidas",
+        "summary": "Vídeo publicado em 05/10, com 39 visualizações, 0 curtidas.",
         "origem": "coletor"
       }
     },
@@ -212,6 +197,36 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
+        "title": "Ibovespa B3 alcança máxima histórica intradiária, acima dos 209 mil pontos; dólar cai abaixo de R$ 5",
+        "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxQZjk0dXVJc3E0WENkcVBRd3N3WTJpWTJldmhjalRkNGRCcEl6aHU1eHpCNTNBb1hiYjhaSUNRT2VGb3U2TjZMRkZVWXhkcTRoVWNNR1RncVJnNWFfSWZKRmdBTzV1dThCdFg1Y2pYc1RNek9wSTdHbm9SbDdxNGpxY1NnV3k5aXEtVVd0dXhSRW5QRDVySG10c1hnTHFSSkhhaDB6R2hkTXVoamxpcWxJRlNUOGJyV2pYQTFTdDVBLVVjTjZPOVVFU1NTTEwxb3BBczMzZ0xzUmoydmhDdElGOE9aUmNjNHUzOUVSa3hKT0d3QjJQcGE4aThVckRvbkJwTG1MWThVWmM3X1E0MWowZkdQRy1ZQQ?oc=5",
+        "source": "Bora Investir",
+        "date": "2026-10-05",
+        "tag": "IR",
+        "summary": "",
+        "origem": "coletor"
+      }
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Promessa de Flávio de rever impostos esbarra no cronograma tributário",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPeWthMWdmWVUtUEhneWF2bDh5ZmMzQUZYSHdLbGRjc3JQNko2VG9KdnVpQzQ5N0pvUDJ4VEJCUFlZdWEwQy0ySjNwTS12cmp3RG5JTVUyUXRFWHRPU29oeUl0TFVoTGNaUUJvSlpJRTRtXzJ3WkpybmhiTmpXU3ZPMXdSUDAxdmExeWRFOTRFQWRnS28zMWV0R3FNam9kdUNUdE5aNGtDdTZLTFRaVy1V0gGvAUFVX3lxTE95a2ExZ2ZZVS1QSGd5YXZsOHlmYzNBRlhId0tsZGNzclA2SjZUb0p2dWlDNDk3Sm9QMnhUQkJQWVl1YTBDLTJKM3BNLXZyandEbklNVTJRdEVYdE9Tb2h5SXRMVWhMY1pRQm9KWklFNG1fMndaSnJuaGJOaldTdk8xd1JQMDF2YTF5ZEU5NEVBZGdLbzMxZXRHcU1qb2R1Q1R0Tlo0a0N1NktMVFpXLVU?oc=5",
+        "source": "Fenafisco",
+        "date": "2026-10-06",
+        "tag": "Dividendos",
+        "summary": "",
+        "origem": "coletor"
+      }
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
         "title": "B3 (B3SA3), JHSF (JHSF3), Smart Fit (SMFT3) e mais ações pagam dividendos em outubro; confira agenda completa",
         "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOQUxyWVRxMXZTcmxpUkctQWt1enQ5ak52T1BWMTJ3ZG0zR2UtRGItMjdUQ1pkUUdiZ25oS1oybklMSzVJLVZOUnFSNzNnTHZLbWJRSGoybnFVQnVTOU94eXRzS0R3Z0FpUk5paTNENHBaMnAtTUt5UzE5d3YtbHk0dXRZd21hb29RZENrenBaVlBIZjJvR2tFam1QVERBcEVNaFRnTGtMXzZIM2lMU0lPVjdxNl9sZkJhLTZteHQ4VWhhSUJsd01nY2ViN0ZoSHZQaFl5MUFUbThCcjBvbktCVTZiMDJqVnR3T3YtZzJDaG1wVlhu?oc=5",
         "source": "Empiricus",
@@ -231,6 +246,21 @@
         "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQOTZQNjZPNHUyU0t3VzhfN3psRjM3eHNXbkFVU0R5aVJhMFBPaDBVV0ZBUjdfMGJrbEY2anFlU2s2X2hjZWNLdXhDRHctNEtDTURBc2VRWFlsNTc3OVJBOEVWUFlLNWFJMlcyMmlCbGg4b0FwekpvMUNQRUxaSldtb1lVVFNDT3FUV3luRTJqay1rNGhad3FyTjN6cEh6dHdOSmhHRm44N2FINTVHbW05WklVNW1xNGI4WVlEcVNoM1JNcVU?oc=5",
         "source": "Paraíba Business",
         "date": "2026-09-30",
+        "tag": "Dividendos",
+        "summary": "",
+        "origem": "coletor"
+      }
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Sem faixa de transição, retenção de IR sobre dividendos é inconstitucional",
+        "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPWEJBc2NTbWRtX29NNGpSamxzR1VfTEZnQW9RdXRrUzJXRU15emxaU0JIY2l2NzRKZ0xiekJUcXc4Y3VjV3RPSkljUXNaN1c1Ym5pOEM4UjJ3RmxUWkRDdTBsN0Rlc1RkOGE5LWRsVTNKOThuZ3lEX19IZGhMaUhDUmFCa3Zsb3VXbVlnT3lCZ0ZsWldOaXlrdkpLVFhHbW9PUnE4Y0MzRGl3ejBOWjVYajZ3QW1RZ1ZySHc?oc=5",
+        "source": "Consultor Jurídico",
+        "date": "2026-10-06",
         "tag": "Dividendos",
         "summary": "",
         "origem": "coletor"
@@ -272,55 +302,10 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Dividendos: Justiça afasta IR de empresa do Simples",
-        "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQU2hYRjMyRzdBNkttMmNzbEdRNmtnYlhFUXExMEI3RTRvSWxvdWpwV1JYR1EwWmozVzdwSDFnZjF3cmVSdGFHVlZod3FtRWRtX0NOLVc3QjB1VzdRamxQWkV4UU5rX1lQSm5oQnJSQ1UzMDgzMFA0QzdrSWhmV0JCbVRoMXl1VmZrb1FxLUtoNWY0LW51MzB5bkdNTQ?oc=5",
-        "source": "Portal Contabeis",
-        "date": "2026-09-30",
-        "tag": "Dividendos",
-        "summary": "",
-        "origem": "coletor"
-      }
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "IRB: nova lei reduz carga tributária e pode impulsionar lucro e dividendos",
-        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE04bTY3VFhTcTM0T01FZmxqZGVZRS1CenZBd0NVREcwNlpJQVpNMXR2dWlXRXp4UGZTM3FpREpZX1JxNEZKU3V0MXF1bGxSZFhrYU9waC1abkloSHJsZ3pqZTFpNjdDbjBodUE?oc=5",
-        "source": "ADVFN",
-        "date": "2026-09-30",
-        "tag": "Dividendos",
-        "summary": "",
-        "origem": "coletor"
-      }
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
         "title": "IRPF 2026: dinheiro de lote de restituição da malha fina do imposto de renda cai hoje na conta",
         "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPcjdwZ3dIUXl5bWNYamU2RThxZ0phYVdXZWR1WXpscVlHaVN3bldTLWtZWkRXbUVmZDlxMnNHX1VBQ2o2ZmtudWlldExSMUN2WTE5Qm1RcHVubzdmR1ZUcU5HV2U3MDgwRExJb1UwLWRKbVJHNjdmemxmcGpLaUx2aU5KSmJSSW9qOXpSS2NRRTljYm5qR2tZTlFVcVZ6LWV3akxZTENjUUdKaVpoRWsw?oc=5",
         "source": "Seu Dinheiro",
         "date": "2026-09-30",
-        "tag": "Declaração",
-        "summary": "",
-        "origem": "coletor"
-      }
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Quem recebe dinheiro de vaquinha precisa declarar e pode pagar imposto; veja a regra e o limite isento",
-        "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOdnhLMllSamZtaWdaUWRxS0o1X3JyNzM5QnM0VndEWWtuenV1eHBqLTBHRG1QQ1lYelRESTJCZl8xQjlSNTBNbzUyMy1nVkp3TmdiU1I2UHhZZHVkUWtSQ1hsSVdyek9Va1pISkVKbk1XRFJqdzJ6bXdLemNONHVhbjVaQzNST0dSNTFWaTB1cnhjRmVrd2daZlQ5M1cxRHN5OFdtUkFkSE9ITHI5dDBQNzc1SkJYNkw1S0lZemFmVmhKUXk3dldhMGFERFlhbkQ4bXJv0gHYAUFVX3lxTFBJazJpbVlxR2s3anlqNzMweTJFTXo5UUN0Ujh5X2x1XzkzSHoweHNpN3VSbjdHTHFTSUE5czFxbFJ5SnIyYll4YVhHQzRFc19SbUpFVm1qYnZzamRTeWtOZzc5YUV1RHQ3Rkgyemc2WV91ZURSSnF6OERzaUZHb2VzUWtIMEFERXlMMmdUUjJKcHUwZjhKYy1HOXQyTzJsMU5oU1h3QVlDcGF2VGMxUjBSaVR0NmJ2VUtVMkdCNkVtcnJsWk5SblRpYnJTLWRYbmJnLVpraUNFQw?oc=5",
-        "source": "Banda B",
-        "date": "2026-10-03",
         "tag": "Declaração",
         "summary": "",
         "origem": "coletor"
@@ -347,10 +332,10 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "O que muda no imposto sobre aluguel com a reforma tributária e quem paga a conta",
-        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBQWEdtaG1sdm1mUl85Mk1pU1JUb3ZMbU9JcmtJRzVkc2hGVi1JajM3NFJPS3RKMTRzNFY2RGxaNF9PZHhZRXpRV1kyOVRNbGtfM1Q1azNpWXd0ZlgyLWJIX1Rpbk1POV9xS2ZqRzJxSHMtRDM2YVdfM1hZUdIBgAFBVV95cUxNVXYzQTl2b1pRLThMZ1huWGNvZEZJVXQ1Vkk2cVhNOW11bXViM1pmUFNlalB2T1BLTmEyVzhNWnpNSUNFNk5CZGVwMHZjd0M5bElzX0Jpb3Bta1V5eTNzSFZZV2lwTlhyRnVIWUZyeHN0VTJlSGFvWDVQZmtuYUpLRw?oc=5",
-        "source": "InvestNews",
-        "date": "2026-09-28",
+        "title": "Receita Federal confirma incidência de IRPF sobre décimo terceiro do aviso prévio indenizado",
+        "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPYngwY2M1eHMtME9PQ2pLQVFNbTJmaWpoZG00bDd6cHN0dmhnNWkxcGItcmxVY0RFQlZPQThYNVlvSnRuTEcydjZwTWJvUXhNTl9maGtnRHVnOU9yVkpYaEQwVnpYMTdyM3liRDNZd01nd2FkR3NxNDFiMnE4QmdiQUZyWEp2Tjhnb0sxdU41RHF1aVc2RTgzSkJmMnpoeXBaSGRHb1AxSlVHdk5Mak42Tk5OU3RBOENIaUdMUGVoMVg4REpHYW9pQUhkdVpYVkhCUl85SU1zeW1hRy03aU9xeXlMVmFhRUxzZWR0bA?oc=5",
+        "source": "Contadores.cnt.br",
+        "date": "2026-09-30",
         "tag": "Declaração",
         "summary": "",
         "origem": "coletor"
@@ -362,9 +347,9 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Receita Federal confirma incidência de IRPF sobre décimo terceiro do aviso prévio indenizado",
-        "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPYngwY2M1eHMtME9PQ2pLQVFNbTJmaWpoZG00bDd6cHN0dmhnNWkxcGItcmxVY0RFQlZPQThYNVlvSnRuTEcydjZwTWJvUXhNTl9maGtnRHVnOU9yVkpYaEQwVnpYMTdyM3liRDNZd01nd2FkR3NxNDFiMnE4QmdiQUZyWEp2Tjhnb0sxdU41RHF1aVc2RTgzSkJmMnpoeXBaSGRHb1AxSlVHdk5Mak42Tk5OU3RBOENIaUdMUGVoMVg4REpHYW9pQUhkdVpYVkhCUl85SU1zeW1hRy03aU9xeXlMVmFhRUxzZWR0bA?oc=5",
-        "source": "Contadores.cnt.br",
+        "title": "Imposto de Renda: Receita paga lote da malha fina; veja quem recebe",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPZl9HSFg4c0szbzNwSnBwMWVnS1JPajlNa2hveUpWNEpiWmtaakducjVhWWRLSTBaZi14T2FSMHl6YVo2YzVtOXVjRkNXdkRHRzQ5ZnUtbWNzNEt6VEZIbUJMTDcxUV9GYkVRSjN2UnVVby0wN2h6Z18yOTZsUVd5OUw0THVZMHBkdzZlbTczczlGc0M0QjdKeFpXNFZxWE80?oc=5",
+        "source": "viva.com.br",
         "date": "2026-09-30",
         "tag": "Declaração",
         "summary": "",
@@ -392,11 +377,11 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Os queridinhos da B3: veja as ações, FIIs e ETFs mais negociados em agosto",
-        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQeVFpellYb2syakVKOXFFbk9CTTExak4wZTNmTDhJVmdWandOTXZoclN3YWFDc1daWnpQRWJXTzBDazU1QXVtaFJrTUZQR3BSX3ZPR3RPdkhPdkVHTDVkTFF2b0s3dnhHRldrdkswRjFkVExvcFZvM2NoLWtxVUhZeEpUMGVvck11RVRzRnQzNHFYSWZRWTUtTjlNanZyR29PV2tKS0MxZS05RGtFZUEtU3lvdmJvTjhx?oc=5",
-        "source": "InvesTalk",
+        "title": "Reforma Tributária: Receita Federal amplia prazo para empresas decidirem sobre IBS e CBS",
+        "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxOTWJ6bUhjN214Z0R6QVhvck9DOTFJY3pfY2hPY2lOV0FneFkyZ0hYQ19BM0FtSkRwSlRKcXZoX2JGcFlmYmdSUnZZcmVkWndFRXlVbFNTN1duQXV3U3B3YTV0Z1lHeWVMQS01WWJIUjE4VlNNTEJKWTloRGNtNVBEZWNiTnZwSXlfa01EQldjeDVjVDJHVHNDV1MzWkRxbWdzaUNkR1FDNG94VHJnVTlZMVlpOXpjVG8wYnRJQzhzWnAzWllKLXhTUEd2Y3NLOEpKQlFrZ2tiS3I3cGNNaDZTWjA4c0tKbmdwRFl0cUtoNzlhOW5zWlE?oc=5",
+        "source": "Panrotas",
         "date": "2026-09-29",
-        "tag": "Mercado",
+        "tag": "Declaração",
         "summary": "",
         "origem": "coletor"
       }
@@ -407,10 +392,10 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "B3 passa a aceitar FIIs como garantia em operações a partir desta segunda-feira, 11",
-        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5ZRWhtTFl2WmVXWWgtWVMtQjJZQnRiU0ZTd2dXNHNJNkhHNG9ZVmNoVDN3MDk0UDM4UFpUajBudlB1WUx2SlNxSHc0UXoyWkJ2dFVmcjFfYnQycWtBLWVlUl81UGFObGswR0JJSnhB0gFzQVVfeXFMT1BpQzE0dHdNRFdlSjlVamJaZG9wRkFteE9MTUxJcmN1Y055aE5zclc2V010LVpDWDVzQkVreTVBZ3RSNEl0TFpTaEZPeGVrZU82VVczTWxqTHJEa3hydTBJWjhvV0ZOelR2eDV4MXBfbUN4Yw?oc=5",
-        "source": "Nord Investimentos",
-        "date": "2026-09-29",
+        "title": "Clima de ‘já ganhou’ contagia Faria Lima, mas teste para Bolsa, dólar e juros começa agora",
+        "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPeWxqUldLZVd6M0NaRkZlLVdwd3pQYkJ1TjFtNFg0b1RENGVBX1psSFh3Wm5wVERlTjEtMHpiWjBSRkxEbXlXRE5qMlRNbjBKN000Y19KU0tCTjZNeHRQRnZFWldMRUQxQm1Fc2JqY3pzMHNpZ3BlX3FHckJ1QU1UUHpKbXhRMlA2dWxtVWlZOHZtY3JDNW1uVUZNbEVLeXhMYkFudlFvb250NXpiaVhNSGxYQ0x5eDBZdUlNLTJOQloxQWFWX3lMaGlJR3JZMHV3YzI3S1JRZmExV1lFZl9ocGl1YWdhanhO0gHuAUFVX3lxTE1LTmNnY0dnd2JhM2VkRWtCTW91MHcyakNIc1h6eDNaSnVZS3FEbTZzQ1dUN0x2OU9TN014ZHUxTVdyYTZ1S1pNbElXMTVKWXJPN2hHdEdJQXRtd2djRy1aZWhMQ3dpWlU4RUJESFdHTmZvb0k2cGhxZVB6aWZsdDFxSHhLWVNvOFY3VFFZbjdlV1RWVV9INUNScGJHVVl4cjRzQUsweG1fV01Sa3NfUm1GVjdtQ2dNblY0Y0c0YWpFVVY2cWdja3JKZFJ4eUtsZVBqZ3dnZ011YmZqMUZaYjd3ZVBCbndfcVVuRUpBSkE?oc=5",
+        "source": "Estadão",
+        "date": "2026-10-06",
         "tag": "Mercado",
         "summary": "",
         "origem": "coletor"
@@ -467,10 +452,25 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Duas ações ganham espaço entre as mais negociadas da B3; veja quem avançou no ranking",
-        "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOa3pzQm1SYXJmZ3NEb01MT054UVo5eU9MN3F1TXFlUF8zQ0lpTC1kVS1uSXZtSnF2NXhGNGpnRXBId3Jja0ZteThtRkZteWhQV044MHVkY0JacUFtSmJlUUFSNHJUYzdzNjR3allRV2ZWRXZHelBJTFNNY1RZaHpZaXo2VDNTUmt4T1l2WmZEVzBYWTUzc3EzNXJEZlpoZm1BMWJuSmxXLXg0anRKOUZmUTY4REdNTHhkc2Z3VkVLQ0o0MDBwMVdjUVg5eWNGaEM1LTVJcXJ2bkFkd2fSAeABQVVfeXFMTVcxNi13UEc0ZWt5M1dNLWdza2lMZ3IxeDI3TGNBcEluenFObWVaakotTXZJVHJ1RHh4V3gxVldvcE1MQmFDQkxKMVM2YkZlMi1VSEFEOVhmNmZ6QTZpT1A2cWxKZ2NvT2ZOb3Q0SXhOX20xdnZmY1FLQm5HNFZkeFBaN0Y3MXp4b25qT0tVTl9UTnV3eGQ5MTluTk10QnJfMjA0TE84QnhTZUtfbWxRM1hITVVIcExOVGNpU3N6YUp3XzIwVjJma0lJOTNNaTREOGZzVHBKVVg2RlgwQXoxdGo?oc=5",
-        "source": "Estadão",
-        "date": "2026-09-28",
+        "title": "Mais brasileiros chegam à Bolsa, mas começam a investir com valores menores",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPMlliYjluVUIySWNXY3NZZTUtNjFzQU1OVUNHRm1NY0VaNFZGc2s2enhDcjFGRnNTMlFYa1pEU3VJTjRpYzBBZFZrWW80TDBiTHVrRTluck12VkdEaElrNHplSU5UZ3FDWWdPYXZhUnRSejBxdkk1azUyamZFT2Fza0RrZ2V5c2cxM3dyMkFzdFNUdUxac2ZCelg3SFpldlMtTTBTU254YlllcmZ4emdF?oc=5",
+        "source": "VEJA",
+        "date": "2026-10-05",
+        "tag": "Mercado",
+        "summary": "",
+        "origem": "coletor"
+      }
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Melhores corretoras de investimentos em 2026: top 10!",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQdHdlNmF2TjNfeUNnSHpCdWFUeGF6UG9qQTFhS25waUpoaGxzdnJkNHJpVDNMSldzVTVEZ3J0SXJCSk5VLUFHMnpKZ2tsNjNRMFo0am0zdGMwR1hacGUtajdVSTAzM2t4VkVac1VUS0tKbnE3U1NsTUlFYTVvdVk1VUNCY05IWkttaUZHVlpB?oc=5",
+        "source": "iDinheiro",
+        "date": "2026-10-01",
         "tag": "Mercado",
         "summary": "",
         "origem": "coletor"
