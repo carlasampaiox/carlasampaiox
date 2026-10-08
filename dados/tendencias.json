@@ -6,19 +6,15 @@
       "termo": "imposto de renda",
       "subindo": [
         {
-          "busca": "cnis",
-          "valor": "+60%"
-        },
-        {
           "busca": "quem paga imposto de renda",
-          "valor": "+60%"
-        },
-        {
-          "busca": "seu imposto",
           "valor": "+50%"
         },
         {
-          "busca": "pagar imposto de renda",
+          "busca": "isenção de imposto de renda",
+          "valor": "+40%"
+        },
+        {
+          "busca": "aliquota imposto de renda",
           "valor": "+40%"
         }
       ],
@@ -29,27 +25,27 @@
         },
         {
           "busca": "declaração de imposto de renda",
-          "valor": 74
+          "valor": 71
         },
         {
           "busca": "declaração imposto de renda",
-          "valor": 74
+          "valor": 70
         },
         {
-          "busca": "restituição imposto de renda",
-          "valor": 68
+          "busca": "imposto de renda restituição",
+          "valor": 65
         },
         {
           "busca": "restituição de imposto de renda",
-          "valor": 68
+          "valor": 64
         },
         {
           "busca": "meu imposto de renda",
-          "valor": 67
+          "valor": 63
         },
         {
           "busca": "declarar imposto de renda",
-          "valor": 50
+          "valor": 47
         },
         {
           "busca": "isenção de imposto de renda",
@@ -58,20 +54,16 @@
       ],
       "interesse": [
         {
-          "data": "2026-09-30T00:00:00+00:00",
-          "valor": 100
-        },
-        {
           "data": "2026-10-01T00:00:00+00:00",
-          "valor": 83
+          "valor": 80
         },
         {
           "data": "2026-10-02T00:00:00+00:00",
-          "valor": 70
+          "valor": 69
         },
         {
           "data": "2026-10-03T00:00:00+00:00",
-          "valor": 37
+          "valor": 38
         },
         {
           "data": "2026-10-04T00:00:00+00:00",
@@ -79,15 +71,19 @@
         },
         {
           "data": "2026-10-05T00:00:00+00:00",
-          "valor": 62
+          "valor": 63
         },
         {
           "data": "2026-10-06T00:00:00+00:00",
-          "valor": 76
+          "valor": 78
         },
         {
           "data": "2026-10-07T00:00:00+00:00",
-          "valor": 73
+          "valor": 72
+        },
+        {
+          "data": "2026-10-08T00:00:00+00:00",
+          "valor": 64
         }
       ]
     },
@@ -95,80 +91,72 @@
       "termo": "darf",
       "subindo": [
         {
-          "busca": "qual o dia para pagamento do darf previdenciário das empresas?",
+          "busca": "atualizar darf vencida",
           "valor": "Breakout"
         },
         {
-          "busca": "emitir darf online",
-          "valor": "+250%"
+          "busca": "qual o dia para pagamento do darf previdenciário das empresas?",
+          "valor": "+3,850%"
         },
         {
-          "busca": "darf 3208",
-          "valor": "+160%"
+          "busca": "emissão darf online",
+          "valor": "+190%"
         },
         {
-          "busca": "codigo darf 1082",
-          "valor": "+120%"
+          "busca": "gerar darf imposto de renda",
+          "valor": "+80%"
         },
         {
-          "busca": "emissao de darf",
-          "valor": "+120%"
+          "busca": "sicalc emitir darf",
+          "valor": "+80%"
         },
         {
-          "busca": "darf itr",
-          "valor": "+110%"
-        },
-        {
-          "busca": "darf mei 2026",
+          "busca": "darf bb",
           "valor": "+60%"
         },
         {
-          "busca": "atualizar darf vencida",
-          "valor": "+60%"
+          "busca": "sicalc web darf",
+          "valor": "+50%"
         }
       ],
       "top": [
         {
-          "busca": "pagar darf",
+          "busca": "emitir darf",
           "valor": 100
         },
         {
-          "busca": "emitir darf",
-          "valor": 95
-        },
-        {
-          "busca": "imposto de renda",
-          "valor": 81
+          "busca": "pagar darf",
+          "valor": 99
         },
         {
           "busca": "darf imposto de renda",
-          "valor": 79
+          "valor": 83
+        },
+        {
+          "busca": "codigo darf",
+          "valor": 78
         },
         {
           "busca": "pagamento darf",
           "valor": 69
         },
         {
-          "busca": "receita federal darf",
-          "valor": 61
-        },
-        {
           "busca": "ecac darf",
-          "valor": 59
+          "valor": 62
         },
         {
-          "busca": "darf mei",
+          "busca": "darf receita federal",
+          "valor": 60
+        },
+        {
+          "busca": "mei darf",
           "valor": 50
         }
       ],
       "interesse": [
         {
-          "data": "2026-09-30T00:00:00+00:00",
-          "valor": 100
-        },
-        {
           "data": "2026-10-01T00:00:00+00:00",
-          "valor": 68
+          "valor": 69
         },
         {
           "data": "2026-10-02T00:00:00+00:00",
@@ -176,7 +164,7 @@
         },
         {
           "data": "2026-10-03T00:00:00+00:00",
-          "valor": 14
+          "valor": 15
         },
         {
           "data": "2026-10-04T00:00:00+00:00",
@@ -188,11 +176,15 @@
         },
         {
           "data": "2026-10-06T00:00:00+00:00",
-          "valor": 52
+          "valor": 53
         },
         {
           "data": "2026-10-07T00:00:00+00:00",
-          "valor": 46
+          "valor": 50
+        },
+        {
+          "data": "2026-10-08T00:00:00+00:00",
+          "valor": 39
         }
       ]
     },
@@ -200,36 +192,36 @@
       "termo": "dividendos",
       "subindo": [
         {
-          "busca": "fundamentus",
-          "valor": "Breakout"
-        },
-        {
-          "busca": "ações baratas que pagam dividendos mensais",
-          "valor": "+1,750%"
-        },
-        {
-          "busca": "btlg11 dividendos mensais",
-          "valor": "+400%"
-        },
-        {
-          "busca": "quanto a petrobras paga de dividendos",
-          "valor": "+200%"
-        },
-        {
           "busca": "xpml11 dividendos mensais",
-          "valor": "+170%"
-        },
-        {
-          "busca": "snag11",
-          "valor": "+160%"
+          "valor": "+140%"
         },
         {
           "busca": "romi3 dividendos",
           "valor": "+130%"
         },
         {
-          "busca": "kncr11 dividendos mensais",
-          "valor": "+110%"
+          "busca": "csna3",
+          "valor": "+120%"
+        },
+        {
+          "busca": "mxrf11 dividendos mensais",
+          "valor": "+80%"
+        },
+        {
+          "busca": "fundos imobiliários que pagam dividendos mensais",
+          "valor": "+80%"
+        },
+        {
+          "busca": "o que são dividendos",
+          "valor": "+60%"
+        },
+        {
+          "busca": "o que e dividendos",
+          "valor": "+50%"
+        },
+        {
+          "busca": "meus dividendos",
+          "valor": "+50%"
         }
       ],
       "top": [
@@ -239,7 +231,7 @@
         },
         {
           "busca": "o que é dividendos",
-          "valor": 34
+          "valor": 35
         },
         {
           "busca": "o que e dividendos",
@@ -251,29 +243,25 @@
         },
         {
           "busca": "mxrf11",
-          "valor": 30
+          "valor": 29
         },
         {
-          "busca": "petrobras dividendos",
-          "valor": 27
-        },
-        {
-          "busca": "dividendos bbas3",
-          "valor": 25
+          "busca": "dividendos petrobras",
+          "valor": 28
         },
         {
           "busca": "bbas3",
+          "valor": 26
+        },
+        {
+          "busca": "dividendos bbas3",
           "valor": 25
         }
       ],
       "interesse": [
         {
-          "data": "2026-09-30T00:00:00+00:00",
-          "valor": 78
-        },
-        {
           "data": "2026-10-01T00:00:00+00:00",
-          "valor": 76
+          "valor": 74
         },
         {
           "data": "2026-10-02T00:00:00+00:00",
@@ -281,30 +269,40 @@
         },
         {
           "data": "2026-10-03T00:00:00+00:00",
-          "valor": 40
+          "valor": 41
         },
         {
           "data": "2026-10-04T00:00:00+00:00",
-          "valor": 22
+          "valor": 23
         },
         {
           "data": "2026-10-05T00:00:00+00:00",
-          "valor": 60
+          "valor": 61
         },
         {
           "data": "2026-10-06T00:00:00+00:00",
-          "valor": 78
+          "valor": 79
         },
         {
           "data": "2026-10-07T00:00:00+00:00",
-          "valor": 82
+          "valor": 76
+        },
+        {
+          "data": "2026-10-08T00:00:00+00:00",
+          "valor": 72
         }
       ]
     }
   ],
-  "emAlta": [],
+  "emAlta": [
+    {
+      "assunto": "imposto",
+      "trafego": "200+",
+      "publicado": "2026-10-08 08:50:00-07:00"
+    }
+  ],
   "avisos": [
     "Google Trends (ir ações): Google rate-limited the Explore data request; stop and back off."
   ],
-  "geradoEm": "2026-10-07T16:22:53+00:00"
+  "geradoEm": "2026-10-08T16:25:08+00:00"
 }
