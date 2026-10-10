@@ -1,26 +1,7 @@
 {
-  "geradoEm": "2026-10-09T16:07:09+00:00",
+  "geradoEm": "2026-10-10T15:15:58+00:00",
   "fonte": "coletor (GitHub Actions)",
   "itens": [
-    {
-      "brandId": "mycapital",
-      "colecao": "compnews",
-      "arquivo": "e9870bf8e484b2e8.jpg",
-      "mediaType": "image",
-      "doc": {
-        "kind": "conteudo",
-        "competitorId": "bs2fj7391bo4wovt5nrw",
-        "competitorName": "Grana Capital",
-        "channel": "youtube",
-        "format": "Shorts",
-        "title": "Resolva o Imposto de Renda dos investimentos na bolsa em segundos |  Grana Capital",
-        "url": "https://www.youtube.com/watch?v=92RRoH6bZPc",
-        "date": "2026-09-09",
-        "signal": "254 visualizações, 10 curtidas",
-        "summary": "Shorts publicado em 09/09, com 254 visualizações, 10 curtidas.",
-        "origem": "coletor"
-      }
-    },
     {
       "brandId": "mycapital",
       "colecao": "compnews",
@@ -54,8 +35,27 @@
         "title": "Será que tem Imposto de Renda da bolsa acumulando juros e multa?",
         "url": "https://www.youtube.com/watch?v=LwfdYpSraks",
         "date": "2026-09-10",
-        "signal": "107 visualizações, 3 curtidas",
-        "summary": "Shorts publicado em 10/09, com 107 visualizações, 3 curtidas.",
+        "signal": "108 visualizações, 3 curtidas",
+        "summary": "Shorts publicado em 10/09, com 108 visualizações, 3 curtidas.",
+        "origem": "coletor"
+      }
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "compnews",
+      "arquivo": "90b03d44b8b7b9b4.jpg",
+      "mediaType": "image",
+      "doc": {
+        "kind": "conteudo",
+        "competitorId": "bs2fj7391bo4wovt5nrw",
+        "competitorName": "Grana Capital",
+        "channel": "youtube",
+        "format": "Shorts",
+        "title": "Você investe, o Grana cuida do IR. 😎",
+        "url": "https://www.youtube.com/watch?v=WurEiGR-heY",
+        "date": "2026-09-29",
+        "signal": "77 visualizações, 6 curtidas",
+        "summary": "Shorts publicado em 29/09, com 77 visualizações, 6 curtidas.",
         "origem": "coletor"
       }
     },
@@ -92,8 +92,8 @@
         "title": "IA de um lado, influencers do outro: qual o futuro do analista CNPI?",
         "url": "https://www.youtube.com/watch?v=-l4624f25ok",
         "date": "2026-10-05",
-        "signal": "55 visualizações, 0 curtidas",
-        "summary": "Vídeo publicado em 05/10, com 55 visualizações, 0 curtidas.",
+        "signal": "57 visualizações, 0 curtidas",
+        "summary": "Vídeo publicado em 05/10, com 57 visualizações, 0 curtidas.",
         "origem": "coletor"
       }
     },
@@ -121,6 +121,36 @@
         "title": "CDB ou LCI? Nova regra do Imposto de Renda pode mudar escolha de investidores de alta renda",
         "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOWEpDS2xLQ0Ywb1JSVDE1Y3NzWlQwUDhrNlB0bHpvNHk3QlN1T2xHaXVyMzljQXl6RFNLSVZEaVpsQVhkaERGU213ZmtIaWt5T0JrQWtVN0x3bWh1aU9kNmVNYzFOUGR1amZJRkJUZTJoNm5QbUV4OUdVckhQOGdhR01NZ081WDlGNzVHdg?oc=5",
         "source": "Times Brasil | CNBC",
+        "date": "2026-10-09",
+        "tag": "IR",
+        "summary": "",
+        "origem": "coletor"
+      }
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Renda Fixa: CDB, LCI, LCA, Tesouro e debêntures",
+        "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE5aYVJYSDkyRkMwS3dEc3JJTEdObWtNRWFXNHpETGNPSVlnNVJSODJkVGVsY05zLXQ1WWg3SDFPYW5sbFZleU9KeDN3?oc=5",
+        "source": "trademap.com.br",
+        "date": "2026-10-09",
+        "tag": "IR",
+        "summary": "",
+        "origem": "coletor"
+      }
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Renda fixa triplica e ganha espaço na carteira dos investidores mais ricos",
+        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNTXYyOGdMSnNOSXhJR2hWRUFNTG9yLXEwbFJuNkRRVm1SZEtMYXZ0Y3NKTG9GdnFrRmhBREpTbVVIVHRnSWVZRDlaUjYtbjJuU3VucEVPNUg4XzhhQ3NjLWRJeE9IVi10aEJ4WFdadnQ0V0JsNFFFdkFNZHVUSHdtM0FVSVRQWEEwUkU5YTdBVUlUbjgwV0hVTDJDNjc3N1BwZmlkRWFmMFlxRUJVdVJwLV8wRC3SAboBQVVfeXFMT0dBUmRvb29DaWNHeTlwX0RVa0xyektfQnVLZl9ERmtjeEpYZ1NLYlMtSmpXQTdud0pjTnVSYXVoZVZ4QWZ3a21nSXpFMTBXMHJrbm5RcWFyLTZ1bHRzTExwSUJhaXAxS25wNjFJQXZNSHA4WGdNbllkX2tZNUo4NWZuV2pRN2ppTmp2M2dUWGZzd3Jtd2VFUHpGaDd3Q0pzWkdHdXgyWTNuOWFva0NVMDMxR3JtRGxVOElB?oc=5",
+        "source": "Estadão",
         "date": "2026-10-09",
         "tag": "IR",
         "summary": "",
@@ -163,26 +193,11 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Vida global, carteira local: o paradoxo do investidor brasileiro",
-        "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQdk1jUmV6ejR4OW9od3drQThmZ1Q0Ry1NeGJORWo4UmtYTXp2WVRpdEpidkxGdkdqZVIzQ0U1UzBWXzlackVIUWFrT1JLc2VYRnZSNExLYTAyQjNwU1c3MVR4RmlQQmxaazAwakFLczhnVERMb0QwOGx1R2NIc0ZjSS1sQnFqT0ZyZURHZWZFVnQ0SEN2M0w4S2NpZ29vWE1OQzVDSnY4QWw2MGRHejhnenZTT18ySFhVZlBKdkN1dUFSWm8?oc=5",
-        "source": "CNN Brasil",
-        "date": "2026-10-08",
-        "tag": "IR",
-        "summary": "",
-        "origem": "coletor"
-      }
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Tesouro Reserva soma R$ 135 milhões em aplicações na Paraíba",
-        "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxONmVyWFo2UEdFZ1RwZDNsRURJYlQ0UDlwbmQ4eF9EZlhHSDF1dGVGZHdFOHBHM296REhqeEpPVWhOaE53aU1LNjBNaWJHaGVuNk9pVVk4aGRvVG8wRWwwU0UwMUhCMG5LREFuU21aZzl1WnZvUVRJSGwwX1d0UjBBdlNmUkJSaXphSVZGNTF6RUx4VjdKSmc?oc=5",
-        "source": "Paraíba Business",
-        "date": "2026-10-08",
-        "tag": "IR",
+        "title": "Ações no exterior: câmbio da compra e custo no IR",
+        "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxONG1OMzduTnNrc1NfS2t4SElKcjhtYXVsejJNd3lYcVJYNXlmSmtMeklJek9nY0FIbFEzTWF3a1FST0R0a0FsWUZlLVpqWjJDaU5GTG1IR19mZTRDcDU1c3oxbGhQQzJpSXJGNlhpc3hOeUJXYmU2OFA4aW5pQ0lDUVBxU2RILTI3SDR5T2E2cVNCUnlEc3c?oc=5",
+        "source": "quasa.io",
+        "date": "2026-10-09",
+        "tag": "Dividendos",
         "summary": "",
         "origem": "coletor"
       }
@@ -212,21 +227,6 @@
         "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNa2UxSHh6ZVdQcjBIT2tseWJBUGZFRXF5eEtQX19JMWV1cElZTkdZWUh2Tks5aE9JYnUyaTc1VDAtanJuSWhNZW5BWGVaWFVOdjJUQXNVbkNaRWdUbDZSOXVRMFFrLTJVbEEyVEFNTy1EZHZ1NmtnTUFSdFdWc3lzSnBuZFVMcDA4WC1RM2J3STFvZkRvNVlrTDJ1M3hBNG1xQU1BQlZWamYzd9IBrwFBVV95cUxPeWthMWdmWVUtUEhneWF2bDh5ZmMzQUZYSHdLbGRjc3JQNko2VG9KdnVpQzQ5N0pvUDJ4VEJCUFlZdWEwQy0ySjNwTS12cmp3RG5JTVUyUXRFWHRPU29oeUl0TFVoTGNaUUJvSlpJRTRtXzJ3WkpybmhiTmpXU3ZPMXdSUDAxdmExeWRFOTRFQWRnS28zMWV0R3FNam9kdUNUdE5aNGtDdTZLTFRaVy1V?oc=5",
         "source": "Fenafisco",
         "date": "2026-10-06",
-        "tag": "Dividendos",
-        "summary": "",
-        "origem": "coletor"
-      }
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "B3 (B3SA3), JHSF (JHSF3), Smart Fit (SMFT3) e mais ações pagam dividendos em outubro; confira agenda completa",
-        "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOQUxyWVRxMXZTcmxpUkctQWt1enQ5ak52T1BWMTJ3ZG0zR2UtRGItMjdUQ1pkUUdiZ25oS1oybklMSzVJLVZOUnFSNzNnTHZLbWJRSGoybnFVQnVTOU94eXRzS0R3Z0FpUk5paTNENHBaMnAtTUt5UzE5d3YtbHk0dXRZd21hb29RZENrenBaVlBIZjJvR2tFam1QVERBcEVNaFRnTGtMXzZIM2lMU0lPVjdxNl9sZkJhLTZteHQ4VWhhSUJsd01nY2ViN0ZoSHZQaFl5MUFUbThCcjBvbktCVTZiMDJqVnR3T3YtZzJDaG1wVlhu?oc=5",
-        "source": "Empiricus",
-        "date": "2026-10-04",
         "tag": "Dividendos",
         "summary": "",
         "origem": "coletor"
@@ -283,10 +283,10 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Projeto Cartas 2026 incentiva autorregularização de declarações retidas em malha fiscal",
-        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNZ0ZUN2tMM0laNld4Nlp5dGpvMElYaTFQckVpLWREb1YxU0dPc0xCaDRjY0RnX2F3T2VYRTFaYWZTc2cydGZ3MXNJcC1IU3c5N3dKZXliZVRwNnZLVWI0VTJqSEZmYWJ3ZDNEQ0R2RVNtaWdRUGJ1TWktNEZLc1pjbFk3WlR4RW1MR05UbHRDWU40ampBV0J0TU5INzRSMHR0dDhoZ2ctY0Rmd0NwakJhTU52dkZrVnY2SkkwXw?oc=5",
-        "source": "Sistema FENACON",
-        "date": "2026-10-07",
+        "title": "Receita Federal envia notificações para 498 mil contribuintes com declaração retida na malha fina",
+        "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQYnlwYVA3bWI4R19MYlg1YnN1S21KUFR1dHZGSVU2MmlidnRuZmNHMTBzd19oVE5WRW9HOWk0LWVyeGJGQkZqQm1abmN2SW1MMTVhYjlJTkltcVpRRmRZU1VJNkdfeU9XRk5ZY011WWgzSjE3d2J4RXhueUNZU1l3Z3FCYXpKaExCM3JFamI5Z1YxZ1FCSk1fNVNhb00yclUxZmNHUWJjWHFHc0VSTWtQUWRqMXhnOWlOQzJabXc5NV93eGc4TGtfeHpUQmQ1encwbFY0YW9rb0RyX1JqYXB6RkpTNA?oc=5",
+        "source": "Blog do Paulo Pereira",
+        "date": "2026-10-10",
         "tag": "Declaração",
         "summary": "",
         "origem": "coletor"
@@ -298,9 +298,9 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Receita Federal envia cartas a quase 500 mil contribuintes na malha fina do IR 2026",
-        "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNR0pXdXc3QWU5OUhVTVJkQlpIdkU3YUxDbW5GcVN4QUdzOWV2Rnk1ZXlOTTZWTkZkX1UzNXNjcGVKZmpmODFEak1nZ2VPLVVOb2xudTkyVUxCZTQyLXBYVnRxRzlhUWQ3a213dTBUOUJST3ZjSmpKd1I3Z0QwRTIxYUw0ZFJudXcxT0dwQko2aDJJS2tvMTE2ZjVfU1Bma2ZLNVZ0bW5jUGZlT1hDeXJWY2YyOXRmcV9VMmZ4bk9BdFlyZkdXZmtFa2pGd1FRN3FlRXo1WmtlRQ?oc=5",
-        "source": "Hojemais.com.br",
+        "title": "Projeto Cartas 2026 incentiva autorregularização de declarações retidas em malha fiscal",
+        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNZ0ZUN2tMM0laNld4Nlp5dGpvMElYaTFQckVpLWREb1YxU0dPc0xCaDRjY0RnX2F3T2VYRTFaYWZTc2cydGZ3MXNJcC1IU3c5N3dKZXliZVRwNnZLVWI0VTJqSEZmYWJ3ZDNEQ0R2RVNtaWdRUGJ1TWktNEZLc1pjbFk3WlR4RW1MR05UbHRDWU40ampBV0J0TU5INzRSMHR0dDhoZ2ctY0Rmd0NwakJhTU52dkZrVnY2SkkwXw?oc=5",
+        "source": "Sistema FENACON",
         "date": "2026-10-07",
         "tag": "Declaração",
         "summary": "",
@@ -328,70 +328,10 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Receita Federal anuncia regras do IR 2026 na segunda-feira (16)",
-        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQU0lfSW1KdTgtOHlxNXVELXNnR2xRZVZGV0h1bkM5emsyYWxOa21OWGRrZlFyOC0yT3gxek1qRF9OS3NBdF91cmNVVzI1LXIwRVFQQjhrVFNoU2FEUWdNNjUwU2o0SEtPWXZiU1JydGp2dU01OWl0Rm05aFVlQmZFaGRpVFhnN2ZtaDFGdHNKVmVPZFN2NXRPd183UGV6cnpxeEE?oc=5",
-        "source": "CNN Brasil",
-        "date": "2026-10-03",
-        "tag": "Declaração",
-        "summary": "",
-        "origem": "coletor"
-      }
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Alíquotas do Imposto de Renda 2026: nova tabela e cálculos",
-        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1GSUl0VzJRUGI2ZTBpR2wyQ09FN3JYTWowYnFDUHk1SVpoNzM2dUk5cUM0alBwUlAybTV4NUxLN1hZX0FCa0MxaUFIc0dIX1NCVmc?oc=5",
-        "source": "Serasa",
-        "date": "2026-10-07",
-        "tag": "Declaração",
-        "summary": "",
-        "origem": "coletor"
-      }
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "B3 inicia negociação de ações tokenizadas em janeiro, com mesma liquidez do mercado tradicional",
-        "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPZ0hNT2pmYWZ6aVM1YjZnR3VIcFgtSVVESTd3dTlRcVg2RGRFN3RTdjk5ZE1UbERxMkpVR3REdDFhd2tldGcybmxMaW0xZVp0VXRybWxfTEo2S1h3TWJPclhCaDhGN2JDZUQzR0w3cUhmcEhKb0JwenlsdTV2LXdyNTNWcXY1aHo0c0tQZHU5UDRsbndvdUd0dU9QNmRhOWNId3lSM2g3enFpOXdDdXk0M0h3SnNnNjhpRDVQWjdrWklFcndYcmkzLUxUQUEzUU9CN1F3?oc=5",
-        "source": "InvesTalk",
-        "date": "2026-10-08",
-        "tag": "Mercado",
-        "summary": "",
-        "origem": "coletor"
-      }
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Safra troca BTG por B3 e inclui Rede D'Or na carteira recomendada de outubro em meio à volatilidade",
-        "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5nV2NIOVRfcVRDejR5ajNrNlJ1dk1Yc19XOER2NHc0M2VHSmRFdDUxaFNnUHp6N191OHNRSE5wQVdOZTMzdmxHSXplV21QZG9nRWpzNzhRV2xWTy05ZWt0cnVNbTYwOWVKS3A2R3A4U3VaS1VnNFUxdERR?oc=5",
-        "source": "BlockTrends",
-        "date": "2026-10-03",
-        "tag": "Mercado",
-        "summary": "",
-        "origem": "coletor"
-      }
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Comprar ou realizar? O que fazer na Bolsa e na renda fixa após o rali do 1º turno",
-        "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQTTRNVDg3bXZrMVozTjJibXhMMWt3bzlMSTBRWWFQeEVUQ0c3T1NnUXBGM1l6aDRlblNab3oyOWw1dzdtY2xMbjdwbVhjMlB3bnk3X1FlTmotWWFzMmY1ZUpET21xRlVlclhsOVluVXRkdUZQalZnWndSblBlUHY0U2xuSUhUQ01UWFU0ZHd3c3FfampxVXBpQ2VacnM0QTY0VlM0bGJSQVpUU2VUY3J5MGVMQ0lsZzYwQUJJNFkzTk9IZ9IBxwFBVV95cUxPSFI3YVBYUGRlNkRyZzlsSlJ6bVhPTXhlcG5DTXpSMFM0Z3NTX3NEaVVLTXI0NC1VdkxmcVJuX3lwVWhfdmg3T2dUaGhTUHFUZzJMcUxFN2h1Zmx0bzVDQlp2anZXQjZOZmxOZzJsSWNjZ3NzXzNZWGlyS1piaTZhVjhyUzc2VUhPcklFSFBJT0dHRTV5MzhrcGlFbXZWOGg2WFIwWVhCNmhvNHZ0aGxJNW43ZFdXeTZoYndzOXI5QU8zdkdnVW9v?oc=5",
-        "source": "InfoMoney",
-        "date": "2026-10-06",
+        "title": "Crianças e adolescentes já acumulam R$ 3,5 bilhões em investimento na bolsa brasileira",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5YVG9MdVR2ZXdacG1DWVhMem9OdFFpb3ZXMDlyNkw2X2tHV3lkYm1hVTQ1dUxIUE5YaWNmRnZNSmZ4OTRPeV9rUkExT1d1cXNXYU1hV0h6clhCUndrSnBFVkxyZExVSTJGWG1VVU1sYkQ?oc=5",
+        "source": "BitNotícias",
+        "date": "2026-10-09",
         "tag": "Mercado",
         "summary": "",
         "origem": "coletor"
@@ -406,21 +346,6 @@
         "title": "Mais brasileiros chegam à Bolsa, mas começam a investir com valores menores",
         "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPMlliYjluVUIySWNXY3NZZTUtNjFzQU1OVUNHRm1NY0VaNFZGc2s2enhDcjFGRnNTMlFYa1pEU3VJTjRpYzBBZFZrWW80TDBiTHVrRTluck12VkdEaElrNHplSU5UZ3FDWWdPYXZhUnRSejBxdkk1azUyamZFT2Fza0RrZ2V5c2cxM3dyMkFzdFNUdUxac2ZCelg3SFpldlMtTTBTU254YlllcmZ4emdF?oc=5",
         "source": "VEJA",
-        "date": "2026-10-05",
-        "tag": "Mercado",
-        "summary": "",
-        "origem": "coletor"
-      }
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Tudo sobre dividendos: como investir e calendário de pagamentos",
-        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5JajQ1aGp6bHBvSUU2S2pKbEhLNVkyQWFLTDRyQ0l4OUx5cjZHZVNuQjdqTy1jYUJIb3MxYllNY1dKaG9EVHlOVS04M284NzJ6Q2pEY2FKcmpySmF3TGRKU0tGTm0tNG9fWGNUN040Zl8?oc=5",
-        "source": "Safra",
         "date": "2026-10-05",
         "tag": "Mercado",
         "summary": "",
@@ -450,7 +375,7 @@
     "1967862ac0d28f1e.jpg",
     "7aad3ddf071282c9.jpg",
     "7c03ef0bf0ebf597.jpg",
-    "d0d1bc40b09922b2.jpg",
-    "e9870bf8e484b2e8.jpg"
+    "90b03d44b8b7b9b4.jpg",
+    "d0d1bc40b09922b2.jpg"
   ]
 }
