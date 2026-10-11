@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-10T15:15:58+00:00",
+  "geradoEm": "2026-10-11T15:35:05+00:00",
   "fonte": "coletor (GitHub Actions)",
   "itens": [
     {
@@ -24,25 +24,6 @@
     {
       "brandId": "mycapital",
       "colecao": "compnews",
-      "arquivo": "7aad3ddf071282c9.jpg",
-      "mediaType": "image",
-      "doc": {
-        "kind": "conteudo",
-        "competitorId": "bs2fj7391bo4wovt5nrw",
-        "competitorName": "Grana Capital",
-        "channel": "youtube",
-        "format": "Shorts",
-        "title": "Será que tem Imposto de Renda da bolsa acumulando juros e multa?",
-        "url": "https://www.youtube.com/watch?v=LwfdYpSraks",
-        "date": "2026-09-10",
-        "signal": "108 visualizações, 3 curtidas",
-        "summary": "Shorts publicado em 10/09, com 108 visualizações, 3 curtidas.",
-        "origem": "coletor"
-      }
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "compnews",
       "arquivo": "90b03d44b8b7b9b4.jpg",
       "mediaType": "image",
       "doc": {
@@ -54,8 +35,8 @@
         "title": "Você investe, o Grana cuida do IR. 😎",
         "url": "https://www.youtube.com/watch?v=WurEiGR-heY",
         "date": "2026-09-29",
-        "signal": "77 visualizações, 6 curtidas",
-        "summary": "Shorts publicado em 29/09, com 77 visualizações, 6 curtidas.",
+        "signal": "78 visualizações, 6 curtidas",
+        "summary": "Shorts publicado em 29/09, com 78 visualizações, 6 curtidas.",
         "origem": "coletor"
       }
     },
@@ -73,7 +54,7 @@
         "title": "Open Investment faz 3 anos: uso cresce, mas mercado ainda busca caso de sucesso",
         "url": "https://www.youtube.com/watch?v=X4cACTHWoF4",
         "date": "2026-09-14",
-        "signal": "149 visualizações, 1 curtida · 2,7x a mediana do canal",
+        "signal": "149 visualizações, 1 curtida · 2,8x a mediana do canal",
         "summary": "Vídeo publicado em 14/09, com 149 visualizações, 1 curtida.",
         "origem": "coletor"
       }
@@ -92,23 +73,8 @@
         "title": "IA de um lado, influencers do outro: qual o futuro do analista CNPI?",
         "url": "https://www.youtube.com/watch?v=-l4624f25ok",
         "date": "2026-10-05",
-        "signal": "57 visualizações, 0 curtidas",
-        "summary": "Vídeo publicado em 05/10, com 57 visualizações, 0 curtidas.",
-        "origem": "coletor"
-      }
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Como declarar investimentos no Imposto de Renda",
-        "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQWlh2V1VqU2JLSUJvQ1RvT0Z2X0N5NU5xRTJ1SWd5by1QRlpsLXZZUHpVUzEzbEsyRWo0bjFyWUZMTHZrelNDZ092S2l3NzdOeHFyQjhwN0w4TzRsb3JxTW1kb1ZCTnVENVNGVzRTMWtBSEVVOEx3T3FJaUhDWlg4R3lvVmN4MWpHLVpycmlPODNqbG5zX3dpQzJFRQ?oc=5",
-        "source": "SpaceMoney",
-        "date": "2026-10-04",
-        "tag": "IR",
-        "summary": "",
+        "signal": "35 visualizações, 0 curtidas",
+        "summary": "Vídeo publicado em 05/10, com 35 visualizações, 0 curtidas.",
         "origem": "coletor"
       }
     },
@@ -148,6 +114,36 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
+        "title": "The Economist: Como o avanço da IA ​​pode piorar a crise fiscal e abalar o sistema tributário",
+        "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQeE9Sa0JsRXJSYkRseThQdFZXbVpXMmxMT20tM1FIQkJPMzBoeHdzREhITHFHT0NUNnpJY01acjBmY01uWVhEYWdFeW55S1hrLWcwTjRjQTl4RW9WaFB1ZGlVeDl3WW82VTlWVFA5bjNlUWY2T3E2VkU5WUQyVFZaV2RmSGZjbmtVY3R0SGh4QW5LalNHbE9rYVRsdUhzZ1JuSHRNZmJGYlJjRVdXb0dDR1R0T0JEbFJVN0dqYThqS2NxeXJXUElwTkZfYUZmQdIB0wFBVV95cUxOVlFUd0JHMFBxNFM1LWxtUngzcHZka1laN2gzZ3AxVmkteXlBTGtyYllIWjlxYjVLLUZLV2xfOGdYTkc1bGR3Rjh1NVAzVl9vMTQxVmhoNWpxOHZpUksxdUtzQ2d2VTNfVXhNSVI4My04UmNQSDk3WWphVVdmeVo5WFA5MXljbE1XTERHQjh1Y1lwQWZ3YWJ0MkdNVEltQXlYVlZFRzRXYzlWNS1VRkowWTBEd2YwSGxMc2UwQ01XZlRuck56YndOdzh0UUdiZ2pIVTVn?oc=5",
+        "source": "Estadão",
+        "date": "2026-10-09",
+        "tag": "IR",
+        "summary": "",
+        "origem": "coletor"
+      }
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Tendências 09/10/2026 | das principais ações da Bolsa",
+        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPSHZpLTd4ZVJXLUUxR2I4VXZwNUNFa0E5R0JRbG5sMG9ZMFp4NGZwY1Zkd2M1WXU3RFhUVlJRVTFhc1F4NGMydFJpLVUtM3FkNEtneGh0Q3lLTDRBTEVvT0dwN2M3ZEhjWEI5QzRKajE5MDlVVXczVUROdG9ORmpMRWU3eGdIdVNUTGQxLVNFaXk4eXhsRV9oUjU2dWpreU93b2FxeHZJNEQxaXlF?oc=5",
+        "source": "XP Investimentos",
+        "date": "2026-10-09",
+        "tag": "IR",
+        "summary": "",
+        "origem": "coletor"
+      }
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
         "title": "Renda fixa triplica e ganha espaço na carteira dos investidores mais ricos",
         "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNTXYyOGdMSnNOSXhJR2hWRUFNTG9yLXEwbFJuNkRRVm1SZEtMYXZ0Y3NKTG9GdnFrRmhBREpTbVVIVHRnSWVZRDlaUjYtbjJuU3VucEVPNUg4XzhhQ3NjLWRJeE9IVi10aEJ4WFdadnQ0V0JsNFFFdkFNZHVUSHdtM0FVSVRQWEEwUkU5YTdBVUlUbjgwV0hVTDJDNjc3N1BwZmlkRWFmMFlxRUJVdVJwLV8wRC3SAboBQVVfeXFMT0dBUmRvb29DaWNHeTlwX0RVa0xyektfQnVLZl9ERmtjeEpYZ1NLYlMtSmpXQTdud0pjTnVSYXVoZVZ4QWZ3a21nSXpFMTBXMHJrbm5RcWFyLTZ1bHRzTExwSUJhaXAxS25wNjFJQXZNSHA4WGdNbllkX2tZNUo4NWZuV2pRN2ppTmp2M2dUWGZzd3Jtd2VFUHpGaDd3Q0pzWkdHdXgyWTNuOWFva0NVMDMxR3JtRGxVOElB?oc=5",
         "source": "Estadão",
@@ -167,21 +163,6 @@
         "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOSnFCQ2JuMkxDU1d1allSYlRvRXRsd002VHlwSXZmS3JUYmJROHpWTkZsMmkxSHp6RzIwS3ZBd2trbWwxM1pYYkxNNnRtUk5lWG5KX1Y3VklEdFV5LUR1cWcxMTJGV0RrdTlyNUd0elJBdmlRdlNabFgzLW5wcmdQTDcxbTlTY0plVlA4Y096VlVKYlFnUFVrMlF6M3l4WFQ3YkIyV1Nn?oc=5",
         "source": "A Revista",
         "date": "2026-10-05",
-        "tag": "IR",
-        "summary": "",
-        "origem": "coletor"
-      }
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Até IPCA+ 10,68% sem IR: Esse investimento ainda paga juros reais altos, e não se trata de nenhum título público",
-        "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxNLUxHd2RHR2tNZkVkNzNQSnVOQ05jTElGUW5KRmJVT3pjbHhPdmRVZjdGQTdITldBUE1sdkpwY0N6Zm8tTlpsdDhneVpoanE5ajN6M3lyclFJZlJqSkhxSWhFV242SWV6REd4ZFZFOEhNR3VxeUNlNW5KbnlBYU5iVFRzRmJQM05NMEMxNzA2UjhGUWk1V19KYTlSdjUwZy1kRzkyZ04wa0p3XzdfUEdNQXBfSDdLaDRmMzF2QjdtOXdxTF9XWklsTEZoZGNsVElYam9mUXBFQWdyZlZfT20zU014aUJMeVFrN0ZRZHNDeGFTWUFqSDJ5d0dudmtfUQ?oc=5",
-        "source": "Seu Dinheiro",
-        "date": "2026-10-03",
         "tag": "IR",
         "summary": "",
         "origem": "coletor"
@@ -328,9 +309,24 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Crianças e adolescentes já acumulam R$ 3,5 bilhões em investimento na bolsa brasileira",
-        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5YVG9MdVR2ZXdacG1DWVhMem9OdFFpb3ZXMDlyNkw2X2tHV3lkYm1hVTQ1dUxIUE5YaWNmRnZNSmZ4OTRPeV9rUkExT1d1cXNXYU1hV0h6clhCUndrSnBFVkxyZExVSTJGWG1VVU1sYkQ?oc=5",
-        "source": "BitNotícias",
+        "title": "Investimento de menores na bolsa atinge R$ 3,5 bilhões com avanço de 58% em quatro anos, aponta B3",
+        "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQUXZoamE3LU56ZFUwbDFpeFlfd3piYzBsUGY2cXI4Vy1GbTBXeGFKcmNQTmNRcmtBUllvTGRYUTBrODZGcDBjempWQUUxX3l0dkxsSEFVMnNmQm9RMWFVQnNOSXRGeS1ISEZpSzFWZ29nQUVUVGp0WHNRR1RzZlpwdzJKOV9sM3NBOG9mT2k4ZGtFa1NGQVpjckZQNVJrc3JkU3JIeTd6RlZxSXdyT29ZMUF2WnUxSnVsTVEwN3Y2c3ZxZFE?oc=5",
+        "source": "Brasil Inovador",
+        "date": "2026-10-10",
+        "tag": "Mercado",
+        "summary": "",
+        "origem": "coletor"
+      }
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "B3 mostra avanço de investidores menores de idade na bolsa brasileira",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNWnlqYWE4Z19zdENENlJsZGF3T094TGt5NjIwY0RueENCdE5FWXlnNGdMLWoxekx0T2Q4eXhjc2JPVURWSUhvVWJLM1N4TW1ObEJYMDJ2TUVBTjB4eW93d2x5WVB4d000VDVsLTRuc2l4UTJZaXVfS2lub0Jscl9jbGo4RE9Cc1FZbllwWmpUYWNnWTdiRElyNnhQSkw3MGdsOEE?oc=5",
+        "source": "Traders Union",
         "date": "2026-10-09",
         "tag": "Mercado",
         "summary": "",
@@ -351,21 +347,6 @@
         "summary": "",
         "origem": "coletor"
       }
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Ibovespa: ações, ETFs e fundos têm regras próprias",
-        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFA4OVEyYVhzcHhpRjdINjJLNVpTRFM1dmNielBqV1RxMWd6d2ZycDBrdndsVjRybmY1ay1sLUZRdXFxM2tGaEtTZ2tXN2Y1Z0NQMFVkektuNkxVeUNLMU1EOWJhanRNYjhJeldYei1PRGs2MC0wcDhkUE1sWQ?oc=5",
-        "source": "SpaceMoney",
-        "date": "2026-10-05",
-        "tag": "Mercado",
-        "summary": "",
-        "origem": "coletor"
-      }
     }
   ],
   "avisos": [
@@ -373,7 +354,6 @@
   ],
   "arquivos": [
     "1967862ac0d28f1e.jpg",
-    "7aad3ddf071282c9.jpg",
     "7c03ef0bf0ebf597.jpg",
     "90b03d44b8b7b9b4.jpg",
     "d0d1bc40b09922b2.jpg"
