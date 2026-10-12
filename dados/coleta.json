@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-11T15:35:05+00:00",
+  "geradoEm": "2026-10-12T18:55:44+00:00",
   "fonte": "coletor (GitHub Actions)",
   "itens": [
     {
@@ -35,8 +35,8 @@
         "title": "Você investe, o Grana cuida do IR. 😎",
         "url": "https://www.youtube.com/watch?v=WurEiGR-heY",
         "date": "2026-09-29",
-        "signal": "78 visualizações, 6 curtidas",
-        "summary": "Shorts publicado em 29/09, com 78 visualizações, 6 curtidas.",
+        "signal": "79 visualizações, 6 curtidas",
+        "summary": "Shorts publicado em 29/09, com 79 visualizações, 6 curtidas.",
         "origem": "coletor"
       }
     },
@@ -54,8 +54,8 @@
         "title": "Open Investment faz 3 anos: uso cresce, mas mercado ainda busca caso de sucesso",
         "url": "https://www.youtube.com/watch?v=X4cACTHWoF4",
         "date": "2026-09-14",
-        "signal": "149 visualizações, 1 curtida · 2,8x a mediana do canal",
-        "summary": "Vídeo publicado em 14/09, com 149 visualizações, 1 curtida.",
+        "signal": "150 visualizações, 1 curtida · 2,8x a mediana do canal",
+        "summary": "Vídeo publicado em 14/09, com 150 visualizações, 1 curtida.",
         "origem": "coletor"
       }
     },
@@ -73,8 +73,8 @@
         "title": "IA de um lado, influencers do outro: qual o futuro do analista CNPI?",
         "url": "https://www.youtube.com/watch?v=-l4624f25ok",
         "date": "2026-10-05",
-        "signal": "35 visualizações, 0 curtidas",
-        "summary": "Vídeo publicado em 05/10, com 35 visualizações, 0 curtidas.",
+        "signal": "38 visualizações, 0 curtidas",
+        "summary": "Vídeo publicado em 05/10, com 38 visualizações, 0 curtidas.",
         "origem": "coletor"
       }
     },
@@ -84,9 +84,24 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "CDB ou LCI? Nova regra do Imposto de Renda pode mudar escolha de investidores de alta renda",
-        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOWEpDS2xLQ0Ywb1JSVDE1Y3NzWlQwUDhrNlB0bHpvNHk3QlN1T2xHaXVyMzljQXl6RFNLSVZEaVpsQVhkaERGU213ZmtIaWt5T0JrQWtVN0x3bWh1aU9kNmVNYzFOUGR1amZJRkJUZTJoNm5QbUV4OUdVckhQOGdhR01NZ081WDlGNzVHdg?oc=5",
-        "source": "Times Brasil | CNBC",
+        "title": "Imposto de Renda 2022: Prazo para entrega da declaração termina amanhã",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9ZeDNnVy1mWFhKQThoUUVOVGUtNlNJZmJlYVF5TlNha3hSaDVxUGI4dEFjNUQwc2IxYnJvRGs1SFN4ak5tX1hHODh4RHZqLXczWGxmMUJxMGc?oc=5",
+        "source": "trademap.com.br",
+        "date": "2026-10-09",
+        "tag": "IR",
+        "summary": "",
+        "origem": "coletor"
+      }
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Declaração de apostas no Imposto de Renda 2026: Guia completo",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE12eGI5dEIyYVBjdHBuMW5LdmtBWV9uNkZ0SG5mRFJWajN1Yzdtb0NhUUx4djVRa21aV1psQW96emRSM0pXM2JodjhnTkVyMmtUTGlQTHZPUk9yUUY4NlBZR1EyUQ?oc=5",
+        "source": "Olhar Digital",
         "date": "2026-10-09",
         "tag": "IR",
         "summary": "",
@@ -114,25 +129,10 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "The Economist: Como o avanço da IA ​​pode piorar a crise fiscal e abalar o sistema tributário",
-        "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQeE9Sa0JsRXJSYkRseThQdFZXbVpXMmxMT20tM1FIQkJPMzBoeHdzREhITHFHT0NUNnpJY01acjBmY01uWVhEYWdFeW55S1hrLWcwTjRjQTl4RW9WaFB1ZGlVeDl3WW82VTlWVFA5bjNlUWY2T3E2VkU5WUQyVFZaV2RmSGZjbmtVY3R0SGh4QW5LalNHbE9rYVRsdUhzZ1JuSHRNZmJGYlJjRVdXb0dDR1R0T0JEbFJVN0dqYThqS2NxeXJXUElwTkZfYUZmQdIB0wFBVV95cUxOVlFUd0JHMFBxNFM1LWxtUngzcHZka1laN2gzZ3AxVmkteXlBTGtyYllIWjlxYjVLLUZLV2xfOGdYTkc1bGR3Rjh1NVAzVl9vMTQxVmhoNWpxOHZpUksxdUtzQ2d2VTNfVXhNSVI4My04UmNQSDk3WWphVVdmeVo5WFA5MXljbE1XTERHQjh1Y1lwQWZ3YWJ0MkdNVEltQXlYVlZFRzRXYzlWNS1VRkowWTBEd2YwSGxMc2UwQ01XZlRuck56YndOdzh0UUdiZ2pIVTVn?oc=5",
-        "source": "Estadão",
-        "date": "2026-10-09",
-        "tag": "IR",
-        "summary": "",
-        "origem": "coletor"
-      }
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Tendências 09/10/2026 | das principais ações da Bolsa",
-        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPSHZpLTd4ZVJXLUUxR2I4VXZwNUNFa0E5R0JRbG5sMG9ZMFp4NGZwY1Zkd2M1WXU3RFhUVlJRVTFhc1F4NGMydFJpLVUtM3FkNEtneGh0Q3lLTDRBTEVvT0dwN2M3ZEhjWEI5QzRKajE5MDlVVXczVUROdG9ORmpMRWU3eGdIdVNUTGQxLVNFaXk4eXhsRV9oUjU2dWpreU93b2FxeHZJNEQxaXlF?oc=5",
-        "source": "XP Investimentos",
-        "date": "2026-10-09",
+        "title": "Imposto de Renda: Receita envia cartas a 498 mil que estão na malha fina até o dia 20",
+        "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPaGhSN3lqdk9FeDB4R2ozcjRia2toQUluanFZV3E2MTBJVU9IMmE0eHc0bkZab2J3NVA2MXdGTGx1c1BhcXh0blJVREt1bWw2QnZHalZUdldzMXFwLU5oZEY1dkdwdldKVEt3ZHZOdlB0QVRBVjlfOEo1WTVELUV1Rl96RDVzZ1h3ckNPYW5ZanRUamVUczV6ZTAtaGt2eWlGXzY4TFo2Ri1yaEZUa1hIM0w3WVJ3VmRyTk8yYy1wdGZZYzdOM0tucNIBzgFBVV95cUxQWDVfZ1U5bWhoUjNTMHN4T240elRibC1TN2RnUW1LUWZRWlRnQjRwbU0tdVdZOFRVdDdrZjI3YzNZYS1UVDg1MXlFQWVEdloxdjFJMUFiN2J5d1hiT0FJSkI4UFdCTk1XY2QwamhfeHNqRUd0RkFXc2gwTThzLV9ISGJhNnJ0Q3R2OTQ0akt3MjVMcWRPeGktOGtwejJtd3JtUERKSXhkaFZpeFpzRFpraVd4Z1hxQm9CY0syVE01SUZzQWs1eFBxbWlPWkp1Zw?oc=5",
+        "source": "Investidor10",
+        "date": "2026-10-08",
         "tag": "IR",
         "summary": "",
         "origem": "coletor"
@@ -159,10 +159,10 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "De BBAS3 a CXSE3: 10 ações que podem movimentar os dividendos em novembro",
-        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOSnFCQ2JuMkxDU1d1allSYlRvRXRsd002VHlwSXZmS3JUYmJROHpWTkZsMmkxSHp6RzIwS3ZBd2trbWwxM1pYYkxNNnRtUk5lWG5KX1Y3VklEdFV5LUR1cWcxMTJGV0RrdTlyNUd0elJBdmlRdlNabFgzLW5wcmdQTDcxbTlTY0plVlA4Y096VlVKYlFnUFVrMlF6M3l4WFQ3YkIyV1Nn?oc=5",
-        "source": "A Revista",
-        "date": "2026-10-05",
+        "title": "Imposto de Renda em 2027: ainda dá tempo de agir para pagar menos",
+        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNSnpfNFk4YVVJeXhQVy1YcndPMzVkOXhvZlpSQVBUSTlJdWVkTjRPem5INkszZXUtQmg1NWxrV1JqOTEyQVZsZm81ejFMTnZ5LUVlQ2RkTTBIQ0pOcThfSmIwOFZwQlBzWGM4djFMM2QzRFlybklfcjlfUU5MWkkzZG5pWjB2aDVNOEJmVWdqOFJ4S3ZxcEhGdkMwVUJxSHpfX2VWVFpCQ3RLcXFfNUFkNmZMM05sZzBv0gG-AUFVX3lxTE82TnNYQW9qMWlaZmpHSjRUV3BDZ0RtUFhFcXJYX3BtanJJb3Z4QTFybmZsVjdqT3Z4eWxYb3B0S3JST2Z5TVBnYU11c0kxWWRyazFRSnQya0d0d0lpWmpHbWhQOGlWdUowLS1GR2VtdHM2a1BWNnlOam1aejhCTW5QZGZyY3d2R1NKVGppVExJVnJqMzFtOFdlblpDUWdHQ2gyakZ1MlViUXNGdFlBQkJYX1NZSlBremZ5bVRReUE?oc=5",
+        "source": "Estadão",
+        "date": "2026-10-11",
         "tag": "IR",
         "summary": "",
         "origem": "coletor"
@@ -294,11 +294,26 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "498 mil contribuintes na malha fina do Imposto de Renda 2026 recebem carta da Receita Federal até 20 de outubro, e quem não corrigir pode pagar multa de 75%",
-        "url": "https://news.google.com/rss/articles/CBMinwJBVV95cUxOTnNwbHV1YjN5d2hlaGhCV21JNDlnTW1NZUY3TE9QOC1GRzAwWXFfeVhpX0tQUkZfd09sLVJ6Y2tMNjhmdmlaNFNXRWxmNVlWWjg5a3lNYmpFcUxhb3BveWFDb0ZNa1BHYmVQU3NrSmhqQzBxRnJ4Q25OUUMyeDNKMVJTeVRsWjJQT1VWRnRZVW1OcnZWeEdmX0NLSm5takN5dUFRTXU0WFNVeWluUXZka3Q2dlhZZVltV0ZLTGpPZGZmbTA3b3R3ZWxlLS12aWdwdXo4c1NSS2xZcFJWQUdPc3ExeXFJUFpOZDFWZk5sYm5uT2tYU1k1Wjk0TlQ0VENOQ0Z1UDlTYnpqQ29MZEpvdjR0T0ZHd0V5VjVfdUs0TQ?oc=5",
-        "source": "CPG Click Petróleo e Gás",
-        "date": "2026-10-07",
+        "title": "Alíquotas do Imposto de Renda 2026: nova tabela e cálculos",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1GSUl0VzJRUGI2ZTBpR2wyQ09FN3JYTWowYnFDUHk1SVpoNzM2dUk5cUM0alBwUlAybTV4NUxLN1hZX0FCa0MxaUFIc0dIX1NCVmc?oc=5",
+        "source": "Serasa",
+        "date": "2026-10-09",
         "tag": "Declaração",
+        "summary": "",
+        "origem": "coletor"
+      }
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Crianças e adolescentes têm R$ 3,5 bilhões investidos na Bolsa, aponta B3",
+        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPLUJ6dHd0STM1VFhyeWEtRmhfYlR1YmlZRkFZMGU1TG02ZUU1RU8xdUhHbGNhQjEzTTc4Y3NJb0t0aEZkRzExN1lZdEpwVzJDcGNVQ2ItNUdsZEgxSWkzdUwyaWlabjBrLVphWWlBZ0hmcTJOaEwxbTBnNHJMUVdkSFliZ1FmenQzRHYwVU8yRnJwWVF0RkhwLVU3c0F3R0E2dHFRZg?oc=5",
+        "source": "BPMoney",
+        "date": "2026-10-12",
+        "tag": "Mercado",
         "summary": "",
         "origem": "coletor"
       }
@@ -324,10 +339,10 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "B3 mostra avanço de investidores menores de idade na bolsa brasileira",
-        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNWnlqYWE4Z19zdENENlJsZGF3T094TGt5NjIwY0RueENCdE5FWXlnNGdMLWoxekx0T2Q4eXhjc2JPVURWSUhvVWJLM1N4TW1ObEJYMDJ2TUVBTjB4eW93d2x5WVB4d000VDVsLTRuc2l4UTJZaXVfS2lub0Jscl9jbGo4RE9Cc1FZbllwWmpUYWNnWTdiRElyNnhQSkw3MGdsOEE?oc=5",
-        "source": "Traders Union",
-        "date": "2026-10-09",
+        "title": "Dia das Crianças: pequenos investidores já têm R$ 3,5 bilhões na bolsa",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNdEcycURqSkZtVkV2SEFLYXQ3b0RkOERaNllkYmdqbm5aNjVlSXd3eDQ0Z1ZMaFJBT0NPWW1LbXpDeDk4d3c2U21XYWwyRURnZXVQTVMyM3hvQ2Z5cWVYem8zcl9ib1VlTXk5dkVadW5MS1Rqd29fTUw4LUNXTXNVU9IBhgFBVV95cUxOLUdrb0tqOTJxRVRfN3I4V2VPalFRMGliOWlHXzZjU1hiUlhKNlpDbWRNQmRodGVveDJISkkxZWdKcjJVN0JGaUhqYVJPc3VpRjdmUG5xeFJsNDJKNlRmc05CVDhmLWl2UmloSWJRczk0R2xrbjNLV2FYdkVoc0pKMHpSLUpoQQ?oc=5",
+        "source": "Suno - Investimentos Inteligentes",
+        "date": "2026-10-12",
         "tag": "Mercado",
         "summary": "",
         "origem": "coletor"
@@ -339,10 +354,10 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Mais brasileiros chegam à Bolsa, mas começam a investir com valores menores",
-        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPMlliYjluVUIySWNXY3NZZTUtNjFzQU1OVUNHRm1NY0VaNFZGc2s2enhDcjFGRnNTMlFYa1pEU3VJTjRpYzBBZFZrWW80TDBiTHVrRTluck12VkdEaElrNHplSU5UZ3FDWWdPYXZhUnRSejBxdkk1azUyamZFT2Fza0RrZ2V5c2cxM3dyMkFzdFNUdUxac2ZCelg3SFpldlMtTTBTU254YlllcmZ4emdF?oc=5",
-        "source": "VEJA",
-        "date": "2026-10-05",
+        "title": "Entrada de investidores pessoa física impulsiona resultado da B3 no 3º trimestre",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBVSnJTRHRCR2o2aE11dHpVSHQySUx3Qm1tamJkSzY3Z0Vtbl9EOEx4WXl1V211Tkl2UDVCcld5YmlBTW1Ra3JDWmdKNkZfQ0VwUENETW50S1c?oc=5",
+        "source": "trademap.com.br",
+        "date": "2026-10-09",
         "tag": "Mercado",
         "summary": "",
         "origem": "coletor"
