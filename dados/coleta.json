@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-12T18:55:44+00:00",
+  "geradoEm": "2026-10-13T16:54:15+00:00",
   "fonte": "coletor (GitHub Actions)",
   "itens": [
     {
@@ -16,8 +16,8 @@
         "title": "Será que tem DARF da bolsa atrasado? Descubra no Grana",
         "url": "https://www.youtube.com/watch?v=tzD4P8UjTQ4",
         "date": "2026-09-28",
-        "signal": "125 visualizações, 15 curtidas",
-        "summary": "Shorts publicado em 28/09, com 125 visualizações, 15 curtidas.",
+        "signal": "127 visualizações, 15 curtidas",
+        "summary": "Shorts publicado em 28/09, com 127 visualizações, 15 curtidas.",
         "origem": "coletor"
       }
     },
@@ -35,8 +35,8 @@
         "title": "Você investe, o Grana cuida do IR. 😎",
         "url": "https://www.youtube.com/watch?v=WurEiGR-heY",
         "date": "2026-09-29",
-        "signal": "79 visualizações, 6 curtidas",
-        "summary": "Shorts publicado em 29/09, com 79 visualizações, 6 curtidas.",
+        "signal": "81 visualizações, 6 curtidas",
+        "summary": "Shorts publicado em 29/09, com 81 visualizações, 6 curtidas.",
         "origem": "coletor"
       }
     },
@@ -80,16 +80,20 @@
     },
     {
       "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
+      "colecao": "compnews",
+      "arquivo": "02f6f2121b164b52.jpg",
+      "mediaType": "image",
       "doc": {
-        "title": "Imposto de Renda 2022: Prazo para entrega da declaração termina amanhã",
-        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9ZeDNnVy1mWFhKQThoUUVOVGUtNlNJZmJlYVF5TlNha3hSaDVxUGI4dEFjNUQwc2IxYnJvRGs1SFN4ak5tX1hHODh4RHZqLXczWGxmMUJxMGc?oc=5",
-        "source": "trademap.com.br",
-        "date": "2026-10-09",
-        "tag": "IR",
-        "summary": "",
+        "kind": "conteudo",
+        "competitorId": "c2",
+        "competitorName": "Gorila",
+        "channel": "youtube",
+        "format": "Vídeo",
+        "title": "Produzir ficou mais barato: como a IA mudou o negócio dos finfluencers",
+        "url": "https://www.youtube.com/watch?v=1Vv8mnXOFNo",
+        "date": "2026-10-13",
+        "signal": "0 curtidas",
+        "summary": "Vídeo publicado em 13/10, com 0 curtidas.",
         "origem": "coletor"
       }
     },
@@ -114,10 +118,10 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Renda Fixa: CDB, LCI, LCA, Tesouro e debêntures",
-        "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE5aYVJYSDkyRkMwS3dEc3JJTEdObWtNRWFXNHpETGNPSVlnNVJSODJkVGVsY05zLXQ1WWg3SDFPYW5sbFZleU9KeDN3?oc=5",
-        "source": "trademap.com.br",
-        "date": "2026-10-09",
+        "title": "Tributação de isentos reacende risco em debêntures de infra",
+        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQUnpuUHVGVktjUkxxUTFoQURqc2pDZUhkMXBnOG9uVzFlQm5KYXo3YWZYOEUzVzhuUjRDczNwRWI0YVdvTnNpbnZSTHdCZlJQX2dnbDlpN2paTzJfQXFpTE9xcG16LWRGNHV2WWQ2dElGaG5rSDVPaWV0TmhaY25Dc3ptckpra2RmMmxzaE1HbzJTOWpNYkZySGxJWTFzUEozZFFMTlZvaElRQ0JnRFpnNVF1NTQ?oc=5",
+        "source": "SpaceMoney",
+        "date": "2026-10-13",
         "tag": "IR",
         "summary": "",
         "origem": "coletor"
@@ -144,9 +148,9 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Renda fixa triplica e ganha espaço na carteira dos investidores mais ricos",
-        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNTXYyOGdMSnNOSXhJR2hWRUFNTG9yLXEwbFJuNkRRVm1SZEtMYXZ0Y3NKTG9GdnFrRmhBREpTbVVIVHRnSWVZRDlaUjYtbjJuU3VucEVPNUg4XzhhQ3NjLWRJeE9IVi10aEJ4WFdadnQ0V0JsNFFFdkFNZHVUSHdtM0FVSVRQWEEwUkU5YTdBVUlUbjgwV0hVTDJDNjc3N1BwZmlkRWFmMFlxRUJVdVJwLV8wRC3SAboBQVVfeXFMT0dBUmRvb29DaWNHeTlwX0RVa0xyektfQnVLZl9ERmtjeEpYZ1NLYlMtSmpXQTdud0pjTnVSYXVoZVZ4QWZ3a21nSXpFMTBXMHJrbm5RcWFyLTZ1bHRzTExwSUJhaXAxS25wNjFJQXZNSHA4WGdNbllkX2tZNUo4NWZuV2pRN2ppTmp2M2dUWGZzd3Jtd2VFUHpGaDd3Q0pzWkdHdXgyWTNuOWFva0NVMDMxR3JtRGxVOElB?oc=5",
-        "source": "Estadão",
+        "title": "IRPFM 2027: por que a composição da renda importa",
+        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQVk5GMkpMdkFycWViSVlXTjNSczlIWEVWRVVhWGgyNU5iNHdaUmJSOGdzZi1PN2J6dmpXeGR0ZzdNb3ZBWENWZXY2NGM2MWs3YWtlbm1PdENDN3VueGs0OEJzc1N1M2NZRFdvWkdmZ0tNZHRqZld1VUtHVXIwTHhPSU1HZDMwMGJqaEpUZHlqWEMtQnlNZFFzSlVoei1ycDVfMkhVNXBWYm55OWlhU3ZObTdR?oc=5",
+        "source": "Contadores.cnt.br",
         "date": "2026-10-09",
         "tag": "IR",
         "summary": "",
@@ -159,11 +163,41 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Imposto de Renda em 2027: ainda dá tempo de agir para pagar menos",
-        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNSnpfNFk4YVVJeXhQVy1YcndPMzVkOXhvZlpSQVBUSTlJdWVkTjRPem5INkszZXUtQmg1NWxrV1JqOTEyQVZsZm81ejFMTnZ5LUVlQ2RkTTBIQ0pOcThfSmIwOFZwQlBzWGM4djFMM2QzRFlybklfcjlfUU5MWkkzZG5pWjB2aDVNOEJmVWdqOFJ4S3ZxcEhGdkMwVUJxSHpfX2VWVFpCQ3RLcXFfNUFkNmZMM05sZzBv0gG-AUFVX3lxTE82TnNYQW9qMWlaZmpHSjRUV3BDZ0RtUFhFcXJYX3BtanJJb3Z4QTFybmZsVjdqT3Z4eWxYb3B0S3JST2Z5TVBnYU11c0kxWWRyazFRSnQya0d0d0lpWmpHbWhQOGlWdUowLS1GR2VtdHM2a1BWNnlOam1aejhCTW5QZGZyY3d2R1NKVGppVExJVnJqMzFtOFdlblpDUWdHQ2gyakZ1MlViUXNGdFlBQkJYX1NZSlBremZ5bVRReUE?oc=5",
-        "source": "Estadão",
-        "date": "2026-10-11",
+        "title": "Rodovias, ferrovia e impostos: os desafios da nova bancada federal do ES",
+        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNRTVaOHlONXZLdy1sRm0zaGU1QmFXeldOM2tSeWJhVUJ3aEtOTnFlcE95SEc4MkdFMFRzdDE2Q2tTcEl2X3EyOVc4VGJ1NV9hRmZtdnhYM3RfNE5DRnY1NkhDRm9IU2NEZFQzN1p2RUtTZGt4N3p5MnlyQndaaF9aUUozcGRIN0lKanFGcjk4VmcySU54V1ZUd200SWdLcjBHcm1fTmpYOGw3WmdVRzJkclRB?oc=5",
+        "source": "Folha Vitória",
+        "date": "2026-10-09",
         "tag": "IR",
+        "summary": "",
+        "origem": "coletor"
+      }
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Nova carteira prevê investimentos de R$ 160 bilhões em portos, aeroportos e hidrovias até 2030",
+        "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxNR1lncGF5d0RteG11bUFodmhpOEgyUEd4bjBMS25rZjZTc3J5dUJCNm5jZkNSbWZ2RGx2TVB6Qnd4N0t6YmJ3VW5iTU9WNlRzZjlPb3JDdVExXy00d1A3ZlpjNHNSWUlsOWxvZTA5eGtWS1YwRnQwRnQ0VFE3WllId2Ric05KZWRRd3RpekNaNEk0NDJ6Y0NwODQ5enIxdWVEUHNoX245M2d1Uk9ra0VLVGpWUUhlVkdyX2N0alN4QnByNlo3V2cxQzk3OUV0Vmt3bHgxRXJfbzMyNXVKQVlyOUhQWENaSi1LV2dsb3M4OE5Rd1p5Z2lDejJn?oc=5",
+        "source": "www.gov.br",
+        "date": "2026-10-08",
+        "tag": "IR",
+        "summary": "",
+        "origem": "coletor"
+      }
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Opinião - Que imposto é esse: Efeitos colaterais da tributação de dividendos nas estruturas societárias",
+        "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxORG1GV01BWXBMc2VUeTV1YW9tMVU4OVJySFg1QjBvbHNlS05IOHc0X0o1OVFrZlZCc0dDYXBSREF3dDJhSkRKU3FIOEJpWjlCWjh5TnhVV283TlRWVEUwR2NyVXNZTGU3dVdwM1lELURXblF5QlItTXdRMUxneFpMNGc3S29uc1d5a1pEQzBQQUdYY1ltcGFrTFBSempkMkpWaHl2bWFoUHVsWnBERkV0Um01VHJXNS1CM0FuTzlYR0E2eUh2Yk5jQWs5cGIxT0xxRXFldUNiVnZLQQ?oc=5",
+        "source": "Folha de S.Paulo",
+        "date": "2026-10-13",
+        "tag": "Dividendos",
         "summary": "",
         "origem": "coletor"
       }
@@ -193,21 +227,6 @@
         "url": "https://news.google.com/rss/articles/CBMinwJBVV95cUxOVi1TbTZQSUFrNFBhZFU3OVlJTjFQOWE1aGJiVlYxaXBJWjlXRURGaFQ0d0l6MU1kMjRKYzl6U0puTjZnQ0IyekhETDBESU02WmVPSUtoenlVWnplMmxyZWlEYUlkb1ZRSGxYcWVsOFN0c0JKZlhIWjBtWEpqandheHp1djJRQksxbmJDZW5qeW51cl9vQVUtalhBSmVnZUc0N2VLeDdsekVqVUR0Rk9LNzRDWlgyb3ZTNnU5bE1qdHZsNnZJbEVfaEtKdGkwb2xLLUFyM3N4UU5xMndINDY5d0F5andjWlgyamFpRjY5aEN6aHlMMG4zdXZMVVJZTm80NjRQMzlBNHBZSENxQjVBZ2l3eGpiZzkwMlVCU21mQdIBpAJBVV95cUxQWDVFNlJRNXZRc0R2dUFPc2Z0M29ybDMwaU5CZ05jdTZNVkN5OU5rcnRtWU8wZFYyTEdxSENIVjhjdHRfd2VCdUh5czN1QXR4UXhicm0tclduTTBwTmh2Zl9lV3dCSUpPMEpLZV9kYllRT1UxVTZleERISWMwbkV3ZFF0bHpjc3J4OGU3cDJ5MUtkc0Jjd3hEWjFZUXlVeFFGWXlMdW9sOEhzcVYwNjI4SlU5M0szcHNlTUIyaXJ4cTBoc1NNTVFnSkgwb1FEM01hMENFWFBPdUhMWHVqZWtLZjNiWmVBbEl4WkdxYlN3cGRIXzZrTVlORkJRQndDdkZFbk5wWmJ3U2pMRk84OXotNHpSVzItUUNoLTcwVE9mSlJ1TmxH?oc=5",
         "source": "Fenafisco",
         "date": "2026-10-08",
-        "tag": "Dividendos",
-        "summary": "",
-        "origem": "coletor"
-      }
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Promessa de Flávio de rever impostos esbarra no cronograma tributário",
-        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNa2UxSHh6ZVdQcjBIT2tseWJBUGZFRXF5eEtQX19JMWV1cElZTkdZWUh2Tks5aE9JYnUyaTc1VDAtanJuSWhNZW5BWGVaWFVOdjJUQXNVbkNaRWdUbDZSOXVRMFFrLTJVbEEyVEFNTy1EZHZ1NmtnTUFSdFdWc3lzSnBuZFVMcDA4WC1RM2J3STFvZkRvNVlrTDJ1M3hBNG1xQU1BQlZWamYzd9IBrwFBVV95cUxPeWthMWdmWVUtUEhneWF2bDh5ZmMzQUZYSHdLbGRjc3JQNko2VG9KdnVpQzQ5N0pvUDJ4VEJCUFlZdWEwQy0ySjNwTS12cmp3RG5JTVUyUXRFWHRPU29oeUl0TFVoTGNaUUJvSlpJRTRtXzJ3WkpybmhiTmpXU3ZPMXdSUDAxdmExeWRFOTRFQWRnS28zMWV0R3FNam9kdUNUdE5aNGtDdTZLTFRaVy1V?oc=5",
-        "source": "Fenafisco",
-        "date": "2026-10-06",
         "tag": "Dividendos",
         "summary": "",
         "origem": "coletor"
@@ -250,8 +269,8 @@
       "mediaType": "",
       "doc": {
         "title": "Sem faixa de transição, retenção de IR sobre dividendos é inconstitucional",
-        "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPWEJBc2NTbWRtX29NNGpSamxzR1VfTEZnQW9RdXRrUzJXRU15emxaU0JIY2l2NzRKZ0xiekJUcXc4Y3VjV3RPSkljUXNaN1c1Ym5pOEM4UjJ3RmxUWkRDdTBsN0Rlc1RkOGE5LWRsVTNKOThuZ3lEX19IZGhMaUhDUmFCa3Zsb3VXbVlnT3lCZ0ZsWldOaXlrdkpLVFhHbW9PUnE4Y0MzRGl3ejBOWjVYajZ3QW1RZ1ZySHc?oc=5",
-        "source": "Consultor Jurídico",
+        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQV2tYcnhNTWlucHhkS09pYmVKclFDb3lxLU02b3VDbExPTlktM0lIelUteXdJTm1RNXVveE1ielR6WXJWZjlaYzNSUUtjRlZYWkxxaVZhR3JVb3ByWnVaajhTcDZmZk9CQ0VQSUVqRHJjb3lNV04tVW0wRzFvY0dZa0piRDFSN3RtaW5RUWlTeXJhbjYwLWp1V2JsT2J6QQ?oc=5",
+        "source": "TAGD Advogados",
         "date": "2026-10-06",
         "tag": "Dividendos",
         "summary": "",
@@ -294,11 +313,41 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
+        "title": "Reforma tributária já aparece em 3,7 bilhões de notas, mas Receita encontra outras 600 milhões sem CBS; 420 mil estabelecimentos obrigados ainda não destacaram o novo tributo em 2026",
+        "url": "https://news.google.com/rss/articles/CBMiwgJBVV95cUxOUWxrTTVPZGlUMWMyV3h0NkpTNkRFVWRIR1Z3NlVpVnZpY1ZjZHBTdU1jX0plWEVVQ19mM1BHbnlNY0wta01zZDRxeTNoR0otWFdWLTVZSVJJWjFJdzFjUGdMN2lJVG0zM0F3eDBqbDFxV2lzcjcwT2hIQ2x5ZkF2dzZ6MkkzMUllWDM2UWNsNkhQa2J6Z1ZiOGVuNXhwQmJMekRLZGRrOERoZ2RqZ2RpSGFWazVvV2xBaXdiMUZVZkJxN0kyV3I3dzZpNzBsdDNfOXJYX21FYktVaUd1VHdvS1hFekRQUXdYbVJnTUExWV9Dc1ZuMVlWbUhvdVNjUHNWeGdJRFF2b0s3LW1hVlV3Q1pHTmczZ3BNR3pjaHZmOVEzQVBzT2dkbHhoMzJTS1hDU29taHVJeFk3Z042UTIwS3d3?oc=5",
+        "source": "CPG Click Petróleo e Gás",
+        "date": "2026-10-11",
+        "tag": "Declaração",
+        "summary": "",
+        "origem": "coletor"
+      }
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
         "title": "Alíquotas do Imposto de Renda 2026: nova tabela e cálculos",
         "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1GSUl0VzJRUGI2ZTBpR2wyQ09FN3JYTWowYnFDUHk1SVpoNzM2dUk5cUM0alBwUlAybTV4NUxLN1hZX0FCa0MxaUFIc0dIX1NCVmc?oc=5",
         "source": "Serasa",
         "date": "2026-10-09",
         "tag": "Declaração",
+        "summary": "",
+        "origem": "coletor"
+      }
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Crianças e adolescentes já investem R$ 3,5 bilhões em ações, FIIs e ETFs no Brasil",
+        "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOVWdtRjlaN29ueXQ5QzVQOUYwVktvY2tTTkljaW1uaThKcG13amNBakRNNnFRMGg4Y1NOdk1CLU1lRnlFSHA5emtSYWtWbm1VcnlhOFZRMVFxNUZBTHQwcElKQlYxNmVvVVJ4T1JJUVhEek5YUm9Ib2FKUnJHaXhrTUw3NkxYenhqRUVaMk5wbDdaS3g4MnZXWGRTQURBYk9oUzdVdUVwdUxpX2I3VkNqd0JYMnBuNmctN1MyQy1IazBWZ9IBwgFBVV95cUxOVWdtRjlaN29ueXQ5QzVQOUYwVktvY2tTTkljaW1uaThKcG13amNBakRNNnFRMGg4Y1NOdk1CLU1lRnlFSHA5emtSYWtWbm1VcnlhOFZRMVFxNUZBTHQwcElKQlYxNmVvVVJ4T1JJUVhEek5YUm9Ib2FKUnJHaXhrTUw3NkxYenhqRUVaMk5wbDdaS3g4MnZXWGRTQURBYk9oUzdVdUVwdUxpX2I3VkNqd0JYMnBuNmctN1MyQy1IazBWZw?oc=5",
+        "source": "InvestNews",
+        "date": "2026-10-12",
+        "tag": "Mercado",
         "summary": "",
         "origem": "coletor"
       }
@@ -339,10 +388,10 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Dia das Crianças: pequenos investidores já têm R$ 3,5 bilhões na bolsa",
-        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNdEcycURqSkZtVkV2SEFLYXQ3b0RkOERaNllkYmdqbm5aNjVlSXd3eDQ0Z1ZMaFJBT0NPWW1LbXpDeDk4d3c2U21XYWwyRURnZXVQTVMyM3hvQ2Z5cWVYem8zcl9ib1VlTXk5dkVadW5MS1Rqd29fTUw4LUNXTXNVU9IBhgFBVV95cUxOLUdrb0tqOTJxRVRfN3I4V2VPalFRMGliOWlHXzZjU1hiUlhKNlpDbWRNQmRodGVveDJISkkxZWdKcjJVN0JGaUhqYVJPc3VpRjdmUG5xeFJsNDJKNlRmc05CVDhmLWl2UmloSWJRczk0R2xrbjNLV2FYdkVoc0pKMHpSLUpoQQ?oc=5",
-        "source": "Suno - Investimentos Inteligentes",
-        "date": "2026-10-12",
+        "title": "Menores de idade reúnem R$ 3,5 bilhões em ações e fundos na B3",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQMDZxQWxhS0pITjhfOUJzcXBrSUlnUkU3ODlIQ0ZNNk4tTWhuZ1RWSTY5b2tROGRielZ6dUxqRWU0cW03UnRjZzZpWmZ6NE9xRGVuaFFPQXBQek9tN2s2SVZhSHlsMVlobkJadGJfam9NZGRaUl9DdHBKa0pVNDJUeEczeFlaZ0VxUEFvalBqRDZUSU5CbEJFZ3MzMEZ3WHhx0gGgAUFVX3lxTFAwNnFBbGFLSkhOOF85QnNxcGtJSWdSRTc4OUhDRk02Ti1NaG5nVFZJNjlva1E4ZGJ6Vnp1TGpFZTRxbTdSdGNnNmlaZno0T3FEZW5oUU9BcFB6T203azZJVmFIeWwxWWhuQlp0Yl9qb01kZFpSX0N0cEprSlU0MlR4RzN4WVpnRXFQQW9qUGpENlRJTkJsQkVnczMwRndYeHE?oc=5",
+        "source": "Mix Vale",
+        "date": "2026-10-13",
         "tag": "Mercado",
         "summary": "",
         "origem": "coletor"
@@ -368,6 +417,7 @@
     "Grana Capital (blog https://blog.grana.capital/feed/): HTTP 404"
   ],
   "arquivos": [
+    "02f6f2121b164b52.jpg",
     "1967862ac0d28f1e.jpg",
     "7c03ef0bf0ebf597.jpg",
     "90b03d44b8b7b9b4.jpg",
