@@ -6,16 +6,20 @@
       "termo": "imposto de renda",
       "subindo": [
         {
-          "busca": "comprovante de não declaração de imposto de renda",
-          "valor": "+90%"
+          "busca": "consultar imposto de renda pelo cpf",
+          "valor": "+80%"
         },
         {
-          "busca": "copia da declaração do imposto de renda",
-          "valor": "+70%"
+          "busca": "isencao imposto de renda",
+          "valor": "+60%"
         },
         {
-          "busca": "como funciona o imposto de renda",
+          "busca": "quem paga imposto de renda",
           "valor": "+50%"
+        },
+        {
+          "busca": "como pegar declaração de imposto de renda",
+          "valor": "+40%"
         }
       ],
       "top": [
@@ -25,65 +29,65 @@
         },
         {
           "busca": "declaração imposto de renda",
-          "valor": 73
+          "valor": 71
         },
         {
           "busca": "declaração de imposto de renda",
-          "valor": 70
+          "valor": 69
         },
         {
           "busca": "meu imposto de renda",
-          "valor": 68
+          "valor": 65
         },
         {
-          "busca": "restituição imposto de renda",
+          "busca": "imposto de renda restituição",
           "valor": 60
         },
         {
           "busca": "restituição de imposto de renda",
-          "valor": 59
+          "valor": 60
         },
         {
           "busca": "declarar imposto de renda",
-          "valor": 48
+          "valor": 45
         },
         {
-          "busca": "isenção de imposto de renda",
-          "valor": 38
+          "busca": "isenção imposto de renda",
+          "valor": 37
         }
       ],
       "interesse": [
         {
-          "data": "2026-10-06T00:00:00+00:00",
-          "valor": 79
-        },
-        {
           "data": "2026-10-07T00:00:00+00:00",
-          "valor": 79
+          "valor": 78
         },
         {
           "data": "2026-10-08T00:00:00+00:00",
-          "valor": 73
+          "valor": 78
         },
         {
           "data": "2026-10-09T00:00:00+00:00",
-          "valor": 67
+          "valor": 70
         },
         {
           "data": "2026-10-10T00:00:00+00:00",
-          "valor": 39
+          "valor": 40
         },
         {
           "data": "2026-10-11T00:00:00+00:00",
-          "valor": 30
+          "valor": 31
         },
         {
           "data": "2026-10-12T00:00:00+00:00",
-          "valor": 35
+          "valor": 38
         },
         {
           "data": "2026-10-13T00:00:00+00:00",
-          "valor": 57
+          "valor": 70
+        },
+        {
+          "data": "2026-10-14T00:00:00+00:00",
+          "valor": 65
         }
       ]
     },
@@ -91,88 +95,84 @@
       "termo": "darf",
       "subindo": [
         {
-          "busca": "darf 2172",
+          "busca": "www.patrimoniodetodos.gov.br darf",
+          "valor": "Breakout"
+        },
+        {
+          "busca": "emissão darf online",
           "valor": "Breakout"
         },
         {
           "busca": "emissão de darf pessoa física",
-          "valor": "Breakout"
-        },
-        {
-          "busca": "sicalcweb programa para calculo e impressao de darf on line",
-          "valor": "+4,300%"
+          "valor": "+4,600%"
         },
         {
           "busca": "darf 0561",
-          "valor": "+80%"
+          "valor": "+90%"
         },
         {
-          "busca": "www.patrimoniodetodos.gov.br darf",
+          "busca": "2 via darf imposto de renda",
+          "valor": "+90%"
+        },
+        {
+          "busca": "atualizar darf vencida",
           "valor": "+70%"
         },
         {
-          "busca": "darf 5952",
+          "busca": "darf online sicalc",
           "valor": "+70%"
         },
         {
-          "busca": "darf sicalc web",
-          "valor": "+70%"
-        },
-        {
-          "busca": "darf 1138",
+          "busca": "darf sicalc",
           "valor": "+50%"
         }
       ],
       "top": [
         {
+          "busca": "pagar darf",
+          "valor": 100
+        },
+        {
           "busca": "emitir darf",
           "valor": 100
         },
         {
-          "busca": "pagar darf",
-          "valor": 95
+          "busca": "darf imposto de renda",
+          "valor": 82
         },
         {
-          "busca": "darf imposto de renda",
-          "valor": 77
+          "busca": "imposto de renda",
+          "valor": 79
         },
         {
           "busca": "codigo darf",
-          "valor": 70
+          "valor": 75
         },
         {
           "busca": "pagamento darf",
-          "valor": 66
+          "valor": 70
         },
         {
-          "busca": "ecac darf",
-          "valor": 56
-        },
-        {
-          "busca": "darf receita federal",
-          "valor": 55
+          "busca": "receita federal darf",
+          "valor": 63
         },
         {
           "busca": "mei darf",
-          "valor": 46
+          "valor": 51
         }
       ],
       "interesse": [
         {
-          "data": "2026-10-06T00:00:00+00:00",
-          "valor": 51
-        },
-        {
           "data": "2026-10-07T00:00:00+00:00",
-          "valor": 51
+          "valor": 52
         },
         {
           "data": "2026-10-08T00:00:00+00:00",
-          "valor": 46
+          "valor": 47
         },
         {
           "data": "2026-10-09T00:00:00+00:00",
-          "valor": 44
+          "valor": 43
         },
         {
           "data": "2026-10-10T00:00:00+00:00",
@@ -188,7 +188,11 @@
         },
         {
           "data": "2026-10-13T00:00:00+00:00",
-          "valor": 48
+          "valor": 54
+        },
+        {
+          "data": "2026-10-14T00:00:00+00:00",
+          "valor": 43
         }
       ]
     },
@@ -196,36 +200,36 @@
       "termo": "dividendos",
       "subindo": [
         {
-          "busca": "how to bake a cake",
-          "valor": "Breakout"
-        },
-        {
-          "busca": "knca11",
+          "busca": "fundamentus",
           "valor": "Breakout"
         },
         {
           "busca": "aazq11 dividendos",
+          "valor": "+300%"
+        },
+        {
+          "busca": "tims3",
           "valor": "+250%"
         },
         {
-          "busca": "kncr11 dividendos mensais",
-          "valor": "+200%"
-        },
-        {
-          "busca": "snag11",
-          "valor": "+160%"
-        },
-        {
           "busca": "pssa3",
-          "valor": "+160%"
-        },
-        {
-          "busca": "btlg11 dividendos mensais",
           "valor": "+150%"
         },
         {
-          "busca": "b3sa3 dividendos",
+          "busca": "bpac11",
           "valor": "+120%"
+        },
+        {
+          "busca": "o rei dos dividendos",
+          "valor": "+100%"
+        },
+        {
+          "busca": "quanto a petrobras paga de dividendos",
+          "valor": "+100%"
+        },
+        {
+          "busca": "xpml11 dividendos mensais",
+          "valor": "+90%"
         }
       ],
       "top": [
@@ -234,50 +238,46 @@
           "valor": 100
         },
         {
-          "busca": "mxrf11",
-          "valor": 84
+          "busca": "o que e dividendos",
+          "valor": 95
         },
         {
-          "busca": "dividendos mxrf11",
+          "busca": "mxrf11",
           "valor": 82
         },
         {
-          "busca": "dividendos petrobras",
-          "valor": 80
+          "busca": "dividendos mxrf11",
+          "valor": 81
         },
         {
-          "busca": "petr4 dividendos",
+          "busca": "dividendos petrobras",
+          "valor": 78
+        },
+        {
+          "busca": "dividendos petr4",
           "valor": 67
         },
         {
           "busca": "petr4",
-          "valor": 60
+          "valor": 66
         },
         {
-          "busca": "bbas3",
-          "valor": 57
-        },
-        {
-          "busca": "dividendo",
-          "valor": 57
+          "busca": "bbas3 dividendos",
+          "valor": 59
         }
       ],
       "interesse": [
         {
-          "data": "2026-10-06T00:00:00+00:00",
-          "valor": 82
-        },
-        {
           "data": "2026-10-07T00:00:00+00:00",
-          "valor": 72
+          "valor": 73
         },
         {
           "data": "2026-10-08T00:00:00+00:00",
-          "valor": 75
+          "valor": 77
         },
         {
           "data": "2026-10-09T00:00:00+00:00",
-          "valor": 72
+          "valor": 73
         },
         {
           "data": "2026-10-10T00:00:00+00:00",
@@ -285,15 +285,19 @@
         },
         {
           "data": "2026-10-11T00:00:00+00:00",
-          "valor": 41
+          "valor": 42
         },
         {
           "data": "2026-10-12T00:00:00+00:00",
-          "valor": 50
+          "valor": 52
         },
         {
           "data": "2026-10-13T00:00:00+00:00",
-          "valor": 66
+          "valor": 70
+        },
+        {
+          "data": "2026-10-14T00:00:00+00:00",
+          "valor": 71
         }
       ]
     },
@@ -308,12 +312,8 @@
       ],
       "interesse": [
         {
-          "data": "2026-10-06T00:00:00+00:00",
-          "valor": 63
-        },
-        {
           "data": "2026-10-07T00:00:00+00:00",
-          "valor": 48
+          "valor": 50
         },
         {
           "data": "2026-10-08T00:00:00+00:00",
@@ -325,11 +325,11 @@
         },
         {
           "data": "2026-10-10T00:00:00+00:00",
-          "valor": 39
+          "valor": 36
         },
         {
           "data": "2026-10-11T00:00:00+00:00",
-          "valor": 35
+          "valor": 33
         },
         {
           "data": "2026-10-12T00:00:00+00:00",
@@ -337,6 +337,10 @@
         },
         {
           "data": "2026-10-13T00:00:00+00:00",
+          "valor": 54
+        },
+        {
+          "data": "2026-10-14T00:00:00+00:00",
           "valor": 46
         }
       ]
@@ -344,5 +348,5 @@
   ],
   "emAlta": [],
   "avisos": [],
-  "geradoEm": "2026-10-13T16:55:27+00:00"
+  "geradoEm": "2026-10-14T14:30:22+00:00"
 }
