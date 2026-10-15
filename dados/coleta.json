@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-14T14:28:31+00:00",
+  "geradoEm": "2026-10-15T14:07:49+00:00",
   "fonte": "coletor (GitHub Actions)",
   "itens": [
     {
@@ -43,25 +43,6 @@
     {
       "brandId": "mycapital",
       "colecao": "compnews",
-      "arquivo": "d0d1bc40b09922b2.jpg",
-      "mediaType": "image",
-      "doc": {
-        "kind": "conteudo",
-        "competitorId": "c2",
-        "competitorName": "Gorila",
-        "channel": "youtube",
-        "format": "Vídeo",
-        "title": "Open Investment faz 3 anos: uso cresce, mas mercado ainda busca caso de sucesso",
-        "url": "https://www.youtube.com/watch?v=X4cACTHWoF4",
-        "date": "2026-09-14",
-        "signal": "150 visualizações, 1 curtida · 2,7x a mediana do canal",
-        "summary": "Vídeo publicado em 14/09, com 150 visualizações, 1 curtida.",
-        "origem": "coletor"
-      }
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "compnews",
       "arquivo": "02f6f2121b164b52.jpg",
       "mediaType": "image",
       "doc": {
@@ -73,8 +54,8 @@
         "title": "Produzir ficou mais barato: como a IA mudou o negócio dos finfluencers",
         "url": "https://www.youtube.com/watch?v=1Vv8mnXOFNo",
         "date": "2026-10-13",
-        "signal": "55 visualizações, 0 curtidas",
-        "summary": "Vídeo publicado em 13/10, com 55 visualizações, 0 curtidas.",
+        "signal": "71 visualizações, 0 curtidas",
+        "summary": "Vídeo publicado em 13/10, com 71 visualizações, 0 curtidas.",
         "origem": "coletor"
       }
     },
@@ -92,38 +73,8 @@
         "title": "IA de um lado, influencers do outro: qual o futuro do analista CNPI?",
         "url": "https://www.youtube.com/watch?v=-l4624f25ok",
         "date": "2026-10-05",
-        "signal": "39 visualizações, 0 curtidas",
-        "summary": "Vídeo publicado em 05/10, com 39 visualizações, 0 curtidas.",
-        "origem": "coletor"
-      }
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Lucro com venda de cotas de outros FIIs deve ser tributado, determina STJ",
-        "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNaS1fdy05UlJZU3pmU2lLOVJVcE9xdWtlZkt5SFpzSGtPN1Z3dDNzb29lNTg5cDFobHJwOGUyUHh4Uy00RjV0eHJrMVJhQVRZcnpUdmRZYnpReEVlNWtuN05ScjJsVnFyVzEwVTM3VzN6Z3ZHRFhhUFFYZDY1WTl0TnF2amRwTlZYdTgwanQzWDlRTnl1b2FrTl9OT25hUXpQTU9QSkQzdWZxX2dQbmtUeTJSS2FvU1VuRE9Oc3lvWHkxZWpfV1FPNi1NaVRCSFpCdmc?oc=5",
-        "source": "Contadores.cnt.br",
-        "date": "2026-10-13",
-        "tag": "IR",
-        "summary": "",
-        "origem": "coletor"
-      }
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Declaração de apostas no Imposto de Renda 2026: Guia completo",
-        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE12eGI5dEIyYVBjdHBuMW5LdmtBWV9uNkZ0SG5mRFJWajN1Yzdtb0NhUUx4djVRa21aV1psQW96emRSM0pXM2JodjhnTkVyMmtUTGlQTHZPUk9yUUY4NlBZR1EyUQ?oc=5",
-        "source": "Olhar Digital",
-        "date": "2026-10-09",
-        "tag": "IR",
-        "summary": "",
+        "signal": "40 visualizações, 0 curtidas",
+        "summary": "Vídeo publicado em 05/10, com 40 visualizações, 0 curtidas.",
         "origem": "coletor"
       }
     },
@@ -148,10 +99,10 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Governo anuncia perdão de dívidas tributárias de MEIs, compra de débitos bancários e apoio de até R$ 5 mil para investir no negócio",
-        "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxQYlc4TFFtR1RRSzRhMnQzSXF1VDlKejFyc1VBSmFXTm1tcG5HT0Zqd1JTTnlfbTBGNXVQY3FoRjRlQ0VZektGc1UwUTlJaW9raFN5TzAzWVh0ckMtV2ZRTVc4emdmSHpsSmU2V0N3cTF0T1pGdGM2NTJLQWppU21lRE0wZVhqdFdETDFrMUlwM2lOSVY4cUtEMGlocUNueU85M3NzRkhxZ0lwQXlpZnJfSjRzSW8xVTBpMl8wMjN4X3prbHdfZ3lOS253WS1FWFZ1S1R4N0VRZ1NGRkpKdmc2MWktUW9NQkRhRjlZVTRKNlJwQmhkeU9iSFhnby1tYTc3NTViQ2swbEw?oc=5",
-        "source": "www.gov.br",
-        "date": "2026-10-13",
+        "title": "Onde investir o prêmio de R$ 150 milhões da Mega-Sena sem pagar Imposto de Renda",
+        "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPU25kNVFKdVFQTGFMOVV4QkRpTW5aSGxQR3k0TF9PWjlJZFkwNUdSWERUTGJsS1YtYjhzbzVmSWFOTE9TZTU4OWZUZmNobFdWOTNMaC1Cck5XZG81V3VhRURsb0c0OS11c2V2WHUweTFqbGpNNDRNdzlLY29QU3hxSldydWRleWx6dTg0eDVTRXlIM3hha0VmSHhTUzZ1bTVxeEd5S3VjLS15dXBXaUp2WmtSSFVkZw?oc=5",
+        "source": "VEJA",
+        "date": "2026-10-14",
         "tag": "IR",
         "summary": "",
         "origem": "coletor"
@@ -163,10 +114,25 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Tesouro Selic: o investimento considerado mais seguro do Brasil",
-        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNRzdKcGlmMHpBMWxzT3JPZFB5MUFGdmpnMWNiYlhfV2FZNlBIT3BuM0dISUo1MzRMSFVONUtFbEJiR3ViQXlWdTlrZm5aeGliMDc5R1AzaERLN0UxQjNIN0djakJOd0sxb2s2TExnVVVHRnQwSXhzTnFRNUZONnlycmZma19aUWZz0gGOAUFVX3lxTFBhaG5lUjRtbWxSNmhsalM3dFFXWUdjb1Y5R1hxVHJaa2ZyM1pWR3QxbXhQNUhSS0d4bEhfWU5HMldUOTNVdFN2cmZ2Z0I0cnBicFJyYml2S0hadzJPRjB0cU9KMEg3ajNXZ2pjU05QeF9yZDVKUXFaY2VuZmRvRk1wWEtwbkdfUTBOUFFkX2c?oc=5",
-        "source": "Nord Investimentos",
+        "title": "Renda fixa triplica e ganha espaço na carteira dos investidores mais ricos",
+        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNTXYyOGdMSnNOSXhJR2hWRUFNTG9yLXEwbFJuNkRRVm1SZEtMYXZ0Y3NKTG9GdnFrRmhBREpTbVVIVHRnSWVZRDlaUjYtbjJuU3VucEVPNUg4XzhhQ3NjLWRJeE9IVi10aEJ4WFdadnQ0V0JsNFFFdkFNZHVUSHdtM0FVSVRQWEEwUkU5YTdBVUlUbjgwV0hVTDJDNjc3N1BwZmlkRWFmMFlxRUJVdVJwLV8wRC3SAboBQVVfeXFMT0dBUmRvb29DaWNHeTlwX0RVa0xyektfQnVLZl9ERmtjeEpYZ1NLYlMtSmpXQTdud0pjTnVSYXVoZVZ4QWZ3a21nSXpFMTBXMHJrbm5RcWFyLTZ1bHRzTExwSUJhaXAxS25wNjFJQXZNSHA4WGdNbllkX2tZNUo4NWZuV2pRN2ppTmp2M2dUWGZzd3Jtd2VFUHpGaDd3Q0pzWkdHdXgyWTNuOWFva0NVMDMxR3JtRGxVOElB?oc=5",
+        "source": "Estadão",
         "date": "2026-10-14",
+        "tag": "IR",
+        "summary": "",
+        "origem": "coletor"
+      }
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Fundos de investimento renderam até 3% ao mês em 2026; saiba se renda fixa ou ações",
+        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNR2pPcUR0a2JISm9CZEN1VzVlMHNJTDRpelFpQUxzdnZXUzdVRm1leEFvVGZkVm1IVjZiNG5HUUhxeHlrS196SWFiYkNhbFRNUlBVWjRWWGljLTBkRmRQYi1pa1JZYVpKOEVVVW5jVjhDX3ZJdjRpb2ZuRE5pVEk3Uk8tV0pTUUlCSjduLTNMQkNRX2NueU1uUW5UaW01NFdqc3JPWUJ0ZTNncl9KRi1GV2VrUkRMNTYxNDdCbDBKbGM4OTlw0gHKAUFVX3lxTE12ckNpLTJLdHVJMkdmT2Uzdm05NlQwSGdRcmpKWjliVmQ4MnljLUhNTVVlbW92THk3THlMVEpvUjNZSHdpMmlsRkFuVzdmNHFoREZGRjdkWExheUw3VzFCOERpeU5MTHdHdC1ydGpOUENOQ2ZEaWFYRWFWWWhUZ3VGbGlOX2dadWJjSUFtOXF6TkpvVXJGTDdIc1JWNnpYbmF0R1Jkc1VhSlVMQnpKZHk0NGNlOGs3UnJpdnNLNFhOWDlNWHg0bHFyVnc?oc=5",
+        "source": "Investidor10",
+        "date": "2026-10-11",
         "tag": "IR",
         "summary": "",
         "origem": "coletor"
@@ -180,6 +146,21 @@
       "doc": {
         "title": "Descubra agora 3 ETFs que pagam dividendos mensais",
         "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9ZSHB2Y0xtbE4zU19qVEthb3c4ckdHTGktT1l4VnphSEN3VHBDZEgxQlRFcWI1UVlMdjVoTHhLb1ZrdmJOX3hkbU1ScVhNbkFnY2RjWXhteGt6dkwxM0FmeVNkaGdEUWRs0gFuQVVfeXFMUDJ5dEZIOE1qdWRYd1RfcGhLemk0dVM2Y25ERjZIX3RsS1d5TUpHU2hxYUdUY1dmNlRWcjVjdkNoY3Zfdy1pMS16a0JLdkNoOHZ0VmxfUFZJTUFQMGdEX3Z3ZTRLTTNRb3VHN0U5QUE?oc=5",
+        "source": "Nord Investimentos",
+        "date": "2026-10-15",
+        "tag": "IR",
+        "summary": "",
+        "origem": "coletor"
+      }
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Tesouro Selic: o investimento considerado mais seguro do Brasil",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNRzdKcGlmMHpBMWxzT3JPZFB5MUFGdmpnMWNiYlhfV2FZNlBIT3BuM0dISUo1MzRMSFVONUtFbEJiR3ViQXlWdTlrZm5aeGliMDc5R1AzaERLN0UxQjNIN0djakJOd0sxb2s2TExnVVVHRnQwSXhzTnFRNUZONnlycmZma19aUWZz0gGOAUFVX3lxTFBhaG5lUjRtbWxSNmhsalM3dFFXWUdjb1Y5R1hxVHJaa2ZyM1pWR3QxbXhQNUhSS0d4bEhfWU5HMldUOTNVdFN2cmZ2Z0I0cnBicFJyYml2S0hadzJPRjB0cU9KMEg3ajNXZ2pjU05QeF9yZDVKUXFaY2VuZmRvRk1wWEtwbkdfUTBOUFFkX2c?oc=5",
         "source": "Nord Investimentos",
         "date": "2026-10-14",
         "tag": "IR",
@@ -223,10 +204,40 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Flávio Bolsonaro pretende mudar reforma tributária e acabar com cobrança automática de impostos caso seja eleito presidente. Conheça mudanças e justificativas",
-        "url": "https://news.google.com/rss/articles/CBMinwJBVV95cUxOVi1TbTZQSUFrNFBhZFU3OVlJTjFQOWE1aGJiVlYxaXBJWjlXRURGaFQ0d0l6MU1kMjRKYzl6U0puTjZnQ0IyekhETDBESU02WmVPSUtoenlVWnplMmxyZWlEYUlkb1ZRSGxYcWVsOFN0c0JKZlhIWjBtWEpqandheHp1djJRQksxbmJDZW5qeW51cl9vQVUtalhBSmVnZUc0N2VLeDdsekVqVUR0Rk9LNzRDWlgyb3ZTNnU5bE1qdHZsNnZJbEVfaEtKdGkwb2xLLUFyM3N4UU5xMndINDY5d0F5andjWlgyamFpRjY5aEN6aHlMMG4zdXZMVVJZTm80NjRQMzlBNHBZSENxQjVBZ2l3eGpiZzkwMlVCU21mQdIBpAJBVV95cUxQWDVFNlJRNXZRc0R2dUFPc2Z0M29ybDMwaU5CZ05jdTZNVkN5OU5rcnRtWU8wZFYyTEdxSENIVjhjdHRfd2VCdUh5czN1QXR4UXhicm0tclduTTBwTmh2Zl9lV3dCSUpPMEpLZV9kYllRT1UxVTZleERISWMwbkV3ZFF0bHpjc3J4OGU3cDJ5MUtkc0Jjd3hEWjFZUXlVeFFGWXlMdW9sOEhzcVYwNjI4SlU5M0szcHNlTUIyaXJ4cTBoc1NNTVFnSkgwb1FEM01hMENFWFBPdUhMWHVqZWtLZjNiWmVBbEl4WkdxYlN3cGRIXzZrTVlORkJRQndDdkZFbk5wWmJ3U2pMRk84OXotNHpSVzItUUNoLTcwVE9mSlJ1TmxH?oc=5",
-        "source": "Fenafisco",
-        "date": "2026-10-08",
+        "title": "FIIs pagam dividendos nesta quarta-feira; veja os 7 fundos que distribuem proventos",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNQk1HY19KbE9UZDBWbXlRY0YxNng5RlNxRU1CejczbEc4TFRmNlpXR0tPRUZOTnVrTFUwVHE3SVJ6SUMtaDJqMHl2aVI0amZqbWJrVHpuU0RwUkprb3lJMzVXeGRqWTJUaHB0bzlSVGIyTVVIZ0hRbHR2X0s5ZUFmWUdZR2E3Q051SlR3ZQ?oc=5",
+        "source": "BPMoney",
+        "date": "2026-10-14",
+        "tag": "Dividendos",
+        "summary": "",
+        "origem": "coletor"
+      }
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Nova tributação de dividendos deve ser prioridade na agenda de fim de ano das empresas",
+        "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOWXFUMEU1WWpMUEVOX1c3dEh6bFRvb2wtd2VyX0hjd1VxUXI1SUF0U1hFSHkwdWxXTXQ2eGFNQU5IR3YyejZyME1BR0JkQ3Nub0hTOGpEcjB6X2dNbWJmQ2pYRzVQejdwY0xoX29vbXo1MTdNMS1jNHBIRTRNTHNVRGJNemV1WHpoVUNrdG9pZUt6bk94UHBtYkRJaUhoT1NPRWxiMS12cC1VUlVlbW5rVE40OEVFWXdmeVRzOFoxMmMwQzJRRDR3MWpRRE9fd2s?oc=5",
+        "source": "JOTA Info",
+        "date": "2026-10-15",
+        "tag": "Dividendos",
+        "summary": "",
+        "origem": "coletor"
+      }
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Justiça reduz retenção de IR sobre dividendos para empresas associadas à Ubrafe",
+        "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPV05sTS12aklKOXhhTXJ1U0k1WHFONXQ3QVFTUWVweEZDOERYU2k3Mlg2WDJWS2NCRlBKdUhJNG9rN0tVYXF4V1hEc1hCVHNVMjg3bVVtR0p4QzZGempQdnNDYUpySUxVLXNQVmgzRm8xUzU2bl91YWhWc2ZwX2tuWVNFX1RmclB3Z1p6NEc1TkVWLXo0MHc3cmZDQkFxeEZPb0poZXNrVFpaeGdxRS1ZNUZuSE56NnlzNEs4Y0tkcUxEVnl1WkJrNWJhaEQ?oc=5",
+        "source": "Mercado e Eventos",
+        "date": "2026-10-15",
         "tag": "Dividendos",
         "summary": "",
         "origem": "coletor"
@@ -243,51 +254,6 @@
         "source": "Portal Radar",
         "date": "2026-10-14",
         "tag": "Dividendos",
-        "summary": "",
-        "origem": "coletor"
-      }
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Justiça afasta IR de 10% sobre dividendos acima de R$ 50 mil em caso específico, mas decisão ainda pode ser contestada",
-        "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNUE84TEdXaXF3YklEUjc4MjJUUHk0U2JBM1BYRHoxWWRVYldZOWp4YjA4aW1Ob0x0OG13YXVMWWxPcnhrWU1YWmw2cFY0bHNuUm41RE5ac0xaUTVJckE4UjJSOHRIWURRTm9zNkZHUnAwZjZJMndQVGp3c09SRzRKN0hyUnJEdzRVSUQ1YkRzNWxfQzk1bV9SX2pPelB1TG1KU3pRVmdDYW5JcHlIdW1RTzhRaGttOXE1aFhlQ1ZPTjFwRF9nYTA4OU9ic05uWGN4dl9tRng2WnV4QmxkdFJVdUV3?oc=5",
-        "source": "O POVO",
-        "date": "2026-10-07",
-        "tag": "Dividendos",
-        "summary": "",
-        "origem": "coletor"
-      }
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "FIIs: 180 pagamentos de dividendos em quatro dias",
-        "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNNWVqaVQ5c25vU0hWQnVkSXNzNV94OXFWcXhmUWdxR3Zrdk5fTkY0dzZBMVZvS3JGTFRkc09nVU5kTF9lMmtRTlpoZGRHQU0tdnJKNTlTUGl0Vkl5ZDlhNGItZG5VR0FxRkFzQ2JjTEFudlBFWWt0MEE0Y1BWRUllU0FURHBZZHhjYjQ5RFhWYTJON3h0RmZjdm54cw?oc=5",
-        "source": "SpaceMoney",
-        "date": "2026-10-13",
-        "tag": "Dividendos",
-        "summary": "",
-        "origem": "coletor"
-      }
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Receita Federal envia notificações para 498 mil contribuintes com declaração retida na malha fina",
-        "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQYnlwYVA3bWI4R19MYlg1YnN1S21KUFR1dHZGSVU2MmlidnRuZmNHMTBzd19oVE5WRW9HOWk0LWVyeGJGQkZqQm1abmN2SW1MMTVhYjlJTkltcVpRRmRZU1VJNkdfeU9XRk5ZY011WWgzSjE3d2J4RXhueUNZU1l3Z3FCYXpKaExCM3JFamI5Z1YxZ1FCSk1fNVNhb00yclUxZmNHUWJjWHFHc0VSTWtQUWRqMXhnOWlOQzJabXc5NV93eGc4TGtfeHpUQmQ1encwbFY0YW9rb0RyX1JqYXB6RkpTNA?oc=5",
-        "source": "Blog do Paulo Pereira",
-        "date": "2026-10-10",
-        "tag": "Declaração",
         "summary": "",
         "origem": "coletor"
       }
@@ -343,11 +309,11 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Exclusivo: Mercado de Investimentos estreia na B3 com aplicações a partir de R$ 100",
-        "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNeDRZOXZEVzdHT211Q1paaFJSU1RHQS1lMnNLMVh5bkk0Q0R1Y2NjTzBCeEFyc0lTOXdwUkduQm5tWHZfS1NGbHptcGNIUmRzX1gwZnJpNWcwdWpUbFVlOFhiS3NRZFJteHVodTFwZm14Y2JjYTRuak4taFpYcHNZSUU5VGlqZFdBVGpMUExra3kxMW9sWDRsV29vcWlYM21zcUFnUlo4RE5YYzlXNm9YN29PZy1NOGpmX2xuTkdDRVZrMi0xSzlQZXBvVVhLU2xMLUlta3BuY09fYlpjV3BHTg?oc=5",
-        "source": "Monitor do Mercado",
+        "title": "Simples Nacional: empresas têm prazos decisivos até março de 2027 com a reforma tributária",
+        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQWnk3Q1pseUI0V2FJdXU3OHVVTm5WYjZrWktXanpqMWhWZFhycFdNdkFhaUQ0VW4zendSN1lUWWhaR1VGNWZkYm5za0RUNm1mdGVmWXFpLUxwNWZ1dHVtLWpRNGVzTGxoLWJvb3VCV2FRdTQ5R2FRSk4tazlVQkdyOTNaaUw?oc=5",
+        "source": "BPMoney",
         "date": "2026-10-14",
-        "tag": "Mercado",
+        "tag": "Declaração",
         "summary": "",
         "origem": "coletor"
       }
@@ -358,11 +324,11 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Crianças e adolescentes já investem R$ 3,5 bilhões em ações, FIIs e ETFs no Brasil",
-        "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOVWdtRjlaN29ueXQ5QzVQOUYwVktvY2tTTkljaW1uaThKcG13amNBakRNNnFRMGg4Y1NOdk1CLU1lRnlFSHA5emtSYWtWbm1VcnlhOFZRMVFxNUZBTHQwcElKQlYxNmVvVVJ4T1JJUVhEek5YUm9Ib2FKUnJHaXhrTUw3NkxYenhqRUVaMk5wbDdaS3g4MnZXWGRTQURBYk9oUzdVdUVwdUxpX2I3VkNqd0JYMnBuNmctN1MyQy1IazBWZ9IBwgFBVV95cUxOVWdtRjlaN29ueXQ5QzVQOUYwVktvY2tTTkljaW1uaThKcG13amNBakRNNnFRMGg4Y1NOdk1CLU1lRnlFSHA5emtSYWtWbm1VcnlhOFZRMVFxNUZBTHQwcElKQlYxNmVvVVJ4T1JJUVhEek5YUm9Ib2FKUnJHaXhrTUw3NkxYenhqRUVaMk5wbDdaS3g4MnZXWGRTQURBYk9oUzdVdUVwdUxpX2I3VkNqd0JYMnBuNmctN1MyQy1IazBWZw?oc=5",
-        "source": "InvestNews",
-        "date": "2026-10-12",
-        "tag": "Mercado",
+        "title": "Reforma tributária já aparece em 3,7 bilhões de notas, mas Receita encontra outras 600 milhões sem CBS; 420 mil estabelecimentos obrigados ainda não destacaram o novo tributo em 2026",
+        "url": "https://news.google.com/rss/articles/CBMiwgJBVV95cUxOUWxrTTVPZGlUMWMyV3h0NkpTNkRFVWRIR1Z3NlVpVnZpY1ZjZHBTdU1jX0plWEVVQ19mM1BHbnlNY0wta01zZDRxeTNoR0otWFdWLTVZSVJJWjFJdzFjUGdMN2lJVG0zM0F3eDBqbDFxV2lzcjcwT2hIQ2x5ZkF2dzZ6MkkzMUllWDM2UWNsNkhQa2J6Z1ZiOGVuNXhwQmJMekRLZGRrOERoZ2RqZ2RpSGFWazVvV2xBaXdiMUZVZkJxN0kyV3I3dzZpNzBsdDNfOXJYX21FYktVaUd1VHdvS1hFekRQUXdYbVJnTUExWV9Dc1ZuMVlWbUhvdVNjUHNWeGdJRFF2b0s3LW1hVlV3Q1pHTmczZ3BNR3pjaHZmOVEzQVBzT2dkbHhoMzJTS1hDU29taHVJeFk3Z042UTIwS3d3?oc=5",
+        "source": "CPG Click Petróleo e Gás",
+        "date": "2026-10-11",
+        "tag": "Declaração",
         "summary": "",
         "origem": "coletor"
       }
@@ -403,10 +369,10 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Menores de idade reúnem R$ 3,5 bilhões em ações e fundos na B3",
-        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQMDZxQWxhS0pITjhfOUJzcXBrSUlnUkU3ODlIQ0ZNNk4tTWhuZ1RWSTY5b2tROGRielZ6dUxqRWU0cW03UnRjZzZpWmZ6NE9xRGVuaFFPQXBQek9tN2s2SVZhSHlsMVlobkJadGJfam9NZGRaUl9DdHBKa0pVNDJUeEczeFlaZ0VxUEFvalBqRDZUSU5CbEJFZ3MzMEZ3WHhx0gGgAUFVX3lxTFAwNnFBbGFLSkhOOF85QnNxcGtJSWdSRTc4OUhDRk02Ti1NaG5nVFZJNjlva1E4ZGJ6Vnp1TGpFZTRxbTdSdGNnNmlaZno0T3FEZW5oUU9BcFB6T203azZJVmFIeWwxWWhuQlp0Yl9qb01kZFpSX0N0cEprSlU0MlR4RzN4WVpnRXFQQW9qUGpENlRJTkJsQkVnczMwRndYeHE?oc=5",
-        "source": "Mix Vale",
-        "date": "2026-10-13",
+        "title": "Dia das Crianças: pequenos investidores já têm R$ 3,5 bilhões na bolsa",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNdEcycURqSkZtVkV2SEFLYXQ3b0RkOERaNllkYmdqbm5aNjVlSXd3eDQ0Z1ZMaFJBT0NPWW1LbXpDeDk4d3c2U21XYWwyRURnZXVQTVMyM3hvQ2Z5cWVYem8zcl9ib1VlTXk5dkVadW5MS1Rqd29fTUw4LUNXTXNVU9IBhgFBVV95cUxOLUdrb0tqOTJxRVRfN3I4V2VPalFRMGliOWlHXzZjU1hiUlhKNlpDbWRNQmRodGVveDJISkkxZWdKcjJVN0JGaUhqYVJPc3VpRjdmUG5xeFJsNDJKNlRmc05CVDhmLWl2UmloSWJRczk0R2xrbjNLV2FYdkVoc0pKMHpSLUpoQQ?oc=5",
+        "source": "Suno - Investimentos Inteligentes",
+        "date": "2026-10-12",
         "tag": "Mercado",
         "summary": "",
         "origem": "coletor"
@@ -418,10 +384,25 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Dia das Crianças: pequenos investidores já têm R$ 3,5 bilhões na bolsa",
-        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNdEcycURqSkZtVkV2SEFLYXQ3b0RkOERaNllkYmdqbm5aNjVlSXd3eDQ0Z1ZMaFJBT0NPWW1LbXpDeDk4d3c2U21XYWwyRURnZXVQTVMyM3hvQ2Z5cWVYem8zcl9ib1VlTXk5dkVadW5MS1Rqd29fTUw4LUNXTXNVU9IBhgFBVV95cUxOLUdrb0tqOTJxRVRfN3I4V2VPalFRMGliOWlHXzZjU1hiUlhKNlpDbWRNQmRodGVveDJISkkxZWdKcjJVN0JGaUhqYVJPc3VpRjdmUG5xeFJsNDJKNlRmc05CVDhmLWl2UmloSWJRczk0R2xrbjNLV2FYdkVoc0pKMHpSLUpoQQ?oc=5",
-        "source": "Suno - Investimentos Inteligentes",
+        "title": "Jovens acumulam R$ 3,5 bilhões em investimentos na Bolsa",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOSEc1UGlieHlscVd3eXNDa2FvT0ZZVWVfc2JSQXlsUVNMWGEtYWtYYm9YU2VHVDNMTjIxci1CbG02am44al8tdlFjUFg4MzExUFd1QzhvMF9TLUFWWjA1TnkwMVZoWmNIbDYxWjU5dGlsNE82czZwaTNnMUdIb2p5YjFZNDR3ZGdRbTFnUDlUR2tVczMwZERhdDVqS1dnaENL?oc=5",
+        "source": "Tarobá",
         "date": "2026-10-12",
+        "tag": "Mercado",
+        "summary": "",
+        "origem": "coletor"
+      }
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Entrada de investidores pessoa física impulsiona resultado da B3 no 3º trimestre",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBVSnJTRHRCR2o2aE11dHpVSHQySUx3Qm1tamJkSzY3Z0Vtbl9EOEx4WXl1V211Tkl2UDVCcld5YmlBTW1Ra3JDWmdKNkZfQ0VwUENETW50S1c?oc=5",
+        "source": "trademap.com.br",
+        "date": "2026-10-09",
         "tag": "Mercado",
         "summary": "",
         "origem": "coletor"
@@ -435,7 +416,6 @@
     "02f6f2121b164b52.jpg",
     "1967862ac0d28f1e.jpg",
     "7c03ef0bf0ebf597.jpg",
-    "90b03d44b8b7b9b4.jpg",
-    "d0d1bc40b09922b2.jpg"
+    "90b03d44b8b7b9b4.jpg"
   ]
 }
