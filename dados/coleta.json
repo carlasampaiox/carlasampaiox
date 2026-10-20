@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-19T16:25:47+00:00",
+  "geradoEm": "2026-10-20T14:16:10+00:00",
   "fonte": "coletor (GitHub Actions)",
   "itens": [
     {
@@ -54,8 +54,8 @@
         "title": "Produzir ficou mais barato: como a IA mudou o negócio dos finfluencers",
         "url": "https://www.youtube.com/watch?v=1Vv8mnXOFNo",
         "date": "2026-10-13",
-        "signal": "64 visualizações, 0 curtidas",
-        "summary": "Vídeo publicado em 13/10, com 64 visualizações, 0 curtidas.",
+        "signal": "105 visualizações, 0 curtidas",
+        "summary": "Vídeo publicado em 13/10, com 105 visualizações, 0 curtidas.",
         "origem": "coletor"
       }
     },
@@ -80,22 +80,24 @@
     },
     {
       "brandId": "mycapital",
-      "colecao": "news",
+      "colecao": "compnews",
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Carteira de renda fixa com juros mensais busca 120% do CDI com isenção de IR",
-        "url": "https://oespecialista.safra.com.br/carteira-renda-fixa-juros-mensais-safra/",
-        "source": "Safra",
-        "date": "2026-10-16",
-        "tag": "IR",
+        "kind": "noticia",
+        "competitorId": "c2",
+        "competitorName": "Gorila",
+        "title": "Gorila \"Bili\" é resgatada do tráfico ilegal, passa por reabilitação e é transferida para o Congo",
+        "url": "https://www.cnnbrasil.com.br/ciencia/gorila-bili-e-resgatada-do-trafico-ilegal-passa-por-reabilitacao-e-e-transferida-para-o-congo/",
+        "source": "CNN Brasil",
+        "date": "2026-10-19",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMigAFBVV95cUxOYUkyUEJFMEZHZ1pUajhhTG5LSnVkVHJWM0tnbkJka09WZXJPcC1CVm13TVE2NVE2UWZYR3ltZmk5dDg0cHNDNWNtY1ZEUFVZNzNtOVNMT2IyXzlVY3k4czFXbV8tZTlaUzZxeEltSFdaZS1XaGVJSHlhUjYydDE0YQ?oc=5"
+        "https://news.google.com/rss/articles/CBMiywFBVV95cUxQNzNKSkFkbVVZMV9rMVF4ZW91UTEzdHJTemxqM0V6R0JxRmU4YzcxMjl1QjRXbkZfcGd1cGNtQjMyNHlWQjhYR1RJdUszaFNNS1FKaG1GcEw0clBuYWJVOU1UVU45WEYxcDFFM25wTndCZE96SHZUcDFqRFk2UW9vaTIzVzE0OWtXUUJucWktVHRwNm1rNEVCQjgzTkVBZTBaZ2Rib1p3WUxoOElhN3IwSERvYWZEMVNKOTF2VHZYWnRRbE1RdmNVLW8xbw?oc=5"
       ],
-      "contexto": "Carteira de renda fixa com juros mensais busca 120% do CDI com isenção de IR Portfólio busca oferecer fluxo recorrente de pagamentos, com retorno estimado de 120% do CDI considerando a isenção de Imposto de Renda para pessoa física. 3 minutos Publicado em A carteira de Renda Fixa Juros Mensais do Banco Safra foi atualizada em outubro com cinco mudanças na..."
+      "contexto": "Gorila \"Bili\" é resgatada do tráfico ilegal, passa por reabilitação e é transferida para o Congo Bili foi salva na Nigéria e agora passa por processo de reabilitação no Instituto Jane Goodall para tentar voltar à vida selvagem Se Bili, a gorila das planícies ocidentais, estava nervosa, ela não demonstrava. Momentos antes, a macaca havia sido solta em um..."
     },
     {
       "brandId": "mycapital",
@@ -160,18 +162,37 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Há imposto de renda na Arábia Saudita? Guia tributário 2026",
-        "url": "https://vision2030.ai/pt/enciclopedia/imposto-de-renda-arabia-saudita/",
-        "source": "vision2030.ai",
-        "date": "2026-10-14",
+        "title": "Receita Federal envia cartas a 498 mil brasileiros por erros no Imposto de Renda",
+        "url": "https://opetroleo.com.br/receita-federal-envia-cartas-a-498-mil-brasileiros-por-erros-no-imposto-de-renda/",
+        "source": "O Petróleo",
+        "date": "2026-10-20",
         "tag": "IR",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMiekFVX3lxTFBScU15TDVuYkV0WUtvZHNQamh5eUpMd2NwRGttSUs1Wnh4QXdHOVBWNXNJUkFpc3k1dEZVQnZ3S0pXWC1nSjhsR3ZNNDJ1Y2xCaUViWWVUdVVRc091S2ZDWmZtNkNhMWdsMGJfLUY4c1pOMUJIOUhwU1ZR?oc=5"
+        "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOanB4c2NUQXd1WFNMQnJ3UVFUdC1vMHdfWWZHblBTQzhwS1dQX0VEckpoSkFIc0lFemJscTJQZThNdkJKY2ljUzRiei1OcmY4QVF2cHpQSjU1ZlY4Wm5IQjU0cXJJZFVGOEtJY3VTQk1KcWZCaFpLcnVKWTNSalJtRE1ydjNyZVFNdnU0SkVQUFVBZzJlSmlrMThUNlBEY0hSOUc4WXQ5U0VNQQ?oc=5"
       ],
-      "contexto": "Não: em 2026, a Arábia Saudita não cobra imposto de renda pessoal sobre salários ou remunerações. Ainda assim, antes de considerar o Reino um destino inteiramente livre de impostos, pessoas físicas precisam entender o sistema tributário mais amplo, IVA, zakat, imposto corporativo, retenção na fonte e obrigações fiscais no país de origem, , sejam..."
+      "contexto": "A Receita Federal está enviando cartas a 498.487 contribuintes que tiveram a declaração do Imposto de Renda 2026 retida na malha fina. As correspondências começaram a ser postadas em 5 de outubro, com envios semanais previstos até esta terça-feira (20)."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Banco do Brasil lança 'Cofrinho de Proventos' para reinvestir dividendos de forma automática, mas tem um ponto de atenção",
+        "url": "https://www.seudinheiro.com/2026/renda-fixa/banco-do-brasil-lanca-cofrinho-de-proventos-para-reinvestir-dividendos-mlim/",
+        "source": "Seu Dinheiro",
+        "date": "2026-10-19",
+        "tag": "IR",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMivAFBVV95cUxOMTNuTWJqLXpEel9zVy1jdUZiQjNwSmRGRDdTTm4yYmkzTk9GNVBPRlVTX2VPM1RQaGhNZVBEOWYwUzIwX1d2SUVsWFNOWFRsTDA5RlMxZjZ3Zk5wTE5xWjZnOWpwbGF2NW04WTFWcU1TdnFiTkdEejlsNUFfbjMxSm1OamM5ZkRqcS1uMXBTOTJsS3hLbDFLcDQ2bGluNGRTa3FyOHJFeVRjUVhnalRXLU9Pam5PXzBCWDlzVQ?oc=5"
+      ],
+      "contexto": "Banco do Brasil lança ‘Cofrinho de Proventos’ para reinvestir dividendos de forma automática, mas tem um ponto de atenção Após atrair mais de R$ 1 bilhão para os Cofrinhos BB, banco lança ferramenta que separa e aplica automaticamente dividendos, JCP e rendimentos de FIIs As \"caixinhas\", \"cofrinhos\" e \"porquinhos\" que ajudam brasileiros a guardar dinheiro..."
     },
     {
       "brandId": "mycapital",
@@ -198,36 +219,18 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Opinião - Que imposto é esse: Efeitos colaterais da tributação de dividendos nas estruturas societárias",
-        "url": "https://www1.folha.uol.com.br/blogs/que-imposto-e-esse/2026/10/efeitos-colaterais-da-tributacao-de-dividendos-nas-estruturas-societarias.shtml",
-        "source": "Folha de S.Paulo",
-        "date": "2026-10-13",
-        "tag": "Dividendos",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMi2gFBVV95cUxORG1GV01BWXBMc2VUeTV1YW9tMVU4OVJySFg1QjBvbHNlS05IOHc0X0o1OVFrZlZCc0dDYXBSREF3dDJhSkRKU3FIOEJpWjlCWjh5TnhVV283TlRWVEUwR2NyVXNZTGU3dVdwM1lELURXblF5QlItTXdRMUxneFpMNGc3S29uc1d5a1pEQzBQQUdYY1ltcGFrTFBSempkMkpWaHl2bWFoUHVsWnBERkV0Um01VHJXNS1CM0FuTzlYR0E2eUh2Yk5jQWs5cGIxT0xxRXFldUNiVnZLQQ?oc=5"
-      ],
-      "contexto": "A tributação de dividendos se tornou realidade. Com a sanção da Lei nº 15.270/2025, a distribuição de lucros passou, a partir de 2026, a estar sujeita à retenção de IR na fonte, à alíquota de 10%, quando paga a pessoas físicas ou beneficiários não residentes."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
         "title": "Nova tributação de dividendos deve ser prioridade na agenda de fim de ano das empresas",
-        "url": "https://fenafisco.org.br/amp/16/10/2026/nova-tributacao-de-dividendos-deve-ser-prioridade-na-agenda-de-fim-de-ano-das-empresas/",
-        "source": "Fenafisco",
-        "date": "2026-10-16",
+        "url": "https://www.jota.info/opiniao-e-analise/artigos/nova-tributacao-de-dividendos-deve-ser-prioridade-na-agenda-de-fim-de-ano-das-empresas",
+        "source": "JOTA Info",
+        "date": "2026-10-15",
         "tag": "Dividendos",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMixgFBVV95cUxQMTQwUEQ3MGhYNTEyU2thLXFXcndITE9FcmRWaUV3eU9Nbnc1RTd6REtzeVZOb0JDRE9RT2N2M0o0YTV5Q1I0NERwNWZHd1dEdjN0ZDJMTFdFbmxqZl9oV05OUy04QVlQdWN5dHhFQlNycDF3ckNhbnQ2akxJTXp0WVRZREN2dmlReXU5OE5tbWRTSHJ4eHdLeEZGbGhnS1N2cDljMGd3WmV1aFRJY2VxR0VZVHZxZ2dOZ0tYaUk1T0JyeWFxTEHSAcYBQVVfeXFMUDE0MFBENzBoWDUxMlNrYS1xV3J3SExPRXJkVmlFd3lPTW53NUU3ekRLc3lWTm9CQ0RPUU9jdjNKNGE1eUNSNDREcDVmR3dXRHYzdGQyTExXRW5samZfaFdOTlMtOEFZUHVjeXR4RUJTcnAxd3JDYW50NmpMSU16dFlUWURDdnZpUXl1OThObW1kU0hyeHh3S3hGRmxoZ0tTdnA5YzBnd1pldWhUSWNlcUdFWVR2cWdnTmdLWGlJNU9CcnlhcUxB?oc=5"
-      ]
+        "https://news.google.com/rss/articles/CBMizwFBVV95cUxOWXFUMEU1WWpMUEVOX1c3dEh6bFRvb2wtd2VyX0hjd1VxUXI1SUF0U1hFSHkwdWxXTXQ2eGFNQU5IR3YyejZyME1BR0JkQ3Nub0hTOGpEcjB6X2dNbWJmQ2pYRzVQejdwY0xoX29vbXo1MTdNMS1jNHBIRTRNTHNVRGJNemV1WHpoVUNrdG9pZUt6bk94UHBtYkRJaUhoT1NPRWxiMS12cC1VUlVlbW5rVE40OEVFWXdmeVRzOFoxMmMwQzJRRDR3MWpRRE9fd2s?oc=5"
+      ],
+      "contexto": "InícioOpinião & AnáliseArtigos Tributário Nova tributação de dividendos deve ser prioridade na agenda de fim de ano das empresas Planejamento societário feito ainda em 2026 evita penalidades e preserva a liquidez da companhia"
     },
     {
       "brandId": "mycapital",
@@ -273,17 +276,13 @@
       "mediaType": "",
       "doc": {
         "title": "A tributação que surpreende fãs de ETFs de renda mensal",
-        "url": "https://www.spacemoney.com.br/investimentos/etfs/etfs-covered-call-renda-mensal-imposto/",
+        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQZklDUVRLb21SOW1ZZ0FkSzBUMjA2UzFRVlBPNS1UMUJVYnFqYnhteFcyZ0NrSW9TOC1qbVVmREJfcVdBaGgxY3l0N0JVRWdjbHc2QlM4VXJ5eVloRGNGeU1jSVNBaW8wMFQ2Ty01NnF6R3E3Ukd4eDdxNkI5TW9uX2l1amIzUWZMZ25tcC02Y2RfQQ?oc=5",
         "source": "SpaceMoney",
         "date": "2026-10-19",
         "tag": "Dividendos",
         "summary": "",
         "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMikgFBVV95cUxQZklDUVRLb21SOW1ZZ0FkSzBUMjA2UzFRVlBPNS1UMUJVYnFqYnhteFcyZ0NrSW9TOC1qbVVmREJfcVdBaGgxY3l0N0JVRWdjbHc2QlM4VXJ5eVloRGNGeU1jSVNBaW8wMFQ2Ty01NnF6R3E3Ukd4eDdxNkI5TW9uX2l1amIzUWZMZ25tcC02Y2RfQQ?oc=5"
-      ],
-      "contexto": "Investidores da geração boomer estão aderindo à promessa de renda mensal dos ETFs de covered call, mas podem ser pegos de surpresa pela tributação, segundo reportagem da CNBC publicada nesta segunda-feira. Esses fundos, geridos ativamente, mantêm ações e vendem opções de compra ou usam derivativos semelhantes para gerar caixa."
+      }
     },
     {
       "brandId": "mycapital",
@@ -292,17 +291,58 @@
       "mediaType": "",
       "doc": {
         "title": "Dividendos e JCP: dona da Vivo (VIVT3) vai distribuir R$ 450 milhões em proventos; confira os prazos",
-        "url": "https://www.seudinheiro.com/2026/empresas/telefonica-brasil-vivt3-aprova-r-450-milhoes-em-juros-sobre-capital-proprio-ccgg/",
+        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQVDA2SGJEaGQ3X1ZQWWhQNndoc1JwaFRnZll6V2NWeGl6bnRfM01EdHJ3MkNBd3ZWdXl5LUl5bmEzbDNWSkNBVm9xREIwNWJXRV82clNtSnFlcWVuYVd0dWxBbjNiUzNFTzRCMzlQbXFHX2ViQ3FZUk1sT3ZxWDR2SDRKdThBcmczZW9MMHNjMFRueEVlMDlhYl9kejZiRVhobGpTQmNGT3JHYnBOUkR3TTBpejRCcjdkWmp5U3FuRHY?oc=5",
         "source": "Seu Dinheiro",
         "date": "2026-10-14",
         "tag": "Dividendos",
         "summary": "",
         "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQVDA2SGJEaGQ3X1ZQWWhQNndoc1JwaFRnZll6V2NWeGl6bnRfM01EdHJ3MkNBd3ZWdXl5LUl5bmEzbDNWSkNBVm9xREIwNWJXRV82clNtSnFlcWVuYVd0dWxBbjNiUzNFTzRCMzlQbXFHX2ViQ3FZUk1sT3ZxWDR2SDRKdThBcmczZW9MMHNjMFRueEVlMDlhYl9kejZiRVhobGpTQmNGT3JHYnBOUkR3TTBpejRCcjdkWmp5U3FuRHY?oc=5"
-      ],
-      "contexto": "Dividendos e JCP: dona da Vivo (VIVT3) vai distribuir R$ 450 milhões em proventos; confira os prazos O valor líquido, após a retenção de Imposto de Renda na fonte à alíquota de 17,5%, será de R$ 371,25 milhões Os acionistas da Telefônica Brasil (VIVT3) devem ficar atentos: a dona da Vivo aprovou nesta quarta-feira (14) a distribuição de R$ 450 milhões em..."
+      }
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Descubra agora 3 ETFs que pagam dividendos mensais",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9ZSHB2Y0xtbE4zU19qVEthb3c4ckdHTGktT1l4VnphSEN3VHBDZEgxQlRFcWI1UVlMdjVoTHhLb1ZrdmJOX3hkbU1ScVhNbkFnY2RjWXhteGt6dkwxM0FmeVNkaGdEUWRs0gFuQVVfeXFMUDJ5dEZIOE1qdWRYd1RfcGhLemk0dVM2Y25ERjZIX3RsS1d5TUpHU2hxYUdUY1dmNlRWcjVjdkNoY3Zfdy1pMS16a0JLdkNoOHZ0VmxfUFZJTUFQMGdEX3Z3ZTRLTTNRb3VHN0U5QUE?oc=5",
+        "source": "Nord Investimentos",
+        "date": "2026-10-19",
+        "tag": "Dividendos",
+        "summary": "",
+        "origem": "coletor"
+      }
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Imposto de Renda 2026: Receita Federal conclui envio de 498.487 cartas para regularizar malha fina online",
+        "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPc1gxMkxzTnNhTlNrRWZEZTNGLTdqa3U0YWU4ZWI4azJtUTlaRkVGcVVybF9FOWIteU9IWGVwM0VSMHdDQXNnbHhCdUhRUndia0I5M2N2NGFnXzcwM2FBbm9VUEgya3JrbUc0eWVUakFIMi1VdERPbm1zazZuRWRrN01KVjZIMkpVeG8yN2liQlRCZENKN0I1ZXRkck83dEpNSmNTbUdid3ZVTWxvX0tfS3JjSmpKV0g2Q2NiclBZcVNrLTY2aFNjRjh4MXFuZDBmZkdXR183Mlo2ZzjSAdsBQVVfeXFMT3NYMTJMc05zYU5Ta0VmRGUzRi03amt1NGFlOGViOGsybVE5WkZFRnFVcmxfRTliLXlPSFhlcDNFUjB3Q0FzZ2x4QnVIUVJ3YmtCOTNjdjRhZ183MDNhQW5vVVBIMmtya21HNHllVGpBSDItVXRET25tc2s2bkVkazdNSlY2SDJKVXhvMjdpYkJUQmRDSjdCNWV0ZHJPN3RKTUpjU21HYnd2VU1sb19LX0tyY0pqSldINkNjYnJQWXFTay02NmhTY0Y4eDFxbmQwZmZHV0dfNzJaNmc4?oc=5",
+        "source": "Mix Vale",
+        "date": "2026-10-20",
+        "tag": "Declaração",
+        "summary": "",
+        "origem": "coletor"
+      }
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Receita Federal envia cartas a 498 mil na malha fina do IRPF",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOWnhtWUhnQ090ZjBoZFBJQUhseFpIZzhNbi1KXzE5QmRSa3BLODI5OGxuc0dsMVplMFdGaXhORW1CS2JkQzJmMU1CZEZWWHFFZU1TR0lnNHJMMjBlS05WVDc3RnFLTWhobUc4ZWdNcnpqZXFZaTQ4NmpqdE9LUUNxVzY5YzBSX1pvM0Q4OWJHN3Vmd1hacFoyTzhyWTlGM1lN0gGgAUFVX3lxTE5aeG1ZSGdDT3RmMGhkUElBSGx4WkhnOE1uLUpfMTlCZFJrcEs4Mjk4bG5zR2wxWmUwV0ZpeE5FbUJLYmRDMmYxTUJkRlZYcUVlTVNHSWc0ckwyMGVLTlZUNzdGcUtNaGhtRzhlZ01yemplcVlpNDg2amp0T0tRQ3FXNjljMFJfWm8zRDg5Ykc3dWZ3WFpwWjJPOHJZOUYzWU0?oc=5",
+        "source": "Mix Vale",
+        "date": "2026-10-20",
+        "tag": "Declaração",
+        "summary": "",
+        "origem": "coletor"
+      }
     },
     {
       "brandId": "mycapital",
@@ -311,16 +351,13 @@
       "mediaType": "",
       "doc": {
         "title": "Receita Federal prepara lote residual do IRPF de outubro de 2026",
-        "url": "https://www.mixvale.com.br/2026/10/18/receita-federal-prepara-lote-residual-do-irpf-de-outubro-de-2026/",
+        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxORjMtZkpzNnEtcTVaZ295S3d6dDdYdnRIcHZjVkt5SkNTc0FxeUdubW9NZkZSRHhWQ1UxMEdoYXdBYlp2Mk9mRTBhbmw3aTQ4Q1FUUGd6QmtwcVlIM0lsUmVCcnBWZ3NqS29lMFZjZDdwbmxIcjJYakR5d0E4enU3SFJkbElWNkRvXzk3RU45UHAyNGUydGx5VTNMQmNiVXZhNTF4dVVR0gGrAUFVX3lxTFBzTEU5S09ISUNsaUVKeHNnMHp4VnNDZm9xbXdGWllNMXBaYjBwbDkwNUNiZW5QZFdFSDB4LWx3ZHBNU3JSMVU2dmIzUi02aHlsWjByZGVtX1M4TEMzbVpMUm4xb1o3SjdJQ0RzWlhKU2ViYlE1ekVDWEdQeGxIMzBGN0hpZ2hLY2tzbFkwRTZpbWh3djhYS1ZkXzhfd1JZVnlfaExkeGd4azU1UQ?oc=5",
         "source": "Mix Vale",
         "date": "2026-10-19",
         "tag": "Declaração",
         "summary": "",
         "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMipgFBVV95cUxORjMtZkpzNnEtcTVaZ295S3d6dDdYdnRIcHZjVkt5SkNTc0FxeUdubW9NZkZSRHhWQ1UxMEdoYXdBYlp2Mk9mRTBhbmw3aTQ4Q1FUUGd6QmtwcVlIM0lsUmVCcnBWZ3NqS29lMFZjZDdwbmxIcjJYakR5d0E4enU3SFJkbElWNkRvXzk3RU45UHAyNGUydGx5VTNMQmNiVXZhNTF4dVVR0gGmAUFVX3lxTE5GMy1mSnM2cS1xNVpnb3lLd3p0N1h2dEhwdmNWS3lKQ1NzQXF5R25tb01mRlJEeFZDVTEwR2hhd0FiWnYyT2ZFMGFubDdpNDhDUVRQZ3pCa3BxWUgzSWxSZUJycFZnc2pLb2UwVmNkN3BubEhyMlhqRHl3QTh6dTdIUmRsSVY2RG9fOTdFTjlQcDI0ZTJ0bHlVM0xCY2JVdmE1MXh1VVE?oc=5"
-      ]
+      }
     },
     {
       "brandId": "mycapital",
@@ -328,18 +365,14 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Concurso Receita Federal 2026 registra novas movimentações!",
-        "url": "https://blog.grancursosonline.com.br/concurso-receita-federal/",
-        "source": "Blog Gran Cursos Online",
-        "date": "2026-10-14",
+        "title": "Receita Federal notifica quase meio milhão de contribuintes que caíram na malha fina",
+        "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOQVlFcGxSOXBGSVFqS2FBemJTUmh6NlEzTzVtZXZ0ekVoWDBFS3RPOEJQWm9MRlo2aVhLRnRFYk9ZbndITF9CeFAxM01BZFRpeWtZYkpEME94UHI0MWJVZFpVNHBtVW9mMlVDbnFkMWp4MzdsZV8xSDdkS2NjVXV0WWh5SzNiTFdRd1pPbFJVbmt3bnJfWVlOWWVrUWdmczQzZXJYNmR0V2xPMC1fSmtQMFJEUHh1Yl9YY3pmUWE1aExBSlZsRGZRZlc5MjZNMzhPZTJHbW1lQ3BmMnZRNTVZ0gHuAUFVX3lxTE1pWXNVRTdLQlcwY0FsWUJlV0FOLWhYQkkxRXk0QnowcVl0em54MWh5Z2R5WEZUWVNBOGMyeTFmb3JwZzYyRVV0TTZ0c01zb0pHaldqYUh0dEFsa1AydVhkSXI4NEloTkpGTnYxbmV5NnpEY2lnbU9uOWFtV0NsXzdQZmJlcGZ2TWloV0JJTEp5WVQzS2hsWDU3Ny1kLWpUSzVydVNMcElRckFjOEYyTEhRSEl0S29zZTNpbUd4N1lyTDFuQzl1ZXUtN0M4TVFaRl9OeFVtVDBoLTNRMEF2V2YxV3ZHekgxSHBJNExFUmc?oc=5",
+        "source": "G1",
+        "date": "2026-10-20",
         "tag": "Declaração",
         "summary": "",
         "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMib0FVX3lxTE9hejhRVGhDTlBOelhOS1kzckF3N29OVnRnUlFkdGt1SUI1bEo2eFZFMGRoWU5reTFmd1daZE0yeU5HTWJiUE0tVFdvVkVNREd0N0N6SlJZdi12SGN1N1BQMUNGV2VERUh1U2UwMkQ3RQ?oc=5"
-      ],
-      "contexto": "O concurso Receita Federal avançou para uma nova etapa. O processo de escolha da banca organizadora recebeu 17 propostas, e a Receita Federal prevê concluir a contratação em outubro de 2026."
+      }
     },
     {
       "brandId": "mycapital",
@@ -347,17 +380,14 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Imposto de Renda 2026 exige registro de compra e venda de imóvel no Grupo 01 e no programa GCAP",
-        "url": "https://www.mixvale.com.br/2026/10/18/imposto-de-renda-2026-exige-registro-de-compra-e-venda-de-imovel-no/",
+        "title": "Imposto de Renda pode ter dedução para conselhos de segurança",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPRG1HQlEwZ25Jbzk5WEpqUGlyMXVpZGlqcHR2S2dxZTZ1NVloZWhNNGJBR3hIYnVyLTRXRXBDa0pHYkVFOEphbXYwRzlqQ2g4SnoyMWpoY2J5LXJDSUNyekMyclA4a0c2bGNWb0RwdDJJVHV2M2FIN3h0OTU3c0lMdjNaQUdIdU9OWC10cE5QQXZVMGdqNV84blR4c3VYbmZhUVHSAaIBQVVfeXFMT0RtR0JRMGduSW85OVhKalBpcjF1aWRpanB0dktncWU2dTVZaGVoTTRiQUd4SGJ1ci00V0VwQ2tKR2JFRThKYW12MEc5akNoOEp6MjFqaGNieS1yQ0lDcnpDMnJQOGtHNmxjVm9EcHQySVR1djNhSDd4dDk1N3NJTHYzWkFHSHVPTlgtdHBOUEF2VTBnajVfOG5UeHN1WG5mYVFR?oc=5",
         "source": "Mix Vale",
-        "date": "2026-10-18",
+        "date": "2026-10-19",
         "tag": "Declaração",
         "summary": "",
         "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNRTJaT28zbFRBTWxJYnJhWFRaVFc3YXhJUGthdEtrVEdmRlF0alFZUHNHUXlBd0JVYy1pNnNUdWNrWnI0NTVSMko0LXd4cVpTSjU0VU1HWVdOejE5ZmZlYlplcVZLa0tnS25iUGJPWlU4M2lCSVRDbWhJaFBqa3NhbmRrVm1ydTBYUlBLNm01WmpwOU9pSGljT1hKUjdBMDI5aDlfVzFDd1VZUdIBqgFBVV95cUxNRTJaT28zbFRBTWxJYnJhWFRaVFc3YXhJUGthdEtrVEdmRlF0alFZUHNHUXlBd0JVYy1pNnNUdWNrWnI0NTVSMko0LXd4cVpTSjU0VU1HWVdOejE5ZmZlYlplcVZLa0tnS25iUGJPWlU4M2lCSVRDbWhJaFBqa3NhbmRrVm1ydTBYUlBLNm01WmpwOU9pSGljT1hKUjdBMDI5aDlfVzFDd1VZUQ?oc=5"
-      ]
+      }
     },
     {
       "brandId": "mycapital",
@@ -365,75 +395,14 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Reforma Tributária: sua empresa terá de mudar os preços em 2027? Confira!",
-        "url": "https://jornalcontabil.com.br/noticia/reforma-tributaria-sua-empresa-tera-de-mudar-os-precos-em-2027-confira/",
-        "source": "Jornal Contábil",
-        "date": "2026-10-16",
+        "title": "Reforma tributária: a incerteza já está em vigor",
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOdWwzeTlTUU45LXNPT292QklteC0tbXhaQzltamhSTk02Y25KS0pEaXhpOHpTMzlVZDF3aENVcXV1OFRSX2pGR0RjaGtBd0dicHJvR2ttcjlZR2ptMTlyZndKM0RKcUc5UHM3VVA3ZFowcmRmM2ZaYVJVcWVuMWZtUW45d3dXbUZRRHc?oc=5",
+        "source": "Consultor Jurídico",
+        "date": "2026-10-17",
         "tag": "Declaração",
         "summary": "",
         "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMirgFBVV95cUxONTF6VUpfTU1MS3dWME5SSG9oR1dJVjBBSkYxTnp5MXljQkRjNXJZYldiSEM3ckxpczBWd3N1RnN2SWRTcHpFc3FhTlRTZWdGU2pMb0tCcE1ObzB6SkphajFETV93Smo1SGROdDUxVkx5TjZxNnRsS3FrdGpoTjlsc1E5cFM2dklUTWhOaFk4S0VhNEdEM3lNWEJpaV9Dbm5HOVNEbGc1eDIxVmNCNUHSAbMBQVVfeXFMUGJ2X054Y0FtbUlGTjJJbkphUERvVml0bGdXQm9Cdm9YLTdzSDJKOXhnVUwzTVVVZzhBMHU0ajNTSUtUYmxZRTRJMC0tSVRRNXdXczRxVnpYa25mSnlObnNZSkNsczd1eTJTcUNfSUlJcFNLbkVnOWs5Z3VVTXZON2R0R3dCLUZ4UTdWdl9MUFR6Z1FmNlBoaW1WSDgxZzFQZ3R5WkpLOXFab1cxbHl6QjBKcDg?oc=5"
-      ],
-      "contexto": "Reforma Tributária Reforma Tributária: sua empresa terá de mudar os preços em 2027?"
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Alíquotas do Imposto de Renda 2026: nova tabela e cálculos",
-        "url": "https://www.serasa.com.br/blog/aliquota/",
-        "source": "Serasa",
-        "date": "2026-10-15",
-        "tag": "Declaração",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1GSUl0VzJRUGI2ZTBpR2wyQ09FN3JYTWowYnFDUHk1SVpoNzM2dUk5cUM0alBwUlAybTV4NUxLN1hZX0FCa0MxaUFIc0dIX1NCVmc?oc=5"
-      ],
-      "contexto": "Como planejar financeiramente a educação dos filhos Como planejar financeiramente a educação dos filhos Data de publicação 15 de outubro de 202612 minutos de leitura Atualizado em: 20 de fevereiro de 2026 Categoria Educação financeiraTempo de leitura: 9 minutos Texto de: Time Serasa As alíquotas do Imposto de Renda tiveram mudanças importantes para 2026,..."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Imposto de Renda: prazo final é nesta sexta (29); veja como não errar",
-        "url": "https://clube.fm/noticias/imposto-de-renda-prazo-final-e-nesta-sexta-29-veja-como-nao-errar",
-        "source": "Clube FM Brasil",
-        "date": "2026-10-14",
-        "tag": "Declaração",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMilgFBVV95cUxPU3htR1Z0dDdScTgwSWZ6S3JTS2pUVXJjY1ZmeDRjbTc2QkhWZVRQV3dzdnZvdDNfamtHOGF2OTE4WHZaMGZGVHRCeTBWNVdLSDFPbFFqUXZPQjg1QzI5ZWRVSV9ScDBCbmRXM3U3Zk13MzdmYlRFRllyblUtT0JFd2hpREotWjRybnJUZVM3c2pOZHRuZ3c?oc=5"
-      ],
-      "contexto": "Imposto de Renda: prazo final é nesta sexta (29); veja como não errar Por Redação Clube FM - Brasília - Atualizado O prazo acaba dia 29; saiba quem precisa declarar, como usar a pré-preenchida e evite a multa de R$ 165 mesmo com documentos pendentes Iris Aguiar - Estado de Minas O prazo para a entrega da declaração do Imposto de Renda 2026 termina nesta..."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Crianças e adolescentes têm R$ 3,5 bilhões investidos na Bolsa, aponta B3",
-        "url": "https://bpmoney.com.br/mercado/criancas-e-adolescentes-tem-r-35-bilhoes-investidos-na-bolsa-aponta-b3/",
-        "source": "BPMoney",
-        "date": "2026-10-12",
-        "tag": "Mercado",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMipAFBVV95cUxPLUJ6dHd0STM1VFhyeWEtRmhfYlR1YmlZRkFZMGU1TG02ZUU1RU8xdUhHbGNhQjEzTTc4Y3NJb0t0aEZkRzExN1lZdEpwVzJDcGNVQ2ItNUdsZEgxSWkzdUwyaWlabjBrLVphWWlBZ0hmcTJOaEwxbTBnNHJMUVdkSFliZ1FmenQzRHYwVU8yRnJwWVF0RkhwLVU3c0F3R0E2dHFRZg?oc=5"
-      ],
-      "contexto": "Veja o resumo da notícia - Crianças e adolescentes brasileiros acumulam R$ 3,5 bilhões em investimentos de renda variável, segundo dados da B3. - O número de investidores menores de 17 anos atingiu 60,8 mil, um crescimento de 58% desde dezembro de 2022."
+      }
     },
     {
       "brandId": "mycapital",
@@ -442,17 +411,13 @@
       "mediaType": "",
       "doc": {
         "title": "Petrobras (PETR4) recebe US$ 859 mi, B3 (B3SA3) vê volume em ações subir 46% e Cyrela (CYRE3) vende menos",
-        "url": "https://trademap.com.br/noticias/news-8423241",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5jbEVBazA5di1LV0dQVEc3ZXNfWUVMNWZZclhSajBReEZCeFJUVUlhZGUwVnJEcVh5Nlo2WDkyazh4U0cxSTVxdmc1aGNUbmJZclBoelhFVjM?oc=5",
         "source": "TradeMap",
         "date": "2026-10-14",
         "tag": "Mercado",
         "summary": "",
         "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5jbEVBazA5di1LV0dQVEc3ZXNfWUVMNWZZclhSajBReEZCeFJUVUlhZGUwVnJEcVh5Nlo2WDkyazh4U0cxSTVxdmc1aGNUbmJZclBoelhFVjM?oc=5"
-      ],
-      "contexto": "Nesta quarta-feira (14), a Petrobras (PETR4) embolsa mais R$ 2,8 bilhões em subvenções aos combustíveis, a Axia reduz sua fatia nas preferenciais da ISA Energia (ISAE4) e o Magazine Luiza (MGLU3) evita confirmar estimativa de ganho com a crise da Casas Bahia, enquanto Vivara (VIVA3) e Mitre (MTRE3) também estão no radar. Petrobras (PETR4) A Petrobras..."
+      }
     }
   ],
   "avisos": [
