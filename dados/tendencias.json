@@ -1,57 +1,13 @@
 {
   "geo": "BR",
   "periodo": "today 1-m",
-  "termos": [
-    {
-      "termo": "ir ações",
-      "subindo": [],
-      "top": [
-        {
-          "busca": "isenção ir ações",
-          "valor": 100
-        }
-      ],
-      "interesse": [
-        {
-          "data": "2026-10-13T00:00:00+00:00",
-          "valor": 39
-        },
-        {
-          "data": "2026-10-14T00:00:00+00:00",
-          "valor": 37
-        },
-        {
-          "data": "2026-10-15T00:00:00+00:00",
-          "valor": 38
-        },
-        {
-          "data": "2026-10-16T00:00:00+00:00",
-          "valor": 33
-        },
-        {
-          "data": "2026-10-17T00:00:00+00:00",
-          "valor": 22
-        },
-        {
-          "data": "2026-10-18T00:00:00+00:00",
-          "valor": 23
-        },
-        {
-          "data": "2026-10-19T00:00:00+00:00",
-          "valor": 42
-        },
-        {
-          "data": "2026-10-20T00:00:00+00:00",
-          "valor": 39
-        }
-      ]
-    }
-  ],
+  "termos": [],
   "emAlta": [],
   "avisos": [
     "Google Trends (imposto de renda): Google rate-limited the Explore data request; stop and back off.",
     "Google Trends (darf): Google rate-limited the Explore data request; stop and back off.",
-    "Google Trends (dividendos): Google rate-limited the Explore data request; stop and back off."
+    "Google Trends (dividendos): Google rate-limited the Explore data request; stop and back off.",
+    "Google Trends (ir ações): Google rate-limited the Explore data request; stop and back off."
   ],
-  "geradoEm": "2026-10-20T14:17:22+00:00"
+  "geradoEm": "2026-10-21T14:30:06+00:00"
 }

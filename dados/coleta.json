@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-20T14:16:10+00:00",
+  "geradoEm": "2026-10-21T14:28:09+00:00",
   "fonte": "coletor (GitHub Actions)",
   "itens": [
     {
@@ -16,8 +16,8 @@
         "title": "Será que tem DARF da bolsa atrasado? Descubra no Grana",
         "url": "https://www.youtube.com/watch?v=tzD4P8UjTQ4",
         "date": "2026-09-28",
-        "signal": "129 visualizações, 15 curtidas",
-        "summary": "Shorts publicado em 28/09, com 129 visualizações, 15 curtidas.",
+        "signal": "131 visualizações, 16 curtidas",
+        "summary": "Shorts publicado em 28/09, com 131 visualizações, 16 curtidas.",
         "origem": "coletor"
       }
     },
@@ -54,8 +54,8 @@
         "title": "Produzir ficou mais barato: como a IA mudou o negócio dos finfluencers",
         "url": "https://www.youtube.com/watch?v=1Vv8mnXOFNo",
         "date": "2026-10-13",
-        "signal": "105 visualizações, 0 curtidas",
-        "summary": "Vídeo publicado em 13/10, com 105 visualizações, 0 curtidas.",
+        "signal": "115 visualizações, 0 curtidas · 2,1x a mediana do canal",
+        "summary": "Vídeo publicado em 13/10, com 115 visualizações, 0 curtidas.",
         "origem": "coletor"
       }
     },
@@ -73,8 +73,8 @@
         "title": "IA de um lado, influencers do outro: qual o futuro do analista CNPI?",
         "url": "https://www.youtube.com/watch?v=-l4624f25ok",
         "date": "2026-10-05",
-        "signal": "42 visualizações, 0 curtidas",
-        "summary": "Vídeo publicado em 05/10, com 42 visualizações, 0 curtidas.",
+        "signal": "43 visualizações, 0 curtidas",
+        "summary": "Vídeo publicado em 05/10, com 43 visualizações, 0 curtidas.",
         "origem": "coletor"
       }
     },
@@ -105,6 +105,25 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
+        "title": "Recorde: Receita Federal devolve R$ 41 bilhões em restituições do Imposto de Renda",
+        "url": "https://exame.com/invest/minhas-financas/recorde-receita-federal-devolve-r-41-bilhoes-em-restituicoes-do-imposto-de-renda/",
+        "source": "Exame",
+        "date": "2026-10-21",
+        "tag": "IR",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMivwFBVV95cUxNVHpwRjRyLXRjaEdsaUV1T21ZQmtqamNKVjUtdVN5LXluNEdINTJKWFdMRVVQWWllaUZzaVZFa3RLTkx3eGlwd29jYVpNemw1U1dReEk5N1NLem1SMzFfUExCY3g0R2hTU2h4Ukh1bEFydkpKVmNLNkwtWDJRTXlpSkhRaWM0ZzU3R2EtT3dUZnhJYTA3d2tpZml1c1BTbW5OV2lfNWFUNkVybjlkLUZyeWIxNzktd3J3YW5rYTNKdw?oc=5"
+      ],
+      "contexto": ""
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
         "title": "LCI e LCA estão sumindo dos bancos e pagando menos: veja quando o CDB rende mais, mesmo com imposto",
         "url": "https://opetroleo.com.br/lci-e-lca-estao-sumindo-dos-bancos-e-pagando-menos-veja-quando-o-cdb-rende-mais-mesmo-com-imposto/",
         "source": "O Petróleo",
@@ -117,6 +136,25 @@
         "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNVWMyZEJybTV2Z0VhMGZ3UFZZWkVxRFJCOWl0STVaLXN2dkJZZzM4ME83NWVZR3FBZm1BcmFubXpXc0d3aG9qS1g1S2VuS3A5bEJzX2hlY2puWmQ2RHNHckhXZ0lYUWwta1JjcGgzMGpOUVJEM2xidUk1dmtNQmdsY3lYTUhZZ29CTTRjdlVHMnhUZ0llS1ZNdVl2NmRzNi1JTmtJc2NQVHVEdFBUWGRYQnpCcjJvU1VsSkx6RnNUMTU?oc=5"
       ],
       "contexto": "Durante anos, as Letras de Crédito Imobiliário (LCI) e do Agronegócio (LCA) conquistaram espaço nas carteiras dos brasileiros por uma vantagem: seus rendimentos são isentos de Imposto de Renda para pessoas físicas. Em 2026, entretanto, encontrar boas taxas nesses investimentos ficou mais difícil."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Declaração de apostas no Imposto de Renda 2026: Guia completo",
+        "url": "https://olhardigital.com.br/apostas/imposto-de-renda/",
+        "source": "Olhar Digital",
+        "date": "2026-10-19",
+        "tag": "IR",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMiY0FVX3lxTE12eGI5dEIyYVBjdHBuMW5LdmtBWV9uNkZ0SG5mRFJWajN1Yzdtb0NhUUx4djVRa21aV1psQW96emRSM0pXM2JodjhnTkVyMmtUTGlQTHZPUk9yUUY4NlBZR1EyUQ?oc=5"
+      ],
+      "contexto": "O imposto de renda sobre apostas online 2026 considera os prêmios do ano-calendário anterior. Portanto, quem apostou em uma plataforma bet deve informar os valores recebidos, mesmo que a soma de todas as premiações fique dentro da isenção para rendimentos tributáveis."
     },
     {
       "brandId": "mycapital",
@@ -185,7 +223,7 @@
         "url": "https://www.seudinheiro.com/2026/renda-fixa/banco-do-brasil-lanca-cofrinho-de-proventos-para-reinvestir-dividendos-mlim/",
         "source": "Seu Dinheiro",
         "date": "2026-10-19",
-        "tag": "IR",
+        "tag": "Dividendos",
         "summary": "",
         "origem": "coletor"
       },
@@ -193,25 +231,6 @@
         "https://news.google.com/rss/articles/CBMivAFBVV95cUxOMTNuTWJqLXpEel9zVy1jdUZiQjNwSmRGRDdTTm4yYmkzTk9GNVBPRlVTX2VPM1RQaGhNZVBEOWYwUzIwX1d2SUVsWFNOWFRsTDA5RlMxZjZ3Zk5wTE5xWjZnOWpwbGF2NW04WTFWcU1TdnFiTkdEejlsNUFfbjMxSm1OamM5ZkRqcS1uMXBTOTJsS3hLbDFLcDQ2bGluNGRTa3FyOHJFeVRjUVhnalRXLU9Pam5PXzBCWDlzVQ?oc=5"
       ],
       "contexto": "Banco do Brasil lança ‘Cofrinho de Proventos’ para reinvestir dividendos de forma automática, mas tem um ponto de atenção Após atrair mais de R$ 1 bilhão para os Cofrinhos BB, banco lança ferramenta que separa e aplica automaticamente dividendos, JCP e rendimentos de FIIs As \"caixinhas\", \"cofrinhos\" e \"porquinhos\" que ajudam brasileiros a guardar dinheiro..."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Tesouro Selic, Tesouro Reserva ou CDB: qual rende mais R$ 10 mil e onde vale a pena investir?",
-        "url": "https://opetroleo.com.br/tesouro-selic-tesouro-reserva-ou-cdb-qual-rende-mais-r-10-mil-e-onde-vale-a-pena-investir/",
-        "source": "O Petróleo",
-        "date": "2026-10-16",
-        "tag": "IR",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMitgFBVV95cUxNbGZkZkFrMWFKdDBEZFpuRlRMc0syY0RLVU1na0otQ25ocV84UGUtUWR2WFpucHN6dkNhbDN3RjlMZ0NSeW1CeDZ6MmtRWDcyNU14TWI0Q2oyLWJNeWZqNzJ0clI3MTRDQVJxQTN3MEF1dXhnUE0wNGVYWTNvcTBrZ2hUeng2NXlJR3dvS21zdVhVS2NvaVdXVjRKM2dCM1QxWFZiZTRGY3ZrRkp3c3owWW9GaEtjQQ?oc=5"
-      ],
-      "contexto": "Quem pretende investir R$ 10 mil em renda fixa encontra três alternativas que parecem semelhantes, mas apresentam diferenças capazes de afetar o rendimento líquido e a disponibilidade do dinheiro: Tesouro Selic, Tesouro Reserva e Certificado de Depósito Bancário (CDB). As três modalidades permitem acompanhar os juros da economia brasileira, mas não oferecem..."
     },
     {
       "brandId": "mycapital",
@@ -256,18 +275,18 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "UBRAFE obtém liminar que reduz retenção de Imposto de Renda sobre dividendos novo template",
-        "url": "https://portalradar.com.br/ubrafe-liminar-imposto-de-renda-dividendos/",
-        "source": "Portal Radar",
+        "title": "UBRAFE obtém decisão favorável sobre Imposto de Renda de dividendos",
+        "url": "https://www.portaleventos.com.br/news/UBRAFE-obtem-decisao-favoravel-sobre-Imposto-de-Renda-de-dividendos",
+        "source": "Portal Eventos",
         "date": "2026-10-14",
         "tag": "Dividendos",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMiekFVX3lxTE5Ud1ZuaFNfdWotakloVWR2djI2NlNQU000X3FldTgzd29yZ0dfMVhoeGJYQzVhc0VVY3JnTHZwejJzTmpJaElKbzdJYldJdTIyNlRqMVBDYXhZakYtQUljNVVzZy1QYWtDSno1Ylk0TEJncHlaTmRsNzZ3?oc=5"
+        "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQczRtWUZuUXF3d2tncHFQZFgzUGlEdlJCeVl0THBsRE1xVnBxZEZCRUxoNlpuTjZKeXpNZ0UwWWJFaUlyUnBENkl0UU9rcGZZMVZPU0dueEI4MExjY3MwVmFCZXdwSFhiQ1ZHVVJkWUxqcURCQV9hMjdFUm1Vc3FqWnVTdWxjd1ZiOGwwMGFEYTFlcW9NQk1NeVVkWDFQNEZ0UVlnMjhPbnU?oc=5"
       ],
-      "contexto": "A União Brasileira de Feiras e Eventos de Negócios (UBRAFE) obteve uma decisão favorável na Justiça Federal do Distrito Federal em uma disputa sobre a tributação de lucros e dividendos. A 4ª Vara Federal Cível concedeu parcialmente liminar em mandado de segurança coletivo que limita a retenção de IR sobre dividendos distribuídos pelas empresas associadas."
+      "contexto": "A União Brasileira de Feiras e Eventos de Negócios (UBRAFE) obteve uma decisão favorável na Justiça Federal do Distrito Federal em uma ação que questiona as regras de retenção do Imposto de Renda sobre lucros e dividendos. A liminar concedida pela 4ª Vara Federal Cível determina a aplicação de uma alíquota proporcional, em substituição à retenção fixa de..."
     },
     {
       "brandId": "mycapital",
@@ -276,13 +295,17 @@
       "mediaType": "",
       "doc": {
         "title": "A tributação que surpreende fãs de ETFs de renda mensal",
-        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQZklDUVRLb21SOW1ZZ0FkSzBUMjA2UzFRVlBPNS1UMUJVYnFqYnhteFcyZ0NrSW9TOC1qbVVmREJfcVdBaGgxY3l0N0JVRWdjbHc2QlM4VXJ5eVloRGNGeU1jSVNBaW8wMFQ2Ty01NnF6R3E3Ukd4eDdxNkI5TW9uX2l1amIzUWZMZ25tcC02Y2RfQQ?oc=5",
+        "url": "https://www.spacemoney.com.br/investimentos/etfs/etfs-covered-call-renda-mensal-imposto/",
         "source": "SpaceMoney",
         "date": "2026-10-19",
         "tag": "Dividendos",
         "summary": "",
         "origem": "coletor"
-      }
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMikgFBVV95cUxQZklDUVRLb21SOW1ZZ0FkSzBUMjA2UzFRVlBPNS1UMUJVYnFqYnhteFcyZ0NrSW9TOC1qbVVmREJfcVdBaGgxY3l0N0JVRWdjbHc2QlM4VXJ5eVloRGNGeU1jSVNBaW8wMFQ2Ty01NnF6R3E3Ukd4eDdxNkI5TW9uX2l1amIzUWZMZ25tcC02Y2RfQQ?oc=5"
+      ],
+      "contexto": "Investidores da geração boomer estão aderindo à promessa de renda mensal dos ETFs de covered call, mas podem ser pegos de surpresa pela tributação, segundo reportagem da CNBC publicada nesta segunda-feira. Esses fundos, geridos ativamente, mantêm ações e vendem opções de compra ou usam derivativos semelhantes para gerar caixa."
     },
     {
       "brandId": "mycapital",
@@ -291,13 +314,17 @@
       "mediaType": "",
       "doc": {
         "title": "Dividendos e JCP: dona da Vivo (VIVT3) vai distribuir R$ 450 milhões em proventos; confira os prazos",
-        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQVDA2SGJEaGQ3X1ZQWWhQNndoc1JwaFRnZll6V2NWeGl6bnRfM01EdHJ3MkNBd3ZWdXl5LUl5bmEzbDNWSkNBVm9xREIwNWJXRV82clNtSnFlcWVuYVd0dWxBbjNiUzNFTzRCMzlQbXFHX2ViQ3FZUk1sT3ZxWDR2SDRKdThBcmczZW9MMHNjMFRueEVlMDlhYl9kejZiRVhobGpTQmNGT3JHYnBOUkR3TTBpejRCcjdkWmp5U3FuRHY?oc=5",
+        "url": "https://www.seudinheiro.com/2026/empresas/telefonica-brasil-vivt3-aprova-r-450-milhoes-em-juros-sobre-capital-proprio-ccgg/",
         "source": "Seu Dinheiro",
         "date": "2026-10-14",
         "tag": "Dividendos",
         "summary": "",
         "origem": "coletor"
-      }
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQVDA2SGJEaGQ3X1ZQWWhQNndoc1JwaFRnZll6V2NWeGl6bnRfM01EdHJ3MkNBd3ZWdXl5LUl5bmEzbDNWSkNBVm9xREIwNWJXRV82clNtSnFlcWVuYVd0dWxBbjNiUzNFTzRCMzlQbXFHX2ViQ3FZUk1sT3ZxWDR2SDRKdThBcmczZW9MMHNjMFRueEVlMDlhYl9kejZiRVhobGpTQmNGT3JHYnBOUkR3TTBpejRCcjdkWmp5U3FuRHY?oc=5"
+      ],
+      "contexto": "Dividendos e JCP: dona da Vivo (VIVT3) vai distribuir R$ 450 milhões em proventos; confira os prazos O valor líquido, após a retenção de Imposto de Renda na fonte à alíquota de 17,5%, será de R$ 371,25 milhões Os acionistas da Telefônica Brasil (VIVT3) devem ficar atentos: a dona da Vivo aprovou nesta quarta-feira (14) a distribuição de R$ 450 milhões em..."
     },
     {
       "brandId": "mycapital",
@@ -305,14 +332,17 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Descubra agora 3 ETFs que pagam dividendos mensais",
-        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9ZSHB2Y0xtbE4zU19qVEthb3c4ckdHTGktT1l4VnphSEN3VHBDZEgxQlRFcWI1UVlMdjVoTHhLb1ZrdmJOX3hkbU1ScVhNbkFnY2RjWXhteGt6dkwxM0FmeVNkaGdEUWRs0gFuQVVfeXFMUDJ5dEZIOE1qdWRYd1RfcGhLemk0dVM2Y25ERjZIX3RsS1d5TUpHU2hxYUdUY1dmNlRWcjVjdkNoY3Zfdy1pMS16a0JLdkNoOHZ0VmxfUFZJTUFQMGdEX3Z3ZTRLTTNRb3VHN0U5QUE?oc=5",
-        "source": "Nord Investimentos",
-        "date": "2026-10-19",
-        "tag": "Dividendos",
+        "title": "Receita Federal restitui mais de R$41 bilhões de IRPF em 2026; valor é recorde",
+        "url": "https://thmais.com.br/noticias/receita-federal-restitui-mais-de-r41-bilhoes-de-irpf-em-2026-valor-e-recorde/",
+        "source": "THMais",
+        "date": "2026-10-21",
+        "tag": "Declaração",
         "summary": "",
         "origem": "coletor"
-      }
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMirAFBVV95cUxOT0tHQTJmRExWaFFfY0lJeG0tMU1zNTgwM1g2dkhEazhuV1hLUG14NVVjeHM2U0l2OUhnMjh3dzAycUtVVk82NHRUeTk4aUJWQmZ1ck5SVzByRmk4YUFPNXE5NGY2c3JEQWRmTkdKR2c4YlhxY2RRamRmV2QtSi1tbDd5MDlXbVpRWDJaT2RzV0o5MzJtSEVvVVVOUjhfVHRfNVN2TzM5SDNCTmMy?oc=5"
+      ]
     },
     {
       "brandId": "mycapital",
@@ -320,14 +350,55 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Imposto de Renda 2026: Receita Federal conclui envio de 498.487 cartas para regularizar malha fina online",
-        "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPc1gxMkxzTnNhTlNrRWZEZTNGLTdqa3U0YWU4ZWI4azJtUTlaRkVGcVVybF9FOWIteU9IWGVwM0VSMHdDQXNnbHhCdUhRUndia0I5M2N2NGFnXzcwM2FBbm9VUEgya3JrbUc0eWVUakFIMi1VdERPbm1zazZuRWRrN01KVjZIMkpVeG8yN2liQlRCZENKN0I1ZXRkck83dEpNSmNTbUdid3ZVTWxvX0tfS3JjSmpKV0g2Q2NiclBZcVNrLTY2aFNjRjh4MXFuZDBmZkdXR183Mlo2ZzjSAdsBQVVfeXFMT3NYMTJMc05zYU5Ta0VmRGUzRi03amt1NGFlOGViOGsybVE5WkZFRnFVcmxfRTliLXlPSFhlcDNFUjB3Q0FzZ2x4QnVIUVJ3YmtCOTNjdjRhZ183MDNhQW5vVVBIMmtya21HNHllVGpBSDItVXRET25tc2s2bkVkazdNSlY2SDJKVXhvMjdpYkJUQmRDSjdCNWV0ZHJPN3RKTUpjU21HYnd2VU1sb19LX0tyY0pqSldINkNjYnJQWXFTay02NmhTY0Y4eDFxbmQwZmZHV0dfNzJaNmc4?oc=5",
+        "title": "Isento declara Imposto de Renda? Entenda quando é obrigatório",
+        "url": "https://www.serasa.com.br/blog/isento-declara-imposto-de-renda/",
+        "source": "Serasa",
+        "date": "2026-10-20",
+        "tag": "Declaração",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMicEFVX3lxTE9Eb09Canl1MHFBQ3ViSk5tOGJuMmhXWVpadFlkRkg4aF9raUoyeUcxZHlJdllxUTdHQUJ2eWhrNzAzdU82eUdSRmFvUmQ5cFBaSmloYW5rakxzcVVhclhvYkY0N2EweENGZUs3UlVuVXY?oc=5"
+      ],
+      "contexto": "Índice Sortino: o que é e como usar para medir o risco de queda Índice Sortino: o que é e como usar para medir o risco de queda Data de publicação 21 de outubro de 202613 minutos de leitura Atualizado em: 20 de outubro de 2026 Categoria Educação financeiraTempo de leitura: 18 minutos Texto de: Time Serasa Saber se quem é isento declara Imposto de Renda..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Receita Federal paga R$ 41 bilhões em restituições do IRPF",
+        "url": "https://www.band.com.br/economia/macroeconomia/receita-federal-paga-r-41-bilhoes-em-restituicoes-do-irpf",
+        "source": "Band",
+        "date": "2026-10-20",
+        "tag": "Declaração",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMipwFBVV95cUxNaGJ5N3ZEc1NCaHJHcm5pb19rWnM3Mmk2VXZiN2tQRTZfMVlSb3QwUnN5Qk5lNHkxYUtxcl9xYm9TQVl4TkhWREtUYnd5LXNEVXdRUldhWHdBRndabzFTZktXVjdwUVN3ZUNPWDNwcXVaQkdBMk1Ld2lEOEpId0pMZnh0dUUxakptTjVhRnBUb05lal9sZGNNUFl0MXVkQUlvazNORktQYw?oc=5"
+      ],
+      "contexto": "Receita Federal paga R$ 41 bilhões em restituições do IRPF Em 2026, 25,9 milhões de contribuintes receberam restituição do Imposto de Renda no Brasil A Receita Federal encerrou o ciclo do Imposto de Renda da Pessoa Física (IRPF) de 2026 com marcas históricas em volume financeiro e rapidez no processamento. Ao todo, foram restituídos mais de R$ 41 bilhões a..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Isenção do IRPF 2026 e 2027 dispensa imposto de aposentados e pensionistas com 16 doenças graves",
+        "url": "https://www.mixvale.com.br/2026/10/20/isencao-do-irpf-2026-e-2027-dispensa-imposto-de-aposentados-e/",
         "source": "Mix Vale",
         "date": "2026-10-20",
         "tag": "Declaração",
         "summary": "",
         "origem": "coletor"
-      }
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMiogFBVV95cUxNaElDLS1yWkhZeHVCUlhpRXl6S0YxdDBLZjFnWlJtOWtaSkVRUHBhWmVkcUlKSEVhNHVMOGNDZ0FDdWpNd0RVbzJEb2xCUUNtYVduQUtlTVFXQmVleVRzbzV0bHAyNDE1T28wYzVILTU0ZURqM2J3QmFTVm5sQW1iUFVHWFVZYTFycWtPM1BOQ2RJdUZoSnBqajRCWldrZC1weHfSAacBQVVfeXFMTzFDMjZjVUpFcDFnNXl2MUExa0JKUVhOUTNOMWU4QUljY3p1ZTNfTGpzZ2dobmZtRkNqM203UHFKVTJCb3lrR3R6enRmaTN2M1VQNjhqSUMyMnRCRF9CWGtuSWpVQ3Z4QzV3NUxSZkUzUDdZTkZMcEdYcTBjX0hidmdFem9GbTVSdUZUQ2ZzZmhMbVdaT1lDTF9PSEhWRmpLU1VaY0JuZzg?oc=5"
+      ]
     },
     {
       "brandId": "mycapital",
@@ -335,14 +406,18 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Receita Federal envia cartas a 498 mil na malha fina do IRPF",
-        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOWnhtWUhnQ090ZjBoZFBJQUhseFpIZzhNbi1KXzE5QmRSa3BLODI5OGxuc0dsMVplMFdGaXhORW1CS2JkQzJmMU1CZEZWWHFFZU1TR0lnNHJMMjBlS05WVDc3RnFLTWhobUc4ZWdNcnpqZXFZaTQ4NmpqdE9LUUNxVzY5YzBSX1pvM0Q4OWJHN3Vmd1hacFoyTzhyWTlGM1lN0gGgAUFVX3lxTE5aeG1ZSGdDT3RmMGhkUElBSGx4WkhnOE1uLUpfMTlCZFJrcEs4Mjk4bG5zR2wxWmUwV0ZpeE5FbUJLYmRDMmYxTUJkRlZYcUVlTVNHSWc0ckwyMGVLTlZUNzdGcUtNaGhtRzhlZ01yemplcVlpNDg2amp0T0tRQ3FXNjljMFJfWm8zRDg5Ykc3dWZ3WFpwWjJPOHJZOUYzWU0?oc=5",
-        "source": "Mix Vale",
+        "title": "Em meio a recorde de restituições, Receita Federal envia cartas a 3,6 mil piauienses na malha fina",
+        "url": "https://portalodia.com/index.php/amp/noticias/piaui/em-meio-a-recorde-de-restituicoes-receita-federal-envia-cartas-a-36-mil-piauienses-na-malha-fina-467180.html",
+        "source": "Portal O Dia",
         "date": "2026-10-20",
         "tag": "Declaração",
         "summary": "",
         "origem": "coletor"
-      }
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOZWp1bXRsR1poOHJ0TDdvbHNpa1hUVEs0R0ZBU1FhaWxfQlBUQnhtdWRrRWR2OXdYaFVXU01BLUtGYTVlaGpwWTg1LVFVUDUwcW5HVG14RUNpVUFGRFprVm1kRGlvZHM2NzlEZkt2WFB1SlNXWFE0MFpra3pYeHlSTDVsTXJiSW5BbVBnR2xiNTdvaUVMZk1tSUNyOHdzRHhyd1RJX1pueGpxNi1EVzZGT2FVaF9YZkhSS21scHdLa0NSbUxfeU9Cb3VIR3Y1QXk4cmFETlJHUnB0aWhIeG1YekM3eC05T19WX2hCcnZYc2pTd9IB8gFBVV95cUxOZWp1bXRsR1poOHJ0TDdvbHNpa1hUVEs0R0ZBU1FhaWxfQlBUQnhtdWRrRWR2OXdYaFVXU01BLUtGYTVlaGpwWTg1LVFVUDUwcW5HVG14RUNpVUFGRFprVm1kRGlvZHM2NzlEZkt2WFB1SlNXWFE0MFpra3pYeHlSTDVsTXJiSW5BbVBnR2xiNTdvaUVMZk1tSUNyOHdzRHhyd1RJX1pueGpxNi1EVzZGT2FVaF9YZkhSS21scHdLa0NSbUxfeU9Cb3VIR3Y1QXk4cmFETlJHUnB0aWhIeG1YekM3eC05T19WX2hCcnZYc2pTdw?oc=5"
+      ],
+      "contexto": "A Receita Federal envia, até esta terça-feira (20), cartas a 498.487 pessoas físicas contribuintes de todo o país que estão com a declaração do Imposto de Renda 2026 retida na malha fina. No Piauí, serão 3.697 cartas enviadas aos contribuintes do estado."
     },
     {
       "brandId": "mycapital",
@@ -350,29 +425,18 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Receita Federal prepara lote residual do IRPF de outubro de 2026",
-        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxORjMtZkpzNnEtcTVaZ295S3d6dDdYdnRIcHZjVkt5SkNTc0FxeUdubW9NZkZSRHhWQ1UxMEdoYXdBYlp2Mk9mRTBhbmw3aTQ4Q1FUUGd6QmtwcVlIM0lsUmVCcnBWZ3NqS29lMFZjZDdwbmxIcjJYakR5d0E4enU3SFJkbElWNkRvXzk3RU45UHAyNGUydGx5VTNMQmNiVXZhNTF4dVVR0gGrAUFVX3lxTFBzTEU5S09ISUNsaUVKeHNnMHp4VnNDZm9xbXdGWllNMXBaYjBwbDkwNUNiZW5QZFdFSDB4LWx3ZHBNU3JSMVU2dmIzUi02aHlsWjByZGVtX1M4TEMzbVpMUm4xb1o3SjdJQ0RzWlhKU2ViYlE1ekVDWEdQeGxIMzBGN0hpZ2hLY2tzbFkwRTZpbWh3djhYS1ZkXzhfd1JZVnlfaExkeGd4azU1UQ?oc=5",
-        "source": "Mix Vale",
-        "date": "2026-10-19",
-        "tag": "Declaração",
-        "summary": "",
-        "origem": "coletor"
-      }
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Receita Federal notifica quase meio milhão de contribuintes que caíram na malha fina",
-        "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOQVlFcGxSOXBGSVFqS2FBemJTUmh6NlEzTzVtZXZ0ekVoWDBFS3RPOEJQWm9MRlo2aVhLRnRFYk9ZbndITF9CeFAxM01BZFRpeWtZYkpEME94UHI0MWJVZFpVNHBtVW9mMlVDbnFkMWp4MzdsZV8xSDdkS2NjVXV0WWh5SzNiTFdRd1pPbFJVbmt3bnJfWVlOWWVrUWdmczQzZXJYNmR0V2xPMC1fSmtQMFJEUHh1Yl9YY3pmUWE1aExBSlZsRGZRZlc5MjZNMzhPZTJHbW1lQ3BmMnZRNTVZ0gHuAUFVX3lxTE1pWXNVRTdLQlcwY0FsWUJlV0FOLWhYQkkxRXk0QnowcVl0em54MWh5Z2R5WEZUWVNBOGMyeTFmb3JwZzYyRVV0TTZ0c01zb0pHaldqYUh0dEFsa1AydVhkSXI4NEloTkpGTnYxbmV5NnpEY2lnbU9uOWFtV0NsXzdQZmJlcGZ2TWloV0JJTEp5WVQzS2hsWDU3Ny1kLWpUSzVydVNMcElRckFjOEYyTEhRSEl0S29zZTNpbUd4N1lyTDFuQzl1ZXUtN0M4TVFaRl9OeFVtVDBoLTNRMEF2V2YxV3ZHekgxSHBJNExFUmc?oc=5",
-        "source": "G1",
+        "title": "Malha fina: Receita Federal notifica 498 mil para regularizarem declaração",
+        "url": "https://agazetadoacre.com/2026/10/guia-gazeta-2/4o-guia-gazeta/malha-fina-receita-federal-notifica-498-mil-para-regularizarem-declaracao/",
+        "source": "A Gazeta do Acre",
         "date": "2026-10-20",
         "tag": "Declaração",
         "summary": "",
         "origem": "coletor"
-      }
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPYktNWk5oU1dSTy1XY0ZlVUVwelFYakh6RWlaR2EtNU4wTV96cERSOTlYdUlmU0NXcWVOa1J5TG9ibHUtUHJHeksyRThsOGVuMEpYSVNoU193VFk0US1XYVIxNWs3XzE3YVBsUVNwS0RqOU55MzVrMXM3cjNmNmM1cGk0UHZJNlM1dl9aN0JTZktURXJDX3RwTDhMc2RkUi12UXV0Wm9rS0FrdzR6ZTY3Sko1aEl6UzBOZ1JOTmYwTjFPSm5YeVI4dk1CcllkSkxFMVRv?oc=5"
+      ],
+      "contexto": "A Receita Federal conclui nesta terça-feira (20/10) o envio de notificações para de 498 mil pessoas físicas que caíram na malha fina. O motivo são informações inconsistentes na declaração do Imposto de Renda Pessoa Física (IRPF) 2026, ano-calendário 2025."
     },
     {
       "brandId": "mycapital",
@@ -380,44 +444,18 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Imposto de Renda pode ter dedução para conselhos de segurança",
-        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPRG1HQlEwZ25Jbzk5WEpqUGlyMXVpZGlqcHR2S2dxZTZ1NVloZWhNNGJBR3hIYnVyLTRXRXBDa0pHYkVFOEphbXYwRzlqQ2g4SnoyMWpoY2J5LXJDSUNyekMyclA4a0c2bGNWb0RwdDJJVHV2M2FIN3h0OTU3c0lMdjNaQUdIdU9OWC10cE5QQXZVMGdqNV84blR4c3VYbmZhUVHSAaIBQVVfeXFMT0RtR0JRMGduSW85OVhKalBpcjF1aWRpanB0dktncWU2dTVZaGVoTTRiQUd4SGJ1ci00V0VwQ2tKR2JFRThKYW12MEc5akNoOEp6MjFqaGNieS1yQ0lDcnpDMnJQOGtHNmxjVm9EcHQySVR1djNhSDd4dDk1N3NJTHYzWkFHSHVPTlgtdHBOUEF2VTBnajVfOG5UeHN1WG5mYVFR?oc=5",
-        "source": "Mix Vale",
-        "date": "2026-10-19",
-        "tag": "Declaração",
-        "summary": "",
-        "origem": "coletor"
-      }
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Reforma tributária: a incerteza já está em vigor",
-        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOdWwzeTlTUU45LXNPT292QklteC0tbXhaQzltamhSTk02Y25KS0pEaXhpOHpTMzlVZDF3aENVcXV1OFRSX2pGR0RjaGtBd0dicHJvR2ttcjlZR2ptMTlyZndKM0RKcUc5UHM3VVA3ZFowcmRmM2ZaYVJVcWVuMWZtUW45d3dXbUZRRHc?oc=5",
-        "source": "Consultor Jurídico",
-        "date": "2026-10-17",
-        "tag": "Declaração",
-        "summary": "",
-        "origem": "coletor"
-      }
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Petrobras (PETR4) recebe US$ 859 mi, B3 (B3SA3) vê volume em ações subir 46% e Cyrela (CYRE3) vende menos",
-        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5jbEVBazA5di1LV0dQVEc3ZXNfWUVMNWZZclhSajBReEZCeFJUVUlhZGUwVnJEcVh5Nlo2WDkyazh4U0cxSTVxdmc1aGNUbmJZclBoelhFVjM?oc=5",
-        "source": "TradeMap",
-        "date": "2026-10-14",
+        "title": "Imposto de Renda atrasado na bolsa: veja como regularizar",
+        "url": "https://seucreditodigital.com.br/imposto-de-renda-atrasado-na-bolsa/",
+        "source": "Seu Crédito Digital",
+        "date": "2026-10-21",
         "tag": "Mercado",
         "summary": "",
         "origem": "coletor"
-      }
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMid0FVX3lxTE1jeklndTFKd3NRZFYwalZvY2lUQ1pnelVGM2laVGxDZnhjNUFNSmpaSThXd1lRRDZSX3hPbGNycW9ZWlRWQnozY2xGbVZpdldudHlscHMzdGlYS3NtcWRta0pWQjlMV3U2Z29EWHcwUFlBaG5HUmlZ?oc=5"
+      ],
+      "contexto": "O pagamento do Imposto de Renda sobre operações na bolsa de valores está atrasado para 44,8% dos investidores gaúchos analisados em um levantamento da Grana Capital. O percentual fica abaixo da média nacional, de 50,1%, mas indica dificuldades no cumprimento das obrigações tributárias."
     }
   ],
   "avisos": [
