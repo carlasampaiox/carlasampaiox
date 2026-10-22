@@ -1,13 +1,362 @@
 {
   "geo": "BR",
   "periodo": "today 1-m",
-  "termos": [],
-  "emAlta": [],
-  "avisos": [
-    "Google Trends (imposto de renda): Google rate-limited the Explore data request; stop and back off.",
-    "Google Trends (darf): Google rate-limited the Explore data request; stop and back off.",
-    "Google Trends (dividendos): Google rate-limited the Explore data request; stop and back off.",
-    "Google Trends (ir ações): Google rate-limited the Explore data request; stop and back off."
+  "termos": [
+    {
+      "termo": "imposto de renda",
+      "subindo": [
+        {
+          "busca": "meu imposto de renda, receita federal",
+          "valor": "+60%"
+        },
+        {
+          "busca": "aliquota imposto de renda",
+          "valor": "+50%"
+        },
+        {
+          "busca": "declaração de isenção de imposto de renda",
+          "valor": "+50%"
+        },
+        {
+          "busca": "isenção de imposto de renda",
+          "valor": "+40%"
+        },
+        {
+          "busca": "isenção imposto de renda",
+          "valor": "+40%"
+        },
+        {
+          "busca": "declaração de imposto de renda mei",
+          "valor": "+40%"
+        }
+      ],
+      "top": [
+        {
+          "busca": "imposto de renda 2026",
+          "valor": 100
+        },
+        {
+          "busca": "declaração de imposto de renda",
+          "valor": 69
+        },
+        {
+          "busca": "declaração imposto de renda",
+          "valor": 69
+        },
+        {
+          "busca": "meu imposto de renda",
+          "valor": 68
+        },
+        {
+          "busca": "restituição de imposto de renda",
+          "valor": 57
+        },
+        {
+          "busca": "imposto de renda restituição",
+          "valor": 56
+        },
+        {
+          "busca": "declarar imposto de renda",
+          "valor": 46
+        },
+        {
+          "busca": "isenção de imposto de renda",
+          "valor": 39
+        }
+      ],
+      "interesse": [
+        {
+          "data": "2026-10-15T00:00:00+00:00",
+          "valor": 74
+        },
+        {
+          "data": "2026-10-16T00:00:00+00:00",
+          "valor": 63
+        },
+        {
+          "data": "2026-10-17T00:00:00+00:00",
+          "valor": 36
+        },
+        {
+          "data": "2026-10-18T00:00:00+00:00",
+          "valor": 31
+        },
+        {
+          "data": "2026-10-19T00:00:00+00:00",
+          "valor": 73
+        },
+        {
+          "data": "2026-10-20T00:00:00+00:00",
+          "valor": 100
+        },
+        {
+          "data": "2026-10-21T00:00:00+00:00",
+          "valor": 87
+        },
+        {
+          "data": "2026-10-22T00:00:00+00:00",
+          "valor": 69
+        }
+      ]
+    },
+    {
+      "termo": "darf",
+      "subindo": [
+        {
+          "busca": "emissão darf online",
+          "valor": "Breakout"
+        },
+        {
+          "busca": "darf 3208",
+          "valor": "+180%"
+        },
+        {
+          "busca": "emitir darf online",
+          "valor": "+130%"
+        },
+        {
+          "busca": "sicalcweb darf",
+          "valor": "+70%"
+        },
+        {
+          "busca": "darf online",
+          "valor": "+60%"
+        },
+        {
+          "busca": "darf on line",
+          "valor": "+60%"
+        },
+        {
+          "busca": "gerar darf imposto de renda",
+          "valor": "+50%"
+        }
+      ],
+      "top": [
+        {
+          "busca": "emitir darf",
+          "valor": 100
+        },
+        {
+          "busca": "pagar darf",
+          "valor": 100
+        },
+        {
+          "busca": "darf imposto de renda",
+          "valor": 80
+        },
+        {
+          "busca": "codigo darf",
+          "valor": 72
+        },
+        {
+          "busca": "pagamento darf",
+          "valor": 69
+        },
+        {
+          "busca": "darf receita federal",
+          "valor": 67
+        },
+        {
+          "busca": "mei darf",
+          "valor": 61
+        },
+        {
+          "busca": "darf online",
+          "valor": 52
+        }
+      ],
+      "interesse": [
+        {
+          "data": "2026-10-15T00:00:00+00:00",
+          "valor": 56
+        },
+        {
+          "data": "2026-10-16T00:00:00+00:00",
+          "valor": 49
+        },
+        {
+          "data": "2026-10-17T00:00:00+00:00",
+          "valor": 15
+        },
+        {
+          "data": "2026-10-18T00:00:00+00:00",
+          "valor": 10
+        },
+        {
+          "data": "2026-10-19T00:00:00+00:00",
+          "valor": 52
+        },
+        {
+          "data": "2026-10-20T00:00:00+00:00",
+          "valor": 63
+        },
+        {
+          "data": "2026-10-21T00:00:00+00:00",
+          "valor": 58
+        },
+        {
+          "data": "2026-10-22T00:00:00+00:00",
+          "valor": 44
+        }
+      ]
+    },
+    {
+      "termo": "dividendos",
+      "subindo": [
+        {
+          "busca": "o que sao dividendos",
+          "valor": "+180%"
+        },
+        {
+          "busca": "cury3",
+          "valor": "+160%"
+        },
+        {
+          "busca": "quais acoes pagam dividendos todo mes",
+          "valor": "+150%"
+        },
+        {
+          "busca": "divd11",
+          "valor": "+110%"
+        },
+        {
+          "busca": "grnd3",
+          "valor": "+100%"
+        },
+        {
+          "busca": "snag11",
+          "valor": "+100%"
+        },
+        {
+          "busca": "meus dividendos login",
+          "valor": "+90%"
+        },
+        {
+          "busca": "romi3 dividendos",
+          "valor": "+90%"
+        }
+      ],
+      "top": [
+        {
+          "busca": "o que é dividendos",
+          "valor": 100
+        },
+        {
+          "busca": "dividendos mxrf11",
+          "valor": 86
+        },
+        {
+          "busca": "mxrf11",
+          "valor": 83
+        },
+        {
+          "busca": "dividendos petrobras",
+          "valor": 83
+        },
+        {
+          "busca": "dividendos vale",
+          "valor": 78
+        },
+        {
+          "busca": "petr4",
+          "valor": 63
+        },
+        {
+          "busca": "petr4 dividendos",
+          "valor": 63
+        },
+        {
+          "busca": "dividendo",
+          "valor": 52
+        }
+      ],
+      "interesse": [
+        {
+          "data": "2026-10-15T00:00:00+00:00",
+          "valor": 83
+        },
+        {
+          "data": "2026-10-16T00:00:00+00:00",
+          "valor": 79
+        },
+        {
+          "data": "2026-10-17T00:00:00+00:00",
+          "valor": 46
+        },
+        {
+          "data": "2026-10-18T00:00:00+00:00",
+          "valor": 42
+        },
+        {
+          "data": "2026-10-19T00:00:00+00:00",
+          "valor": 69
+        },
+        {
+          "data": "2026-10-20T00:00:00+00:00",
+          "valor": 74
+        },
+        {
+          "data": "2026-10-21T00:00:00+00:00",
+          "valor": 74
+        },
+        {
+          "data": "2026-10-22T00:00:00+00:00",
+          "valor": 63
+        }
+      ]
+    },
+    {
+      "termo": "ir ações",
+      "subindo": [],
+      "top": [
+        {
+          "busca": "isenção ir ações",
+          "valor": 100
+        }
+      ],
+      "interesse": [
+        {
+          "data": "2026-10-15T00:00:00+00:00",
+          "valor": 55
+        },
+        {
+          "data": "2026-10-16T00:00:00+00:00",
+          "valor": 48
+        },
+        {
+          "data": "2026-10-17T00:00:00+00:00",
+          "valor": 31
+        },
+        {
+          "data": "2026-10-18T00:00:00+00:00",
+          "valor": 32
+        },
+        {
+          "data": "2026-10-19T00:00:00+00:00",
+          "valor": 65
+        },
+        {
+          "data": "2026-10-20T00:00:00+00:00",
+          "valor": 66
+        },
+        {
+          "data": "2026-10-21T00:00:00+00:00",
+          "valor": 58
+        },
+        {
+          "data": "2026-10-22T00:00:00+00:00",
+          "valor": 39
+        }
+      ]
+    }
   ],
-  "geradoEm": "2026-10-21T14:30:06+00:00"
+  "emAlta": [
+    {
+      "assunto": "restituição",
+      "trafego": "200+",
+      "publicado": "2026-10-22 07:10:00-07:00"
+    }
+  ],
+  "avisos": [],
+  "geradoEm": "2026-10-22T14:30:55+00:00"
 }

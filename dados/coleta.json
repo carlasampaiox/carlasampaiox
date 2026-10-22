@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-21T14:28:09+00:00",
+  "geradoEm": "2026-10-22T14:29:38+00:00",
   "fonte": "coletor (GitHub Actions)",
   "itens": [
     {
@@ -35,8 +35,8 @@
         "title": "Você investe, o Grana cuida do IR. 😎",
         "url": "https://www.youtube.com/watch?v=WurEiGR-heY",
         "date": "2026-09-29",
-        "signal": "86 visualizações, 6 curtidas",
-        "summary": "Shorts publicado em 29/09, com 86 visualizações, 6 curtidas.",
+        "signal": "89 visualizações, 6 curtidas",
+        "summary": "Shorts publicado em 29/09, com 89 visualizações, 6 curtidas.",
         "origem": "coletor"
       }
     },
@@ -54,8 +54,8 @@
         "title": "Produzir ficou mais barato: como a IA mudou o negócio dos finfluencers",
         "url": "https://www.youtube.com/watch?v=1Vv8mnXOFNo",
         "date": "2026-10-13",
-        "signal": "115 visualizações, 0 curtidas · 2,1x a mediana do canal",
-        "summary": "Vídeo publicado em 13/10, com 115 visualizações, 0 curtidas.",
+        "signal": "118 visualizações, 0 curtidas · 2,1x a mediana do canal",
+        "summary": "Vídeo publicado em 13/10, com 118 visualizações, 0 curtidas.",
         "origem": "coletor"
       }
     },
@@ -124,6 +124,25 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
+        "title": "Carteira de renda fixa com juros mensais busca 120% do CDI com isenção de IR",
+        "url": "https://oespecialista.safra.com.br/carteira-renda-fixa-juros-mensais-safra/",
+        "source": "Safra",
+        "date": "2026-10-16",
+        "tag": "IR",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMigAFBVV95cUxOYUkyUEJFMEZHZ1pUajhhTG5LSnVkVHJWM0tnbkJka09WZXJPcC1CVm13TVE2NVE2UWZYR3ltZmk5dDg0cHNDNWNtY1ZEUFVZNzNtOVNMT2IyXzlVY3k4czFXbV8tZTlaUzZxeEltSFdaZS1XaGVJSHlhUjYydDE0YQ?oc=5"
+      ],
+      "contexto": "Carteira de renda fixa com juros mensais busca 120% do CDI com isenção de IR Portfólio busca oferecer fluxo recorrente de pagamentos, com retorno estimado de 120% do CDI considerando a isenção de Imposto de Renda para pessoa física. A carteira de Renda Fixa Juros Mensais do Banco Safra foi atualizada em outubro com cinco mudanças na composição."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
         "title": "LCI e LCA estão sumindo dos bancos e pagando menos: veja quando o CDB rende mais, mesmo com imposto",
         "url": "https://opetroleo.com.br/lci-e-lca-estao-sumindo-dos-bancos-e-pagando-menos-veja-quando-o-cdb-rende-mais-mesmo-com-imposto/",
         "source": "O Petróleo",
@@ -162,37 +181,18 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "XP recomenda vender títulos do Tesouro Direto para comprar papéis isentos; veja as indicações na renda fixa",
-        "url": "https://www.seudinheiro.com/2026/renda-fixa/xp-recomenda-vender-titulos-do-tesouro-direto-para-comprar-papeis-isentos-veja-as-indicacoes-na-renda-fixa-mlim/",
-        "source": "Seu Dinheiro",
-        "date": "2026-10-14",
+        "title": "Grana Pro atinge marca de 2,5 mil escritórios contábeis e leva automação de cálculo de tributos em bolsa de valores a evento em São Paulo",
+        "url": "https://brasilinovador.com.br/grana-pro-atinge-marca-de-25-mil-escritorios-contabeis-e-leva-automacao-de-calculo-de-tributos-em-bolsa-de-valores-a-evento-em-sao-paulo/",
+        "source": "Brasil Inovador",
+        "date": "2026-10-21",
         "tag": "IR",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPQTcwYjZVY05kU3lsVVZORWZ4MmV3SXZYUzdwcXR0Zk4wcHA4MTJvdnRoNkRCRlNlTy1VOWE4MnY2VG1SN1ZJbXVXZU5zTWhPMFhVSnBfYWJDV0RNdUNUWHZTeW5qYUszME9hd0xwckZ3V3hCSmRzVU5uaW9zZVE2NnczbDlwbzRldE51NTRVc3N2N2dxZDhXQkd0UXB4c2NCVV9HN1YtMTFxbXZEOHFuQjczdWxZdDR5TWlvUGtlRjFqNThBeFpDbTMwUHprLXpDeWdyVkQtSC1XQW5XWTkyLUN5VENPbUJUWXB6Sw?oc=5"
+        "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPZ0w1VVNkMmFxXzRMYzJqY3Vma0tjVTgtaWQ3Vml0aDRfcExEUXo2SlZJT2FReWtHSXo2cjZnUm9fZzh0QzZJUUZIUFNiVHZhZm9RdmJVamZXbzgyeUdZbzQ4Ykx4TUQwR2JnZkdCcTlLd3BlVlFzZ0FNV2FtVXRWRlphalNLWk1fRTUxZmo1dmM3TnBCQy1GZ2NoeUJHancyY1pQWUJlLUJYOEdyNV9FSG8xVWVGWEcwcVVZeGx1d2lQQjNJSFQtc3NwOGVXenk1Um9kcnlBVm02Y2lINUg4bzZvWW1Bd2JXZjFObjhJaDlyM1pQMW1nR1R3Yw?oc=5"
       ],
-      "contexto": "XP recomenda vender títulos do Tesouro Direto para comprar papéis isentos; veja as indicações na renda fixa Crédito privado volta a oferecer remunerações mais atrativas, levando a corretora a recomendar uma migração gradual para debêntures incentivadas Os títulos prefixados e indexados à inflação do Tesouro Direto passaram por um rali intenso nas últimas..."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "FIIs pagam dividendos nesta quarta-feira; veja os 7 fundos que distribuem proventos",
-        "url": "https://bpmoney.com.br/mercado/fundos/fiis-dividendos-hoje-7-fundos-pagam-proventos/",
-        "source": "BPMoney",
-        "date": "2026-10-14",
-        "tag": "IR",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMijAFBVV95cUxNQk1HY19KbE9UZDBWbXlRY0YxNng5RlNxRU1CejczbEc4TFRmNlpXR0tPRUZOTnVrTFUwVHE3SVJ6SUMtaDJqMHl2aVI0amZqbWJrVHpuU0RwUkprb3lJMzVXeGRqWTJUaHB0bzlSVGIyTVVIZ0hRbHR2X0s5ZUFmWUdZR2E3Q051SlR3ZQ?oc=5"
-      ],
-      "contexto": "Resumo - Sete fundos imobiliários distribuem proventos a cotistas nesta quarta-feira - KNCR11 paga o maior valor da lista: R$ 1,13 por cota - KNIP11 aparece entre os destaques com R$ 0,60 por cota - Todos têm data com em 30/09/2026 e período de referência em setembro - O depósito cai de forma automática na corretora em que o CPF do investidor está..."
+      "contexto": "A fintech Grana Capital anunciou a adesão de mais de 2,5 mil escritórios de contabilidade à sua ferramenta Grana Pro no ano de 2026, sistema projetado para apurar e declarar o Imposto de Renda incidente sobre investimentos negociados na bolsa de valores brasileira em até cinco minutos. Segundo a empresa, a solução corporativa terá uma demonstração prática..."
     },
     {
       "brandId": "mycapital",
@@ -239,34 +239,15 @@
       "mediaType": "",
       "doc": {
         "title": "Nova tributação de dividendos deve ser prioridade na agenda de fim de ano das empresas",
-        "url": "https://www.jota.info/opiniao-e-analise/artigos/nova-tributacao-de-dividendos-deve-ser-prioridade-na-agenda-de-fim-de-ano-das-empresas",
-        "source": "JOTA Info",
+        "url": "https://fenafisco.org.br/16/10/2026/nova-tributacao-de-dividendos-deve-ser-prioridade-na-agenda-de-fim-de-ano-das-empresas/",
+        "source": "Fenafisco",
         "date": "2026-10-15",
         "tag": "Dividendos",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMizwFBVV95cUxOWXFUMEU1WWpMUEVOX1c3dEh6bFRvb2wtd2VyX0hjd1VxUXI1SUF0U1hFSHkwdWxXTXQ2eGFNQU5IR3YyejZyME1BR0JkQ3Nub0hTOGpEcjB6X2dNbWJmQ2pYRzVQejdwY0xoX29vbXo1MTdNMS1jNHBIRTRNTHNVRGJNemV1WHpoVUNrdG9pZUt6bk94UHBtYkRJaUhoT1NPRWxiMS12cC1VUlVlbW5rVE40OEVFWXdmeVRzOFoxMmMwQzJRRDR3MWpRRE9fd2s?oc=5"
-      ],
-      "contexto": "InícioOpinião & AnáliseArtigos Tributário Nova tributação de dividendos deve ser prioridade na agenda de fim de ano das empresas Planejamento societário feito ainda em 2026 evita penalidades e preserva a liquidez da companhia"
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Justiça reduz retenção de IR sobre dividendos para empresas associadas à Ubrafe",
-        "url": "https://www.mercadoeeventos.com.br/feiras-e-eventos/justica-reduz-retencao-de-ir-sobre-dividendos-para-empresas-associadas-a-ubrafe/",
-        "source": "Mercado e Eventos",
-        "date": "2026-10-15",
-        "tag": "Dividendos",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMizAFBVV95cUxPV05sTS12aklKOXhhTXJ1U0k1WHFONXQ3QVFTUWVweEZDOERYU2k3Mlg2WDJWS2NCRlBKdUhJNG9rN0tVYXF4V1hEc1hCVHNVMjg3bVVtR0p4QzZGempQdnNDYUpySUxVLXNQVmgzRm8xUzU2bl91YWhWc2ZwX2tuWVNFX1RmclB3Z1p6NEc1TkVWLXo0MHc3cmZDQkFxeEZPb0poZXNrVFpaeGdxRS1ZNUZuSE56NnlzNEs4Y0tkcUxEVnl1WkJrNWJhaEQ?oc=5"
+        "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPLU8tV1JiZVQ5azI4TGt0N0Flb19MTTZOM3JjTkp5TzV3YlNMWmNMYUVWNXVkcm5VVmNsdzBfeGxtTWtPb3U1c3Jhc2c0X3ZOV2g1eUJ5bGUyd3ZVeHUyT2NLeHlxaTJVdmF1SEVZMGJNcTRrbXZGQjg2UGx6Q21ybE5yTl9sSGpiRW1NV3FLemVudGtCYXQwYWdldXZ4VjF3VXFYWXdkd01FVDFKSHpwSWw5YVlrbERpVTRidXFqaEPSAcYBQVVfeXFMUDE0MFBENzBoWDUxMlNrYS1xV3J3SExPRXJkVmlFd3lPTW53NUU3ekRLc3lWTm9CQ0RPUU9jdjNKNGE1eUNSNDREcDVmR3dXRHYzdGQyTExXRW5samZfaFdOTlMtOEFZUHVjeXR4RUJTcnAxd3JDYW50NmpMSU16dFlUWURDdnZpUXl1OThObW1kU0hyeHh3S3hGRmxoZ0tTdnA5YzBnd1pldWhUSWNlcUdFWVR2cWdnTmdLWGlJNU9CcnlhcUxB?oc=5"
       ]
     },
     {
@@ -275,18 +256,18 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "UBRAFE obtém decisão favorável sobre Imposto de Renda de dividendos",
-        "url": "https://www.portaleventos.com.br/news/UBRAFE-obtem-decisao-favoravel-sobre-Imposto-de-Renda-de-dividendos",
-        "source": "Portal Eventos",
-        "date": "2026-10-14",
+        "title": "Ubrafe obtém liminar na Justiça Federal que reduz retenção de imposto de renda sobre dividendos de associadas",
+        "url": "https://revistalivemarketing.com.br/ubrafe-obtem-liminar-na-justica-federal-que-reduz-retencao-de-imposto-de-renda-sobre-dividendos-de-associadas/",
+        "source": "Revista Live Marketing",
+        "date": "2026-10-15",
         "tag": "Dividendos",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQczRtWUZuUXF3d2tncHFQZFgzUGlEdlJCeVl0THBsRE1xVnBxZEZCRUxoNlpuTjZKeXpNZ0UwWWJFaUlyUnBENkl0UU9rcGZZMVZPU0dueEI4MExjY3MwVmFCZXdwSFhiQ1ZHVVJkWUxqcURCQV9hMjdFUm1Vc3FqWnVTdWxjd1ZiOGwwMGFEYTFlcW9NQk1NeVVkWDFQNEZ0UVlnMjhPbnU?oc=5"
+        "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOM3VRZHg2YkIwRi1BVHVLRUQwLVVSUC1rSmRkenpXMFBIR0ZWYmZ3R1ZqLVlyQm90TUdwb25Kdng1cng5TWpwUVo5d1NFRDF4NFppQWM4WkpCUjhhSWdXZ25aS2pLb0dOZmlHR1FuU2w0dTRpU1NwSHY5WTNrNEdJbFBaU1BCdG5aaUZ2MTR1cTk2UzM5MzdjNklIeXNkYzd3aFQxVk9Pd19wYU5CYzRZV0M5VmZkTnJrYjdpWEh3RWZVYVhFVUNpLTRHVE9Qa0Y3YnhMM2ZJaEZUSUpMXzk4?oc=5"
       ],
-      "contexto": "A União Brasileira de Feiras e Eventos de Negócios (UBRAFE) obteve uma decisão favorável na Justiça Federal do Distrito Federal em uma ação que questiona as regras de retenção do Imposto de Renda sobre lucros e dividendos. A liminar concedida pela 4ª Vara Federal Cível determina a aplicação de uma alíquota proporcional, em substituição à retenção fixa de..."
+      "contexto": "Universo Live Ubrafe obtém liminar na Justiça Federal que reduz retenção de imposto de renda sobre dividendos de associadas A União Brasileira de Feiras e Eventos de Negócios (Ubrafe) obteve uma liminar favorável junto à Justiça Federal do Distrito Federal que reduz a alíquota de retenção do Imposto de Renda (IR) incidente sobre lucros e dividendos..."
     },
     {
       "brandId": "mycapital",
@@ -313,18 +294,55 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Dividendos e JCP: dona da Vivo (VIVT3) vai distribuir R$ 450 milhões em proventos; confira os prazos",
-        "url": "https://www.seudinheiro.com/2026/empresas/telefonica-brasil-vivt3-aprova-r-450-milhoes-em-juros-sobre-capital-proprio-ccgg/",
-        "source": "Seu Dinheiro",
-        "date": "2026-10-14",
+        "title": "Imposto de Renda Mínimo: especialistas alertam para brechas e risco de judicialização",
+        "url": "https://dcomercio.com.br/publicacao/s/imposto-de-renda-minimo-especialistas-alertam-para-brechas-e-risco-de-judicializacao",
+        "source": "DComercio",
+        "date": "2026-10-22",
         "tag": "Dividendos",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQVDA2SGJEaGQ3X1ZQWWhQNndoc1JwaFRnZll6V2NWeGl6bnRfM01EdHJ3MkNBd3ZWdXl5LUl5bmEzbDNWSkNBVm9xREIwNWJXRV82clNtSnFlcWVuYVd0dWxBbjNiUzNFTzRCMzlQbXFHX2ViQ3FZUk1sT3ZxWDR2SDRKdThBcmczZW9MMHNjMFRueEVlMDlhYl9kejZiRVhobGpTQmNGT3JHYnBOUkR3TTBpejRCcjdkWmp5U3FuRHY?oc=5"
+        "https://news.google.com/rss/articles/CBMivwFBVV95cUxOR29ycjV1WFBET2ktWHlwT18xNGdVdDd5N01MVEZtd0VSWEtnSHBWaEJDQW1LZDR4TnZpLVFhNi1KOEdfZUV4blhVZlE4R2llMWlBNVdZVG9IVjk4MENrcTY0Z0RVazN6S3psVDZpdmJ6cU0zdW0wUGVLVXBJTTZnQmlpMjVRMFZaRkFLRDFDLVN1aXNGQWtPZk5mdGtxSUxmdU9MMFJHdmJaMzZBY3Q5VmxOWHlxREEzYW1Nb2xOTQ?oc=5"
       ],
-      "contexto": "Dividendos e JCP: dona da Vivo (VIVT3) vai distribuir R$ 450 milhões em proventos; confira os prazos O valor líquido, após a retenção de Imposto de Renda na fonte à alíquota de 17,5%, será de R$ 371,25 milhões Os acionistas da Telefônica Brasil (VIVT3) devem ficar atentos: a dona da Vivo aprovou nesta quarta-feira (14) a distribuição de R$ 450 milhões em..."
+      "contexto": "Imposto de Renda Mínimo: especialistas alertam para brechas e risco de judicialização Em reunião do Caeft da ACSP, tributaristas convidados abordam os aspectos práticos da Lei 15.270, que já tem pontos contestados no Judiciário A criação do Imposto de Renda da Pessoa Física Mínimo (IRPF-M), instituído pela Lei nº 15.270/25 - desenhado pelo governo federal..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Tributação: Promessas sem base são enganação",
+        "url": "https://diplomatique.org.br/promessas-sem-base-sao-enganacao/",
+        "source": "Diplomatique",
+        "date": "2026-10-16",
+        "tag": "Dividendos",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMibkFVX3lxTFBsQmhhVFlzUlFYSkxZbXJWMUU0OUwwZEl5TVh2Q0kxNUppcjNTT2lMRjhuQnRBcHNmd1Y1TXp4VjA2cVk4U3FNMjhHdEMwSUREUHpmNnlzOXZsZTRqb3plRUx2MEZ4RWk3RVNWaWp3?oc=5"
+      ]
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Isento declara Imposto de Renda? Entenda quando é obrigatório",
+        "url": "https://www.serasa.com.br/blog/isento-declara-imposto-de-renda/",
+        "source": "Serasa",
+        "date": "2026-10-21",
+        "tag": "Declaração",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMicEFVX3lxTE9Eb09Canl1MHFBQ3ViSk5tOGJuMmhXWVpadFlkRkg4aF9raUoyeUcxZHlJdllxUTdHQUJ2eWhrNzAzdU82eUdSRmFvUmQ5cFBaSmloYW5rakxzcVVhclhvYkY0N2EweENGZUs3UlVuVXY?oc=5"
+      ],
+      "contexto": "O que é alavancagem de patrimônio e como funciona O que é alavancagem de patrimônio e como funciona Data de publicação 22 de outubro de 202618 minutos de leitura Atualizado em: 20 de outubro de 2026 Categoria Educação financeiraTempo de leitura: 18 minutos Texto de: Time Serasa Saber se quem é isento declara Imposto de Renda exige entender que estar..."
     },
     {
       "brandId": "mycapital",
@@ -343,25 +361,6 @@
       "aliases": [
         "https://news.google.com/rss/articles/CBMirAFBVV95cUxOT0tHQTJmRExWaFFfY0lJeG0tMU1zNTgwM1g2dkhEazhuV1hLUG14NVVjeHM2U0l2OUhnMjh3dzAycUtVVk82NHRUeTk4aUJWQmZ1ck5SVzByRmk4YUFPNXE5NGY2c3JEQWRmTkdKR2c4YlhxY2RRamRmV2QtSi1tbDd5MDlXbVpRWDJaT2RzV0o5MzJtSEVvVVVOUjhfVHRfNVN2TzM5SDNCTmMy?oc=5"
       ]
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Isento declara Imposto de Renda? Entenda quando é obrigatório",
-        "url": "https://www.serasa.com.br/blog/isento-declara-imposto-de-renda/",
-        "source": "Serasa",
-        "date": "2026-10-20",
-        "tag": "Declaração",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMicEFVX3lxTE9Eb09Canl1MHFBQ3ViSk5tOGJuMmhXWVpadFlkRkg4aF9raUoyeUcxZHlJdllxUTdHQUJ2eWhrNzAzdU82eUdSRmFvUmQ5cFBaSmloYW5rakxzcVVhclhvYkY0N2EweENGZUs3UlVuVXY?oc=5"
-      ],
-      "contexto": "Índice Sortino: o que é e como usar para medir o risco de queda Índice Sortino: o que é e como usar para medir o risco de queda Data de publicação 21 de outubro de 202613 minutos de leitura Atualizado em: 20 de outubro de 2026 Categoria Educação financeiraTempo de leitura: 18 minutos Texto de: Time Serasa Saber se quem é isento declara Imposto de Renda..."
     },
     {
       "brandId": "mycapital",
@@ -398,7 +397,8 @@
       },
       "aliases": [
         "https://news.google.com/rss/articles/CBMiogFBVV95cUxNaElDLS1yWkhZeHVCUlhpRXl6S0YxdDBLZjFnWlJtOWtaSkVRUHBhWmVkcUlKSEVhNHVMOGNDZ0FDdWpNd0RVbzJEb2xCUUNtYVduQUtlTVFXQmVleVRzbzV0bHAyNDE1T28wYzVILTU0ZURqM2J3QmFTVm5sQW1iUFVHWFVZYTFycWtPM1BOQ2RJdUZoSnBqajRCWldrZC1weHfSAacBQVVfeXFMTzFDMjZjVUpFcDFnNXl2MUExa0JKUVhOUTNOMWU4QUljY3p1ZTNfTGpzZ2dobmZtRkNqM203UHFKVTJCb3lrR3R6enRmaTN2M1VQNjhqSUMyMnRCRF9CWGtuSWpVQ3Z4QzV3NUxSZkUzUDdZTkZMcEdYcTBjX0hidmdFem9GbTVSdUZUQ2ZzZmhMbVdaT1lDTF9PSEhWRmpLU1VaY0JuZzg?oc=5"
-      ]
+      ],
+      "contexto": "Aposentados, pensionistas e militares reformados diagnosticados com patologias severas contam com a dispensa legal do pagamento do Imposto de Renda da Pessoa Física (IRPF) nos exercícios de 2026 e 2027. Mesmo com a ampliação da faixa de isenção mensal para quem recebe até R$ 5.000,00, em vigor desde janeiro de 2026 por meio da Lei nº 15.270/2025, e com o..."
     },
     {
       "brandId": "mycapital",
@@ -444,6 +444,25 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
+        "title": "Bolsa de Valores B3: passo a passo para investir em ações, abrir conta em corretora, comprar ativos e aplicar no Tesouro Direto",
+        "url": "https://www.mixvale.com.br/2026/10/22/bolsa-de-valores-b3-passo-a-passo-para-investir-em-acoes-abrir-conta-em-corretora-comprar-ativos-e-aplicar-no-tesouro-direto/",
+        "source": "Mix Vale",
+        "date": "2026-10-22",
+        "tag": "Mercado",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNX0tXZUZsTS1BeVRDZUJMNzZMbm9SVUR0cXdWWldxNlB2UXMwWWlUSEtPNnV2WTVLbmNZVDN0emc0UzVUYXRoLVBqaU1yUkFWc2Q5UzFIczRSeXJtYS1OZUR0eF9WaXhiZTR0RU5NOE5QNGxaYk0xcXd5QzZRaDZlcFVsa1FrQzFSLXRrNHIzdFdSeE5zUTNXMzFZMTNGVFB3aEJMZVpnV1FCdkJOVHRYY3ctWXVrMDk0YmxfdG1EcENQZmxuX0xUS3dHUUt1R0NJS194VlZKNnctQThWcUNaWVB4bTlQR19qajFWS1hGd254QVZHdlHSAfsBQVVfeXFMTTMzeUYxcHNBTlB5Z2Q4SGFGbElJa2phTzYwbHFSeWp6a0pSRVJMc3hSN01ld1dnOTh4bzFjVjM3Sy04MmQ1Z0tCcnlKaWhlX0FVNVdROFkydlQ0WmR5YTlxbDVUNFpCSXZuZ2JIWXNwNEpHdW0wb2d1Z3RpQkgxTXpydV84MEprLUpyMFZhRmUyeVhtdmV3YWh6a0Q2aXlhRVJLVmlKN2E1cFgtMGJaV2dYdnpwb2FCSVNQVXBzWHlOamdBTl8zVExhWmxLZ3FkWFpXWkZMa21TRF9SaEk4aWNBSlQ5bUxTY3hQQXRPOHg4TDltVm5zNFl3Tm8?oc=5"
+      ],
+      "contexto": "A B3 (Brasil, Bolsa, Balcão), sediada em São Paulo, concentra todas as negociações do mercado de bolsa em operação no Brasil e permite que qualquer pessoa física compre ações, fundos imobiliários e títulos públicos pela internet. Para iniciar as aplicações, o cidadão precisa abrir uma conta em uma corretora de valores ou banco habilitado, transferir o..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
         "title": "Imposto de Renda atrasado na bolsa: veja como regularizar",
         "url": "https://seucreditodigital.com.br/imposto-de-renda-atrasado-na-bolsa/",
         "source": "Seu Crédito Digital",
@@ -456,6 +475,25 @@
         "https://news.google.com/rss/articles/CBMid0FVX3lxTE1jeklndTFKd3NRZFYwalZvY2lUQ1pnelVGM2laVGxDZnhjNUFNSmpaSThXd1lRRDZSX3hPbGNycW9ZWlRWQnozY2xGbVZpdldudHlscHMzdGlYS3NtcWRta0pWQjlMV3U2Z29EWHcwUFlBaG5HUmlZ?oc=5"
       ],
       "contexto": "O pagamento do Imposto de Renda sobre operações na bolsa de valores está atrasado para 44,8% dos investidores gaúchos analisados em um levantamento da Grana Capital. O percentual fica abaixo da média nacional, de 50,1%, mas indica dificuldades no cumprimento das obrigações tributárias."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Investo lança ETF que busca retorno da bolsa protegido contra quedas; conheça o RVDI11",
+        "url": "https://valorinveste.globo.com/produtos/fundos/acoes/noticia/2026/10/22/investo-lanca-etf-que-busca-retorno-da-bolsa-protegido-contra-quedas-conheca-o-rvdi11.ghtml",
+        "source": "Valor Investe",
+        "date": "2026-10-22",
+        "tag": "Mercado",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPd0lmbVBfaERxemE4TXBXUUh2dkc3NTIxdlk3cUd1c0NrTldoc2tCWHVlNzladG5PV1VKc2RQMzJyTmduQjF0Y292OHBlY3dLdWpkUVdhckcybE1DVjAxLVNVLVE3ZzRNaWtKcFRkcS1ib0U0UU9ldXEyZVFyZUlTZjEzYjdkYUFjNXJZN1ZSd21iOUU2dGdYVG5JUXlsamRIZGNSLWZLcUpfckV3STdwZFFfTkNNMlZudGF6TkpLa2dXMW1LTm9lNVNxU1NDQ1J1OHpMcTRwaXZ5M0prYkJPYndUT2JzWjRPUXl3dXZyYjVXQTdqTXfSAYQCQVVfeXFMTzFSV1RMelZNUFZpdU1KMWpZOFVZYXhzc0NnMTVOWi1MVHItMnZNZVRhRTZfcFNqWEhFQ29kcmVGR1VXUzYxNDV5NmpZZWdabFAzc3BzeVljWlNpbGtjSDZuWE9jdk05SUJFNXVmOHNnNU5walBGQ3dHTTdCWnRQYnM5OGt2blhuWjBmdGRRU2taQ2dFcjF2ZEwyLTlKZDBNZTZhTEVFdndWbVd6aGtIU3JzdE1YaEVkUHFvX1NqSGtEUUpGZ1NWM01YMTY3dHNKZXNDMUthRlNVX09GMmNiOHY2dmNnZzlEOEMzNG9mUmNfa0dtTXoyWk9rd2NQQjRGclpOZ1g?oc=5"
+      ],
+      "contexto": "Investo lança ETF que busca retorno da bolsa protegido contra quedas; conheça o RVDI11 Com ações do IBrX-50 e proteção no mercado futuro, o produto busca a eficiência tributária da renda variável com baixa oscilação; entenda o funcionamento e os riscos A gestora Investo lançou na B3 o RVDI11, um fundo de índice (ETF) que estreia no mercado com a proposta de..."
     }
   ],
   "avisos": [
