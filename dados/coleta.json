@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-24T13:16:35+00:00",
+  "geradoEm": "2026-10-25T13:41:31+00:00",
   "fonte": "coletor (GitHub Actions)",
   "itens": [
     {
@@ -16,8 +16,8 @@
         "title": "Será que tem DARF da bolsa atrasado? Descubra no Grana",
         "url": "https://www.youtube.com/watch?v=tzD4P8UjTQ4",
         "date": "2026-09-28",
-        "signal": "133 visualizações, 16 curtidas",
-        "summary": "Shorts publicado em 28/09, com 133 visualizações, 16 curtidas.",
+        "signal": "134 visualizações, 17 curtidas",
+        "summary": "Shorts publicado em 28/09, com 134 visualizações, 17 curtidas.",
         "origem": "coletor"
       }
     },
@@ -35,8 +35,8 @@
         "title": "Você investe, o Grana cuida do IR. 😎",
         "url": "https://www.youtube.com/watch?v=WurEiGR-heY",
         "date": "2026-09-29",
-        "signal": "90 visualizações, 6 curtidas",
-        "summary": "Shorts publicado em 29/09, com 90 visualizações, 6 curtidas.",
+        "signal": "91 visualizações, 7 curtidas",
+        "summary": "Shorts publicado em 29/09, com 91 visualizações, 7 curtidas.",
         "origem": "coletor"
       }
     },
@@ -73,8 +73,8 @@
         "title": "IA de um lado, influencers do outro: qual o futuro do analista CNPI?",
         "url": "https://www.youtube.com/watch?v=-l4624f25ok",
         "date": "2026-10-05",
-        "signal": "44 visualizações, 0 curtidas",
-        "summary": "Vídeo publicado em 05/10, com 44 visualizações, 0 curtidas.",
+        "signal": "45 visualizações, 0 curtidas",
+        "summary": "Vídeo publicado em 05/10, com 45 visualizações, 0 curtidas.",
         "origem": "coletor"
       }
     },
@@ -124,6 +124,25 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
+        "title": "Recorde: Receita Federal devolve R$ 41 bilhões em restituições do Imposto de Renda",
+        "url": "https://exame.com/invest/minhas-financas/recorde-receita-federal-devolve-r-41-bilhoes-em-restituicoes-do-imposto-de-renda/",
+        "source": "Exame",
+        "date": "2026-10-21",
+        "tag": "IR",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMivwFBVV95cUxNVHpwRjRyLXRjaEdsaUV1T21ZQmtqamNKVjUtdVN5LXluNEdINTJKWFdMRVVQWWllaUZzaVZFa3RLTkx3eGlwd29jYVpNemw1U1dReEk5N1NLem1SMzFfUExCY3g0R2hTU2h4Ukh1bEFydkpKVmNLNkwtWDJRTXlpSkhRaWM0ZzU3R2EtT3dUZnhJYTA3d2tpZml1c1BTbW5OV2lfNWFUNkVybjlkLUZyeWIxNzktd3J3YW5rYTNKdw?oc=5"
+      ],
+      "contexto": ""
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
         "title": "IR 2027 exige atenção a salários e investimentos no exterior",
         "url": "https://www.contabeis.com.br/noticias/80305/ir-2027-exige-atencao-a-salarios-e-investimentos-no-exterior/",
         "source": "Portal Contabeis",
@@ -162,18 +181,18 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Eleições e Reforma Tributária: empresas devem adiar investimentos à espera de mudanças?",
-        "url": "https://jornalcontabil.com.br/noticia/eleicoes-e-reforma-tributaria-empresas-devem-adiar-investimentos-a-espera-de-mudancas/",
-        "source": "Jornal Contábil",
-        "date": "2026-10-21",
+        "title": "LCI e LCA estão sumindo dos bancos e pagando menos: veja quando o CDB rende mais, mesmo com imposto",
+        "url": "https://opetroleo.com.br/lci-e-lca-estao-sumindo-dos-bancos-e-pagando-menos-veja-quando-o-cdb-rende-mais-mesmo-com-imposto/",
+        "source": "O Petróleo",
+        "date": "2026-10-19",
         "tag": "IR",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQVGNwVS0yNGtqUlNVY241V1M3bDJYSWRkck1kQkg0ekZpZmZvYXcxTGRhcl9xaC1EUFNBWHFiNHBjLUlKdjJmVV90MDZrbkFjTEZVZGlmYTZtX0lESmh5dXNHVWVtMnhZTndJUHlobUc2a1o2ajJIWUZtMWFuYnE3SFIzS0NsMGJuOUh3YlQzM2xSamJPNU12UDhWMTNQblhsd2FXdWhrd0hjNXA2cWE4WUhudzFOUVVMV0VFdS1NYlZVZ9IBxwFBVV95cUxQbGZWVVFBTjE3QVNiUmRZd2FoOElpTERubVYxaWRhSVZqbmthazRkSEpEUndEamlPN1RCS2c0TEpDLXVHYkJQS2hwSUVrRjlsRzMzdkxzWGp1Y1B6eS10U0ZHNGN6dldQRGxhU1hIdUZCUHZPSkx5NUtsTGsweFBjQTcxSndPNHRxWkxBSGlWT3l1SEJmSHF4VnlJQXdZZm9kUHFPUi0xS2ZXQU5vdnNkc2VtdlNsSXEwMEIydWNyeGxYMmt3dzdr?oc=5"
+        "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNVWMyZEJybTV2Z0VhMGZ3UFZZWkVxRFJCOWl0STVaLXN2dkJZZzM4ME83NWVZR3FBZm1BcmFubXpXc0d3aG9qS1g1S2VuS3A5bEJzX2hlY2puWmQ2RHNHckhXZ0lYUWwta1JjcGgzMGpOUVJEM2xidUk1dmtNQmdsY3lYTUhZZ29CTTRjdlVHMnhUZ0llS1ZNdVl2NmRzNi1JTmtJc2NQVHVEdFBUWGRYQnpCcjJvU1VsSkx6RnNUMTU?oc=5"
       ],
-      "contexto": "Reforma Tributária Eleições e Reforma Tributária: empresas devem adiar investimentos à espera de mudanças? Esperar por novas regras após a votação pode comprometer o crescimento dos negócios Estamos a poucos dias do 2º turno das eleições presidenciais 2026 e isso colocou a Reforma Tributária novamente no centro das discussões econômicas."
+      "contexto": "Durante anos, as Letras de Crédito Imobiliário (LCI) e do Agronegócio (LCA) conquistaram espaço nas carteiras dos brasileiros por uma vantagem: seus rendimentos são isentos de Imposto de Renda para pessoas físicas. Em 2026, entretanto, encontrar boas taxas nesses investimentos ficou mais difícil."
     },
     {
       "brandId": "mycapital",
@@ -181,37 +200,18 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Sudene aprova novos pleitos de redução do IRPJ e reinvestimento do imposto",
-        "url": "https://www.gov.br/sudene/pt-br/assuntos/imprensa/sudene-aprova-novos-pleitos-de-reducao-do-irpj-e-reinvestimento-do-imposto",
-        "source": "GOV.BR",
-        "date": "2026-10-20",
+        "title": "Declaração de apostas no Imposto de Renda 2026: Guia completo",
+        "url": "https://olhardigital.com.br/apostas/imposto-de-renda/",
+        "source": "Olhar Digital",
+        "date": "2026-10-19",
         "tag": "IR",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNSUVSbkVFU2loTVhZY1c1Y3dRN1Y1bTdtck5yUWVLUTItbTNoQjFVUDZPaS1zbXNKcWNjVWFmZ1pRODZUZXBUcTFHUS0tYzNkb2U2d1I2VmxCT2pRTVIyQ09kalRoX0NWZTdTUTJlbFZQb0ZaSl9JZVBOTFhsMWFZcWlTOFR1dnZ5LXp1OUtlTy1YNnI4eEhuZmtUM3hnVXotQ3VQTzh2WkozRUJaY2JIZ3hPTGQ1OXpoZm5kZFctX1J4Zw?oc=5"
+        "https://news.google.com/rss/articles/CBMiY0FVX3lxTE12eGI5dEIyYVBjdHBuMW5LdmtBWV9uNkZ0SG5mRFJWajN1Yzdtb0NhUUx4djVRa21aV1psQW96emRSM0pXM2JodjhnTkVyMmtUTGlQTHZPUk9yUUY4NlBZR1EyUQ?oc=5"
       ],
-      "contexto": "Sudene aprova novos pleitos de redução do IRPJ e reinvestimento do imposto Decisão contempla 19 processos relacionados a empreendimentos em sete estados, com diferentes modalidades de projetos Recife (PE), A Diretoria Colegiada da Sudene aprovou novos pleitos de incentivos fiscais apresentados à Autarquia. Durante sua 634ª reunião, o colegiado da..."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Receita abre consulta a lote residual do Imposto de Renda",
-        "url": "https://borainvestir.b3.com.br/noticias/imposto-de-renda/receita-abre-consulta-a-lote-residual-do-imposto-de-renda/",
-        "source": "Bora Investir",
-        "date": "2026-10-23",
-        "tag": "IR",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMitgFBVV95cUxOQWFxS3RNZ3JhbkFRUmJFN3FtMzA3bFBlS096d2VYNW92bm1tSUlONk1oMWpDeVRrZkxjS1FhSGUxNlFBb2RwQ0s5Y2R3bDBCMW4wcjdmWm9ucFlVV2tJbm82T1k0ZW5vb01JYXdWTWw3V2NiWlpwZGRIN212M3FQa01MUUJpSjZ2cEdsOURaX3p1SUNpR3RvY3A5aGdWcm1lUVUwRU9sOUpmWGRGWjF0TTQ2OGE0Zw?oc=5"
-      ],
-      "contexto": "Receita abre consulta a lote residual do Imposto de Renda Pagamento a 184,5 mil contribuintes do lote residual será na próxima sexta-feira (30) A Receita Federal abriu nesta sexta-feira (23) a consulta ao lote residual de restituição do Imposto de Renda Pessoa Física (IRPF). Ao todo, 184.442 contribuintes serão contemplados com R$ 531,6 milhões."
+      "contexto": "O imposto de renda sobre apostas online 2026 considera os prêmios do ano-calendário anterior. Portanto, quem apostou em uma plataforma bet deve informar os valores recebidos, mesmo que a soma de todas as premiações fique dentro da isenção para rendimentos tributáveis."
     },
     {
       "brandId": "mycapital",
@@ -268,7 +268,7 @@
       "aliases": [
         "https://news.google.com/rss/articles/CBMisgFBVV95cUxOU0hIbEdieUVFUHdzTE5kZzdSbGctNW9jYllfdTh6Z1lEemtzN2NaS3VzTTB2QWVvcDI5YnFvU0hyMG54bm8zc0ZKMkx4cUZ5RmxTNXpRWlBtWXg1TUVRcDdFN1czYUVOUTFlRjlUZ3NNUVAzQWpTT1RWQVc5ZW5fdnhiYUlLMnhnMWg2bVFjWjBNcDF4OUlLN1hkSTBQYS1xeG9fMGNuS0NTRVp4dVAxT1R30gHAAUFVX3lxTFBJdlJNbk9PbFFQcEowOGxZYjhhSUZQZWg5dUVpQ09jRzR2WVV0QUlSUnFjbzVUUmJhZlBrZEVtR2dacVRUZi1wOGlzeHNxVWlVZWJjNW9fbzJIUk1wc2g0X29mQzh1SDNEVTFBOXBHUERpR254bHZEWGNUTE5lYTh4UTVFc21kdGV4ZEtxTTFhN3JpeXA5SHZtUXBBWjdLeTNyUEROWGhmOGk5ZXhOVGMyOFVpRnFrbm9ITXJaQ2tjUg?oc=5"
       ],
-      "contexto": "Alessandro Ragazzi: decisão enfrenta o ponto mais frágil da nova lei, Foto: Divulgação Os contribuintes conseguiram pelo menos mais três recentes precedentes contra a retenção de 10% de Imposto de Renda (IRRF) sobre lucros e dividendos, estabelecida pela Lei nº 15.270, de 2025. Uma das decisões beneficia a União Brasileira de Feiras e Eventos de Negócios..."
+      "contexto": "Justiça afasta retenção de 10% de IR sobre dividendos Uma das decisões é coletiva e beneficia a União Brasileira de Feiras e Eventos de Negócios Os contribuintes conseguiram pelo menos mais três recentes precedentes contra a retenção de 10% de Imposto de Renda (IRRF) sobre lucros e dividendos, estabelecida pela Lei nº 15.270, de 2025. Uma das decisões..."
     },
     {
       "brandId": "mycapital",
@@ -332,92 +332,37 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Imposto de Renda 2026: Receita Federal libera consulta a novo lote de restituição; veja quem recebe",
-        "url": "https://muitainformacao.com.br/negocios/imposto-de-renda-2026-receita-federal-libera-consulta-a-novo-lote-de-restituicao-veja-quem-recebe/",
-        "source": "Muita Informação",
+        "title": "Receita Federal libera consulta à restituição residual do Imposto de Renda",
+        "url": "https://leouve.com.br/?p=3213442",
+        "source": "Leouve",
+        "date": "2026-10-24",
+        "tag": "Declaração",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMiR0FVX3lxTFBqcTBfakdyLXZ5cm5wNGdCY3UyV2tERl90dFUzMmpYZ2tpczIyQzcyTTFtOFZOSDBBRHh2RXVsUXk5RkZuZmw0?oc=5"
+      ],
+      "contexto": "Quer acompanhar as notícias da Serra? Adicione o Leouve como fonte no Google."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Receita Federal vai pagar restituição extra do Imposto de Renda; veja se você recebe",
+        "url": "https://veja.abril.com.br/economia/restituicao-extra-imposto-de-renda-consultar-receita-federal/",
+        "source": "VEJA",
         "date": "2026-10-23",
         "tag": "Declaração",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQVERmWFhpX0ZSc01XaC11NHUyLVBJQUVoTThsRy1XVm1hYXVVVFBqTHJBZTVzLUJWYjl3LW11X21tOWxxZWVjRndhNnRKblptQXNNczRKeHVRMmdxa1VZOEVTcVA0VlVod2UwaEdyMExPVUwtZ2VTaXBCMUZmZ0pnUFhtQlk5dXhiNU5zMXdTTV9GLXNoMFgyQkVJeVBOaGozZjhCRDV1emhqRjlUbmFva1hBQ0dzd19teUprdEtSWlV4V3lOUWYyX3FUQ2lKS0tmWVQ2dQ?oc=5"
+        "https://news.google.com/rss/articles/CBMinAFBVV95cUxOR2U1aHZnX0l4WG85aFNXMHRCTjRpc3QzQk9zZEFnMVoyVEUtQkdleGg3LVNfcnFhbDlPQTJNeDhnVmpLNm1qSFJjOHlPNUtVZVdvZWJRWFM0YXRuNlFJNlV6RzQwV0JmRUZGTDBrSDFISW41VFYycHFJSlhaUzlLeHAySlNwZDZFVjkxWVR1WHV3dWhKRElSYVlOVGU?oc=5"
       ],
-      "contexto": "Resumo da notícia - Receita Federal abriu consulta ao lote residual de restituição do Imposto de Renda Pessoa Física (IRPF). - Cerca de 184.442 contribuintes serão contemplados com R$ 531,6 milhões, com pagamento previsto para 30 de junho."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Restituição do Imposto de Renda tem consulta aberta pela Receita Federal para pagamento em 30 de outubro",
-        "url": "https://www.mixvale.com.br/2026/10/23/restituicao-do-imposto-de-renda-tem-consulta-aberta-pela-receita-federal-para-pagamento-em-30-de-outubro/",
-        "source": "Mix Vale",
-        "date": "2026-10-23",
-        "tag": "Declaração",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOQ3BvaElELXRCQ09JUXNTOVU1Vjl4bnFJNHo5U0lvS0dKdEpOMTB3QkpWMElBOTBUTW95QVNDNktNejY5NDhwM05PcWc1cVlONEt0emxEM3JfeV9BelJlVml1V0V2N3lvd1h4SHl4b1J5TDBDNklzWF9NWjZnbUk2V3BQeDVjWVVKcFVwZElIcVF4QkQ1RXhkd2ltRU9oeXZJd3g1UkJIRjA2Qi1ESmpIdm1SNnlvU2hXUV90RE1QZ1JfcEVmc2N3X2JWcEVPa1FCOFJ1SVY4QVBubVE?oc=5"
-      ]
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Restituições do Imposto de Renda batem recorde em 2026, informa Receita Federal",
-        "url": "https://noticias.maringa.com/46716/restituicoes-do-imposto-de-renda-batem-recorde-em-2026-informa-receita-federal",
-        "source": "Maringa.Com",
-        "date": "2026-10-21",
-        "tag": "Declaração",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMiswFBVV95cUxObkNTWjNkSlNHaGw0ZXR4MzQ5emt6X2Q4WFQtTnlqeXJ4UDBEeGE1a0Z2dVVLTkRRMENiajFoemp2V3hyZVFTMmNsSk9NcTZjSGhtdlAwckhWVllUWUJCcjlubzBVX1JSU3M0bjZEemhtYzFELU5YcTdldzA0MFBEUldVX1RWRDBRTV84X25hbFQxbjZaN19jandCMGJxaWJwY1loOTMwTzZFVjRhamR2cDNXSQ?oc=5"
-      ],
-      "contexto": "Restituições do Imposto de Renda batem recorde em 2026, informa Receita Federal Receita orienta 500 mil pessoas a corrigir pendências na declaração. Quase 26 milhões de contribuintes receberam um valor recorde de mais de R$ 41 bilhões em restituições do Imposto de Renda Pessoa Física (IRPF) em 2026, informou nesta terça-feira (20) a Receita Federal."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Receita Federal restitui mais de R$41 bilhões de IRPF em 2026; valor é recorde",
-        "url": "https://thmais.com.br/noticias/receita-federal-restitui-mais-de-r41-bilhoes-de-irpf-em-2026-valor-e-recorde/",
-        "source": "THMais",
-        "date": "2026-10-21",
-        "tag": "Declaração",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMirAFBVV95cUxOT0tHQTJmRExWaFFfY0lJeG0tMU1zNTgwM1g2dkhEazhuV1hLUG14NVVjeHM2U0l2OUhnMjh3dzAycUtVVk82NHRUeTk4aUJWQmZ1ck5SVzByRmk4YUFPNXE5NGY2c3JEQWRmTkdKR2c4YlhxY2RRamRmV2QtSi1tbDd5MDlXbVpRWDJaT2RzV0o5MzJtSEVvVVVOUjhfVHRfNVN2TzM5SDNCTmMy?oc=5"
-      ]
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Receita Federal paga R$ 41 bilhões em restituições do IRPF",
-        "url": "https://www.band.com.br/economia/macroeconomia/receita-federal-paga-r-41-bilhoes-em-restituicoes-do-irpf",
-        "source": "Band",
-        "date": "2026-10-20",
-        "tag": "Declaração",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMipwFBVV95cUxNaGJ5N3ZEc1NCaHJHcm5pb19rWnM3Mmk2VXZiN2tQRTZfMVlSb3QwUnN5Qk5lNHkxYUtxcl9xYm9TQVl4TkhWREtUYnd5LXNEVXdRUldhWHdBRndabzFTZktXVjdwUVN3ZUNPWDNwcXVaQkdBMk1Ld2lEOEpId0pMZnh0dUUxakptTjVhRnBUb05lal9sZGNNUFl0MXVkQUlvazNORktQYw?oc=5"
-      ],
-      "contexto": "Receita Federal paga R$ 41 bilhões em restituições do IRPF Em 2026, 25,9 milhões de contribuintes receberam restituição do Imposto de Renda no Brasil A Receita Federal encerrou o ciclo do Imposto de Renda da Pessoa Física (IRPF) de 2026 com marcas históricas em volume financeiro e rapidez no processamento. Ao todo, foram restituídos mais de R$ 41 bilhões a..."
+      "contexto": "Receita Federal vai pagar restituição extra do Imposto de Renda; veja se você recebe Valor total das restituições deve chegar a R$ 531,6 milhões; veja se você recebe A Receita Federal vai liberar, a partir das 09h desta sexta-feira, 23, a consulta ao lote residual de restituição do Imposto de Renda Pessoa Física (IRPF) referente a outubro de 2026. Esse lote..."
     },
     {
       "brandId": "mycapital",
@@ -435,7 +380,65 @@
       },
       "aliases": [
         "https://news.google.com/rss/articles/CBMiogFBVV95cUxNaElDLS1yWkhZeHVCUlhpRXl6S0YxdDBLZjFnWlJtOWtaSkVRUHBhWmVkcUlKSEVhNHVMOGNDZ0FDdWpNd0RVbzJEb2xCUUNtYVduQUtlTVFXQmVleVRzbzV0bHAyNDE1T28wYzVILTU0ZURqM2J3QmFTVm5sQW1iUFVHWFVZYTFycWtPM1BOQ2RJdUZoSnBqajRCWldrZC1weHfSAacBQVVfeXFMTzFDMjZjVUpFcDFnNXl2MUExa0JKUVhOUTNOMWU4QUljY3p1ZTNfTGpzZ2dobmZtRkNqM203UHFKVTJCb3lrR3R6enRmaTN2M1VQNjhqSUMyMnRCRF9CWGtuSWpVQ3Z4QzV3NUxSZkUzUDdZTkZMcEdYcTBjX0hidmdFem9GbTVSdUZUQ2ZzZmhMbVdaT1lDTF9PSEhWRmpLU1VaY0JuZzg?oc=5"
-      ]
+      ],
+      "contexto": "Aposentados, pensionistas e militares reformados diagnosticados com patologias severas contam com a dispensa legal do pagamento do Imposto de Renda da Pessoa Física (IRPF) nos exercícios de 2026 e 2027. Mesmo com a ampliação da faixa de isenção mensal para quem recebe até R$ 5.000,00, em vigor desde janeiro de 2026 por meio da Lei nº 15.270/2025, e com o..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Receita Federal alerta quase 500 mil contribuintes sobre malha fina do Imposto de Renda 2026",
+        "url": "https://www.varginhaonline.com.br/geral/receita-federal-malha-fina-imposto-de-renda-2026/",
+        "source": "Varginha Online",
+        "date": "2026-10-20",
+        "tag": "Declaração",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMikwFBVV95cUxNR1Q2WU1MbkM5TUo4Q0hhX1RIZkpmdWRRUXY1RWJ6U3NsbUxhVzQ2bE0wRW5qMTAtdFQ0a19HcDY2d2R1czJQU2dxNzFIeE1TMHRadi1YNmFha0Iyb2tiaTZQZTd3R1o2VVdpU2N1Q2ExLVJzTVMwMDZtY21LWldoZm1pR0xJWWJLSnpfNFA1RTR0aU0?oc=5"
+      ],
+      "contexto": "A Receita Federal começou a enviar avisos a 498.487 contribuintes que tiveram a Declaração do Imposto de Renda da Pessoa Física (DIRPF) 2026 retida na malha fina. As correspondências estão sendo encaminhadas em lotes semanais, entre os dias 5 e 20 de outubro, para incentivar a correção voluntária de inconsistências antes de uma eventual intimação ou..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Imposto de Renda 2026: Receita Federal conclui envio de 498.487 cartas para regularizar malha fina online",
+        "url": "https://www.mixvale.com.br/2026/10/20/imposto-de-renda-2026-receita-federal-conclui-envio-de-498-487-cartas-para-regularizar-malha-fina-online/",
+        "source": "Mix Vale",
+        "date": "2026-10-20",
+        "tag": "Declaração",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPc1gxMkxzTnNhTlNrRWZEZTNGLTdqa3U0YWU4ZWI4azJtUTlaRkVGcVVybF9FOWIteU9IWGVwM0VSMHdDQXNnbHhCdUhRUndia0I5M2N2NGFnXzcwM2FBbm9VUEgya3JrbUc0eWVUakFIMi1VdERPbm1zazZuRWRrN01KVjZIMkpVeG8yN2liQlRCZENKN0I1ZXRkck83dEpNSmNTbUdid3ZVTWxvX0tfS3JjSmpKV0g2Q2NiclBZcVNrLTY2aFNjRjh4MXFuZDBmZkdXR183Mlo2ZzjSAdsBQVVfeXFMT3NYMTJMc05zYU5Ta0VmRGUzRi03amt1NGFlOGViOGsybVE5WkZFRnFVcmxfRTliLXlPSFhlcDNFUjB3Q0FzZ2x4QnVIUVJ3YmtCOTNjdjRhZ183MDNhQW5vVVBIMmtya21HNHllVGpBSDItVXRET25tc2s2bkVkazdNSlY2SDJKVXhvMjdpYkJUQmRDSjdCNWV0ZHJPN3RKTUpjU21HYnd2VU1sb19LX0tyY0pqSldINkNjYnJQWXFTay02NmhTY0Y4eDFxbmQwZmZHV0dfNzJaNmc4?oc=5"
+      ],
+      "contexto": "Quase meio milhão de contribuintes, exatamente 498.487 pessoas físicas em todo o Brasil, foram incluídos pela Receita Federal no envio de cartas de alerta por terem a declaração do Imposto de Renda da Pessoa Física (IRPF 2026) retida na malha fina. A entrega dos avisos em lotes semanais começou em 5 de outubro de 2026 e termina nesta terça-feira (20),..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Receita libera consulta à restituição do IR; veja como saber se você vai receber",
+        "url": "https://segundoasegundo.com.br/2026/10/receita-libera-consulta-a/",
+        "source": "Segundo a Segundo",
+        "date": "2026-10-24",
+        "tag": "Declaração",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMic0FVX3lxTE9IRXVBcE43Njk0Zk9WeTZHc1dkcG13WTJvR19HUEh0a1VEb2F4emE5TzVibUlGWFNCcjNmNUlTRmJfR1lsT3ZKUTZzLTBvNlRDMTVsWHdaRWJpbDF1MVEwYlZqQ19CSFZ2aXVIZl9jZ1k5TFE?oc=5"
+      ],
+      "contexto": "A Receita Federal liberou nesta sexta-feira (23) a consulta ao lote residual de restituição do Imposto de Renda Pessoa Física (IRPF). Ao todo, 184.442 contribuintes serão contemplados com R$ 531,6 milhões."
     },
     {
       "brandId": "mycapital",
@@ -453,7 +456,8 @@
       },
       "aliases": [
         "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNX0tXZUZsTS1BeVRDZUJMNzZMbm9SVUR0cXdWWldxNlB2UXMwWWlUSEtPNnV2WTVLbmNZVDN0emc0UzVUYXRoLVBqaU1yUkFWc2Q5UzFIczRSeXJtYS1OZUR0eF9WaXhiZTR0RU5NOE5QNGxaYk0xcXd5QzZRaDZlcFVsa1FrQzFSLXRrNHIzdFdSeE5zUTNXMzFZMTNGVFB3aEJMZVpnV1FCdkJOVHRYY3ctWXVrMDk0YmxfdG1EcENQZmxuX0xUS3dHUUt1R0NJS194VlZKNnctQThWcUNaWVB4bTlQR19qajFWS1hGd254QVZHdlHSAfsBQVVfeXFMTTMzeUYxcHNBTlB5Z2Q4SGFGbElJa2phTzYwbHFSeWp6a0pSRVJMc3hSN01ld1dnOTh4bzFjVjM3Sy04MmQ1Z0tCcnlKaWhlX0FVNVdROFkydlQ0WmR5YTlxbDVUNFpCSXZuZ2JIWXNwNEpHdW0wb2d1Z3RpQkgxTXpydV84MEprLUpyMFZhRmUyeVhtdmV3YWh6a0Q2aXlhRVJLVmlKN2E1cFgtMGJaV2dYdnpwb2FCSVNQVXBzWHlOamdBTl8zVExhWmxLZ3FkWFpXWkZMa21TRF9SaEk4aWNBSlQ5bUxTY3hQQXRPOHg4TDltVm5zNFl3Tm8?oc=5"
-      ]
+      ],
+      "contexto": "A B3 (Brasil, Bolsa, Balcão), sediada em São Paulo, concentra todas as negociações do mercado de bolsa em operação no Brasil e permite que qualquer pessoa física compre ações, fundos imobiliários e títulos públicos pela internet. Para iniciar as aplicações, o cidadão precisa abrir uma conta em uma corretora de valores ou banco habilitado, transferir o..."
     },
     {
       "brandId": "mycapital",
@@ -480,18 +484,18 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Mercado de opções chega a quase R$ 3 bilhões em apenas um dia na bolsa brasileira; entenda por que e como aproveitar as oportunidades neste investimento",
-        "url": "https://prensamercosur.org/2026/10/22/mercado-de-opcoes-chega-a-quase-r-3-bilhoes-em-apenas-um-dia-na-bolsa-brasileira-entenda-por-que-e-como-aproveitar-as-oportunidades-neste-investimento/",
-        "source": "Prensa Mercosur",
-        "date": "2026-10-22",
+        "title": "Tudo sobre dividendos: como investir e calendário de pagamentos",
+        "url": "https://oespecialista.safra.com.br/calendario-dividendos-acoes/",
+        "source": "Safra",
+        "date": "2026-10-20",
         "tag": "Mercado",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMimAJBVV95cUxPRldhRUdTR3Q1ZmRnWWFiRm5PS0ZmblIwTzhhanpBaXBlVlNuOUVWWHo1ckh1elU2YXdsQ2NvM19qX2FDOXhVX1ZTZzloaU04SzJwM3JsMEJQTjgyMzlNUUhkaGtHWXZnd1ZaajZLVmpkX2tOQWVPUDcxbldTNzZGVWRMRDI0aGhIakgzUS11cjg2Z004djE3V0dWVFNUTTFPUTdKejdFTHpzVnl6dS1jZmdIeEVQeDNVWW5FWm9uaW1yd0lQNkstWDJpdTNsUkQzZjZnVmhONTdVSk9uaEx5bDY2ckVyY2UzLVA3T21MdVpUR3o5ajNWOE9XYVBTaExZWGlGRHRiclphMWpUN0NrNEkyYjR2X1dr?oc=5"
+        "https://news.google.com/rss/articles/CBMicEFVX3lxTE5JajQ1aGp6bHBvSUU2S2pKbEhLNVkyQWFLTDRyQ0l4OUx5cjZHZVNuQjdqTy1jYUJIb3MxYllNY1dKaG9EVHlOVS04M284NzJ6Q2pEY2FKcmpySmF3TGRKU0tGTm0tNG9fWGNUN040Zl8?oc=5"
       ],
-      "contexto": "O mercado de opções bate recordes na bolsa brasileira. Ao final, o segmento movimentou R$ 2,96 bilhões em uma única solicitação, segundo dados da B3, divulgados na última quinta feira (15) e que consideramos o período até 9 de outubro."
+      "contexto": "Dividendos ou JCP já declarados e aprovados para as próximas semanas Acompanhe as principais datas e valores de proventos das empresas listadas na B3 e entenda como eles podem fazer parte da sua estratégia de investimento Os dividendos são uma das formas mais tradicionais de retorno para investidores em ações. Empresas listadas na Bolsa de Valores..."
     }
   ],
   "avisos": [
