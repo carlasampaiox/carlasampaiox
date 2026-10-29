@@ -1,26 +1,7 @@
 {
-  "geradoEm": "2026-10-28T15:57:00+00:00",
+  "geradoEm": "2026-10-29T16:02:40+00:00",
   "fonte": "coletor (GitHub Actions)",
   "itens": [
-    {
-      "brandId": "mycapital",
-      "colecao": "compnews",
-      "arquivo": "1967862ac0d28f1e.jpg",
-      "mediaType": "image",
-      "doc": {
-        "kind": "conteudo",
-        "competitorId": "bs2fj7391bo4wovt5nrw",
-        "competitorName": "Grana Capital",
-        "channel": "youtube",
-        "format": "Shorts",
-        "title": "Será que tem DARF da bolsa atrasado? Descubra no Grana",
-        "url": "https://www.youtube.com/watch?v=tzD4P8UjTQ4",
-        "date": "2026-09-28",
-        "signal": "137 visualizações, 18 curtidas",
-        "summary": "Shorts publicado em 28/09, com 137 visualizações, 18 curtidas.",
-        "origem": "coletor"
-      }
-    },
     {
       "brandId": "mycapital",
       "colecao": "compnews",
@@ -35,8 +16,8 @@
         "title": "Você investe, o Grana cuida do IR. 😎",
         "url": "https://www.youtube.com/watch?v=WurEiGR-heY",
         "date": "2026-09-29",
-        "signal": "99 visualizações, 8 curtidas",
-        "summary": "Shorts publicado em 29/09, com 99 visualizações, 8 curtidas.",
+        "signal": "101 visualizações, 9 curtidas",
+        "summary": "Shorts publicado em 29/09, com 101 visualizações, 9 curtidas.",
         "origem": "coletor"
       }
     },
@@ -54,8 +35,8 @@
         "title": "Produzir ficou mais barato: como a IA mudou o negócio dos finfluencers",
         "url": "https://www.youtube.com/watch?v=1Vv8mnXOFNo",
         "date": "2026-10-13",
-        "signal": "104 visualizações, 0 curtidas",
-        "summary": "Vídeo publicado em 13/10, com 104 visualizações, 0 curtidas.",
+        "signal": "111 visualizações, 0 curtidas · 2,0x a mediana do canal",
+        "summary": "Vídeo publicado em 13/10, com 111 visualizações, 0 curtidas.",
         "origem": "coletor"
       }
     },
@@ -122,6 +103,25 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
+        "title": "Governo avalia cobrar IOF sobre investimentos hoje isentos de IR",
+        "url": "https://www.portalaz.com.br/noticia/amp/economia/99409/governo-avalia-cobrar-iof-sobre-investimentos-hoje-isentos-de-ir/",
+        "source": "Portal AZ",
+        "date": "2026-10-29",
+        "tag": "IR",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMivAFBVV95cUxQOTJvbU1BSFFPZTYxNGMwQmo4R0hQcjN1Q0tXWG1MZTkxQUh4VGduaHc5V1FrU091ajB6ZGpmZHFkWkZveVBGSllYTW1yUzJlUEZnNVFIWVVYMzluYVdTS2p0UlJ6VEpHdlgxZEYtODA2VkNUdW1PLWhUc1ltWFVPTGtkWEVJU1hlRkczUDl2bmd5cFlNZGFDQ250b2lCSjRnX0JhSXNVSGJ5QTJzbnlYWW1lSFZlUWtlanRrS9IBvAFBVV95cUxQOTJvbU1BSFFPZTYxNGMwQmo4R0hQcjN1Q0tXWG1MZTkxQUh4VGduaHc5V1FrU091ajB6ZGpmZHFkWkZveVBGSllYTW1yUzJlUEZnNVFIWVVYMzluYVdTS2p0UlJ6VEpHdlgxZEYtODA2VkNUdW1PLWhUc1ltWFVPTGtkWEVJU1hlRkczUDl2bmd5cFlNZGFDQ250b2lCSjRnX0JhSXNVSGJ5QTJzbnlYWW1lSFZlUWtlanRrSw?oc=5"
+      ],
+      "contexto": "Diante da resistência do Congresso Nacional às propostas de aumento de impostos, a equipe econômica do governo Lula voltou a avaliar a possibilidade de cobrar Imposto sobre Operações Financeiras (IOF) sobre títulos de investimento atualmente isentos de Imposto de Renda (IR). A medida poderia alcançar aplicações como Letras de Crédito Imobiliário (LCIs),..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
         "title": "Após revés de 2025, governo estuda IOF em investimentos isentos de Imposto de Renda",
         "url": "https://economicnewsbrasil.com.br/2026/10/28/iof-em-investimentos-isentos/",
         "source": "Economic News Brasil",
@@ -141,18 +141,18 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "MAIS IMPOSTOS VINDO POR AÍ: GOVERNO AVALIA COBRAR IOF SOBRE LCI, LCA E OUTROS INVESTIMENTOS",
-        "url": "https://diario360.com.br/2026/10/28/mais-impostos-vindo-por-ai-governo-avalia-cobrar-iof-sobre-lci-lca-e-outros-investimentos/",
-        "source": "Diário 360",
+        "title": "Governo Lula estuda cobrar IOF sobre investimentos isentos e reacende debate sobre aumento de impostos",
+        "url": "https://focomt.com.br/governo-lula-estuda-cobrar-iof-sobre-investimentos-isentos-e-reacende-debate-sobre-aumento-de-impostos/",
+        "source": "FOCO MT",
         "date": "2026-10-28",
         "tag": "IR",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMixAFBVV95cUxQTnlKUURfSnZUN3k4WXRTZGFtVHllcjA4Smh6Wnl0NXZtZ09LSG1Jd2lLMW5DTE5LWGhqTDJWeFg3RVBKUlpFVkh1dUlQMXBhczViNkt3MXVfNXdqNW9lckpFV290RGpkNXNFNFV5QkFQVklJbmFhZEpmNjdWOGktUzBCNUhVc3JoTm0xZUx3M3pPanJJUllJSlFrZ3VReEVkU2RRSUEtUzk2ODZuTnJNaHZlOHVib3JPdXNkTVhFbWVQMXVO?oc=5"
+        "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQOE9jcDRfT3dOekdYZVhiekc4VldHZldFMzdscUZPSGd0RzJYTmRKQm9SSWlaSjJQUGd0YVZCTEZIMzZSaHBaT0VYbDBVWVk4WkhtUlhBUjJlZWZZUVF3QkU0VGp0Z1BVNFYwMTBvNzhKcVM4R1o1T25OMXJ2VHBaRWMtWjRPclE4eVJGSkMyWW9LMzNSdWo5Vk5YVHB2X2xXOExyM0Zpb2VwY1VwVXdXbk91UC0xQU9yamFJcUt4d2VFbGs?oc=5"
       ],
-      "contexto": "Proposta em avaliação pelo governo federal pode alterar a tributação de aplicações usadas para financiar os setores imobiliário e agropecuário; eventual cobrança ainda não foi confirmada e seus impactos dependerão das regras que venham a ser estabelecidas O governo federal avalia a possibilidade de cobrar Imposto sobre Operações Financeiras (IOF) sobre..."
+      "contexto": "A equipe econômica do governo Luiz Inácio Lula da Silva (PT) voltou a estudar a possibilidade de cobrar Imposto sobre Operações Financeiras (IOF) sobre investimentos que atualmente contam com isenção de Imposto de Renda (IR). A informação foi publicada pelo jornal O Globo nesta quarta-feira (28) e envolve aplicações utilizadas para financiar o agronegócio,..."
     },
     {
       "brandId": "mycapital",
@@ -160,74 +160,18 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "IR 2027 exige atenção a salários e investimentos no exterior",
-        "url": "https://www.contabeis.com.br/noticias/80305/ir-2027-exige-atencao-a-salarios-e-investimentos-no-exterior/",
-        "source": "Portal Contabeis",
-        "date": "2026-10-23",
+        "title": "MAIS IMPOSTO: Governo Lula estuda recriar IOF para taxar investimentos que hoje são isentos",
+        "url": "https://www.blogdobg.com.br/mais-imposto-governo-lula-estuda-recriar-iof-para-taxar-investimentos-que-hoje-sao-isentos/",
+        "source": "Blog do BG",
+        "date": "2026-10-28",
         "tag": "IR",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUUg5U29nakt1MEc1LW05d0tkd3VSRklfRjlxcjFaek9BNEJPeV9fTUNLWEc0NkxaRjM0WUkxZDJ5YXJaWjlueWNobGRVNXp0OS1iQWRfcUU2RUdPeUlFZlpha0JMMDJ0OTgtSlVleEVTLUtwU2JtQWlQUERSWUxaVk5yU2laRU85U0hNcVhlb2o4UkZKV3gzWHgxZm56S1p4WmFQTWk4SXU?oc=5"
+        "https://news.google.com/rss/articles/CBMiuwFBVV95cUxORUhMN29DdVl0S0h2TlM0Z1pWN2M2VGxrWV9Za2Z0VHFEbnFFZXlaSWpkQ3FTTFZkcWdiQnhGMFluTUFFb1ZBS3plY2JsMWx6eXkxWUhlSzVxbC1scnY0RlVQNGpDaUd0RllGMkNHNWpuQlFuWnRCbURlWkZ4QTFiMHV4aENVX1BhcVdLVzNuQmgxNVFuN3REV19uZUNHbkxBN3dzcVhFeHdjX0ItdnZobGtEX1FvOURweFhJ?oc=5"
       ],
-      "contexto": "Salários recebidos de empresas estrangeiras, aluguéis de imóveis fora do Brasil, dividendos e aplicações financeiras internacionais estão entre os rendimentos que exigem atenção na hora de prestar contas à Receita Federal. Para quem é residente fiscal no país, a preparação para o Imposto de Renda (IR) deve incluir o controle das receitas, dos ativos e dos..."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Empresas do agro podem reduzir impostos com investimentos",
-        "url": "https://minutomt.com.br/agro/empresas-do-agro-podem-reduzir-impostos-com-investimentos/",
-        "source": "MINUTO MT",
-        "date": "2026-10-26",
-        "tag": "IR",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMikAFBVV95cUxQdUZoaVN4MmdjenJHUU5zakQyb25YaGtBNHpDNy1FRF9Oby1XVmpKOFp2V1Qtb2NWNjRicTF0Q0NERGpidXgyVlNIUnpNWExJRU5sRGVZTU1VcXhzQ3FmYmFDeUsxN0twWW5PaFZUdGJ4T1Jkdm1ZRjF3WXB6UFVrdWtfZVNKN3J0ZTVpN09wNXg?oc=5"
-      ]
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Tributação de dividendos: novo imposto arrecada R$ 5,2 bi para cobrir isenção do IR",
-        "url": "https://www.opovo.com.br/noticias/economia/2026/10/22/receita-informa-que-arrecadou-rs-5260-bi-com-tributacao-de-lucros-e-dividendos-ate-setembro.html",
-        "source": "O POVO",
-        "date": "2026-10-22",
-        "tag": "Dividendos",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMi5AFBVV95cUxObU5FV1pjWXhDNzQtaEhTR2plZzJrWWtSZC1LZ3M4WXd1eDMwQUl2elNKYVFUOW91QV9Yem9oX3VwN1lGUGdwNHE4MWg3Nm9ja0xzT0lSWUloaW5UVTdUWEhHc0dPX0lyNTFkWFZWMDV6aUtCUy00dHluaTdYUVp3eVJBZWQ3Xy0zTkhJQzJtaXh5YTFQNmZRVktwQVNOYzYtWkFEUkRCOUROS1FPYTBHZXN2LURVc3AwS2JFN1Zrc3BpU291anNBMWZUYXJ0eTUyMDgtdlRyWHJyOU05Mk0xbEYta0g?oc=5"
-      ],
-      "contexto": "Tributação de dividendos: novo imposto arrecada R$ 5,2 bi para cobrir isenção do IR O imposto foi criado para compensar a isenção do Imposto de Renda para quem ganha até R$ 5 mil Resumo - A arrecadação atingiu R$ 5,26 bilhões de janeiro a setembro, somando R$ 1,23 bilhão apenas no mês. - O governo cortou a estimativa anual dessa tributação em 2026 de R$ 17..."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Receita Federal arrecada R$ 5,26 bilhões com imposto sobre lucros e dividendos até setembro",
-        "url": "https://www.portalr10.com/noticia/157781/receita-federal-arrecada-r-526-bilhoes-com-imposto-sobre-lucros-e-dividendos-ate-setembro/",
-        "source": "Portal R10",
-        "date": "2026-10-22",
-        "tag": "Dividendos",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMiywFBVV95cUxNY3V3cERTNlJYT3htT0E4SG9DVC1jUVRRd185SjBoT2p6X3VNOGtVTi1MN1pEM2NQekphMF9MOGF3TXlfdjQzOVRDV1JwTzgtMGRPY2R5X3loVjVYUlZCTjhTbHJJamhtLXhOYTJsYy1ZeTFkMkNLRVZDNHoybUYtSTFxZHhCWm9Zck5CeXJRZkN0ZGdGd192bThuYTJtdHdwLWp4Y1c4ZjNfSzRVeWpLSVJFaERGUmQ2NDMxWmFGWUtqXzdheS1GYldxVdIB0AFBVV95cUxQcEt1OTNhaTJXSVJYUmpEOE1CY0Y5OThuSnRSQTVtTmE1Um53QTMxejFsWG9GWXItQ1l0cEN6NFM4Qjd5Z09MQ0pzTXZWWm0yQ3NBNzVaak1QZWIweFAwRkRJdElHb09kcWRqYUtKTVZETUZkUEhraVFTWGZ4OXVPSHBTMXBwb0JGcnB5LU9kY0xHTEdZNkdST3dUc3JGY2tKRXhhdEFmbTlkbGNIa0V3ZEpDQjhkcVZYbWg4OVZWZ29sNmRLbzhRX1JCUXhMakM4?oc=5"
-      ],
-      "contexto": "Receita Federal arrecada R$ 5,26 bilhões com imposto sobre lucros e dividendos até setembro A Receita Federal arrecadou R$ 5,26 bilhões entre janeiro e setembro de 2026 com a tributação do Imposto de Renda sobre lucros e dividendos. O balanço foi divulgado pelo órgão nesta quinta-feira (22) e mostra uma arrecadação abaixo da expectativa inicial do governo..."
+      "contexto": "O governo do presidente Luiz Inácio Lula da Silva (PT) estuda cobrar Imposto sobre Operações Financeiras (IOF) de investimentos que atualmente contam com isenção tributária, como LCIs, LCAs, CRIs, CRAs e debêntures incentivadas. A notícia dada pelo jornal O Globo diz que a proposta busca ampliar a arrecadação federal e integra as discussões sobre o ajuste..."
     },
     {
       "brandId": "mycapital",
@@ -273,14 +217,36 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
+        "title": "Arrecadação federal bate recorde de R$ 239,4 bilhões em setembro com IR sobre aplicações em alta",
+        "url": "https://melhorinvestimento.net/noticias/arrecadacao-federal-setembro-2026-recorde",
+        "source": "melhorinvestimento.net",
+        "date": "2026-10-28",
+        "tag": "Dividendos",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPTU1zU0VxVnVVMDNpbGRUTXAwYTdYV0NjOENqc3R4QVJsR1hjdnFDOGJOZ0h6Mm1WSm9GVEp3STQwSXVpTU11WVpBMVpValFnYTFBSGl6WC1hOV9NNzVZOTNOMGZ6UE5YdEpFaGs5dDlWWC1MU1NzUEJHeHY1WDRzeEdkbzg2U1Fr?oc=5"
+      ],
+      "contexto": "Arrecadação federal bate recorde de R$ 239,4 bilhões em setembro com IR sobre aplicações em alta A arrecadação federal somou R$ 239,4 bilhões em setembro, alta real de 5,62% e recorde para o mês. O IR retido sobre aplicações financeiras cresceu 9,68%, puxado pela renda fixa e pela tributação de dividendos."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
         "title": "Rodrigo Pimentel, advogado, estrutura a holding familiar diante da tributação de dividendos",
-        "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNQVJhMUFuSTdrdFRrVkZTS01WRDBFU0ZGMnRRTkF3TnZoNzVmT1RFSk52TXZWNkE3YVRUclZIR0tVVWtyc3kwM2NKWDdJbEd5XzNDdndoSUlwY1dRWTNYbEtCNk9qN01QTmd4S1dPSW1MZDM3UmpvZXlZMDl6S0xJam9hanhMelROZ0xzaHl4aU1OazdZdTFhU1dmV1B6eXZuYk5Sb0NlWXI1UDBrRUx0NzlzYW5DY0hGOHZsclFST0dBb2VQRm9HVlQ5bmxlclVOU2NoS3ppOA?oc=5",
+        "url": "https://jornaldebrasilia.com.br/noticias/economia/rodrigo-pimentel-advogado-estrutura-a-holding-familiar-diante-da-tributacao-de-dividendos/",
         "source": "Jornal de Brasília",
         "date": "2026-10-27",
         "tag": "Dividendos",
         "summary": "",
         "origem": "coletor"
-      }
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNQVJhMUFuSTdrdFRrVkZTS01WRDBFU0ZGMnRRTkF3TnZoNzVmT1RFSk52TXZWNkE3YVRUclZIR0tVVWtyc3kwM2NKWDdJbEd5XzNDdndoSUlwY1dRWTNYbEtCNk9qN01QTmd4S1dPSW1MZDM3UmpvZXlZMDl6S0xJam9hanhMelROZ0xzaHl4aU1OazdZdTFhU1dmV1B6eXZuYk5Sb0NlWXI1UDBrRUx0NzlzYW5DY0hGOHZsclFST0dBb2VQRm9HVlQ5bmxlclVOU2NoS3ppOA?oc=5"
+      ]
     },
     {
       "brandId": "mycapital",
@@ -289,13 +255,36 @@
       "mediaType": "",
       "doc": {
         "title": "Tributação de dividendos em 2026: o que muda com a Lei 15.270",
-        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE84RGQ2cF9tazE2ZHMwLVNKWUw1MEJFSnBQZ0lSa0E3bGVNQzZ0Mnk5MTJVSUdhZVN3bUtOVDE5ZFVHUEQ5U3NZUEtlVmI1bUtvaDRUWFQ2dng1UXYwREphdkpQcnlFckNIY01jN3d4ckI?oc=5",
+        "url": "https://www.remessaonline.com.br/blog/tributacao-de-dividendos/",
         "source": "Remessa Online",
         "date": "2026-10-27",
         "tag": "Dividendos",
         "summary": "",
         "origem": "coletor"
-      }
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMicEFVX3lxTE84RGQ2cF9tazE2ZHMwLVNKWUw1MEJFSnBQZ0lSa0E3bGVNQzZ0Mnk5MTJVSUdhZVN3bUtOVDE5ZFVHUEQ5U3NZUEtlVmI1bUtvaDRUWFQ2dng1UXYwREphdkpQcnlFckNIY01jN3d4ckI?oc=5"
+      ],
+      "contexto": "A tributação de dividendos mudou no Brasil em 2026 e trouxe de volta o Imposto de Renda sobre determinadas distribuições de lucros recebidas por pessoas físicas. A mudança encerra quase 30 anos de isenção e estabelece novas regras para a cobrança do imposto, incluindo a retenção de 10% na fonte em situações previstas pela Lei 15.270/2025."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Justiça concede novas liminares contra retenção de 10% de IR sobre lucros e dividendos",
+        "url": "https://tagdlaw.com.br/justica-concede-novas-liminares-contra-retencao-de-10-de-ir-sobre-lucros-e-dividendos/",
+        "source": "TAGD Advogados",
+        "date": "2026-10-26",
+        "tag": "Dividendos",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMirgFBVV95cUxPQ0tWMG1qMDJsMm1WX0o1UW9CSWJOWlZmcHRCSFlQcTZ2OVM5VzAxeWw4bWdGVzVBRGFSdVgtdVlKanFhMUREaDRONVlZNUgtYXpKRzVCamRRZktsbHNCbGJPUmxpcmctTE1aRXUzQTlvNFBXSGlNeGk1OTM1Sl9faGNqLVp5TjRJdzJVTDRqN2J0NzAyOFplSXdEWWZLbnFkYU9sa2ZtSTBSMHV6enc?oc=5"
+      ],
+      "contexto": "26/10/2026 A Justiça Federal concedeu três novas liminares favoráveis a contribuintes que questionam a retenção de 10% de Imposto de Renda na Fonte (IRRF) sobre lucros e dividendos prevista na Lei nº 15.270/2025. As decisões foram proferidas no Distrito Federal e em São Paulo, com fundamentos relacionados à capacidade contributiva, à progressividade e aos..."
     },
     {
       "brandId": "mycapital",
@@ -304,13 +293,17 @@
       "mediaType": "",
       "doc": {
         "title": "Receita Federal libera consulta à restituição residual do Imposto de Renda",
-        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPb0RDaDlKbkZ5T2VLM0t0dVg3bzV2RHBTTjQ0ZHhvSzZiS0RxU0R5OW5SdngyLWd2eEhWdXpySEJDMjVrdVVsODFuM0htSUtpZWRIWWJrLVNCLTNUNlpOUzJwSkU4cGdtNjRqMDktWmE2cExLNjhmQ0ZxeVFMZ01ITjBUTGZtaWZfZFE2NFFpa0tDRnhITHVYTHJBbzB1TXhsV2N6bHFlYnczUQ?oc=5",
+        "url": "https://leouve.com.br/economia/receita-federal-libera-consulta-a-restituicao-residual-do-imposto-de-renda/",
         "source": "Leouve",
         "date": "2026-10-24",
         "tag": "Declaração",
         "summary": "",
         "origem": "coletor"
-      }
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPb0RDaDlKbkZ5T2VLM0t0dVg3bzV2RHBTTjQ0ZHhvSzZiS0RxU0R5OW5SdngyLWd2eEhWdXpySEJDMjVrdVVsODFuM0htSUtpZWRIWWJrLVNCLTNUNlpOUzJwSkU4cGdtNjRqMDktWmE2cExLNjhmQ0ZxeVFMZ01ITjBUTGZtaWZfZFE2NFFpa0tDRnhITHVYTHJBbzB1TXhsV2N6bHFlYnczUQ?oc=5"
+      ],
+      "contexto": "Quer acompanhar as notícias da Serra? Adicione o Leouve como fonte no Google."
     },
     {
       "brandId": "mycapital",
@@ -319,28 +312,17 @@
       "mediaType": "",
       "doc": {
         "title": "Receita Federal abre consulta ao lote residual de restituição do IRPF 2026 nesta sexta-feira (23)",
-        "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOSDdmLXRvMG0yOUFIdEN0V3pxVGYzekJCNGNtOXdtX2drYjRNODIzcHNJQXVzS2VFZEtsdDVHN0E3QTY0S3p2cnhpTU1nOHkyVmt6OG94LUMyZnZwZFYyb2IxVEhRMUZqdi1zY2ZHTDVsUXFqSXZOanl5SGZxNldRSjRJemxjTUhZLU5GVTBSbEEzcUhlbGVjTUltcWpicVRUdHZTaV9PRnBUcEcwYkh2dV9NWmF3UHBQNEZsSXRSNWY4MGFxTzZv?oc=5",
+        "url": "https://fenacon.org.br/noticias/receita-federal-abre-consulta-ao-lote-residual-de-restituicao-do-irpf-2026-nesta-sexta-feira-23/",
         "source": "Sistema FENACON",
         "date": "2026-10-23",
         "tag": "Declaração",
         "summary": "",
         "origem": "coletor"
-      }
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Restituições do Imposto de Renda batem recorde em 2026, informa Receita Federal",
-        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxObkNTWjNkSlNHaGw0ZXR4MzQ5emt6X2Q4WFQtTnlqeXJ4UDBEeGE1a0Z2dVVLTkRRMENiajFoemp2V3hyZVFTMmNsSk9NcTZjSGhtdlAwckhWVllUWUJCcjlubzBVX1JSU3M0bjZEemhtYzFELU5YcTdldzA0MFBEUldVX1RWRDBRTV84X25hbFQxbjZaN19jandCMGJxaWJwY1loOTMwTzZFVjRhamR2cDNXSQ?oc=5",
-        "source": "Maringa.Com",
-        "date": "2026-10-21",
-        "tag": "Declaração",
-        "summary": "",
-        "origem": "coletor"
-      }
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMixwFBVV95cUxOSDdmLXRvMG0yOUFIdEN0V3pxVGYzekJCNGNtOXdtX2drYjRNODIzcHNJQXVzS2VFZEtsdDVHN0E3QTY0S3p2cnhpTU1nOHkyVmt6OG94LUMyZnZwZFYyb2IxVEhRMUZqdi1zY2ZHTDVsUXFqSXZOanl5SGZxNldRSjRJemxjTUhZLU5GVTBSbEEzcUhlbGVjTUltcWpicVRUdHZTaV9PRnBUcEcwYkh2dV9NWmF3UHBQNEZsSXRSNWY4MGFxTzZv?oc=5"
+      ],
+      "contexto": "Receita Federal abre consulta ao lote residual de restituição do IRPF 2026 nesta sexta-feira (23) Consulta ao lote residual estará disponível a partir das 9h desta sexta-feira (23); crédito de R$ 531,6 milhões será realizado em 30 de outubro, contemplando 184.442 restituições A Receita Federal libera, a partir das 09h desta sexta-feira (23), a consulta ao..."
     },
     {
       "brandId": "mycapital",
@@ -349,13 +331,36 @@
       "mediaType": "",
       "doc": {
         "title": "7,1% dos declarantes de IR têm patrimônio acima de R$ 1 milhão",
-        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOblIzc3MtT3BIVkxmamd0SnBoM0NWRTE0YVZBY3V2cWVGbTJQRFA4Ujd0bEpqUUU1RUZ1cVVNdGJ0Xzh5MTU3eUF6NEpjUENvNXU0b2JDVmlPYlpkVEd2UUtUNzM5NEF3dGQzdU43TE00cFRjdUM5WkdiU011V25RU29SNUxFUkpuRHBuVTA5Q180V2oxUE9IUGJIamxzYmNlTXRQdnVR?oc=5",
+        "url": "https://www.poder360.com.br/poder-economia/71-dos-declarantes-de-ir-tem-patrimonio-acima-de-r-1-milhao/",
         "source": "Poder360",
         "date": "2026-10-28",
         "tag": "Declaração",
         "summary": "",
         "origem": "coletor"
-      }
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMipgFBVV95cUxOblIzc3MtT3BIVkxmamd0SnBoM0NWRTE0YVZBY3V2cWVGbTJQRFA4Ujd0bEpqUUU1RUZ1cVVNdGJ0Xzh5MTU3eUF6NEpjUENvNXU0b2JDVmlPYlpkVEd2UUtUNzM5NEF3dGQzdU43TE00cFRjdUM5WkdiU011V25RU29SNUxFUkpuRHBuVTA5Q180V2oxUE9IUGJIamxzYmNlTXRQdnVR?oc=5"
+      ],
+      "contexto": "7,1% dos declarantes de IR têm patrimônio acima de R$ 1 milhão Do total, 27,6 milhões de declarantes, ou 65,4%, têm patrimônio de até R$ 100 mil, segundo dados da Receita Federal Só 7,1% de quem declarou o Imposto de Renda em 2026 têm mais de R$ 1 milhão de patrimônio."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Restituição do Imposto de Renda: Pará recebe R$ 11,9 milhões em outubro",
+        "url": "https://diariodopara.com.br/seu-bolso/mais-de-52-mil-paraenses-vao-receber-um-pix-da-receita-federal-veja-se-esta-na-lista/",
+        "source": "Diário do Pará",
+        "date": "2026-10-28",
+        "tag": "Declaração",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNTi1LdUk0V1l2bF9kVEJvdEE0d01MV0pfVzJfRW1Zckx6LTU0aE9sc0d2dWtDZ3oyWFotMWw5QnRkQ0IzVC12MXViX25ySXR2S3BLY1k4bVJJZ0xSUU1zb0FpNExuZktJZDRIellZV2lBUm5xMTJWMzhfa3A4UWI1bXNFanU2S2ZQZGh2LTZ4bHNHVGRtQzNLVTlHcm1MTm1xX09RNU91bmFxd3VZdWlkWGxyeGNpQXZtUzBDZWgxNGU?oc=5"
+      ],
+      "contexto": "Mais Diário do Pará no seu Google! Um clique para dar preferência às notícias do Pará Mais Diário do Pará no seu Google!"
     },
     {
       "brandId": "mycapital",
@@ -364,13 +369,16 @@
       "mediaType": "",
       "doc": {
         "title": "Restituição do IRPF 2026 paga recorde de R$ 41 bilhões no país",
-        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxObGVHMFQwYWJiYlNkM2k4MXZBandrYnlVSFh0SWsta3hESnZzbXhNOU4wazFSMXVvcXZmeTVFTkpldnpiS1ZVN2FiZm10dEdab2tFc0xTdUJ6c1VlQ0pyaUpGeUt0a3FKcEs4dUswOGVpYjlVUEZaT3E2aHdpSVM2TkU3SGo1bGgyblJHWkstckJ2SUhRcExhV0plZXRFMTBXVVE?oc=5",
+        "url": "https://www.mixvale.com.br/2026/10/26/restituicao-do-irpf-2026-paga-recorde-de-r-41-bilhoes-no-pais/",
         "source": "Mix Vale",
         "date": "2026-10-26",
         "tag": "Declaração",
         "summary": "",
         "origem": "coletor"
-      }
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMiogFBVV95cUxObGVHMFQwYWJiYlNkM2k4MXZBandrYnlVSFh0SWsta3hESnZzbXhNOU4wazFSMXVvcXZmeTVFTkpldnpiS1ZVN2FiZm10dEdab2tFc0xTdUJ6c1VlQ0pyaUpGeUt0a3FKcEs4dUswOGVpYjlVUEZaT3E2aHdpSVM2TkU3SGo1bGgyblJHWkstckJ2SUhRcExhV0plZXRFMTBXVVE?oc=5"
+      ]
     },
     {
       "brandId": "mycapital",
@@ -379,28 +387,17 @@
       "mediaType": "",
       "doc": {
         "title": "Receita libera consulta à restituição do IR; veja como saber se você vai receber",
-        "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9IRXVBcE43Njk0Zk9WeTZHc1dkcG13WTJvR19HUEh0a1VEb2F4emE5TzVibUlGWFNCcjNmNUlTRmJfR1lsT3ZKUTZzLTBvNlRDMTVsWHdaRWJpbDF1MVEwYlZqQ19CSFZ2aXVIZl9jZ1k5TFE?oc=5",
+        "url": "https://segundoasegundo.com.br/2026/10/receita-libera-consulta-a/",
         "source": "Segundo a Segundo",
         "date": "2026-10-24",
         "tag": "Declaração",
         "summary": "",
         "origem": "coletor"
-      }
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "B3 registra 55 mil novos investidores de FIIs em setembro",
-        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQNDRMTmhMOXdNUElSMHdTSWJIYkxkejU3aWdiVTVmeFhpaTVNc3NKR2JxVG5kb0lobXZyZHEzUVdQenoyNjVfdjJPTzlEMU5teEJ3cjBfUnozcXJQUkhjdTVBX3JHUkk2dDhfdlhxamZzZ185TUpUTHVIbUFKM18wdWhIMWpOSEU5TlRpMDZEclF6QWswUFZWMk9LUHNHZw?oc=5",
-        "source": "Clube FII News",
-        "date": "2026-10-26",
-        "tag": "Mercado",
-        "summary": "",
-        "origem": "coletor"
-      }
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMic0FVX3lxTE9IRXVBcE43Njk0Zk9WeTZHc1dkcG13WTJvR19HUEh0a1VEb2F4emE5TzVibUlGWFNCcjNmNUlTRmJfR1lsT3ZKUTZzLTBvNlRDMTVsWHdaRWJpbDF1MVEwYlZqQ19CSFZ2aXVIZl9jZ1k5TFE?oc=5"
+      ],
+      "contexto": "A Receita Federal liberou nesta sexta-feira (23) a consulta ao lote residual de restituição do Imposto de Renda Pessoa Física (IRPF). Ao todo, 184.442 contribuintes serão contemplados com R$ 531,6 milhões."
     },
     {
       "brandId": "mycapital",
@@ -409,13 +406,36 @@
       "mediaType": "",
       "doc": {
         "title": "Após eleição, estrangeiro fez compra recorde de US$ 6,84 bi em dólar na B3",
-        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNZE52WW1KcER3R283SENyZTJmbTZQQjJpeDNWYXRYalpPVzBDTUpLaTh5VVI0ZHIwRGo3RVVJTVl2eEZGamI2cU4xazM0OElBY0lza1R6a0dsUmhIdmlSRkJQWnp3aUphcnozZlU4ckVQVUhRUkY4WFdmRGM5cU1CbWpLX0VHSVlwOUNwMHVrRXTSAZYBQVVfeXFMUGk2UGNDTElSQVNQSVhzR3J4dVJzNDUzdWRWMmVveUozOVlEZWVvTGVoOXF0bEhPRXhvT1V6dEwzQlFTQ2M5emhaRmprbGNWOEg2NU5ydEJodkVPblYyNkNMWmRIMUpUb2JQamJSaExtYzRxdm9qeUVpWk1BZjdpNjVmYU5aemhqN1pxMDNkekFVbmdXRFdR?oc=5",
+        "url": "https://www.infomoney.com.br/mercados/estrangeiro-compra-recorde-dolar-b3-apos-eleicao/",
         "source": "InfoMoney",
         "date": "2026-10-28",
         "tag": "Mercado",
         "summary": "",
         "origem": "coletor"
-      }
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMikAFBVV95cUxNZE52WW1KcER3R283SENyZTJmbTZQQjJpeDNWYXRYalpPVzBDTUpLaTh5VVI0ZHIwRGo3RVVJTVl2eEZGamI2cU4xazM0OElBY0lza1R6a0dsUmhIdmlSRkJQWnp3aUphcnozZlU4ckVQVUhRUkY4WFdmRGM5cU1CbWpLX0VHSVlwOUNwMHVrRXTSAZYBQVVfeXFMUGk2UGNDTElSQVNQSVhzR3J4dVJzNDUzdWRWMmVveUozOVlEZWVvTGVoOXF0bEhPRXhvT1V6dEwzQlFTQ2M5emhaRmprbGNWOEg2NU5ydEJodkVPblYyNkNMWmRIMUpUb2JQamJSaExtYzRxdm9qeUVpWk1BZjdpNjVmYU5aemhqN1pxMDNkekFVbmdXRFdR?oc=5"
+      ],
+      "contexto": "Investidores estrangeiros fizeram uma compra líquida de US$ 6,84 bilhões em dólar por meio de derivativos negociados na B3 na segunda-feira (26), primeiro pregão após o segundo turno da eleição presidencial. Foi a maior compra líquida diária dos estrangeiros, ao menos desde julho de 2022, conforme dados da B3, compilados por traders e obtidos pelo InfoMoney."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Estrangeiro retira bilhões da Bolsa após vitória de Lula e acende alerta para investidores",
+        "url": "https://guiadoinvestidor.com.br/mercado/estrangeiro-retira-bilhoes-da-bolsa-apos-vitoria-de-lula-e-acende-alerta-para-investidores/",
+        "source": "Guia do Investidor",
+        "date": "2026-10-28",
+        "tag": "Mercado",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMiywFBVV95cUxNQTlFVUVDTlpNenhsblhBeldfTHJmUnRUVXdwaUl3c29leFRxMWRDT2NuY3AzTjNlR3h3VTlKR1hodUxpN1ZvVzJwbXdEb1dtZGJBYnBqUGswNDVNQmpqU2NKTV90LXlXT3hXX3pHb3p5MUtwaEIwM3JITmJ3NHZWd19lRHlyNjVOSjBDNkVLSXZuUVRnNEZ1NXlEaUEyUy1NTmN0b2FTWC1PX2R4R2tGS0k2VVVGNzR1YnM1SXBRdXVyNWh1ajlLQm1Pbw?oc=5"
+      ],
+      "contexto": "O investidor estrangeiro retirou R$ 2,85 bilhões da Bolsa brasileira na segunda-feira (26), primeiro pregão após a vitória de Luiz Inácio Lula da Silva (PT) no segundo turno das eleições presidenciais. O movimento marcou a terceira maior saída diária de capital externo em 2026, segundo dados da B3 divulgados nesta quarta-feira (28)."
     },
     {
       "brandId": "mycapital",
@@ -480,7 +500,6 @@
   ],
   "arquivos": [
     "02f6f2121b164b52.jpg",
-    "1967862ac0d28f1e.jpg",
     "7c03ef0bf0ebf597.jpg",
     "90b03d44b8b7b9b4.jpg"
   ]
