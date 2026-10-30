@@ -1,13 +1,118 @@
 {
   "geo": "BR",
   "periodo": "today 1-m",
-  "termos": [],
+  "termos": [
+    {
+      "termo": "imposto de renda",
+      "subindo": [
+        {
+          "busca": "regularize",
+          "valor": "+100%"
+        },
+        {
+          "busca": "meu imposto de renda, receita federal",
+          "valor": "+90%"
+        },
+        {
+          "busca": "receita federal consulta cpf",
+          "valor": "+60%"
+        },
+        {
+          "busca": "imposto de renda 2027",
+          "valor": "+50%"
+        },
+        {
+          "busca": "quem paga imposto de renda",
+          "valor": "+50%"
+        },
+        {
+          "busca": "receita federal meu imposto de renda",
+          "valor": "+50%"
+        },
+        {
+          "busca": "como funciona o imposto de renda",
+          "valor": "+50%"
+        },
+        {
+          "busca": "cnis",
+          "valor": "+40%"
+        }
+      ],
+      "top": [
+        {
+          "busca": "imposto de renda 2026",
+          "valor": 100
+        },
+        {
+          "busca": "declaração de imposto de renda",
+          "valor": 72
+        },
+        {
+          "busca": "meu imposto",
+          "valor": 70
+        },
+        {
+          "busca": "declaração imposto de renda",
+          "valor": 70
+        },
+        {
+          "busca": "meu imposto de renda",
+          "valor": 69
+        },
+        {
+          "busca": "imposto de renda restituição",
+          "valor": 55
+        },
+        {
+          "busca": "restituição de imposto de renda",
+          "valor": 55
+        },
+        {
+          "busca": "declarar imposto de renda",
+          "valor": 45
+        }
+      ],
+      "interesse": [
+        {
+          "data": "2026-10-23T00:00:00+00:00",
+          "valor": 75
+        },
+        {
+          "data": "2026-10-24T00:00:00+00:00",
+          "valor": 40
+        },
+        {
+          "data": "2026-10-25T00:00:00+00:00",
+          "valor": 25
+        },
+        {
+          "data": "2026-10-26T00:00:00+00:00",
+          "valor": 81
+        },
+        {
+          "data": "2026-10-27T00:00:00+00:00",
+          "valor": 87
+        },
+        {
+          "data": "2026-10-28T00:00:00+00:00",
+          "valor": 88
+        },
+        {
+          "data": "2026-10-29T00:00:00+00:00",
+          "valor": 84
+        },
+        {
+          "data": "2026-10-30T00:00:00+00:00",
+          "valor": 88
+        }
+      ]
+    }
+  ],
   "emAlta": [],
   "avisos": [
-    "Google Trends (imposto de renda): Google rate-limited the Explore data request; stop and back off.",
     "Google Trends (darf): Google rate-limited the Explore data request; stop and back off.",
     "Google Trends (dividendos): Google rate-limited the Explore data request; stop and back off.",
     "Google Trends (ir ações): Google rate-limited the Explore data request; stop and back off."
   ],
-  "geradoEm": "2026-10-29T16:03:57+00:00"
+  "geradoEm": "2026-10-30T15:52:01+00:00"
 }

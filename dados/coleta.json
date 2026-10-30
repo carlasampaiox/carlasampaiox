@@ -1,26 +1,7 @@
 {
-  "geradoEm": "2026-10-29T16:02:40+00:00",
+  "geradoEm": "2026-10-30T15:50:54+00:00",
   "fonte": "coletor (GitHub Actions)",
   "itens": [
-    {
-      "brandId": "mycapital",
-      "colecao": "compnews",
-      "arquivo": "90b03d44b8b7b9b4.jpg",
-      "mediaType": "image",
-      "doc": {
-        "kind": "conteudo",
-        "competitorId": "bs2fj7391bo4wovt5nrw",
-        "competitorName": "Grana Capital",
-        "channel": "youtube",
-        "format": "Shorts",
-        "title": "Você investe, o Grana cuida do IR. 😎",
-        "url": "https://www.youtube.com/watch?v=WurEiGR-heY",
-        "date": "2026-09-29",
-        "signal": "101 visualizações, 9 curtidas",
-        "summary": "Shorts publicado em 29/09, com 101 visualizações, 9 curtidas.",
-        "origem": "coletor"
-      }
-    },
     {
       "brandId": "mycapital",
       "colecao": "compnews",
@@ -35,8 +16,8 @@
         "title": "Produzir ficou mais barato: como a IA mudou o negócio dos finfluencers",
         "url": "https://www.youtube.com/watch?v=1Vv8mnXOFNo",
         "date": "2026-10-13",
-        "signal": "111 visualizações, 0 curtidas · 2,0x a mediana do canal",
-        "summary": "Vídeo publicado em 13/10, com 111 visualizações, 0 curtidas.",
+        "signal": "112 visualizações, 0 curtidas · 2,0x a mediana do canal",
+        "summary": "Vídeo publicado em 13/10, com 112 visualizações, 0 curtidas.",
         "origem": "coletor"
       }
     },
@@ -54,8 +35,8 @@
         "title": "IA de um lado, influencers do outro: qual o futuro do analista CNPI?",
         "url": "https://www.youtube.com/watch?v=-l4624f25ok",
         "date": "2026-10-05",
-        "signal": "45 visualizações, 0 curtidas",
-        "summary": "Vídeo publicado em 05/10, com 45 visualizações, 0 curtidas.",
+        "signal": "46 visualizações, 0 curtidas",
+        "summary": "Vídeo publicado em 05/10, com 46 visualizações, 0 curtidas.",
         "origem": "coletor"
       }
     },
@@ -65,18 +46,18 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Como se preparar para declarar renda do exterior no IR de 2027",
-        "url": "https://www.cnnbrasil.com.br/economia/money/negocios/como-se-preparar-para-declarar-renda-do-exterior-no-ir-de-2027/",
-        "source": "CNN Brasil",
-        "date": "2026-10-22",
+        "title": "Governo Lula estuda cobrar IOF sobre investimentos isentos de Imposto de Renda para ampliar arrecadação e rever benefícios fiscais; entenda",
+        "url": "https://www.infoverus.com.br/economia/governo-lula-estuda-cobrar-iof-sobre-investimentos-isentos-de-imposto-de-renda-para-ampliar-arrecadacao-e-rever-beneficios-fiscais-entenda/37594",
+        "source": "Infoverus",
+        "date": "2026-10-29",
         "tag": "IR",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMitwFBVV95cUxPa3FIRVdiRlA3OEVrdGh0c05jYTF4bWJIemFFMUhRZ2NheTFIU3g5Q3JJdUZva2JQd0dEM1JWVDBWNi04dGswR2lYZHdzTUFYZTBuQmVRaGZNWndPYTgxMUV1elVVbVhmMW5yUHZHOHRUejlZaENYUkI2a3pNdG0wdEgyNWVCdi1IYWVhVmhNWVBhWUxHM1J4WEM1R21YaEVQd0dsV3FHSjAwOVBpVEV5UHlMSGx6aEE?oc=5"
+        "https://news.google.com/rss/articles/CBMijwJBVV95cUxQWUdYVHBPSjY5UDlmcGczUGNtN3hYdVhNY3ZSd09ZUjJwMHo5Q0xRRVlKUWZkanVfY1RPQ1l0bkpnMEtBWENOT0Z3ZFQyaUNPbWZlbi1UY2R3UVFvQ0hxOE8wd1RHVHdsQnFlSUY3MGt0M3psdTNLTFhJS1J0Z2I2TnR6RV9ES3c0NjJMcGtzN3BsTFFFZHRmVTlSaFAzMXFlRE0xSTAyV1RVS1lOSEVlOG4xS1U3TTB4RkM1V2FxOEQyMGpoelY5OXZ3Q21LTUhaU3ltcWw3eHJPbFZDelc0RUVDQVFWSDFhWkMyQ01RLURWZ1hFTGRaSThDN1hsOTVId2c0ZEJhZE1Td3JSOWxF?oc=5"
       ],
-      "contexto": "Como se preparar para declarar renda do exterior no IR de 2027 Planejamento ao longo do ano ajuda a evitar erros, reunir documentos com antecedência e simplificar a declaração de rendimentos e patrimônio mantidos fora do Brasil A declaração de Imposto de Renda exige cuidados extras para quem recebe salário, aluguel, dividendos ou possui investimentos no..."
+      "contexto": "Da redação O governo do presidente Luiz Inácio Lula da Silva (PT) voltou a avaliar uma nova forma de ampliar a arrecadação federal antes mesmo do início do quarto mandato. A equipe econômica estuda cobrar Imposto sobre Operações Financeiras (IOF) sobre aplicações financeiras que atualmente são isentas de Imposto de Renda, incluindo letras de crédito..."
     },
     {
       "brandId": "mycapital",
@@ -87,7 +68,7 @@
         "title": "Mais ricos estão trocando LCI por CDB por causa do imposto sobre dividendos, mas será que vale mesmo a pena?",
         "url": "https://www.seudinheiro.com/2026/financas-pessoais/mais-ricos-estao-trocando-lci-por-cdb-por-causa-do-imposto-sobre-dividendos-mlim/",
         "source": "Seu Dinheiro",
-        "date": "2026-10-28",
+        "date": "2026-10-29",
         "tag": "IR",
         "summary": "",
         "origem": "coletor"
@@ -96,6 +77,25 @@
         "https://news.google.com/rss/articles/CBMizAFBVV95cUxNNHJrZUswM0FMemRhU2IxOWV5c0l4b3psZ0NRUjJLRHB4c2RzSWE1SVZyNVRPdkQ2MExfOGZWYlNQeWNLZ0k4aWZjYWRLTDhYUHNITEdiYTVHTU9zeTdXOUVubGIyUkk5V2xzY21wemlyNVFjUGNIeTJPb3JUTmhMcURqeWVYZEhhV3AyWUhrSWdOT3BiZ1NraGEwNlg2QU1iTDdkX25hQ041alhNY19TWWNEQkdZUFRYSUJVLVM0R0V5SXVHMW5uUWhzNkc?oc=5"
       ],
       "contexto": "Mais ricos estão trocando LCI por CDB por causa do imposto sobre dividendos, mas será que vale mesmo a pena? A nova tributação dos dividendos está obrigando investidores de alta renda a repensar a preferência histórica por ativos isentos como LCI, LCA e outros Durante anos, a lógica das grandes fortunas brasileiras foi a mesma: quanto mais renda isenta,..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Tributação de fundos exclusivos: regras e come-cotas",
+        "url": "https://oespecialista.safra.com.br/tributacao-de-fundos-exclusivos/",
+        "source": "Safra",
+        "date": "2026-10-30",
+        "tag": "IR",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMidkFVX3lxTE44T3FFbll3VFZ3cmtCSzZHcFpmbU9fYnJfX2NvVjVnVTd1TFZYN0pMVGRYNFZyTDJjT0dXbnhydnJGY2ViU2JOaGRodzRNT1JpOHJxZlZKaHk1REJIajJLN0VWbTZFdkdjNGtEaGVTOVRLRmtrWmc?oc=5"
+      ],
+      "contexto": "Tributação de fundos exclusivos: o que muda para alta renda Entenda como funciona a tributação de fundos exclusivos, o come-cotas e os principais pontos de atenção para investidores de alta renda A tributação de fundos exclusivos mudou desde janeiro de 2024. A Lei nº 14.754/2023 ampliou a incidência periódica de Imposto de Renda sobre rendimentos de fundos..."
     },
     {
       "brandId": "mycapital",
@@ -160,25 +160,6 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "MAIS IMPOSTO: Governo Lula estuda recriar IOF para taxar investimentos que hoje são isentos",
-        "url": "https://www.blogdobg.com.br/mais-imposto-governo-lula-estuda-recriar-iof-para-taxar-investimentos-que-hoje-sao-isentos/",
-        "source": "Blog do BG",
-        "date": "2026-10-28",
-        "tag": "IR",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMiuwFBVV95cUxORUhMN29DdVl0S0h2TlM0Z1pWN2M2VGxrWV9Za2Z0VHFEbnFFZXlaSWpkQ3FTTFZkcWdiQnhGMFluTUFFb1ZBS3plY2JsMWx6eXkxWUhlSzVxbC1scnY0RlVQNGpDaUd0RllGMkNHNWpuQlFuWnRCbURlWkZ4QTFiMHV4aENVX1BhcVdLVzNuQmgxNVFuN3REV19uZUNHbkxBN3dzcVhFeHdjX0ItdnZobGtEX1FvOURweFhJ?oc=5"
-      ],
-      "contexto": "O governo do presidente Luiz Inácio Lula da Silva (PT) estuda cobrar Imposto sobre Operações Financeiras (IOF) de investimentos que atualmente contam com isenção tributária, como LCIs, LCAs, CRIs, CRAs e debêntures incentivadas. A notícia dada pelo jornal O Globo diz que a proposta busca ampliar a arrecadação federal e integra as discussões sobre o ajuste..."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
         "title": "Rota de fuga: investidores repercutem decisão do Fed, balanços, imposto sobre dividendos, formação do governo e paradeiro de Flávio Bolsonaro",
         "url": "https://www.seudinheiro.com/2026/colunistas/rota-de-fuga-investidores-repercutem-decisao-fed-balancos-imposto-sobre-dividendos-governo-paradeiro-flavio-bolsonaro-rsgp/",
         "source": "Seu Dinheiro",
@@ -191,6 +172,25 @@
         "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPczBZSW1ibmVBNjNpZ1MtVEs2alUzRDVweHdGQ3ZLSnJRaHE3R2x2dEQwUjdva3BhOVRIRTBtWXZXaGhmdmhfZWhiVVdoel9wYVdoOE10Q1paUndaU3Q3RmNLYmVBVUd3RFdJQlZEUUhhSzdSVjJLckN4Yk9ld1dRbDlGSm8tWTBVNEtlaS1PVkYwX092TFZIaEoyRGEtU3pTclBpNmF5MkI3Q3EwQXJKV2VTdnMzNlYyM2JtMndTMjdrTVhzRlgzTlNnYTJaWmcwMHRUVjh3QmY2NG11ME00Sm04b3BtMDVxQzhvWkFZYnliSUZHcVFiYkc5TQ?oc=5"
       ],
       "contexto": "Rota de fuga: investidores repercutem decisão do Fed, balanços, imposto sobre dividendos, formação do governo e paradeiro de Flávio Bolsonaro Nova tributação de dividendos está levando investidores de alta renda a buscar uma rota de fuga da aliviar a fatura do imposto de renda, mas precisam fazer as contas com atenção Poucas coisas unem tanto as pessoas..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Dividendos no fim do ano: veja quando há retenção de 10% de IR",
+        "url": "https://www.contabeis.com.br/noticias/80466/dividendos-no-fim-do-ano-veja-quando-ha-retencao-de-10-de-ir/",
+        "source": "Portal Contabeis",
+        "date": "2026-10-29",
+        "tag": "Dividendos",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPUV9UaVRpbkw4QnJDU0lCQy11NWNucHpnblI0X3BQSGNSZGFyUVpBSm95b1U3ekpTUEVQS1QxTURCZ0s5MF9UMXNJanJoRHQ5eHJObDBJYThMaDE2YlIxUWtvNWs2b21ZelVuaDJBQkMxZmJPV29mTTFHcDc0NElGZ1hyREVMci1wRFRVM29UbGpQNTAwbDE0RzktX1dZUHBXTjMyUk03eEw?oc=5"
+      ],
+      "contexto": "Empresas que pretendem distribuir lucros e dividendos no encerramento de 2026 devem observar a retenção de 10% de Imposto de Renda quando o total destinado à mesma pessoa física residente no Brasil ultrapassar R$ 50 mil em um mês. Nessa situação, o imposto incide sobre o valor integral, e não apenas sobre o excedente, ressalvadas as hipóteses legais de..."
     },
     {
       "brandId": "mycapital",
@@ -217,25 +217,6 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Arrecadação federal bate recorde de R$ 239,4 bilhões em setembro com IR sobre aplicações em alta",
-        "url": "https://melhorinvestimento.net/noticias/arrecadacao-federal-setembro-2026-recorde",
-        "source": "melhorinvestimento.net",
-        "date": "2026-10-28",
-        "tag": "Dividendos",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPTU1zU0VxVnVVMDNpbGRUTXAwYTdYV0NjOENqc3R4QVJsR1hjdnFDOGJOZ0h6Mm1WSm9GVEp3STQwSXVpTU11WVpBMVpValFnYTFBSGl6WC1hOV9NNzVZOTNOMGZ6UE5YdEpFaGs5dDlWWC1MU1NzUEJHeHY1WDRzeEdkbzg2U1Fr?oc=5"
-      ],
-      "contexto": "Arrecadação federal bate recorde de R$ 239,4 bilhões em setembro com IR sobre aplicações em alta A arrecadação federal somou R$ 239,4 bilhões em setembro, alta real de 5,62% e recorde para o mês. O IR retido sobre aplicações financeiras cresceu 9,68%, puxado pela renda fixa e pela tributação de dividendos."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
         "title": "Rodrigo Pimentel, advogado, estrutura a holding familiar diante da tributação de dividendos",
         "url": "https://jornaldebrasilia.com.br/noticias/economia/rodrigo-pimentel-advogado-estrutura-a-holding-familiar-diante-da-tributacao-de-dividendos/",
         "source": "Jornal de Brasília",
@@ -246,7 +227,8 @@
       },
       "aliases": [
         "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNQVJhMUFuSTdrdFRrVkZTS01WRDBFU0ZGMnRRTkF3TnZoNzVmT1RFSk52TXZWNkE3YVRUclZIR0tVVWtyc3kwM2NKWDdJbEd5XzNDdndoSUlwY1dRWTNYbEtCNk9qN01QTmd4S1dPSW1MZDM3UmpvZXlZMDl6S0xJam9hanhMelROZ0xzaHl4aU1OazdZdTFhU1dmV1B6eXZuYk5Sb0NlWXI1UDBrRUx0NzlzYW5DY0hGOHZsclFST0dBb2VQRm9HVlQ5bmxlclVOU2NoS3ppOA?oc=5"
-      ]
+      ],
+      "contexto": "A distribuição de lucros perdeu a neutralidade fiscal que sustentou décadas de planejamento societário, e Rodrigo Gonçalves Pimentel, advogado especialista em estruturação patrimonial internacional, dimensiona com famílias empresárias o alcance da tributação de dividendos sobre a holding que reúne as participações do grupo. A Lei 15.270, vigente desde..."
     },
     {
       "brandId": "mycapital",
@@ -311,25 +293,6 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Receita Federal abre consulta ao lote residual de restituição do IRPF 2026 nesta sexta-feira (23)",
-        "url": "https://fenacon.org.br/noticias/receita-federal-abre-consulta-ao-lote-residual-de-restituicao-do-irpf-2026-nesta-sexta-feira-23/",
-        "source": "Sistema FENACON",
-        "date": "2026-10-23",
-        "tag": "Declaração",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMixwFBVV95cUxOSDdmLXRvMG0yOUFIdEN0V3pxVGYzekJCNGNtOXdtX2drYjRNODIzcHNJQXVzS2VFZEtsdDVHN0E3QTY0S3p2cnhpTU1nOHkyVmt6OG94LUMyZnZwZFYyb2IxVEhRMUZqdi1zY2ZHTDVsUXFqSXZOanl5SGZxNldRSjRJemxjTUhZLU5GVTBSbEEzcUhlbGVjTUltcWpicVRUdHZTaV9PRnBUcEcwYkh2dV9NWmF3UHBQNEZsSXRSNWY4MGFxTzZv?oc=5"
-      ],
-      "contexto": "Receita Federal abre consulta ao lote residual de restituição do IRPF 2026 nesta sexta-feira (23) Consulta ao lote residual estará disponível a partir das 9h desta sexta-feira (23); crédito de R$ 531,6 milhões será realizado em 30 de outubro, contemplando 184.442 restituições A Receita Federal libera, a partir das 09h desta sexta-feira (23), a consulta ao..."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
         "title": "7,1% dos declarantes de IR têm patrimônio acima de R$ 1 milhão",
         "url": "https://www.poder360.com.br/poder-economia/71-dos-declarantes-de-ir-tem-patrimonio-acima-de-r-1-milhao/",
         "source": "Poder360",
@@ -386,18 +349,37 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Receita libera consulta à restituição do IR; veja como saber se você vai receber",
-        "url": "https://segundoasegundo.com.br/2026/10/receita-libera-consulta-a/",
-        "source": "Segundo a Segundo",
-        "date": "2026-10-24",
+        "title": "Receita paga nesta sexta-feira lote da malha fina do Imposto de Renda",
+        "url": "https://www.brasildefato.com.br/2026/10/30/receita-paga-nesta-sexta-feira-lote-da-malha-fina-do-imposto-de-renda/",
+        "source": "Brasil de Fato",
+        "date": "2026-10-30",
         "tag": "Declaração",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMic0FVX3lxTE9IRXVBcE43Njk0Zk9WeTZHc1dkcG13WTJvR19HUEh0a1VEb2F4emE5TzVibUlGWFNCcjNmNUlTRmJfR1lsT3ZKUTZzLTBvNlRDMTVsWHdaRWJpbDF1MVEwYlZqQ19CSFZ2aXVIZl9jZ1k5TFE?oc=5"
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxNaldwV3hBYkxBaFJpM2Q0Mml0TkhIeGRpN1ctaUJGcjBHcm9mOXQ0a0tQWHVGeUNLNjRsaW1hTVJkVS0yclMxUVBxY1g4NkFWMkV4cnhWUUs4NTR1SXJ5WnJBZGJnU1FKbm56ZlFoNnBLVXVDcEoxdHJuR000cjFvbUt3Sm51bW1sWTdmODI5VjlJdGdKRUNKalVBelRicTJVVTVWR0J1ZG9VNXRiWHRyWUhENA?oc=5"
       ],
-      "contexto": "A Receita Federal liberou nesta sexta-feira (23) a consulta ao lote residual de restituição do Imposto de Renda Pessoa Física (IRPF). Ao todo, 184.442 contribuintes serão contemplados com R$ 531,6 milhões."
+      "contexto": "Cerca de 184 mil contribuintes que caíram na malha fina e regularizaram as pendências com o Fisco acertaram as contas com o Leão. A Receita Federal paga nesta sexta-feira (30) o lote da malha fina de outubro."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Receita Federal paga nesta sexta-feira (30) lote residual do IRPF 2026",
+        "url": "https://clube.fm/noticias/receita-federal-paga-nesta-sexta-feira-30-lote-residual-do-irpf-2026",
+        "source": "Clube FM Brasil",
+        "date": "2026-10-30",
+        "tag": "Declaração",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMimgFBVV95cUxQeG1ZbzVDMEF5dzRmUEhCU0ZiM2Q4enR3Nk5aZ1dsaGJCaFlrLXZyYlNtYXVPbGlua19ES1hadjI2SmRMR2NGMWJjT0podWphT3dVN25yakhHeHl4Vk9qOV9ScncwSXEzdzZTNDZFbU9qSUpfZHQ1WWx3VjdqbVBFQjdsdXRCTXVXMWp4S2t2U1ZSQ1lMVkdGM2NB?oc=5"
+      ],
+      "contexto": "Receita Federal paga nesta sexta-feira (30) lote residual do IRPF 2026 O crédito bancário contemplará contribuintes que regularizaram pendências na declaração deste ano e pessoas com valores residuais de exercícios anteriores Por Redação Clube FM - Brasília - Atualizado A Receita Federal abriu, na última sexta-feira (23), a consulta ao lote residual de..."
     },
     {
       "brandId": "mycapital",
@@ -417,6 +399,44 @@
         "https://news.google.com/rss/articles/CBMikAFBVV95cUxNZE52WW1KcER3R283SENyZTJmbTZQQjJpeDNWYXRYalpPVzBDTUpLaTh5VVI0ZHIwRGo3RVVJTVl2eEZGamI2cU4xazM0OElBY0lza1R6a0dsUmhIdmlSRkJQWnp3aUphcnozZlU4ckVQVUhRUkY4WFdmRGM5cU1CbWpLX0VHSVlwOUNwMHVrRXTSAZYBQVVfeXFMUGk2UGNDTElSQVNQSVhzR3J4dVJzNDUzdWRWMmVveUozOVlEZWVvTGVoOXF0bEhPRXhvT1V6dEwzQlFTQ2M5emhaRmprbGNWOEg2NU5ydEJodkVPblYyNkNMWmRIMUpUb2JQamJSaExtYzRxdm9qeUVpWk1BZjdpNjVmYU5aemhqN1pxMDNkekFVbmdXRFdR?oc=5"
       ],
       "contexto": "Investidores estrangeiros fizeram uma compra líquida de US$ 6,84 bilhões em dólar por meio de derivativos negociados na B3 na segunda-feira (26), primeiro pregão após o segundo turno da eleição presidencial. Foi a maior compra líquida diária dos estrangeiros, ao menos desde julho de 2022, conforme dados da B3, compilados por traders e obtidos pelo InfoMoney."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Descubra agora 3 ETFs que pagam dividendos mensais",
+        "url": "https://www.nordinvestimentos.com.br/blog/etf-dividendos/",
+        "source": "Nord Investimentos",
+        "date": "2026-10-30",
+        "tag": "Mercado",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9ZSHB2Y0xtbE4zU19qVEthb3c4ckdHTGktT1l4VnphSEN3VHBDZEgxQlRFcWI1UVlMdjVoTHhLb1ZrdmJOX3hkbU1ScVhNbkFnY2RjWXhteGt6dkwxM0FmeVNkaGdEUWRs0gFuQVVfeXFMUDJ5dEZIOE1qdWRYd1RfcGhLemk0dVM2Y25ERjZIX3RsS1d5TUpHU2hxYUdUY1dmNlRWcjVjdkNoY3Zfdy1pMS16a0JLdkNoOHZ0VmxfUFZJTUFQMGdEX3Z3ZTRLTTNRb3VHN0U5QUE?oc=5"
+      ],
+      "contexto": "Descubra agora 3 ETFs que pagam dividendos mensais Os ETFs que pagam dividendos mensais vêm ganhando espaço entre investidores que buscam renda recorrente na Bolsa sem precisar montar uma carteira de ações por conta própria. A proposta é simples: investir em um único ativo negociado em Bolsa e receber proventos de forma periódica."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Investidor individual compra R$ 3,6 bi na B3 após tombo histórico",
+        "url": "https://www.spacemoney.com.br/investimentos/acoes/investidor-individual-compra-b3-apos-eleicoes/",
+        "source": "SpaceMoney",
+        "date": "2026-10-30",
+        "tag": "Mercado",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMinAFBVV95cUxQODMzUFdQbThNOU1aU05odDBKRGw5SjlNdmRBMDVYVjJJdkZtLTNQRWVucy0wNWd2ekNwMEprLUNRdmdkaUNOalF1MWxBT3ZWc3g3THhOQVFJcnBEVk5LMnE1R25CSTN3MlZpOFdIdktJTkRzZHVoWWFWZFJQV2RFZFd5S3c0T1M4RWxnSDZKdG1aUnZSXzBVMmJyYUk?oc=5"
+      ],
+      "contexto": "No pregão de 26 de outubro, a B3 viveu um dos dias mais turbulentos dos últimos anos: o Ibovespa encerrou em baixa de 13,36%, chegou a recuar 17% ao longo do dia e acionou o circuit breaker logo no início dos negócios, mecanismo que suspende as negociações após queda superior a 10%. Enquanto o capital estrangeiro sacava R$ 2,85 bilhões, o investidor pessoa..."
     },
     {
       "brandId": "mycapital",
@@ -474,25 +494,6 @@
         "https://news.google.com/rss/articles/CBMihwFBVV95cUxPb0hYd19RTVFqdlIzclhpTm1WLUhvcXdrSUNqd1F4Y3QxU1BZbTNMNkV0ZEt5NGkwTFYzajJOTUFKWFJidFJOcXowOVBBODBObFNrSGcxbmxobmJnd1RuSFpSWnlnM0dxRENHa0MxYV90TUd0T2lPdUdYVHAzV3F5UnhJTGVNSGc?oc=5"
       ],
       "contexto": "Número de jovens investidores na bolsa cresce 76% em MG, impulsionado pela educação financeira A bolsa de valores brasileira ganhou 2.550 investidores mineiros menores de 18 anos entre dezembro de 2022 e setembro de 2026. O crescimento acompanha uma tendência nacional que, segundo a B3, é impulsionada pela ampliação do acesso à educação financeira e às..."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Circuit breaker para a Bolsa pela primeira vez desde 2020: o que é e o que muda para o investidor",
-        "url": "https://diariodonordeste.verdesmares.com.br/opiniao/colunistas/alberto-pompeu/circuit-breaker-para-a-bolsa-pela-primeira-vez-desde-2020-o-que-e-e-o-que-muda-para-o-investidor-1.3801512",
-        "source": "Diário do Nordeste",
-        "date": "2026-10-26",
-        "tag": "Mercado",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMikgJBVV95cUxOaXlZdnpEdktpTjM0WDkza2xQRm9kdUdzbnE5NFF5VmpXZ25KQ3hxOXM3NThzRWZpM3ZXcEFOQV8xcFlXa2UzNVFYZGkzbWl0UUJBeXE4aXZ3Q21DT0ZKVDJIai1ydnBOSE5TTlpZcEFUNFhJVGhhd2RDd0FqbWxmLW0tM1hnUTBHZHR0OU1fbXBVWGxseXJsc1I4dHN2VmJ4ZDQ5Q3dSMHcydHh0dG1VNkVweTFlUk8zSEN6Y1JPblVfd2hrNUNiZ1VTUGNDaFoyaVp4UkQxZXFQQ09jREhUZWRkUE84Q0FqNG9XZjVMUWxxYW5MaXNDTnF0elpNUnp5NEhMMHluMWk3RGpVRW5ycTVR?oc=5"
-      ],
-      "contexto": "Circuit breaker para a Bolsa pela primeira vez desde 2020: o que é e o que muda para o investidor Seu Raimundo, motorista de aplicativo em Messejana, abriu a corretora às 10h desta segunda-feira para conferir as ações do Banco do Brasil que compra todo mês."
     }
   ],
   "avisos": [
@@ -500,7 +501,6 @@
   ],
   "arquivos": [
     "02f6f2121b164b52.jpg",
-    "7c03ef0bf0ebf597.jpg",
-    "90b03d44b8b7b9b4.jpg"
+    "7c03ef0bf0ebf597.jpg"
   ]
 }
