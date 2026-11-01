@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-31T15:17:29+00:00",
+  "geradoEm": "2026-11-01T15:58:08+00:00",
   "fonte": "coletor (GitHub Actions)",
   "itens": [
     {
@@ -141,18 +141,18 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "IOF sobre investimentos isentos de IR: entenda o plano de Lula para a arrecadação",
-        "url": "https://www.saocarlosagora.com.br/variedades/iof-sobre-investimentos-isentos-de-ir-entenda-o-plano-de-lula-para-a-arrecadacao/",
-        "source": "São Carlos Agora",
-        "date": "2026-10-29",
+        "title": "Após revés de 2025, governo estuda IOF em investimentos isentos de Imposto de Renda",
+        "url": "https://economicnewsbrasil.com.br/2026/10/28/iof-em-investimentos-isentos/",
+        "source": "Economic News Brasil",
+        "date": "2026-10-28",
         "tag": "IR",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMixAFBVV95cUxQTXNBUm9UZkozRFp0SjJucmFCYW56eHBQMm4tdW91RXpseTlES1laMjVVank0YmZQQnZYUjJHMmd1WEQyZnE3Mno0S0FqdzdjelVXY1VUbVdNZjJiMnJlX2NtdTB6WnRrLTN0RGFqUlM2ZTdjbmVJYkRqLTF6Wk9QTmZBdERDMkd5aGdLeW10eEFXRlNOZHVjQkhGc1FtWHFuTXBheGMwZmw2Rm1jWmoxaFpKdjhRcWM5SEZjSTZTZzM0WmFR?oc=5"
+        "https://news.google.com/rss/articles/CBMif0FVX3lxTE1UVU54cWFBbG1SR3NfR08tT0I3UGVUWlZuVVdmX3JUYUV3R2ZjeDB3TlR0THhyQ29oWm5OZmVZdUpJNldibTY4ZGFSRGxleUVRTGg1ZHFQczZhNlVlQi1FcXd2a3llTV9fY1k4czJocnNqMWVfRHBWTm5XdUQ1SUk?oc=5"
       ],
-      "contexto": "Um aumento de impostos, como o IOF, já é debatido na equipe econômica de Luiz Inácio Lula da Silva. Isso ocorre mesmo antes do início de seu quarto mandato."
+      "contexto": "O governo Lula voltou a estudar a cobrança de Imposto sobre Operações Financeiras (IOF) em investimentos isentos de Imposto de Renda (IR), após não conseguir aprovar mudanças na tributação dessas aplicações em 2025. A alternativa permitiria alterar alíquotas por decreto presidencial, sem votação prévia no Congresso, mas não eliminaria automaticamente a..."
     },
     {
       "brandId": "mycapital",
@@ -198,8 +198,27 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
+        "title": "Manifesto cobra tributação dos ricos e critica ajuste fiscal no governo Lula",
+        "url": "https://www.jb.com.br/economia/2026/10/amp/1061419-economistas-divulgam-manifesto-contra-corte-de-gastos-e-pedem-nova-regra-fiscal.html",
+        "source": "Jornal do Brasil",
+        "date": "2026-10-31",
+        "tag": "Dividendos",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPUmFySDU3cFBURFNtXy1LTkVvS1hkS3REbkVWUHhPMDF1ajJJZWh2Mkg0aDVLM1hKaTFodW0zNE9NaU8yV0QwZU9hWklJaWVodDZoRnM1VUFEVWNsYW1FMm82UTlkSEt0QnV3eXhDM0dpQXZvcHNrbnlRQmxDTGFXUmZxQmFIbVFNdXRzMm44bXF4SmdLaEZDeF80SUtmRWN6a3o1Tm5FV3p5azM5SkNUM0x0QXJsRC1KcmZpM2FIakwwQ09PVzFrLVExbUE3ZHBi0gHQAUFVX3lxTE9SYXJINTdwUFREU21fLUtORW9LWGRLdERuRVZQeE8wMXVqMkllaHYySDRoNUszWEppMWh1bTM0T01pTzJXRDBlT2FaSUlpZWh0NmhGczVVQURVY2xhbUUybzZROWRIS3RCdXd5eEMzR2lBdm9wc2tueVFCbENMYVdSZnFCYUhtUU11dHMybjhtcXhKZ0toRkN4XzRJS2ZFY3prejVObkVXenlrMzlKQ1QzTHRBcmxELUpyZmkzYUhqTDBDT09XMWstUTFtQTdkcGI?oc=5"
+      ],
+      "contexto": "Manifesto cobra tributação dos ricos e critica ajuste fiscal no governo Lula Documento afirma que a pressão por austeridade ameaça despesas sociais e propõe elevar a arrecadação sobre patrimônio e dividendos Economistas e outros especialistas divulgaram um manifesto nesta sexta-feira (30) contra a pressão do mercado financeiro para que o governo eleito..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
         "title": "Novo IR sobre dividendos: como saber se você vai pagar em 2027",
-        "url": "https://investnews.com.br/financas/novo-ir-sobre-dividendos-2027/amp/",
+        "url": "https://investnews.com.br/financas/novo-ir-sobre-dividendos-2027/",
         "source": "InvestNews",
         "date": "2026-10-30",
         "tag": "Dividendos",
@@ -207,9 +226,9 @@
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMieEFVX3lxTE9XUVMxb2dDRGVyNF8taV9LbWJENGZ4cDlFaVVrWDFBdWJXTFZWLXlHTU1CYklPRmI4VjlmTUhZZXBOSTJjZGt1b21ESUVEb0VNTGc4VEhLY2tSWWw1VEFSb001V0Z2LXczTTdPQnJDNk5yZENUeVM1QtIBeEFVX3lxTE9XUVMxb2dDRGVyNF8taV9LbWJENGZ4cDlFaVVrWDFBdWJXTFZWLXlHTU1CYklPRmI4VjlmTUhZZXBOSTJjZGt1b21ESUVEb0VNTGc4VEhLY2tSWWw1VEFSb001V0Z2LXczTTdPQnJDNk5yZENUeVM1Qg?oc=5"
+        "https://news.google.com/rss/articles/CBMic0FVX3lxTE1icTZyTGdUWkdJTTFiM1hSRkNIaUFKTGtlUDd5VEIzeGNLTl81cDVBSC0wQXB1T2JwSEFmZUpIU3hrbGFvQXp2akhKSGloY2Y5Q0dUakUzbVBGOXhMWmU1M3JJdy1zTG1fVWVDTjloTG9kQ0nSAXhBVV95cUxPV1FTMW9nQ0RlcjRfLWlfS21iRDRmeHA5RWlVa1gxQXViV0xWVi15R01NQmJJT0ZiOFY5Zk1IWWVwTkkyY2RrdW9tRElFRG9FTUxnOFRIS2NrUllsNVRBUm9NNVdGdi13M003T0JyQzZOcmRDVHlTNUI?oc=5"
       ],
-      "contexto": "Novo IR sobre dividendos: como saber se você vai pagar em 2027 Entenda quando a empresa retém 10% e quem entra no imposto mínimo na declaração de 2027 Desde janeiro, as empresas retêm 10% na fonte quando pagam mais de R$ 50 mil no mês a um mesmo acionista. Na declaração, quem tiver renda anual acima de R$ 600 mil passa por um imposto mínimo que soma todos..."
+      "contexto": "As duas cobranças seguem lógicas diferentes, e é por isso que muitos investidores ainda não sabem se serão afetados. Há quem teve imposto retido sem dever nada e quem nunca teve retenção, mas terá conta a acertar no ano que vem."
     },
     {
       "brandId": "mycapital",
@@ -248,25 +267,6 @@
         "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOZGZQbWtZUWhLcHBMcTdtQnppeEtia2ZBVlBUODMzR2d0RDJ4RUFhUXlBNGU2dDcyUVRyZWpEc21ISy1DcXlacDdNT3FVSFMzbzBZMlM5RFd6cnhHTHVuRXY3b3dISWtYUEZUczNTWjdqLVd6SE02M09rLWRCOTJfUVc0RGtpM25wcWloc3F5LXZOMnppbkN4SmhfTWhrYkVjSnM4VFFsVXZBeHk3c2hhdzQ0bTJmc2pW?oc=5"
       ],
       "contexto": "Vai distribuir dividendos no fim do ano? Você pode ter de pagar mais Imposto de Renda Com retenção de 10% sobre proventos acima de R$ 50 mil mensais, planejamento dos pagamentos e cumprimento das obrigações fiscais exigem atenção dos empresários Fim de ano chegando e, enquanto os trabalhadores começam a contar os dias para receber o 13º salário, donos de..."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Rodrigo Pimentel, advogado, estrutura a holding familiar diante da tributação de dividendos",
-        "url": "https://jornaldebrasilia.com.br/noticias/economia/rodrigo-pimentel-advogado-estrutura-a-holding-familiar-diante-da-tributacao-de-dividendos/",
-        "source": "Jornal de Brasília",
-        "date": "2026-10-27",
-        "tag": "Dividendos",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNQVJhMUFuSTdrdFRrVkZTS01WRDBFU0ZGMnRRTkF3TnZoNzVmT1RFSk52TXZWNkE3YVRUclZIR0tVVWtyc3kwM2NKWDdJbEd5XzNDdndoSUlwY1dRWTNYbEtCNk9qN01QTmd4S1dPSW1MZDM3UmpvZXlZMDl6S0xJam9hanhMelROZ0xzaHl4aU1OazdZdTFhU1dmV1B6eXZuYk5Sb0NlWXI1UDBrRUx0NzlzYW5DY0hGOHZsclFST0dBb2VQRm9HVlQ5bmxlclVOU2NoS3ppOA?oc=5"
-      ],
-      "contexto": "A distribuição de lucros perdeu a neutralidade fiscal que sustentou décadas de planejamento societário, e Rodrigo Gonçalves Pimentel, advogado especialista em estruturação patrimonial internacional, dimensiona com famílias empresárias o alcance da tributação de dividendos sobre a holding que reúne as participações do grupo. A Lei 15.270, vigente desde..."
     },
     {
       "brandId": "mycapital",
@@ -349,7 +349,7 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Ainda está aguardando restituição do IR? 184 mil serão pagos hoje (31/10)",
+        "title": "Ainda está aguardando restituição do IR? 184 mil serão pagos hoje (30/10)",
         "url": "https://meutudo.com.br/blog/noticias/2026/10/30/quem-esta-no-lote-residual-do-ir-pago-nesta-sexta-30-10-e-que-horas-cai-confira-detalhes/",
         "source": "meutudo",
         "date": "2026-10-30",
@@ -425,18 +425,18 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Descubra agora 3 ETFs que pagam dividendos mensais",
-        "url": "https://www.nordinvestimentos.com.br/blog/etf-dividendos/",
-        "source": "Nord Investimentos",
-        "date": "2026-10-30",
+        "title": "Investidores estrangeiros tiram R$ 2,85 bilhões da B3 no 1º pregão após a eleição",
+        "url": "https://melhorinvestimento.net/noticias/estrangeiros-saida-b3-apos-eleicao",
+        "source": "melhorinvestimento.net",
+        "date": "2026-10-31",
         "tag": "Mercado",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9ZSHB2Y0xtbE4zU19qVEthb3c4ckdHTGktT1l4VnphSEN3VHBDZEgxQlRFcWI1UVlMdjVoTHhLb1ZrdmJOX3hkbU1ScVhNbkFnY2RjWXhteGt6dkwxM0FmeVNkaGdEUWRs0gFuQVVfeXFMUDJ5dEZIOE1qdWRYd1RfcGhLemk0dVM2Y25ERjZIX3RsS1d5TUpHU2hxYUdUY1dmNlRWcjVjdkNoY3Zfdy1pMS16a0JLdkNoOHZ0VmxfUFZJTUFQMGdEX3Z3ZTRLTTNRb3VHN0U5QUE?oc=5"
+        "https://news.google.com/rss/articles/CBMif0FVX3lxTE5LYXZPTms3bU44STdWcWxPazg1RC0ya3dRUEozVTN4ckpydEt6YmZVNUg2cHZTWDl5dXdPc1Q2X1MtbmltYk9Xd2RjRzFFejdCYVZ2Vlo4cjQtMGpaOWRRaDlnVkpYZ3M5SHg2NVBRWFAxdG5rZUMzYWJOcmt3OU0?oc=5"
       ],
-      "contexto": "Descubra agora 3 ETFs que pagam dividendos mensais Os ETFs que pagam dividendos mensais vêm ganhando espaço entre investidores que buscam renda recorrente na Bolsa sem precisar montar uma carteira de ações por conta própria. A proposta é simples: investir em um único ativo negociado em Bolsa e receber proventos de forma periódica."
+      "contexto": "Investidores estrangeiros tiram R$ 2,85 bilhões da B3 no 1º pregão após a eleição Os investidores estrangeiros retiraram R$ 2,85 bilhões da B3 em 26 de outubro, terceira maior saída diária do ano. Em três pregões, a saída somou R$ 6,82 bilhões, e o saldo do mês caiu para R$ 13,34 bilhões."
     },
     {
       "brandId": "mycapital",
