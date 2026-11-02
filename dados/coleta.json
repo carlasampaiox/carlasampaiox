@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-01T15:58:08+00:00",
+  "geradoEm": "2026-11-02T19:26:35+00:00",
   "fonte": "coletor (GitHub Actions)",
   "itens": [
     {
@@ -39,25 +39,6 @@
         "summary": "Vídeo publicado em 05/10, com 46 visualizações, 0 curtidas.",
         "origem": "coletor"
       }
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Governo Lula estuda cobrar IOF sobre investimentos isentos de Imposto de Renda para ampliar arrecadação e rever benefícios fiscais; entenda",
-        "url": "https://www.infoverus.com.br/economia/governo-lula-estuda-cobrar-iof-sobre-investimentos-isentos-de-imposto-de-renda-para-ampliar-arrecadacao-e-rever-beneficios-fiscais-entenda/37594",
-        "source": "Infoverus",
-        "date": "2026-10-29",
-        "tag": "IR",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMijwJBVV95cUxQWUdYVHBPSjY5UDlmcGczUGNtN3hYdVhNY3ZSd09ZUjJwMHo5Q0xRRVlKUWZkanVfY1RPQ1l0bkpnMEtBWENOT0Z3ZFQyaUNPbWZlbi1UY2R3UVFvQ0hxOE8wd1RHVHdsQnFlSUY3MGt0M3psdTNLTFhJS1J0Z2I2TnR6RV9ES3c0NjJMcGtzN3BsTFFFZHRmVTlSaFAzMXFlRE0xSTAyV1RVS1lOSEVlOG4xS1U3TTB4RkM1V2FxOEQyMGpoelY5OXZ3Q21LTUhaU3ltcWw3eHJPbFZDelc0RUVDQVFWSDFhWkMyQ01RLURWZ1hFTGRaSThDN1hsOTVId2c0ZEJhZE1Td3JSOWxF?oc=5"
-      ],
-      "contexto": "Da redação O governo do presidente Luiz Inácio Lula da Silva (PT) voltou a avaliar uma nova forma de ampliar a arrecadação federal antes mesmo do início do quarto mandato. A equipe econômica estuda cobrar Imposto sobre Operações Financeiras (IOF) sobre aplicações financeiras que atualmente são isentas de Imposto de Renda, incluindo letras de crédito..."
     },
     {
       "brandId": "mycapital",
@@ -122,25 +103,6 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Governo avalia cobrar IOF sobre investimentos hoje isentos de IR",
-        "url": "https://www.portalaz.com.br/noticia/amp/economia/99409/governo-avalia-cobrar-iof-sobre-investimentos-hoje-isentos-de-ir/",
-        "source": "Portal AZ",
-        "date": "2026-10-29",
-        "tag": "IR",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMivAFBVV95cUxQOTJvbU1BSFFPZTYxNGMwQmo4R0hQcjN1Q0tXWG1MZTkxQUh4VGduaHc5V1FrU091ajB6ZGpmZHFkWkZveVBGSllYTW1yUzJlUEZnNVFIWVVYMzluYVdTS2p0UlJ6VEpHdlgxZEYtODA2VkNUdW1PLWhUc1ltWFVPTGtkWEVJU1hlRkczUDl2bmd5cFlNZGFDQ250b2lCSjRnX0JhSXNVSGJ5QTJzbnlYWW1lSFZlUWtlanRrS9IBvAFBVV95cUxQOTJvbU1BSFFPZTYxNGMwQmo4R0hQcjN1Q0tXWG1MZTkxQUh4VGduaHc5V1FrU091ajB6ZGpmZHFkWkZveVBGSllYTW1yUzJlUEZnNVFIWVVYMzluYVdTS2p0UlJ6VEpHdlgxZEYtODA2VkNUdW1PLWhUc1ltWFVPTGtkWEVJU1hlRkczUDl2bmd5cFlNZGFDQ250b2lCSjRnX0JhSXNVSGJ5QTJzbnlYWW1lSFZlUWtlanRrSw?oc=5"
-      ],
-      "contexto": "Diante da resistência do Congresso Nacional às propostas de aumento de impostos, a equipe econômica do governo Lula voltou a avaliar a possibilidade de cobrar Imposto sobre Operações Financeiras (IOF) sobre títulos de investimento atualmente isentos de Imposto de Renda (IR). A medida poderia alcançar aplicações como Letras de Crédito Imobiliário (LCIs),..."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
         "title": "Após revés de 2025, governo estuda IOF em investimentos isentos de Imposto de Renda",
         "url": "https://economicnewsbrasil.com.br/2026/10/28/iof-em-investimentos-isentos/",
         "source": "Economic News Brasil",
@@ -153,6 +115,63 @@
         "https://news.google.com/rss/articles/CBMif0FVX3lxTE1UVU54cWFBbG1SR3NfR08tT0I3UGVUWlZuVVdmX3JUYUV3R2ZjeDB3TlR0THhyQ29oWm5OZmVZdUpJNldibTY4ZGFSRGxleUVRTGg1ZHFQczZhNlVlQi1FcXd2a3llTV9fY1k4czJocnNqMWVfRHBWTm5XdUQ1SUk?oc=5"
       ],
       "contexto": "O governo Lula voltou a estudar a cobrança de Imposto sobre Operações Financeiras (IOF) em investimentos isentos de Imposto de Renda (IR), após não conseguir aprovar mudanças na tributação dessas aplicações em 2025. A alternativa permitiria alterar alíquotas por decreto presidencial, sem votação prévia no Congresso, mas não eliminaria automaticamente a..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Isenção de LCI e LCA pode mudar? Saiba o que dizem governo e especialistas",
+        "url": "https://investalk.bb.com.br/noticias/mercado/isencao-de-lci-e-lca-pode-mudar-saiba-o-que-dizem-governo-e-especialistas",
+        "source": "InvesTalk",
+        "date": "2026-10-29",
+        "tag": "IR",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxQbTJkbXlxUC1ydlZLcDk3eFMwSl9sM3RFWWlyenhOS01LV085SjZjb21jVU91U3h3N3ZubXlaR291dkhJWVBubk04d0NhOUJfX3Btc3JoX2h6V2JFY0pEWHVOS3pCTWZmNUFnU2x5X1VhYUZXc1NCQTN1SlBvMEc0OWNqN2FxeHhVaF9DN1h3b0k0cWttZVgzR0ZCcFgwLTNvem1rMElrVF9WSFNqR2VTSmtoQllzb2xLR1E?oc=5"
+      ],
+      "contexto": "Isenção de LCI e LCA pode mudar? Saiba o que dizem governo e especialistas Publicado por: Broadcast Exclusivo 5 minutos Atualizado em 29/10/2026 às 12:03 Por Patrícia Queiroz, da Broadcast São Paulo, 29/10/2026 - Quem investe em Letras de Crédito Imobiliário (LCI) e do Agronegócio (LCA) pode estar acompanhando um novo burburinho que tem ganhado força no..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Mudanças tributárias no Uruguai podem impulsionar contas locais de investimento",
+        "url": "https://www.fundssociety.com/br/news/mudancas-tributarias-no-uruguai-podem-impulsionar-contas-locais-de-investimento/",
+        "source": "Funds Society",
+        "date": "2026-10-28",
+        "tag": "IR",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQMEtOYXpBbWxEbWVWVGxiaHhuU2ViTS1kci1mSE9Ua1lVaERTbmwtNTM1VXFiNS1qMzZuU1NuTFVBNVRRU3A0T2RhSmg1NjZ2NHVxblVPa29NZm1VR1hHdi05a1lheGVVS3hwRXU0ZDlJNG5hMTBYR2stdmd5OUM0MlM0VFQ5WGRKZnNicEtMSEFIcFNBUFdZRGR2SXRtR19nNExLOXk1QXlLZmtzajQ3VHNsVEpQSnZx?oc=5"
+      ],
+      "contexto": "Em um mercado tão internacionalizado como o uruguaio, no qual os investidores já estão bastante familiarizados com a dinâmica do investimento offshore, o regime tributário das aplicações no exterior é uma preocupação central dos gestores de patrimônio. O tema ganha especial importância neste trimestre, com o encerramento do período provisório que se seguiu..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Tributação de dividendos: como funciona o imposto mínimo e o que falta definir",
+        "url": "https://investnews.com.br/financas/tributacao-de-dividendos-imposto-minimo/",
+        "source": "InvestNews",
+        "date": "2026-11-02",
+        "tag": "Dividendos",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMigAFBVV95cUxPN3JLQTRHTXVvUGJXUm9obHV1eDAxWjh3YmdPdnFSUERQcEtFaXN1YVNPWmRtbWtvdkZqZmIwQVpLbzhPVHVaVFduMExyd3BzRTMxb3l5SFN0RW9fcElhUk1Wb0dfVTNmMFR2TjB1V21ZVzN5bUtWcDBrNjhhM0JZd9IBhgFBVV95cUxNREI4ZHhfNWU3VUVFdWREVGt5WGU4elA1S0Q0ZC1xVTFsZ0tINnVzaV9PeXB1dnluNl93OTJkQzUxWExOTjU5cEZUREo3Y0Q1UE80U2NFb29pbTJ5c19Mb003YnpzSmd6RHNKcFg2M3ZoUTI0SHVqX205aTNmaFVfVlBiUTh5UQ?oc=5"
+      ],
+      "contexto": "Para quem paga 10%, o redutor só aparece quando a carga da empresa passa de 24% nas companhias em geral, 30% nas seguradoras e financeiras que não são bancos, e 35% nos bancos. Por que dividendos de bancos tendem a gerar pouco redutor A alíquota nominal de 45% dá a impressão de que os bancos seriam os que mais geram desconto."
     },
     {
       "brandId": "mycapital",
@@ -217,6 +236,25 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
+        "title": "Manifesto de economistas propõe tributação de altas rendas e revisão da política fiscal",
+        "url": "https://acritica.net/economia/manifesto-de-economistas-defende-taxacao-de-altas-rendas-em-vez-de-cortes-sociais/",
+        "source": "A Crítica de Campo Grande",
+        "date": "2026-10-31",
+        "tag": "Dividendos",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMisgFBVV95cUxOX1lfZXBNUER0NzdsdWdOMUtkYVJ2elRnOWNpcFc2WG5jWG81emM0QTFpQ2FOdl9majJJR1JFbzBVdG1TY3BQYXN4a0ljUy15Z2FUUjdZMDgxUzVxUUhRMUJka1lhVkxWUDI5ai12UnZIZDZESDcxRHREVXpKaGhiRlA1S2czYVdMRWlLQmlwWjJkdW1VUThRU3MycGp3Sm9QNDQ1aGR4WnU3Z2FUbGh4cTh3?oc=5"
+      ],
+      "contexto": "Siga A Crítica de Campo Grande no Google Veja nossas notícias com mais destaque nas suas buscas. Siga A Crítica de Campo Grande no Google Veja nossas notícias com mais destaque nas suas buscas."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
         "title": "Novo IR sobre dividendos: como saber se você vai pagar em 2027",
         "url": "https://investnews.com.br/financas/novo-ir-sobre-dividendos-2027/",
         "source": "InvestNews",
@@ -236,44 +274,6 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Dividendos no fim do ano: veja quando há retenção de 10% de IR",
-        "url": "https://www.contabeis.com.br/noticias/80466/dividendos-no-fim-do-ano-veja-quando-ha-retencao-de-10-de-ir/",
-        "source": "Portal Contabeis",
-        "date": "2026-10-29",
-        "tag": "Dividendos",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPUV9UaVRpbkw4QnJDU0lCQy11NWNucHpnblI0X3BQSGNSZGFyUVpBSm95b1U3ekpTUEVQS1QxTURCZ0s5MF9UMXNJanJoRHQ5eHJObDBJYThMaDE2YlIxUWtvNWs2b21ZelVuaDJBQkMxZmJPV29mTTFHcDc0NElGZ1hyREVMci1wRFRVM29UbGpQNTAwbDE0RzktX1dZUHBXTjMyUk03eEw?oc=5"
-      ],
-      "contexto": "Empresas que pretendem distribuir lucros e dividendos no encerramento de 2026 devem observar a retenção de 10% de Imposto de Renda quando o total destinado à mesma pessoa física residente no Brasil ultrapassar R$ 50 mil em um mês. Nessa situação, o imposto incide sobre o valor integral, e não apenas sobre o excedente, ressalvadas as hipóteses legais de..."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Vai distribuir dividendos no fim do ano? Você pode ter de pagar mais Imposto de Renda",
-        "url": "https://fenacon.org.br/noticias/vai-distribuir-dividendos-no-fim-do-ano-voce-pode-ter-de-pagar-mais-imposto-de-renda/",
-        "source": "Sistema FENACON",
-        "date": "2026-10-28",
-        "tag": "Dividendos",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOZGZQbWtZUWhLcHBMcTdtQnppeEtia2ZBVlBUODMzR2d0RDJ4RUFhUXlBNGU2dDcyUVRyZWpEc21ISy1DcXlacDdNT3FVSFMzbzBZMlM5RFd6cnhHTHVuRXY3b3dISWtYUEZUczNTWjdqLVd6SE02M09rLWRCOTJfUVc0RGtpM25wcWloc3F5LXZOMnppbkN4SmhfTWhrYkVjSnM4VFFsVXZBeHk3c2hhdzQ0bTJmc2pW?oc=5"
-      ],
-      "contexto": "Vai distribuir dividendos no fim do ano? Você pode ter de pagar mais Imposto de Renda Com retenção de 10% sobre proventos acima de R$ 50 mil mensais, planejamento dos pagamentos e cumprimento das obrigações fiscais exigem atenção dos empresários Fim de ano chegando e, enquanto os trabalhadores começam a contar os dias para receber o 13º salário, donos de..."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
         "title": "Receita Federal paga lote extra de R$ 531,6 mi de restituição do IR",
         "url": "https://www.n3news.com.br/2026/10/receita-federal-paga-lote-extra-de-r-5316-mi",
         "source": "n3news.com.br",
@@ -286,43 +286,6 @@
         "https://news.google.com/rss/articles/CBMihAFBVV95cUxOWUQtZko4M0dyQlhKZ1Z5SG9leDBxd0theDIyelpYWl9ZUTZ3SmM5dlFUeENuRzNGY0J0cFFFOVB2WnZEdU5CRFhLY24zVUZIcXI2QW81NjFmdHIzLUEwUmVqb3hvQTE2RllMYnA4VVQzY2ktQWlKaGh4aHJMcHlfd19EY0Y?oc=5"
       ],
       "contexto": "Receita Federal paga lote extra de R$ 531,6 mi de restituição do IR A Receita Federal deposita nesta sexta-feira R$ 531,6 milhões em restituições do IR para 184,4 mil contribuintes da malha fina. A Receita Federal paga nesta sexta-feira (30/10) um lote extra de restituições do Imposto de Renda 2026, totalizando R$ 531,6 milhões destinados a 184,4 mil..."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Receita Federal paga R$ 531 milhões nesta sexta-feira e mais de 184 mil brasileiros podem receber restituição do Imposto de Renda",
-        "url": "https://xvcuritiba.com.br/receita-federal-paga-r-531-milhoes-nesta-sexta-feira-e-mais-de-184-mil-brasileiros-podem-receber-restituicao-do-imposto-de-renda/",
-        "source": "XV Curitiba",
-        "date": "2026-10-30",
-        "tag": "Declaração",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOS01lcmpXZjV6VHRZeEo1VG5ITWJ2NGRLZ29xY00tLWtYQ29JZHpUMkh3S2ZILWVEQ0xKbGxVWFJvRzQ4QU9lNmRJWkFDRno4cFZTMGo1WGZrNVVLdVBiOXpjRDJoWEExcEtOekNPbm81ckcyNDk0Vjl6bFN4LTViM0RHcHNFQ0V1bnhTSzNXdUwtc1gwRUYwaUN2alNvRnNUei1YdWgtMy0ySHljTE9ERFIwaGVmM21McVFZSE1fR2dmZVFNWXpQZUVZOFdKdW5zbjRyRjlCRU5VNnVwVHFqQndKMVZsc0x3dzNv?oc=5"
-      ],
-      "contexto": "A Receita Federal realiza nesta sexta-feira (30) o pagamento de um novo lote residual de restituições do Imposto de Renda. Conforme os dados divulgados, 184.442 contribuintes de diferentes regiões do Brasil serão contemplados, com a liberação de aproximadamente R$ 531,6 milhões."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Receita Federal explica por que 165 mil restituições do IR não foram pagas",
-        "url": "https://www.mixvale.com.br/2026/10/30/receita-federal-explica-por-que-165-mil-restituicoes-do-ir-nao-foram/",
-        "source": "Mix Vale",
-        "date": "2026-10-30",
-        "tag": "Declaração",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPUUtxMjN6VEhQaEk0MEluMTBZYjkyUlN0cDlYQ19JY3VfRV9mZkI1WXpCUDNQVVNuTEpXWlRkMnZndTJJb1dOaFh3SkNUM1M1SWh6ME5wX2tFZXQwOXNYT2lXU0NmRWFSVHd3Yl9idkFnTnpBVHVodkhmLTNDaHhlQ1dCdDBmN2ZTbmJkNVFVWnlTTHNzNXNCXzV6UktITG5VLVRWQXdTMmdFeFk?oc=5"
-      ]
     },
     {
       "brandId": "mycapital",
@@ -380,6 +343,44 @@
         "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNTi1LdUk0V1l2bF9kVEJvdEE0d01MV0pfVzJfRW1Zckx6LTU0aE9sc0d2dWtDZ3oyWFotMWw5QnRkQ0IzVC12MXViX25ySXR2S3BLY1k4bVJJZ0xSUU1zb0FpNExuZktJZDRIellZV2lBUm5xMTJWMzhfa3A4UWI1bXNFanU2S2ZQZGh2LTZ4bHNHVGRtQzNLVTlHcm1MTm1xX09RNU91bmFxd3VZdWlkWGxyeGNpQXZtUzBDZWgxNGU?oc=5"
       ],
       "contexto": "Mais Diário do Pará no seu Google! Um clique para dar preferência às notícias do Pará Mais Diário do Pará no seu Google!"
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Receita paga nesta sexta-feira lote da malha fina do Imposto de Renda",
+        "url": "https://www.brasildefato.com.br/2026/10/30/receita-paga-nesta-sexta-feira-lote-da-malha-fina-do-imposto-de-renda/",
+        "source": "Brasil de Fato",
+        "date": "2026-10-30",
+        "tag": "Declaração",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxNaldwV3hBYkxBaFJpM2Q0Mml0TkhIeGRpN1ctaUJGcjBHcm9mOXQ0a0tQWHVGeUNLNjRsaW1hTVJkVS0yclMxUVBxY1g4NkFWMkV4cnhWUUs4NTR1SXJ5WnJBZGJnU1FKbm56ZlFoNnBLVXVDcEoxdHJuR000cjFvbUt3Sm51bW1sWTdmODI5VjlJdGdKRUNKalVBelRicTJVVTVWR0J1ZG9VNXRiWHRyWUhENA?oc=5"
+      ],
+      "contexto": "Cerca de 184 mil contribuintes que caíram na malha fina e regularizaram as pendências com o Fisco acertaram as contas com o Leão. A Receita Federal paga nesta sexta-feira (30) o lote da malha fina de outubro."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Receita Federal contempla mais de 1,3 mil contribuintes em Rondônia no lote residual do Imposto de Renda",
+        "url": "https://newsrondonia.com.br/economia/2026/10/28/receita-federal-contempla-mais-de-13-mil-contribuintes-em-rondonia-no-lote-residual-do-imposto-de-renda/",
+        "source": "News Rondônia",
+        "date": "2026-10-28",
+        "tag": "Declaração",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPQjlkaFFRTGFBUi15WGtiQXhJSjFrRlQ4TlhtbG1pbnZtSjBKdjVydDNlU1l1RFVLVjBrczNETkFhRlZuSnpEOTZUaDBIVVBSSzhRQ0JLa1lRVUl5RW85MzRsVmFJQUNDN1F0R3lKNVZ0WkpuRFdpQVB4MlhvM3ZFTWl1QUVzOE05Y0pHOUZQcE1ELVVZT2NmTGswVHdTOWloWkQwYWc4bnl5Rjl1cFI2QkU1aEc1V3ZHcC1qNEdHNDVhVjRxYldFUmp0eDZYUmtyVUEzZWVSUjRyRmkxQjJxZmJYUm5NSlU?oc=5"
+      ],
+      "contexto": "- A Receita Federal liberou a consulta ao lote residual de restituição do IRPF de outubro de 2026, com pagamento previsto para 30 de outubro a 184.442 contribuintes, totalizando R$ 531,6 milhões. - Na 2ª Região Fiscal, que inclui Acre, Amazonas, Amapá, Pará, Rondônia e Roraima, serão distribuídos R$ 25,2 milhões a 10.677 cidadãos, sendo que em Rondônia..."
     },
     {
       "brandId": "mycapital",
