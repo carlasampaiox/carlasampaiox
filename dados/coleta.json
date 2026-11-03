@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-02T19:26:35+00:00",
+  "geradoEm": "2026-11-03T16:59:46+00:00",
   "fonte": "coletor (GitHub Actions)",
   "itens": [
     {
@@ -84,25 +84,6 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Tesouro IPCA+ perde espaço para as debêntures isentas de IR? Estudo contesta tese e aponta outro culpado",
-        "url": "https://www.seudinheiro.com/2026/renda-fixa/tesouro-ipca-perde-espaco-para-as-debentures-incentivadas-mlim/",
-        "source": "Seu Dinheiro",
-        "date": "2026-10-30",
-        "tag": "IR",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQcU9uUjd4Q0pHNDNPVVBjeGJtd2ItaDFyaV9Tb0hHcnZ0VDJfSjB5dnpEc1ZLaTYtTW05TUNJei1IT0VwbzgtaGtwSF81b2NLQWV3aHZjM1dKd3d6c2ZZdl9ET25hbXJwam5LUkhDWmVycjQ2ck1QUUduS0RHNkYwX25lX1JqMjRCY0VJWTltbzB6bGgtWkdzNDZrajBZcURqeDdYeGJvanhpNEE?oc=5"
-      ],
-      "contexto": "Tesouro IPCA+ perde espaço para as debêntures isentas de IR? Estudo contesta tese e aponta outro culpado Com emissões recordes de debêntures incentivadas e títulos públicos, levantamento questiona a narrativa de que os dois mercados estejam disputando os mesmos recursos O debate sobre o fim da isenção para títulos incentivados, que não têm cobrança de..."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
         "title": "Após revés de 2025, governo estuda IOF em investimentos isentos de Imposto de Renda",
         "url": "https://economicnewsbrasil.com.br/2026/10/28/iof-em-investimentos-isentos/",
         "source": "Economic News Brasil",
@@ -160,6 +141,25 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
+        "title": "Seu salário, imóvel e investimentos têm o mesmo CEP, mas não deveriam, como começar a investir no exterior",
+        "url": "https://www.seudinheiro.com/2026/internacional/seu-salario-imovel-e-investimentos-tem-o-mesmo-cep-mas-nao-deveriam-como-comecar-a-investir-no-exterior-ccgg/",
+        "source": "Seu Dinheiro",
+        "date": "2026-11-02",
+        "tag": "IR",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQYWhFQnl1cW9BdEwtZ25iQ1FiMU9Mak1PajlUMTBaWVdTajJ5cmVzM2JldFdKYnlQeG56SXJBcW9SbkFUWV96ekE5bjVWaHhqbTNhWWlQekZMU1Fwd00xUWRjR1dSY0g1TF9Gb3VJVmZfclhIai14aEtJNlFSOUhLaTJCZFo0ZklKRDBnMF9KQWdMYkNTcUs0UlJoc09fNzJnZ0NNQ3VRaVZONXF1dmpKaDgycFc5WjJJREI2SlRRZjhTMl9lWUpiUmp6c19ZM2o5Yk1mQVhhWHVEcnpqT0Q2YjFkbEVXRWJGblRxUw?oc=5"
+      ],
+      "contexto": "Seu salário, imóvel e investimentos têm o mesmo CEP, mas não deveriam, como começar a investir no exterior Do primeiro aporte à escolha entre dólar puro e proteção cambial, passando por ETFs, contas no exterior e os impostos, um passo a passo para quem nunca tirou um real do Brasil Imagine um investidor de carteira bem montada: títulos do Tesouro, algumas..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
         "title": "Tributação de dividendos: como funciona o imposto mínimo e o que falta definir",
         "url": "https://investnews.com.br/financas/tributacao-de-dividendos-imposto-minimo/",
         "source": "InvestNews",
@@ -172,25 +172,6 @@
         "https://news.google.com/rss/articles/CBMigAFBVV95cUxPN3JLQTRHTXVvUGJXUm9obHV1eDAxWjh3YmdPdnFSUERQcEtFaXN1YVNPWmRtbWtvdkZqZmIwQVpLbzhPVHVaVFduMExyd3BzRTMxb3l5SFN0RW9fcElhUk1Wb0dfVTNmMFR2TjB1V21ZVzN5bUtWcDBrNjhhM0JZd9IBhgFBVV95cUxNREI4ZHhfNWU3VUVFdWREVGt5WGU4elA1S0Q0ZC1xVTFsZ0tINnVzaV9PeXB1dnluNl93OTJkQzUxWExOTjU5cEZUREo3Y0Q1UE80U2NFb29pbTJ5c19Mb003YnpzSmd6RHNKcFg2M3ZoUTI0SHVqX205aTNmaFVfVlBiUTh5UQ?oc=5"
       ],
       "contexto": "Para quem paga 10%, o redutor só aparece quando a carga da empresa passa de 24% nas companhias em geral, 30% nas seguradoras e financeiras que não são bancos, e 35% nos bancos. Por que dividendos de bancos tendem a gerar pouco redutor A alíquota nominal de 45% dá a impressão de que os bancos seriam os que mais geram desconto."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Apenas 3 milhões de declarantes do IR têm patrimônio superior a R$ 1 milhão em 2026",
-        "url": "https://www.tnh1.com.br/tnh1-variedades/apenas-3-milhoes-de-declarantes-do-ir-tem-patrimonio-superior-a-r-1-milhao-em-2026/",
-        "source": "TNH1",
-        "date": "2026-10-30",
-        "tag": "Dividendos",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPV0pYMEg2Z1lWUWxnMy1hbFRvTTVTYWVlMEdoMDk3aFFUY2RfYVFOeWVBTzVYYlN4WjZndkhlOWpnNDV3YlJ5cWp4Y2M4dmRQVUszZE13WmFVWE4zYnJLdzd5WVlURGluNzd3QUxvRGFMNHp4dmRCdTd2X0dSeHMtT2U5QWZfSVhna25RWENTejdnSXVzTFBiRzA1MGoxOVhOelF4MVhzZGpXbkdWME44UkdpSl9FM1J5ZWtleVR6MGg?oc=5"
-      ],
-      "contexto": "Três milhões de brasileiros que apresentaram declaração de Imposto de Renda em 2026 informaram patrimônio superior a R$ 1 milhão, segundo dados da Receita Federal. Esse grupo representa 7,1% dos 42,2 milhões de contribuintes que enviaram a declaração até 17 de outubro."
     },
     {
       "brandId": "mycapital",
@@ -218,7 +199,7 @@
       "mediaType": "",
       "doc": {
         "title": "Manifesto cobra tributação dos ricos e critica ajuste fiscal no governo Lula",
-        "url": "https://www.jb.com.br/economia/2026/10/amp/1061419-economistas-divulgam-manifesto-contra-corte-de-gastos-e-pedem-nova-regra-fiscal.html",
+        "url": "https://www.jb.com.br/economia/2026/10/1061419-economistas-divulgam-manifesto-contra-corte-de-gastos-e-pedem-nova-regra-fiscal.html",
         "source": "Jornal do Brasil",
         "date": "2026-10-31",
         "tag": "Dividendos",
@@ -226,28 +207,9 @@
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPUmFySDU3cFBURFNtXy1LTkVvS1hkS3REbkVWUHhPMDF1ajJJZWh2Mkg0aDVLM1hKaTFodW0zNE9NaU8yV0QwZU9hWklJaWVodDZoRnM1VUFEVWNsYW1FMm82UTlkSEt0QnV3eXhDM0dpQXZvcHNrbnlRQmxDTGFXUmZxQmFIbVFNdXRzMm44bXF4SmdLaEZDeF80SUtmRWN6a3o1Tm5FV3p5azM5SkNUM0x0QXJsRC1KcmZpM2FIakwwQ09PVzFrLVExbUE3ZHBi0gHQAUFVX3lxTE9SYXJINTdwUFREU21fLUtORW9LWGRLdERuRVZQeE8wMXVqMkllaHYySDRoNUszWEppMWh1bTM0T01pTzJXRDBlT2FaSUlpZWh0NmhGczVVQURVY2xhbUUybzZROWRIS3RCdXd5eEMzR2lBdm9wc2tueVFCbENMYVdSZnFCYUhtUU11dHMybjhtcXhKZ0toRkN4XzRJS2ZFY3prejVObkVXenlrMzlKQ1QzTHRBcmxELUpyZmkzYUhqTDBDT09XMWstUTFtQTdkcGI?oc=5"
+        "https://news.google.com/rss/articles/CBMiywFBVV95cUxNSy00dGJnZFBmZ1V0aWVadGVQUTIzTy1xUUp0dnplRjdSTkNTaDRmeTFxTkk2eUVvdDFWM2p1N0ZYWF91Y2s4V25SWGZFVl9pNmNBVUZuZ0QtT1FHTlJnZmVTVFVLT3BIVF9icDhyZHNQVXNDS2t6VlJIREptUWt0UFc0eDB4anUyQVFDcm91WC1xSHBkRjhBM2FwR2lTYUpwM255ZG9va0dCcml2QUY4QkVwYzZrQTJUMEc0T3hGMGxGVlQ0cmtBM0Zma9IB0AFBVV95cUxPUmFySDU3cFBURFNtXy1LTkVvS1hkS3REbkVWUHhPMDF1ajJJZWh2Mkg0aDVLM1hKaTFodW0zNE9NaU8yV0QwZU9hWklJaWVodDZoRnM1VUFEVWNsYW1FMm82UTlkSEt0QnV3eXhDM0dpQXZvcHNrbnlRQmxDTGFXUmZxQmFIbVFNdXRzMm44bXF4SmdLaEZDeF80SUtmRWN6a3o1Tm5FV3p5azM5SkNUM0x0QXJsRC1KcmZpM2FIakwwQ09PVzFrLVExbUE3ZHBi?oc=5"
       ],
-      "contexto": "Manifesto cobra tributação dos ricos e critica ajuste fiscal no governo Lula Documento afirma que a pressão por austeridade ameaça despesas sociais e propõe elevar a arrecadação sobre patrimônio e dividendos Economistas e outros especialistas divulgaram um manifesto nesta sexta-feira (30) contra a pressão do mercado financeiro para que o governo eleito..."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Manifesto de economistas propõe tributação de altas rendas e revisão da política fiscal",
-        "url": "https://acritica.net/economia/manifesto-de-economistas-defende-taxacao-de-altas-rendas-em-vez-de-cortes-sociais/",
-        "source": "A Crítica de Campo Grande",
-        "date": "2026-10-31",
-        "tag": "Dividendos",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMisgFBVV95cUxOX1lfZXBNUER0NzdsdWdOMUtkYVJ2elRnOWNpcFc2WG5jWG81emM0QTFpQ2FOdl9majJJR1JFbzBVdG1TY3BQYXN4a0ljUy15Z2FUUjdZMDgxUzVxUUhRMUJka1lhVkxWUDI5ai12UnZIZDZESDcxRHREVXpKaGhiRlA1S2czYVdMRWlLQmlwWjJkdW1VUThRU3MycGp3Sm9QNDQ1aGR4WnU3Z2FUbGh4cTh3?oc=5"
-      ],
-      "contexto": "Siga A Crítica de Campo Grande no Google Veja nossas notícias com mais destaque nas suas buscas. Siga A Crítica de Campo Grande no Google Veja nossas notícias com mais destaque nas suas buscas."
+      "contexto": "ECONOMIA Manifesto cobra tributação dos ricos e critica ajuste fiscal no governo Lula Por ECONOMIA JB [email protected] Publicado em 31/10/2026 às 15:07 Alterado em 31/10/2026 às 15:08 Economistas e outros especialistas divulgaram um manifesto nesta sexta-feira (30) contra a pressão do mercado financeiro para que o governo eleito adote um programa de corte..."
     },
     {
       "brandId": "mycapital",
@@ -267,6 +229,44 @@
         "https://news.google.com/rss/articles/CBMic0FVX3lxTE1icTZyTGdUWkdJTTFiM1hSRkNIaUFKTGtlUDd5VEIzeGNLTl81cDVBSC0wQXB1T2JwSEFmZUpIU3hrbGFvQXp2akhKSGloY2Y5Q0dUakUzbVBGOXhMWmU1M3JJdy1zTG1fVWVDTjloTG9kQ0nSAXhBVV95cUxPV1FTMW9nQ0RlcjRfLWlfS21iRDRmeHA5RWlVa1gxQXViV0xWVi15R01NQmJJT0ZiOFY5Zk1IWWVwTkkyY2RrdW9tRElFRG9FTUxnOFRIS2NrUllsNVRBUm9NNVdGdi13M003T0JyQzZOcmRDVHlTNUI?oc=5"
       ],
       "contexto": "As duas cobranças seguem lógicas diferentes, e é por isso que muitos investidores ainda não sabem se serão afetados. Há quem teve imposto retido sem dever nada e quem nunca teve retenção, mas terá conta a acertar no ano que vem."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Dividendos no fim do ano: veja quando há retenção de 10% de IR",
+        "url": "https://www.contabeis.com.br/noticias/80466/dividendos-no-fim-do-ano-veja-quando-ha-retencao-de-10-de-ir/",
+        "source": "Portal Contabeis",
+        "date": "2026-10-29",
+        "tag": "Dividendos",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPUV9UaVRpbkw4QnJDU0lCQy11NWNucHpnblI0X3BQSGNSZGFyUVpBSm95b1U3ekpTUEVQS1QxTURCZ0s5MF9UMXNJanJoRHQ5eHJObDBJYThMaDE2YlIxUWtvNWs2b21ZelVuaDJBQkMxZmJPV29mTTFHcDc0NElGZ1hyREVMci1wRFRVM29UbGpQNTAwbDE0RzktX1dZUHBXTjMyUk03eEw?oc=5"
+      ],
+      "contexto": "Empresas que pretendem distribuir lucros e dividendos no encerramento de 2026 devem observar a retenção de 10% de Imposto de Renda quando o total destinado à mesma pessoa física residente no Brasil ultrapassar R$ 50 mil em um mês. Nessa situação, o imposto incide sobre o valor integral, e não apenas sobre o excedente, ressalvadas as hipóteses legais de..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Vai distribuir dividendos no fim do ano? Você pode ter de pagar mais Imposto de Renda",
+        "url": "https://fenacon.org.br/noticias/vai-distribuir-dividendos-no-fim-do-ano-voce-pode-ter-de-pagar-mais-imposto-de-renda/",
+        "source": "Sistema FENACON",
+        "date": "2026-10-28",
+        "tag": "Dividendos",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOZGZQbWtZUWhLcHBMcTdtQnppeEtia2ZBVlBUODMzR2d0RDJ4RUFhUXlBNGU2dDcyUVRyZWpEc21ISy1DcXlacDdNT3FVSFMzbzBZMlM5RFd6cnhHTHVuRXY3b3dISWtYUEZUczNTWjdqLVd6SE02M09rLWRCOTJfUVc0RGtpM25wcWloc3F5LXZOMnppbkN4SmhfTWhrYkVjSnM4VFFsVXZBeHk3c2hhdzQ0bTJmc2pW?oc=5"
+      ],
+      "contexto": "Vai distribuir dividendos no fim do ano? Você pode ter de pagar mais Imposto de Renda Com retenção de 10% sobre proventos acima de R$ 50 mil mensais, planejamento dos pagamentos e cumprimento das obrigações fiscais exigem atenção dos empresários Fim de ano chegando e, enquanto os trabalhadores começam a contar os dias para receber o 13º salário, donos de..."
     },
     {
       "brandId": "mycapital",
@@ -312,6 +312,43 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
+        "title": "Como será a tributação do imposto mínimo para altas rendas no próximo ano?",
+        "url": "https://fenafisco.org.br/03/11/2026/como-sera-a-tributacao-do-imposto-minimo-para-altas-rendas-no-proximo-ano/",
+        "source": "Fenafisco",
+        "date": "2026-11-03",
+        "tag": "Declaração",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMirwFBVV95cUxNVUs2anVwVS1kNHhObW10b2hROFBGQV9WbDU5eTN2WGNIaDgxMmNPR1lRa1JybS15VERPSkw0SUI2dkhCbUgySk9OcEtJa05Ha1lwenMtV0dadXJTa3E0VUNRcVB5SVl5aklja3hSWXVfQW9kTjBQRVpQcHRIRXo3UXh0ODlwaEoyY0h6czRUWHV5MzRqZ0JVVzBnQV9tdlBhYzQ2SHdLOGxQZjFZcGZ30gG0AUFVX3lxTE9tSmQ2Yl9qc3NHUzY0WW5DSmFFWnlndkw1Y0FiSFp1RUdHVW1xRkJaNU1faXd6UGhycXlMZ196Y2ZnUE5nYUFSSjJsTHpUVmU3TWpiVmEtNk9yMDYxZ0o0UDFZN2hrTVVyaTBBV3J3czR5cFJPNF9fYVdLQTFlYzVEZllISzNZRnJ3ZFdUd2xxUHU4Zkdqc0tfOWtjdHlZV1pMVVBfNjRleG9WUk43a0JrMzRFTg?oc=5"
+      ]
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "IR 2026: Tudo que a Receita já sabe antes de você enviar a declaração",
+        "url": "https://jornalcontabil.com.br/noticia/ir-2026-tudo-que-a-receita-ja-sabe-antes-de-voce-enviar-a-declaracao/",
+        "source": "Jornal Contábil",
+        "date": "2026-11-02",
+        "tag": "Declaração",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOT3hKQ2pkLVVDN1NWeTFXa2lYd1J0THhXZnc1RUdHbDFEcGtPWmoyRmhJUlNLbjNMWFo1N3FrQTdieU1zazNmenQxOGY4SGNWbG9mbDRENGg1Q3N2TUpiTUE2U2hvMEhnbkNwZ19GZGk4V2VFeWtHTkczRGdoX3UxZ3BvUlkwSGNxS1lMbFY5dllGNFdldVV6X0REMmxiNXRJdXM5cnRXaXVfbjjSAbABQVVfeXFMTnkwNWZPX0x5RzhMZDYtai1rTllkcm44Mk04cXhZREZ3b29hbXVFcEtpQ0RJQmpTeUR1Nl9aQ1VRWm1PdDlqaHdrekxKMUo4aGJoVlpHSFVvUHlBT1lhQ2NpUmlvR0RUMHQ4YzM2TzlpemZaSmZHeVRjV2ZNS0dlNk1nMUpjTXB5emFYc0tNZHJDejlfWnNyc2x1YTdkTUFLNFNOZFhLbkpzSzZaWnBxQkU?oc=5"
+      ],
+      "contexto": "Imposto de Renda IR 2026: Tudo que a Receita já sabe antes de você enviar a declaração Muitos brasileiros acreditam que grande parte das coisas que a Receita Federal sabe sobre o contribuinte é aquilo que o mesmo apresenta na declaração do Imposto de Renda Pessoa Física (IRPF). Consequentemente, no momento de enviar a declaração, muita gente fica preocupada..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
         "title": "Ainda está aguardando restituição do IR? 184 mil serão pagos hoje (30/10)",
         "url": "https://meutudo.com.br/blog/noticias/2026/10/30/quem-esta-no-lote-residual-do-ir-pago-nesta-sexta-30-10-e-que-horas-cai-confira-detalhes/",
         "source": "meutudo",
@@ -343,44 +380,6 @@
         "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNTi1LdUk0V1l2bF9kVEJvdEE0d01MV0pfVzJfRW1Zckx6LTU0aE9sc0d2dWtDZ3oyWFotMWw5QnRkQ0IzVC12MXViX25ySXR2S3BLY1k4bVJJZ0xSUU1zb0FpNExuZktJZDRIellZV2lBUm5xMTJWMzhfa3A4UWI1bXNFanU2S2ZQZGh2LTZ4bHNHVGRtQzNLVTlHcm1MTm1xX09RNU91bmFxd3VZdWlkWGxyeGNpQXZtUzBDZWgxNGU?oc=5"
       ],
       "contexto": "Mais Diário do Pará no seu Google! Um clique para dar preferência às notícias do Pará Mais Diário do Pará no seu Google!"
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Receita paga nesta sexta-feira lote da malha fina do Imposto de Renda",
-        "url": "https://www.brasildefato.com.br/2026/10/30/receita-paga-nesta-sexta-feira-lote-da-malha-fina-do-imposto-de-renda/",
-        "source": "Brasil de Fato",
-        "date": "2026-10-30",
-        "tag": "Declaração",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMiswFBVV95cUxNaldwV3hBYkxBaFJpM2Q0Mml0TkhIeGRpN1ctaUJGcjBHcm9mOXQ0a0tQWHVGeUNLNjRsaW1hTVJkVS0yclMxUVBxY1g4NkFWMkV4cnhWUUs4NTR1SXJ5WnJBZGJnU1FKbm56ZlFoNnBLVXVDcEoxdHJuR000cjFvbUt3Sm51bW1sWTdmODI5VjlJdGdKRUNKalVBelRicTJVVTVWR0J1ZG9VNXRiWHRyWUhENA?oc=5"
-      ],
-      "contexto": "Cerca de 184 mil contribuintes que caíram na malha fina e regularizaram as pendências com o Fisco acertaram as contas com o Leão. A Receita Federal paga nesta sexta-feira (30) o lote da malha fina de outubro."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Receita Federal contempla mais de 1,3 mil contribuintes em Rondônia no lote residual do Imposto de Renda",
-        "url": "https://newsrondonia.com.br/economia/2026/10/28/receita-federal-contempla-mais-de-13-mil-contribuintes-em-rondonia-no-lote-residual-do-imposto-de-renda/",
-        "source": "News Rondônia",
-        "date": "2026-10-28",
-        "tag": "Declaração",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPQjlkaFFRTGFBUi15WGtiQXhJSjFrRlQ4TlhtbG1pbnZtSjBKdjVydDNlU1l1RFVLVjBrczNETkFhRlZuSnpEOTZUaDBIVVBSSzhRQ0JLa1lRVUl5RW85MzRsVmFJQUNDN1F0R3lKNVZ0WkpuRFdpQVB4MlhvM3ZFTWl1QUVzOE05Y0pHOUZQcE1ELVVZT2NmTGswVHdTOWloWkQwYWc4bnl5Rjl1cFI2QkU1aEc1V3ZHcC1qNEdHNDVhVjRxYldFUmp0eDZYUmtyVUEzZWVSUjRyRmkxQjJxZmJYUm5NSlU?oc=5"
-      ],
-      "contexto": "- A Receita Federal liberou a consulta ao lote residual de restituição do IRPF de outubro de 2026, com pagamento previsto para 30 de outubro a 184.442 contribuintes, totalizando R$ 531,6 milhões. - Na 2ª Região Fiscal, que inclui Acre, Amazonas, Amapá, Pará, Rondônia e Roraima, serão distribuídos R$ 25,2 milhões a 10.677 cidadãos, sendo que em Rondônia..."
     },
     {
       "brandId": "mycapital",
@@ -476,25 +475,6 @@
         "https://news.google.com/rss/articles/CBMiywFBVV95cUxNQTlFVUVDTlpNenhsblhBeldfTHJmUnRUVXdwaUl3c29leFRxMWRDT2NuY3AzTjNlR3h3VTlKR1hodUxpN1ZvVzJwbXdEb1dtZGJBYnBqUGswNDVNQmpqU2NKTV90LXlXT3hXX3pHb3p5MUtwaEIwM3JITmJ3NHZWd19lRHlyNjVOSjBDNkVLSXZuUVRnNEZ1NXlEaUEyUy1NTmN0b2FTWC1PX2R4R2tGS0k2VVVGNzR1YnM1SXBRdXVyNWh1ajlLQm1Pbw?oc=5"
       ],
       "contexto": "O investidor estrangeiro retirou R$ 2,85 bilhões da Bolsa brasileira na segunda-feira (26), primeiro pregão após a vitória de Luiz Inácio Lula da Silva (PT) no segundo turno das eleições presidenciais. O movimento marcou a terceira maior saída diária de capital externo em 2026, segundo dados da B3 divulgados nesta quarta-feira (28)."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Fundos imobiliários crescem em número de investidores e liquidez; veja os mais negociados, segundo a B3",
-        "url": "https://www.moneytimes.com.br/fundos-imobiliarios-crescem-em-numero-de-investidores-e-liquidez-diz-b3-veja-os-mais-negociados-igdl/",
-        "source": "Money Times",
-        "date": "2026-10-27",
-        "tag": "Mercado",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMiywFBVV95cUxPQWhCM1l6ZWMwUkdhTHpwY2d1dlN1YUFNampxTS1RdnNxLWowSXg4cm5jQ2RmVmNSMU9yMVV5by1ubzFBelVpN05IcWd1ZFRYX3E3eHNUUmpCbEFtV3dvUTdOM2tVc3h0RzRtcXF1UHVfVmVfX3d2eFo1RUpCbGpvelhzaFlta0NCNjBJMWZONDdCb0FyRzdhb2RORk42LTNKUFRSZWRtdlFFbFd1bDhBclJZQmItUWRsc2hXSGNESmVyVFJ3SkRGMTk4UQ?oc=5"
-      ],
-      "contexto": "Fundos imobiliários crescem em número de investidores e liquidez; veja os mais negociados, segundo a B3 A indústria de fundos imobiliários (FIIs) encerrou setembro com 3,38 milhões de investidores, um crescimento de 17,4% em relação aos 2,88 milhões registrados em outubro de 2025, segundo dados divulgados pela B3. Na comparação mensal, a base aumentou em 55..."
     }
   ],
   "avisos": [
