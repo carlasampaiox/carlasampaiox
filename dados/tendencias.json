@@ -3,56 +3,258 @@
   "periodo": "today 1-m",
   "termos": [
     {
+      "termo": "darf",
+      "subindo": [
+        {
+          "busca": "darf online sicalc",
+          "valor": "Breakout"
+        },
+        {
+          "busca": "sicalcweb programa para calculo e impressao de darf on line",
+          "valor": "Breakout"
+        },
+        {
+          "busca": "emitir darf para pagamento de tributos federais",
+          "valor": "Breakout"
+        },
+        {
+          "busca": "2 via darf imposto de renda",
+          "valor": "Breakout"
+        },
+        {
+          "busca": "darf 2362",
+          "valor": "+4,000%"
+        },
+        {
+          "busca": "darf csll",
+          "valor": "+400%"
+        },
+        {
+          "busca": "emissão darf online",
+          "valor": "+350%"
+        },
+        {
+          "busca": "emitir darf imposto de renda 2026",
+          "valor": "+190%"
+        }
+      ],
+      "top": [
+        {
+          "busca": "emitir darf",
+          "valor": 100
+        },
+        {
+          "busca": "pagar darf",
+          "valor": 92
+        },
+        {
+          "busca": "darf imposto de renda",
+          "valor": 82
+        },
+        {
+          "busca": "imposto de renda",
+          "valor": 80
+        },
+        {
+          "busca": "codigo darf",
+          "valor": 69
+        },
+        {
+          "busca": "darf receita federal",
+          "valor": 68
+        },
+        {
+          "busca": "darf online",
+          "valor": 57
+        },
+        {
+          "busca": "darf mei",
+          "valor": 53
+        }
+      ],
+      "interesse": [
+        {
+          "data": "2026-10-28T00:00:00+00:00",
+          "valor": 62
+        },
+        {
+          "data": "2026-10-29T00:00:00+00:00",
+          "valor": 68
+        },
+        {
+          "data": "2026-10-30T00:00:00+00:00",
+          "valor": 100
+        },
+        {
+          "data": "2026-10-31T00:00:00+00:00",
+          "valor": 44
+        },
+        {
+          "data": "2026-11-01T00:00:00+00:00",
+          "valor": 16
+        },
+        {
+          "data": "2026-11-02T00:00:00+00:00",
+          "valor": 19
+        },
+        {
+          "data": "2026-11-03T00:00:00+00:00",
+          "valor": 61
+        },
+        {
+          "data": "2026-11-04T00:00:00+00:00",
+          "valor": 48
+        }
+      ]
+    },
+    {
+      "termo": "dividendos",
+      "subindo": [
+        {
+          "busca": "mglu3",
+          "valor": "+400%"
+        },
+        {
+          "busca": "investing",
+          "valor": "+400%"
+        },
+        {
+          "busca": "klbn11",
+          "valor": "+180%"
+        },
+        {
+          "busca": "itausa ações",
+          "valor": "+140%"
+        },
+        {
+          "busca": "quais acoes pagam dividendos todo mes",
+          "valor": "+140%"
+        },
+        {
+          "busca": "cyre3",
+          "valor": "+140%"
+        },
+        {
+          "busca": "bova11",
+          "valor": "+130%"
+        },
+        {
+          "busca": "vamo3",
+          "valor": "+120%"
+        }
+      ],
+      "top": [
+        {
+          "busca": "bbas3 dividendos",
+          "valor": 100
+        },
+        {
+          "busca": "bbas3",
+          "valor": 99
+        },
+        {
+          "busca": "o que é dividendos",
+          "valor": 89
+        },
+        {
+          "busca": "dividendos vale",
+          "valor": 85
+        },
+        {
+          "busca": "dividendos petrobras",
+          "valor": 80
+        },
+        {
+          "busca": "mxrf11 dividendos",
+          "valor": 70
+        },
+        {
+          "busca": "dividendos banco do brasil",
+          "valor": 69
+        },
+        {
+          "busca": "mxrf11",
+          "valor": 69
+        }
+      ],
+      "interesse": [
+        {
+          "data": "2026-10-28T00:00:00+00:00",
+          "valor": 81
+        },
+        {
+          "data": "2026-10-29T00:00:00+00:00",
+          "valor": 80
+        },
+        {
+          "data": "2026-10-30T00:00:00+00:00",
+          "valor": 77
+        },
+        {
+          "data": "2026-10-31T00:00:00+00:00",
+          "valor": 55
+        },
+        {
+          "data": "2026-11-01T00:00:00+00:00",
+          "valor": 46
+        },
+        {
+          "data": "2026-11-02T00:00:00+00:00",
+          "valor": 56
+        },
+        {
+          "data": "2026-11-03T00:00:00+00:00",
+          "valor": 71
+        },
+        {
+          "data": "2026-11-04T00:00:00+00:00",
+          "valor": 65
+        }
+      ]
+    },
+    {
       "termo": "ir ações",
       "subindo": [],
       "top": [],
       "interesse": [
         {
-          "data": "2026-10-27T00:00:00+00:00",
-          "valor": 80
-        },
-        {
           "data": "2026-10-28T00:00:00+00:00",
-          "valor": 60
+          "valor": 74
         },
         {
           "data": "2026-10-29T00:00:00+00:00",
-          "valor": 52
+          "valor": 62
         },
         {
           "data": "2026-10-30T00:00:00+00:00",
-          "valor": 52
+          "valor": 64
         },
         {
           "data": "2026-10-31T00:00:00+00:00",
-          "valor": 40
+          "valor": 48
         },
         {
           "data": "2026-11-01T00:00:00+00:00",
-          "valor": 37
+          "valor": 44
         },
         {
           "data": "2026-11-02T00:00:00+00:00",
-          "valor": 55
+          "valor": 58
         },
         {
           "data": "2026-11-03T00:00:00+00:00",
-          "valor": 42
+          "valor": 64
+        },
+        {
+          "data": "2026-11-04T00:00:00+00:00",
+          "valor": 49
         }
       ]
     }
   ],
-  "emAlta": [
-    {
-      "assunto": "agência nacional de telecomunicações",
-      "trafego": "200+",
-      "publicado": "2026-11-03 08:00:00-08:00"
-    }
-  ],
+  "emAlta": [],
   "avisos": [
-    "Google Trends (imposto de renda): Google rate-limited the Explore data request; stop and back off.",
-    "Google Trends (darf): Google rate-limited the Explore data request; stop and back off.",
-    "Google Trends (dividendos): Google rate-limited the Explore data request; stop and back off."
+    "Google Trends (imposto de renda): Google rate-limited the Explore data request; stop and back off."
   ],
-  "geradoEm": "2026-11-03T17:01:19+00:00"
+  "geradoEm": "2026-11-04T17:09:18+00:00"
 }
