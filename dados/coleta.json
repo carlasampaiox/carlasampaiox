@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-04T17:08:10+00:00",
+  "geradoEm": "2026-11-05T17:19:18+00:00",
   "fonte": "coletor (GitHub Actions)",
   "itens": [
     {
@@ -16,27 +16,8 @@
         "title": "Produzir ficou mais barato: como a IA mudou o negócio dos finfluencers",
         "url": "https://www.youtube.com/watch?v=1Vv8mnXOFNo",
         "date": "2026-10-13",
-        "signal": "151 visualizações, 1 curtida · 2,7x a mediana do canal",
-        "summary": "Vídeo publicado em 13/10, com 151 visualizações, 1 curtida.",
-        "origem": "coletor"
-      }
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "compnews",
-      "arquivo": "7c03ef0bf0ebf597.jpg",
-      "mediaType": "image",
-      "doc": {
-        "kind": "conteudo",
-        "competitorId": "c2",
-        "competitorName": "Gorila",
-        "channel": "youtube",
-        "format": "Vídeo",
-        "title": "IA de um lado, influencers do outro: qual o futuro do analista CNPI?",
-        "url": "https://www.youtube.com/watch?v=-l4624f25ok",
-        "date": "2026-10-05",
-        "signal": "51 visualizações, 0 curtidas",
-        "summary": "Vídeo publicado em 05/10, com 51 visualizações, 0 curtidas.",
+        "signal": "157 visualizações, 1 curtida · 2,8x a mediana do canal",
+        "summary": "Vídeo publicado em 13/10, com 157 visualizações, 1 curtida.",
         "origem": "coletor"
       }
     },
@@ -75,7 +56,46 @@
       },
       "aliases": [
         "https://news.google.com/rss/articles/CBMidkFVX3lxTE44T3FFbll3VFZ3cmtCSzZHcFpmbU9fYnJfX2NvVjVnVTd1TFZYN0pMVGRYNFZyTDJjT0dXbnhydnJGY2ViU2JOaGRodzRNT1JpOHJxZlZKaHk1REJIajJLN0VWbTZFdkdjNGtEaGVTOVRLRmtrWmc?oc=5"
-      ]
+      ],
+      "contexto": "Tributação de fundos exclusivos: o que muda para alta renda Entenda como funciona a tributação de fundos exclusivos, o come-cotas e os principais pontos de atenção para investidores de alta renda A tributação de fundos exclusivos mudou desde janeiro de 2024. A Lei nº 14.754/2023 ampliou a incidência periódica de Imposto de Renda sobre rendimentos de fundos..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Títulos isentos de IR pagam taxas nas alturas após eleição, mas risco também cresce",
+        "url": "https://www.infomoney.com.br/onde-investir/titulos-isentos-de-ir-pagam-taxas-grotescas-apos-eleicao-mas-risco-cresce/",
+        "source": "InfoMoney",
+        "date": "2026-11-05",
+        "tag": "IR",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQVEtaWjNpczFFaHlTallFRnpocGlzY1hPb3dTUi0xWjZpNHY4a1BLWm9PWjU4a1l0eG5mVHEybVNLVjUtN2xPRzhCdFVYRTJTd1l2RFhjaGxaNlp2cWpNVUs4dmxKaHJWYVlNOVBMQVp0ajh3VXBRaTRUREQxWDlUUnJhVGRnTndYZlYxcVozdnpXdDhPVGdLN3F0bzNtc2JRSHk3SlRuLWlwam5zM19HU052bXJfUTJT0gG-AUFVX3lxTFBPTFhFM2RuSWs2TTZMWnZueGhxaVZpTUlTUHYtMDB0dlotVmdoM2pROUlCdmg5SUY2VjBScmNOT2pTeEJDXzNqVkZ2Y0lLMWF4VzFtQVBwSnNTY0J3bUY3MjFrRy1KOHNQcE1pV3VteUdoQ1U3X3ZVdi1IQXFxTkYtbXEtQjVvN0UyU0dlaTl3eUpKd3JkdFkyUlBqazNqNURRd3ZRTGotdlg2V0U1VWhPT0o3a3pOR29OdVJaWUE?oc=5"
+      ],
+      "contexto": "A forte alta das taxas das NTN-Bs, títulos públicos atrelados à inflação medida pelo IPCA, no dia seguinte à reeleição do presidente Luiz Inácio Lula da Silva puxou também o rendimento dos títulos privados isentos de Imposto de Renda (IR). Como a NTN-B passou a pagar quase 8% ao ano acima da inflação, debêntures de infraestrutura de longo prazo e de baixo..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Novo IR sobre dividendos: como saber se você vai pagar em 2027",
+        "url": "https://investnews.com.br/financas/novo-ir-sobre-dividendos-2027/",
+        "source": "InvestNews",
+        "date": "2026-10-30",
+        "tag": "IR",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMic0FVX3lxTE1icTZyTGdUWkdJTTFiM1hSRkNIaUFKTGtlUDd5VEIzeGNLTl81cDVBSC0wQXB1T2JwSEFmZUpIU3hrbGFvQXp2akhKSGloY2Y5Q0dUakUzbVBGOXhMWmU1M3JJdy1zTG1fVWVDTjloTG9kQ0nSAXhBVV95cUxPV1FTMW9nQ0RlcjRfLWlfS21iRDRmeHA5RWlVa1gxQXViV0xWVi15R01NQmJJT0ZiOFY5Zk1IWWVwTkkyY2RrdW9tRElFRG9FTUxnOFRIS2NrUllsNVRBUm9NNVdGdi13M003T0JyQzZOcmRDVHlTNUI?oc=5"
+      ],
+      "contexto": "As duas cobranças seguem lógicas diferentes, e é por isso que muitos investidores ainda não sabem se serão afetados. Há quem teve imposto retido sem dever nada e quem nunca teve retenção, mas terá conta a acertar no ano que vem."
     },
     {
       "brandId": "mycapital",
@@ -101,56 +121,18 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Governo Lula planeja aumento de impostos e IOF sobre investimentos em 2027",
-        "url": "https://www.gazetadopovo.com.br/economia/equipe-economica-de-lula-planeja-medidas-para-elevar-impostos-a-partir-de-2027/",
-        "source": "Gazeta do Povo",
-        "date": "2026-11-03",
+        "title": "Sua carteira inteira, conectada à B3, com a conta certa.",
+        "url": "https://maisretorno.com/retorno-prime",
+        "source": "Mais Retorno",
+        "date": "2026-11-04",
         "tag": "IR",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMivAFBVV95cUxNVjJWSHltR2tia0E4bXVzQnJJc3N6eGQyNWVwU0VBQ25GSjBGX18wVEVmUG5vRDU3VE9BT1o4N3hWdTdpVEh4eHBCQnNiYnVkWmMxdkxSajdGSTNtRUpYQlR5aEJXUERxdll5WEFmZXluTF9SS0hKZHRnNnlyWFlLVzl0dTlxc3poQVlKNHJBVEpjczkzQTNSLTNLV0p2bUhiWEEyWkN0VS1ZRzM3bHR6enFBRG1DN1E2eUZfUQ?oc=5"
+        "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9sOUtsN2lmVm9lNHFwTTQySkowTnNnTE9hdkNmNGNpTl9rSk1rSExEMlg2Q3FvV1oyZVhsVk9vMHZDbndrUFNMaDJKU0ZuZw?oc=5"
       ],
-      "contexto": "Poucos dias após garantir a reeleição, o governo de Luiz Inácio Lula da Silva já movimenta os bastidores de Brasília com planos para reforçar o caixa da União. A equipe econômica estuda medidas que vão desde a cobrança de novos encargos sobre investimentos hoje isentos até a definição de alíquotas elevadas para o consumo, visando equilibrar as contas..."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Isenção de LCI e LCA pode mudar? Saiba o que dizem governo e especialistas",
-        "url": "https://investalk.bb.com.br/noticias/mercado/isencao-de-lci-e-lca-pode-mudar-saiba-o-que-dizem-governo-e-especialistas",
-        "source": "InvesTalk",
-        "date": "2026-10-29",
-        "tag": "IR",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMiugFBVV95cUxQbTJkbXlxUC1ydlZLcDk3eFMwSl9sM3RFWWlyenhOS01LV085SjZjb21jVU91U3h3N3ZubXlaR291dkhJWVBubk04d0NhOUJfX3Btc3JoX2h6V2JFY0pEWHVOS3pCTWZmNUFnU2x5X1VhYUZXc1NCQTN1SlBvMEc0OWNqN2FxeHhVaF9DN1h3b0k0cWttZVgzR0ZCcFgwLTNvem1rMElrVF9WSFNqR2VTSmtoQllzb2xLR1E?oc=5"
-      ],
-      "contexto": "Isenção de LCI e LCA pode mudar? Saiba o que dizem governo e especialistas Publicado por: Broadcast Exclusivo 5 minutos Atualizado em 29/10/2026 às 12:03 Por Patrícia Queiroz, da Broadcast São Paulo, 29/10/2026 - Quem investe em Letras de Crédito Imobiliário (LCI) e do Agronegócio (LCA) pode estar acompanhando um novo burburinho que tem ganhado força no..."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Mudanças tributárias no Uruguai podem impulsionar contas locais de investimento",
-        "url": "https://www.fundssociety.com/br/news/mudancas-tributarias-no-uruguai-podem-impulsionar-contas-locais-de-investimento/",
-        "source": "Funds Society",
-        "date": "2026-10-28",
-        "tag": "IR",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQMEtOYXpBbWxEbWVWVGxiaHhuU2ViTS1kci1mSE9Ua1lVaERTbmwtNTM1VXFiNS1qMzZuU1NuTFVBNVRRU3A0T2RhSmg1NjZ2NHVxblVPa29NZm1VR1hHdi05a1lheGVVS3hwRXU0ZDlJNG5hMTBYR2stdmd5OUM0MlM0VFQ5WGRKZnNicEtMSEFIcFNBUFdZRGR2SXRtR19nNExLOXk1QXlLZmtzajQ3VHNsVEpQSnZx?oc=5"
-      ],
-      "contexto": "Em um mercado tão internacionalizado como o uruguaio, no qual os investidores já estão bastante familiarizados com a dinâmica do investimento offshore, o regime tributário das aplicações no exterior é uma preocupação central dos gestores de patrimônio. O tema ganha especial importância neste trimestre, com o encerramento do período provisório que se seguiu..."
+      "contexto": ""
     },
     {
       "brandId": "mycapital",
@@ -188,6 +170,25 @@
       "aliases": [
         "https://news.google.com/rss/articles/CBMisgFBVV95cUxPMjNENEVJM2I4NW5mWHVwUXN4M1R2SmkyTWhhZGxJUnltSWxSenRzaW1NMzREaUZXZ05JY3RrdVpWcHcxcW11Yk1hckQwV0lKUVpCVWRiMDU2bjduWnJwN2U3bEpLWkZyNFh4VEZmc2ZwQk1mNzBIZURIbnlCYWRJQTdXeWZqdVpXVDJpR1lubTVyVmRPa0JZb2FQQi1sV09ZS1RmNmpYWFFGSkpRNFNtd2pn0gG3AUFVX3lxTE9YRF9xbVY0N2JVTlRTenI0LW9XeHpnUEJkR2JFcnJDUDloS0dpS0NNbE1BWExkUG9FVTE4a1c2MlFreWRuNEsxN2liT1JjdkVsUEtWbktCTXpocUpKdUIwTl9kdmYwYU5DSkRNYlRKUE1qOWV5NGNnMS1YWG56cnNNcEc2UmdMMUFQWDM4VDNLbXo4Z0VZZTJIRURPeFVad09QVGtDQUZhTTQ5TDhnTFdIdFREd1RSZw?oc=5"
       ]
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Reforma Tributária e Advocacia: Redução de 30% no IBS e na CBC, Regime Tributário e Nova Tributação dos Lucros e Dividendos - Por Rosa Freitas*",
+        "url": "https://www.opoder.com.br/noticias/34845/reforma-tributaria-e-advocacia-reducao-de-30-no-ibs-e-na-cbc-regime-tributario-e-nova-tributacao-dos-lucros-e-dividendos-por-rosa-freitas",
+        "source": "Jornal O PODER",
+        "date": "2026-11-03",
+        "tag": "Dividendos",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMiigJBVV95cUxNckU5VkZTSE1USGRtd0Q0RVBvRmI0LTVhLWdTWHowUHhPSlBwakgzZEFtaS1ISE9QcXA2MG5oSWhVMGVpd2ZEbHdfMmtaU0xxVWdnSHpkX0NBc2JhZGY2VW1vVHBLTktUOHBWU2lCdnhMb3QtS0JGcE0yRlRmTWJGX1NUcDFqZnBpcnZKUnp6UDRJRU1nMEhpbHQwY1ppLWV3UURLY1BuaXFZaEtYYVY1MC04Q0N4VkRWUGR4M3FTQlZfLV9uVWFsUFJnZEQxUVpwUFhwN1Faakd6X0E1em43bm9sMnh4QWVCZi1SRmhhT00yRzVYY2YwT0FWWXoxdmZkTExCTFB0a2xzdw?oc=5"
+      ],
+      "contexto": "Reforma Tributária e Advocacia: Redução de 30% no IBS e na CBC, Regime Tributário e Nova Tributação dos Lucros e Dividendos - Por Rosa Freitas* 03/11/2026 Apresentação do Tema A Reforma Tributária, instituída pela Emenda Constitucional nº 132/2023 e regulamentada, entre outras normas, pela Lei Complementar nº 214/2025, promove mudanças significativas na..."
     },
     {
       "brandId": "mycapital",
@@ -233,37 +234,18 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Novo IR sobre dividendos: como saber se você vai pagar em 2027",
-        "url": "https://investnews.com.br/financas/novo-ir-sobre-dividendos-2027/",
-        "source": "InvestNews",
-        "date": "2026-10-30",
-        "tag": "Dividendos",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMic0FVX3lxTE1icTZyTGdUWkdJTTFiM1hSRkNIaUFKTGtlUDd5VEIzeGNLTl81cDVBSC0wQXB1T2JwSEFmZUpIU3hrbGFvQXp2akhKSGloY2Y5Q0dUakUzbVBGOXhMWmU1M3JJdy1zTG1fVWVDTjloTG9kQ0nSAXhBVV95cUxPV1FTMW9nQ0RlcjRfLWlfS21iRDRmeHA5RWlVa1gxQXViV0xWVi15R01NQmJJT0ZiOFY5Zk1IWWVwTkkyY2RrdW9tRElFRG9FTUxnOFRIS2NrUllsNVRBUm9NNVdGdi13M003T0JyQzZOcmRDVHlTNUI?oc=5"
-      ],
-      "contexto": "As duas cobranças seguem lógicas diferentes, e é por isso que muitos investidores ainda não sabem se serão afetados. Há quem teve imposto retido sem dever nada e quem nunca teve retenção, mas terá conta a acertar no ano que vem."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Vai distribuir dividendos no fim do ano? Você pode ter de pagar mais Imposto de Renda",
-        "url": "https://crcma.org.br/noticias/vai-distribuir-dividendos-no-fim-do-ano-voce-pode-ter-de-pagar-mais-imposto-de-renda",
-        "source": "Conselho Regional de Contabilidade do Maranhão",
+        "title": "Dividendos no fim do ano: veja quando há retenção de 10% de IR",
+        "url": "https://www.contabeis.com.br/noticias/80466/dividendos-no-fim-do-ano-veja-quando-ha-retencao-de-10-de-ir/",
+        "source": "Portal Contabeis",
         "date": "2026-10-29",
         "tag": "Dividendos",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMitAFBVV95cUxOV3hEQ2ZWb2dyMldUWUppVHVFYnhjUlUtZ0RuRmNEai1kQXE0MHV6a0hEbklDMnFDZzZ3NjFxcmROWEhWa1NfQUw4WnU2U2NKTm5OWTJPVk9weVBwQW84N1RDVjJ0TzhLQ2hGT1NsazZkZUtqai05V2IwWHZaVF96NF84U1BERWpxelU0YjlwTGgtUkNoUjN1SERlR0pLNl9aQWpsWmd4YndnV3NESDJ6NXhoVjc?oc=5"
+        "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPUV9UaVRpbkw4QnJDU0lCQy11NWNucHpnblI0X3BQSGNSZGFyUVpBSm95b1U3ekpTUEVQS1QxTURCZ0s5MF9UMXNJanJoRHQ5eHJObDBJYThMaDE2YlIxUWtvNWs2b21ZelVuaDJBQkMxZmJPV29mTTFHcDc0NElGZ1hyREVMci1wRFRVM29UbGpQNTAwbDE0RzktX1dZUHBXTjMyUk03eEw?oc=5"
       ],
-      "contexto": "Com retenção de 10% sobre proventos acima de R$ 50 mil mensais, planejamento dos pagamentos e cumprimento das obrigações fiscais exigem atenção dos empresários Fim de ano chegando e, enquanto os trabalhadores começam a contar os dias para receber o 13º salário, donos de empresas também fazem as contas para distribuir os lucros aos sócios. É nessa época que..."
+      "contexto": "Empresas que pretendem distribuir lucros e dividendos no encerramento de 2026 devem observar a retenção de 10% de Imposto de Renda quando o total destinado à mesma pessoa física residente no Brasil ultrapassar R$ 50 mil em um mês. Nessa situação, o imposto incide sobre o valor integral, e não apenas sobre o excedente, ressalvadas as hipóteses legais de..."
     },
     {
       "brandId": "mycapital",
@@ -300,7 +282,8 @@
       },
       "aliases": [
         "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOT3hKQ2pkLVVDN1NWeTFXa2lYd1J0THhXZnc1RUdHbDFEcGtPWmoyRmhJUlNLbjNMWFo1N3FrQTdieU1zazNmenQxOGY4SGNWbG9mbDRENGg1Q3N2TUpiTUE2U2hvMEhnbkNwZ19GZGk4V2VFeWtHTkczRGdoX3UxZ3BvUlkwSGNxS1lMbFY5dllGNFdldVV6X0REMmxiNXRJdXM5cnRXaXVfbjjSAbABQVVfeXFMTnkwNWZPX0x5RzhMZDYtai1rTllkcm44Mk04cXhZREZ3b29hbXVFcEtpQ0RJQmpTeUR1Nl9aQ1VRWm1PdDlqaHdrekxKMUo4aGJoVlpHSFVvUHlBT1lhQ2NpUmlvR0RUMHQ4YzM2TzlpemZaSmZHeVRjV2ZNS0dlNk1nMUpjTXB5emFYc0tNZHJDejlfWnNyc2x1YTdkTUFLNFNOZFhLbkpzSzZaWnBxQkU?oc=5"
-      ]
+      ],
+      "contexto": "Imposto de Renda IR 2026: Tudo que a Receita já sabe antes de você enviar a declaração Muitos brasileiros acreditam que grande parte das coisas que a Receita Federal sabe sobre o contribuinte é aquilo que o mesmo apresenta na declaração do Imposto de Renda Pessoa Física (IRPF). Consequentemente, no momento de enviar a declaração, muita gente fica preocupada..."
     },
     {
       "brandId": "mycapital",
@@ -320,25 +303,6 @@
         "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPeUQwVUhLZzNyczRUT1N1XzFsMEprX0Zubld3VERKampiMVppMHZsa1dfcG5xaVg2aGhuT0kzUDE2YmU4WDFOeG5pV1c1M25mY1dJZjVaOEFxT01kLWhmSmdUZU1tZGVGOEhEUFVoYWtKdWVJTTRmUllHVGp4NDBZcHB3d1JGeGx3WWlPU0dLSFN5c3FUc29vZ0llVkdtU2FTVkpBSDlMTHJraHNEajdISUpKcGdCM2llOXBFbWZEUUFwcEFyQXlYTy1jMHZwZ3lXZi1Z?oc=5"
       ],
       "contexto": "Quem está no lote residual do IR pago nesta sexta (30/10) e que horas cai? Confira detalhes ou continuar depois."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Restituição do Imposto de Renda: Pará recebe R$ 11,9 milhões em outubro",
-        "url": "https://diariodopara.com.br/seu-bolso/mais-de-52-mil-paraenses-vao-receber-um-pix-da-receita-federal-veja-se-esta-na-lista/",
-        "source": "Diário do Pará",
-        "date": "2026-10-28",
-        "tag": "Declaração",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNTi1LdUk0V1l2bF9kVEJvdEE0d01MV0pfVzJfRW1Zckx6LTU0aE9sc0d2dWtDZ3oyWFotMWw5QnRkQ0IzVC12MXViX25ySXR2S3BLY1k4bVJJZ0xSUU1zb0FpNExuZktJZDRIellZV2lBUm5xMTJWMzhfa3A4UWI1bXNFanU2S2ZQZGh2LTZ4bHNHVGRtQzNLVTlHcm1MTm1xX09RNU91bmFxd3VZdWlkWGxyeGNpQXZtUzBDZWgxNGU?oc=5"
-      ],
-      "contexto": "Mais Diário do Pará no seu Google! Um clique para dar preferência às notícias do Pará Mais Diário do Pará no seu Google!"
     },
     {
       "brandId": "mycapital",
@@ -375,7 +339,27 @@
       },
       "aliases": [
         "https://news.google.com/rss/articles/CBMioAFBVV95cUxOeGFMbmpBX0NvSmdidHVqaXpuX2JadmhiMDJSRXc4MWIwclA5N0hzR000eTFDSTZmMGVjdUUtTTU1cUh5OUFaVWZPZGlnOWxMeXNyemZLc0Z0b2oyLWRUTGpzelotbGRlQ0FDUHd1cV9aUjlrUHE2ckVTbU1idHNqZklVSTlRbHRSUkQ0ZjY4dUVFMnhzYTlRTzBIem9FN284?oc=5"
-      ]
+      ],
+      "contexto": "Quem soma mais de R$ 600 mil de ganhos no ano tem até 31 de dezembro de 2026 para reorganizar aplicações financeiras e retiradas de empresas. A medida busca reduzir o valor cobrado pelo IRPFM, o Imposto sobre a Renda da Pessoa Física Mínimo."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Teto maior do MEI vai mudar o Imposto de Renda; entenda as regras",
+        "url": "https://www.agazeta.com.br/es/economia/teto-maior-do-mei-vai-mudar-o-imposto-de-renda-entenda-as-regras-1026",
+        "source": "A Gazeta",
+        "date": "2026-10-31",
+        "tag": "Declaração",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMirAFBVV95cUxOTFlNa09vM1ZpanBtMS1aeW5PWjRIZmo0cWNKVTZKZEVDR0YweU1lLWRYMXJLOGZ4ZDNwY2ROQmFTaUtzQ1l0REpnMDVDNVl0VDdYMGNEMnZ0Qkt5V2NDYXpwR21MX0hGYmFoTjBNRmU1b0lDSmxYX04zX3JlYnZpeEo5YWF1Ymo5S0o5LTkyd05rWU9BMjZvN0ljUWNxQ0N2ckZuVmZSYXFUeUhG?oc=5"
+      ],
+      "contexto": "O aumento do teto de faturamento do Microempreendedor Individual (MEI) pode ter reflexos no Imposto de Renda da Pessoa Física (IRPF) de quem ampliar os ganhos com o negócio. Embora a mudança permita faturar mais sem sair da categoria, o empreendedor precisa ficar atento à parcela dos rendimentos que poderá ser considerada tributável na declaração anual."
     },
     {
       "brandId": "mycapital",
@@ -402,37 +386,17 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Investidores estrangeiros tiram R$ 2,85 bilhões da B3 no 1º pregão após a eleição",
-        "url": "https://melhorinvestimento.net/noticias/estrangeiros-saida-b3-apos-eleicao",
-        "source": "melhorinvestimento.net",
-        "date": "2026-10-31",
-        "tag": "Mercado",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMif0FVX3lxTE5LYXZPTms3bU44STdWcWxPazg1RC0ya3dRUEozVTN4ckpydEt6YmZVNUg2cHZTWDl5dXdPc1Q2X1MtbmltYk9Xd2RjRzFFejdCYVZ2Vlo4cjQtMGpaOWRRaDlnVkpYZ3M5SHg2NVBRWFAxdG5rZUMzYWJOcmt3OU0?oc=5"
-      ],
-      "contexto": "Investidores estrangeiros tiram R$ 2,85 bilhões da B3 no 1º pregão após a eleição Os investidores estrangeiros retiraram R$ 2,85 bilhões da B3 em 26 de outubro, terceira maior saída diária do ano. Em três pregões, a saída somou R$ 6,82 bilhões, e o saldo do mês caiu para R$ 13,34 bilhões."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Investidor individual compra R$ 3,6 bi na B3 após tombo histórico",
-        "url": "https://www.spacemoney.com.br/investimentos/acoes/investidor-individual-compra-b3-apos-eleicoes/",
-        "source": "SpaceMoney",
+        "title": "Ações: confira o calendário de dividendos de novembro de 2026",
+        "url": "https://conteudos.xpi.com.br/acoes/relatorios/acoes-confira-o-calendario-de-dividendos-de-novembro-de-2026/",
+        "source": "XP Investimentos",
         "date": "2026-10-30",
         "tag": "Mercado",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMinAFBVV95cUxQODMzUFdQbThNOU1aU05odDBKRGw5SjlNdmRBMDVYVjJJdkZtLTNQRWVucy0wNWd2ekNwMEprLUNRdmdkaUNOalF1MWxBT3ZWc3g3THhOQVFJcnBEVk5LMnE1R25CSTN3MlZpOFdIdktJTkRzZHVoWWFWZFJQV2RFZFd5S3c0T1M4RWxnSDZKdG1aUnZSXzBVMmJyYUk?oc=5"
-      ],
-      "contexto": "No pregão de 26 de outubro, a B3 viveu um dos dias mais turbulentos dos últimos anos: o Ibovespa encerrou em baixa de 13,36%, chegou a recuar 17% ao longo do dia e acionou o circuit breaker logo no início dos negócios, mecanismo que suspende as negociações após queda superior a 10%. Enquanto o capital estrangeiro sacava R$ 2,85 bilhões, o investidor pessoa..."
+        "https://news.google.com/rss/articles/CBMiqwFBVV95cUxObnY1QWRmUGQ2eWViRDdodmttVzZOc3NFUFFSeG1YMG4zanF6QzhtZ0pzdzRsT2xDeGFkOEdPLWtUbzBqaVBYTXJFZkZjVEI1MlU4ZnpmejJJc192bFUwSVhDRUFmVnBha0VKLVN3UC1DRXdCMHBUYmJRQkR6RFBJc1V5QUF1LWpKa0d2MmcyVXVnd3hLRFVXMkVaSHBjTXhHZ2hPX2RjMFA1cFE?oc=5"
+      ]
     },
     {
       "brandId": "mycapital",
@@ -440,25 +404,24 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Estrangeiro retira bilhões da Bolsa após vitória de Lula e acende alerta para investidores",
-        "url": "https://guiadoinvestidor.com.br/mercado/estrangeiro-retira-bilhoes-da-bolsa-apos-vitoria-de-lula-e-acende-alerta-para-investidores/",
-        "source": "Guia do Investidor",
-        "date": "2026-10-28",
+        "title": "Descubra agora 3 ETFs que pagam dividendos mensais",
+        "url": "https://www.nordinvestimentos.com.br/blog/etf-dividendos/",
+        "source": "Nord Investimentos",
+        "date": "2026-11-05",
         "tag": "Mercado",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMiywFBVV95cUxNQTlFVUVDTlpNenhsblhBeldfTHJmUnRUVXdwaUl3c29leFRxMWRDT2NuY3AzTjNlR3h3VTlKR1hodUxpN1ZvVzJwbXdEb1dtZGJBYnBqUGswNDVNQmpqU2NKTV90LXlXT3hXX3pHb3p5MUtwaEIwM3JITmJ3NHZWd19lRHlyNjVOSjBDNkVLSXZuUVRnNEZ1NXlEaUEyUy1NTmN0b2FTWC1PX2R4R2tGS0k2VVVGNzR1YnM1SXBRdXVyNWh1ajlLQm1Pbw?oc=5"
+        "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9ZSHB2Y0xtbE4zU19qVEthb3c4ckdHTGktT1l4VnphSEN3VHBDZEgxQlRFcWI1UVlMdjVoTHhLb1ZrdmJOX3hkbU1ScVhNbkFnY2RjWXhteGt6dkwxM0FmeVNkaGdEUWRs0gFuQVVfeXFMUDJ5dEZIOE1qdWRYd1RfcGhLemk0dVM2Y25ERjZIX3RsS1d5TUpHU2hxYUdUY1dmNlRWcjVjdkNoY3Zfdy1pMS16a0JLdkNoOHZ0VmxfUFZJTUFQMGdEX3Z3ZTRLTTNRb3VHN0U5QUE?oc=5"
       ],
-      "contexto": "O investidor estrangeiro retirou R$ 2,85 bilhões da Bolsa brasileira na segunda-feira (26), primeiro pregão após a vitória de Luiz Inácio Lula da Silva (PT) no segundo turno das eleições presidenciais. O movimento marcou a terceira maior saída diária de capital externo em 2026, segundo dados da B3 divulgados nesta quarta-feira (28)."
+      "contexto": "Descubra agora 3 ETFs que pagam dividendos mensais Os ETFs que pagam dividendos mensais vêm ganhando espaço entre investidores que buscam renda recorrente na Bolsa sem precisar montar uma carteira de ações por conta própria. A proposta é simples: investir em um único ativo negociado em Bolsa e receber proventos de forma periódica."
     }
   ],
   "avisos": [
     "Grana Capital (blog https://blog.grana.capital/feed/): HTTP 404"
   ],
   "arquivos": [
-    "02f6f2121b164b52.jpg",
-    "7c03ef0bf0ebf597.jpg"
+    "02f6f2121b164b52.jpg"
   ]
 }
