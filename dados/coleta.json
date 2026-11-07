@@ -1,7 +1,26 @@
 {
-  "geradoEm": "2026-11-06T16:43:09+00:00",
+  "geradoEm": "2026-11-07T15:37:56+00:00",
   "fonte": "coletor (GitHub Actions)",
   "itens": [
+    {
+      "brandId": "mycapital",
+      "colecao": "compnews",
+      "arquivo": "425e403e6270afa8.jpg",
+      "mediaType": "image",
+      "doc": {
+        "kind": "conteudo",
+        "competitorId": "bs2fj7391bo4wovt5nrw",
+        "competitorName": "Grana Capital",
+        "channel": "youtube",
+        "format": "Vídeo",
+        "title": "Declaração Automática IR de investimentos na bolsa | Black do Grana",
+        "url": "https://www.youtube.com/watch?v=UVLxJyFm0sE",
+        "date": "2026-11-06",
+        "signal": "34 visualizações, 6 curtidas",
+        "summary": "Vídeo publicado em 06/11, com 34 visualizações, 6 curtidas.",
+        "origem": "coletor"
+      }
+    },
     {
       "brandId": "mycapital",
       "colecao": "compnews",
@@ -16,8 +35,8 @@
         "title": "Produzir ficou mais barato: como a IA mudou o negócio dos finfluencers",
         "url": "https://www.youtube.com/watch?v=1Vv8mnXOFNo",
         "date": "2026-10-13",
-        "signal": "166 visualizações, 1 curtida · 3,0x a mediana do canal",
-        "summary": "Vídeo publicado em 13/10, com 166 visualizações, 1 curtida.",
+        "signal": "167 visualizações, 1 curtida · 3,0x a mediana do canal",
+        "summary": "Vídeo publicado em 13/10, com 167 visualizações, 1 curtida.",
         "origem": "coletor"
       }
     },
@@ -84,44 +103,6 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Novo IR sobre dividendos: como saber se você vai pagar em 2027",
-        "url": "https://investnews.com.br/financas/novo-ir-sobre-dividendos-2027/",
-        "source": "InvestNews",
-        "date": "2026-10-30",
-        "tag": "IR",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMic0FVX3lxTE1icTZyTGdUWkdJTTFiM1hSRkNIaUFKTGtlUDd5VEIzeGNLTl81cDVBSC0wQXB1T2JwSEFmZUpIU3hrbGFvQXp2akhKSGloY2Y5Q0dUakUzbVBGOXhMWmU1M3JJdy1zTG1fVWVDTjloTG9kQ0nSAXhBVV95cUxPV1FTMW9nQ0RlcjRfLWlfS21iRDRmeHA5RWlVa1gxQXViV0xWVi15R01NQmJJT0ZiOFY5Zk1IWWVwTkkyY2RrdW9tRElFRG9FTUxnOFRIS2NrUllsNVRBUm9NNVdGdi13M003T0JyQzZOcmRDVHlTNUI?oc=5"
-      ],
-      "contexto": "As duas cobranças seguem lógicas diferentes, e é por isso que muitos investidores ainda não sabem se serão afetados. Há quem teve imposto retido sem dever nada e quem nunca teve retenção, mas terá conta a acertar no ano que vem."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Como declaro poupança, renda fixa e variável no Imposto de Renda?",
-        "url": "https://www.sindifiscalms.org.br/materia/legacy-71909",
-        "source": "Sindifiscal/MS",
-        "date": "2026-11-06",
-        "tag": "IR",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1IZWZuMXdNd3U1WlIyQllwMG9waXA0d2VyTHJKMGtiLVZMR0VPWTdmYTI4bXJWdkVEYllreFFsb2ZZLUNZRTFnbHB6MmdKei1NSXp1dVZTN0hYbUUzVWNhUnRaNA?oc=5"
-      ],
-      "contexto": "Na hora da declaração do Imposto de Renda, o tema \"Investimentos” sempre gera dúvidas. O Tira-Dúvidas do IR 2026 explica como declarar poupança, investimentos em renda fixa e investimentos em variável para a Receita Federal."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
         "title": "Estratégia Quant: Carteira Viva de Renda com FIIs | Novembro 2026",
         "url": "https://conteudos.xpi.com.br/fundos-imobiliarios/carteiras/estrategia-quant-carteira-viva-de-renda-com-fiis-novembro-2026/",
         "source": "XP Investimentos",
@@ -133,6 +114,44 @@
       "aliases": [
         "https://news.google.com/rss/articles/CBMivwFBVV95cUxPbkFhbXZhaUNUNDJEYmVtcERWd1Mzb0pjYXJjQWlNdmhtYnBQNkVWSmc2aVRMU3RWRDUzalFkNTdDTjI1dFRPNXN6NGdFLWxrdm5pNWNNTDFOU3FYUThnQnJpSEhnNEljTHY0dlo1LUk2QXBYbjA0RXNWV01XZnlTSkVfWGNOWGgyeFFVOV9ZVW9JRnFQeUVKSFdxdmQwZzR6RE1KbHJnc0ttd243Z2VfeGVJeUpUOVdZSUVrN1lTaw?oc=5"
       ]
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Quer render mais? LCI e LCA são alternativas para investidores",
+        "url": "https://www.cnnbrasil.com.br/economia/money/mercado/quer-render-mais-lci-e-lca-sao-alternativas-para-investidores/",
+        "source": "CNN Brasil",
+        "date": "2026-11-04",
+        "tag": "IR",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZFNkckNsNkJTQ0tNdGpPUDZjUVo5M242eUdkZUl5NlFIUXVVMEZvRWxmNkYta2RBWmpoeTA1ay13anViRElzYURveF9aWXZUVDhWY0xGNEFXNkt3OVVoOGZFVjNsYU9BazBQSG9rZDB0WHl4eWMzWGVyRWhxY0pYeVVXWk4zdVA5YzBGa0NWRWpXSWtsbFNSRTAxU2FldHBXN01OWmVKby1qUnhCXzdBZnJKNjA?oc=5"
+      ],
+      "contexto": "LCI e LCA são alternativas para investidores Títulos isentos ganham tração em meio à busca por retornos líquidos Para o investidor que busca alternativas à renda fixa tradicional, as LCIs (Letras de Crédito Imobiliário) e as LCAs (Letras de Crédito do Agronegócio) são boas opções."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Quanto rende R$ 1 mil em poupança, Tesouro Direto e CDB com manutenção da Selic em 13,75%",
+        "url": "https://valorinveste.globo.com/produtos/renda-fixa/noticia/2026/11/04/quanto-rende-r-1-mil-em-poupanca-tesouro-direto-e-cdb-com-manutencao-da-selic-em-1375percent.ghtml",
+        "source": "Valor Investe",
+        "date": "2026-11-04",
+        "tag": "IR",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMi_AFBVV95cUxQZlpSN25OZ0EzWjNvOHlSN0ZfRmQ5eWhzYzZPcTZvVHVOZzllUlhubnpXWThEdlJzajg4X1lYRE9IV3hoSldvNHhTNkxCOHJGVGVvbnkxYzJRZThkdTc5TXcwZDU4bmRLdjE4cWR6eDMxcGdFR0F5S3pPbkVIRkNJRnIxTlY4S0s2THJjS3czdTZHOElHYjNhZXRZdWo2SFo1Tjlfb2g1aUtlTW4ybG1vbGNyVXN4WXotRWwyMmc3OTU5VzI2NmhtT0NYc0gzWWtFWXMySXk2M2pGNVh6SmNUU2ZVNjRBQkdBTmQ1dzVnVUxZWUFVbV9xTmtmeGLSAYsCQVVfeXFMTkdYcmxhd2dHYnZQcXFuTVdLbkYwSE5xR3JVVmJwZzRRY0UwY3JuVlpHYllaV25GN0ZkU0FVMk1oV0hTT2tQRW1DWTgxM2JwQzgydmNZSng3VzVYVFQxUEJCMUVMZWJWczJ3TU9Fc1B5U2FtdzhDRWcxR3hDZkxuZ1lOZ3h6WlhKRXNGNTRKRkw5Vkh5ZTVoWUlFdDJtUmpZMVBJa0RrY01NX1BQTlhzVnVtSm5OSlFTV1hPMlVQRXNzVUthcnhmanhaOGppdVllbGRTM3pSOHRZNkVIc2gyaF9RX1Jkb2UwV19icm1KSjJ4S054bXJiaHFFbXdBYU9qZUpYN2lKWUw5MzZZ?oc=5"
+      ],
+      "contexto": "Quanto rende R$ 1 mil em poupança, Tesouro Direto e CDB com manutenção da Selic em 13,75% Investimentos de renda fixa que acompanham os juros continuam oferecendo retornos elevados O Comitê de Política Monetária (Copom), do Banco Central (BC), decidiu nesta quarta-feira (4) manter a taxa básica de juros, a Selic, em 13,75% ao ano, interrompendo a sequência..."
     },
     {
       "brandId": "mycapital",
@@ -159,6 +178,44 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
+        "title": "Alíquotas de até 12% para tributo federal sobre consumo e 'imposto do pecado'; compare propostas das gestões Lula e Bolsonaro",
+        "url": "https://g1.globo.com/google/amp/economia/noticia/2026/11/07/aliquotas-de-ate-12percent-para-tributo-federal-sobre-consumo-e-imposto-do-pecado-compare-propostas-das-gestoes-lula-e-bolsonaro.ghtml",
+        "source": "G1",
+        "date": "2026-11-07",
+        "tag": "Dividendos",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMinwJBVV95cUxQaHd1V2pDeG5vc2dzZnpnR0F2Q1BYaGlkSUJiY2hhaWNWWmpWZmpsSEtOazRRQzB6VVJFYWpBOURwOXJYbkw1ZnR3Q3Zoa0daTU01dFBFbkZkYWZLUEVpOVBpVkdDUDJHSWFYSHZ4WXZ4Q3RzMVZWZ2ZtaVY1aW44bl9FQXg4UjN0SVZIUGhocXRIZnU2YXRIV0J1QTJST1M4U2FoZHQ4eHU4dW5ZNGZNQXpobkJ6Y3lMMFVqMUNLNmJteDNJd1I2UVA3RHM5dnVMQ1hLSTdEM1ZqSkpRYkx0dm5fLU03UUowbWZnWk8zU0xyMTNOMFhiWGdkendydkZEUjgtLVJWU2w0NTRaamdHMk92VWk1VVlBUk1PcDZsb9IBnwJBVV95cUxQaHd1V2pDeG5vc2dzZnpnR0F2Q1BYaGlkSUJiY2hhaWNWWmpWZmpsSEtOazRRQzB6VVJFYWpBOURwOXJYbkw1ZnR3Q3Zoa0daTU01dFBFbkZkYWZLUEVpOVBpVkdDUDJHSWFYSHZ4WXZ4Q3RzMVZWZ2ZtaVY1aW44bl9FQXg4UjN0SVZIUGhocXRIZnU2YXRIV0J1QTJST1M4U2FoZHQ4eHU4dW5ZNGZNQXpobkJ6Y3lMMFVqMUNLNmJteDNJd1I2UVA3RHM5dnVMQ1hLSTdEM1ZqSkpRYkx0dm5fLU03UUowbWZnWk8zU0xyMTNOMFhiWGdkendydkZEUjgtLVJWU2w0NTRaamdHMk92VWk1VVlBUk1PcDZsbw?oc=5"
+      ],
+      "contexto": "O que é o 'imposto do pecado' e como ele vai funcionar? A divulgação da estimativa de alíquota da Contribuição Sobre Bens e Serviços (CBS), o futuro imposto sobre consumo do governo federal no âmbito da reforma tributária, gerou uma onda de críticas de representantes do setor produtivo."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Tombo da Bolsa infla dividend yield, e 15 ações ficam acima do CDI; veja quais",
+        "url": "https://www.infomoney.com.br/onde-investir/tombo-bolsa-infla-dividend-yield-15-acoes-pagam-acima-cdi/",
+        "source": "InfoMoney",
+        "date": "2026-11-06",
+        "tag": "Dividendos",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMiowFBVV95cUxQVWhSZUt4M1lpcE55aHRQcnoybVNyZVhRSFgwbU5yYUhmdV9QR2RwVGJIZFF3QjVXZ1ZoclpWeWlGUGpjbFpUWl9yYThJN0VlenRLVVh0OUh6NUhQWTNfbUNyLU1nTU55aDA1cVlrRFN1SDJsNzZycnNUYzRRMVJHczJtQ2U0LVo1VWZyRFJuS3Z6ZU1YSXc1dWhNNTMzRGJQdEdZ0gGoAUFVX3lxTE5Wd2dLTm5PQ1ZUZEVyT0xUYTQ5LU1OOW9YdjNNeEV6Um5SRUdBempCdzN5ekRIelNDZmNUYUhpLWp2SmlkTDF0ZWJrV283UXJlQkVWTmpBZEFROFJHQXlxbzUxQXR1TFNNTEg5QUtHaVppYVhaRW9QSVZxaG4wR2NSSDBoMHA0ZmdlSHRpMjlPem14TTdUQThJQ3BNWGpoNzFoaDUwV2F6Mg?oc=5"
+      ],
+      "contexto": "O Copom manteve a Selic em 13,75% ao ano na quarta-feira (4), e 15 ações da Bolsa pagaram, nos últimos 12 meses, dividendos acima do CDI, de 13,65% ao ano, segundo levantamento do InfoMoney com dados da Economatica. Na maior parte dos casos, porém, o dividend yield (DY) elevado vem da queda das cotações e, em alguns, de pagamentos extraordinários..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
         "title": "Como será a tributação do imposto mínimo para altas rendas no próximo ano?",
         "url": "https://fenafisco.org.br/04/11/2026/como-sera-a-tributacao-do-imposto-minimo-para-altas-rendas-no-proximo-ano-2/",
         "source": "Fenafisco",
@@ -170,6 +227,25 @@
       "aliases": [
         "https://news.google.com/rss/articles/CBMisgFBVV95cUxPMjNENEVJM2I4NW5mWHVwUXN4M1R2SmkyTWhhZGxJUnltSWxSenRzaW1NMzREaUZXZ05JY3RrdVpWcHcxcW11Yk1hckQwV0lKUVpCVWRiMDU2bjduWnJwN2U3bEpLWkZyNFh4VEZmc2ZwQk1mNzBIZURIbnlCYWRJQTdXeWZqdVpXVDJpR1lubTVyVmRPa0JZb2FQQi1sV09ZS1RmNmpYWFFGSkpRNFNtd2pn0gG3AUFVX3lxTE9YRF9xbVY0N2JVTlRTenI0LW9XeHpnUEJkR2JFcnJDUDloS0dpS0NNbE1BWExkUG9FVTE4a1c2MlFreWRuNEsxN2liT1JjdkVsUEtWbktCTXpocUpKdUIwTl9kdmYwYU5DSkRNYlRKUE1qOWV5NGNnMS1YWG56cnNNcEc2UmdMMUFQWDM4VDNLbXo4Z0VZZTJIRURPeFVad09QVGtDQUZhTTQ5TDhnTFdIdFREd1RSZw?oc=5"
       ]
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Isenção do IR até R$ 5 mil e desconto até R$ 7.350 valem em 2026",
+        "url": "https://www.mixvale.com.br/2026/11/06/isencao-do-ir-ate-r-5-mil-e-desconto-ate-r-7-350-valem-em-2026/",
+        "source": "Mix Vale",
+        "date": "2026-11-06",
+        "tag": "Dividendos",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMiowFBVV95cUxNOWJyVkdBeEVXYWRuNkU3X2ptMmtwbzJwTzlydU51bmhFOTcteV9kd25qUmZQSExaQktzWUU0ZVBLakM2U2VwQ3V2MHdIUENVRVJmajFObXZMRElkYUZ0R0EzRGFDMl94bnRLTVFld3NYVFlhUTBvTUM1Y1MteEFrdUh4YlVNS3l0V2ZseFJyLVZDZ29LS1NuSnBZTkdGVFJ3UFFZ?oc=5"
+      ],
+      "contexto": "Quem ganha até R$ 5 mil por mês deixou de pagar Imposto de Renda da Pessoa Física (IRPF) a partir de 1º de janeiro de 2026. A regra tem origem no projeto de lei 1087/25, enviado pelo governo federal ao Congresso Nacional, e foi sancionada como Lei 15.270/2025."
     },
     {
       "brandId": "mycapital",
@@ -196,63 +272,6 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Manifesto cobra tributação dos ricos e critica ajuste fiscal no governo Lula",
-        "url": "https://www.jb.com.br/economia/2026/10/1061419-economistas-divulgam-manifesto-contra-corte-de-gastos-e-pedem-nova-regra-fiscal.html",
-        "source": "Jornal do Brasil",
-        "date": "2026-10-31",
-        "tag": "Dividendos",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMiywFBVV95cUxNSy00dGJnZFBmZ1V0aWVadGVQUTIzTy1xUUp0dnplRjdSTkNTaDRmeTFxTkk2eUVvdDFWM2p1N0ZYWF91Y2s4V25SWGZFVl9pNmNBVUZuZ0QtT1FHTlJnZmVTVFVLT3BIVF9icDhyZHNQVXNDS2t6VlJIREptUWt0UFc0eDB4anUyQVFDcm91WC1xSHBkRjhBM2FwR2lTYUpwM255ZG9va0dCcml2QUY4QkVwYzZrQTJUMEc0T3hGMGxGVlQ0cmtBM0Zma9IB0AFBVV95cUxPUmFySDU3cFBURFNtXy1LTkVvS1hkS3REbkVWUHhPMDF1ajJJZWh2Mkg0aDVLM1hKaTFodW0zNE9NaU8yV0QwZU9hWklJaWVodDZoRnM1VUFEVWNsYW1FMm82UTlkSEt0QnV3eXhDM0dpQXZvcHNrbnlRQmxDTGFXUmZxQmFIbVFNdXRzMm44bXF4SmdLaEZDeF80SUtmRWN6a3o1Tm5FV3p5azM5SkNUM0x0QXJsRC1KcmZpM2FIakwwQ09PVzFrLVExbUE3ZHBi?oc=5"
-      ],
-      "contexto": "ECONOMIA Manifesto cobra tributação dos ricos e critica ajuste fiscal no governo Lula Por ECONOMIA JB [email protected] Publicado em 31/10/2026 às 15:07 Alterado em 31/10/2026 às 15:08 Economistas e outros especialistas divulgaram um manifesto nesta sexta-feira (30) contra a pressão do mercado financeiro para que o governo eleito adote um programa de corte..."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Agenda de dividendos de novembro: Petrobras, Itaú e Bradesco pagam proventos",
-        "url": "https://investnews.com.br/investimentos/agenda-de-dividendos-de-novembro-petrobras-itau-e-bradesco-pagam-proventos/",
-        "source": "InvestNews",
-        "date": "2026-11-03",
-        "tag": "Dividendos",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMitgFBVV95cUxNSEVlZXFJWnpDSnNjcUhCWjktQ0dlb01xYmZPWFZPa0tCWDJxRlkxN0pjRUlqcGxhbzhJbHBWNTlhMWxEQ2NSOVk1R1pkWFB2cEdvSkJCd28tLTJvU0o5Z3dSWE45Q0dLcEFWRGJ1MW5rRmE5M2czckhQbmEwdGpQSWdYLTA2SU1ORDZNQUxabDNWSDJYX3VWdGRhLWpKLU4teTFPSnFvTWQyN08xMXRzc1FvWjIwd9IBuwFBVV95cUxPQk1pcFpiTU5jNW5qMzd4cUlObTEtcjFSQTBfRl9McFN2ZXhwSWdVWDZ2TDRnT3dFaGhobmI2T3I4cXNHLTVzX1B0QkxRVjRhZzN6UmU1M2lpYmNZaWZLclRYckZRZEFqSVJPZHM2R0ZGejVWM1pIUDV3TFVyMXR5OG9RSDJxT2I4NmtmdFlfSVlGaUhoWVhLU1BJN3Rla2hqWVAyRFFuMF9VOWFBT1Q4VHMwOXFlRm41eHdZ?oc=5"
-      ],
-      "contexto": "É o caso da Localiza, que apresenta um DY de 12,70%, e da Allos, que tem um retorno com proventos em 12 meses de 14,30%. Em novembro, estão previstos pagamentos de nomes como Petrobras, Itaú e Bradesco."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Descubra agora 3 ETFs que pagam dividendos mensais",
-        "url": "https://www.nordinvestimentos.com.br/blog/etf-dividendos/",
-        "source": "Nord Investimentos",
-        "date": "2026-11-05",
-        "tag": "Dividendos",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9ZSHB2Y0xtbE4zU19qVEthb3c4ckdHTGktT1l4VnphSEN3VHBDZEgxQlRFcWI1UVlMdjVoTHhLb1ZrdmJOX3hkbU1ScVhNbkFnY2RjWXhteGt6dkwxM0FmeVNkaGdEUWRs0gFuQVVfeXFMUDJ5dEZIOE1qdWRYd1RfcGhLemk0dVM2Y25ERjZIX3RsS1d5TUpHU2hxYUdUY1dmNlRWcjVjdkNoY3Zfdy1pMS16a0JLdkNoOHZ0VmxfUFZJTUFQMGdEX3Z3ZTRLTTNRb3VHN0U5QUE?oc=5"
-      ],
-      "contexto": "Descubra agora 3 ETFs que pagam dividendos mensais Os ETFs que pagam dividendos mensais vêm ganhando espaço entre investidores que buscam renda recorrente na Bolsa sem precisar montar uma carteira de ações por conta própria. A proposta é simples: investir em um único ativo negociado em Bolsa e receber proventos de forma periódica."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
         "title": "Declaração do IRPF 2027 aplica IR mínimo de até 10% para renda de 2026 acima de R$ 600 mil",
         "url": "https://www.mixvale.com.br/2026/11/05/declaracao-do-irpf-2027-aplica-ir-minimo-de-ate-10-para-renda-de-2026/",
         "source": "Mix Vale",
@@ -263,7 +282,8 @@
       },
       "aliases": [
         "https://news.google.com/rss/articles/CBMirAFBVV95cUxNRjVlMnphSHNmYTNzY3RwSzA4ejlFXzZwc0Z2SmszNVRxbUNDQzFaZGFya25PZUlJOFpXOEtBZTk5QXZEcHZFRDRka0RCQ2I2SXlvNE5VRjdGNHZ3WDQwWkxlVDU1WFg4bDZRWjNKanNaZGs4UEZDR1hhRVZVdHVqbjBCdEVYclh2bFRBWGdETUE5RjlNTUk2MmtObFdQT0tfRG9MUHA4blEwRTlu?oc=5"
-      ]
+      ],
+      "contexto": "Quem soma mais de R$ 600 mil em ganhos no ano tem até 31 de dezembro de 2026 para rever aplicações financeiras e retiradas de sociedades antes do fim do ano-calendário. A meta é reduzir a conta do Imposto de Renda da Pessoa Física Mínimo (IRPFM), regra em vigor desde 1º de janeiro de 2026."
     },
     {
       "brandId": "mycapital",
@@ -271,17 +291,37 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Saiba como será o Split Payment: reforma tributária divide imposto na hora da compra e muda rotina de empresas no Brasil",
-        "url": "https://www.mixvale.com.br/2026/11/05/saiba-como-sera-o-split-payment-reforma-tributaria-divide-imposto-na-hora-da-compra-e-muda-rotina-de-empresas-no-brasil/",
-        "source": "Mix Vale",
+        "title": "Alíquotas do Imposto de Renda 2026: nova tabela e cálculos",
+        "url": "https://www.serasa.com.br/blog/aliquota/",
+        "source": "Serasa",
+        "date": "2026-11-06",
+        "tag": "Declaração",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1GSUl0VzJRUGI2ZTBpR2wyQ09FN3JYTWowYnFDUHk1SVpoNzM2dUk5cUM0alBwUlAybTV4NUxLN1hZX0FCa0MxaUFIc0dIX1NCVmc?oc=5"
+      ],
+      "contexto": "Tributação de offshores: como funciona e o que mudou com a lei Tributação de offshores: como funciona e o que mudou com a lei Data de publicação 6 de novembro de 202614 minutos de leitura Atualizado em: 20 de fevereiro de 2026 Categoria Educação financeiraTempo de leitura: 9 minutos Texto de: Time Serasa As alíquotas do Imposto de Renda tiveram mudanças..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Campanha possibilita destinar imposto de renda 2027 para projetos sociais de Uberlândia (MG)",
+        "url": "https://naoperdenao.com/2026/11/05/campanha-possibilita-destinar-imposto-de-renda-2027-para-projetos-sociais-de-uberlandia-mg/",
+        "source": "Não Perde Não",
         "date": "2026-11-05",
         "tag": "Declaração",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNc3FyNXRFelFoODE1LXg2TGphVW5zQ2pvMGw3LWRDM2Ffckl6d2VKTkVoUlo1LWt3VkR0em42R2NLbTFmUzgyc2tQQ0VGZDN0bkhaemZPd2RWNW1IVGhib05oZHZrN045YWF1M3p3TU95LTZNbndkdmJTTnRSNEEwLWRIdnZZSVZpUXE3bGpWdm1WOXZqV05SbTB2SUFvN0dnMnh2R2dMQVBacG5mcW5EZUk5OHhUZFR5V1dVbXJnSnVBc0syWWFzbUlWdlZ6UVB1U1VTVFg3M2ZtSF9ZeUxaYW5FNWpMWmwyN0xnQVFrTQ?oc=5"
-      ]
+        "https://news.google.com/rss/articles/CBMixAFBVV95cUxPbjlzTF9Ldlgtc0JKRDV2SlJuNzY4bzVUUGM2dExobmZEcHVtaF9LZkhYb3Nab0RVV0tEMllmbEgxZk9wbk5NSmR1Rkh1RU1YVS1ablZ2QmptMldLNGRwYnhySWRnQmpYOURCaURFVU9jYWhIaWlnRS1xLTEtSV8wc0ZzeFNWMXBnOTY0UzN2UzBqOXptNGJ3aEQtZjNiaU9Cd1ZLSjVfN212cW5iRUp4M29CREVfWm5ZdVZsZmVla0JyQWVS?oc=5"
+      ],
+      "contexto": "É possível transformar parte do Imposto de Renda (IR) pago em oportunidades para a comunidade de Uberlândia (MG). Pessoas físicas já podem fazer doações de até 6% do IRPF devido para projetos sociais que beneficiam milhares de pessoas e receber a restituição do valor destinado ou o abatimento do valor a ser pago ao fazer a Declaração do Imposto de Renda..."
     },
     {
       "brandId": "mycapital",
@@ -299,7 +339,8 @@
       },
       "aliases": [
         "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQTFRWaGloa2dmUmtETzNxMl9TWWx0UjYtd1ZRQzNscW15ckIxODdBUzdNS202X1Q5TEhtVXAzTThvd0xaYlNlbGFHcTRhTEV5ckE2clQtUVpYYU82dktlNFJySXZFZUhzUVU0TUt3SFFvWnMtLV81RjYtcHQ5NURkU1ZWOTl2aFlXT3ktRlhtejhYYzU0MlBaSWthSXpNeWwtTFYxQ1l4SllGNl9JX01pcFFUbjNNYjNmbGVPRkdSbkg1OTl5MEhQeHp4QVlwZ2c4cWdqMUxjMXV6dmlEcUE?oc=5"
-      ]
+      ],
+      "contexto": "O imposto do pecado entrará em vigor no Brasil em 2 de fevereiro de 2027, com cobrança de 4,2% sobre cervejas de malte e de 8% sobre vinhos e espumantes. A definição das alíquotas consta em Medida Provisória publicada pelo Governo Federal no Diário Oficial da União na noite de 4 de novembro de 2026."
     },
     {
       "brandId": "mycapital",
@@ -317,7 +358,8 @@
       },
       "aliases": [
         "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQQ3pJR0gxVW1jUlBUbkF0dF9VenVtVUs3SXJRSGlBZ3RlTEZpSGZLcnJNZHprcy1ldnM0WGl3bGs5d2dRT1hsVTV4WG83eW1WTEROTmJXZW45YlVGcVFkZlYyMnhnT2tTNnVucXdvT0xPOHJ6endhY3NOdElLcXgtS2xjTUc5b3Jna1VEOExrZjZ3dUx3dXBjU0s3LW5kRTRTOV9BdUVYX3c?oc=5"
-      ]
+      ],
+      "contexto": "Cervejas de malte passarão a pagar 4,2% de Imposto Seletivo, e vinhos e espumantes, 8%, quando a cobrança começar em 2 de fevereiro de 2027. A regra está na Medida Provisória nº 1.399/2026, publicada em edição extra do Diário Oficial da União em 4 de novembro de 2026."
     },
     {
       "brandId": "mycapital",
@@ -344,18 +386,18 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "O efeito Lula 4: sangria na B3 e dólar a R$ 5,40; o que fazer com seus investimentos após a virada nas urnas",
-        "url": "https://www.seudinheiro.com/2026/economia/o-efeito-lula-4-sangria-na-b3-e-dolar-a-r-540-o-que-fazer-com-seus-investimentos-apos-a-virada-nas-urnas-davs/",
-        "source": "Seu Dinheiro",
-        "date": "2026-10-30",
+        "title": "B3 e Polato Sementes realizam primeira operação de CPR pública indexada ao dólar",
+        "url": "https://borainvestir.b3.com.br/tipos-de-investimentos/renda-fixa/b3-e-polato-sementes-realizam-primeira-operacao-de-cpr-publica-indexada-ao-dolar/",
+        "source": "Bora Investir",
+        "date": "2026-11-05",
         "tag": "Mercado",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNeDdzZ2kwWHpMblQzQUFBMXlidDdYRWh3WVdHbmFJc05fanhfNElKRWFSZjItck5tYmlUVEtFQkM4Q3N5OVJlX0Z1SXA2b0d3eTBESlF5Q0hlQVo0cWJ1VExOZmpFUkNIbzVFSWlMR1hLTmdvR05GVjBTQUNXbEY0bVVoVkh4cG9jY2NwbDd3LXhvV1RzLTV5R1VZZUFxM0gzV2VZdlZhYUVQY1AyWDlOVVZjUEJDU2tWQm9weWVxM0JfVGNDbHg0RndGNzRQeXp5VTZmWWpldnlVXzgtdUwtTVNiVDhxM2M?oc=5"
+        "https://news.google.com/rss/articles/CBMi3wFBVV95cUxONk9OdVVJZ0ZwajVpSldZRTU1UDNBWEVLSm1jOXE3YmUzc1RwOWVPaHJSemh1RjJzcGVnQTR1dVN2V05rblBTOWszaFJTdm5YWlpZTXFnWi1Xc3gxeDFULTVMdk9GMS1jMExDMElHYm1qUzV3U0FnZl96N2FwZ1I0aTVYZFZvQVdIdDVYWFFCa1p0RmRia2g2WWRtUEVxS05ncU43LVhXVnhOLV9MSkZOMUtNSTlESW15TV9hNDRGVk0yc0xMcEFXVmJrSHFOcFJuanZCRlhBd0c2aVRwNmVV?oc=5"
       ],
-      "contexto": "O efeito Lula 4: sangria na B3 e dólar a R$ 5,40; o que fazer com seus investimentos após a virada nas urnas Em novo episódio do podcast Touros e Ursos, o analista Matheus Spiess analisa a reação estressada dos mercados à reeleição de Luiz Inácio Lula da Silva A reeleição de Luiz Inácio Lula da Silva (PT) para um quarto mandato e a derrota do senador Flávio..."
+      "contexto": "B3 e Polato Sementes realizam primeira operação de CPR pública indexada ao dólar Operação com CPR captou R$ 137 milhões e foi estruturada pelo Itaú BBA A B3, bolsa do Brasil, realizou a liquidação da primeira CPR (Cédula do Produto Rural) pública, voltada ao investidor pessoa física, com rentabilidade atrelada ao dólar. A emissão foi realizada pela Polato..."
     },
     {
       "brandId": "mycapital",
@@ -381,6 +423,7 @@
     "Grana Capital (blog https://blog.grana.capital/feed/): HTTP 404"
   ],
   "arquivos": [
-    "02f6f2121b164b52.jpg"
+    "02f6f2121b164b52.jpg",
+    "425e403e6270afa8.jpg"
   ]
 }

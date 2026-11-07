@@ -3,83 +3,281 @@
   "periodo": "today 1-m",
   "termos": [
     {
-      "termo": "dividendos",
+      "termo": "imposto de renda",
       "subindo": [
         {
-          "busca": "cury3",
-          "valor": "+170%"
-        },
-        {
-          "busca": "b3sa3 dividendos",
-          "valor": "+130%"
-        },
-        {
-          "busca": "bbdc4 dividendos",
+          "busca": "meu imposto de renda, receita federal",
           "valor": "+120%"
         },
         {
-          "busca": "btlg11 dividendos mensais",
-          "valor": "+120%"
+          "busca": "cnis",
+          "valor": "+60%"
         },
         {
-          "busca": "ibovespa hoje",
-          "valor": "+110%"
+          "busca": "imposto de renda 2027",
+          "valor": "+60%"
         },
         {
-          "busca": "banco do brasil ações dividendos",
-          "valor": "+100%"
+          "busca": "tabela imposto de renda 2027",
+          "valor": "+60%"
         },
         {
-          "busca": "vale3 dividendos",
-          "valor": "+80%"
+          "busca": "regularize",
+          "valor": "+60%"
         },
         {
-          "busca": "bbdc3",
-          "valor": "+80%"
+          "busca": "meu imposto de renda gov",
+          "valor": "+40%"
         }
       ],
       "top": [
         {
-          "busca": "bbas3",
+          "busca": "imposto de renda 2026",
           "valor": 100
         },
         {
-          "busca": "dividendos bbas3",
-          "valor": 98
+          "busca": "declaração imposto de renda",
+          "valor": 73
         },
         {
-          "busca": "o que é dividendos",
-          "valor": 82
-        },
-        {
-          "busca": "dividendos petrobras",
-          "valor": 76
-        },
-        {
-          "busca": "dividendos banco do brasil",
+          "busca": "declaração de imposto de renda",
           "valor": 72
         },
         {
-          "busca": "mxrf11",
-          "valor": 70
+          "busca": "meu imposto de renda",
+          "valor": 72
         },
         {
-          "busca": "petr4 dividendos",
-          "valor": 68
+          "busca": "restituição imposto de renda",
+          "valor": 52
         },
         {
-          "busca": "mxrf11 dividendos",
-          "valor": 67
+          "busca": "restituição de imposto de renda",
+          "valor": 50
+        },
+        {
+          "busca": "declarar imposto de renda",
+          "valor": 48
+        },
+        {
+          "busca": "isenção de imposto de renda",
+          "valor": 38
         }
       ],
       "interesse": [
         {
-          "data": "2026-10-30T00:00:00+00:00",
+          "data": "2026-10-31T00:00:00+00:00",
+          "valor": 56
+        },
+        {
+          "data": "2026-11-01T00:00:00+00:00",
+          "valor": 39
+        },
+        {
+          "data": "2026-11-02T00:00:00+00:00",
+          "valor": 49
+        },
+        {
+          "data": "2026-11-03T00:00:00+00:00",
+          "valor": 89
+        },
+        {
+          "data": "2026-11-04T00:00:00+00:00",
+          "valor": 79
+        },
+        {
+          "data": "2026-11-05T00:00:00+00:00",
+          "valor": 75
+        },
+        {
+          "data": "2026-11-06T00:00:00+00:00",
+          "valor": 69
+        },
+        {
+          "data": "2026-11-07T00:00:00+00:00",
+          "valor": 38
+        }
+      ]
+    },
+    {
+      "termo": "darf",
+      "subindo": [
+        {
+          "busca": "emitir darf para pagamento de tributos federais",
+          "valor": "Breakout"
+        },
+        {
+          "busca": "darf mei 2026",
+          "valor": "+180%"
+        },
+        {
+          "busca": "darf 2362",
+          "valor": "+170%"
+        },
+        {
+          "busca": "darf 3208",
+          "valor": "+130%"
+        },
+        {
+          "busca": "darf online sicalc",
+          "valor": "+90%"
+        },
+        {
+          "busca": "darf procuradoria",
+          "valor": "+80%"
+        },
+        {
+          "busca": "sicalc emitir darf",
+          "valor": "+70%"
+        },
+        {
+          "busca": "darf online",
+          "valor": "+60%"
+        }
+      ],
+      "top": [
+        {
+          "busca": "emitir darf",
+          "valor": 100
+        },
+        {
+          "busca": "pagar darf",
+          "valor": 93
+        },
+        {
+          "busca": "darf imposto de renda",
           "valor": 83
         },
         {
+          "busca": "darf receita federal",
+          "valor": 68
+        },
+        {
+          "busca": "codigo darf",
+          "valor": 67
+        },
+        {
+          "busca": "pagamento darf",
+          "valor": 60
+        },
+        {
+          "busca": "darf online",
+          "valor": 57
+        },
+        {
+          "busca": "mei darf",
+          "valor": 53
+        }
+      ],
+      "interesse": [
+        {
           "data": "2026-10-31T00:00:00+00:00",
-          "valor": 55
+          "valor": 44
+        },
+        {
+          "data": "2026-11-01T00:00:00+00:00",
+          "valor": 17
+        },
+        {
+          "data": "2026-11-02T00:00:00+00:00",
+          "valor": 19
+        },
+        {
+          "data": "2026-11-03T00:00:00+00:00",
+          "valor": 59
+        },
+        {
+          "data": "2026-11-04T00:00:00+00:00",
+          "valor": 52
+        },
+        {
+          "data": "2026-11-05T00:00:00+00:00",
+          "valor": 48
+        },
+        {
+          "data": "2026-11-06T00:00:00+00:00",
+          "valor": 45
+        },
+        {
+          "data": "2026-11-07T00:00:00+00:00",
+          "valor": 15
+        }
+      ]
+    },
+    {
+      "termo": "dividendos",
+      "subindo": [
+        {
+          "busca": "best time to visit maldives",
+          "valor": "Breakout"
+        },
+        {
+          "busca": "cyre3",
+          "valor": "+300%"
+        },
+        {
+          "busca": "investing",
+          "valor": "+250%"
+        },
+        {
+          "busca": "ações banco do brasil",
+          "valor": "+170%"
+        },
+        {
+          "busca": "b3sa3 dividendos",
+          "valor": "+150%"
+        },
+        {
+          "busca": "b3sa3",
+          "valor": "+120%"
+        },
+        {
+          "busca": "csan3",
+          "valor": "+110%"
+        },
+        {
+          "busca": "brap4",
+          "valor": "+110%"
+        }
+      ],
+      "top": [
+        {
+          "busca": "dividendos bbas3",
+          "valor": 100
+        },
+        {
+          "busca": "bbas3",
+          "valor": 99
+        },
+        {
+          "busca": "o que é dividendos",
+          "valor": 90
+        },
+        {
+          "busca": "dividendos petrobras",
+          "valor": 77
+        },
+        {
+          "busca": "mxrf11",
+          "valor": 74
+        },
+        {
+          "busca": "mxrf11 dividendos",
+          "valor": 73
+        },
+        {
+          "busca": "dividendos banco do brasil",
+          "valor": 71
+        },
+        {
+          "busca": "petr4 dividendos",
+          "valor": 69
+        }
+      ],
+      "interesse": [
+        {
+          "data": "2026-10-31T00:00:00+00:00",
+          "valor": 57
         },
         {
           "data": "2026-11-01T00:00:00+00:00",
@@ -87,23 +285,27 @@
         },
         {
           "data": "2026-11-02T00:00:00+00:00",
-          "valor": 58
+          "valor": 59
         },
         {
           "data": "2026-11-03T00:00:00+00:00",
-          "valor": 75
+          "valor": 78
         },
         {
           "data": "2026-11-04T00:00:00+00:00",
-          "valor": 66
+          "valor": 68
         },
         {
           "data": "2026-11-05T00:00:00+00:00",
-          "valor": 66
+          "valor": 67
         },
         {
           "data": "2026-11-06T00:00:00+00:00",
-          "valor": 62
+          "valor": 63
+        },
+        {
+          "data": "2026-11-07T00:00:00+00:00",
+          "valor": 39
         }
       ]
     },
@@ -113,44 +315,41 @@
       "top": [],
       "interesse": [
         {
-          "data": "2026-10-30T00:00:00+00:00",
-          "valor": 31
-        },
-        {
           "data": "2026-10-31T00:00:00+00:00",
-          "valor": 24
+          "valor": 35
         },
         {
           "data": "2026-11-01T00:00:00+00:00",
-          "valor": 22
+          "valor": 32
         },
         {
           "data": "2026-11-02T00:00:00+00:00",
-          "valor": 28
+          "valor": 47
         },
         {
           "data": "2026-11-03T00:00:00+00:00",
-          "valor": 29
+          "valor": 45
         },
         {
           "data": "2026-11-04T00:00:00+00:00",
-          "valor": 29
+          "valor": 46
         },
         {
           "data": "2026-11-05T00:00:00+00:00",
-          "valor": 22
+          "valor": 37
         },
         {
           "data": "2026-11-06T00:00:00+00:00",
-          "valor": 23
+          "valor": 38
+        },
+        {
+          "data": "2026-11-07T00:00:00+00:00",
+          "valor": 36
         }
       ]
     }
   ],
   "emAlta": [],
-  "avisos": [
-    "Google Trends (imposto de renda): Google rate-limited the Explore data request; stop and back off.",
-    "Google Trends (darf): Google rate-limited the Explore data request; stop and back off."
-  ],
-  "geradoEm": "2026-11-06T16:44:42+00:00"
+  "avisos": [],
+  "geradoEm": "2026-11-07T15:39:10+00:00"
 }
