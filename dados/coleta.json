@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-07T15:37:56+00:00",
+  "geradoEm": "2026-11-08T15:55:46+00:00",
   "fonte": "coletor (GitHub Actions)",
   "itens": [
     {
@@ -16,8 +16,8 @@
         "title": "Declaração Automática IR de investimentos na bolsa | Black do Grana",
         "url": "https://www.youtube.com/watch?v=UVLxJyFm0sE",
         "date": "2026-11-06",
-        "signal": "34 visualizações, 6 curtidas",
-        "summary": "Vídeo publicado em 06/11, com 34 visualizações, 6 curtidas.",
+        "signal": "52 visualizações, 6 curtidas",
+        "summary": "Vídeo publicado em 06/11, com 52 visualizações, 6 curtidas.",
         "origem": "coletor"
       }
     },
@@ -46,25 +46,6 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Tesouro Selic, CDB ou LCI/LCA: qual paga mais com a Selic a 13,75%? Veja simulação com R$ 10 mil",
-        "url": "https://www.seudinheiro.com/2026/renda-fixa/tesouro-selic-cdb-ou-lci-lca-qual-paga-mais-com-a-selic-a-1375-veja-simulacao-mlim/",
-        "source": "Seu Dinheiro",
-        "date": "2026-11-06",
-        "tag": "IR",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMixgFBVV95cUxOdkpqZ3h2N25KVFg2M29IeFFoelczMVpNUVBGRHlSQzk4M0h3ckh3TlVMZkVlU2VGVVhyMzR5aVNBNFZfU0xkeFRsSFpjWEsxY0Q0eGx5SHZ6a3BQUHFUM1VDZnJrc0dyZEhLbDRoOHJNa0QtSkU1Qnc0MXJZZWRfTjgzVFFKMldyejZWTFVrckV6Q1BQTU1rR3NWenRvZWVwUEhUYmhiNnZCV0lCcG9xV0liczdWLVVBR0xPMmZnSk9xYWNBbHc?oc=5"
-      ],
-      "contexto": "Tesouro Selic, CDB ou LCI/LCA: qual paga mais com a Selic a 13,75%? Veja simulação com R$ 10 mil Simulação da XP compara os títulos de renda fixa, considerando uma aplicação inicial de R$ 10 mil, e mostra o efeito dos impostos e do tempo no retorno líquido Com os juros parados em 13,75% ao ano, a renda fixa continua oferecendo retornos difíceis de ignorar."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
         "title": "Tesouro Selic, CDB, LCI/LCA ou Poupança? Quanto rendem R$ 10 mil com juros a 13,75%",
         "url": "https://www.moneytimes.com.br/tesouro-selic-cdb-lci-lca-ou-poupanca-quanto-rendem-r-10-mil-com-juros-a-1375-mlim/",
         "source": "Money Times",
@@ -77,25 +58,6 @@
         "https://news.google.com/rss/articles/CBMiswFBVV95cUxOSnYySVlsRE5lbDhvVG9iRW1yRGUxUXQ2ajdxY0s5Q1NDendoRFFBYzFWN2pMd1oxNk94aUlfZGtRcnFCM2NFY0ItT21EOXFOdXlNek5BQmVabHdfZ2dBX3A5ZXoxalQzVWV4NWUxeU5ZcXppblFpMXZNUFc5Vi13N19sTXFSMFN4MFpKY1F0azBYeFdlU1lta2N1bDZ4U2ZlOVUxQXo0MlhQbGN1cFdnWExScw?oc=5"
       ],
       "contexto": "Tesouro Selic, CDB, LCI/LCA ou Poupança? Quanto rendem R$ 10 mil com juros a 13,75% Com a Selic mantida em 13,75% ao ano, uma aplicação de R$ 10 mil em produtos de renda fixa pode render mais de R$ 1 mil em apenas 12 meses."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Títulos isentos de IR pagam taxas nas alturas após eleição, mas risco também cresce",
-        "url": "https://www.infomoney.com.br/onde-investir/titulos-isentos-de-ir-pagam-taxas-grotescas-apos-eleicao-mas-risco-cresce/",
-        "source": "InfoMoney",
-        "date": "2026-11-05",
-        "tag": "IR",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQVEtaWjNpczFFaHlTallFRnpocGlzY1hPb3dTUi0xWjZpNHY4a1BLWm9PWjU4a1l0eG5mVHEybVNLVjUtN2xPRzhCdFVYRTJTd1l2RFhjaGxaNlp2cWpNVUs4dmxKaHJWYVlNOVBMQVp0ajh3VXBRaTRUREQxWDlUUnJhVGRnTndYZlYxcVozdnpXdDhPVGdLN3F0bzNtc2JRSHk3SlRuLWlwam5zM19HU052bXJfUTJT0gG-AUFVX3lxTFBPTFhFM2RuSWs2TTZMWnZueGhxaVZpTUlTUHYtMDB0dlotVmdoM2pROUlCdmg5SUY2VjBScmNOT2pTeEJDXzNqVkZ2Y0lLMWF4VzFtQVBwSnNTY0J3bUY3MjFrRy1KOHNQcE1pV3VteUdoQ1U3X3ZVdi1IQXFxTkYtbXEtQjVvN0UyU0dlaTl3eUpKd3JkdFkyUlBqazNqNURRd3ZRTGotdlg2V0U1VWhPT0o3a3pOR29OdVJaWUE?oc=5"
-      ],
-      "contexto": "A forte alta das taxas das NTN-Bs, títulos públicos atrelados à inflação medida pelo IPCA, no dia seguinte à reeleição do presidente Luiz Inácio Lula da Silva puxou também o rendimento dos títulos privados isentos de Imposto de Renda (IR). Como a NTN-B passou a pagar quase 8% ao ano acima da inflação, debêntures de infraestrutura de longo prazo e de baixo..."
     },
     {
       "brandId": "mycapital",
@@ -152,6 +114,44 @@
         "https://news.google.com/rss/articles/CBMi_AFBVV95cUxQZlpSN25OZ0EzWjNvOHlSN0ZfRmQ5eWhzYzZPcTZvVHVOZzllUlhubnpXWThEdlJzajg4X1lYRE9IV3hoSldvNHhTNkxCOHJGVGVvbnkxYzJRZThkdTc5TXcwZDU4bmRLdjE4cWR6eDMxcGdFR0F5S3pPbkVIRkNJRnIxTlY4S0s2THJjS3czdTZHOElHYjNhZXRZdWo2SFo1Tjlfb2g1aUtlTW4ybG1vbGNyVXN4WXotRWwyMmc3OTU5VzI2NmhtT0NYc0gzWWtFWXMySXk2M2pGNVh6SmNUU2ZVNjRBQkdBTmQ1dzVnVUxZWUFVbV9xTmtmeGLSAYsCQVVfeXFMTkdYcmxhd2dHYnZQcXFuTVdLbkYwSE5xR3JVVmJwZzRRY0UwY3JuVlpHYllaV25GN0ZkU0FVMk1oV0hTT2tQRW1DWTgxM2JwQzgydmNZSng3VzVYVFQxUEJCMUVMZWJWczJ3TU9Fc1B5U2FtdzhDRWcxR3hDZkxuZ1lOZ3h6WlhKRXNGNTRKRkw5Vkh5ZTVoWUlFdDJtUmpZMVBJa0RrY01NX1BQTlhzVnVtSm5OSlFTV1hPMlVQRXNzVUthcnhmanhaOGppdVllbGRTM3pSOHRZNkVIc2gyaF9RX1Jkb2UwV19icm1KSjJ4S054bXJiaHFFbXdBYU9qZUpYN2lKWUw5MzZZ?oc=5"
       ],
       "contexto": "Quanto rende R$ 1 mil em poupança, Tesouro Direto e CDB com manutenção da Selic em 13,75% Investimentos de renda fixa que acompanham os juros continuam oferecendo retornos elevados O Comitê de Política Monetária (Copom), do Banco Central (BC), decidiu nesta quarta-feira (4) manter a taxa básica de juros, a Selic, em 13,75% ao ano, interrompendo a sequência..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Selic em 13,75% mantém atratividade da renda fixa pós-fixada; veja como ficam os investimentos",
+        "url": "https://www1.folha.uol.com.br/mercado/2026/11/selic-em-1375-mantem-atratividade-da-renda-fixa-pos-fixada-veja-como-ficam-os-investimentos.shtml",
+        "source": "Folha de S.Paulo",
+        "date": "2026-11-04",
+        "tag": "IR",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPWTRSTk1WOXlyRVJra0NuS2lKbnBPRVdRaEk4QWQta3RrT3FlcVFSQUtRTks5WVZITzZmcE1YYjNwRVprcmJ5NEw0TnRIN2FUMk1hMVZaUnlCNUQyZ1N6TkFMUlBaY1REYVpHemVvY2tTTmRQNFNRR1JpenNuMFl6b0VRc2IzalFId0xLejZNQS1GcnpjSUsxMF9OX3duYzgtc3k1T2ZxUll2OVd1ZDdBelhEUklvRGlIWlBPVncwR09wUFhVYzFhOUlIcVZ4QnE1UDV5NGg2WTNGQms?oc=5"
+      ],
+      "contexto": "A decisão do Copom de manter a taxa básica de juros, a Selic, em 13,75% ao ano preserva a atratividade da renda fixa, com destaque para títulos pós-fixados e indexados à inflação. Para especialistas ouvidos pela Folha, a primeira interrupção do ciclo de cortes, após cinco reduções consecutivas, mantém a vantagem das aplicações atreladas à própria Selic ou..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Seu salário, imóvel e investimentos têm o mesmo CEP, mas não deveriam, como começar a investir no exterior",
+        "url": "https://www.seudinheiro.com/2026/internacional/seu-salario-imovel-e-investimentos-tem-o-mesmo-cep-mas-nao-deveriam-como-comecar-a-investir-no-exterior-ccgg/",
+        "source": "Seu Dinheiro",
+        "date": "2026-11-02",
+        "tag": "IR",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQYWhFQnl1cW9BdEwtZ25iQ1FiMU9Mak1PajlUMTBaWVdTajJ5cmVzM2JldFdKYnlQeG56SXJBcW9SbkFUWV96ekE5bjVWaHhqbTNhWWlQekZMU1Fwd00xUWRjR1dSY0g1TF9Gb3VJVmZfclhIai14aEtJNlFSOUhLaTJCZFo0ZklKRDBnMF9KQWdMYkNTcUs0UlJoc09fNzJnZ0NNQ3VRaVZONXF1dmpKaDgycFc5WjJJREI2SlRRZjhTMl9lWUpiUmp6c19ZM2o5Yk1mQVhhWHVEcnpqT0Q2YjFkbEVXRWJGblRxUw?oc=5"
+      ],
+      "contexto": "Seu salário, imóvel e investimentos têm o mesmo CEP, mas não deveriam, como começar a investir no exterior Do primeiro aporte à escolha entre dólar puro e proteção cambial, passando por ETFs, contas no exterior e os impostos, um passo a passo para quem nunca tirou um real do Brasil Imagine um investidor de carteira bem montada: títulos do Tesouro, algumas..."
     },
     {
       "brandId": "mycapital",
@@ -234,18 +234,18 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Isenção do IR até R$ 5 mil e desconto até R$ 7.350 valem em 2026",
-        "url": "https://www.mixvale.com.br/2026/11/06/isencao-do-ir-ate-r-5-mil-e-desconto-ate-r-7-350-valem-em-2026/",
-        "source": "Mix Vale",
-        "date": "2026-11-06",
+        "title": "Agenda de dividendos de novembro: Petrobras, Itaú e Bradesco pagam proventos",
+        "url": "https://investnews.com.br/investimentos/agenda-de-dividendos-de-novembro-petrobras-itau-e-bradesco-pagam-proventos/",
+        "source": "InvestNews",
+        "date": "2026-11-03",
         "tag": "Dividendos",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMiowFBVV95cUxNOWJyVkdBeEVXYWRuNkU3X2ptMmtwbzJwTzlydU51bmhFOTcteV9kd25qUmZQSExaQktzWUU0ZVBLakM2U2VwQ3V2MHdIUENVRVJmajFObXZMRElkYUZ0R0EzRGFDMl94bnRLTVFld3NYVFlhUTBvTUM1Y1MteEFrdUh4YlVNS3l0V2ZseFJyLVZDZ29LS1NuSnBZTkdGVFJ3UFFZ?oc=5"
+        "https://news.google.com/rss/articles/CBMitgFBVV95cUxNSEVlZXFJWnpDSnNjcUhCWjktQ0dlb01xYmZPWFZPa0tCWDJxRlkxN0pjRUlqcGxhbzhJbHBWNTlhMWxEQ2NSOVk1R1pkWFB2cEdvSkJCd28tLTJvU0o5Z3dSWE45Q0dLcEFWRGJ1MW5rRmE5M2czckhQbmEwdGpQSWdYLTA2SU1ORDZNQUxabDNWSDJYX3VWdGRhLWpKLU4teTFPSnFvTWQyN08xMXRzc1FvWjIwd9IBuwFBVV95cUxPQk1pcFpiTU5jNW5qMzd4cUlObTEtcjFSQTBfRl9McFN2ZXhwSWdVWDZ2TDRnT3dFaGhobmI2T3I4cXNHLTVzX1B0QkxRVjRhZzN6UmU1M2lpYmNZaWZLclRYckZRZEFqSVJPZHM2R0ZGejVWM1pIUDV3TFVyMXR5OG9RSDJxT2I4NmtmdFlfSVlGaUhoWVhLU1BJN3Rla2hqWVAyRFFuMF9VOWFBT1Q4VHMwOXFlRm41eHdZ?oc=5"
       ],
-      "contexto": "Quem ganha até R$ 5 mil por mês deixou de pagar Imposto de Renda da Pessoa Física (IRPF) a partir de 1º de janeiro de 2026. A regra tem origem no projeto de lei 1087/25, enviado pelo governo federal ao Congresso Nacional, e foi sancionada como Lei 15.270/2025."
+      "contexto": "É o caso da Localiza, que apresenta um DY de 12,70%, e da Allos, que tem um retorno com proventos em 12 meses de 14,30%. Em novembro, estão previstos pagamentos de nomes como Petrobras, Itaú e Bradesco."
     },
     {
       "brandId": "mycapital",
@@ -253,18 +253,18 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Manifesto de economistas propõe tributação de altas rendas e revisão da política fiscal",
-        "url": "https://acritica.net/economia/manifesto-de-economistas-defende-taxacao-de-altas-rendas-em-vez-de-cortes-sociais/",
-        "source": "A Crítica de Campo Grande",
-        "date": "2026-10-31",
+        "title": "Empresas britânicas pedem a presidenciáveis fim de imposto sobre exportação",
+        "url": "https://www.cnnbrasil.com.br/blogs/lucinda-pinto/economia/money/macroeconomia/empresas-britanicas-pedem-a-presidenciaveis-fim-de-imposto-sobre-exportacao/",
+        "source": "CNN Brasil",
+        "date": "2026-11-08",
         "tag": "Dividendos",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMisgFBVV95cUxOX1lfZXBNUER0NzdsdWdOMUtkYVJ2elRnOWNpcFc2WG5jWG81emM0QTFpQ2FOdl9majJJR1JFbzBVdG1TY3BQYXN4a0ljUy15Z2FUUjdZMDgxUzVxUUhRMUJka1lhVkxWUDI5ai12UnZIZDZESDcxRHREVXpKaGhiRlA1S2czYVdMRWlLQmlwWjJkdW1VUThRU3MycGp3Sm9QNDQ1aGR4WnU3Z2FUbGh4cTh3?oc=5"
+        "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNaWQ5VnJRNmg5R3BpYmYwNzJHeVNvSG1jaEVlM3RoVXA4LUlJQXdYN1FCSVU0RHJoNFgwbFE3X09NY2k5RFJPbElCelNtcHY2YVNGb1JVYnZpYl9lUlZrMDJpR0ZUa2hGU3paamJkSHR1ck5TWW5YU3RjTDR3dlk0dzdVX0NMOURTeXp4ME9YYzRKWnJGYjQ1bzRjdGpqUWlXY3pSbHl0Ym5QZ1lDNENmeWZlRG1fYkZMLWM1WjgxanJ5MmFUVWFpTHhXeWJOQUQxNC1SR2NpRmlFdUxqeHBFcGVrTXFBaDd5eWc?oc=5"
       ],
-      "contexto": "Siga A Crítica de Campo Grande no Google Veja nossas notícias com mais destaque nas suas buscas. Siga A Crítica de Campo Grande no Google Veja nossas notícias com mais destaque nas suas buscas."
+      "contexto": "Empresas britânicas pedem a presidenciáveis fim de imposto sobre exportação Documento encaminhado aos cinco nomes que lideram as pesquisas defende acordo de livre comércio, mudanças tributárias e maior previsibilidade regulatória A Câmara Britânica de Comércio e Indústria no Brasil (Britcham) enviou aos cinco nomes que lideram as pesquisas para a..."
     },
     {
       "brandId": "mycapital",
@@ -272,8 +272,8 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Declaração do IRPF 2027 aplica IR mínimo de até 10% para renda de 2026 acima de R$ 600 mil",
-        "url": "https://www.mixvale.com.br/2026/11/05/declaracao-do-irpf-2027-aplica-ir-minimo-de-ate-10-para-renda-de-2026/",
+        "title": "Saiba como será o Split Payment: reforma tributária divide imposto na hora da compra e muda rotina de empresas no Brasil",
+        "url": "https://www.mixvale.com.br/2026/11/05/saiba-como-sera-o-split-payment-reforma-tributaria-divide-imposto-na-hora-da-compra-e-muda-rotina-de-empresas-no-brasil/",
         "source": "Mix Vale",
         "date": "2026-11-05",
         "tag": "Declaração",
@@ -281,28 +281,9 @@
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMirAFBVV95cUxNRjVlMnphSHNmYTNzY3RwSzA4ejlFXzZwc0Z2SmszNVRxbUNDQzFaZGFya25PZUlJOFpXOEtBZTk5QXZEcHZFRDRka0RCQ2I2SXlvNE5VRjdGNHZ3WDQwWkxlVDU1WFg4bDZRWjNKanNaZGs4UEZDR1hhRVZVdHVqbjBCdEVYclh2bFRBWGdETUE5RjlNTUk2MmtObFdQT0tfRG9MUHA4blEwRTlu?oc=5"
+        "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNc3FyNXRFelFoODE1LXg2TGphVW5zQ2pvMGw3LWRDM2Ffckl6d2VKTkVoUlo1LWt3VkR0em42R2NLbTFmUzgyc2tQQ0VGZDN0bkhaemZPd2RWNW1IVGhib05oZHZrN045YWF1M3p3TU95LTZNbndkdmJTTnRSNEEwLWRIdnZZSVZpUXE3bGpWdm1WOXZqV05SbTB2SUFvN0dnMnh2R2dMQVBacG5mcW5EZUk5OHhUZFR5V1dVbXJnSnVBc0syWWFzbUlWdlZ6UVB1U1VTVFg3M2ZtSF9ZeUxaYW5FNWpMWmwyN0xnQVFrTQ?oc=5"
       ],
-      "contexto": "Quem soma mais de R$ 600 mil em ganhos no ano tem até 31 de dezembro de 2026 para rever aplicações financeiras e retiradas de sociedades antes do fim do ano-calendário. A meta é reduzir a conta do Imposto de Renda da Pessoa Física Mínimo (IRPFM), regra em vigor desde 1º de janeiro de 2026."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Alíquotas do Imposto de Renda 2026: nova tabela e cálculos",
-        "url": "https://www.serasa.com.br/blog/aliquota/",
-        "source": "Serasa",
-        "date": "2026-11-06",
-        "tag": "Declaração",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1GSUl0VzJRUGI2ZTBpR2wyQ09FN3JYTWowYnFDUHk1SVpoNzM2dUk5cUM0alBwUlAybTV4NUxLN1hZX0FCa0MxaUFIc0dIX1NCVmc?oc=5"
-      ],
-      "contexto": "Tributação de offshores: como funciona e o que mudou com a lei Tributação de offshores: como funciona e o que mudou com a lei Data de publicação 6 de novembro de 202614 minutos de leitura Atualizado em: 20 de fevereiro de 2026 Categoria Educação financeiraTempo de leitura: 9 minutos Texto de: Time Serasa As alíquotas do Imposto de Renda tiveram mudanças..."
+      "contexto": "O sistema de split payment na reforma tributária transfere tributos aos cofres públicos no instante exato da liquidação financeira da venda, transformando a rotina contábil de milhares de empresas no Brasil. Aprovada dentro do modelo do Imposto sobre Valor Agregado dual, a ferramenta vincula a cobrança da Contribuição sobre Bens e Serviços e do Imposto..."
     },
     {
       "brandId": "mycapital",
@@ -369,7 +350,7 @@
       "doc": {
         "title": "PGFN esclarece regras sobre perdão de dívidas tributárias para MEIs, Procuradoria-Geral da Fazenda Nacional",
         "url": "https://www.gov.br/pgfn/pt-br/assuntos/noticias/2026/pgfn-esclarece-regras-sobre-perdao-de-dividas-tributarias-para-meis",
-        "source": "Governo Federal",
+        "source": "GOV.BR",
         "date": "2026-11-04",
         "tag": "Declaração",
         "summary": "",
