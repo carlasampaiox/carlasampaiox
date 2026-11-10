@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-09T19:44:44+00:00",
+  "geradoEm": "2026-11-10T16:59:20+00:00",
   "fonte": "coletor (GitHub Actions)",
   "itens": [
     {
@@ -16,8 +16,8 @@
         "title": "Declaração Automática IR de investimentos na bolsa | Black do Grana",
         "url": "https://www.youtube.com/watch?v=UVLxJyFm0sE",
         "date": "2026-11-06",
-        "signal": "75 visualizações, 6 curtidas",
-        "summary": "Vídeo publicado em 06/11, com 75 visualizações, 6 curtidas.",
+        "signal": "80 visualizações, 6 curtidas",
+        "summary": "Vídeo publicado em 06/11, com 80 visualizações, 6 curtidas.",
         "origem": "coletor"
       }
     },
@@ -35,8 +35,8 @@
         "title": "Produzir ficou mais barato: como a IA mudou o negócio dos finfluencers",
         "url": "https://www.youtube.com/watch?v=1Vv8mnXOFNo",
         "date": "2026-10-13",
-        "signal": "173 visualizações, 1 curtida · 3,1x a mediana do canal",
-        "summary": "Vídeo publicado em 13/10, com 173 visualizações, 1 curtida.",
+        "signal": "185 visualizações, 2 curtidas · 3,3x a mediana do canal",
+        "summary": "Vídeo publicado em 13/10, com 185 visualizações, 2 curtidas.",
         "origem": "coletor"
       }
     },
@@ -46,7 +46,7 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Como tributar debêntures incentivadas sem acabar com a isenção de IR para pessoa física? Sparta sugere alternativa",
+        "title": "Como tributar debêntures incentivadas sem acabar com a isenção de Imposto de Renda para pessoa física? Sparta sugere alternativa",
         "url": "https://www.seudinheiro.com/2026/renda-fixa/como-tributar-debentures-incentivadas-sem-acabar-com-isencao-de-imposto-de-renda-para-pessoa-fisica-sparta-sugere-alternativa-mlim/",
         "source": "Seu Dinheiro",
         "date": "2026-11-09",
@@ -58,6 +58,25 @@
         "https://news.google.com/rss/articles/CBMihgJBVV95cUxQZ2pCVGVfY3Z3RlB0bnhrRmc4ZzhwU1J6Xzc0c0hPUEx3U3p4WHRobFlRdW5QdHUzTFBmbEhDcnBjTlhSVlE2Y05LWVJzSVBoUHJJTmU0TFhqOW1aZHJlWGlUN0RsczJjeGw3Vmpaa2JsMW9GdU5IVWQtMEFiLXF2QWdtSkJURnJvREZQc0Q2cEJacnQtams4QjY4WDYyWWFBSWFsWWN6Wmp5SGxYNGV3V1BLemxzSDVXYlI4Wk5XLTlMSTc2R243MUpjZHV5SFNYWDdmR245SUtXNklMMFg4U01OQlFJSWtNYXd4YlNiYkd5Rm9nZFdQR0tTSi1La1VXVTR5dTln?oc=5"
       ],
       "contexto": "Como tributar debêntures incentivadas sem acabar com a isenção de Imposto de Renda para pessoa física? Sparta sugere alternativa Após discussões sobre possível cobrança de IOF sobre aplicações isentas, gestora sugere concentrar a tributação nos investidores mais ricos A possibilidade de novas cobranças sobre investimentos hoje isentos de imposto de renda..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Imposto de Renda 2026: tudo o que você precisa saber para declarar corretamente",
+        "url": "https://www.nordinvestimentos.com.br/blog/tudo-sobre-imposto-de-renda/",
+        "source": "Nord Investimentos",
+        "date": "2026-11-09",
+        "tag": "IR",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMiekFVX3lxTE4wTFF3dVlRZDBURXZJOFJpaVo5MVBfaldUZGppaU9CVnllUThwZWw2LXlHd0hTbk5pdWVFeTdaYVJ6QUpaUjJCWlVKSUVGU3h3bDFKN1hJWHcxNmo4ekhOZThmUUFQa1Rtd016OVNCcGpvc1Uwekc0a25B0gF_QVVfeXFMTlVrazVUUHdrXzBKVk1oVHJqOXJ0TTNXMXo2TkFIT0JjU0FUa2JZdGZXX0JMLS1wcU8zdTUwU0xGNlhoM1N0Q1lGLXdGWDRMTkk5TFBVX00tOWpvTk9ucUEyTm5aVFpWSmhPcm9OQUNuS3lkUzZFS0ZmMm41azhEYw?oc=5"
+      ],
+      "contexto": "Imposto de Renda 2026: tudo o que você precisa saber para declarar corretamente O Imposto de Renda 2026 (ano-base 2025) chega com mudanças que impactam desde investidores até quem possui bens no exterior. Apesar de ajustes pontuais no processo, a declaração segue exigindo atenção aos prazos, regras e documentos necessários."
     },
     {
       "brandId": "mycapital",
@@ -103,37 +122,18 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Novos ETFs da Galápagos investem 80% em renda fixa e 20% em ações; veja as opções",
-        "url": "https://opetroleo.com.br/novos-etfs-da-galapagos-investem-80-em-renda-fixa-e-20-em-acoes-veja-as-opcoes/",
-        "source": "O Petróleo",
-        "date": "2026-11-09",
+        "title": "Descubra agora 3 ETFs que pagam dividendos mensais",
+        "url": "https://www.nordinvestimentos.com.br/blog/etf-dividendos/",
+        "source": "Nord Investimentos",
+        "date": "2026-11-10",
         "tag": "IR",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMipwFBVV95cUxPOXhSYVVreDhPVy1VM3NXZ2hYb0wtSW1HaWt4c0kwX2F0Y2xJNnBFQXFfbjBXS3VsMVNIeEFtODQ2NnFTTzU2czJyNzlKbXBzYnhYY0xHWHUwNzktRnVOR2hQYXhMay1pbGx0QjBnOXVsNG83NWYwMndORjZjck1tMWpYTnY4eWxaN0IxMFF1NHFHOWU0NTdHOFBoLUhOSGRxcV90cG5TUQ?oc=5"
+        "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9ZSHB2Y0xtbE4zU19qVEthb3c4ckdHTGktT1l4VnphSEN3VHBDZEgxQlRFcWI1UVlMdjVoTHhLb1ZrdmJOX3hkbU1ScVhNbkFnY2RjWXhteGt6dkwxM0FmeVNkaGdEUWRs0gFuQVVfeXFMUDJ5dEZIOE1qdWRYd1RfcGhLemk0dVM2Y25ERjZIX3RsS1d5TUpHU2hxYUdUY1dmNlRWcjVjdkNoY3Zfdy1pMS16a0JLdkNoOHZ0VmxfUFZJTUFQMGdEX3Z3ZTRLTTNRb3VHN0U5QUE?oc=5"
       ],
-      "contexto": "A Galápagos Capital colocou no mercado brasileiro uma nova família de fundos de índice que combina a estabilidade relativa dos títulos públicos com o potencial de valorização das bolsas de valores. Batizada de Família Fácil, a linha reúne quatro ETFs negociados na B3, com uma estratégia comum: manter aproximadamente 80% do patrimônio em renda fixa e 20% em..."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "ARGENTINA DE MILEI OFERECE IMPOSTOS MENORES E LIBERDADE REGULATÓRIA PARA CONQUISTAR INVESTIMENTOS DAS BIG TECHS",
-        "url": "https://diario360.com.br/2026/11/08/argentina-de-milei-oferece-impostos-menores-e-liberdade-regulatoria-para-conquistar-investimentos-das-big-techs/",
-        "source": "Diário 360",
-        "date": "2026-11-08",
-        "tag": "IR",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQY2tHY3BtNUNPa3R2QldoZy1rZmh6UWNHaFVJZEpsM1JPWWc3WWlrTVZwVTVUYUJ1Qm1uRWUzN2Z3QlpZUll1bFVtT0ZvN0RIZlEweUQyVUdLVm1saGZYNjU0RVoxaUs5eHJlV2xxdldZemE5dXBBcjczRV9lOEZZQV9MT29Ya2xKb3NWNThZOEo2eE1tenBmaUJ0aTJwRlV4QzBJbHdHdDNCX3YtV3pIWVBOdjhNNk5ZLWROUU1FT2tXQ1lzN1lVdXJHZmcxOHJRMjNESjlMaW5jOFJhMmk0U193?oc=5"
-      ],
-      "contexto": "Governo argentino busca transformar a Patagônia em um polo mundial de inteligência artificial, com incentivos fiscais, menos burocracia e vantagens energéticas para atrair empresas como OpenAI, Amazon, Google e Oracle O presidente da Argentina, Javier Milei, está apostando em uma estratégia ambiciosa para transformar a Patagônia em um dos principais centros..."
+      "contexto": "Descubra agora 3 ETFs que pagam dividendos mensais Os ETFs que pagam dividendos mensais vêm ganhando espaço entre investidores que buscam renda recorrente na Bolsa sem precisar montar uma carteira de ações por conta própria. A proposta é simples: investir em um único ativo negociado em Bolsa e receber proventos de forma periódica."
     },
     {
       "brandId": "mycapital",
@@ -160,6 +160,25 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
+        "title": "Tombo da Bolsa infla dividend yield, e 15 ações ficam acima do CDI; veja quais",
+        "url": "https://www.infomoney.com.br/onde-investir/tombo-bolsa-infla-dividend-yield-15-acoes-pagam-acima-cdi/",
+        "source": "InfoMoney",
+        "date": "2026-11-06",
+        "tag": "Dividendos",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMiowFBVV95cUxQVWhSZUt4M1lpcE55aHRQcnoybVNyZVhRSFgwbU5yYUhmdV9QR2RwVGJIZFF3QjVXZ1ZoclpWeWlGUGpjbFpUWl9yYThJN0VlenRLVVh0OUh6NUhQWTNfbUNyLU1nTU55aDA1cVlrRFN1SDJsNzZycnNUYzRRMVJHczJtQ2U0LVo1VWZyRFJuS3Z6ZU1YSXc1dWhNNTMzRGJQdEdZ0gGoAUFVX3lxTE5Wd2dLTm5PQ1ZUZEVyT0xUYTQ5LU1OOW9YdjNNeEV6Um5SRUdBempCdzN5ekRIelNDZmNUYUhpLWp2SmlkTDF0ZWJrV283UXJlQkVWTmpBZEFROFJHQXlxbzUxQXR1TFNNTEg5QUtHaVppYVhaRW9QSVZxaG4wR2NSSDBoMHA0ZmdlSHRpMjlPem14TTdUQThJQ3BNWGpoNzFoaDUwV2F6Mg?oc=5"
+      ],
+      "contexto": "O Copom manteve a Selic em 13,75% ao ano na quarta-feira (4), e 15 ações da Bolsa pagaram, nos últimos 12 meses, dividendos acima do CDI, de 13,65% ao ano, segundo levantamento do InfoMoney com dados da Economatica. Na maior parte dos casos, porém, o dividend yield (DY) elevado vem da queda das cotações e, em alguns, de pagamentos extraordinários..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
         "title": "Como será a tributação do imposto mínimo para altas rendas no próximo ano?",
         "url": "https://fenafisco.org.br/04/11/2026/como-sera-a-tributacao-do-imposto-minimo-para-altas-rendas-no-proximo-ano-2/",
         "source": "Fenafisco",
@@ -171,6 +190,25 @@
       "aliases": [
         "https://news.google.com/rss/articles/CBMisgFBVV95cUxPMjNENEVJM2I4NW5mWHVwUXN4M1R2SmkyTWhhZGxJUnltSWxSenRzaW1NMzREaUZXZ05JY3RrdVpWcHcxcW11Yk1hckQwV0lKUVpCVWRiMDU2bjduWnJwN2U3bEpLWkZyNFh4VEZmc2ZwQk1mNzBIZURIbnlCYWRJQTdXeWZqdVpXVDJpR1lubTVyVmRPa0JZb2FQQi1sV09ZS1RmNmpYWFFGSkpRNFNtd2pn0gG3AUFVX3lxTE9YRF9xbVY0N2JVTlRTenI0LW9XeHpnUEJkR2JFcnJDUDloS0dpS0NNbE1BWExkUG9FVTE4a1c2MlFreWRuNEsxN2liT1JjdkVsUEtWbktCTXpocUpKdUIwTl9kdmYwYU5DSkRNYlRKUE1qOWV5NGNnMS1YWG56cnNNcEc2UmdMMUFQWDM4VDNLbXo4Z0VZZTJIRURPeFVad09QVGtDQUZhTTQ5TDhnTFdIdFREd1RSZw?oc=5"
       ]
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "TRF1 limita retenção de IR sobre lucros e dividendos da advocacia na faixa de 50 mil a 100 mil reais",
+        "url": "https://debatejuridico.com.br/trf1-limita-retencao-de-ir-sobre-lucros-e-dividendos-da-advocacia-na-faixa-de-50-mil-a-100-mil-reais/",
+        "source": "Debate Jurídico",
+        "date": "2026-11-09",
+        "tag": "Dividendos",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMiywFBVV95cUxNcTlwZWEyVTZfazRERmhJM1R3RVRDeFRQa2JQUWZwQTVnYWpRQjhjOW9udjZkOGJod3VVZlV4SEZJWjBtdTQ5azRraDhMWHVUcWZkX3pmRWxfUXpjV2xmajk2SWhnQWpPNkR2cS1mTEd0cmRHVWQ2UTN4OXRwaFhlU0RUR0c2UlRlMFR5STR6YkFUQU94bjlTcXZ0WTNpNW5HbXVhbUJXOUY0a01pOVAxVGt0ZzJMaDd2aXk1M3lJUzd6NkRXamk1QTZRaw?oc=5"
+      ],
+      "contexto": "Judiciário e MPU querem R$ 533 mi para pagar penduricalhos O Poder Judiciário e o Ministério Público da União (MPU) informaram ao Supremo Tribunal Federal (STF) que precisam de R$ 533 milhões extras para fazer o pagamento das verbas... Tributação Decisão reconheceu a relevância dos princípios constitucionais da capacidade contributiva e da progressividade..."
     },
     {
       "brandId": "mycapital",
@@ -197,25 +235,6 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "TRF1 limita retenção de IR sobre lucros e dividendos da advocacia na faixa de 50 mil a 100 mil reais",
-        "url": "https://debatejuridico.com.br/trf1-limita-retencao-de-ir-sobre-lucros-e-dividendos-da-advocacia-na-faixa-de-50-mil-a-100-mil-reais/",
-        "source": "Debate Jurídico",
-        "date": "2026-11-09",
-        "tag": "Dividendos",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMiywFBVV95cUxNcTlwZWEyVTZfazRERmhJM1R3RVRDeFRQa2JQUWZwQTVnYWpRQjhjOW9udjZkOGJod3VVZlV4SEZJWjBtdTQ5azRraDhMWHVUcWZkX3pmRWxfUXpjV2xmajk2SWhnQWpPNkR2cS1mTEd0cmRHVWQ2UTN4OXRwaFhlU0RUR0c2UlRlMFR5STR6YkFUQU94bjlTcXZ0WTNpNW5HbXVhbUJXOUY0a01pOVAxVGt0ZzJMaDd2aXk1M3lJUzd6NkRXamk1QTZRaw?oc=5"
-      ],
-      "contexto": "TRF1 limita retenção de IR sobre lucros e dividendos da advocacia na faixa de 50 mil a 100 mil reais Decisão reconheceu a relevância dos princípios constitucionais da capacidade contributiva e da progressividade tributária, preservando a sistemática de ajuste anual Compartilhe: 09 de novembro de 2026 às 13:00Atualizado em 09 de novembro de 2026 às 11:22..."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
         "title": "Isenção do Imposto de Renda: o que muda para quem ganha mais de R$ 5 mil?",
         "url": "https://investnews.com.br/financas/isencao-do-imposto-de-renda-r-5-mil/",
         "source": "InvestNews",
@@ -228,24 +247,6 @@
         "https://news.google.com/rss/articles/CBMie0FVX3lxTE1uUzU1ck5nTy0ydXgtLW5QRm5JQ2YxMkplNEVXaUVqbW9NdDc5T2FtUDVRQzR2Y0htdU9TNVhBbThEQ1hhV1Z1Mk5iM3pWTGIzbVNBWHF2RDdMSllnYUZ2aHhSbjY3MW9XLXR4RGZqWjFEY2FwM0otNExiTdIBgAFBVV95cUxOemdVRFRXV1N3bC1Oc0pUd25rN0g0QlJnYjl0Q1RycFdwMkRDLTQ1SW9JUkRKbWV1X2pvT1VMeDdNRm13T3l2TXpOMS12d25vYzNiYUtGcmZWdkVEUXJXaE9UM3RZVUpDRHYwVmo5aV9tMmNNdktrZXNCdlNqc01wMA?oc=5"
       ],
       "contexto": "O limite considera o rendimento tributável mensal, e não o salário líquido depositado na conta do trabalhador. Assim, alguém com salário bruto de R$ 5.001 já pode ter desconto de Imposto de Renda, embora pequeno."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Sindifisco - Sindicato dos Auditores Fiscais e Julgadores Tributários de Pernambuco",
-        "url": "https://sindifiscope.org.br/como-sera-a-tributacao-do-imposto-minimo-para-altas-rendas-no-proximo-ano/",
-        "source": "Sindifisco-PE",
-        "date": "2026-11-06",
-        "tag": "Dividendos",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMipAFBVV95cUxQdkZneHZNQ3M5dHR4R0J0d3JNTmgwRDFPLXNhOHQxV3dmUzRLVjNERkM3WWJONmstY292aHBTSXpiN1lRQVVXV3UxS1JKOVlJREhrVlJUWWxoUkpDU2FrNEJHaE9rWmFqM250U1R6ZTZsZmw2OEhIWV9PWUFyUndaZ3ZlRzBobF9iUkFPNGtxMHI4elhxUnViVk9EVElQeFNBaXE5ag?oc=5"
-      ]
     },
     {
       "brandId": "mycapital",
@@ -325,6 +326,42 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
+        "title": "Receita Federal paga lote residual do IRPF 2026 em 30 de outubro",
+        "url": "https://www.mixvale.com.br/2026/11/09/receita-federal-paga-lote-residual-do-irpf-2026-em-30-de-outubro/",
+        "source": "Mix Vale",
+        "date": "2026-11-09",
+        "tag": "Declaração",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMipgFBVV95cUxQODdDd1pTWEtBWWcteXhaY1U5TjU3OTZRTXhJREl6VzdpcldPZEh5MUhRR0kzdUd3WjJPRHFVOEVNSV93aFVCNHktbGZ1Q0NQZmRmRDhpbzRFS0Z1V0gzWlJqS3Y4YjhhQWdTQ0ZrcU84N2Y1eGxDTVlnMVl6dHhDWmRFUWh5bFRWV0dTT2IzVDdkeDBoOWc3RDZaVnFQMEhzMEl3d1VR?oc=5"
+      ]
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Quem tem apenas uma casa ou apartamento vai pagar novos Impostos?",
+        "url": "https://cenariomt.com.br/economia/aluguel-de-um-imovel-tera-novo-imposto-em-2027/",
+        "source": "CenárioMT",
+        "date": "2026-11-10",
+        "tag": "Declaração",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQY0EtX0tGeDNISVhpTFNCMHVkc05kMUY2X041bmZtSXFhOXByVzBXYnU0bXQzcFBlME5zWlp3WnR0OG11VG1ITG96QlFvc2VIaUxsQm4wVXJoM2ZuWlFpV0JNczFoMlVFTlBUWHJVMUU4b05BUnVoNmN0QXAwSm1WY2xGT0hDYTJI?oc=5"
+      ]
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
         "title": "Um imóvel alugado paga novo imposto em 2027? Entenda",
         "url": "https://gameoverdrive.com.br/um-imovel-alugado-novo-imposto-2027/",
         "source": "Game Overdrive",
@@ -337,44 +374,6 @@
         "https://news.google.com/rss/articles/CBMic0FVX3lxTE5FZ0t1NnUtN1FaYWlJb3JFT21OR1pORzlydHM4ZVR0T2hreF9UbWptNzNaOXhVYVp1RUdtemVwbHlyVkg0N2RzSWtEbUFJSDRRUXZnckpGM2NMOUN2Yl9GM1NJc0ZTamNYNGlwNGF5VXZJWFk?oc=5"
       ],
       "contexto": "Tópicos Quem tem uma casa ou apartamento alugado precisa se preparar para pagar um novo imposto em 2027? A dúvida ganhou força com a aproximação da próxima etapa da reforma tributária, que começa a alterar a cobrança de tributos sobre diferentes atividades no Brasil."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Cortes de impostos oferecem suporte a negócios familiares e pequenas empresas.",
-        "url": "https://www.vietnam.vn/pt/giam-thue-tiep-suc-cho-ho-kinh-doanh-va-doanh-nghiep-nho",
-        "source": "Vietnam.vn",
-        "date": "2026-11-08",
-        "tag": "Declaração",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMiigFBVV95cUxQX21pTjhIbXVXYkxhdURtMDBFWVBPM0tNekhhZ3I4amp4dWZaQVNKUG1Fc181VGotQUVZSlM4RHEyR3V4Z2x5Rzl4ZjM2bmtpZk5oQkJPX3RWMjlwVElsdlhvU1NNckRPcm5Oa0Q4eXJVXzV0LXBGeFdmWEtJWk1CS3g3a0pheEx1Z1E?oc=5"
-      ],
-      "contexto": "- Poderia , por favor, destacar os pontos principais do Decreto nº 398/2026? O Decreto nº 398/2026, em vigor a partir de 29 de outubro de 2026, estabelece normas detalhadas para a redução do imposto de renda de pessoas físicas e jurídicas, conforme estipulado na Resolução nº 43/2026 da Assembleia Nacional ."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Alíquotas do Imposto de Renda 2026: nova tabela e cálculos",
-        "url": "https://www.serasa.com.br/blog/aliquota/",
-        "source": "Serasa",
-        "date": "2026-11-06",
-        "tag": "Declaração",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1GSUl0VzJRUGI2ZTBpR2wyQ09FN3JYTWowYnFDUHk1SVpoNzM2dUk5cUM0alBwUlAybTV4NUxLN1hZX0FCa0MxaUFIc0dIX1NCVmc?oc=5"
-      ],
-      "contexto": "Tributação de offshores: como funciona e o que mudou com a lei Tributação de offshores: como funciona e o que mudou com a lei Data de publicação 6 de novembro de 202614 minutos de leitura Atualizado em: 20 de fevereiro de 2026 Categoria Educação financeiraTempo de leitura: 9 minutos Texto de: Time Serasa As alíquotas do Imposto de Renda tiveram mudanças..."
     },
     {
       "brandId": "mycapital",
@@ -420,37 +419,18 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Investidores de 60 anos ou mais crescem 358% na B3 nos últimos dez anos",
-        "url": "https://www.cnnbrasil.com.br/economia/money/macroeconomia/investidores-de-60-anos-ou-mais-crescem-358-na-b3-nos-ultimos-dez-anos/",
-        "source": "CNN Brasil",
-        "date": "2026-11-08",
+        "title": "Vale a pena investir em small caps em 2026? 3 ações promissoras",
+        "url": "https://www.nordinvestimentos.com.br/blog/small-caps-2026-o-que-esperar/",
+        "source": "Nord Investimentos",
+        "date": "2026-11-09",
         "tag": "Mercado",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPWWNTMzh5dzB2VFFJTUpzUTVMVzQ1OUVVTHM5MVlnWGY4MXpCRVN2MTdvaVJETzBXcUNtdVJ1WG95RW8wblF1cWFjUjZKQWMzZ2hrYUJhektIc2Q1a1h2SkRFa3dRWWVTNnJNUnhoVVdLTHcwRVNqN1BQMWoyM0trUmxsTDJwVDA1UTlhTXgzQXRzSHZJWk9OTl9YcFRZeS0xQngtT1FwRzJLVU1Caml3MTRYMF8wZVgydkRCU1ZxY3h0SC0tUFd6MQ?oc=5"
+        "https://news.google.com/rss/articles/CBMifEFVX3lxTFB4VEI1QkxmU2lQRGRlQnkxcFZZR3B5OEVjTGs5ZXRJUk5KMTNhR3M2R29TeV9NUXNXOGxhb2Z2SVlLVmZibWVHTHpFand1S1FSSWZNM0tsSnlRR2VoMEpOV29NcFAxTk1JSERKUzJUSHdEQUl1RW9WNGhweE3SAYIBQVVfeXFMTXptQzVERDd1dDJxSGM3SWhnbmNTaHVGME50eVNWR1Q5VmI0cExjWjRabldRcmJNLVdPdzAtc3hSNXVQX05oTGwtTEVCR180alNPRloxRXNENXM2NDVqai12T1d6THhpWGJxdFUya21YM1JIeVRyNGRpRGJOV0w4S29qZw?oc=5"
       ],
-      "contexto": "Investidores de 60 anos ou mais crescem 358% na B3 nos últimos dez anos Especialistas atribuem maior educação financeira e aumento no custo de vida para idosos como fatores relevantes de salto de 4,57 vezes desde 2016 O número de investidores com idade igual ou superior a 60 anos tem crescido expressivamente na B3, bolsa de valores brasileira. A partir de..."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Tudo sobre dividendos: como investir e calendário de pagamentos",
-        "url": "https://oespecialista.safra.com.br/calendario-dividendos-acoes/",
-        "source": "Safra",
-        "date": "2026-11-03",
-        "tag": "Mercado",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMicEFVX3lxTE5JajQ1aGp6bHBvSUU2S2pKbEhLNVkyQWFLTDRyQ0l4OUx5cjZHZVNuQjdqTy1jYUJIb3MxYllNY1dKaG9EVHlOVS04M284NzJ6Q2pEY2FKcmpySmF3TGRKU0tGTm0tNG9fWGNUN040Zl8?oc=5"
-      ],
-      "contexto": "Dividendos ou JCP já declarados e aprovados para as próximas semanas Acompanhe as principais datas e valores de proventos das empresas listadas na B3 e entenda como eles podem fazer parte da sua estratégia de investimento Os dividendos são uma das formas mais tradicionais de retorno para investidores em ações. Empresas listadas na Bolsa de Valores..."
+      "contexto": "Vale a pena investir em small caps em 2026? 3 ações promissoras Mesmo com a alta recente da Bolsa brasileira, muitas small caps ainda negociam a preços atrativos, e podem oferecer um potencial de valorização maior que as grandes empresas."
     }
   ],
   "avisos": [
