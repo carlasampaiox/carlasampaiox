@@ -6,12 +6,20 @@
       "termo": "imposto de renda",
       "subindo": [
         {
-          "busca": "cnis",
-          "valor": "+90%"
+          "busca": "lula declarou o triplex no imposto de renda",
+          "valor": "Breakout"
+        },
+        {
+          "busca": "consultar imposto de renda pelo cpf",
+          "valor": "+300%"
+        },
+        {
+          "busca": "como saber se preciso declarar imposto de renda",
+          "valor": "+110%"
         },
         {
           "busca": "meu imposto de renda, receita federal",
-          "valor": "+80%"
+          "valor": "+100%"
         },
         {
           "busca": "imposto de renda 2027",
@@ -19,22 +27,14 @@
         },
         {
           "busca": "tabela imposto de renda 2027",
-          "valor": "+70%"
-        },
-        {
-          "busca": "imposto de renda pessoa fisica 2026",
-          "valor": "+60%"
-        },
-        {
-          "busca": "malha fina imposto de renda 2026",
           "valor": "+60%"
         },
         {
           "busca": "malha fina imposto de renda",
-          "valor": "+60%"
+          "valor": "+50%"
         },
         {
-          "busca": "ctps digital",
+          "busca": "meu imposto de renda gov",
           "valor": "+50%"
         }
       ],
@@ -44,72 +44,80 @@
           "valor": 100
         },
         {
-          "busca": "meu imposto de renda",
-          "valor": 75
+          "busca": "declaração de imposto de renda",
+          "valor": 74
         },
         {
-          "busca": "declaração de imposto de renda",
-          "valor": 75
+          "busca": "meu imposto de renda",
+          "valor": 72
         },
         {
           "busca": "declaração imposto de renda",
-          "valor": 73
+          "valor": 72
         },
         {
-          "busca": "restituição de imposto de renda",
-          "valor": 53
-        },
-        {
-          "busca": "restituição imposto de renda",
-          "valor": 53
-        },
-        {
-          "busca": "declarar imposto de renda",
+          "busca": "imposto de renda restituição",
           "valor": 51
         },
         {
-          "busca": "isenção de imposto de renda",
-          "valor": 38
+          "busca": "restituição de imposto de renda",
+          "valor": 50
+        },
+        {
+          "busca": "declarar imposto de renda",
+          "valor": 48
+        },
+        {
+          "busca": "isenção imposto de renda",
+          "valor": 37
         }
       ],
       "interesse": [
         {
-          "data": "2026-11-04T00:00:00+00:00",
-          "valor": 77
-        },
-        {
           "data": "2026-11-05T00:00:00+00:00",
-          "valor": 74
+          "valor": 71
         },
         {
           "data": "2026-11-06T00:00:00+00:00",
-          "valor": 72
+          "valor": 74
         },
         {
           "data": "2026-11-07T00:00:00+00:00",
-          "valor": 41
+          "valor": 43
         },
         {
           "data": "2026-11-08T00:00:00+00:00",
-          "valor": 33
+          "valor": 34
         },
         {
           "data": "2026-11-09T00:00:00+00:00",
-          "valor": 74
+          "valor": 73
         },
         {
           "data": "2026-11-10T00:00:00+00:00",
-          "valor": 74
+          "valor": 72
         },
         {
           "data": "2026-11-11T00:00:00+00:00",
-          "valor": 61
+          "valor": 69
+        },
+        {
+          "data": "2026-11-12T00:00:00+00:00",
+          "valor": 70
         }
       ]
     },
     {
       "termo": "darf",
       "subindo": [
+        {
+          "busca": "emissão darf pgfn",
+          "valor": "Breakout"
+        },
+        {
+          "busca": "sicalcweb programa para calculo e impressao de darf on line",
+          "valor": "Breakout"
+        },
         {
           "busca": "emitir darf para pagamento de tributos federais",
           "valor": "Breakout"
@@ -119,28 +127,20 @@
           "valor": "Breakout"
         },
         {
-          "busca": "oq é darf",
+          "busca": "emissão de darf pessoa física",
+          "valor": "+4,800%"
+        },
+        {
+          "busca": "darf procuradoria",
           "valor": "+250%"
         },
         {
-          "busca": "darf 2362",
-          "valor": "+160%"
-        },
-        {
-          "busca": "emissão darf pgfn",
-          "valor": "+150%"
-        },
-        {
-          "busca": "darf mei 2026",
-          "valor": "+130%"
-        },
-        {
-          "busca": "emissao darf pgfn",
-          "valor": "+120%"
-        },
-        {
           "busca": "darf online sicalc",
-          "valor": "+110%"
+          "valor": "+200%"
+        },
+        {
+          "busca": "darf bb",
+          "valor": "+130%"
         }
       ],
       "top": [
@@ -150,41 +150,37 @@
         },
         {
           "busca": "pagar darf",
-          "valor": 95
+          "valor": 90
         },
         {
-          "busca": "imposto de renda darf",
-          "valor": 81
+          "busca": "darf imposto de renda",
+          "valor": 83
         },
         {
           "busca": "codigo darf",
-          "valor": 66
+          "valor": 67
         },
         {
           "busca": "receita federal darf",
           "valor": 65
         },
         {
+          "busca": "ecac darf",
+          "valor": 63
+        },
+        {
           "busca": "pagamento darf",
           "valor": 58
         },
         {
-          "busca": "darf mei",
+          "busca": "mei darf",
           "valor": 56
-        },
-        {
-          "busca": "darf online",
-          "valor": 52
         }
       ],
       "interesse": [
         {
-          "data": "2026-11-04T00:00:00+00:00",
-          "valor": 49
-        },
-        {
           "data": "2026-11-05T00:00:00+00:00",
-          "valor": 46
+          "valor": 47
         },
         {
           "data": "2026-11-06T00:00:00+00:00",
@@ -200,15 +196,19 @@
         },
         {
           "data": "2026-11-09T00:00:00+00:00",
-          "valor": 47
+          "valor": 46
         },
         {
           "data": "2026-11-10T00:00:00+00:00",
-          "valor": 49
+          "valor": 50
         },
         {
           "data": "2026-11-11T00:00:00+00:00",
-          "valor": 38
+          "valor": 44
+        },
+        {
+          "data": "2026-11-12T00:00:00+00:00",
+          "valor": 40
         }
       ]
     },
@@ -216,36 +216,36 @@
       "termo": "dividendos",
       "subindo": [
         {
-          "busca": "bbdc3",
-          "valor": "+140%"
+          "busca": "cury3",
+          "valor": "+200%"
         },
         {
-          "busca": "btlg11 dividendos mensais",
-          "valor": "+120%"
+          "busca": "coin11 dividendos",
+          "valor": "+200%"
+        },
+        {
+          "busca": "banco do brasil ações dividendos",
+          "valor": "+180%"
+        },
+        {
+          "busca": "quais acoes pagam dividendos todo mes",
+          "valor": "+130%"
+        },
+        {
+          "busca": "bbdc3",
+          "valor": "+110%"
         },
         {
           "busca": "bbdc4 dividendos",
           "valor": "+110%"
         },
         {
-          "busca": "banco do brasil ações dividendos",
-          "valor": "+100%"
-        },
-        {
-          "busca": "cury3",
-          "valor": "+90%"
-        },
-        {
-          "busca": "bbas3 paga dividendos",
-          "valor": "+90%"
-        },
-        {
-          "busca": "ações que pagam dividendos todos os meses",
-          "valor": "+80%"
+          "busca": "ibovespa hoje",
+          "valor": "+110%"
         },
         {
           "busca": "fundos imobiliários que pagam dividendos mensais",
-          "valor": "+80%"
+          "valor": "+100%"
         }
       ],
       "top": [
@@ -259,41 +259,37 @@
         },
         {
           "busca": "dividendos petrobras",
-          "valor": 85
+          "valor": 80
         },
         {
           "busca": "o que é dividendos",
-          "valor": 83
+          "valor": 80
         },
         {
-          "busca": "dividendos banco do brasil",
-          "valor": 77
-        },
-        {
-          "busca": "mxrf11",
-          "valor": 75
+          "busca": "banco do brasil dividendos",
+          "valor": 76
         },
         {
           "busca": "mxrf11 dividendos",
-          "valor": 73
+          "valor": 71
+        },
+        {
+          "busca": "mxrf11",
+          "valor": 70
         },
         {
           "busca": "petr4 dividendos",
-          "valor": 71
+          "valor": 70
         }
       ],
       "interesse": [
         {
-          "data": "2026-11-04T00:00:00+00:00",
-          "valor": 67
-        },
-        {
           "data": "2026-11-05T00:00:00+00:00",
-          "valor": 64
+          "valor": 66
         },
         {
           "data": "2026-11-06T00:00:00+00:00",
-          "valor": 60
+          "valor": 56
         },
         {
           "data": "2026-11-07T00:00:00+00:00",
@@ -305,15 +301,19 @@
         },
         {
           "data": "2026-11-09T00:00:00+00:00",
-          "valor": 65
+          "valor": 60
         },
         {
           "data": "2026-11-10T00:00:00+00:00",
-          "valor": 67
+          "valor": 70
         },
         {
           "data": "2026-11-11T00:00:00+00:00",
-          "valor": 76
+          "valor": 74
+        },
+        {
+          "data": "2026-11-12T00:00:00+00:00",
+          "valor": 74
         }
       ]
     },
@@ -323,41 +323,47 @@
       "top": [],
       "interesse": [
         {
-          "data": "2026-11-04T00:00:00+00:00",
-          "valor": 36
-        },
-        {
           "data": "2026-11-05T00:00:00+00:00",
-          "valor": 30
+          "valor": 37
         },
         {
           "data": "2026-11-06T00:00:00+00:00",
-          "valor": 39
+          "valor": 38
         },
         {
           "data": "2026-11-07T00:00:00+00:00",
-          "valor": 25
+          "valor": 32
         },
         {
           "data": "2026-11-08T00:00:00+00:00",
-          "valor": 29
+          "valor": 36
         },
         {
           "data": "2026-11-09T00:00:00+00:00",
-          "valor": 44
+          "valor": 54
         },
         {
           "data": "2026-11-10T00:00:00+00:00",
-          "valor": 42
+          "valor": 53
         },
         {
           "data": "2026-11-11T00:00:00+00:00",
-          "valor": 34
+          "valor": 48
+        },
+        {
+          "data": "2026-11-12T00:00:00+00:00",
+          "valor": 50
         }
       ]
     }
   ],
-  "emAlta": [],
+  "emAlta": [
+    {
+      "assunto": "ministério das comunicações",
+      "trafego": "200+",
+      "publicado": "2026-11-12 08:30:00-08:00"
+    }
+  ],
   "avisos": [],
-  "geradoEm": "2026-11-11T17:04:55+00:00"
+  "geradoEm": "2026-11-12T17:32:45+00:00"
 }
