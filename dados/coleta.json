@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-15T16:17:21+00:00",
+  "geradoEm": "2026-11-16T19:31:20+00:00",
   "fonte": "coletor (GitHub Actions)",
   "itens": [
     {
@@ -16,27 +16,8 @@
         "title": "Declaração Automática IR de investimentos na bolsa | Black do Grana",
         "url": "https://www.youtube.com/watch?v=UVLxJyFm0sE",
         "date": "2026-11-06",
-        "signal": "89.934 visualizações, 7 curtidas · 113,7x a mediana do canal · alcance possivelmente pago",
-        "summary": "Vídeo publicado em 06/11, com 89.934 visualizações, 7 curtidas.",
-        "origem": "coletor"
-      }
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "compnews",
-      "arquivo": "74bcfe367de33726.jpg",
-      "mediaType": "image",
-      "doc": {
-        "kind": "conteudo",
-        "competitorId": "bs2fj7391bo4wovt5nrw",
-        "competitorName": "Grana Capital",
-        "channel": "youtube",
-        "format": "Shorts",
-        "title": "IR dos seus investimentos por menos de R$ 20/mês 💸 #Shorts",
-        "url": "https://www.youtube.com/watch?v=LxdeJG370Qk",
-        "date": "2026-11-11",
-        "signal": "9.135 visualizações, 16 curtidas · 11,5x a mediana do canal",
-        "summary": "Shorts publicado em 11/11, com 9.135 visualizações, 16 curtidas.",
+        "signal": "106.615 visualizações, 7 curtidas · 87,0x a mediana do canal · alcance possivelmente pago",
+        "summary": "Vídeo publicado em 06/11, com 106.615 visualizações, 7 curtidas.",
         "origem": "coletor"
       }
     },
@@ -54,8 +35,27 @@
         "title": "Descobriu um DARF atrasado na declaração? 😱",
         "url": "https://www.youtube.com/watch?v=-1Mjb1M7vpU",
         "date": "2026-11-10",
-        "signal": "9.118 visualizações, 25 curtidas · 11,5x a mediana do canal",
-        "summary": "Shorts publicado em 10/11, com 9.118 visualizações, 25 curtidas.",
+        "signal": "14.036 visualizações, 30 curtidas · 11,4x a mediana do canal · alcance possivelmente pago",
+        "summary": "Shorts publicado em 10/11, com 14.036 visualizações, 30 curtidas.",
+        "origem": "coletor"
+      }
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "compnews",
+      "arquivo": "74bcfe367de33726.jpg",
+      "mediaType": "image",
+      "doc": {
+        "kind": "conteudo",
+        "competitorId": "bs2fj7391bo4wovt5nrw",
+        "competitorName": "Grana Capital",
+        "channel": "youtube",
+        "format": "Shorts",
+        "title": "IR dos seus investimentos por menos de R$ 20/mês 💸 #Shorts",
+        "url": "https://www.youtube.com/watch?v=LxdeJG370Qk",
+        "date": "2026-11-11",
+        "signal": "13.188 visualizações, 25 curtidas · 10,8x a mediana do canal · alcance possivelmente pago",
+        "summary": "Shorts publicado em 11/11, com 13.188 visualizações, 25 curtidas.",
         "origem": "coletor"
       }
     },
@@ -84,18 +84,17 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Como tributar debêntures incentivadas sem acabar com a isenção de Imposto de Renda para pessoa física? Sparta sugere alternativa",
-        "url": "https://www.seudinheiro.com/2026/renda-fixa/como-tributar-debentures-incentivadas-sem-acabar-com-isencao-de-imposto-de-renda-para-pessoa-fisica-sparta-sugere-alternativa-mlim/",
-        "source": "Seu Dinheiro",
-        "date": "2026-11-09",
+        "title": "PT propõe IR sobre LCI e LCA de 7,5% e taxar dividendos em 15%; veja quanto você perderia",
+        "url": "https://melhorinvestimento.net/noticias/ir-sobre-lci-e-lca-dividendos-projeto-pt",
+        "source": "melhorinvestimento.net",
+        "date": "2026-11-16",
         "tag": "IR",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMihgJBVV95cUxQZ2pCVGVfY3Z3RlB0bnhrRmc4ZzhwU1J6Xzc0c0hPUEx3U3p4WHRobFlRdW5QdHUzTFBmbEhDcnBjTlhSVlE2Y05LWVJzSVBoUHJJTmU0TFhqOW1aZHJlWGlUN0RsczJjeGw3Vmpaa2JsMW9GdU5IVWQtMEFiLXF2QWdtSkJURnJvREZQc0Q2cEJacnQtams4QjY4WDYyWWFBSWFsWWN6Wmp5SGxYNGV3V1BLemxzSDVXYlI4Wk5XLTlMSTc2R243MUpjZHV5SFNYWDdmR245SUtXNklMMFg4U01OQlFJSWtNYXd4YlNiYkd5Rm9nZFdQR0tTSi1La1VXVTR5dTln?oc=5"
-      ],
-      "contexto": "Como tributar debêntures incentivadas sem acabar com a isenção de Imposto de Renda para pessoa física? Sparta sugere alternativa Após discussões sobre possível cobrança de IOF sobre aplicações isentas, gestora sugere concentrar a tributação nos investidores mais ricos A possibilidade de novas cobranças sobre investimentos hoje isentos de imposto de renda..."
+        "https://news.google.com/rss/articles/CBMihwFBVV95cUxPNkR0ZEhZTFA3UDRTMF9oQ2lHTmtha21JYWNfN1RpVjRLQkJoeEVJeHlnU3JJT25CYk5MOXpBNlNKX1JPUWh0Y0paRkw0Zm1taUEtRHBzWXBsbzI3aHNkbF9rbnB6OXM5bFJKRUZrY3ZsMVB0VV9QRGJKVHBjbkJiR09rOGZvblk?oc=5"
+      ]
     },
     {
       "brandId": "mycapital",
@@ -122,25 +121,6 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Taxação de dividendos volta à pauta: PT protocola projetos para tributar lucros, proventos e grandes fortunas",
-        "url": "https://www.seudinheiro.com/2026/economia/taxacao-de-dividendos-volta-a-pauta-pt-protocola-projetos-para-tributar-lucros-proventos-e-grandes-fortunas-davs/",
-        "source": "Seu Dinheiro",
-        "date": "2026-11-14",
-        "tag": "IR",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOOGJZaU1oekx4REttWVJZdXdOQ0gyMXBZdXBzWmxYVXIyb1JINnZQZHllempHZ0huS29LYzY1OG9YeHlzUWFyRlBfNmtTRVZnYlZBSTN5YlZPNmdPai11ZjN2NjktZ2RlTzF4RGhYbE9PVmZCR1FHQ0tkcWFiRnZFbXBpendVNGpqSWFwZFplN09ObDl0NWdOOVhYdDFaUVMtTVBacm5uaEJOa1ZFamU1MVBya1pPWFlwbXJ1cy1jbGJtZ01EMlpyYm5IbUZVeVhIaFBkeUlvVFUySjJkZjlVZkdOdzNrYXFvYk9z?oc=5"
-      ],
-      "contexto": "Taxação de dividendos volta à pauta: PT protocola projetos para tributar lucros, proventos e grandes fortunas Com a aprovação da Lei nº 15.270/2025, a tributação de dividendos já havia entrado na mira da Receita Federal. Porém, caso o projeto do PT seja aprovado, as regras mudam; entenda Enquanto os investidores ainda digerem o pacote de ajuste fiscal do..."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
         "title": "PT propõe tributar grandes fortunas e investimentos isentos",
         "url": "https://www.tribunapr.com.br/noticias/economia/bancada-do-pt-propoe-tributar-grandes-fortunas-e-investimentos-isentos/",
         "source": "Tribuna do Paraná",
@@ -160,18 +140,74 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "PT propõe impostos sobre grandes fortunas, dividendos e LCIs na Câmara",
-        "url": "https://www.gazetadopovo.com.br/economia/bancada-do-pt-protocola-projetos-para-aumentar-impostos-sobre-renda-e-patrimonio/",
-        "source": "Gazeta do Povo",
-        "date": "2026-11-14",
+        "title": "Compensação de prejuízos pode reduzir IR de investimentos no exterior",
+        "url": "https://euqueroinvestir.com/investimento-no-exterior/compensacao-prejuizos-exterior-ir",
+        "source": "EuQueroInvestir",
+        "date": "2026-11-10",
         "tag": "IR",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMivwFBVV95cUxQQmVTU1dtc2dCak4tT0pkWVRFNnVnUG1JSXgwQ0pucWRqb3ZPYVJ2SC1ZWElVblZ2Q19tbUd6WER1OUV0LV8wUGFWMEIwTXAtZDRsVG1GREllMzdGc2tiR2xIbkZieGstaktjVVFKZ1Bmc24tU3ViVk5QYnhsMDc3NkFUbS1BWDlHdG1xMVprLTVkVXl4ZnV2R1dPdlI2MDFMYVE1QXY4YkdqckRIdU1LcHR6aUNTTV9kaXhrLTQ5Yw?oc=5"
+        "https://news.google.com/rss/articles/CBMijwFBVV95cUxPSVFjUHVERUxvdlBYeTc1TG9hRG9OVVZRTFB6R2x6UjBJZVAtWkw0bWwzQjFGMEdHN2gzU1FGNVNpa19uYWVnUkQ0c1VDSktjWlA3QVZZek8wZDlZNW9hc05Gd0I0cWZEMDZFUHQtcjl1RDRBUV9hVnpxRnhxQ2VPUno2M2NTeE9DUHk4SFBiSQ?oc=5"
       ],
-      "contexto": "A bancada do PT na Câmara dos Deputados protocolou, nesta sexta-feira (13), quatro projetos de lei que visam ampliar a arrecadação federal por meio de novas tributações. As propostas incluem a criação de um imposto sobre grandes fortunas e o fim de isenções para investimentos financeiros e dividendos."
+      "contexto": "A compensação de prejuízos pode reduzir o Imposto de Renda de pessoas físicas de brasileiros que investem no exterior. Com a aproximação do fim de 2026, esse é um dos pontos a revisar na carteira, segundo Tomás Roque, analista sênior de alocação e inteligência da Avenue."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "PT protocola projeto para taxar lucros e dividendos em 15%, além de imposto sobre grandes fortunas",
+        "url": "https://www.moneytimes.com.br/pt-protocola-projeto-para-taxar-lucros-e-dividendos-em-15-alem-de-imposto-sobre-grandes-fortunas-pads/",
+        "source": "Money Times",
+        "date": "2026-11-16",
+        "tag": "IR",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMizAFBVV95cUxPcl9vYldpYzNCalJhNzR1M2RRdDZjNG1GbHlWbkw3bktNZFU1MkZFVFQ3MHpzZVR3WDNvM0Z6S1NJTmM0YnoxWS1GNk1SUkJETzl6VEctV1dfZG1WNEwtSk81cnBnODl2S29ZcUFZV0wzWENabkJaZXNQX2ZGaUlFMXlLV2ZCT05KQ0dJbmxSeFJlc3k2d3hKdGpUMDRoUjBLSTh1TW1IVzdEMUphclN5WTdybTdrNUlxYVBDdmh6YnNRWXRtWnA1a2ZBRTA?oc=5"
+      ],
+      "contexto": "PT protocola projeto para taxar lucros e dividendos em 15%, além de imposto sobre grandes fortunas A bancada do Partido dos Trabalhadores (PT) na Câmara dos Deputados protocolou na sexta-feira (13) um pacote de quatro projetos de lei que aumenta a tributação sobre pessoas de alta renda e instrumentos financeiros atualmente beneficiados por incentivos..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Bancada do PT protocola pacote de quatro projetos para tributar grandes fortunas, dividendos e aplicações hoje isentas",
+        "url": "https://dfmobilidade.com.br/brasil/bancada-do-pt-protocola-pacote-de-quatro-projetos-para-tributar-grandes-fortunas-dividendos-e-aplicacoes-hoje-isentas/",
+        "source": "dfmobilidade.com.br",
+        "date": "2026-11-14",
+        "tag": "Dividendos",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQWmJBWWFmX2NwbnRIX0xPaG9VYWNVTDdYS01CYWduM1dOSGlIYk9LMW43VW8xT2RQYWQ5RWdLckVmUllaZkJZeG9fRm4wb3ZBdlhwcGxRaHUwbU5MdWwtUGFBN2xaekoxd3RyNUxnajBEQnhYWktLMmpKQU9NYWhRMy1YU3FQcEpHTWdLN1dXZHJKYkhwenMteUtWZHphbkcyVnhsMlpwSjEtc2RUZF9PUFFQWUFYSlEtV3JCRS1CbmcwdHQ3OUxrOTM4Umg5UktMUnZiNzNiNUhyMUpER0VlS0hVVGluakU5?oc=5"
+      ],
+      "contexto": "Propostas apresentadas na Câmara dos Deputados miram a ampliação da arrecadação federal para financiar programas sociais, mas enfrentam críticas de analistas e setores produtivos pelo possível impacto sobre pequenos investidores e empresários BRASÍLIA, A bancada do Partido dos Trabalhadores (PT) na Câmara dos Deputados protocolou, nesta sexta-feira (13),..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Dividendos: PT propõe IR de 15% e imposto sobre grandes fortunas",
+        "url": "https://www.ativovirtual.com.br/avnews/artigos/dividendos-pt-propoe-ir-de-15-e-imposto-sobre-grandes-fortunas",
+        "source": "ativovirtual.com.br",
+        "date": "2026-11-14",
+        "tag": "Dividendos",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMirgFBVV95cUxPbzRHNHVYN19ZWTB3YXBRLVVGUlpYTEJKU2dheWh4SkI0Mkh6NkpwaWh4NjdSTjh6eG4wa0pGNFN1M0J5OFJ4b0FENXFXR1E2RWpkaG1aLWRNcUZDU2w2WTJhZFc3VllrZ09pUzBFcUJVTmtZb1ZPSFUxTzlkY1VFUkZ2cExjUU1hRWREZkh3dFpkOVFNc3VVUU9sOW9PMnRKN284QVNCRFNHN3VFWHc?oc=5"
+      ]
     },
     {
       "brandId": "mycapital",
@@ -198,6 +234,25 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
+        "title": "Taxação de dividendos volta à pauta: PT protocola projetos para tributar lucros, proventos e grandes fortunas",
+        "url": "https://www.seudinheiro.com/2026/economia/taxacao-de-dividendos-volta-a-pauta-pt-protocola-projetos-para-tributar-lucros-proventos-e-grandes-fortunas-davs/",
+        "source": "Seu Dinheiro",
+        "date": "2026-11-14",
+        "tag": "Dividendos",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOOGJZaU1oekx4REttWVJZdXdOQ0gyMXBZdXBzWmxYVXIyb1JINnZQZHllempHZ0huS29LYzY1OG9YeHlzUWFyRlBfNmtTRVZnYlZBSTN5YlZPNmdPai11ZjN2NjktZ2RlTzF4RGhYbE9PVmZCR1FHQ0tkcWFiRnZFbXBpendVNGpqSWFwZFplN09ObDl0NWdOOVhYdDFaUVMtTVBacm5uaEJOa1ZFamU1MVBya1pPWFlwbXJ1cy1jbGJtZ01EMlpyYm5IbUZVeVhIaFBkeUlvVFUySjJkZjlVZkdOdzNrYXFvYk9z?oc=5"
+      ],
+      "contexto": "Taxação de dividendos volta à pauta: PT protocola projetos para tributar lucros, proventos e grandes fortunas Com a aprovação da Lei nº 15.270/2025, a tributação de dividendos já havia entrado na mira da Receita Federal. Porém, caso o projeto do PT seja aprovado, as regras mudam; entenda Enquanto os investidores ainda digerem o pacote de ajuste fiscal do..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
         "title": "Bancada do PT protocola projetos para ampliar tributação sobre grandes patrimônios, investimentos e dividendos",
         "url": "https://portalvv8.com.br/noticia/85597/bancada-do-pt-protocola-projetos-para-ampliar-tributacao-sobre-grandes-patrimonios-investimentos-e-dividendos",
         "source": "Portal VV8",
@@ -216,18 +271,18 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "PT protocola pacote de quatro projetos para criar novos impostos sobre dividendos, LCI, LCA e grandes fortunas",
-        "url": "https://guiadoinvestidor.com.br/economia/pt-protocola-pacote-de-quatro-projetos-para-criar-novos-impostos-sobre-dividendos-lci-lca-e-grandes-fortunas/",
-        "source": "Guia do Investidor",
-        "date": "2026-11-14",
+        "title": "Especialista em direito tributário alerta para alcance de proposta que prevê 15% sobre dividendos",
+        "url": "https://berlinda.com.br/destaques/especialista-em-direito-tributario-alerta-para-alcance-de-proposta-que-preve-15-sobre-dividendos",
+        "source": "Berlinda News",
+        "date": "2026-11-16",
         "tag": "Dividendos",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQS01Jd1NzaklfeUEzR3VVcGFUcTVWM0NSWW44a1ZXM0dka1UzcDRoUUwzdmJyM2NGY3VzY0JoMnktZWFMWkpObGRxN1hGWm9rYUkxbkZTVVU5b1R4SWxhWVh2SDM3bVBGYVlLendBR2xhanVkaDRZYUxTOEtjU2c3WXpDYWZycXptR2ZNS2JDS21tdHN3aU1oRFlSX3JpblRWSjgwWUw1RUFOMzhWdlpONWhRanA2NUpHZldzVHpnc1RfQ1NuRGNPVFZ1THhxdmlyRGt2WmdGbWFlRWdULVVXUmt6Wm8?oc=5"
+        "https://news.google.com/rss/articles/CBMiygFBVV95cUxQNzJkOVl2OEkycGY5MWFaMXNEUUlBVlpKTFdSNW9Sa3RWY2F2VS1tVlhocnZkTlVnb1lva1A3SVdzVDJiR2J1TkV5elp6bE5sRFFNbEtFcmdXTHdiQmxkRENiT21MUTZXa2NVQWxKWnd5MXNRYjB6Ny1sT0lLem84WnlabTJVQWhJZE5GY3hXZnpXQ2FiUjRLeDJEeEczcU5kZVZlaFloY2t0NnVrYkVselh1TjhpUE5QanFaRXJaM0RVd3JuUmxDczBn?oc=5"
       ],
-      "contexto": "A bancada do PT na Câmara dos Deputados protocolou nesta sexta-feira (13) um pacote de quatro projetos de lei que propõe elevar a tributação sobre lucros, dividendos, investimentos financeiros isentos e patrimônios de alta renda. A iniciativa ocorre no mesmo momento em que a equipe econômica do governo tenta avançar com um projeto de ajuste fiscal no..."
+      "contexto": "A proposta de cobrar 15% de Imposto de Renda na fonte sobre lucros e dividendos, independentemente do valor recebido, merece atenção de empresários e profissionais que trabalham por meio de pessoas jurídicas. O alerta foi feito pela advogada e especialista em direito tributário Daniele Altenhofen, no Tá na Hora da Berlinda, nesta segunda-feira (16)."
     },
     {
       "brandId": "mycapital",
@@ -235,64 +290,8 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Equivalência patrimonial, subvenções para investimento e tributação dos dividendos",
-        "url": "https://conjur.com.br/2026-nov-11/equivalencia-patrimonial-subvencoes-para-investimento-e-tributacao-dos-dividendos/",
-        "source": "Consultor Jurídico",
-        "date": "2026-11-11",
-        "tag": "Dividendos",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMitwFBVV95cUxQS2hNWUdQcnFTeWFia2RpLVA1ZEpGLUZIa19zbTkzNjJoSmFxVmdfRTd3ZUpibTBvb0txSEd1bldtdVpSX1JMTzhmazBSYzhWa1RvSVBXRC1SRnFkUTRaUTVTaUpQclJlY0xCeTBYU21oQVNtTUtsVUNWT2JiTkJYeVRYOWJDckVWN0RMYmtmQWZiOURfN2tpNm0xUTJwZ3F5T0hvUGJMaDN4dDAwRW93MTRqZUNqdVU?oc=5"
-      ],
-      "contexto": "Nesta semana, trataremos de controvérsia jurídico-contábil envolvendo o método de equivalência patrimonial (MEP) e os limites à distribuição de lucros quando uma sociedade investida reconhece subvenções governamentais para investimento. A questão ganha especial interesse quando a beneficiária mantém os recursos e a correspondente reserva em seu patrimônio,..."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "PT protocola projeto para taxar lucros e dividendos em 15%, além de imposto sobre grandes fortunas",
-        "url": "https://www.moneytimes.com.br/pt-protocola-projeto-para-taxar-lucros-e-dividendos-em-15-alem-de-imposto-sobre-grandes-fortunas-pads/",
-        "source": "Money Times",
-        "date": "2026-11-14",
-        "tag": "Dividendos",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMizAFBVV95cUxPcl9vYldpYzNCalJhNzR1M2RRdDZjNG1GbHlWbkw3bktNZFU1MkZFVFQ3MHpzZVR3WDNvM0Z6S1NJTmM0YnoxWS1GNk1SUkJETzl6VEctV1dfZG1WNEwtSk81cnBnODl2S29ZcUFZV0wzWENabkJaZXNQX2ZGaUlFMXlLV2ZCT05KQ0dJbmxSeFJlc3k2d3hKdGpUMDRoUjBLSTh1TW1IVzdEMUphclN5WTdybTdrNUlxYVBDdmh6YnNRWXRtWnA1a2ZBRTA?oc=5"
-      ],
-      "contexto": "PT protocola projeto para taxar lucros e dividendos em 15%, além de imposto sobre grandes fortunas A bancada do Partido dos Trabalhadores (PT) na Câmara dos Deputados protocolou na sexta-feira (13) um pacote de quatro projetos de lei que aumenta a tributação sobre pessoas de alta renda e instrumentos financeiros atualmente beneficiados por incentivos..."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "PT apresenta pacote de projetos para taxar super-ricos, dividendos e investimentos hoje isentos",
-        "url": "https://acessepolitica.com.br/noticia/184049/pt-apresenta-pacote-de-projetos-para-taxar-super-ricos-dividendos-e-investimentos-hoje-isentos",
-        "source": "Acesse Política",
-        "date": "2026-11-14",
-        "tag": "Dividendos",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPaVRhbHYwVkFRektKME54VFFUVGxGVTcxbzh3TUpfaVZnVFk4SlhFUVJKRDFBMUVLM0xMYkxxaTRRaWZFZHZNbzhNQTFGVUhUbnZLWDlqa19lVE9Uc3d3OTVZTXFOX0ZnTmtuX3FJRkRkSm94VG80QWlQaXhlZDNUU1VEdFFJN2wtWmRMSHU1LWl1OXBGZng5U2xOS01PTVh1eWI5emdIaVRNOUQ4OHVOODlUMW5hYmM1dTZ0TURFTVNtcld2ZDJNaENTSW55akhST1d2MHlR?oc=5"
-      ]
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Conta de luz sem imposto: saiba qual o valor do cashback da reforma tributária para a baixa renda",
-        "url": "https://www.mixvale.com.br/2026/11/15/conta-de-luz-sem-imposto-saiba-qual-o-valor-do-cashback-da-reforma-tributaria-para-a-baixa-renda/",
+        "title": "Restituição IRPF 2027: lotes, prazos e como consultar o pagamento pela Receita Federal",
+        "url": "https://www.mixvale.com.br/2026/11/15/restituicao-irpf-2027-lotes-prazos-e-como-consultar-o-pagamento-pela/",
         "source": "Mix Vale",
         "date": "2026-11-15",
         "tag": "Declaração",
@@ -300,8 +299,47 @@
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQNU45ZEFrVmt5R1c1Yk4wSzdNcDJZcG80WFdCTmpWWEUzVGMtVWdKVjFxWWkyZ2ZUV1VNU1VfQzNxTHV0TjNwNTlyQVRfQUxqTkdFdEtxZ3IxUW1CRzgtMW9MZWxEOVBGLTFEQnFtaWNHM05lRGdGX2VVZTNBQXVKSXBHdkJQN1Q2cVlJRHhqbHB5SFlCa1I4Ul9McEVhUGZCRzBHeDZrNzFIOERQcV9ySlhpUFdHV29aV1V1dmhrRnpuUUhNRWRuT3hjeEthOE1F?oc=5"
-      ]
+        "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPdVVXV0ptWEM0QjRlTlBEOU1qcktqV0VTYnhqUTljMTRLQ2JTR1lHSjRCZkVLWWtWMmhyYzEyNGtJbUp4UVZTcDZPS01YVWREMm5OdUhtTUdtZ2hmZGlzSGZoWmNxc2RrbWlRSUFaY3VYTEp4eWN4cFc0bTlkR05EVEpELU5Ea2x4Mi1VNkRiV2xzYTBsTlJmT3BRQnJQbjVOak1UZGVaUmt5Tlk?oc=5"
+      ],
+      "contexto": "Restituição IRPF 2027: lotes, prazos e como consultar o pagamento pela Receita Federal A Receita Federal pagou R$ 41 bilhões em restituições do Imposto de Renda da Pessoa Física (IRPF) a 25,9 milhões de contribuintes em 2026. O balanço oficial, divulgado em Brasília, aponta recorde tanto no volume devolvido quanto na velocidade de liberação do dinheiro."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Novas regras da isenção do IR terão efeito prático em 2027: veja o que muda",
+        "url": "https://concursosnobrasil.com/noticia/2026/11/16/novas-regras-da-isencao-do-ir-terao-efeito-pratico-em-2027-veja-o-que-muda/",
+        "source": "Concursos no Brasil",
+        "date": "2026-11-16",
+        "tag": "Declaração",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNbDZZbmV6a18zTzNVNUdCbU9jTlotekRrTVk0ZEJVVkhkR1dYNkhUUkVhYnZtODJsYjBwZHBuT3I0V1JuQ3d6UC1mbW9NTkUwZW5pQ3pBWlk5RkxDTjJGSVN5dTM3SnlDQS0xMnN1aHhxaTlxd09GZ1RQSDFkLWw2XzVvUEEwNV9HLXJISFk0UF9tbjE0YkF6Q3BFMGxjY1llay1pUDBuWkVwNzZaYWQxRmxfRW41Y085c1dXWUtibVV3Zw?oc=5"
+      ],
+      "contexto": "O ano de 2027 se aproxima e, com ele, chega o momento em que milhões de brasileiros vão sentir, na prática, o resultado da reforma do Imposto de Renda aprovada no fim de novembro de 2025. Embora as novas regras já tenham começado a alterar os descontos mensais no salário ao longo dos últimos meses, é na próxima declaração anual à Receita Federal que o..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Isenção de R$ 5 mil esconde \"pegadinha\" no Imposto de Renda 2027 para quem tem dois empregos; entenda",
+        "url": "https://www.nsctotal.com.br/colunista/antonio-noboa/quem-tem-duas-fontes-de-renda-pode-dever-imposto-de-renda-em-2027-mesmo-sem-desconto-no-salario-durante-o-ano/",
+        "source": "NSC Total",
+        "date": "2026-11-16",
+        "tag": "Declaração",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMi9AFBVV95cUxPS2F2bDd1d2hfbFAzejJNMXlQX3J3TlZpNDZwWmgzdk4tOE1IajJiNWFwbWNGUlYxSUE5N25iMlVPQXYzd1E4OUtfb2RSLWNlVjliTjQ1Y1pubHY4alpUNllLdDF3Z041U09aZ0F2V1lTZFotOS1BdHBvMWJjNXhZZ3kyd19wMnFZS3RPcTEyN1luajQ1TUgyLXZKNGptMTJhVnUtVl80TUVpVGYxTFduaHVVb2FRcTdZdmtwdE1CYzhmdlMtYjJRd2F0ZW1mVHctUEdoTnhQMkVyQWE5NWY4VUQzbGtQNEN6WU95dmZ3Z3BSWjIw?oc=5"
+      ],
+      "contexto": "Uma professora de Lages, em Santa Catarina, que dá aula na rede municipal e numa escola particular pode passar 2026 sem um centavo de Imposto de Renda descontado no contracheque. Numa simulação com salários hipotéticos de R$ 3.500 e R$ 3 mil, ela chega à declaração com quase R$ 6 mil a pagar."
     },
     {
       "brandId": "mycapital",
@@ -319,7 +357,8 @@
       },
       "aliases": [
         "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNN0JUSlZ0eG4tS1MzWWtpQnVhckpmdDZEcnY2b3ZWd3NIU01jQXhzcmw4cUZvLWttY1E1WWpUUk9wUUs2SkZZSW42RUFRZ3Q0M2JJV3hjWmx5c3JPM1E2cjNXc1A3dUN4bHVabjhtSlFwMmg3STNtaVllVndycU53Z2I4QTd2eDN5dGU3UG1YZWx3TWlvQmI4S2lXMDkxQ3Y5VmVPVlcyMkdWNjQyaU9TMFNnOEVIcklWb21sMFVfeHQ5UWJyNmJKU3Q0ZjI0cUxZU2pwWnowcG1SQTFF?oc=5"
-      ]
+      ],
+      "contexto": "Receita Federal exige atualização do CadÚnico para pagamento do cashback da reforma tributária em janeiro O “cashback” da reforma tributária começa a valer em 1º de janeiro de 2027 e atingirá cerca de 70 milhões de pessoas em todo o Brasil. O mecanismo operado pela Receita Federal devolverá às famílias de baixa renda inscritas no Cadastro Único (CadÚnico)..."
     },
     {
       "brandId": "mycapital",
@@ -345,92 +384,18 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Receita Federal paga lote residual do IRPF 2026 em 30 de outubro",
-        "url": "https://www.mixvale.com.br/2026/11/09/receita-federal-paga-lote-residual-do-irpf-2026-em-30-de-outubro/",
-        "source": "Mix Vale",
-        "date": "2026-11-09",
+        "title": "Contribuinte tem até 30 de dezembro para escolher onde aplicar parte do Imposto de Renda",
+        "url": "https://portalcorreio.com.br/contribuinte-tem-ate-30-de-dezembro-para-escolher-onde-aplicar-parte-do-imposto-de-renda/",
+        "source": "Portal Correio",
+        "date": "2026-11-16",
         "tag": "Declaração",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMipgFBVV95cUxQODdDd1pTWEtBWWcteXhaY1U5TjU3OTZRTXhJREl6VzdpcldPZEh5MUhRR0kzdUd3WjJPRHFVOEVNSV93aFVCNHktbGZ1Q0NQZmRmRDhpbzRFS0Z1V0gzWlJqS3Y4YjhhQWdTQ0ZrcU84N2Y1eGxDTVlnMVl6dHhDWmRFUWh5bFRWV0dTT2IzVDdkeDBoOWc3RDZaVnFQMEhzMEl3d1VR?oc=5"
-      ]
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Benefício de acordo coletivo: quando incide IRPF?",
-        "url": "https://www.contabeis.com.br/noticias/80846/beneficio-de-acordo-coletivo-quando-incide-irpf/",
-        "source": "Portal Contabeis",
-        "date": "2026-11-13",
-        "tag": "Declaração",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMilwFBVV95cUxQVzFSVjdFZE9MT0ZZTm9aQWYwWXEydmd3Zm1RM0lwX2VUeHNvcEJkbWpweU5jSmVIb3k1MjFmQ2JmS2Izanpzb0haeGZua3lxMGxZNGI1a0JqTE5hdURwQVRDdnAyUVRDS01qYU9HWWs5YldJTFJsYi1qb3gtQzFtNDJIQ0tDNXdEb3diNzAwQl9NcGR0X2Uw?oc=5"
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxNMDNLT0w2SHVrcml4OGN1SlkxbDZ2Sno4X2o5TG1LMnU1MmlST2Vxam9oLTZFV1RFS3VtSEtobGQ1ZUQ2Y3hzMVhiVVhLZlBMWFRfUXJfM281alZ6Wm5QWmJVSXdtT09aczV2aUk2dE1SQTdlLXItay15UUo2THFkMmFiallpVkRjVzh3SFlmd0gwZUVaME0yNm5VM0dsb2E3ek1ZR0RIRXJOME9KeFRfeWZtaWl2TnpDUGc?oc=5"
       ],
-      "contexto": "O benefício que uma empresa paga ao empregado por força de acordo coletivo de trabalho está sujeito ao Imposto de Renda da Pessoa Física (IRPF) quando o pagamento tem natureza de rendimento do trabalho. Esse é o entendimento da Receita Federal na Solução de Consulta Cosit nº 221, de 6 de novembro de 2026, publicada no Diário Oficial da União na quinta-feira..."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Split payment começa a valer em 2027 e divide tributo no pagamento",
-        "url": "https://www.mixvale.com.br/2026/11/13/split-payment-comeca-a-valer-em-2027-e-divide-tributo-no-pagamento/",
-        "source": "Mix Vale",
-        "date": "2026-11-13",
-        "tag": "Declaração",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNS0loUjN5dFMzN0c0T3VIM2R2U0JwVTB5NG9iT2dhOVlwMGhGODFTTGpDbFVjUTAwdXVaRkI4Qzk0Yk5XeFhLck1QTHdKTkVoLWpEbFMzbk96VkFXb25RbW5Rci1QX3JsTnZGaEo2MW11eDRLaEhRbUdEb0N0WG1JT1NJYVlhWWNMamV6dWdTTEEtZFl2X3NwLXppcWJkRndFb3ZRN1VCd3A?oc=5"
-      ]
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Vale a pena investir em small caps em 2026? 3 ações promissoras",
-        "url": "https://www.nordinvestimentos.com.br/blog/small-caps-2026-o-que-esperar/",
-        "source": "Nord Investimentos",
-        "date": "2026-11-13",
-        "tag": "Mercado",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMifEFVX3lxTFB4VEI1QkxmU2lQRGRlQnkxcFZZR3B5OEVjTGs5ZXRJUk5KMTNhR3M2R29TeV9NUXNXOGxhb2Z2SVlLVmZibWVHTHpFand1S1FSSWZNM0tsSnlRR2VoMEpOV29NcFAxTk1JSERKUzJUSHdEQUl1RW9WNGhweE3SAYIBQVVfeXFMTXptQzVERDd1dDJxSGM3SWhnbmNTaHVGME50eVNWR1Q5VmI0cExjWjRabldRcmJNLVdPdzAtc3hSNXVQX05oTGwtTEVCR180alNPRloxRXNENXM2NDVqai12T1d6THhpWGJxdFUya21YM1JIeVRyNGRpRGJOV0w4S29qZw?oc=5"
-      ],
-      "contexto": "Vale a pena investir em small caps em 2026? 3 ações promissoras Mesmo com a alta recente da Bolsa brasileira, muitas small caps ainda negociam a preços atrativos, e podem oferecer um potencial de valorização maior que as grandes empresas."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Tudo sobre dividendos: como investir e calendário de pagamentos",
-        "url": "https://oespecialista.safra.com.br/calendario-dividendos-acoes/",
-        "source": "Safra",
-        "date": "2026-11-09",
-        "tag": "Mercado",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMicEFVX3lxTE5JajQ1aGp6bHBvSUU2S2pKbEhLNVkyQWFLTDRyQ0l4OUx5cjZHZVNuQjdqTy1jYUJIb3MxYllNY1dKaG9EVHlOVS04M284NzJ6Q2pEY2FKcmpySmF3TGRKU0tGTm0tNG9fWGNUN040Zl8?oc=5"
-      ],
-      "contexto": "Dividendos ou JCP já declarados e aprovados para as próximas semanas Acompanhe as principais datas e valores de proventos das empresas listadas na B3 e entenda como eles podem fazer parte da sua estratégia de investimento Os dividendos são uma das formas mais tradicionais de retorno para investidores em ações. Empresas listadas na Bolsa de Valores..."
+      "contexto": "Contribuintes de todo o país têm até 30 de dezembro de 2026 para decidir onde querem que parte do seu Imposto de Renda seja aplicada. A ONG Love Together Brasil (LTB) convida pessoas físicas a destinar até 6% do imposto devido ao Centro LTB, um grande centro cultural e esportivo em construção em Piancó (PB), no Vale do Piancó."
     }
   ],
   "avisos": [
