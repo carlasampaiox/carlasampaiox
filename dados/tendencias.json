@@ -1,13 +1,260 @@
 {
   "geo": "BR",
   "periodo": "today 1-m",
-  "termos": [],
+  "termos": [
+    {
+      "termo": "darf",
+      "subindo": [
+        {
+          "busca": "emitir darf para pagamento de tributos federais",
+          "valor": "Breakout"
+        },
+        {
+          "busca": "cota darf bb",
+          "valor": "Breakout"
+        },
+        {
+          "busca": "darf 3208",
+          "valor": "+400%"
+        },
+        {
+          "busca": "codigo darf 1124",
+          "valor": "+200%"
+        },
+        {
+          "busca": "emissão darf online",
+          "valor": "+160%"
+        },
+        {
+          "busca": "darf avulso",
+          "valor": "+140%"
+        },
+        {
+          "busca": "darf 1410",
+          "valor": "+80%"
+        },
+        {
+          "busca": "darf previdenciario",
+          "valor": "+60%"
+        }
+      ],
+      "top": [
+        {
+          "busca": "emitir darf",
+          "valor": 100
+        },
+        {
+          "busca": "pagar darf",
+          "valor": 91
+        },
+        {
+          "busca": "darf imposto de renda",
+          "valor": 81
+        },
+        {
+          "busca": "darf receita federal",
+          "valor": 71
+        },
+        {
+          "busca": "receita federal",
+          "valor": 70
+        },
+        {
+          "busca": "ecac darf",
+          "valor": 67
+        },
+        {
+          "busca": "mei darf",
+          "valor": 61
+        },
+        {
+          "busca": "mei",
+          "valor": 57
+        }
+      ],
+      "interesse": [
+        {
+          "data": "2026-11-12T00:00:00+00:00",
+          "valor": 55
+        },
+        {
+          "data": "2026-11-13T00:00:00+00:00",
+          "valor": 43
+        },
+        {
+          "data": "2026-11-14T00:00:00+00:00",
+          "valor": 12
+        },
+        {
+          "data": "2026-11-15T00:00:00+00:00",
+          "valor": 11
+        },
+        {
+          "data": "2026-11-16T00:00:00+00:00",
+          "valor": 52
+        },
+        {
+          "data": "2026-11-17T00:00:00+00:00",
+          "valor": 49
+        },
+        {
+          "data": "2026-11-18T00:00:00+00:00",
+          "valor": 49
+        },
+        {
+          "data": "2026-11-19T00:00:00+00:00",
+          "valor": 49
+        }
+      ]
+    },
+    {
+      "termo": "dividendos",
+      "subindo": [
+        {
+          "busca": "governo taxar dividendos",
+          "valor": "Breakout"
+        },
+        {
+          "busca": "bbas3 paga dividendos quantas vezes por ano",
+          "valor": "Breakout"
+        },
+        {
+          "busca": "divo11 paga dividendos",
+          "valor": "Breakout"
+        },
+        {
+          "busca": "ações que pagam dividendos todos os meses",
+          "valor": "+250%"
+        },
+        {
+          "busca": "bradespar dividendos",
+          "valor": "+180%"
+        },
+        {
+          "busca": "bbas3",
+          "valor": "+140%"
+        },
+        {
+          "busca": "bbas3 dividendos",
+          "valor": "+130%"
+        },
+        {
+          "busca": "bbdc4 dividendos",
+          "valor": "+130%"
+        }
+      ],
+      "top": [
+        {
+          "busca": "bbas3 dividendos",
+          "valor": 100
+        },
+        {
+          "busca": "bbas3",
+          "valor": 99
+        },
+        {
+          "busca": "petrobras",
+          "valor": 82
+        },
+        {
+          "busca": "dividendos banco do brasil",
+          "valor": 79
+        },
+        {
+          "busca": "petrobras dividendos",
+          "valor": 76
+        },
+        {
+          "busca": "dividendos vale",
+          "valor": 69
+        },
+        {
+          "busca": "o que é dividendos",
+          "valor": 68
+        },
+        {
+          "busca": "petr4 dividendos",
+          "valor": 68
+        }
+      ],
+      "interesse": [
+        {
+          "data": "2026-11-12T00:00:00+00:00",
+          "valor": 80
+        },
+        {
+          "data": "2026-11-13T00:00:00+00:00",
+          "valor": 70
+        },
+        {
+          "data": "2026-11-14T00:00:00+00:00",
+          "valor": 59
+        },
+        {
+          "data": "2026-11-15T00:00:00+00:00",
+          "valor": 52
+        },
+        {
+          "data": "2026-11-16T00:00:00+00:00",
+          "valor": 87
+        },
+        {
+          "data": "2026-11-17T00:00:00+00:00",
+          "valor": 80
+        },
+        {
+          "data": "2026-11-18T00:00:00+00:00",
+          "valor": 89
+        },
+        {
+          "data": "2026-11-19T00:00:00+00:00",
+          "valor": 80
+        }
+      ]
+    },
+    {
+      "termo": "ir ações",
+      "subindo": [],
+      "top": [],
+      "interesse": [
+        {
+          "data": "2026-11-12T00:00:00+00:00",
+          "valor": 55
+        },
+        {
+          "data": "2026-11-13T00:00:00+00:00",
+          "valor": 55
+        },
+        {
+          "data": "2026-11-14T00:00:00+00:00",
+          "valor": 34
+        },
+        {
+          "data": "2026-11-15T00:00:00+00:00",
+          "valor": 40
+        },
+        {
+          "data": "2026-11-16T00:00:00+00:00",
+          "valor": 57
+        },
+        {
+          "data": "2026-11-17T00:00:00+00:00",
+          "valor": 50
+        },
+        {
+          "data": "2026-11-18T00:00:00+00:00",
+          "valor": 48
+        },
+        {
+          "data": "2026-11-19T00:00:00+00:00",
+          "valor": 41
+        }
+      ]
+    }
+  ],
   "emAlta": [],
   "avisos": [
-    "Google Trends (imposto de renda): Google Trends is blocking Explore requests from this IP (HTTP 429 'too many requests' / 'unusual traffic' page).\n\nThis is a hard, per-IP cooldown, not a transient glitch — the Explore endpoints allow roughly 8-10 fresh browser sessions per hour before blocking. Solutions:\n• Wait 30+ minutes before trying again (retrying sooner extends the block)\n• Reuse results: cache='disk' answers identical repeat requests without a session\n• Use the RSS path for fast, frequent real-time checks\n\nKeyword: 'imposto de renda' | Geo: BR | Timeframe: today 1-m",
-    "Google Trends (darf): Google Trends is blocking Explore requests from this IP (HTTP 429 'too many requests' / 'unusual traffic' page).\n\nThis is a hard, per-IP cooldown, not a transient glitch — the Explore endpoints allow roughly 8-10 fresh browser sessions per hour before blocking. Solutions:\n• Wait 30+ minutes before trying again (retrying sooner extends the block)\n• Reuse results: cache='disk' answers identical repeat requests without a session\n• Use the RSS path for fast, frequent real-time checks\n\nKeyword: 'darf' | Geo: BR | Timeframe: today 1-m",
-    "Google Trends (dividendos): Google Trends is blocking Explore requests from this IP (HTTP 429 'too many requests' / 'unusual traffic' page).\n\nThis is a hard, per-IP cooldown, not a transient glitch — the Explore endpoints allow roughly 8-10 fresh browser sessions per hour before blocking. Solutions:\n• Wait 30+ minutes before trying again (retrying sooner extends the block)\n• Reuse results: cache='disk' answers identical repeat requests without a session\n• Use the RSS path for fast, frequent real-time checks\n\nKeyword: 'dividendos' | Geo: BR | Timeframe: today 1-m",
-    "Google Trends (ir ações): Google Trends is blocking Explore requests from this IP (HTTP 429 'too many requests' / 'unusual traffic' page).\n\nThis is a hard, per-IP cooldown, not a transient glitch — the Explore endpoints allow roughly 8-10 fresh browser sessions per hour before blocking. Solutions:\n• Wait 30+ minutes before trying again (retrying sooner extends the block)\n• Reuse results: cache='disk' answers identical repeat requests without a session\n• Use the RSS path for fast, frequent real-time checks\n\nKeyword: 'ir ações' | Geo: BR | Timeframe: today 1-m"
+    "Google Trends (imposto de renda): Google rate-limited the Explore data request; stop and back off."
   ],
-  "geradoEm": "2026-11-18T17:59:13+00:00"
+  "geradoEm": "2026-11-19T18:12:23+00:00"
 }

@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-18T17:58:13+00:00",
+  "geradoEm": "2026-11-19T18:11:04+00:00",
   "fonte": "coletor (GitHub Actions)",
   "itens": [
     {
@@ -16,8 +16,8 @@
         "title": "Declaração Automática IR de investimentos na bolsa | Black do Grana",
         "url": "https://www.youtube.com/watch?v=UVLxJyFm0sE",
         "date": "2026-11-06",
-        "signal": "145.423 visualizações, 8 curtidas · 71,8x a mediana do canal · alcance possivelmente pago",
-        "summary": "Vídeo publicado em 06/11, com 145.423 visualizações, 8 curtidas.",
+        "signal": "168.429 visualizações, 8 curtidas · 68,9x a mediana do canal · alcance possivelmente pago",
+        "summary": "Vídeo publicado em 06/11, com 168.429 visualizações, 8 curtidas.",
         "origem": "coletor"
       }
     },
@@ -35,8 +35,8 @@
         "title": "Descobriu um DARF atrasado na declaração? 😱",
         "url": "https://www.youtube.com/watch?v=-1Mjb1M7vpU",
         "date": "2026-11-10",
-        "signal": "23.501 visualizações, 49 curtidas · 11,6x a mediana do canal · alcance possivelmente pago",
-        "summary": "Shorts publicado em 10/11, com 23.501 visualizações, 49 curtidas.",
+        "signal": "29.163 visualizações, 58 curtidas · 11,9x a mediana do canal · alcance possivelmente pago",
+        "summary": "Shorts publicado em 10/11, com 29.163 visualizações, 58 curtidas.",
         "origem": "coletor"
       }
     },
@@ -54,8 +54,8 @@
         "title": "Investe na bolsa e trava na hora de fazer o imposto de renda? 🤯",
         "url": "https://www.youtube.com/watch?v=W9aDDVz5ieQ",
         "date": "2026-11-12",
-        "signal": "22.867 visualizações, 22 curtidas · 11,3x a mediana do canal · alcance possivelmente pago",
-        "summary": "Shorts publicado em 12/11, com 22.867 visualizações, 22 curtidas.",
+        "signal": "27.196 visualizações, 25 curtidas · 11,1x a mediana do canal · alcance possivelmente pago",
+        "summary": "Shorts publicado em 12/11, com 27.196 visualizações, 25 curtidas.",
         "origem": "coletor"
       }
     },
@@ -65,18 +65,18 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "LCI e LCA em 2026: investimentos isentos de Imposto de Renda ganham força com a Selic a 13,75%",
-        "url": "https://opetroleo.com.br/lci-e-lca-em-2026-investimentos-isentos-de-imposto-de-renda-ganham-forca-com-a-selic-a-1375/",
-        "source": "O Petróleo",
-        "date": "2026-11-12",
+        "title": "LCIs e LCAs na mira? Eurasia vê possibilidade de Lula retomar tributação de investimentos isentos",
+        "url": "https://www.moneytimes.com.br/lcis-e-lcas-na-mira-eurasia-ve-possibilidade-de-lula-retomar-tributacao-de-investimentos-isentos-jcav/",
+        "source": "Money Times",
+        "date": "2026-11-18",
         "tag": "IR",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPcndSV1ViQlUwWGg5TzUtVDFvT29sd0F1X0ZNNU5XMUxiUXlQaWlKSndBejhWUnVrNk5uTVl0YndUcF9tZmRHRUY1RzkwektHWlJ2LWVXem5CTVRrSVIyTGFOUi1JdEpNUl9hZEczeENyWUpZUE9odGlmbVVrOXB4MTFFSDdyWmJKLXF2ZlpyeVpscjhJQTdEVFZfUkU2RmI0cU9ZbHBHUjVYUmdqSmJqSkdlcjkzR1FX?oc=5"
+        "https://news.google.com/rss/articles/CBMizAFBVV95cUxOZ2NOVEVOWDU0Snc5QnFLRUVfSmlQaTdKWGsyRmE3MG9vOVcyYkdzUW1RemxpRWZrdGRFMDl1ZUtsaDdKSzFaUjNzdXAyX1ZvY2pQNExkZURTdkJmdGxqTTRuXzA5aUx3TkRKSmdpR0s4TGhDTExkRUpZcWFJVkRlRzd6R2ZkQjdmcGI5V25lVzJOd1lhSFhtRTEyazFPRzVQRXB5UGRISU5CeFJEUWRaOGt4bkdPbFc4aXJKMUVhbDlodjF5NDBTdWV0a2s?oc=5"
       ],
-      "contexto": "A renda fixa continua oferecendo oportunidades relevantes em 2026. Com a taxa Selic mantida em 13,75% ao ano na reunião de novembro do Comitê de Política Monetária, investimentos como Letras de Crédito Imobiliário (LCIs) e Letras de Crédito do Agronegócio (LCAs) permanecem no radar de quem deseja rentabilidade sem pagar Imposto de Renda sobre os rendimentos."
+      "contexto": "Eurasia vê possibilidade de Lula retomar tributação de investimentos isentos A tributação de investimentos atualmente isentos de Imposto de Renda, como as Letras de Crédito Imobiliário (LCIs) e do Agronegócio (LCAs), pode voltar ao radar do governo de Luiz Inácio Lula da Silva (PT) no quarto mandato."
     },
     {
       "brandId": "mycapital",
@@ -84,26 +84,7 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Avenue lança o otimizador de impostos para investimentos no exterior",
-        "url": "https://connection.avenue.us/educacional/otimizador-impostos-investimentos-exterior/",
-        "source": "connection.avenue.us",
-        "date": "2026-11-12",
-        "tag": "IR",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMijAFBVV95cUxPQktaLXRuSzZONVlNcEpmekxkTW9ZV25DcjhOdlJHeVNlRkxvUHd2OGcyV2ZEYTFBOTMxNWgtWGNWbE5oRElkTjlLdVdmMFd0X2FzMVU3bmxoOFhVbkQ5akdKcmI1ZDBGcmhyWDJCVzI3MjhRV09iQlRYdHpRaDA1MkFSOW9KUWJKTTlLSw?oc=5"
-      ],
-      "contexto": "Quem investe no exterior sabe a sensação: o ano passa, os resultados vão se acumulando, e só na hora da declaração anual é que o imposto de 15% sobre ganhos de capital aparece de verdade. Até aqui, entender esse impacto ao longo do ano exigia planilha, cálculo manual e muita atenção, quando dava tempo de fazer."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Deputados propõem imposto de 7,5% sobre LCI, LCA e CRI",
+        "title": "Deputados propõem imposto de 7,5% sobre LCI, LCA e CRI | Faria Lima News",
         "url": "https://veja.abril.com.br/coluna/faria-lima-news/deputados-propoem-imposto-de-75-sobre-lci-lca-e-cri/",
         "source": "VEJA",
         "date": "2026-11-18",
@@ -115,6 +96,44 @@
         "https://news.google.com/rss/articles/CBMiowFBVV95cUxNUE5PTGdLX2EzcjF6X0tLakN5TDJKTHhpcXI5MG1qQThmS3EzZldlRlZSZldyWG4zV1NiZUF5U2hGbEQ4R1ByU1E1Y3FkSnRHQTdIcWZ4ZXFDenl2UHg5U3NjY2FzakFNUi02XzZfQ25udmxFOGxqZzZSZ190THNRWGRqaUZ0dE53OGl5NlBTekdpNFVzeThiNUQyc2RWd05aU1dV?oc=5"
       ],
       "contexto": "Deputados propõem imposto de 7,5% sobre LCI, LCA e CRI Projeto ameaça isenção de investimentos que movimentam R$ 1,5 trilhão no Brasil Um projeto de lei apresentado na Câmara dos Deputados propõe cobrar Imposto de Renda de 7,5% sobre os rendimentos de investimentos atualmente isentos, como Letras de Crédito Imobiliário (LCI), Letras de Crédito do..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "LCI, LCA e debêntures incentivadas vão pagar Imposto de Renda?",
+        "url": "https://www.nordinvestimentos.com.br/blog/lci-lca-vao-pagar-imposto-de-renda/",
+        "source": "Nord Investimentos",
+        "date": "2026-11-18",
+        "tag": "IR",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMigwFBVV95cUxPcy0yZkFtMU9ITGNwU0RmSmdVeG9tTE93dVFyR1VsNXRlbURnblNoa3hmZlVTcmVzMzFKdUNjc1lQOV9Pc1hwVUpQcDlTT2J2RmZ0OS1zcVc3TmFDQzNLcnZoZlE0Sm02aHZ1UEx1aFZscU1hNmgtTk1tQnVCeXNSSnR5UdIBiAFBVV95cUxOV1p1Y25Ca2YzdFFrZkpldC0zUXZrN1JIajdmMzVIaEhTdWtGX19oVTFzYklScUpBbXl4ZUZQcDNkNG9FVjVQZ3gwU2xPSExlNkctWGM2TXR6QTE5RkJnZS1FcG9jdEtCc2h1alZqaXFLeVREel9iRC1FdXRPN0pGcHpNZ002RmVr?oc=5"
+      ],
+      "contexto": "LCI, LCA e debêntures incentivadas vão pagar Imposto de Renda? Quem tem LCI, LCA, CRI, CRA ou debênture incentivada precisa acompanhar uma proposta que está na Câmara."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Base governista assusta investidores com pacote que taxa dividendos, produtos isentos e fortunas",
+        "url": "https://investnews.com.br/investimentos/base-governista-assusta-investidores-com-pacote-que-taxa-dividendos-produtos-isentos-e-fortunas/",
+        "source": "InvestNews",
+        "date": "2026-11-18",
+        "tag": "IR",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQWlpBMUZna3E4LVI4ZS1iNmtkVklqWWUyVE12cHZjVVNKcjdacUZZTS05Y1FoOGUtbnNLM210LTA4VGlUdmFzNmxST1pobHRNMEF0T3pabzc3MFB1bG9ySG1BeEZmdTdyc21PWUJ0clQxR1RRV2ZISXhwaXBrTjNqM2pGd2R1NDVlelhndXpqQnI4dHRwVGppejJUMVQ2aDZLY0dybGVhcTgtZk45VGYwM1NpTWtkTDZ1empIMlQwM19MU1V5LTlfQ0ZDVzBDS0djT1HSAdcBQVVfeXFMUEpEU2J3QTZFTlYtTUhWZFpsUmZ1c2hoT2dZOWF5czZ6SHJKY09PZGc4ZHp0bHJYUHA4RmVPbmVpZ002VEFVdV96XzJSVGVjbjdyb1VCY1N6QTlzNWlBYmJpWUtKcWNJaHNSeWNld2o4eHI2M2p6VTY5QjJKSTFha296MXlaUWtab0o3dGNLYmw5NEVYdjNtaVJOOXRzYkZ3OE5zWkFhT2EtYmRuUkNxMXJuQUdsXzBWb2lNc2p2MklwVnAwdVROSEZuZWhBUkRoaVduRHV1SDg?oc=5"
+      ],
+      "contexto": "Dois dias depois, em 13 de novembro, a bancada do PT enviou um pacote de cinco projetos de lei, encabeçado pelo líder da Federação Brasil da Esperança, Pedro Uczai (PT-SC), com a assinatura de mais de 80 parlamentares do PT, PSOL, PCdoB e PV. A justificativa comum foi a de reforçar a arrecadação para o Orçamento de 2027."
     },
     {
       "brandId": "mycapital",
@@ -159,18 +178,37 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "R$ 10 mil em LCA a 14%: veja quanto rende em 3 anos e o impacto do possível imposto",
-        "url": "https://opetroleo.com.br/r-10-mil-em-lca-a-14-veja-quanto-rende-em-3-anos-e-o-impacto-do-possivel-imposto/",
-        "source": "O Petróleo",
-        "date": "2026-11-17",
-        "tag": "IR",
+        "title": "Dividendos: PT propõe IR de 15% e imposto sobre grandes fortunas",
+        "url": "https://www.ativovirtual.com.br/avnews/artigos/dividendos-pt-propoe-ir-de-15-e-imposto-sobre-grandes-fortunas",
+        "source": "ativovirtual.com.br",
+        "date": "2026-11-19",
+        "tag": "Dividendos",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOOUlPdV96SGc2bjBrRGZJUHJQUEFkMjFCQ0lUNm94ZWozWVlxNmptb0pNU0lmVkZabWNIS2VyNEk1RnZ0S1RhX3EtUmlKNDBMdE5SYnhwNjBMaFRCdXpZVEtXQ2s1by1iX3llQTVTNmM3alVSdm1WcnJsSjA4bzlOZ0NPX016b3hvQV9WcTcxWTJPeVRnb01IUmlRS3p3dXp3eFMtYkJlbTg5Zw?oc=5"
+        "https://news.google.com/rss/articles/CBMirgFBVV95cUxPbzRHNHVYN19ZWTB3YXBRLVVGUlpYTEJKU2dheWh4SkI0Mkh6NkpwaWh4NjdSTjh6eG4wa0pGNFN1M0J5OFJ4b0FENXFXR1E2RWpkaG1aLWRNcUZDU2w2WTJhZFc3VllrZ09pUzBFcUJVTmtZb1ZPSFUxTzlkY1VFUkZ2cExjUU1hRWREZkh3dFpkOVFNc3VVUU9sOW9PMnRKN284QVNCRFNHN3VFWHc?oc=5"
       ],
-      "contexto": "O mercado de renda fixa voltou a oferecer taxas elevadas em Letras de Crédito do Agronegócio (LCA), enquanto uma nova proposta de tributação apresentada ao Congresso Nacional reacende a discussão sobre o futuro das aplicações atualmente isentas de Imposto de Renda. Entre as oportunidades mencionadas por investidores estão títulos prefixados do Banco..."
+      "contexto": "PT protocola pacote que tributa dividendos, grandes fortunas e LCI/LCA A bancada do PT na Câmara dos Deputados protocolou na sexta-feira (13) um pacote de quatro projetos de lei que mexe em três frentes caras ao investidor pessoa física, dividendos, títulos isentos de renda fixa e JCP, e cria, ainda, um tributo sobre patrimônios elevados. O item de maior..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "ECONOMIA: IMPOSTO SOBRE DIVIDENDOS! Entenda o PL 5854/2026 que propõe cobrar 15% de IR desde o primeiro real.",
+        "url": "https://regional24horas.com.br/noticia/economia-imposto-sobre-dividendos-entenda-o-pl-5854-2026-que-propoe-cobrar-15-de-ir-desde-o-primeiro-real-/16041",
+        "source": "Regional 24 Horas",
+        "date": "2026-11-19",
+        "tag": "Dividendos",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQM2FjQV9oOTVhT2l3enEzbFlIWW44ZWtkYUkzQVVjQXdib2RoRlliekJheFc5LTFaaDBQZFd1eWZvUXhjb3J3MjU1REpVOUw5a2dRdG5GbHI2OVg4Z1J1dlJuSkh0T25hVHVxVFpyRndYVm1tMlE3YWdrTHhnb24zQUdFcWtCaGFqSmY0TUpsOGdkbzZudTFVQ0hweWtLLXFOZjY2MFpyMTdyaEdZSVZjZTlZbWtuc2lpWEVwMWxGbE5hUVJlNHljdG85My1DemdBZ1pLX1VidlFSNm5Vc1VEMHhOSlBNZw?oc=5"
+      ],
+      "contexto": "Protocolado na Câmara dos Deputados pela bancada do PT, projeto acaba com a faixa de isenção de R$ 50 mil mensais e retém tributo direto na fonte; corrida contra o relógio do recesso parlamentar define se regra já vale em 2027. Um novo projeto de lei protocolado na Câmara dos Deputados acendeu o sinal de alerta no setor produtivo, entre contadores,..."
     },
     {
       "brandId": "mycapital",
@@ -197,25 +235,6 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Dividendos: PT propõe IR de 15% e imposto sobre grandes fortunas",
-        "url": "https://www.ativovirtual.com.br/avnews/artigos/dividendos-pt-propoe-ir-de-15-e-imposto-sobre-grandes-fortunas",
-        "source": "ativovirtual.com.br",
-        "date": "2026-11-14",
-        "tag": "Dividendos",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMirgFBVV95cUxPbzRHNHVYN19ZWTB3YXBRLVVGUlpYTEJKU2dheWh4SkI0Mkh6NkpwaWh4NjdSTjh6eG4wa0pGNFN1M0J5OFJ4b0FENXFXR1E2RWpkaG1aLWRNcUZDU2w2WTJhZFc3VllrZ09pUzBFcUJVTmtZb1ZPSFUxTzlkY1VFUkZ2cExjUU1hRWREZkh3dFpkOVFNc3VVUU9sOW9PMnRKN284QVNCRFNHN3VFWHc?oc=5"
-      ],
-      "contexto": "PT protocola pacote que tributa dividendos, grandes fortunas e LCI/LCA A bancada do PT na Câmara dos Deputados protocolou na sexta-feira (13) um pacote de quatro projetos de lei que mexe em três frentes caras ao investidor pessoa física, dividendos, títulos isentos de renda fixa e JCP, e cria, ainda, um tributo sobre patrimônios elevados. O item de maior..."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
         "title": "PT propõe taxar dividendos, subir imposto sobre JCP e cobrar 7,5% de LCI e LCA",
         "url": "https://www.conexaopolitica.com.br/politica/pt-propoe-taxar-dividendos-subir-imposto-sobre-jcp-e-cobrar-75-de-lci-e-lca/",
         "source": "Conexão Política",
@@ -228,6 +247,25 @@
         "https://news.google.com/rss/articles/CBMivAFBVV95cUxOeFVyUDZJb0FJOHk1ZlZKUGE4LTM1QjNoeVJaWldud19Edk40MlZhTDBKc1dFdUVKQkdCdWFhZFMtejZqZEJxaTZmS25zeE1uVnhwZG1QY19WV05UV2xTeWh6VXlLZjc3ME1XSFdEcFZRX1ZBMHRVT1dsQi0tazllR0JMblIxdHB4WlAyR0w5MXg2U0tvQmFnUEdkTlFscWEyUS1BLTliYms5SUdGRmg1QWVRSTRKUndFWEJGaQ?oc=5"
       ],
       "contexto": "Adicione o Conexão Política como sua fonte preferidaAdicione o Conexão como fonte preferida A bancada do PT na Câmara dos Deputados protocolou quatro projetos de lei para ampliar a tributação sobre lucros e dividendos, aplicações financeiras e grandes fortunas. As propostas têm como primeiro signatário o líder do partido na Casa, Pedro Uczai (SC), e ainda..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Parlamentares protocolam projeto que tributa lucros e dividendos por faixa de renda com isenção até R$ 5 mil",
+        "url": "https://www.brasil247.com/poder/parlamentares-protocolam-projeto-que-tributa-lucros-e-dividendos-por-faixa-de-renda-com-isencao-ate-r-5-mil/",
+        "source": "Brasil 247",
+        "date": "2026-11-17",
+        "tag": "Dividendos",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOT2dkZTYxN2xxaU9nU0hxTVN6LWZJc201SHBtYkIzYmFXeDAxUUhTY3BpLWgxRHRFcWUxRXR6Z2ZTTTJOU0ROVW5GNE42eGlOTUhWOGR3OG5vNHdMVEZNakNOREw4RUNlUGNYREJvZzJtUkk4VVVTMTJpaHVtSmxZbkxZMU9CTi1KWVY3VVdSQ1otQU1ucHdIQTdHNnd0T1NoWE5fNnRZSmpOSXFkdk9LbkJiUEdlbm1WUHAtdmxGV1ZfSjJCdW4wVjlZU2lVbE8wSUpOWF9JVQ?oc=5"
+      ],
+      "contexto": "247, O líder do PT na Câmara dos Deputados, Pedro Uczai (SC), protocolou nesta terça-feira (17) um projeto de lei (PL 5889/2026) que institui a tributação sobre lucros e dividendos distribuídos por pessoas jurídicas a pessoas físicas por meio de retenção na fonte. A iniciativa, endossada por outros 78 parlamentares, tem o objetivo de diminuir as distorções..."
     },
     {
       "brandId": "mycapital",
@@ -254,37 +292,17 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Dividendos podem ter IR de 15% e LCI e LCA, de 7,5%? Entenda as propostas",
-        "url": "https://melhorinvestimento.net/impostos/imposto-dividendos-lci-lca-propostas",
-        "source": "melhorinvestimento.net",
-        "date": "2026-11-17",
-        "tag": "Dividendos",
+        "title": "Isenção do Imposto de Renda até R$ 5.000 vale em 2026, mas veja quem ainda precisa declarar à Receita Federal",
+        "url": "https://www.mixvale.com.br/2026/11/19/isencao-do-imposto-de-renda-ate-r-5-000-vale-em-2026-mas-veja-quem-ainda-precisa-declarar-a-receita-federal/",
+        "source": "Mix Vale",
+        "date": "2026-11-19",
+        "tag": "Declaração",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMiggFBVV95cUxNcmxGaEhETVNHbnB4YkVBX1RoTmpzSmdHdkFLcHBJNUpsZXJ3OTVRZzl5VjJGdy11dlRCVXZFV0dFZ3BsZHNWbjNYVXZYSEdLaUJOMXNkSkdibnNjaHA0ZTlYdzMtVDVjUGZyZ0RaNjZJVnBfTDN0V0kwLUNRb0NvV19R?oc=5"
-      ],
-      "contexto": "Dividendos podem ter IR de 15% e LCI e LCA, de 7,5%? Entenda as propostas Projetos apresentados por deputados da base governista também preveem aumento do imposto sobre JCP e tributação de outros títulos hoje isentos."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "PT protocola projetos para taxar lucros e dividendos com alíquota de 15% e tributar LCI e LCA",
-        "url": "https://www.estadao.com.br/economia/pt-protocola-projetos-para-taxar-lucros-e-dividendos-com-aliquota-de-15-e-tributar-lci-e-lca/",
-        "source": "Estadão",
-        "date": "2026-11-14",
-        "tag": "Dividendos",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNaUtsZ1hOVWwyQmlKdjZBM3NXbGVhX003b3JjeXRsNC1WSXpvM056X2I0dVpxZDl3R0xWYmNadnFMOG5uNzNpcjc4TTZ1X3dza294aTNja25nLWc0OThuTG9reHA4d1pZcExSdmEzWkg1amx3WU1tZnJlTTdTdnlOTkhvY1ZOblhaVDJwb2tFbE5aRmpkT3M5d2xlSm0yN2hpOHVCU0owVHc1SVhUUUgxMGdFZ2ZyaDg0RUtaMGJpb0JQTDlpM0VBONIBzgFBVV95cUxNaFBkNlRwN1ZPbHN4Y2FsWVk5RVNOOTdDSE5GeTdhbUdIUzFXYmdwazBOWEs2SUFocWRoSEpJcEloNzl0bENUSDUzalNSVGFTVE1tNkJBVzhOTzl4MGJqX3FsczN4VjB1VzRkanNDakhiTXpfbjZ3ZDhSNEJnRWFWNVhRdjhBTG5rZ0RpTUFLNGJDQXA4MVNHS3c1dGRKTWlJelRuY2k3cDZDNzZyd3RKcmZmWDRmUlFIdzRnaEljSUtWNTNtRjJpYXZBY3dEUQ?oc=5"
-      ],
-      "contexto": "A bancada do PT na Câmara apresentou quatro projetos de lei para aumentar a tributação sobre os 'super ricos', incluindo a retomada da taxação de lucros e dividendos e a criação do Imposto sobre Grandes Fortunas. As propostas visam financiar políticas sociais e enfrentam resistência no Congresso, onde o ajuste fiscal do governo também é debatido."
+        "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNY0xwaFRfSmVBWms5WHMwbjM3UUhmbUo4SXBnMTNhSDR6SVA3ZUswZjFrcXctam10UmVpWGdQSHRpR2k5THFpZWdDY3dWQU15WHpvVS1rcjZsRnB3RzRhYmV5c1pVQ3kxSTIwYlFXaGhDZkU0dExzNkZNMHh5VXlhbEkzU3ZTbU9reTdGREduY2VYd3FjR1h0YXBNbTFOWThZcU1ud1VXY0VkV1N5ekg2ei1XMkllUzczMndSVmoweHZIRDN6YllUeVJQclk3ejVNcWVUalV6a3FlRFgwUHBv?oc=5"
+      ]
     },
     {
       "brandId": "mycapital",
@@ -302,8 +320,26 @@
       },
       "aliases": [
         "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPdVVXV0ptWEM0QjRlTlBEOU1qcktqV0VTYnhqUTljMTRLQ2JTR1lHSjRCZkVLWWtWMmhyYzEyNGtJbUp4UVZTcDZPS01YVWREMm5OdUhtTUdtZ2hmZGlzSGZoWmNxc2RrbWlRSUFaY3VYTEp4eWN4cFc0bTlkR05EVEpELU5Ea2x4Mi1VNkRiV2xzYTBsTlJmT3BRQnJQbjVOak1UZGVaUmt5Tlk?oc=5"
+      ]
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Imposto de Renda 2027: veja como as novas regras de isenção vão funcionar na prática",
+        "url": "https://saojoaquimonline.com.br/noticias/2026/11/19/imposto-de-renda-2027-veja-como-as-novas-regras-de-isencao-vao-funcionar-na-pratica/",
+        "source": "São Joaquim Online",
+        "date": "2026-11-19",
+        "tag": "Declaração",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPX0dCdnBIc2hPYWhVYVh5RlhWalQ2SnBEMFotWHlGQ25BMXJhVU0yT2llTzFTSV96dTJuM3RfeEcyaVVMNWU2TE0yZXRWU1ltS2U3ZW5NV2FKNnI3RGMwdXVfdEx2TUNKSFpMUFhQZzhKQXc3QnpveENsZGljd0RSZHdoUWpOdWxfR3I4TkJHYWFEa1dFN2tQU3VwRlF6dGFXWmVrQzZSOU82UUVwZ0JyaS1VbzhHUFQ2N2QyUWZyTEdJZFV0cWx2QlFPcG1oUFZWalE?oc=5"
       ],
-      "contexto": "Restituição IRPF 2027: lotes, prazos e como consultar o pagamento pela Receita Federal A Receita Federal pagou R$ 41 bilhões em restituições do Imposto de Renda da Pessoa Física (IRPF) a 25,9 milhões de contribuintes em 2026. O balanço oficial, divulgado em Brasília, aponta recorde tanto no volume devolvido quanto na velocidade de liberação do dinheiro."
+      "contexto": "Acerto de contas com o Leão: o que muda no seu bolso com o novo Imposto de Renda em 2027 A declaração anual do Imposto de Renda de 2027 marcará o acerto de contas definitivo das mudanças aprovadas no fim de novembro de 2025. Embora parte do alívio já venha aparecendo no desconto mensal em folha, será na entrega à Receita Federal que milhões de contribuintes..."
     },
     {
       "brandId": "mycapital",
@@ -349,25 +385,6 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Receita Federal exige atualização do CadÚnico para pagamento do cashback da reforma tributária em janeiro",
-        "url": "https://www.mixvale.com.br/2026/11/15/receita-federal-exige-atualizacao-do-cadunico-para-pagamento-do-cashback-da-reforma-tributaria-em-janeiro/",
-        "source": "Mix Vale",
-        "date": "2026-11-15",
-        "tag": "Declaração",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNN0JUSlZ0eG4tS1MzWWtpQnVhckpmdDZEcnY2b3ZWd3NIU01jQXhzcmw4cUZvLWttY1E1WWpUUk9wUUs2SkZZSW42RUFRZ3Q0M2JJV3hjWmx5c3JPM1E2cjNXc1A3dUN4bHVabjhtSlFwMmg3STNtaVllVndycU53Z2I4QTd2eDN5dGU3UG1YZWx3TWlvQmI4S2lXMDkxQ3Y5VmVPVlcyMkdWNjQyaU9TMFNnOEVIcklWb21sMFVfeHQ5UWJyNmJKU3Q0ZjI0cUxZU2pwWnowcG1SQTFF?oc=5"
-      ],
-      "contexto": "Receita Federal exige atualização do CadÚnico para pagamento do cashback da reforma tributária em janeiro O “cashback” da reforma tributária começa a valer em 1º de janeiro de 2027 e atingirá cerca de 70 milhões de pessoas em todo o Brasil. O mecanismo operado pela Receita Federal devolverá às famílias de baixa renda inscritas no Cadastro Único (CadÚnico)..."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
         "title": "Receita Federal define tratamento do IRPF e da Dirf para rendimentos restituídos à fonte pagadora em ano posterior",
         "url": "https://www.contadores.cnt.br/noticias/tecnicas/2026/11/13/receita-federal-define-tratamento-do-irpf-e-da-dirf-para-rendimentos-restituidos-a-fonte-pagadora-em-ano-posterior.html",
         "source": "Contadores.cnt.br",
@@ -379,25 +396,6 @@
       "aliases": [
         "https://news.google.com/rss/articles/CBMiigJBVV95cUxPVkdfSXhUUV8wWUMxaGwtY1ZNbGcyRzRwc2tvOGEtcVN3Z0pLdnB4Xy1qbHlBT0QzemR0Q2hGRWlsczhjUThqaE1UZTNfZXY4OGZDY2ZPdUtORE5HbkthNllRWHZzeXFibEhQU05xSVJDMG9XWFhJT3dlZmFJckJPVWtucGRHQjdJZHZCaVcyTVQtQmt5elRkWmx2dnk3WjBXMkNqdHZZTE1GWUR6eE5xbVpHdm9iQU5uN1B0WUNIQ05MOUVUbzJIa05FNmIyYzByNXRhNXVyYlVSSTRiWmJwOXVObDNDbERQWHRXN2xpVWl5RkN6em8xZUhkanYwOXphSGJhRlZtNlAzUQ?oc=5"
       ]
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Tributação de pessoas físicas entra no radar da composição das receitas orçamentárias de 2027",
-        "url": "https://www.mattosfilho.com.br/unico/tributacao-pessoas-fisicas-2027/",
-        "source": "Mattos Filho",
-        "date": "2026-11-17",
-        "tag": "Declaração",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMieEFVX3lxTE9wYjFKUTNCLXBCZFVnYnZRa1E0eHRVRER6VjhiQWt0RHpINl9GdEJfOE9wSjBSVTRtOUg5QTh3ZEVEMTJ4dnBqRXZSRDQ4bVVTMTIyMHoycTBEb2dQcDMxS0hXVGo2bGJ1QWhfNm13MVppM1c1Rl8tYw?oc=5"
-      ],
-      "contexto": "Tributação de pessoas físicas entra no radar da composição das receitas orçamentárias de 2027 Três projetos apresentados na Câmara dos Deputados propõem aumentar a tributação sobre patrimônio, investimentos e dividendos Nos últimos dias, três projetos de lei foram apresentados com o objetivo de ampliar a arrecadação para a composição do orçamento público de..."
     },
     {
       "brandId": "mycapital",
@@ -436,6 +434,25 @@
         "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQbTRCcDg3aURmWlgtRnlYazZuVWl6c2NqaVFIZTRFNnZtOTdiWktyVXNxaGxtQnJ1b05QZExRMF9IeGo1cW9pUDljMExXVDhCS29EY05YTWpIQnRLb3RzSHpibEtNV2VKY2l3NThTa3doQWYxMmZJYUV6RFRwUnE5bEVybFdwQ0JKWFpXclVObER4NTVKdm1wSlNUaUVaVUVTNk9FZno0NzQ0STJWc2xINHZWNkpKVjhsSWotTkZkSEMtMFFuR2FRbFpjOWtRM2ZEU2c?oc=5"
       ],
       "contexto": "Brasileiros poderão investir na Anthropic, empresa de inteligência artificial responsável pelo Claude, por meio da Bolsa brasileira a partir desta quinta-feira (19), mesmo dia em que a companhia deve estrear na Nasdaq. A B3 disponibilizará um BDR (Brazilian Depositary Receipt) da empresa simultaneamente à abertura de capital nos Estados Unidos, com preço..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Hashdex anuncia primeiro ETF brasileiro da Hyperliquid na B3",
+        "url": "https://webitcoin.com.br/hashdex-anuncia-primeiro-etf-brasileiro-da-hyperliquid-na-b3/",
+        "source": "Webitcoin",
+        "date": "2026-11-17",
+        "tag": "Mercado",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMijwFBVV95cUxPZFNmT291UVp4UzU2VFRQWW1fZjZDem9wUG05cE1FODJ4ZHRnVUJ2dk9xR3lZSEpLQmRCTHVZQkhGTXlHcWk2QVFHQkJwVlVmZTlkNHoxY1pYM2NQbl9yOHhzbDhrd01mRjA5RlI4Qzl1SEtkYjQySVh4UTZILWN3NEs0eTFEX0cyQjdCVU9CSQ?oc=5"
+      ],
+      "contexto": "Hashdex anuncia primeiro ETF brasileiro da Hyperliquid na B3 A gestora global de criptoativos Hashdex anunciou na terça-feira, dia 17 de novembro, o lançamento do HYPH11 na bolsa brasileira. O novo produto chega ao mercado como o primeiro fundo negociado em bolsa totalmente dedicado ao token HYPE no Brasil."
     }
   ],
   "avisos": [
