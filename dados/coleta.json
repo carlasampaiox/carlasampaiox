@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-19T18:11:04+00:00",
+  "geradoEm": "2026-11-20T17:44:33+00:00",
   "fonte": "coletor (GitHub Actions)",
   "itens": [
     {
@@ -16,8 +16,8 @@
         "title": "Declaração Automática IR de investimentos na bolsa | Black do Grana",
         "url": "https://www.youtube.com/watch?v=UVLxJyFm0sE",
         "date": "2026-11-06",
-        "signal": "168.429 visualizações, 8 curtidas · 68,9x a mediana do canal · alcance possivelmente pago",
-        "summary": "Vídeo publicado em 06/11, com 168.429 visualizações, 8 curtidas.",
+        "signal": "192.037 visualizações, 9 curtidas · 73,2x a mediana do canal · alcance possivelmente pago",
+        "summary": "Vídeo publicado em 06/11, com 192.037 visualizações, 9 curtidas.",
         "origem": "coletor"
       }
     },
@@ -35,8 +35,8 @@
         "title": "Descobriu um DARF atrasado na declaração? 😱",
         "url": "https://www.youtube.com/watch?v=-1Mjb1M7vpU",
         "date": "2026-11-10",
-        "signal": "29.163 visualizações, 58 curtidas · 11,9x a mediana do canal · alcance possivelmente pago",
-        "summary": "Shorts publicado em 10/11, com 29.163 visualizações, 58 curtidas.",
+        "signal": "34.721 visualizações, 69 curtidas · 13,2x a mediana do canal · alcance possivelmente pago",
+        "summary": "Shorts publicado em 10/11, com 34.721 visualizações, 69 curtidas.",
         "origem": "coletor"
       }
     },
@@ -54,10 +54,29 @@
         "title": "Investe na bolsa e trava na hora de fazer o imposto de renda? 🤯",
         "url": "https://www.youtube.com/watch?v=W9aDDVz5ieQ",
         "date": "2026-11-12",
-        "signal": "27.196 visualizações, 25 curtidas · 11,1x a mediana do canal · alcance possivelmente pago",
-        "summary": "Shorts publicado em 12/11, com 27.196 visualizações, 25 curtidas.",
+        "signal": "32.667 visualizações, 34 curtidas · 12,4x a mediana do canal · alcance possivelmente pago",
+        "summary": "Shorts publicado em 12/11, com 32.667 visualizações, 34 curtidas.",
         "origem": "coletor"
       }
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Tributação de títulos isentos: como o imposto pode mexer com o seu bolso?",
+        "url": "https://www.infomoney.com.br/onde-investir/tributacao-de-titulos-isentos-como-o-imposto-pode-mexer-com-o-seu-bolso/",
+        "source": "InfoMoney",
+        "date": "2026-11-20",
+        "tag": "IR",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMitgFBVV95cUxNRXV1cHpBN3BqeDQzNkc0SzdZOVdYMkF1aDhCa1JtT0N4UGU1eDVyN1NsYk9EUXAyY2hjUEJiSTJ2UFlwdGZWUmV2OHlUQ040ZTB6TnNLVzMxOEZKTEEzOU5GNHZHTlhmdVNRb3czQmlfVW5ITWdOb2QwbEVtTnl0VjdDMDNrQVdTdXJrdXRfTVFiWGJlVGVQTTdmNkV4dHhqeEZKSEhpSU1ZajZibHVpNHBuM3dnd9IBuwFBVV95cUxOTUIwcFFsYzQyX044RWVaTzVLbFdIX1RrYUoxaThrTmtjWVVXYldPTUxjVUJfZzcwd2g0WkZqWjdlVkR3b1EzX0ppQ1UwYUNvY0FZbXNtZkJOcFJSdUlhNnBucHQybDFlWGh3SmhiVkxuZ1NyQUVEUERXdUhKZktkdWtDb1F3WVZMNGhXRVh0SU0ya3A4WWRKR2RUaC04UV80Snd1SkZVZUZ0b0JxUTNRRDRfZUxRTFBTVDJ3?oc=5"
+      ],
+      "contexto": "Em meio ao debate sobre a necessidade de um ajuste fiscal para equilibrar as contas públicas e reduzir os juros no quarto mandato do presidente Luiz Inácio Lula da Silva, o governo volta a falar em tributar os títulos isentos de renda fixa ligados aos setores imobiliário, do agronegócio e de infraestrutura. Entre as formas de tributação das Letras de..."
     },
     {
       "brandId": "mycapital",
@@ -84,7 +103,26 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Deputados propõem imposto de 7,5% sobre LCI, LCA e CRI | Faria Lima News",
+        "title": "Base governista assusta investidores com pacote que taxa dividendos, produtos isentos e fortunas",
+        "url": "https://investnews.com.br/investimentos/base-governista-assusta-investidores-com-pacote-que-taxa-dividendos-produtos-isentos-e-fortunas/",
+        "source": "InvestNews",
+        "date": "2026-11-18",
+        "tag": "IR",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQWlpBMUZna3E4LVI4ZS1iNmtkVklqWWUyVE12cHZjVVNKcjdacUZZTS05Y1FoOGUtbnNLM210LTA4VGlUdmFzNmxST1pobHRNMEF0T3pabzc3MFB1bG9ySG1BeEZmdTdyc21PWUJ0clQxR1RRV2ZISXhwaXBrTjNqM2pGd2R1NDVlelhndXpqQnI4dHRwVGppejJUMVQ2aDZLY0dybGVhcTgtZk45VGYwM1NpTWtkTDZ1empIMlQwM19MU1V5LTlfQ0ZDVzBDS0djT1HSAdcBQVVfeXFMUEpEU2J3QTZFTlYtTUhWZFpsUmZ1c2hoT2dZOWF5czZ6SHJKY09PZGc4ZHp0bHJYUHA4RmVPbmVpZ002VEFVdV96XzJSVGVjbjdyb1VCY1N6QTlzNWlBYmJpWUtKcWNJaHNSeWNld2o4eHI2M2p6VTY5QjJKSTFha296MXlaUWtab0o3dGNLYmw5NEVYdjNtaVJOOXRzYkZ3OE5zWkFhT2EtYmRuUkNxMXJuQUdsXzBWb2lNc2p2MklwVnAwdVROSEZuZWhBUkRoaVduRHV1SDg?oc=5"
+      ],
+      "contexto": "Dois dias depois, em 13 de novembro, a bancada do PT enviou um pacote de cinco projetos de lei, encabeçado pelo líder da Federação Brasil da Esperança, Pedro Uczai (PT-SC), com a assinatura de mais de 80 parlamentares do PT, PSOL, PCdoB e PV. A justificativa comum foi a de reforçar a arrecadação para o Orçamento de 2027."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Deputados propõem imposto de 7,5% sobre LCI, LCA e CRI",
         "url": "https://veja.abril.com.br/coluna/faria-lima-news/deputados-propoem-imposto-de-75-sobre-lci-lca-e-cri/",
         "source": "VEJA",
         "date": "2026-11-18",
@@ -122,25 +160,6 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Base governista assusta investidores com pacote que taxa dividendos, produtos isentos e fortunas",
-        "url": "https://investnews.com.br/investimentos/base-governista-assusta-investidores-com-pacote-que-taxa-dividendos-produtos-isentos-e-fortunas/",
-        "source": "InvestNews",
-        "date": "2026-11-18",
-        "tag": "IR",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQWlpBMUZna3E4LVI4ZS1iNmtkVklqWWUyVE12cHZjVVNKcjdacUZZTS05Y1FoOGUtbnNLM210LTA4VGlUdmFzNmxST1pobHRNMEF0T3pabzc3MFB1bG9ySG1BeEZmdTdyc21PWUJ0clQxR1RRV2ZISXhwaXBrTjNqM2pGd2R1NDVlelhndXpqQnI4dHRwVGppejJUMVQ2aDZLY0dybGVhcTgtZk45VGYwM1NpTWtkTDZ1empIMlQwM19MU1V5LTlfQ0ZDVzBDS0djT1HSAdcBQVVfeXFMUEpEU2J3QTZFTlYtTUhWZFpsUmZ1c2hoT2dZOWF5czZ6SHJKY09PZGc4ZHp0bHJYUHA4RmVPbmVpZ002VEFVdV96XzJSVGVjbjdyb1VCY1N6QTlzNWlBYmJpWUtKcWNJaHNSeWNld2o4eHI2M2p6VTY5QjJKSTFha296MXlaUWtab0o3dGNLYmw5NEVYdjNtaVJOOXRzYkZ3OE5zWkFhT2EtYmRuUkNxMXJuQUdsXzBWb2lNc2p2MklwVnAwdVROSEZuZWhBUkRoaVduRHV1SDg?oc=5"
-      ],
-      "contexto": "Dois dias depois, em 13 de novembro, a bancada do PT enviou um pacote de cinco projetos de lei, encabeçado pelo líder da Federação Brasil da Esperança, Pedro Uczai (PT-SC), com a assinatura de mais de 80 parlamentares do PT, PSOL, PCdoB e PV. A justificativa comum foi a de reforçar a arrecadação para o Orçamento de 2027."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
         "title": "Isenção do imposto de renda até R$ 5 mil: o que mudou no seu salário em 2026",
         "url": "https://mepoupe.com/dicas-de-riqueza/isencao-do-imposto-de-renda/",
         "source": "Me Poupe!",
@@ -153,43 +172,6 @@
         "https://news.google.com/rss/articles/CBMic0FVX3lxTFBQbTdMWkZFZmRTSHBzX0VYZkV6d3Z5UjU3TzNtR2pMLURCX2dES2FWdnFWUTItZDlLRzRTcFlFbkZsWEI3UTJsXzBJNzhPbUQtam8zUkc0YTNKZUNXNVBndmFsSzdUMV9ELXlVaEsyLTZMYlk?oc=5"
       ],
       "contexto": "A nova regra de isenção do imposto de renda zerou o IR de quem ganha até R$ 5 mil e reduziu o desconto de quem ganha até R$ 7.350. Veja quanto isso dá no seu bolso e o que fazer com a diferença."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "PL 5.853/2026 sobre LCIs e LCAs: Tributar o incentivo, punir quem confiou",
-        "url": "https://www.contadores.cnt.br/noticias/tecnicas/2026/11/17/pl-5-853-2026-sobre-lcis-e-lcas-tributar-o-incentivo-punir-quem-confiou.html",
-        "source": "Contadores.cnt.br",
-        "date": "2026-11-17",
-        "tag": "IR",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNZDN6b2tiQ2MzdjRkemFydUZFeXNNM3VZQkJkTlYyMVpwbDBYTG42cVhYeUpOSm9fVklkcHRsM001dTRSWXlJMFdJSlJycGFJSWhaSkE1YTduaG1MazFPeWdhbkZvMmdCaWI0RmNHZTc2cW8ycy1YUkVnU3FjNmJxQnphNlVGanl2elpRVFlPall1NGR6Nm93bXMwbHhuZUVIaXV6OE1oZWJNU0FTNGg1eG82YW85R3Jmb2NWR1AyMlpQOVlpTWRiQldKMVZUM29n?oc=5"
-      ]
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Dividendos: PT propõe IR de 15% e imposto sobre grandes fortunas",
-        "url": "https://www.ativovirtual.com.br/avnews/artigos/dividendos-pt-propoe-ir-de-15-e-imposto-sobre-grandes-fortunas",
-        "source": "ativovirtual.com.br",
-        "date": "2026-11-19",
-        "tag": "Dividendos",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMirgFBVV95cUxPbzRHNHVYN19ZWTB3YXBRLVVGUlpYTEJKU2dheWh4SkI0Mkh6NkpwaWh4NjdSTjh6eG4wa0pGNFN1M0J5OFJ4b0FENXFXR1E2RWpkaG1aLWRNcUZDU2w2WTJhZFc3VllrZ09pUzBFcUJVTmtZb1ZPSFUxTzlkY1VFUkZ2cExjUU1hRWREZkh3dFpkOVFNc3VVUU9sOW9PMnRKN284QVNCRFNHN3VFWHc?oc=5"
-      ],
-      "contexto": "PT protocola pacote que tributa dividendos, grandes fortunas e LCI/LCA A bancada do PT na Câmara dos Deputados protocolou na sexta-feira (13) um pacote de quatro projetos de lei que mexe em três frentes caras ao investidor pessoa física, dividendos, títulos isentos de renda fixa e JCP, e cria, ainda, um tributo sobre patrimônios elevados. O item de maior..."
     },
     {
       "brandId": "mycapital",
@@ -292,6 +274,25 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
+        "title": "Dividendos podem ter IR de 15% e LCI e LCA, de 7,5%? Entenda as propostas",
+        "url": "https://melhorinvestimento.net/impostos/imposto-dividendos-lci-lca-propostas",
+        "source": "melhorinvestimento.net",
+        "date": "2026-11-17",
+        "tag": "Dividendos",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMiggFBVV95cUxNcmxGaEhETVNHbnB4YkVBX1RoTmpzSmdHdkFLcHBJNUpsZXJ3OTVRZzl5VjJGdy11dlRCVXZFV0dFZ3BsZHNWbjNYVXZYSEdLaUJOMXNkSkdibnNjaHA0ZTlYdzMtVDVjUGZyZ0RaNjZJVnBfTDN0V0kwLUNRb0NvV19R?oc=5"
+      ],
+      "contexto": "Dividendos podem ter IR de 15% e LCI e LCA, de 7,5%? Entenda as propostas Projetos apresentados por deputados da base governista também preveem aumento do imposto sobre JCP e tributação de outros títulos hoje isentos."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
         "title": "Isenção do Imposto de Renda até R$ 5.000 vale em 2026, mas veja quem ainda precisa declarar à Receita Federal",
         "url": "https://www.mixvale.com.br/2026/11/19/isencao-do-imposto-de-renda-ate-r-5-000-vale-em-2026-mas-veja-quem-ainda-precisa-declarar-a-receita-federal/",
         "source": "Mix Vale",
@@ -302,24 +303,6 @@
       },
       "aliases": [
         "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNY0xwaFRfSmVBWms5WHMwbjM3UUhmbUo4SXBnMTNhSDR6SVA3ZUswZjFrcXctam10UmVpWGdQSHRpR2k5THFpZWdDY3dWQU15WHpvVS1rcjZsRnB3RzRhYmV5c1pVQ3kxSTIwYlFXaGhDZkU0dExzNkZNMHh5VXlhbEkzU3ZTbU9reTdGREduY2VYd3FjR1h0YXBNbTFOWThZcU1ud1VXY0VkV1N5ekg2ei1XMkllUzczMndSVmoweHZIRDN6YllUeVJQclk3ejVNcWVUalV6a3FlRFgwUHBv?oc=5"
-      ]
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Restituição IRPF 2027: lotes, prazos e como consultar o pagamento pela Receita Federal",
-        "url": "https://www.mixvale.com.br/2026/11/15/restituicao-irpf-2027-lotes-prazos-e-como-consultar-o-pagamento-pela/",
-        "source": "Mix Vale",
-        "date": "2026-11-15",
-        "tag": "Declaração",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPdVVXV0ptWEM0QjRlTlBEOU1qcktqV0VTYnhqUTljMTRLQ2JTR1lHSjRCZkVLWWtWMmhyYzEyNGtJbUp4UVZTcDZPS01YVWREMm5OdUhtTUdtZ2hmZGlzSGZoWmNxc2RrbWlRSUFaY3VYTEp4eWN4cFc0bTlkR05EVEpELU5Ea2x4Mi1VNkRiV2xzYTBsTlJmT3BRQnJQbjVOak1UZGVaUmt5Tlk?oc=5"
       ]
     },
     {
@@ -385,17 +368,55 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Receita Federal define tratamento do IRPF e da Dirf para rendimentos restituídos à fonte pagadora em ano posterior",
-        "url": "https://www.contadores.cnt.br/noticias/tecnicas/2026/11/13/receita-federal-define-tratamento-do-irpf-e-da-dirf-para-rendimentos-restituidos-a-fonte-pagadora-em-ano-posterior.html",
+        "title": "Receita Federal libera processamento final das solicitações do Simples Nacional 2027 nesta sexta-feira (20)",
+        "url": "https://www.contadores.cnt.br/noticias/tecnicas/2026/11/17/receita-federal-libera-processamento-final-das-solicitacoes-do-simples-nacional-2027-nesta-sexta-feira-20.html",
         "source": "Contadores.cnt.br",
-        "date": "2026-11-13",
+        "date": "2026-11-17",
         "tag": "Declaração",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMiigJBVV95cUxPVkdfSXhUUV8wWUMxaGwtY1ZNbGcyRzRwc2tvOGEtcVN3Z0pLdnB4Xy1qbHlBT0QzemR0Q2hGRWlsczhjUThqaE1UZTNfZXY4OGZDY2ZPdUtORE5HbkthNllRWHZzeXFibEhQU05xSVJDMG9XWFhJT3dlZmFJckJPVWtucGRHQjdJZHZCaVcyTVQtQmt5elRkWmx2dnk3WjBXMkNqdHZZTE1GWUR6eE5xbVpHdm9iQU5uN1B0WUNIQ05MOUVUbzJIa05FNmIyYzByNXRhNXVyYlVSSTRiWmJwOXVObDNDbERQWHRXN2xpVWl5RkN6em8xZUhkanYwOXphSGJhRlZtNlAzUQ?oc=5"
+        "https://news.google.com/rss/articles/CBMi_gFBVV95cUxQNEJFZGtLc05nbkdMX0NKc3ZmTlZNdHdyVFdlUzVTeWpsWi01VEtraEw3Z2YwRDFjakNUT1Q4ckdMaVV6b09LT2RoMEloaDEtVDFhNGs5cVZaMkVnZkFndlo3MFNMeVhnUEVXOTlLeGNadGhlRTV4enU3OTJ5YUN1OGhfa3BjanB0c1BtaU9RTFNrX01RR0JNOXQ0dWVhbDBxeW9HNE9ic2E3YnotT3ltSVRxMnBpMDhDRXI5MGIzeDduOGRUX2N6akVUNVlnU1REcFFwajlRSnNoNFREV3lMMVhOM0ViVE9uLTNwSmdFSDE2Ui1tRHFkVDdUdVhhQQ?oc=5"
       ]
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Contribuinte tem até 30 de dezembro para escolher onde aplicar parte do Imposto de Renda",
+        "url": "https://portalcorreio.com.br/contribuinte-tem-ate-30-de-dezembro-para-escolher-onde-aplicar-parte-do-imposto-de-renda/",
+        "source": "Portal Correio",
+        "date": "2026-11-18",
+        "tag": "Declaração",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxNMDNLT0w2SHVrcml4OGN1SlkxbDZ2Sno4X2o5TG1LMnU1MmlST2Vxam9oLTZFV1RFS3VtSEtobGQ1ZUQ2Y3hzMVhiVVhLZlBMWFRfUXJfM281alZ6Wm5QWmJVSXdtT09aczV2aUk2dE1SQTdlLXItay15UUo2THFkMmFiallpVkRjVzh3SFlmd0gwZUVaME0yNm5VM0dsb2E3ek1ZR0RIRXJOME9KeFRfeWZtaWl2TnpDUGc?oc=5"
+      ],
+      "contexto": "Contribuintes de todo o país têm até 30 de dezembro de 2026 para decidir onde querem que parte do seu Imposto de Renda seja aplicada. A ONG Love Together Brasil (LTB) convida pessoas físicas a destinar até 6% do imposto devido ao Centro LTB, um grande centro cultural e esportivo em construção em Piancó (PB), no Vale do Piancó."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "B3 registra recorde de R$ 61,1 bi por dia em renda variável",
+        "url": "https://www.letsmoney.com.br/fintech/b3-recorde-volume-outubro/",
+        "source": "Let's Money",
+        "date": "2026-11-17",
+        "tag": "Mercado",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMicEFVX3lxTE90NF9PcEpMcF9jb2dvbS1XZUdPdHY0cGNKOXA2RnlJT284czJCdy1iQ0lNNkpzRXFramtmektxOEFlanp4QW55T0tlaFVVeU9nb014VDVIVnJEQXJWYUJWQXprczNmcGozc19jNENjZDE?oc=5"
+      ],
+      "contexto": "B3 registra recorde de R$ 61,1 bi por dia em renda variável Volume médio diário chegou ao maior nível mensal da história em outubro, 88% acima da média de 2026; derivativos tiveram o 2º maior volume mensal já registrado. A B3 (B3SA3), bolsa do Brasil com mais de 130 anos, registrou em outubro recorde de volume financeiro em renda variável: o volume..."
     },
     {
       "brandId": "mycapital",
