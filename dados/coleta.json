@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-20T17:44:33+00:00",
+  "geradoEm": "2026-11-21T16:44:38+00:00",
   "fonte": "coletor (GitHub Actions)",
   "itens": [
     {
@@ -16,8 +16,8 @@
         "title": "Declaração Automática IR de investimentos na bolsa | Black do Grana",
         "url": "https://www.youtube.com/watch?v=UVLxJyFm0sE",
         "date": "2026-11-06",
-        "signal": "192.037 visualizações, 9 curtidas · 73,2x a mediana do canal · alcance possivelmente pago",
-        "summary": "Vídeo publicado em 06/11, com 192.037 visualizações, 9 curtidas.",
+        "signal": "212.496 visualizações, 9 curtidas · 77,3x a mediana do canal · alcance possivelmente pago",
+        "summary": "Vídeo publicado em 06/11, com 212.496 visualizações, 9 curtidas.",
         "origem": "coletor"
       }
     },
@@ -35,8 +35,8 @@
         "title": "Descobriu um DARF atrasado na declaração? 😱",
         "url": "https://www.youtube.com/watch?v=-1Mjb1M7vpU",
         "date": "2026-11-10",
-        "signal": "34.721 visualizações, 69 curtidas · 13,2x a mediana do canal · alcance possivelmente pago",
-        "summary": "Shorts publicado em 10/11, com 34.721 visualizações, 69 curtidas.",
+        "signal": "38.750 visualizações, 72 curtidas · 14,1x a mediana do canal · alcance possivelmente pago",
+        "summary": "Shorts publicado em 10/11, com 38.750 visualizações, 72 curtidas.",
         "origem": "coletor"
       }
     },
@@ -54,8 +54,8 @@
         "title": "Investe na bolsa e trava na hora de fazer o imposto de renda? 🤯",
         "url": "https://www.youtube.com/watch?v=W9aDDVz5ieQ",
         "date": "2026-11-12",
-        "signal": "32.667 visualizações, 34 curtidas · 12,4x a mediana do canal · alcance possivelmente pago",
-        "summary": "Shorts publicado em 12/11, com 32.667 visualizações, 34 curtidas.",
+        "signal": "36.814 visualizações, 38 curtidas · 13,4x a mediana do canal · alcance possivelmente pago",
+        "summary": "Shorts publicado em 12/11, com 36.814 visualizações, 38 curtidas.",
         "origem": "coletor"
       }
     },
@@ -96,6 +96,25 @@
         "https://news.google.com/rss/articles/CBMizAFBVV95cUxOZ2NOVEVOWDU0Snc5QnFLRUVfSmlQaTdKWGsyRmE3MG9vOVcyYkdzUW1RemxpRWZrdGRFMDl1ZUtsaDdKSzFaUjNzdXAyX1ZvY2pQNExkZURTdkJmdGxqTTRuXzA5aUx3TkRKSmdpR0s4TGhDTExkRUpZcWFJVkRlRzd6R2ZkQjdmcGI5V25lVzJOd1lhSFhtRTEyazFPRzVQRXB5UGRISU5CeFJEUWRaOGt4bkdPbFc4aXJKMUVhbDlodjF5NDBTdWV0a2s?oc=5"
       ],
       "contexto": "Eurasia vê possibilidade de Lula retomar tributação de investimentos isentos A tributação de investimentos atualmente isentos de Imposto de Renda, como as Letras de Crédito Imobiliário (LCIs) e do Agronegócio (LCAs), pode voltar ao radar do governo de Luiz Inácio Lula da Silva (PT) no quarto mandato."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Como declarar investimentos no Imposto de Renda",
+        "url": "https://www.spacemoney.com.br/educacao-financeira/como-declarar-investimentos-imposto-renda-2/",
+        "source": "SpaceMoney",
+        "date": "2026-11-21",
+        "tag": "IR",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMimgFBVV95cUxPQTBRbnZNeXVlUVpycUFheG5fUVlaVG85QnhZUk11cTJKTEVWNVdlTUxqU3pOektCblROWDZmZ0VCUm5rNFZSaEJmYTZLQlRMMEVUWmRLOTFqdFp4WGZVd0tMT3oxeXFObTk4UzZ3WnN1Z0k3ZE4wOHl0cEctdUlDcDdLUHM4eUhFVDFwSHhoV1h5RXd2c1BaZndB?oc=5"
+      ],
+      "contexto": "Quem aplica em CDB, Tesouro Direto, fundos, ações ou previdência precisa conciliar essas informações com a declaração anual do Imposto de Renda. O preenchimento correto não se resume a copiar saldos: envolve distinguir patrimônio de rendimento, identificar operações com ganho de capital e apurar eventual imposto devido."
     },
     {
       "brandId": "mycapital",
@@ -153,25 +172,6 @@
         "https://news.google.com/rss/articles/CBMigwFBVV95cUxPcy0yZkFtMU9ITGNwU0RmSmdVeG9tTE93dVFyR1VsNXRlbURnblNoa3hmZlVTcmVzMzFKdUNjc1lQOV9Pc1hwVUpQcDlTT2J2RmZ0OS1zcVc3TmFDQzNLcnZoZlE0Sm02aHZ1UEx1aFZscU1hNmgtTk1tQnVCeXNSSnR5UdIBiAFBVV95cUxOV1p1Y25Ca2YzdFFrZkpldC0zUXZrN1JIajdmMzVIaEhTdWtGX19oVTFzYklScUpBbXl4ZUZQcDNkNG9FVjVQZ3gwU2xPSExlNkctWGM2TXR6QTE5RkJnZS1FcG9jdEtCc2h1alZqaXFLeVREel9iRC1FdXRPN0pGcHpNZ002RmVr?oc=5"
       ],
       "contexto": "LCI, LCA e debêntures incentivadas vão pagar Imposto de Renda? Quem tem LCI, LCA, CRI, CRA ou debênture incentivada precisa acompanhar uma proposta que está na Câmara."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Isenção do imposto de renda até R$ 5 mil: o que mudou no seu salário em 2026",
-        "url": "https://mepoupe.com/dicas-de-riqueza/isencao-do-imposto-de-renda/",
-        "source": "Me Poupe!",
-        "date": "2026-11-18",
-        "tag": "IR",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMic0FVX3lxTFBQbTdMWkZFZmRTSHBzX0VYZkV6d3Z5UjU3TzNtR2pMLURCX2dES2FWdnFWUTItZDlLRzRTcFlFbkZsWEI3UTJsXzBJNzhPbUQtam8zUkc0YTNKZUNXNVBndmFsSzdUMV9ELXlVaEsyLTZMYlk?oc=5"
-      ],
-      "contexto": "A nova regra de isenção do imposto de renda zerou o IR de quem ganha até R$ 5 mil e reduziu o desconto de quem ganha até R$ 7.350. Veja quanto isso dá no seu bolso e o que fazer com a diferença."
     },
     {
       "brandId": "mycapital",
@@ -368,24 +368,6 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Receita Federal libera processamento final das solicitações do Simples Nacional 2027 nesta sexta-feira (20)",
-        "url": "https://www.contadores.cnt.br/noticias/tecnicas/2026/11/17/receita-federal-libera-processamento-final-das-solicitacoes-do-simples-nacional-2027-nesta-sexta-feira-20.html",
-        "source": "Contadores.cnt.br",
-        "date": "2026-11-17",
-        "tag": "Declaração",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMi_gFBVV95cUxQNEJFZGtLc05nbkdMX0NKc3ZmTlZNdHdyVFdlUzVTeWpsWi01VEtraEw3Z2YwRDFjakNUT1Q4ckdMaVV6b09LT2RoMEloaDEtVDFhNGs5cVZaMkVnZkFndlo3MFNMeVhnUEVXOTlLeGNadGhlRTV4enU3OTJ5YUN1OGhfa3BjanB0c1BtaU9RTFNrX01RR0JNOXQ0dWVhbDBxeW9HNE9ic2E3YnotT3ltSVRxMnBpMDhDRXI5MGIzeDduOGRUX2N6akVUNVlnU1REcFFwajlRSnNoNFREV3lMMVhOM0ViVE9uLTNwSmdFSDE2Ui1tRHFkVDdUdVhhQQ?oc=5"
-      ]
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
         "title": "Contribuinte tem até 30 de dezembro para escolher onde aplicar parte do Imposto de Renda",
         "url": "https://portalcorreio.com.br/contribuinte-tem-ate-30-de-dezembro-para-escolher-onde-aplicar-parte-do-imposto-de-renda/",
         "source": "Portal Correio",
@@ -398,6 +380,25 @@
         "https://news.google.com/rss/articles/CBMiugFBVV95cUxNMDNLT0w2SHVrcml4OGN1SlkxbDZ2Sno4X2o5TG1LMnU1MmlST2Vxam9oLTZFV1RFS3VtSEtobGQ1ZUQ2Y3hzMVhiVVhLZlBMWFRfUXJfM281alZ6Wm5QWmJVSXdtT09aczV2aUk2dE1SQTdlLXItay15UUo2THFkMmFiallpVkRjVzh3SFlmd0gwZUVaME0yNm5VM0dsb2E3ek1ZR0RIRXJOME9KeFRfeWZtaWl2TnpDUGc?oc=5"
       ],
       "contexto": "Contribuintes de todo o país têm até 30 de dezembro de 2026 para decidir onde querem que parte do seu Imposto de Renda seja aplicada. A ONG Love Together Brasil (LTB) convida pessoas físicas a destinar até 6% do imposto devido ao Centro LTB, um grande centro cultural e esportivo em construção em Piancó (PB), no Vale do Piancó."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Tributação de pessoas físicas entra no radar da composição das receitas orçamentárias de 2027",
+        "url": "https://www.mattosfilho.com.br/unico/tributacao-pessoas-fisicas-2027/",
+        "source": "Mattos Filho",
+        "date": "2026-11-17",
+        "tag": "Declaração",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMieEFVX3lxTE9wYjFKUTNCLXBCZFVnYnZRa1E0eHRVRER6VjhiQWt0RHpINl9GdEJfOE9wSjBSVTRtOUg5QTh3ZEVEMTJ4dnBqRXZSRDQ4bVVTMTIyMHoycTBEb2dQcDMxS0hXVGo2bGJ1QWhfNm13MVppM1c1Rl8tYw?oc=5"
+      ],
+      "contexto": "Tributação de pessoas físicas entra no radar da composição das receitas orçamentárias de 2027 Quatro projetos apresentados na Câmara dos Deputados propõem aumentar a tributação sobre patrimônio, investimentos e dividendos Nos últimos dias, quatro projetos de lei foram apresentados com o objetivo de ampliar a arrecadação para a composição do orçamento..."
     },
     {
       "brandId": "mycapital",
@@ -455,25 +456,6 @@
         "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQbTRCcDg3aURmWlgtRnlYazZuVWl6c2NqaVFIZTRFNnZtOTdiWktyVXNxaGxtQnJ1b05QZExRMF9IeGo1cW9pUDljMExXVDhCS29EY05YTWpIQnRLb3RzSHpibEtNV2VKY2l3NThTa3doQWYxMmZJYUV6RFRwUnE5bEVybFdwQ0JKWFpXclVObER4NTVKdm1wSlNUaUVaVUVTNk9FZno0NzQ0STJWc2xINHZWNkpKVjhsSWotTkZkSEMtMFFuR2FRbFpjOWtRM2ZEU2c?oc=5"
       ],
       "contexto": "Brasileiros poderão investir na Anthropic, empresa de inteligência artificial responsável pelo Claude, por meio da Bolsa brasileira a partir desta quinta-feira (19), mesmo dia em que a companhia deve estrear na Nasdaq. A B3 disponibilizará um BDR (Brazilian Depositary Receipt) da empresa simultaneamente à abertura de capital nos Estados Unidos, com preço..."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Hashdex anuncia primeiro ETF brasileiro da Hyperliquid na B3",
-        "url": "https://webitcoin.com.br/hashdex-anuncia-primeiro-etf-brasileiro-da-hyperliquid-na-b3/",
-        "source": "Webitcoin",
-        "date": "2026-11-17",
-        "tag": "Mercado",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMijwFBVV95cUxPZFNmT291UVp4UzU2VFRQWW1fZjZDem9wUG05cE1FODJ4ZHRnVUJ2dk9xR3lZSEpLQmRCTHVZQkhGTXlHcWk2QVFHQkJwVlVmZTlkNHoxY1pYM2NQbl9yOHhzbDhrd01mRjA5RlI4Qzl1SEtkYjQySVh4UTZILWN3NEs0eTFEX0cyQjdCVU9CSQ?oc=5"
-      ],
-      "contexto": "Hashdex anuncia primeiro ETF brasileiro da Hyperliquid na B3 A gestora global de criptoativos Hashdex anunciou na terça-feira, dia 17 de novembro, o lançamento do HYPH11 na bolsa brasileira. O novo produto chega ao mercado como o primeiro fundo negociado em bolsa totalmente dedicado ao token HYPE no Brasil."
     }
   ],
   "avisos": [
