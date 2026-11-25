@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-24T20:07:07+00:00",
+  "geradoEm": "2026-11-25T19:09:10+00:00",
   "fonte": "coletor (GitHub Actions)",
   "itens": [
     {
@@ -16,8 +16,8 @@
         "title": "Declaração Automática IR de investimentos na bolsa | Black do Grana",
         "url": "https://www.youtube.com/watch?v=UVLxJyFm0sE",
         "date": "2026-11-06",
-        "signal": "253.557 visualizações, 10 curtidas · 56,7x a mediana do canal · alcance possivelmente pago",
-        "summary": "Vídeo publicado em 06/11, com 253.557 visualizações, 10 curtidas.",
+        "signal": "271.349 visualizações, 10 curtidas · 48,7x a mediana do canal · alcance possivelmente pago",
+        "summary": "Vídeo publicado em 06/11, com 271.349 visualizações, 10 curtidas.",
         "origem": "coletor"
       }
     },
@@ -35,8 +35,8 @@
         "title": "Descobriu um DARF atrasado na declaração? 😱",
         "url": "https://www.youtube.com/watch?v=-1Mjb1M7vpU",
         "date": "2026-11-10",
-        "signal": "58.068 visualizações, 97 curtidas · 13,0x a mediana do canal · alcance possivelmente pago",
-        "summary": "Shorts publicado em 10/11, com 58.068 visualizações, 97 curtidas.",
+        "signal": "66.885 visualizações, 109 curtidas · 12,0x a mediana do canal · alcance possivelmente pago",
+        "summary": "Shorts publicado em 10/11, com 66.885 visualizações, 109 curtidas.",
         "origem": "coletor"
       }
     },
@@ -54,8 +54,8 @@
         "title": "Investe na bolsa e trava na hora de fazer o imposto de renda? 🤯",
         "url": "https://www.youtube.com/watch?v=W9aDDVz5ieQ",
         "date": "2026-11-12",
-        "signal": "51.543 visualizações, 51 curtidas · 11,5x a mediana do canal · alcance possivelmente pago",
-        "summary": "Shorts publicado em 12/11, com 51.543 visualizações, 51 curtidas.",
+        "signal": "58.736 visualizações, 61 curtidas · 10,5x a mediana do canal · alcance possivelmente pago",
+        "summary": "Shorts publicado em 12/11, com 58.736 visualizações, 61 curtidas.",
         "origem": "coletor"
       }
     },
@@ -103,24 +103,6 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "Tributação de LCI, LCA, CRI e CRA lidera preocupações para 2027, aponta pesquisa com profissionais de investimentos",
-        "url": "https://acionista.com.br/possivel-tributacao-de-lci-lca-cri-e-cra-lidera-preocupacoes-para-2027-aponta-pesquisa-com-profissionais-de-investimentos/",
-        "source": "Acionista.com.br",
-        "date": "2026-11-23",
-        "tag": "IR",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPUUgtUmlzalZ5N3RVM21rRGpCaXVEdVRyaWdTSk1IeWd4WFFrbkxOTDUydkhLMTZobzBNR05raGszUS00WmdJX21pdGJNMGNzZ3ZkUUFjMlYyU2hKdF9kSklUXzdtVGdDREh0SzJhYWdMWmxzYTZ1VkJSQTJFU25JdzkzZ0RCbnQ5eFRZY0Uya2VwQ3ZvZVVWZ0d0Z0E5dnl0R05GZnZYOHBGSnRhN0lUUUQyUTJzaktnaVdvODZnR3VoUTVoVnh5WjVHS3RlSnh0Y2IteUk0cWRRT3pFRXNXSQ?oc=5"
-      ]
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
         "title": "Tributação de títulos isentos: como o imposto pode mexer com o seu bolso?",
         "url": "https://www.infomoney.com.br/onde-investir/tributacao-de-titulos-isentos-como-o-imposto-pode-mexer-com-o-seu-bolso/",
         "source": "InfoMoney",
@@ -140,18 +122,18 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
-        "title": "LCIs e LCAs na mira? Eurasia vê possibilidade de Lula retomar tributação de investimentos isentos",
-        "url": "https://www.moneytimes.com.br/lcis-e-lcas-na-mira-eurasia-ve-possibilidade-de-lula-retomar-tributacao-de-investimentos-isentos-jcav/",
-        "source": "Money Times",
-        "date": "2026-11-18",
+        "title": "IR mínimo: carteira de alta renda com ativos isentos pode custar R$ 50 mil a mais; veja a simulação",
+        "url": "https://www.estadao.com.br/einvestidor/estrategia-e-patrimonio/ir-minimo-carteira-de-alta-renda-com-ativos-isentos-pode-custar-r-50-mil-a-mais-veja-a-simulacao/",
+        "source": "Estadão",
+        "date": "2026-11-25",
         "tag": "IR",
         "summary": "",
         "origem": "coletor"
       },
       "aliases": [
-        "https://news.google.com/rss/articles/CBMizAFBVV95cUxOZ2NOVEVOWDU0Snc5QnFLRUVfSmlQaTdKWGsyRmE3MG9vOVcyYkdzUW1RemxpRWZrdGRFMDl1ZUtsaDdKSzFaUjNzdXAyX1ZvY2pQNExkZURTdkJmdGxqTTRuXzA5aUx3TkRKSmdpR0s4TGhDTExkRUpZcWFJVkRlRzd6R2ZkQjdmcGI5V25lVzJOd1lhSFhtRTEyazFPRzVQRXB5UGRISU5CeFJEUWRaOGt4bkdPbFc4aXJKMUVhbDlodjF5NDBTdWV0a2s?oc=5"
+        "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNaEoxVWhYSkxHb243aFR4V1VOZUhXV1ljQmpmT0g4d3RiNHg5Z2g1dDdiYnlTQTgwMlQzWERUTS03NXJTOHVhdGh2QTlVcGxYR3JZT2s0WmNCd3A2YlhqR0phbnZXelZYZFVqaXRFRU9oLVNESEpJaVdVSklON2VnOVE0Uy1ZMHFMcm1XbGl0NkVINHNFWmFNMnpwU2paQWg5SW4xRElLMTBxU3dQQ1pZTjdITy13SExfSnZORXNFY0M3aUJNXzVWWGdFM0liemZ5RUZQbUlJeC1UMjNrMUc5cEUtckYyMzhURTVoU0pHbUhNQdIB9wFBVV95cUxPdHJiY01rRGgzYzllMlNKYVh4cmtZWGlyQU9HeFh4Qk5rNVQya3FIN0N4TjN5YkZuUFRWRjNONkVCM0t5YmsyektyT09FRk1pZEYtemtqOHVCd2JObkg3dmstSUFPd29HcXhBQktMVGRGeFU3eTdIclJaeVVoTDZ2SGVRMlNxVWFmUlhVVW1TOHMyZHYwWjUwZ2duNGZoZjR1dC1HTVk2WnlrS0RVQ1JIVVpBTEVON0cxSndySXI5dUZybnhFWG10YkU4allkMDFXQk9Id3phMkRvMkwwazVNaTd1M244RE9jM0xwcWU2bE9FZG5aeHZZ?oc=5"
       ],
-      "contexto": "Eurasia vê possibilidade de Lula retomar tributação de investimentos isentos A tributação de investimentos atualmente isentos de Imposto de Renda, como as Letras de Crédito Imobiliário (LCIs) e do Agronegócio (LCAs), pode voltar ao radar do governo de Luiz Inácio Lula da Silva (PT) no quarto mandato."
+      "contexto": "Gerando resumo Investidores de alta renda que concentram seus recursos em aplicações isentas, como Letras de Crédito Imobiliário (LCI), Letras de Crédito ao Agronegócio (LCA) e fundos imobiliários (FII), podem ter uma conta mais alta com a chegada do Imposto de Renda (IR) mínimo. É o que aponta uma simulação feita pela BPTax Global Advisory."
     },
     {
       "brandId": "mycapital",
@@ -178,6 +160,25 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
+        "title": "LCI, LCA e debêntures incentivadas vão pagar Imposto de Renda?",
+        "url": "https://www.nordinvestimentos.com.br/blog/lci-lca-vao-pagar-imposto-de-renda/",
+        "source": "Nord Investimentos",
+        "date": "2026-11-24",
+        "tag": "IR",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMigwFBVV95cUxPcy0yZkFtMU9ITGNwU0RmSmdVeG9tTE93dVFyR1VsNXRlbURnblNoa3hmZlVTcmVzMzFKdUNjc1lQOV9Pc1hwVUpQcDlTT2J2RmZ0OS1zcVc3TmFDQzNLcnZoZlE0Sm02aHZ1UEx1aFZscU1hNmgtTk1tQnVCeXNSSnR5UdIBiAFBVV95cUxOV1p1Y25Ca2YzdFFrZkpldC0zUXZrN1JIajdmMzVIaEhTdWtGX19oVTFzYklScUpBbXl4ZUZQcDNkNG9FVjVQZ3gwU2xPSExlNkctWGM2TXR6QTE5RkJnZS1FcG9jdEtCc2h1alZqaXFLeVREel9iRC1FdXRPN0pGcHpNZ002RmVr?oc=5"
+      ],
+      "contexto": "LCI, LCA e debêntures incentivadas vão pagar Imposto de Renda? Quem tem LCI, LCA, CRI, CRA ou debênture incentivada precisa acompanhar uma proposta que está na Câmara."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
         "title": "ECONOMIA: IMPOSTO SOBRE DIVIDENDOS! Entenda o PL 5854/2026 que propõe cobrar 15% de IR desde o primeiro real.",
         "url": "https://regional24horas.com.br/noticia/economia-imposto-sobre-dividendos-entenda-o-pl-5854-2026-que-propoe-cobrar-15-de-ir-desde-o-primeiro-real-/16041",
         "source": "Regional 24 Horas",
@@ -190,43 +191,6 @@
         "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQM2FjQV9oOTVhT2l3enEzbFlIWW44ZWtkYUkzQVVjQXdib2RoRlliekJheFc5LTFaaDBQZFd1eWZvUXhjb3J3MjU1REpVOUw5a2dRdG5GbHI2OVg4Z1J1dlJuSkh0T25hVHVxVFpyRndYVm1tMlE3YWdrTHhnb24zQUdFcWtCaGFqSmY0TUpsOGdkbzZudTFVQ0hweWtLLXFOZjY2MFpyMTdyaEdZSVZjZTlZbWtuc2lpWEVwMWxGbE5hUVJlNHljdG85My1DemdBZ1pLX1VidlFSNm5Vc1VEMHhOSlBNZw?oc=5"
       ],
       "contexto": "Protocolado na Câmara dos Deputados pela bancada do PT, projeto acaba com a faixa de isenção de R$ 50 mil mensais e retém tributo direto na fonte; corrida contra o relógio do recesso parlamentar define se regra já vale em 2027. Um novo projeto de lei protocolado na Câmara dos Deputados acendeu o sinal de alerta no setor produtivo, entre contadores,..."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "PT propõe taxar dividendos, subir imposto sobre JCP e cobrar 7,5% de LCI e LCA",
-        "url": "https://www.conexaopolitica.com.br/politica/pt-propoe-taxar-dividendos-subir-imposto-sobre-jcp-e-cobrar-75-de-lci-e-lca/",
-        "source": "Conexão Política",
-        "date": "2026-11-18",
-        "tag": "Dividendos",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMivAFBVV95cUxOeFVyUDZJb0FJOHk1ZlZKUGE4LTM1QjNoeVJaWldud19Edk40MlZhTDBKc1dFdUVKQkdCdWFhZFMtejZqZEJxaTZmS25zeE1uVnhwZG1QY19WV05UV2xTeWh6VXlLZjc3ME1XSFdEcFZRX1ZBMHRVT1dsQi0tazllR0JMblIxdHB4WlAyR0w5MXg2U0tvQmFnUEdkTlFscWEyUS1BLTliYms5SUdGRmg1QWVRSTRKUndFWEJGaQ?oc=5"
-      ],
-      "contexto": "Adicione o Conexão Política como sua fonte preferidaAdicione o Conexão como fonte preferida A bancada do PT na Câmara dos Deputados protocolou quatro projetos de lei para ampliar a tributação sobre lucros e dividendos, aplicações financeiras e grandes fortunas. As propostas têm como primeiro signatário o líder do partido na Casa, Pedro Uczai (SC), e ainda..."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Projeto do PT aumenta imposto sobre dividendos dos mais ricos e isenta ganhos de até R$ 5 mil",
-        "url": "https://prensamercosur.org/2026/11/18/projeto-do-pt-aumenta-imposto-sobre-dividendos-dos-mais-ricos-e-isenta-ganhos-de-ate-r-5-mil/",
-        "source": "Prensa Mercosur",
-        "date": "2026-11-18",
-        "tag": "Dividendos",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMiywFBVV95cUxNNDdKMVhxQkhUc3pyS3hZa1FPRmUzZ2oxSWR0RjdybXZIN1RVZERoc0h0NTVnbm1DNWg1VFM3WGVhSU40ZXd4NEF2a3RoY2JuMERXd1d1SlhmakNqYUc0WGNfWXhaZFJiVi0wcG1zUlM2eU5nQUc2VGRJNWEybTVISno3RkdNM2F0TndkYW03bU9yNFNlNW53cjlNX0dZU0JvV0E2OTFHbHlYWnQwOHg4SkNGdjZoV1ZwdzRPZXlBU1lUeEV4REJvMERYZw?oc=5"
-      ]
     },
     {
       "brandId": "mycapital",
@@ -271,6 +235,24 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
+        "title": "Governo projeta arrecadar R$ 4,14 bilhões com IR de dividendos no fim de 2026",
+        "url": "https://portalvv8.com.br/noticia/87148/governo-projeta-arrecadar-r-4-14-bilhoes-com-ir-de-dividendos-no-fim-de-2026",
+        "source": "Portal VV8",
+        "date": "2026-11-24",
+        "tag": "Dividendos",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMitgFBVV95cUxOMENCQ2ZYcXExd0pSTUFQZkZPMEQ3RjJ0MDZaS3hWeW90cVI4RU04Vmxudk1mYUNLcXFUVmdYUVNhaUVIZTF6bTF0SzZTMXg5NDdBb09hbE1SUktjSWF6T0ZhRlV5QzNlU0R4Y3ZwRE83ejVlVmdwck1FcXBXa1lQMEVjUzl5MXNERW9iVUZPWDhLZWVObHROY1hKMldmOTY5X1liRHRJeGgta1Bld0pZc0FjbEVKdw?oc=5"
+      ]
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
         "title": "Receita: arrecadação com tributação de lucros e dividendos é de R$ 6,360 bi no ano até outubro",
         "url": "https://economia.uol.com.br/noticias/estadao-conteudo/2026/11/24/receita-arrecadacao-com-tributacao-de-lucros-e-dividendos-e-de-r-6360-bi-no-ano-ate-outubro.htm",
         "source": "UOL Economia",
@@ -289,6 +271,25 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
+        "title": "União arrecada R$ 294 bilhões em outubro e bate recorde com tributação de dividendos, petróleo e lucro empresarial",
+        "url": "https://jbnews.com.br/uniao-arrecada-r-294-bilhoes-em-outubro-e-bate-recorde-com-tributacao-de-dividendos-petroleo-e-lucro-empresarial/",
+        "source": "JBNEWS",
+        "date": "2026-11-24",
+        "tag": "Dividendos",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOTmJoMjRielBiN280RzZMR3J5YXhDd1FsMms3NGxMWE91SjlJVGM4bnFCVElDXzJZc2ZwRzQ5QkVrQnpsb0thV0lVS0E1dlVzNEJGYlZKQWdnZUVWUU5MQ2FzeVhhaHNvNTIzcVg3OHJRS0QwZ3YycGQ5alN1cTducjJ0bUNhZHp6ak1sMkZvcFJTMUZzSEdOeGdscElMa0VvVHNNeXhHM0pJRmRGa0ZmSk1GNU12Sy05VzY0eTlZVHJwNjY2UnhyVVVtaFd1VW1X?oc=5"
+      ],
+      "contexto": "Por José Teixeira A arrecadação federal de impostos, contribuições e demais receitas atingiu R$ 293,975 bilhões em outubro de 2026, estabelecendo o maior resultado para o mês desde o início da série histórica da Receita Federal, em 1995. Os dados foram divulgados nesta terça-feira (24) e representam crescimento real de 7,28% em relação ao mesmo período de..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
         "title": "Isenção do Imposto de Renda até R$ 5.000 vale em 2026, mas veja quem ainda precisa declarar à Receita Federal",
         "url": "https://www.mixvale.com.br/2026/11/19/isencao-do-imposto-de-renda-ate-r-5-000-vale-em-2026-mas-veja-quem-ainda-precisa-declarar-a-receita-federal/",
         "source": "Mix Vale",
@@ -299,7 +300,27 @@
       },
       "aliases": [
         "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNY0xwaFRfSmVBWms5WHMwbjM3UUhmbUo4SXBnMTNhSDR6SVA3ZUswZjFrcXctam10UmVpWGdQSHRpR2k5THFpZWdDY3dWQU15WHpvVS1rcjZsRnB3RzRhYmV5c1pVQ3kxSTIwYlFXaGhDZkU0dExzNkZNMHh5VXlhbEkzU3ZTbU9reTdGREduY2VYd3FjR1h0YXBNbTFOWThZcU1ud1VXY0VkV1N5ekg2ei1XMkllUzczMndSVmoweHZIRDN6YllUeVJQclk3ejVNcWVUalV6a3FlRFgwUHBv?oc=5"
-      ]
+      ],
+      "contexto": "Isenção do Imposto de Renda até R$ 5.000 vale em 2026, mas veja quem ainda precisa declarar à Receita Federal Contribuintes com rendimentos tributáveis de até R$ 5.000,00 por mês estão livres do desconto do Imposto de Renda Pessoa Física (IRPF) na fonte desde 1º de janeiro de 2026, mas a dispensa do pagamento mensal não garante isenção automática da..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
+        "title": "Restituição do Imposto de Renda (IRPF) libera R$ 666,28 milhões a 223.793 contribuintes em 30 de novembro",
+        "url": "https://www.mixvale.com.br/2026/11/25/restituicao-do-imposto-de-renda-irpf-libera-r-66628-milhoes-a-223-793-contribuintes-em-30-de-novembro/",
+        "source": "Mix Vale",
+        "date": "2026-11-25",
+        "tag": "Declaração",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQSWJwVXdZb2VFcFR4eDZGUGdqN2xueFNRVGZlSjF0UUlxeHZKc1lFV2NMMFFoaXhPUDlmVFJ3eHBvT09CMjJEZ2pETTBXRkp6WTBfeE8xRDVTc1RIM09RRG95bkJjdjRDZ2lvM0pIWlduVnRSX2lDN05DZ1JVM2l5cV9sWGdXMzRBaXN4NVNnMWFFQktSU3N6cDFSVXlfdlJTeGRsa1dUTXRUc09RamNHTFppN2lpWUhiSEstUWp5MzJPODd4eEx3YXBYR0tBSHI1NmtiQTVDRQ?oc=5"
+      ],
+      "contexto": "Restituição do Imposto de Renda (IRPF) libera R$ 666,28 milhões a 223.793 contribuintes em 30 de novembro A Receita Federal liberou na segunda-feira (23) a consulta ao lote residual de restituição do Imposto de Renda Pessoa Física (IRPF) referente a novembro de 2026. O pagamento soma R$ 666.285.077,46 para 223.793 contribuintes e será depositado na próxima..."
     },
     {
       "brandId": "mycapital",
@@ -318,7 +339,7 @@
       "aliases": [
         "https://news.google.com/rss/articles/CBMixAFBVV95cUxPX2VWdUYyaUZPZ2JLLUdSd3ctUTktWG5NMS1lWlZiVHJ6WXNDaGJHSFNCS3R3VWcxbUhaTmRwYm9tODQ1cW1yS3F1VzlFNFYwNVV1SU56YjJNRW56M2dUa1ZIY0l1S1htMWQxeVFVakR3OG1Bb0FZMkpVWmpQUmJnSERkcnNZa0Q0QnJJSlNEeHVDSkhXWjdHSjV4cGJ1UFlhQjRVZWxiM0lBbzhxTkxNMTlxYWV4cHFIWUw4a24wbzRfVXNV?oc=5"
       ],
-      "contexto": "Siga o Times Brasil - Licenciado Exclusivo CNBC no Receita Federal libera consulta à restituição do IR; veja como verificar Publicado 24/11/2026 • 06:00 | Atualizado há 23 horas KEY POINTS Foto: Rafa Neddermeyer/Agência Brasil A Receita Federal liberou nesta segunda-feira (23) a consulta ao lote residual de restituição do Imposto de Renda Pessoa Física..."
+      "contexto": "Siga o Times Brasil - Licenciado Exclusivo CNBC no Receita Federal libera consulta à restituição do IR; veja como verificar Publicado 24/11/2026 • 06:00 | Atualizado há 2 dias KEY POINTS Foto: Rafa Neddermeyer/Agência Brasil A Receita Federal liberou nesta segunda-feira (23) a consulta ao lote residual de restituição do Imposto de Renda Pessoa Física (IRPF)..."
     },
     {
       "brandId": "mycapital",
@@ -345,6 +366,25 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
+        "title": "Consulta restituição Imposto de Renda 2026: Receita Federal paga R$ 666,2 milhões em 30 de novembro",
+        "url": "https://www.mixvale.com.br/2026/11/24/consulta-restituicao-imposto-de-renda-2026-receita-federal-paga-r-6662-milhoes-em-30-de-novembro/",
+        "source": "Mix Vale",
+        "date": "2026-11-24",
+        "tag": "Declaração",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQY2VfUmIxMnNrbU9GR3pvbmRyRWEyUWlTSmVVbmxRelBNTmtFRVNGT1FRdzRNaUp3bEV2NDc4ZkU1Y0hFY0dxQkd1bllpTlBhdlcySGhpbjlHdlpBUXFYTFpVeDlhRng1aFJOb3U3MkM5YWx2Vy15ZmdHM252TEZPN0hkNEw5b25IaGpwbjVvUm1xQ09jSzJzOXEySHNpQnJTUFNKQ0JiZ3BMbHVMVUlhZWVBMjJ2dkhVTmpSNWMtODJrNnZQQWNzc0ZaQjdIOUJ3?oc=5"
+      ],
+      "contexto": "Consulta restituição Imposto de Renda 2026: Receita Federal paga R$ 666,2 milhões em 30 de novembro A Receita Federal abriu na segunda-feira (23) a consulta ao lote residual de restituição do Imposto de Renda Pessoa Física (IRPF) de novembro de 2026. Ao todo, 223.793 contribuintes em todo o Brasil vão dividir R$ 666.285.077,46, com depósito bancário marcado..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
         "title": "Receita Federal libera consulta ao lote residual de restituição do Imposto de Renda; pagamento será no dia 30",
         "url": "https://www.hojemais.com.br/tres-lagoas/noticia/economia/receita-federal-libera-consulta-ao-lote-residual-de-restituicao-do-imposto-de-renda-pagamento-sera-no-dia-30",
         "source": "Hojemais.com.br",
@@ -356,44 +396,6 @@
       "aliases": [
         "https://news.google.com/rss/articles/CBMi-AFBVV95cUxOLTBfQXA0QUdVNnRGZFRUNDFsQno2c0VPSG42Q1BleXBLSzlzZ1I0TkpYblgxaFBYTnI0UjE2LXJUOUxyang3QUUwVkI3eDF2RVBwSF9BMzlwcU1rSDNIU1RkejVlb2hOclVmdEd4amlMRzdXQmZBUWw5aVQzRFlMWEd3UlV1d0tTcGJTcmlLNDVBd2hXb3ZhV1otcGpHVHRVcGx2dnotWnE3OGRia1lZQkw2eXowb0QyZi04RU9vejVQY3gyWmpPSHNueThCYTMwdlR0c2twb1BGQ216Yi1KQmRUbVdmZXBJM3ZEOWI5cXluV1I5N2RpUg?oc=5"
       ]
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Restituição do IR 2026: Receita libera consulta nesta segunda (23)",
-        "url": "https://jornalcontabil.com.br/noticia/restituicao-do-ir-2026-receita-libera-consulta-nesta-segunda-23/amp/",
-        "source": "Jornal Contábil",
-        "date": "2026-11-23",
-        "tag": "Declaração",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOazBUeGhPeEJTWGlpQ2NMWmZIS0hRcXUtNDhzd1g4T25xZVowV0JKaEJjNGt6ckNOS1JrRllVeHJlZ0UyU3pzM3dUenBmdHpfMXY4c0p5dWdsSkFnNThJOUhtS3JiZjdZTXRWY3JxRkdWNWRmUjdESjZYaFEyaDZEZkpTWmJqZVJJSkJPeDlEXzhzTWtUVFpDR1NfMXVGNWVoNF9SRzFzUVF1Z9IBqgFBVV95cUxOazBUeGhPeEJTWGlpQ2NMWmZIS0hRcXUtNDhzd1g4T25xZVowV0JKaEJjNGt6ckNOS1JrRllVeHJlZ0UyU3pzM3dUenBmdHpfMXY4c0p5dWdsSkFnNThJOUhtS3JiZjdZTXRWY3JxRkdWNWRmUjdESjZYaFEyaDZEZkpTWmJqZVJJSkJPeDlEXzhzTWtUVFpDR1NfMXVGNWVoNF9SRzFzUVF1Zw?oc=5"
-      ],
-      "contexto": "A Receita Federal libera a partir das 9h desta segunda-feira, 23 de novembro, a consulta ao lote residual de restituição do Imposto de Renda Pessoa Física (IRPF) de novembro de 2026. Ao todo, 223.793 contribuintes poderão verificar se estão entre os contemplados, com pagamentos que somam R$ 666.285.077,46."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Saiba como consultar lote residual de restituição do IRPF",
-        "url": "https://sbtnews.sbt.com.br/noticia/brasil/saiba-como-consultar-lote-residual-de-restituicao-do-irpf",
-        "source": "SBT News",
-        "date": "2026-11-23",
-        "tag": "Declaração",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMioAFBVV95cUxOWlllRkV3dF9COUtOdHVLLVg3OGJmWjZEX2d0dmVRS3UxRE5qd2ZZMVc3bXhIZWxEQXo1a1RuUk1rWDhucnJUckRlRnBSN1Y1eDBVUmVuX1pJTWJIcnVCZUZZVGVMNzNkSmppV2pYT0c5Y1Ita0VmZDhjR0pwYk1RS25wNUYyVVlJbk9qbnprUzFPam5VQmMxenlIOW5vc3R5?oc=5"
-      ],
-      "contexto": "A Receita Federal liberou nesta segunda-feira (23) a consulta ao lote residual de restituição do Imposto de Renda de Pessoa Física (IRPF) referente às declarações entregues este ano. 🤳 Notícias em primeira mão: baixe nosso aplicativo gratuito e leve o jornalismo do SBT News com você, onde estiver!"
     },
     {
       "brandId": "mycapital",
@@ -477,6 +479,25 @@
       "arquivo": "",
       "mediaType": "",
       "doc": {
+        "title": "Safra vê um vencedor e dois pontos de atenção entre BTG, XP e B3; veja o que fazer com as ações em 2027",
+        "url": "https://www.seudinheiro.com/2026/empresas/safra-ve-um-vencedor-e-dois-pontos-de-atencao-entre-btg-xp-e-b3-veja-o-que-fazer-com-as-acoes-em-2027-miql/",
+        "source": "Seu Dinheiro",
+        "date": "2026-11-24",
+        "tag": "Mercado",
+        "summary": "",
+        "origem": "coletor"
+      },
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOeE9EeExrUE5zeTFZckFqU3I4NW1xbTlHLWkwekFLNVZMX1RGUllFVWtEUXRVTDZLRVhqUE9Oakx5VUE4elQ1RHg0Qm5GdW1GVnR1OUxnUmlIY2lJS1o1YTF4QUR3OVY5Qy0wTHk2UWFVTEE3S1hfQzBZUjUtdUpPdTN4UXFfdFJJcUUzTkxWbkVveDBqX0hiZFlqSkZnelNwSnZpWDNXVW5FRHpxOFJrcW1pZDJwRGxZYWl2eExfbWFGY2s1NjE2UnVGcXRUWFVtcGwyZ3NFS0pWcXJoaEdTV0Q2Yw?oc=5"
+      ],
+      "contexto": "Safra vê um vencedor e dois pontos de atenção entre BTG, XP e B3; veja o que fazer com as ações em 2027 Mesmo com revisão para baixo do preço-alvo das três companhias, o banco mantém recomendação de compra para um dos papéis O mercado de capitais pode deixar de ser um terreno tão favorável para as empresas do setor em 2027. Com o aumento do prêmio de risco..."
+    },
+    {
+      "brandId": "mycapital",
+      "colecao": "news",
+      "arquivo": "",
+      "mediaType": "",
+      "doc": {
         "title": "B3 (B3SA3) bate 6 milhões de investidores e revela uma mudança surpreendente",
         "url": "https://www.suno.com.br/noticias/renda-variavel-6-milhoes-investidores-b3-mulheres/",
         "source": "Suno - Investimentos Inteligentes",
@@ -489,25 +510,6 @@
         "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNTUdnMGVzRk1aSjlORmdWNzhyZXpTMW11WWhkZUxiVVZXTVlZVHdxYlZtR1Q5VzVJOEhuekFXeUdmYkdlaU5HTktfaWkwem9XZUw2cG9HUXdyNWdacVhMOE4xRkVpbW5aSl9ZbzFEeTZRSzVTU3pqZzdvTkY5aWNpSjFYMjZTRlFLMDQ00gGQAUFVX3lxTE14WEc1QlVGRUktZGdrVFlTMVlGcW9IYUtCZG1UUkgySTBpb2JMeE5CSGxKOE9OSjVtbEhrUzNZNm9jNG9Icm5DY2F3TWVZZkVlWm5VeXk4VHJTYTMzTFR3QWpxZ0NsM1dDS0lneDhlT2ZuQ0Q0ajUwMnJHY2d1dDVkM3BxUmJxREJmQ0QwNEZ0aw?oc=5"
       ],
       "contexto": "Negócios B3 (B3SA3) bate 6 milhões de investidores e revela uma mudança surpreendente A bolsa brasileira acaba de alcançar uma marca histórica, mas o número de investidores não é a única novidade. Pela primeira vez, mais de 6 milhões de brasileiros investem em renda variável, em um movimento que também revela uma mudança no perfil de quem participa desse..."
-    },
-    {
-      "brandId": "mycapital",
-      "colecao": "news",
-      "arquivo": "",
-      "mediaType": "",
-      "doc": {
-        "title": "Anthropic estreia no mercado de ações; saiba como investir no gigante da IA do Brasil",
-        "url": "https://www1.folha.uol.com.br/mercado/2026/11/anthropic-estreia-no-mercado-de-acoes-saiba-como-investir-no-gigante-da-ia-do-brasil.shtml",
-        "source": "Folha de S.Paulo",
-        "date": "2026-11-18",
-        "tag": "Mercado",
-        "summary": "",
-        "origem": "coletor"
-      },
-      "aliases": [
-        "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQbTRCcDg3aURmWlgtRnlYazZuVWl6c2NqaVFIZTRFNnZtOTdiWktyVXNxaGxtQnJ1b05QZExRMF9IeGo1cW9pUDljMExXVDhCS29EY05YTWpIQnRLb3RzSHpibEtNV2VKY2l3NThTa3doQWYxMmZJYUV6RFRwUnE5bEVybFdwQ0JKWFpXclVObER4NTVKdm1wSlNUaUVaVUVTNk9FZno0NzQ0STJWc2xINHZWNkpKVjhsSWotTkZkSEMtMFFuR2FRbFpjOWtRM2ZEU2c?oc=5"
-      ],
-      "contexto": "Brasileiros poderão investir na Anthropic, empresa de inteligência artificial responsável pelo Claude, por meio da Bolsa brasileira a partir desta quinta-feira (19), mesmo dia em que a companhia deve estrear na Nasdaq. A B3 disponibilizará um BDR (Brazilian Depositary Receipt) da empresa simultaneamente à abertura de capital nos Estados Unidos, com preço..."
     }
   ],
   "avisos": [
